@@ -1,0 +1,23 @@
+---
+title: "Blog"
+listing:
+  type: grid
+  fields: [image, date, title, description, reading-time]
+  contents: posts
+  sort: "date desc"
+  sort-ui: [title, date]
+  filter-ui: [title, date]
+  categories: true
+  feed: true
+---
+
+A dedicated space for you to indulge in my current intrusive thoughts, obsessions, and compulsions. 
+Humor not included.
+
+
+
+
+
+
+
+  

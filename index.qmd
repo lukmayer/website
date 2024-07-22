@@ -1,0 +1,31 @@
+---
+title: "Lukas W. Mayer"
+about:
+ template: jolla
+ image: assets/luke-23.jpg
+ links:
+   - icon: github
+     text: Github
+     href: https://github.com/lukmayer
+   - icon: medium
+     text: Medium
+     href: https://medium.com/@willuk
+   - icon: envelope
+     text: Email
+     href: mailto:willuk@vivaldi.net
+---
+
+#### PhD Student in Cognitive Science at the University of California, Irvine.
+
+\
+
+Check out [*Research*](research.html) and [*CV*](cv.html) for my work.
+
+Delve into [*About*](about.html) and [*Blog*](blog_index.html) for my life.
+
+If you like what you see, consider dusting off that *RSS* feed reader ;)
+
+Feel free to [reach out to me](maito:willuk@vivaldi.net) for comments, clarifications, or collaborations.
+
+
+

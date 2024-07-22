@@ -1,0 +1,35 @@
+body {
+    font-size: 20px; /* Increase this value as needed */
+}
+
+p {
+    font-size: 20px; /* Paragraphs */
+}
+
+h1 {
+    font-size: 2.5em; /* Headings */
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+.navbar {
+    font-size: 1.1em; /* Navbar links */
+}

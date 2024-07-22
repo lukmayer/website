@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  favicon: "assets/favicons/favicon.ico" 
+  page-footer: "Powered by <a href='https://quarto.org' target='_blank'>Quarto</a>"  
+  open-graph: true
+  site-url: "https://lukmayer.github.io"
+  title: "Lukas W. Mayer"
+  navbar:
+    left:
+      - href: research.qmd
+        text: "Research"
+      - href: cv.qmd
+        text: "CV"
+      - href: blog_index.qmd
+        text: "Blog"
+      - href: about.qmd
+        text: "About"
+    right:
+      - icon: rss
+        href: blog_index.xml
+      - icon: envelope
+        href: mailto:willuk@vivaldi.net
+        aria-label: E-Mail
+  
+
+
+format:
+  html:
+    theme:
+      dark: [darkly, theme-dark.scss]
+      light: [flatly, theme-light.scss]
+    css: styles.css
+    toc: true
+
+
