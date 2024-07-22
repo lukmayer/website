@@ -4,7 +4,7 @@ description: "Just a quick post to test the blog and brielfy talk about my first
 author: "Luke"
 date: "07/21/2024"
 categories:
-  - test
+  - webdev
 image: "images/luke-23.jpg"
 comments:
     utterances:
