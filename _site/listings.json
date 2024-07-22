@@ -4,36 +4,5 @@
     "items": [
       "/posts/post1.html"
     ]
-  },
-  {
-    "listing": "/posts/post1.html",
-    "items": []
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/blog_index.html",
-      "/cv.html",
-      "/research.html",
-      "/posts/post1.html"
-    ]
-  },
-  {
-    "listing": "/research.html",
-    "items": [
-      "/blog_index.html",
-      "/cv.html",
-      "/index.html",
-      "/posts/post1.html"
-    ]
-  },
-  {
-    "listing": "/cv.html",
-    "items": [
-      "/blog_index.html",
-      "/index.html",
-      "/research.html",
-      "/posts/post1.html"
-    ]
   }
 ]

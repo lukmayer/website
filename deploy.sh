@@ -3,6 +3,11 @@
 # Build the site with Quarto
 quarto render
 
+# Push file changes to master
+git add .
+git commit -m "Update website code"
+git push -f origin master
+
 # Navigate to the _site directory
 cd _site
 
