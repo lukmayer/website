@@ -10,7 +10,141 @@
 <atom:link href="https://lukmayer.github.io/blog_index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.5.53</generator>
-<lastBuildDate>Sun, 21 Jul 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 22 Jul 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>How to achieve the Visual Studio Code ‘Live Server’ extension in Doom Emacs</title>
+  <dc:creator>Luke </dc:creator>
+  <link>https://lukmayer.github.io/posts/liveserver.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Hello again :)</p>
+<p>Lately, I have been venturing into the depths of Emacs, a 40+ year old text editor that is still very much alive and kicking, adored by many. It’s something that I have been meaning to learn for a while as I’m someone who likes to customize their tools. I have to admit though, it took me at least three separate attempts until I finally broke through the initial learning curve. In retrospect, learning Vim and Emacs is actually quite simple (even when done at the same time), neither is particularly hard to understand. I’m certainly not expert in either, but after experimenting with both for no more than a few months now I feel as though I understand both well enough to complete most of my daily tasks. Besides not knowing the keybindings to do anything in the beginning, I think the main reason it was such an overwhelming beginner experience for me actually comes down to the fact that you need to build up your configuration, which is done in Elisp. I initially experimented with vanilla Emacs but found the configuration so overwhelming that I gave up. I then tried Spacemacs, a supposedly “newbie-friendly” distribution of Emacs, just to be bombarded with about a gazillion error messages on start up! It’s fair to say that I did not use that for long either. Finally, I decided to give Doom Emacs, another modern distribution of Emcas, a try. Despite being targeted at advanced users, I found it to be by far the most beginner-friendly to use. Again, that is because in Doom Emacs, the configuration is pretty straightforward. There is a pre-made set of packages you can turn on and off, which cover most basic use-cases, and installing additional packages is as simple as adding one line to the packages.el file.</p>
+<p>So this is again where I actually start writing about the thing that this post is meant to be about. When I was still using VS Code, it was quite convenient to do web-development because of the Live Server extension that allows you to render the files in your directory inside your browser. So in essence you can play around with this preview of your code. This is probably a trivial task to most experienced developers who had to achieve similar functionality way before modern IDE’s came along. But for me, and probably many coders of my generation and ability level who learned how to code while taking the high level abstractions given by modern development tools for granted, leaving these pre-configured extensions behind and looking even just slightly behind the scenes can seem a bit daunting.</p>
+<p>So here I was, an almost total Emacs newbie having set out to glimpse behind the curtain and slowly build up my configuration of Doom Emacs for my development purposes, wanting something similar to “live server” in the much more familiar VS Code. As it turns out, achieving virtually the same functionality in Doom Emacs, was only slightly less trivial than in VS Code. In case you’re not aware, being a piece of extensible software that has been actively developed for over 40 years has its advantages. Basically, there is a package for pretty much anything. Sure, on the one hand that means you need to double check whether the particular package you’re looking to use is still being maintained, but generally speaking, there is a package for basically anything you can think of. You might be thinking this whole extension business sounds a lot like VS Code and you would not be wrong with that, but the beauty of it all really is that Emacs is “hackable” whereas VS Code is merely “considerably extendable”. I don’t plan on discussing the detailed implications of this terminology as its probably deserving of its own post so I’ll finish this paragraph with a paraphrased quote (I can’t find the original anymore) to highlight the point: “VS Code is a web-browser that can edit text files, Emacs is a text editor that can browse the web”.</p>
+<p>So how did I actually do it? Essentially its as simple as defining a custom function that calls some other functions from packages I installed. I’ll show you the code below, but first I’ll explain what it does. The code below sets up a local server on port 8080, and then opens the browser to the root directory of the server. The server is set to serve the files in the directory you specify in the httpd-root variable. The impatient-mode package is a package that allows you to see the changes you make to your html files in real time in the browser. So when you open an html file in Emacs, it will automatically open in the browser and any changes you make to the file will be reflected in the browser.</p>
+<p>In case you’re a newbie like me and have not yet found someone elses code to use, feel free to copy this for your config.el! Don’t forget to install the packages simple-httpd and impatient-mode first. You can do this by adding them to the packages.el file in your Doom Emacs configuration and then running the command <code>doom sync</code> in your terminal. Enjoy :)</p>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">(message <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Setting up live-server"</span>)</span>
+<span id="cb1-2">;; Load simple<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>httpd and impatient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>mode</span>
+<span id="cb1-3">(use<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>package simple<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>httpd</span>
+<span id="cb1-4">  <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span>config</span>
+<span id="cb1-5">  (setq httpd<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>root <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"~/public_html"</span>) ; set your desired root directory</span>
+<span id="cb1-6">  (setq httpd<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>port <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8080</span>))</span>
+<span id="cb1-7"></span>
+<span id="cb1-8">(use<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>package impatient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>mode</span>
+<span id="cb1-9">  <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hook</span> (html<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>mode . impatient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>mode)</span>
+<span id="cb1-10">  <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span>config</span>
+<span id="cb1-11">  (defun my<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>start<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>httpd<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>and<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>impatient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mode</span> ()</span>
+<span id="cb1-12">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Start httpd and impatient-mode, then open the browser."</span></span>
+<span id="cb1-13">    (interactive)</span>
+<span id="cb1-14">    (httpd<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>start)</span>
+<span id="cb1-15">    (impatient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>mode)</span>
+<span id="cb1-16">    (browse<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>url <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"http://localhost:8080/imp/"</span>))</span>
+<span id="cb1-17"></span>
+<span id="cb1-18">  (defun my<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>impatient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>mode<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hook</span> ()</span>
+<span id="cb1-19">    (my<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>start<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>httpd<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>and<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>impatient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>mode))</span>
+<span id="cb1-20"></span>
+<span id="cb1-21">  (add<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>hook <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'html-mode-hook '</span>my<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>impatient<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>mode<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>hook))</span></code></pre></div>
+</div>
+
+
+
+ ]]></description>
+  <category>emacs</category>
+  <category>webdev</category>
+  <guid>https://lukmayer.github.io/posts/liveserver.html</guid>
+  <pubDate>Mon, 22 Jul 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://lukmayer.github.io/posts/images/doom.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>My first DIY web-app</title>
   <dc:creator>Luke </dc:creator>
@@ -26,7 +160,7 @@
 <p>The specific problem may be intractable to solve optimally, so our starting point was to develop a few heuristic algorithms and see how they compared. Of course, you also need some way of telling how well these algorithms are doing, so we spent quite some time trying to come up with a useful metric. We started trying to work out what would be considered an optimal outcome. Obviously you want to recruit as many people as possible, and you don’t want to be having any appointments that have too few attendees to form a group with or too many attendees for the room we are holding these on-boarding sessions in. From here, you might consider the number of appointments, are you looking to minimize them or maximize how many appointments are in the solution set? You might be tempted to say that you want to minimize the number of appointments, but this is not necessarily the case. Researchers are often concerned with reaching certain sample sizes, in line with the size of effects they are hoping to detect. Therefore, it might actually be better to have as many small groups as possible, rather than a few large groups. More groups equals more statistical power. On the flip side, you may actually indeed want to minimize the set of appointments, for example if the appointments are expensive to run. As it turns out, these problems are defined narrowly enough where you can just work backwards to derive a metric for each case and prove that the metrics are optimal at detecting how close an algorithm’s solution is to the theoretical optimum, that is, the optimal outcome under the best case. I caveat it with “theoretical” because it is quite hard (again, potentially impossible) to tell what the true best possible solution is, without trying every single combination of people and appointments. Either way, this was a great starting point as we now had a pretty well defined metric to measure our algorithms against.</p>
 <p>We were quite surprised to find that one of the initial heuristics we developed already beat the algorithm equivalent to “Invite people that have not attended a session yet to the most popular appointment among them” in our simulations. This is where I actually start talking about that web-app this post is supposed to be about. The point of the web-app was to highlight this very finding, by allowing people to compare the performance of the popularity based algorithm to our heuristic. The web-app allows you to choose your own simulation situation, apply the two algorithms, and see the results. In addition, we intended this to also be used by others for their own purposes, so it is possible to apply the algorithms to your own CSV files if you can format them correctly.</p>
 <p>Originally, I was planning to implement the web-app as a shiny applet in R, with which I had been experimenting for a few weeks by that point. However, I really didn’t like the usage limits of shinyapps.io and was not about to implement my own server, so I turned to JavaScript to enable the computations inside people’s browsers. This meant translating the original algorithms from Python to JavaScript, and then implementing a simple front-end to allow users to interact with the app. As it turns out the first part was pretty easy, because the algorithms are dead simple. The actual app front-end was a bit more challenging as I was a total newbie to JavaScript but I managed to get it all working in one intense weekend, thanks to the kind support of OpenAI. While I’m pretty pleased with the result, I’m sure I would have learned a lot more if I had done the much harder work of learning to implement it from scratch, rather than with AI assistance. On the other hand, I value efficiency (I’m lazy) and I’ll have plenty of time and reason to learn JavaScript properly in the coming years, since my planned experiments will be much less cookie-cutter than this applet. I’m looking forward to it!</p>
-<p>If you’re interested in checking out the app, you can find it <a href="https://lukmayer.github.io/appointment_sets" target="_blank">here</a>. If you’re interested in the paper, let’s hope I’ll remember to update this post once its out in the wild. See you then!</p>
+<p>If you’re interested in checking out the app, you can find it <a href="https://lukmayer.github.io/appointment_sets" target="_blank">here</a>. If you’re interested in the paper, let’s hope I’ll remember to update this post once it’s out in the wild. See you then!</p>
 
 
 

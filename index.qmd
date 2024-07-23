@@ -19,6 +19,10 @@ about:
 
 \
 
+##### Studying causal reasoning for application in Human-AI collaboration
+
+\
+
 Check out [*Research*](research.html) and [*CV*](cv.html) for my work.
 
 Delve into [*About*](about.html) and [*Blog*](blog_index.html) for my life.

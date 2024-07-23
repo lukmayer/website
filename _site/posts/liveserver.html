@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Luke">
+<meta name="dcterms.date" content="2024-07-22">
+<meta name="description" content="Some reflections on how I configured Doom to locally host a site">
 
-<title>Lukas W. Mayer</title>
+<title>How to achieve the Visual Studio Code ‘Live Server’ extension in Doom Emacs – Lukas W. Mayer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +23,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicons/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicons/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,20 +108,21 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Lukas W. Mayer">
-<meta property="og:description" content="">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="How to achieve the Visual Studio Code ‘Live Server’ extension in Doom Emacs – Lukas W. Mayer">
+<meta property="og:description" content="Some reflections on how I configured Doom to locally host a site">
+<meta property="og:image" content="https://lukmayer.github.io/posts/images/doom.jpg">
 <meta property="og:site_name" content="Lukas W. Mayer">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Lukas W. Mayer</span>
     </a>
   </div>
@@ -94,25 +133,25 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog_index.html"> 
+    <a class="nav-link" href="../blog_index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog_index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../blog_index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -133,52 +172,87 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="assets/luke-23.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lukas W. Mayer</h1>
-</div>
-<div class="quarto-title-meta">
+<h1 class="title">How to achieve the Visual Studio Code ‘Live Server’ extension in Doom Emacs</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">emacs</div>
+    <div class="quarto-category">webdev</div>
   </div>
-</header><main class="content" id="quarto-document-content">
-<section id="phd-student-in-cognitive-science-at-the-university-of-california-irvine." class="level4">
-<h4 data-anchor-id="phd-student-in-cognitive-science-at-the-university-of-california-irvine.">PhD Student in Cognitive Science at the University of California, Irvine.</h4>
-<p><br>
-</p>
-<section id="studying-causal-reasoning-for-application-in-human-ai-collaboration" class="level5">
-<h5 data-anchor-id="studying-causal-reasoning-for-application-in-human-ai-collaboration">Studying causal reasoning for application in Human-AI collaboration</h5>
-<p><br>
-</p>
-<p>Check out <a href="research.html"><em>Research</em></a> and <a href="cv.html"><em>CV</em></a> for my work.</p>
-<p>Delve into <a href="about.html"><em>About</em></a> and <a href="blog_index.html"><em>Blog</em></a> for my life.</p>
-<p>If you like what you see, consider dusting off that <em>RSS</em> feed reader ;)</p>
-<p>Feel free to <a href="maito:willuk@vivaldi.net">reach out to me</a> for comments, clarifications, or collaborations.</p>
+  </div>
+
+<div>
+  <div class="description">
+    Some reflections on how I configured Doom to locally host a site
+  </div>
+</div>
 
 
-</section>
-</section>
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/lukmayer" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://medium.com/@willuk" class="about-link" rel="" target="">
-    <i class="bi bi-medium"></i>
-     <span class="about-link-text">Medium</span>
-  </a>
-  <a href="mailto:willuk@vivaldi.net" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Luke </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 22, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Hello again :)</p>
+<p>Lately, I have been venturing into the depths of Emacs, a 40+ year old text editor that is still very much alive and kicking, adored by many. It’s something that I have been meaning to learn for a while as I’m someone who likes to customize their tools. I have to admit though, it took me at least three separate attempts until I finally broke through the initial learning curve. In retrospect, learning Vim and Emacs is actually quite simple (even when done at the same time), neither is particularly hard to understand. I’m certainly not expert in either, but after experimenting with both for no more than a few months now I feel as though I understand both well enough to complete most of my daily tasks. Besides not knowing the keybindings to do anything in the beginning, I think the main reason it was such an overwhelming beginner experience for me actually comes down to the fact that you need to build up your configuration, which is done in Elisp. I initially experimented with vanilla Emacs but found the configuration so overwhelming that I gave up. I then tried Spacemacs, a supposedly “newbie-friendly” distribution of Emacs, just to be bombarded with about a gazillion error messages on start up! It’s fair to say that I did not use that for long either. Finally, I decided to give Doom Emacs, another modern distribution of Emcas, a try. Despite being targeted at advanced users, I found it to be by far the most beginner-friendly to use. Again, that is because in Doom Emacs, the configuration is pretty straightforward. There is a pre-made set of packages you can turn on and off, which cover most basic use-cases, and installing additional packages is as simple as adding one line to the packages.el file.</p>
+<p>So this is again where I actually start writing about the thing that this post is meant to be about. When I was still using VS Code, it was quite convenient to do web-development because of the Live Server extension that allows you to render the files in your directory inside your browser. So in essence you can play around with this preview of your code. This is probably a trivial task to most experienced developers who had to achieve similar functionality way before modern IDE’s came along. But for me, and probably many coders of my generation and ability level who learned how to code while taking the high level abstractions given by modern development tools for granted, leaving these pre-configured extensions behind and looking even just slightly behind the scenes can seem a bit daunting.</p>
+<p>So here I was, an almost total Emacs newbie having set out to glimpse behind the curtain and slowly build up my configuration of Doom Emacs for my development purposes, wanting something similar to “live server” in the much more familiar VS Code. As it turns out, achieving virtually the same functionality in Doom Emacs, was only slightly less trivial than in VS Code. In case you’re not aware, being a piece of extensible software that has been actively developed for over 40 years has its advantages. Basically, there is a package for pretty much anything. Sure, on the one hand that means you need to double check whether the particular package you’re looking to use is still being maintained, but generally speaking, there is a package for basically anything you can think of. You might be thinking this whole extension business sounds a lot like VS Code and you would not be wrong with that, but the beauty of it all really is that Emacs is “hackable” whereas VS Code is merely “considerably extendable”. I don’t plan on discussing the detailed implications of this terminology as its probably deserving of its own post so I’ll finish this paragraph with a paraphrased quote (I can’t find the original anymore) to highlight the point: “VS Code is a web-browser that can edit text files, Emacs is a text editor that can browse the web”.</p>
+<p>So how did I actually do it? Essentially its as simple as defining a custom function that calls some other functions from packages I installed. I’ll show you the code below, but first I’ll explain what it does. The code below sets up a local server on port 8080, and then opens the browser to the root directory of the server. The server is set to serve the files in the directory you specify in the httpd-root variable. The impatient-mode package is a package that allows you to see the changes you make to your html files in real time in the browser. So when you open an html file in Emacs, it will automatically open in the browser and any changes you make to the file will be reflected in the browser.</p>
+<p>In case you’re a newbie like me and have not yet found someone elses code to use, feel free to copy this for your config.el! Don’t forget to install the packages simple-httpd and impatient-mode first. You can do this by adding them to the packages.el file in your Doom Emacs configuration and then running the command <code>doom sync</code> in your terminal. Enjoy :)</p>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(message <span class="st">"Setting up live-server"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>;; Load simple<span class="sc">-</span>httpd and impatient<span class="sc">-</span>mode</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>(use<span class="sc">-</span>package simple<span class="sc">-</span>httpd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">:</span>config</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  (setq httpd<span class="sc">-</span>root <span class="st">"~/public_html"</span>) ; set your desired root directory</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  (setq httpd<span class="sc">-</span>port <span class="dv">8080</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>(use<span class="sc">-</span>package impatient<span class="sc">-</span>mode</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="sc">:</span><span class="fu">hook</span> (html<span class="sc">-</span>mode . impatient<span class="sc">-</span>mode)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">:</span>config</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  (defun my<span class="sc">/</span>start<span class="sc">-</span>httpd<span class="sc">-</span>and<span class="sc">-</span>impatient<span class="sc">-</span><span class="fu">mode</span> ()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Start httpd and impatient-mode, then open the browser."</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    (interactive)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    (httpd<span class="sc">-</span>start)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    (impatient<span class="sc">-</span>mode)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    (browse<span class="sc">-</span>url <span class="st">"http://localhost:8080/imp/"</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  (defun my<span class="sc">/</span>impatient<span class="sc">-</span>mode<span class="sc">-</span><span class="fu">hook</span> ()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    (my<span class="sc">/</span>start<span class="sc">-</span>httpd<span class="sc">-</span>and<span class="sc">-</span>impatient<span class="sc">-</span>mode))</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  (add<span class="sc">-</span>hook <span class="st">'html-mode-hook '</span>my<span class="sc">/</span>impatient<span class="sc">-</span>mode<span class="sc">-</span>hook))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
- <!-- /main -->
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -343,6 +417,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -735,6 +816,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="lukmayer/site_comments" issue-term="url" theme="github-dark" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

@@ -35,4 +35,6 @@ format:
     css: styles.css
     toc: true
 
-
+extensions:
+  - copy-button
+  
