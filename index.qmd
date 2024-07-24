@@ -18,7 +18,7 @@ about:
 #### Welcome to my website!
 I'm Luke and I'm currently a PhD Student in Cognitive Science at the University of California, Irvine.
 In my research, I investigate the limits of human causal reasoning through Bayesian computational models.
-I'm particularly interest in applying these models to enhance human-AI collaboration.
+I'm particularly interested in applying these models to enhance human-AI collaboration.
 
 ---
 
