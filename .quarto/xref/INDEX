@@ -19,5 +19,12 @@
   },
   "posts/liveserver.qmd": {
     "liveserver.html": "85341866"
+  },
+  "assets/cv.qmd": {
+    "cv.tex": "8df16dad"
+  },
+  "cv_lwm.qmd": {
+    "cv_lwm.tex": "4b921a2c",
+    "cv_lwm.html": "5e1ebd51"
   }
 }

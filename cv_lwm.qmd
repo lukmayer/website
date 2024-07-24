@@ -1,0 +1,145 @@
+---
+format: 
+  html:
+    self-contained: true
+    theme:
+      dark: [darkly, theme-dark.scss]
+      light: [flatly, theme-light.scss]
+  pdf: 
+    documentclass: article
+    geometry:
+      - top=10mm
+      - left=15mm
+      - right=15mm
+      - bottom=5mm
+      - heightrounded
+    fontfamily: libertine
+    colorlinks: true
+    fontsize: '16'
+    include-in-header: 
+      text: |
+        \usepackage{multicol}
+        \usepackage{lipsum}
+        \usepackage{hyperref}
+        \usepackage{libertine}
+        \pagestyle{empty}
+        \setlength{\multicolsep}{2pt plus 1.0pt minus 0.75pt}% 50% of original values
+        \setlength{\columnsep}{3em}
+  
+---
+
+<!-- TITLE -->
+\begin{huge}\begin{center}{\bf Lukas William Mayer}\end{center}\end{huge}
+
+<!-- CONTACT INFO -->
+\begin{center}willuk@vivaldi.net ∙ \href{https://steyvers.socsci.uci.edu/madlab/}{Lab} ∙ \href{https://github.com/lukmayer}{Github} ∙ \href{https://lukmayer.github.io}{Website}
+\end{center}
+\vspace{15pt}
+
+
+
+# Education 
+\hrule
+
+## **PhD in Cognitive Science, 2028 (Expected)**
+
+*University of California, Irvine, Irvine, CA, USA*
+
+**Thesis (preliminary title)**: “Computational modelling of inversion problems in human-AI interaction”
+
+**Advisor**: Prof. Mark Steyvers
+
+Bayesian modelling of human problem-solving abilities and alignment of AI systems with human cognition
+
+
+
+## **MSc in Behavioural and Data Sciences (Distinction), 2022**
+
+*University of Warwick, Coventry, England, UK*
+
+**Thesis**: “Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice”
+
+**Advisor**: Prof. Nick Chater
+
+Unifying models from computational cognitive science and machine learning
+
+
+
+## **BSc (Hons) in Psychology (First-Class), 2021**
+
+*University of Stirling, Stirling, Scotland, UK*
+
+**Thesis**: “Cooperation does not improve selective and/or sustained attention”
+
+**Advisors**: Dr. John Michael and Dr. Ross Goutcher
+
+Measuring cognitive abilities in online games
+
+
+
+# Research Experience 
+\hrule
+
+## **Research Assistant: Centre for Research and Evidence on Security Threats 2022 - 2023**
+
+*University of Bath, School of Management, Bath, England, UK*
+
+Conducted large-scale mixed methods study concerned with the prediction of online group communications which translate into real-world actions
+
+**Principal Investigator**: Prof. Adam Joinson
+
+
+## **Research Assistant: Centre for Cognition in Complex Environments 2019- 2021**
+
+*University of Stirling, Department of Psychology, Stirling, Scotland, UK*
+
+Research project work around face matching and concealed identity recognition
+
+**Principal Investigator**: Dr. Ailsa E. Millen
+
+
+## **Research Assistant: Centre for Cognition in Complex Environments 2021**
+
+*University of Stirling, Department of Psychology, Stirling, Scotland, UK*
+
+Automated video analysis for discrimination learning in lumpfish
+
+**Principal Investigator**: Dr. Jamie Murray
+
+
+
+# Publications 
+\hrule
+
+Karny, S., **Mayer, L. W.**, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M. (2024). Learning with AI Assistance: A Path to Better Task Performance or Dependence? *Proceedings of the ACM Collective Intelligence Conference, 10–17*. https://doi.org/10.1145/3643562.3672610
+
+Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W.**, & Smyth, P. (2024). The Calibration Gap between Model and Human Confidence in Large Language Models. arXiv preprint arXiv:2401.13835.
+
+**Mayer, L. W.**, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) Waste not want not: Computational methods to maximise attendance in group research. *Behavior Research Methods*.
+
+
+
+# Awards and Honors 
+\hrule
+
+**Best Overall Score: Behavioural and Data Science (2022)**
+
+**Peter McEwan Prize for the Best Single Honours Psychology Student (2021)**
+
+**Alan Baddeley Prize for the Best Psychology Dissertation (2021)**
+
+
+
+# Miscellaneous
+\hrule
+
+**Digital Methods Initiative Winter School - The use and misuse of Open Source Intelligence, 2023**
+- *University of Amsterdam, Amsterdam, North Holland, The Netherlands*
+
+**International Interdisciplinary Computational Cognitive Science Summer School, 2022**
+- *University of Tübingen, Tübingen, Baden-Württemberg, Germany*
+
+**NeuroMatch Academy Summer School: Deep Learning, 2022**
+- *NeuroMatch Academy, Los Angeles, CA, USA*
+
+

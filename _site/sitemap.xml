@@ -2,23 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lukmayer.github.io/cv.html</loc>
-    <lastmod>2024-07-24T04:23:36.532Z</lastmod>
+    <lastmod>2024-07-24T16:31:57.843Z</lastmod>
   </url>
   <url>
     <loc>https://lukmayer.github.io/posts/post1.html</loc>
     <lastmod>2024-07-23T04:15:45.248Z</lastmod>
   </url>
   <url>
-    <loc>https://lukmayer.github.io/about.html</loc>
-    <lastmod>2024-07-21T21:10:13.093Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmayer.github.io/research.html</loc>
-    <lastmod>2024-07-19T16:18:09.688Z</lastmod>
+    <loc>https://lukmayer.github.io/cv_lwm.html</loc>
+    <lastmod>2024-07-24T16:34:56.970Z</lastmod>
   </url>
   <url>
     <loc>https://lukmayer.github.io/index.html</loc>
     <lastmod>2024-07-24T04:43:53.671Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmayer.github.io/research.html</loc>
+    <lastmod>2024-07-24T16:36:30.024Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmayer.github.io/about.html</loc>
+    <lastmod>2024-07-21T21:10:13.093Z</lastmod>
   </url>
   <url>
     <loc>https://lukmayer.github.io/blog_index.html</loc>

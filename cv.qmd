@@ -2,8 +2,9 @@
 title: "Curriculum Vitae"
 ---
 
-![](assets/cv.pdf){width=1000 height=1000}
+If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf). 
+
+![](cv_lwm.pdf){width=1000 height=1000}
 
 
-If you can't see the embedded PDF, you can download it [here](assets/cv.pdf). 
 

@@ -4,7 +4,7 @@
     "href": "cv.html",
     "title": "Curriculum Vitae",
     "section": "",
-    "text": "If you can’t see the embedded PDF, you can download it here."
+    "text": "If you can’t see the embedded PDF below, you can download it here."
   },
   {
     "objectID": "posts/post1.html",
@@ -12,6 +12,76 @@
     "title": "My first DIY web-app",
     "section": "",
     "text": "Hello world!\nA few weeks ago I made a little web-app to highlight some algorithms we developed for a methodological paper. The paper is concerned with how to best slot people into group appointments. The idea came up while I was employed at the University of Bath, because the project I was hired for required us to recruit participants for longitudinal group experiments that partially took place offline, partially online. The problem was of course how do you figure out the initial real life appointments in which you can start organizing interested participants into their groups?\nAs it turns out, this is a surprisingly tricky problem. Intuitively, you might think that allowing people to indicate their preferences over a set of proposed appointments, in the style of DoodlePoll, and then inviting people to the most popular selection would be a grand idea. However, since we did not really have the capacity to organize a potentially huge group of people at once, we needed some way of breaking up our pool of interested participants into manageable chunks that we could on-board onto the study in a staggered fashion. Once you start thinking about organizing this way, you can come to realize that inviting to the most popular selected appointment can be sub-optimal, as a combination of two or more appointments allows you to group more people for the study. This is because anyone who could not make that most popular appointment is essentially discarded, which may not be the case if you can identify two appointments that have little overlap in terms of who is available for each. So the question then becomes, what is the best set of appointments that will yield the most groups, given a pool of interested participants and our recruitment procedure constraints? This is the problem we set out to address in our paper.\nThe specific problem may be intractable to solve optimally, so our starting point was to develop a few heuristic algorithms and see how they compared. Of course, you also need some way of telling how well these algorithms are doing, so we spent quite some time trying to come up with a useful metric. We started trying to work out what would be considered an optimal outcome. Obviously you want to recruit as many people as possible, and you don’t want to be having any appointments that have too few attendees to form a group with or too many attendees for the room we are holding these on-boarding sessions in. From here, you might consider the number of appointments, are you looking to minimize them or maximize how many appointments are in the solution set? You might be tempted to say that you want to minimize the number of appointments, but this is not necessarily the case. Researchers are often concerned with reaching certain sample sizes, in line with the size of effects they are hoping to detect. Therefore, it might actually be better to have as many small groups as possible, rather than a few large groups. More groups equals more statistical power. On the flip side, you may actually indeed want to minimize the set of appointments, for example if the appointments are expensive to run. As it turns out, these problems are defined narrowly enough where you can just work backwards to derive a metric for each case and prove that the metrics are optimal at detecting how close an algorithm’s solution is to the theoretical optimum, that is, the optimal outcome under the best case. I caveat it with “theoretical” because it is quite hard (again, potentially impossible) to tell what the true best possible solution is, without trying every single combination of people and appointments. Either way, this was a great starting point as we now had a pretty well defined metric to measure our algorithms against.\nWe were quite surprised to find that one of the initial heuristics we developed already beat the algorithm equivalent to “Invite people that have not attended a session yet to the most popular appointment among them” in our simulations. This is where I actually start talking about that web-app this post is supposed to be about. The point of the web-app was to highlight this very finding, by allowing people to compare the performance of the popularity based algorithm to our heuristic. The web-app allows you to choose your own simulation situation, apply the two algorithms, and see the results. In addition, we intended this to also be used by others for their own purposes, so it is possible to apply the algorithms to your own CSV files if you can format them correctly.\nOriginally, I was planning to implement the web-app as a shiny applet in R, with which I had been experimenting for a few weeks by that point. However, I really didn’t like the usage limits of shinyapps.io and was not about to implement my own server, so I turned to JavaScript to enable the computations inside people’s browsers. This meant translating the original algorithms from Python to JavaScript, and then implementing a simple front-end to allow users to interact with the app. As it turns out the first part was pretty easy, because the algorithms are dead simple. The actual app front-end was a bit more challenging as I was a total newbie to JavaScript but I managed to get it all working in one intense weekend, thanks to the kind support of OpenAI. While I’m pretty pleased with the result, I’m sure I would have learned a lot more if I had done the much harder work of learning to implement it from scratch, rather than with AI assistance. On the other hand, I value efficiency (I’m lazy) and I’ll have plenty of time and reason to learn JavaScript properly in the coming years, since my planned experiments will be much less cookie-cutter than this applet. I’m looking forward to it!\nIf you’re interested in checking out the app, you can find it here. If you’re interested in the paper, let’s hope I’ll remember to update this post once it’s out in the wild. See you then!"
+  },
+  {
+    "objectID": "cv_lwm.html",
+    "href": "cv_lwm.html",
+    "title": "Education",
+    "section": "",
+    "text": "University of California, Irvine, Irvine, CA, USA\nThesis (preliminary title): “Computational modelling of inversion problems in human-AI interaction”\nAdvisor: Prof. Mark Steyvers\nBayesian modelling of human problem-solving abilities and alignment of AI systems with human cognition\n\n\n\nUniversity of Warwick, Coventry, England, UK\nThesis: “Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice”\nAdvisor: Prof. Nick Chater\nUnifying models from computational cognitive science and machine learning\n\n\n\nUniversity of Stirling, Stirling, Scotland, UK\nThesis: “Cooperation does not improve selective and/or sustained attention”\nAdvisors: Dr. John Michael and Dr. Ross Goutcher\nMeasuring cognitive abilities in online games"
+  },
+  {
+    "objectID": "cv_lwm.html#phd-in-cognitive-science-2028-expected",
+    "href": "cv_lwm.html#phd-in-cognitive-science-2028-expected",
+    "title": "Education",
+    "section": "",
+    "text": "University of California, Irvine, Irvine, CA, USA\nThesis (preliminary title): “Computational modelling of inversion problems in human-AI interaction”\nAdvisor: Prof. Mark Steyvers\nBayesian modelling of human problem-solving abilities and alignment of AI systems with human cognition"
+  },
+  {
+    "objectID": "cv_lwm.html#msc-in-behavioural-and-data-sciences-distinction-2022",
+    "href": "cv_lwm.html#msc-in-behavioural-and-data-sciences-distinction-2022",
+    "title": "Education",
+    "section": "",
+    "text": "University of Warwick, Coventry, England, UK\nThesis: “Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice”\nAdvisor: Prof. Nick Chater\nUnifying models from computational cognitive science and machine learning"
+  },
+  {
+    "objectID": "cv_lwm.html#bsc-hons-in-psychology-first-class-2021",
+    "href": "cv_lwm.html#bsc-hons-in-psychology-first-class-2021",
+    "title": "Education",
+    "section": "",
+    "text": "University of Stirling, Stirling, Scotland, UK\nThesis: “Cooperation does not improve selective and/or sustained attention”\nAdvisors: Dr. John Michael and Dr. Ross Goutcher\nMeasuring cognitive abilities in online games"
+  },
+  {
+    "objectID": "cv_lwm.html#research-assistant-centre-for-research-and-evidence-on-security-threats-2022---2023",
+    "href": "cv_lwm.html#research-assistant-centre-for-research-and-evidence-on-security-threats-2022---2023",
+    "title": "Education",
+    "section": "Research Assistant: Centre for Research and Evidence on Security Threats 2022 - 2023",
+    "text": "Research Assistant: Centre for Research and Evidence on Security Threats 2022 - 2023\nUniversity of Bath, School of Management, Bath, England, UK\nConducted large-scale mixed methods study concerned with the prediction of online group communications which translate into real-world actions\nPrincipal Investigator: Prof. Adam Joinson"
+  },
+  {
+    "objectID": "cv_lwm.html#research-assistant-centre-for-cognition-in-complex-environments-2019--2021",
+    "href": "cv_lwm.html#research-assistant-centre-for-cognition-in-complex-environments-2019--2021",
+    "title": "Education",
+    "section": "Research Assistant: Centre for Cognition in Complex Environments 2019- 2021",
+    "text": "Research Assistant: Centre for Cognition in Complex Environments 2019- 2021\nUniversity of Stirling, Department of Psychology, Stirling, Scotland, UK\nResearch project work around face matching and concealed identity recognition\nPrincipal Investigator: Dr. Ailsa E. Millen"
+  },
+  {
+    "objectID": "cv_lwm.html#research-assistant-centre-for-cognition-in-complex-environments-2021",
+    "href": "cv_lwm.html#research-assistant-centre-for-cognition-in-complex-environments-2021",
+    "title": "Education",
+    "section": "Research Assistant: Centre for Cognition in Complex Environments 2021",
+    "text": "Research Assistant: Centre for Cognition in Complex Environments 2021\nUniversity of Stirling, Department of Psychology, Stirling, Scotland, UK\nAutomated video analysis for discrimination learning in lumpfish\nPrincipal Investigator: Dr. Jamie Murray"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lukas W. Mayer",
+    "section": "",
+    "text": "Welcome to my website!\nI’m Luke, and I’m currently a PhD Student in Cognitive Science at the University of California, Irvine. In my research, I investigate the limits of human causal reasoning through Bayesian computational models. I’m particularly interested in applying these models to enhance human-AI collaboration.\n\nCheck out Research and CV for my work.\nDelve into About and Blog for my life.\nIf you like what you see, consider dusting off that RSS feed reader ;)\nFeel free to reach out to me for comments, clarifications, or collaborations."
+  },
+  {
+    "objectID": "research.html#research-interests",
+    "href": "research.html#research-interests",
+    "title": "Research",
+    "section": "Research Interests",
+    "text": "Research Interests\nMy research interests follow two main themes:\n\n\n\n1) Computational Cognitive Science\nAs humans, we possess a remarkable cognitive flexibility that enables us to solve problems in various domains that are still completely intractable to modern methods in Artificial Intelligence. Therefore, I think that by studying human behavior we may be able to reverse-engineer some of the machinery that gives rise to these amazing abilities, paving the way for new kinds of algorithms.\nAt the moment, I am working on a project series aiming to develop a computational account of causal reasoning for intervention on other agents. In these projects I will be using a considerable amount of simulation, computational modelling, and a series of custom-designed web experiments to develop reasoning models that exhibit human-like abilities to flexibly generalize to new contexts. My goal here is to show how this causal account can outperform sophisticated Reinforcement Learning models in dynamic environments, which includes most of the real world.\n\n\n\n\n2) Inversion problems in Cognitive Science\nWhenever people are interacting with machine-learning based systems, (human) biases can propagate through the model leading to distorted predictions. Therefore, one strand of work I am interested in pursuing in this area is to derive the transformations that lead to better alignment, thus increasing the validity of predictions. I am also interested in addressing more engineering related concerns, such as how to use information we possess about cognition to improve the performance of machine learning algorithms trained on human-generated information. In this type of work, I like to mix and match methods from Cognitive Science and Machine Learning in combination with large, real-world data-sets.\nOne fairly recent project I have completed in this domain was my master’s thesis. In it, I was able to show how re-weighting a feature space in line with some theory borrowed from multi-attribute multi-alternative decision-making can improve the performance of machine learning algorithms tasked with predicting human choices."
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Research",
+    "section": "Publications",
+    "text": "Publications"
   },
   {
     "objectID": "about.html",
@@ -33,27 +103,6 @@
     "title": "About",
     "section": "Hobbies and interests",
     "text": "Hobbies and interests\n\nExercise - I’ve always been active as a kid, but when I was younger I somehow never really stuck with any particular sport for too long. To give you an idea, I’ve had a phase for: archery, badminton, crossfit, golf, parkour, powerlifting, and skateboarding. I’m still interested in strength training, which I have been doing in some form for 10+ years, and badminton. Sadly, I have limited means to engage with these in an organized format at the moment. So to fill the hole in my heart, I’ve been investing some time to figure out the optimal home gym setup that still fits inside my bedroom. I think I’ve been pretty successful with this, so maybe I’ll show it off in a post sometime.\n\n\n\n\nTechnology - Everyone who has had to deal with me in the last few years knows that I’m fully committed to using GNU/Linux as my daily driver. It’s actually quite amazing how much you learn about the inner workings of a computer when you start customizing your setup and ripping out the stuff that’s annoying. As you can see, I’ve also taken an interest in web development. While Quarto admittedly makes this website dead-easy to create, I also use web development in my research to create experiments that run in a browser. I’m super interested in picking up creative coding and am hoping to eventually generate some art that I can post on here! :)\n\n\n\n\nLanguages - English used to be my first language as I only started learning German after relocating to the Länd at age six. Maybe because of this experience, I’ve had a bit of a talent for languages, although I was very lazy with my Latin in school. In fairness, I was generally quite a lazy kid in school, and mostly wanted to do Latin because ancient history was so interesting to me. These days, I do language lessons for fun on Duolingo, where I have a streak of around 2000 days. I’m mostly learning French and Dutch at the moment. My Dutch is definitely better than my French, probably just by virtue of being so similar to German, but both are good enough to follow a Youtube video. I hope to eventually move away from Duolingo and bring my skills to the next level, but don’t feel I have the bandwidth for it just now. If you know a good free resource, be sure to let me know!\n\n\n\n\nGaming - I was quite the avid gamer as a teen, spending countless hours on the likes of Team Fortress 2, Minecraft and Guild Wars 2. I don’t actively play much these days, but I still like to keep up with the industry. Perhaps I’m just waiting for the next big thing to come along. I also really enjoy going to boardgame cafés and completing escape rooms!"
-  },
-  {
-    "objectID": "research.html#research-interests",
-    "href": "research.html#research-interests",
-    "title": "Research",
-    "section": "Research Interests",
-    "text": "Research Interests\nMy research interests follow two main themes:\n\n\n\n1) Computational Cognitive Science\nAs humans, we possess a remarkable cognitive flexibility that enables us to solve problems in various domains that are still completely intractable to modern methods in Artificial Intelligence. Therefore, I think that by studying human behavior we may be able to reverse-engineer some of the machinery that gives rise to these amazing abilities, paving the way for new kinds of algorithms.\nAt the moment, I am working on a project series aiming to develop a computational account of causal reasoning for intervention on other agents. In these projects I will be using a considerable amount of simulation, computational modelling, and a series of custom-designed web experiments to develop reasoning models that exhibit human-like abilities to flexibly generalize to new contexts. My goal here is to show how this causal account can outperform sophisticated Reinforcement Learning models in dynamic environments, which includes most of the real world.\n\n\n\n\n2) Inversion problems in Cognitive Science\nWhenever people are interacting with machine-learning based systems, (human) biases can propagate through the model leading to distorted predictions. Therefore, one strand of work I am interested in pursuing in this area is to derive the transformations that lead to better alignment, thus increasing the validity of predictions. I am also interested in addressing more engineering related concerns, such as how to use information we possess about cognition to improve the performance of machine learning algorithms trained on human-generated information. In this type of work, I like to mix and match methods from Cognitive Science and Machine Learning in combination with large, real-world data-sets.\nOne fairly recent project I have completed in this domain was my master’s thesis. In it, I was able to show how re-weighting a feature space in line with some theory borrowed from multi-attribute multi-alternative decision-making can improve the performance of machine learning algorithms tasked with predicting human choices."
-  },
-  {
-    "objectID": "research.html#publications",
-    "href": "research.html#publications",
-    "title": "Research",
-    "section": "Publications",
-    "text": "Publications"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lukas W. Mayer",
-    "section": "",
-    "text": "Welcome to my website!\nI’m Luke, and I’m currently a PhD Student in Cognitive Science at the University of California, Irvine. In my research, I investigate the limits of human causal reasoning through Bayesian computational models. I’m particularly interested in applying these models to enhance human-AI collaboration.\n\nCheck out Research and CV for my work.\nDelve into About and Blog for my life.\nIf you like what you see, consider dusting off that RSS feed reader ;)\nFeel free to reach out to me for comments, clarifications, or collaborations."
   },
   {
     "objectID": "blog_index.html",
