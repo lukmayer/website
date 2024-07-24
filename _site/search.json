@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "If you can’t see the embedded PDF, you can download it here."
+  },
+  {
     "objectID": "posts/post1.html",
     "href": "posts/post1.html",
     "title": "My first DIY web-app",
@@ -46,7 +53,7 @@
     "href": "index.html",
     "title": "Lukas W. Mayer",
     "section": "",
-    "text": "PhD Student in Cognitive Science at the University of California, Irvine.\n\n\n\nStudying causal reasoning for application in Human-AI collaboration\n\n\nCheck out Research and CV for my work.\nDelve into About and Blog for my life.\nIf you like what you see, consider dusting off that RSS feed reader ;)\nFeel free to reach out to me for comments, clarifications, or collaborations."
+    "text": "Welcome to my website!\nI’m Luke and I’m currently a PhD Student in Cognitive Science at the University of California, Irvine. In my research, I investigate the limits of human causal reasoning through Bayesian computational models. I’m particularly interest in applying these models to enhance human-AI collaboration.\n\nCheck out Research and CV for my work.\nDelve into About and Blog for my life.\nIf you like what you see, consider dusting off that RSS feed reader ;)\nFeel free to reach out to me for comments, clarifications, or collaborations."
   },
   {
     "objectID": "blog_index.html",
