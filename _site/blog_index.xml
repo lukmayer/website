@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Lukas W. Mayer</title>
+<title>&lt;img src=&#39;assets/favicons/favicon.ico&#39; alt=&#39;Logo&#39; style=&#39;height:40px; vertical-align:middle;&#39;&gt;</title>
 <link>https://lukmayer.github.io/blog_index.html</link>
 <atom:link href="https://lukmayer.github.io/blog_index.xml" rel="self" type="application/rss+xml"/>
 <description></description>

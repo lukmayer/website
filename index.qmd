@@ -27,7 +27,7 @@ Check out [*Research*](research.html) and [*CV*](cv.html) for my work.
 
 Delve into [*About*](about.html) and [*Blog*](blog_index.html) for my life.
 
-If you like what you see, consider dusting off that *RSS* feed reader ;)
+If you like what you see, consider dusting off that [*RSS*](https://lukmayer.github.io/blog_index.xml) feed reader ;)
 
 Feel free to [reach out to me](maito:willuk@vivaldi.net) for comments, clarifications, or collaborations.
 
