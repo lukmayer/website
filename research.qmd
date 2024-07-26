@@ -24,7 +24,19 @@ One fairly recent project I have completed in this domain was my master’s thes
 
 \
 
-## [Publications](cv_lwm.html#publications)
 
+<div id="embedded-publications"></div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('cv_lwm.html') // Adjust the path to your CV page as needed
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const publicationsSection = doc.querySelector('#publications');
+        document.getElementById('embedded-publications').innerHTML = publicationsSection.innerHTML;
+      });
+  });
+</script>
 

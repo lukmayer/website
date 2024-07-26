@@ -148,7 +148,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#computational-cognitive-science" id="toc-computational-cognitive-science" class="nav-link" data-scroll-target="#computational-cognitive-science">1) Computational Cognitive Science</a></li>
   <li><a href="#inversion-problems-in-cognitive-science" id="toc-inversion-problems-in-cognitive-science" class="nav-link" data-scroll-target="#inversion-problems-in-cognitive-science">2) Inversion problems in Cognitive Science</a></li>
   </ul></li>
-  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
   </ul>
 </nav>
     </div>
@@ -194,12 +193,24 @@ ul.task-list li input[type="checkbox"] {
 <p>One fairly recent project I have completed in this domain was my master’s thesis. In it, I was able to show how re-weighting a feature space in line with some theory borrowed from multi-attribute multi-alternative decision-making can improve the performance of machine learning algorithms tasked with predicting human choices.</p>
 <p><br>
 </p>
-</section>
-</section>
-<section id="publications" class="level2">
-<h2 class="anchored" data-anchor-id="publications"><a href="cv_lwm.html#publications">Publications</a></h2>
+<div id="embedded-publications">
+
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('cv_lwm.html') // Adjust the path to your CV page as needed
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const publicationsSection = doc.querySelector('#publications');
+        document.getElementById('embedded-publications').innerHTML = publicationsSection.innerHTML;
+      });
+  });
+</script>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

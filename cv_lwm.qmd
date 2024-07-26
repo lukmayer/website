@@ -108,7 +108,7 @@ Automated video analysis for discrimination learning in lumpfish
 
 
 
-# Publications 
+# Publications {#publications}
 \hrule
 
 Karny, S., **Mayer, L. W.**, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M. (2024). Learning with AI Assistance: A Path to Better Task Performance or Dependence? *Proceedings of the ACM Collective Intelligence Conference, 10–17*. https://doi.org/10.1145/3643562.3672610
