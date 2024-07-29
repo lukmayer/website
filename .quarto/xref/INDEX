@@ -26,5 +26,8 @@
   "cv_lwm.qmd": {
     "cv_lwm.tex": "4b921a2c",
     "cv_lwm.html": "5e1ebd51"
+  },
+  "posts/quarto.qmd": {
+    "quarto.html": "34dccbe9"
   }
 }
