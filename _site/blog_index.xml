@@ -477,13 +477,13 @@ font-style: inherit;">-</span>rf _site<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/</span>.git</span></code></pre></div>
 </div>
-<p>The script essentially just runs a couple standard commands. First, I render my website and push the source files to their repository. After this, I change to the folder with the rendered files and force push these to the repositories that hosts the website. After this I remove this nested git, just in case it causes problems with the root-level git. With this script my workflow basically just becomes: 1) Make changes, 2) open terminal, 3) go to source directory, 4) run deploy.sh (the shell script). If you plan on using this script, keep in mind that your repository will be a different one than mine, which is further complicated by the fact that I use SSH, which will require a tutorial to set up if you are not familiar (search: “how to set up SSH with Github”).</p>
+<p>The script essentially just runs a couple standard commands. First, I render my website and push the source files to their repository. After this, I change to the folder with the rendered files and force push these to the repositories that hosts the website. Then I remove this nested git, just in case it causes problems with the root-level git. With this script my workflow basically just becomes: 1) Make changes, 2) open terminal, 3) go to source directory, 4) run deploy.sh (the shell script). If you plan on using this script, keep in mind that your repository will be a different one than mine, which is further complicated by the fact that I use SSH, which will require a tutorial to set up if you are not familiar (search: “how to set up SSH with Github”).</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>So that’s it! I hope you have a good idea of how to configure a website using my approach. There are a few tricks my website uses that I didn’t cover here but I encourage you to just check my source files if you see something that catches your interest. My source repository is public, meaning that even if you found this all still a little much, with some git skills you could just grab my source code and use it as a template to get started with!</p>
 <p>From here, you should definitely also check the Quarto documentation mentioned above. It’s currently not always extremely detailed for all possible configurations and setups but it gives you a pretty good idea of what is possible.</p>
-<p>Find my source file repository <a href="https://github.com/lukmayer/website">here</a>. If you make website based on my files I’d love to see it!</p>
+<p>Find my source file repository <a href="https://github.com/lukmayer/website">here</a>. If you make a website based on my files I’d love to see it!</p>
 <p>Thanks for reading!</p>
 
 

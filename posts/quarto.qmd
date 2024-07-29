@@ -194,7 +194,7 @@ rm -rf _site/.git
 
 ```
 
-The script essentially just runs a couple standard commands. First, I render my website and push the source files to their repository. After this, I change to the folder with the rendered files and force push these to the repositories that hosts the website. After this I remove this nested git, just in case it causes problems with the root-level git. With this script my workflow basically just becomes: 1) Make changes, 2) open terminal, 3) go to source directory, 4) run deploy.sh (the shell script). If you plan on using this script, keep in mind that your repository will be a different one than mine, which is further complicated by the fact that I use SSH, which will require a tutorial to set up if you are not familiar (search: "how to set up SSH with Github").   
+The script essentially just runs a couple standard commands. First, I render my website and push the source files to their repository. After this, I change to the folder with the rendered files and force push these to the repositories that hosts the website. Then I remove this nested git, just in case it causes problems with the root-level git. With this script my workflow basically just becomes: 1) Make changes, 2) open terminal, 3) go to source directory, 4) run deploy.sh (the shell script). If you plan on using this script, keep in mind that your repository will be a different one than mine, which is further complicated by the fact that I use SSH, which will require a tutorial to set up if you are not familiar (search: "how to set up SSH with Github").   
 
 
 ## Conclusion
@@ -204,7 +204,7 @@ So that's it! I hope you have a good idea of how to configure a website using my
 From here, you should definitely also check the Quarto documentation mentioned above. It's currently not always extremely detailed for all possible configurations and setups but it gives you a pretty good idea of what is possible. 
 
 Find my source file repository [here](https://github.com/lukmayer/website).
-If you make website based on my files I'd love to see it! 
+If you make a website based on my files I'd love to see it! 
 
 Thanks for reading! 
 
