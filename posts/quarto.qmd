@@ -24,7 +24,7 @@ So let's get started, shall we? We can use Quarto to render Quarto markdown (`.q
 First, you'll need to install Quarto and Git. For Git, there must be endless tutorials, just search "How to install git on [your operating system]". For Quarto I'd encourage you to just follow their guide on their [website](https://quarto.org/docs/get-started/) for this, as there really is nothing much I can add to this part of the process. Then, for actually setting up the website project, their [guide](https://quarto.org/docs/websites/) is perfectly comprehensive. It's only after this step where you would have to dig deeper in the documentation (which you should definitely be reading after giving my suggestions a shot) and experiment yourself to figure out how to achieve the website of your dreams, so hopefully this is where sharing my process will actually start to be helpful.
 
 ## Key files and commands
-Now with your project initialized. Let's quickly highlight some of the important files and concepts. The most important file is the `_quarto.yml` file, which basically controls the high-level structure of the website and some of the global settings. I'll assume you have figured out how to render and preview the files you currently have in place from the guide on how to create the project. As you should be able to see with the default files, each page is a `.qmd` file. If you haven't yet, just render the files to get a first feel for what the final product looks like. Rendering and then previewing should open your browser, with the site your files give rise to displayed. If not, you are probably overdue some bug hunting. 
+Now with your project initialized. Let's quickly highlight some of the important files and concepts. The most important file is the `_quarto.yml` file, which basically controls the high-level structure of the website and some of the global settings. I'll assume you have figured out how to render and preview the files you currently have in place from the guide on how to create the project. As you should be able to see with the default files, each page is a `.qmd` file. If you haven't yet, just render the files to get a first feel for what the final product looks like. Rendering and then previewing should open your browser, with the site your files give rise to displayed. If not, you are probably overdue some bug hunting. Keep in mind that our preview showing in the browser does NOT mean that the website is public!  
 
 #### The _quarto.yml
 Here's what my .yml file looks like:
@@ -84,7 +84,7 @@ In the "format" section, I basically specify the themes of my website, one dark 
 
 ## Setting up a blog within the website
 
-A blog is a nice place to share things in posts. In Quarto, that basically means having a list of pages on a blog index page. The pages listed on this index all sit inside a folder inside your project directory. In case you didn't realize yet, every quarto markdown document has a so-called "YAML header" which is indicated the three hyphens that denote the beginning and ending of this header. The header specifies fields and settings for that page alone. Here's what the header looks like for my blog index.  
+A blog is a nice place to share things in posts. In Quarto, that basically means having a list of pages on a blog index page. The pages listed on this index all sit inside a folder inside your project directory. In case you didn't realize yet, every quarto markdown document has a so-called "YAML header" which is indicated by the three hyphens that denote the beginning and ending of this header. The header specifies fields and settings for that page alone. Here's what the header looks like for my blog index.  
 
 ```{r, eval=F}
 ---
@@ -160,7 +160,7 @@ There are a couple templates to select from and at the bottom I add some links t
 
 ## My shell script for pushing updates to Github + hosting
 
-If you want to host your finished site on Github, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the `_site` folder. Then you push these files to a Github repository that you named `[yourgithubusername].github.io`. Then, on the settings page of this Github repository you enable `pages`. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debuggig. 
+If you want to host your finished site on Github, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the `_site` folder. Then you push these files to a Github repository that you named `[yourgithubusername].github.io`. Then, on the settings page of this Github repository you enable `pages`. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debugging. 
 
 Because I have my website source files on a different repository on Github, I created a little shell script that I can push updates to both repositories with:  
 
@@ -204,6 +204,7 @@ So that's it! I hope you have a good idea of how to configure a website using my
 From here, you should definitely also check the Quarto documentation mentioned above. It's currently not always extremely detailed for all possible configurations and setups but it gives you a pretty good idea of what is possible. 
 
 Find my source file repository [here](https://github.com/lukmayer/website).
+
 If you make a website based on my files I'd love to see it! 
 
 Thanks for reading! 

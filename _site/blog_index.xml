@@ -29,7 +29,7 @@
 </section>
 <section id="key-files-and-commands" class="level2">
 <h2 class="anchored" data-anchor-id="key-files-and-commands">Key files and commands</h2>
-<p>Now with your project initialized. Let’s quickly highlight some of the important files and concepts. The most important file is the <code>_quarto.yml</code> file, which basically controls the high-level structure of the website and some of the global settings. I’ll assume you have figured out how to render and preview the files you currently have in place from the guide on how to create the project. As you should be able to see with the default files, each page is a <code>.qmd</code> file. If you haven’t yet, just render the files to get a first feel for what the final product looks like. Rendering and then previewing should open your browser, with the site your files give rise to displayed. If not, you are probably overdue some bug hunting.</p>
+<p>Now with your project initialized. Let’s quickly highlight some of the important files and concepts. The most important file is the <code>_quarto.yml</code> file, which basically controls the high-level structure of the website and some of the global settings. I’ll assume you have figured out how to render and preview the files you currently have in place from the guide on how to create the project. As you should be able to see with the default files, each page is a <code>.qmd</code> file. If you haven’t yet, just render the files to get a first feel for what the final product looks like. Rendering and then previewing should open your browser, with the site your files give rise to displayed. If not, you are probably overdue some bug hunting. Keep in mind that our preview showing in the browser does NOT mean that the website is public!</p>
 <section id="the-_quarto.yml" class="level4">
 <h4 class="anchored" data-anchor-id="the-_quarto.yml">The _quarto.yml</h4>
 <p>Here’s what my .yml file looks like:</p>
@@ -207,7 +207,7 @@ font-style: inherit;">-</span>button</span></code></pre></div>
 </section>
 <section id="setting-up-a-blog-within-the-website" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-a-blog-within-the-website">Setting up a blog within the website</h2>
-<p>A blog is a nice place to share things in posts. In Quarto, that basically means having a list of pages on a blog index page. The pages listed on this index all sit inside a folder inside your project directory. In case you didn’t realize yet, every quarto markdown document has a so-called “YAML header” which is indicated the three hyphens that denote the beginning and ending of this header. The header specifies fields and settings for that page alone. Here’s what the header looks like for my blog index.</p>
+<p>A blog is a nice place to share things in posts. In Quarto, that basically means having a list of pages on a blog index page. The pages listed on this index all sit inside a folder inside your project directory. In case you didn’t realize yet, every quarto markdown document has a so-called “YAML header” which is indicated by the three hyphens that denote the beginning and ending of this header. The header specifies fields and settings for that page alone. Here’s what the header looks like for my blog index.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -408,7 +408,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 </section>
 <section id="my-shell-script-for-pushing-updates-to-github-hosting" class="level2">
 <h2 class="anchored" data-anchor-id="my-shell-script-for-pushing-updates-to-github-hosting">My shell script for pushing updates to Github + hosting</h2>
-<p>If you want to host your finished site on Github, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the <code>_site</code> folder. Then you push these files to a Github repository that you named <code>[yourgithubusername].github.io</code>. Then, on the settings page of this Github repository you enable <code>pages</code>. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debuggig.</p>
+<p>If you want to host your finished site on Github, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the <code>_site</code> folder. Then you push these files to a Github repository that you named <code>[yourgithubusername].github.io</code>. Then, on the settings page of this Github repository you enable <code>pages</code>. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debugging.</p>
 <p>Because I have my website source files on a different repository on Github, I created a little shell script that I can push updates to both repositories with:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
@@ -483,7 +483,8 @@ font-style: inherit;">/</span>.git</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>So that’s it! I hope you have a good idea of how to configure a website using my approach. There are a few tricks my website uses that I didn’t cover here but I encourage you to just check my source files if you see something that catches your interest. My source repository is public, meaning that even if you found this all still a little much, with some git skills you could just grab my source code and use it as a template to get started with!</p>
 <p>From here, you should definitely also check the Quarto documentation mentioned above. It’s currently not always extremely detailed for all possible configurations and setups but it gives you a pretty good idea of what is possible.</p>
-<p>Find my source file repository <a href="https://github.com/lukmayer/website">here</a>. If you make a website based on my files I’d love to see it!</p>
+<p>Find my source file repository <a href="https://github.com/lukmayer/website">here</a>.</p>
+<p>If you make a website based on my files I’d love to see it!</p>
 <p>Thanks for reading!</p>
 
 
