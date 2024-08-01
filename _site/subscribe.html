@@ -70,6 +70,29 @@
             flex-direction: column;
             width: 100%;
         }
+
+        /* Responsive adjustments */
+        @media only screen and (max-width: 600px) {
+            #mc_embed_signup {
+                padding: 5px;
+                font-size: 16px; /* Reduce font size for smaller screens */
+            }
+
+            #mc_embed_signup h2 {
+                font-size: 20px; /* Reduce heading size for smaller screens */
+            }
+
+            #mc_embed_signup .mc-field-group input {
+                font-size: 12px; /* Reduce input font size for smaller screens */
+                padding: 8px; /* Reduce input padding for smaller screens */
+            }
+
+            #mc_embed_signup .button {
+                height: 45px; /* Adjust button height for smaller screens */
+                font-size: 16px; /* Reduce button font size for smaller screens */
+                line-height: 45px; /* Adjust line-height for smaller screens */
+            }
+        }
     </style>
     <div id="mc_embed_signup">
         <form action="https://github.us13.list-manage.com/subscribe/post?u=618cca8cdf37159fc560d3586&amp;id=6cc02e0f75&amp;f_id=00374ae1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
@@ -114,4 +137,3 @@
         var $mcj = jQuery.noConflict(true);
     </script>
 </div>
-
