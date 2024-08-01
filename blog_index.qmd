@@ -13,10 +13,4 @@ listing:
 
 A dedicated space for me to write about the things that have been on my mind. 
 
-
-
-
-
-
-
-  
+![](subscribe.html){width=800 height=300}
