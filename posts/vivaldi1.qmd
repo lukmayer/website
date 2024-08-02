@@ -18,6 +18,7 @@ I've noticed that with software there sometimes exists a bit of an ironic relati
 Today I want to talk about another piece of software that I use that can be said to enable this form of minimalism. It is of course the Norwegian-made browser [Vivaldi](https://vivaldi.com). Vivaldi is the brain-child of Jon von Tzetchner, former CEO of Opera, and is essentially aiming to be the go-to browser for power-users. In my opinion it is doing quite well in catering to this audience, as the browser is known for its massive array of features and extensive customizability. 
 
 Some of the stand-out features of Vivaldi include:
+
 - A highly customizable UI
 - A built in E-maill, calendar, to-do list and RSS feed reader client 
 - Page Tiling - basically showing more than one tab in the same window, for example side by side
