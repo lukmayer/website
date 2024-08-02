@@ -6,6 +6,7 @@ date: "07/22/2024"
 categories:
   - emacs
   - webdev
+  - software
 image: "images/doom.jpg"
 comments:
     utterances:
