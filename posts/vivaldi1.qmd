@@ -1,6 +1,6 @@
 ---
 title: "Vivaldi: the ultimate productivity browser"
-description: "You're probably not using the best browser"
+description: "You're probably not using the best browser - how sad! :("
 author: "Luke"
 date: "08/02/2024"
 categories:
