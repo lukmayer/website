@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Luke">
+<meta name="dcterms.date" content="2024-08-02">
+<meta name="description" content="You’re probably not using the best browser">
 
-<title>Blog – </title>
+<title>Vivaldi: the ultimate productivity browser – </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicons/favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicons/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,70 +72,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="<img src='assets/favicons/favicon.ico' alt='Logo' style='height:40px; vertical-align:middle;'>" href="blog_index.xml" data-external="1"><meta property="og:title" content="Blog – ">
-<meta property="og:description" content="">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Vivaldi: the ultimate productivity browser – ">
+<meta property="og:description" content="You’re probably not using the best browser">
+<meta property="og:image" content="https://lukmayer.github.io/posts/images/vivaldi_logo.png">
 <meta property="og:site_name" content="<img src='assets/favicons/favicon.ico' alt='Logo' style='height:40px; vertical-align:middle;'>">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:width" content="1080">
 </head>
 
 <body class="nav-fixed">
@@ -144,7 +90,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title"><img src="assets/favicons/favicon.ico" alt="Logo" style="height:40px; vertical-align:middle;"></span>
     </a>
   </div>
@@ -155,29 +101,29 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog_index.html" aria-current="page"> 
+    <a class="nav-link" href="../blog_index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog_index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../blog_index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -198,22 +144,42 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="emacs">emacs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="software">software <span class="quarto-category-count">(1)</span></div><div class="category" data-category="webdev">webdev <span class="quarto-category-count">(3)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
-</div>
+<h1 class="title">Vivaldi: the ultimate productivity browser</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">software</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    You’re probably not using the best browser
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Luke </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 2, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -223,141 +189,32 @@ window.Quarto = {
 </header>
 
 
-<p>A dedicated space for me to write about the things that have been on my mind.</p>
-<p><embed src="subscribe.html" width="800" height="300"></p>
+<p>I’ve noticed that with software there sometimes exists a bit of an ironic relationship where the product with the most features somehow is also able to be the most minimal. Emacs is one such example, as it’s a text editor that can be configured to perform tasks you’d never think a text editor would be able to and it does this with almost no UI whatsoever. It’s fair to say I’m a big fan of reducing visual clutter on my devices. For example, my laptop runs Linux with no Desktop environment, and my phone home screen is basically just a calendar widget. Neither device is minimal in the sense of having little functionality, but both are definitely minimal in the sense of keeping the interface to a minimum.</p>
+<p>Today I want to talk about another piece of software that I use that can be said to enable this form of minimalism. It is of course the Norwegian-made browser <a href="https://vivaldi.com">Vivaldi</a>. Vivaldi is the brain-child of Jon von Tzetchner, former CEO of Opera, and is essentially aiming to be the go-to browser for power-users. In my opinion it is doing quite well in catering to this audience, as the browser is known for its massive array of features and extensive customizability.</p>
+<p>Some of the stand-out features of Vivaldi include: - A highly customizable UI - A built in E-maill, calendar, to-do list and RSS feed reader client - Page Tiling - basically showing more than one tab in the same window, for example side by side - Web Panels - essentially a set of bookmarked pages that can be viewed without switching the tab - Work spaces, which allow you to have tabs in separate windows within the same window. - Translator, Contact list, Reading list, Note taking client, and sooo much more.</p>
+<p>Now because Vivaldi is such a beast, Vivaldi can seem a little intimidating when you fire it up for the first time. So today I want to highlight the specific features of Vivaldi that allow you to go from this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/default_vivaldi.png" class="img-fluid figure-img"></p>
+<figcaption>Default Vivaldi - <a href="https://www.omgubuntu.co.uk/2022/10/vivaldi-5-5-adds-tasks-feature">Credit</a></figcaption>
+</figure>
+</div>
+<p>To this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/vivaldi.png" class="img-fluid figure-img"></p>
+<figcaption>My Vivaldi</figcaption>
+</figure>
+</div>
+<p>You’re probably looking at my screen-shot and thinking “How do you do … anything?”. The short answer is: Keyboard shortcuts! Vivaldi allows you to map whatever button combination you want to what must be hundreds of different commands. Closing a tab Ctrl + W, going to the previous page Alt + LeftArrow, opening E-Mail Ctrl + Shift + M, etc. That alone has allowed me to remove most of the UI. There are some exceptions like the address field, which has to be in the top bar to work properly. You could hide top bar (address bar) in which case pressing Ctrl + L would actually pop out a little field to type in, but hiding the address bar is a little annoying if you use any of the UI in the Mail client, since it no longer will be accessible. Sure, you could bind a key to toggle the address bar for when you need it. However, I find that more cumbersome than just living with the address bar. This is because if you hide the address bar, Vivaldi will replace it with a minimal window title bar, which renders the net space savings of hiding the address bar minimal.</p>
+<p>Next, you might have thought that I don’t have tabs. This is not quite correct, as I have a very small vertical tab bar at the right edge of the window. It’s set to the minimum width such that you can only see the favicons of websites, not their titles. I tried going completely without a tab bar, but found the lack of visual feedback a bit jarring. You might think that seeing the website titles is quite important, since it might be hard to tell apart two tabs that are on the same domain otherwise. Luckily, you can enable list view for the tab switcher, meaning if I hit Ctrl + Tab I can cycle through the tabs in a little pop up that shows the tab titles. This is such an underrated feature as it makes switching tabs with your keyboard super efficient. The only things left as UI are for essential functions that do not have a internal page that can be mapped to a keyboard shortcut but do provide a button for a pop-out menu. This includes the extensions, reading list and downloads popups. On the far left is the burger menu to access settings, which cannot be removed. I also hide Speed Dials and everything else on the start page. That’s it!</p>
+<p>UI clutter, Check; Tab clutter, Check. What’s left? Well, as I alluded to in the introductory paragraph I don’t really wish to compromise on functionality. Unfortunately, if you use web panels, Vivaldi currently requires you to have the panel bar showing, even if the panel buttons are not on the panel bar! If you don’t show the panel bar, the sites you have as panels will unload, meaning you will have to load them from scratch every time you want to use them. You could insert your own CSS modifications (which Vivaldi allows), but I have personally not gotten my CSS code to reliably hide/unhide the panel bar on hover. This annoyance had lead me to realize that I can achieve virtually the same functionality without actually using panels. How, you ask? My work-around has been a mix of tab tiling and workspaces with pinned tabs. It’s not quite as flexible as actual panels, but it fully satisfies my needs. If I need to quickly view a site that would be panel-worthy, I just hit my keybinding to switch workspaces until I get to the one with the page I’m looking for. If I need to split view that page for multi-tasking, I simply tile the tab inside that workspace.</p>
+<p>And that’s basically the essence of my workflow! If you are not (yet) a Vivaldi user, this was probably too much information for you.. if you are a Vivaldi user, I hope you found this inspiring! If you liked the theme I use, I actually published it <a href="https://themes.vivaldi.net/themes/NBVJgKynJKa">here</a>, enjoy :)</p>
+<p>P.S.: Legend has it you’ll never be able to look at a MacBook with MS Word open in Google Chrome the same way once you have seen the light…</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="software" data-listing-date-sort="1722582000000" data-listing-file-modified-sort="1722577087367" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1050">
-<a href="./posts/vivaldi1.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/images/vivaldi_logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Vivaldi: the ultimate productivity browser
-</h5>
-<div class="listing-reading-time card-text text-muted">
-6 min
-</div>
-<div class="card-text listing-description">
-You’re probably not using the best browser
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 2, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="webdev" data-listing-date-sort="1722150000000" data-listing-file-modified-sort="1722489452256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2692">
-<a href="./posts/quarto.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/images/quarto.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-How to easily make a website for free
-</h5>
-<div class="listing-reading-time card-text text-muted">
-14 min
-</div>
-<div class="card-text listing-description">
-A jumpstart guide to Quarto
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jul 28, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="emacs,webdev" data-listing-date-sort="1721631600000" data-listing-file-modified-sort="1722212295260" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="941">
-<a href="./posts/liveserver.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/images/doom.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-How to achieve the Visual Studio Code ‘Live Server’ extension in Doom Emacs
-</h5>
-<div class="listing-reading-time card-text text-muted">
-5 min
-</div>
-<div class="card-text listing-description">
-Some reflections on how I configured Doom to locally host a site
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jul 22, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="webdev" data-listing-date-sort="1721545200000" data-listing-file-modified-sort="1721708145248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1015">
-<a href="./posts/post1.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/images/luke-23.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-My first DIY web-app
-</h5>
-<div class="listing-reading-time card-text text-muted">
-6 min
-</div>
-<div class="card-text listing-description">
-Just a quick post to test the blog and brielfy talk about my first ventures into JavaScript
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jul 21, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -921,6 +778,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="lukmayer/site_comments" issue-term="url" theme="github-dark" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
