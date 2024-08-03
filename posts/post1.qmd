@@ -1,6 +1,6 @@
 ---
 title: "My first DIY web-app"
-description: "Just a quick post to test the blog and brielfy talk about my first ventures into JavaScript"
+description: "Just a quick post to test the blog and briefly talk about my first ventures into JavaScript"
 author: "Luke"
 date: "07/21/2024"
 categories:
