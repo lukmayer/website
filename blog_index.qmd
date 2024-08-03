@@ -11,6 +11,5 @@ listing:
   feed: true
 ---
 
-A dedicated space for me to write about the things that have been on my mind. 
+A dedicated space for me to rant!
 
-![](subscribe.html){width=800 height=300}
