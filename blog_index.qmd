@@ -9,6 +9,9 @@ listing:
   filter-ui: [title, date]
   categories: true
   feed: true
+format:
+  html:
+    smooth-scroll: true
 ---
 
 A dedicated space for me to rant!

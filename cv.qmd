@@ -1,5 +1,8 @@
 ---
 title: "Curriculum Vitae"
+format:
+  html:
+    smooth-scroll: true
 ---
 
 If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf). 

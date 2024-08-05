@@ -1,5 +1,8 @@
 ---
 title: "About"
+format:
+  html:
+    smooth-scroll: true
 ---
 
 ## Short biography
