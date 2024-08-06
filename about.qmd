@@ -41,7 +41,7 @@ I spent a very fun year working in the Applied Digital Behaviour Lab at the Univ
 
 
 
-![Bath, England - (Credit: Ian Woolcock — Shutterstock)](assets/bath.jpg){fig-cap="Credit: Ian Woolcock — Shutterstock"}
+![Bath, England - Credit: Ian Woolcock/Shutterstock](assets/bath.jpg){fig-cap="Credit: Ian Woolcock — Shutterstock"}
 
 ![The building that houses the Cognitive Science department at the University of California, Irvine, USA - [Credit](https://www.undergrad.socsci.uci.edu/ssusa/policies.php)](assets/sbsg.jpg){fig-cap="Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php)](assets/sbsg.jpg"}
 

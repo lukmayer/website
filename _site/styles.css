@@ -1,4 +1,34 @@
+@font-face {
+    font-family: 'AnkaCoder';
+    src: url('assets/fonts/AnkaCoder-r.ttf') format('truetype'); /* Regular */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnkaCoder';
+    src: url('assets/fonts/AnkaCoder-b.ttf') format('truetype'); /* Bold */
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnkaCoder';
+    src: url('assets/fonts/AnkaCoder-i.ttf') format('truetype'); /* Italic */
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AnkaCoder';
+    src: url('assets/fonts/AnkaCoder-bi.ttf') format('truetype'); /* Bold Italic */
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 body {
+    font-family: 'AnkaCoder', monospace;
     position: relative;
     margin: 0;
     padding: 0;
@@ -28,6 +58,7 @@ p {
 
 h1 {
     font-size: 2.5em; /* Headings */
+    color: #00bf63;
 }
 
 h2 {

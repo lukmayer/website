@@ -1,24 +1,34 @@
 /*-- scss:defaults --*/
-$navbar-bg: #5d5d5d; /* Dark gray background color */
-$font-family-sans-serif: 'Lato', monospace;
-$font-family-monospace: 'Lato', monospace;
-
-body {
-    font-family: 'Lato', monospace !important;
-    line-height: 2.0; /* Increase this value as needed */
-
-}
+$navbar-bg: #4f4f4f; /* Dark gray background color */
+$link-color: #00bf63; /* Green link color */
+$navbar-hl: #00bf63;
 
 .navbar {
-    font-family: 'Lato', monospace !important;
+  a {
+    font-weight: bold;
+    font-size: 1.0em; // Adjust the size as needed
+  }
 }
 
+//$font-family-sans-serif: 'Lato', monospace;
+//$font-family-monospace: 'Lato', monospace;
+
+//body {
+//    font-family: 'Lato', monospace !important;
+//    line-height: 2.0; /* Increase this value as needed */
+//
+//}
+
+//.navbar {
+//    font-family: 'Lato', monospace !important;
+//}
 
 
-p {
-    line-height: 2.0; /* Paragraphs */
-}
 
-h1, h2, h3, h4, h5, h6 {
-    line-height: 2.0; /* Headings */
-}
+//p {
+//    line-height: 2.0; /* Paragraphs */
+//}
+
+//h1, h2, h3, h4, h5, h6 {
+//    line-height: 2.0; /* Headings */
+//}

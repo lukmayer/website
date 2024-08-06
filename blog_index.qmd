@@ -2,6 +2,7 @@
 title: "Blog"
 listing:
   type: grid
+  grid-columns: 2
   fields: [image, date, title, description, reading-time]
   contents: posts
   sort: "date desc"
