@@ -8,9 +8,6 @@ format:
 \
 
 ## Research Interests
-My research interests follow two main themes:
-
-\
 
 ### 1) Computational Cognitive Science
 As humans, we possess a remarkable cognitive flexibility that enables us to solve problems in various domains that are still completely intractable to modern methods in Artificial Intelligence. Therefore, I think that by studying human behavior we may be able to reverse-engineer some of the machinery that gives rise to these amazing abilities, paving the way for new kinds of algorithms.
