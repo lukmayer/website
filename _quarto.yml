@@ -32,9 +32,7 @@ website:
 format:
   html:
     smooth-scroll: true
-    theme:
-      dark: [darkly, theme-dark.scss]
-      light: [flatly, theme-light.scss]
+    theme: [darkly, theme-dark.scss]
     css: styles.css
     toc: true
 
