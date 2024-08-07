@@ -24,7 +24,7 @@ Today I want to talk about another piece of software that I use that can be said
 Some of the stand-out features of Vivaldi include:
 
 - A highly customizable UI
-- A built in E-maill, calendar, to-do list and RSS feed reader client 
+- A built in E-mail, calendar, to-do list and RSS feed reader client 
 - Page Tiling - basically showing more than one tab in the same window, for example side by side
 - Web Panels - essentially a set of bookmarked pages that can be viewed without switching the tab
 - Work spaces, which allow you to have tabs in separate windows within the same window. 

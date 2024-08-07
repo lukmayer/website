@@ -2,6 +2,7 @@
   {
     "listing": "/blog_index.html",
     "items": [
+      "/posts/rss.html",
       "/posts/vivaldi1.html",
       "/posts/quarto.html",
       "/posts/liveserver.html",
