@@ -1,0 +1,79 @@
+---
+title: "A comprehensive review of non-obscure search engines"
+description: "To google or to not google, that is the question."
+author: "Luke"
+date: "08/10/2024"
+draft: true
+categories:
+  - software
+  - search engines
+image: ""
+comments:
+    utterances:
+      repo: lukmayer/site_comments
+      theme: github-dark
+      issue-term: url
+format:
+  html:
+    smooth-scroll: true
+---
+
+
+
+## Why ditch the default
+
+- One/a few companies controlling what can and cant be found - questionable at best, dystopian at worst
+- Not wanting to have advertisers know everything about your online life
+- Interest in features that the giants don't have
+
+## The alternatives come in three flavours
+
+1) the front ends
+- Basically different UI, no tracking, but use the same results as the giants with only minor tweaks
+- Duckduckgo, Startpage, Qwant
+
+2) the meta search
+- query different engines for you, combine their results
+- SearXNG
+
+3) the independents
+- Don't track you and don't rely on the big players
+- Brave, Mojeek, you.com
+
+there are also niche ones like perplexity, which cant easily be compared
+
+## A very flawed empirical comparison 
+People, places, finance, news, science
+1 general, 1 niche query for each
+rated on accuracy, redundancy, complimentarity
+
+to know for sure we would need blind comparisons a la lmsys
+
+## Cool new toys
+- Bangs
+- Private viewing
+- Goggles
+- Short answers
+- Context information
+- LLM tools
+
+
+## Some hard truths
+Image search is hard
+Maps is still dominated by big players since Qwant dropped out
+
+
+## The moral of the story
+- I choose to use the search engine that i find most interesting, not the one that is most accurate, maybe you should try it out too? 
+
+
+
+
+
+
+
+
+
+
+
+

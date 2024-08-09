@@ -35,5 +35,8 @@
   },
   "posts/rss.qmd": {
     "rss.html": "7e5a216b"
+  },
+  "posts/search.qmd": {
+    "search.html": "ecdc3f29"
   }
 }
