@@ -1,6 +1,6 @@
 ---
 title: "How to easily make a website for free"
-description: "A jumpstart guide to Quarto"
+description: "A jumpstart guide to creating websites with Quarto"
 author: "Luke"
 date: "07/28/2024"
 categories:
