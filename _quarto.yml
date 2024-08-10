@@ -7,8 +7,9 @@ website:
   page-footer: "Powered by <a href='https://quarto.org' target='_blank'>Quarto</a>"  
   open-graph: true
   site-url: "https://lukmayer.github.io"
-  title: "<img src='assets/favicons/favicon.ico' alt='Logo' style='height:40px; vertical-align:middle;'>"
+  #title: "<img src='assets/favicons/favicon.ico' alt='Logo' style='height:40px; vertical-align:middle;'>"
   navbar:
+    logo: "assets/favicons/android-chrome-512x512.png"
     left:
       - href: index.qmd
         text: "Home"

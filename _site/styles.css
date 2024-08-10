@@ -89,6 +89,12 @@ h6 {
     font-size: 1.1em; /* Navbar links */
 }
 
+.navbar-logo {
+  height: 2em !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
 /* Change bulletpoint color */
 ul > li::marker {
     color: #00bf63; /* Replace with your desired color */
