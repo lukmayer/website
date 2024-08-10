@@ -165,7 +165,7 @@ about:
 The documentation for these is super easy to understand and can be found [here](https://quarto.org/docs/websites/website-about.html).
 There are a couple templates to select from and at the bottom I add some links to other things related to me. This YAML stuff should start to look familiar at this point ;) .
 
-## My shell script for pushing updates to Github + hosting
+## Hosting + My shell script for pushing updates to Github
 
 If you want to host your finished site on Github, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the `_site` folder. Then you push these files to a Github repository that you named `[yourgithubusername].github.io`. Then, on the settings page of this Github repository you enable `pages`. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debugging. 
 

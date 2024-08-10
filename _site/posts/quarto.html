@@ -214,7 +214,7 @@ window.Quarto = {
   <li><a href="#key-files-and-commands" id="toc-key-files-and-commands" class="nav-link" data-scroll-target="#key-files-and-commands">Key files and commands</a></li>
   <li><a href="#setting-up-a-blog-within-the-website" id="toc-setting-up-a-blog-within-the-website" class="nav-link" data-scroll-target="#setting-up-a-blog-within-the-website">Setting up a blog within the website</a></li>
   <li><a href="#about-pages" id="toc-about-pages" class="nav-link" data-scroll-target="#about-pages">About pages</a></li>
-  <li><a href="#my-shell-script-for-pushing-updates-to-github-hosting" id="toc-my-shell-script-for-pushing-updates-to-github-hosting" class="nav-link" data-scroll-target="#my-shell-script-for-pushing-updates-to-github-hosting">My shell script for pushing updates to Github + hosting</a></li>
+  <li><a href="#hosting-my-shell-script-for-pushing-updates-to-github" id="toc-hosting-my-shell-script-for-pushing-updates-to-github" class="nav-link" data-scroll-target="#hosting-my-shell-script-for-pushing-updates-to-github">Hosting + My shell script for pushing updates to Github</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 <div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/lukmayer/website"><i class="bi bi-file-code"></i>Website Source Code</a></li></ul></div></nav>
@@ -381,8 +381,8 @@ window.Quarto = {
 </div>
 <p>The documentation for these is super easy to understand and can be found <a href="https://quarto.org/docs/websites/website-about.html">here</a>. There are a couple templates to select from and at the bottom I add some links to other things related to me. This YAML stuff should start to look familiar at this point ;) .</p>
 </section>
-<section id="my-shell-script-for-pushing-updates-to-github-hosting" class="level2">
-<h2 class="anchored" data-anchor-id="my-shell-script-for-pushing-updates-to-github-hosting">My shell script for pushing updates to Github + hosting</h2>
+<section id="hosting-my-shell-script-for-pushing-updates-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="hosting-my-shell-script-for-pushing-updates-to-github">Hosting + My shell script for pushing updates to Github</h2>
 <p>If you want to host your finished site on Github, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the <code>_site</code> folder. Then you push these files to a Github repository that you named <code>[yourgithubusername].github.io</code>. Then, on the settings page of this Github repository you enable <code>pages</code>. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debugging.</p>
 <p>Because I have my website source files on a different repository on Github, I created a little shell script that I can push updates to both repositories with:</p>
 <div class="cell">

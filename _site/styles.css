@@ -1,34 +1,33 @@
 @font-face {
-    font-family: 'AnkaCoder';
-    src: url('assets/fonts/AnkaCoder-r.ttf') format('truetype'); /* Regular */
+    font-family: "AnkaCoder";
+    src: url("assets/fonts/AnkaCoder-r.ttf") format("truetype"); /* Regular */
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'AnkaCoder';
-    src: url('assets/fonts/AnkaCoder-b.ttf') format('truetype'); /* Bold */
+    font-family: "AnkaCoder";
+    src: url("assets/fonts/AnkaCoder-b.ttf") format("truetype"); /* Bold */
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'AnkaCoder';
-    src: url('assets/fonts/AnkaCoder-i.ttf') format('truetype'); /* Italic */
+    font-family: "AnkaCoder";
+    src: url("assets/fonts/AnkaCoder-i.ttf") format("truetype"); /* Italic */
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'AnkaCoder';
-    src: url('assets/fonts/AnkaCoder-bi.ttf') format('truetype'); /* Bold Italic */
+    font-family: "AnkaCoder";
+    src: url("assets/fonts/AnkaCoder-bi.ttf") format("truetype"); /* Bold Italic */
     font-weight: bold;
     font-style: italic;
 }
-
 
 body {
-    font-family: 'AnkaCoder', monospace;
+    font-family: "AnkaCoder", monospace;
     position: relative;
     margin: 0;
     padding: 0;
@@ -43,7 +42,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/ridges.jpg'); /* Adjust the path as needed */
+    background-image: url("assets/ridges.jpg"); /* Adjust the path as needed */
     background-size: cover; /* Cover the entire page */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-attachment: fixed; /* Make the background fixed on scroll */
@@ -63,25 +62,43 @@ h1 {
 
 h2 {
     font-size: 2em;
+    color: #00bf63;
 }
 
 h3 {
     font-size: 1.75em;
+    color: #00bf63;
 }
 
 h4 {
     font-size: 1.5em;
+    color: #00bf63;
 }
 
 h5 {
     font-size: 1.25em;
+    color: #00bf63;
 }
 
 h6 {
     font-size: 1em;
+    color: #00bf63;
 }
 
 .navbar {
     font-size: 1.1em; /* Navbar links */
 }
 
+/* Change bulletpoint color */
+ul > li::marker {
+    color: #00bf63; /* Replace with your desired color */
+}
+
+/* Change numbered list color */
+ol > li::marker {
+    color: #00bf63; /* Replace with your desired color */
+}
+
+.listing-title {
+    color: #00bf63; /* Replace with your desired color */
+}

@@ -10,6 +10,8 @@ listing:
   filter-ui: [title, date]
   categories: true
   feed: true
+rss:
+  title: "Luke's Blog"
 format:
   html:
     smooth-scroll: true
