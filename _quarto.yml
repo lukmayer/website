@@ -27,7 +27,8 @@ website:
         href: mailto:willuk@vivaldi.net
         aria-label: E-Mail
   
-
+blog:
+  title: "Luke's Blog"
 
 format:
   html:
