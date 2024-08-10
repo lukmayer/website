@@ -35,14 +35,19 @@ Who on earth needs all of that? Well, the beauty of it all is that Vivaldi does 
 
 Now because Vivaldi is such a beast, it can seem a little intimidating when you fire it up for the first time. So today I want to highlight the specific features of Vivaldi that allow you to go from this:
 
+::: {.text-center}
 
 ![Default Vivaldi has a lot of UI - [Credit](https://www.omgubuntu.co.uk/2022/10/vivaldi-5-5-adds-tasks-feature)](assets/default_vivaldi.png){fig-cap="Credit: https://www.omgubuntu.co.uk/2022/10/vivaldi-5-5-adds-tasks-feature"}
 
+:::
 
 To this:
 
+::: {.text-center}
 
 ![My Vivaldi is about as minimal as it gets without major compromises](assets/vivaldi.png){fig-cap="My Vivaldi"}
+
+:::
 
 You're probably looking at my screen-shot and thinking "How do you do ... anything?". The short answer is: Keyboard shortcuts! Vivaldi allows you to map whatever button combination you want to what must be hundreds of different commands. Closing a tab Ctrl + W, going to the previous page Alt + LeftArrow, opening E-Mail Ctrl + Shift + M, etc. That alone has allowed me to remove most of the UI. However, there are some exceptions to what can be removed. One example is the address field, which has to be in the address bar to work properly. You could hide the address bar in which case pressing Ctrl + L would actually pop out a little field to type in, but hiding the address bar is a little annoying if you use any of the UI in the Mail client, since it no longer will be accessible. Sure, you could bind a key to toggle the address bar for when you need it. However, I find that more cumbersome than just living with the address bar. This is because if you hide the address bar, Vivaldi will replace it with a minimal window title bar, which renders the net space savings of hiding the address bar minimal. 
 
