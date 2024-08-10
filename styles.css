@@ -105,6 +105,11 @@ ol > li::marker {
     color: #00bf63; /* Replace with your desired color */
 }
 
+.navbar-title {
+  font-size: 0.01em;
+  opacity: 0 !important;
+}
+
 .listing-title {
     color: #00bf63; /* Replace with your desired color */
 }
