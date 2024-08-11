@@ -1,4 +1,5 @@
 ---
+description: "Lukas Mayer's Curriculum Vitae - Education at the University of California (UCI), Irvine, University of Warwick (UoW), University of Stirling (UoS); Research Experience at the University of California, Irvine (UCI), University of Bath (UoB), and University of Stirling (UoS); Publications in scientific Journals; Awards and Honors for his outstanding achievements; Miscellaneous information about his participation in various other activities to further develop himself"
 format: 
   html:
     self-contained: true

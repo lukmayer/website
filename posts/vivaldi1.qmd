@@ -37,7 +37,7 @@ Now because Vivaldi is such a beast, it can seem a little intimidating when you 
 
 ::: {.text-center}
 
-![Default Vivaldi has a lot of UI - [Credit](https://www.omgubuntu.co.uk/2022/10/vivaldi-5-5-adds-tasks-feature)](assets/default_vivaldi.png){fig-cap="Credit: https://www.omgubuntu.co.uk/2022/10/vivaldi-5-5-adds-tasks-feature"}
+![Default Vivaldi has a lot of UI - [Credit](https://www.omgubuntu.co.uk/2022/10/vivaldi-5-5-adds-tasks-feature)](assets/default_vivaldi.png){fig-cap="Credit: https://www.omgubuntu.co.uk/2022/10/vivaldi-5-5-adds-tasks-feature" alt="By default, the vivaldi browser has a lot of UI"}
 
 :::
 
@@ -45,7 +45,7 @@ To this:
 
 ::: {.text-center}
 
-![My Vivaldi is about as minimal as it gets without major compromises](assets/vivaldi.png){fig-cap="My Vivaldi"}
+![My Vivaldi is about as minimal as it gets without major compromises](assets/vivaldi.png){fig-cap="My Vivaldi" alt="Lukas Mayer has a very minimal configuration of vivaldi that does not compromise on functionality"}
 
 :::
 

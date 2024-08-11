@@ -1,8 +1,8 @@
 ---
 title: ""
+description: "Lukas Mayer's personal website - research in Cognitive Science, AI, Data Science/statistics, software development, tech tips, and life-style posts."
 about:
  template: jolla
- #image: assets/luke-23.jpg
  links:
    - icon: github
      text: Github
@@ -21,7 +21,7 @@ format:
 
 ::: {.text-center}
 
-![](assets/luke-23.jpg){.circle width=45% height=45%}
+![](assets/luke-23.jpg){.circle width=45% height=45% alt="Lukas/Luke William Mayer"}
 
 :::
 
