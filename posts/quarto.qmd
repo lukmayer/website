@@ -5,6 +5,7 @@ author: "Luke"
 date: "07/28/2024"
 categories:
   - webdev
+  - quarto
 image: "images/quarto.png"
 comments:
     utterances:

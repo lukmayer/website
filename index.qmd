@@ -29,8 +29,6 @@ format:
 
 ---
 
-
-
 ### Welcome to my website!
 
 {{< animate fadeIn "I'm Luke, and I'm currently a PhD Student in Cognitive Science at the University of California, Irvine.
