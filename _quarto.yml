@@ -40,4 +40,5 @@ format:
 
 extensions:
   - copy-button
+  - appearance
   

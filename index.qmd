@@ -1,8 +1,8 @@
 ---
-title: "Lukas W. Mayer"
+title: ""
 about:
  template: jolla
- image: assets/luke-23.jpg
+ #image: assets/luke-23.jpg
  links:
    - icon: github
      text: Github
@@ -18,6 +18,14 @@ format:
     smooth-scroll: true
     toc: false
 ---
+
+::: {.text-center}
+
+![](assets/luke-23.jpg){.circle width=45% height=45%}
+
+:::
+
+# Lukas W. Mayer
 
 ---
 
