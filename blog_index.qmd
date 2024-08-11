@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-description: "Lukas Mayer's personal blog - tech tips, life-style recommendations, software development, research, data science"
+#description: "Lukas Mayer's personal blog - tech tips, life-style recommendations, software development, research, data science"
 listing:
   type: grid
   grid-columns: 2
