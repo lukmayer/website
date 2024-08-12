@@ -1,10 +1,15 @@
 ---
 title: "Research"
-#description: "Lukas Mayer's research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development"
+description: "Lukas Mayer's research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development"
 format:
   html:
     smooth-scroll: true
 ---
+<style>
+.description {
+    display: none;
+}
+</style>
 
 \
 

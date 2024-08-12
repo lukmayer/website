@@ -1,10 +1,16 @@
 ---
 title: "Curriculum Vitae"
-#description: "Lukas Mayer's Resumé - His education in Data Science/Cognitive Science/Statistics, awards, experience in conducting cutting-edge research, programming and project management skills, and scientific publications."
+description: "Lukas Mayer's Resumé - His education in Data Science/Cognitive Science/Statistics, awards, experience in conducting cutting-edge research, programming and project management skills, and scientific publications."
 format:
   html:
     smooth-scroll: true
 ---
+
+<style>
+.description {
+    display: none;
+}
+</style>
 
 If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf). 
 

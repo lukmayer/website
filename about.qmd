@@ -1,10 +1,17 @@
 ---
 title: "About"
-#description: "Lukas Mayer's mini biography, and his hobbies and interests - exercise, technology, languages, and gaming."
+description: "Lukas Mayer's mini biography, and his hobbies and interests - exercise, technology, languages, and gaming."
 format:
   html:
     smooth-scroll: true
 ---
+
+<style>
+.description {
+    display: none;
+}
+</style>
+
 
 ## Short biography
 
