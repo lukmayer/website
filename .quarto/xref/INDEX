@@ -38,5 +38,8 @@
   },
   "posts/search.qmd": {
     "search.html": "ecdc3f29"
+  },
+  "posts/habit.qmd": {
+    "habit.html": "c0468d72"
   }
 }
