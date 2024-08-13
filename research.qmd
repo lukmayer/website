@@ -24,9 +24,9 @@ format:
 \
 
 ### 2) Inversion problems in Cognitive Science
-{{< animate fadeIn "Whenever people are interacting with machine-learning based systems, (human) biases can propagate through the model leading to distorted predictions. Therefore, one strand of work I am interested in pursuing in this area is to derive the transformations that lead to better alignment, thus increasing the validity of predictions. I am also interested in addressing more engineering related concerns, such as how to use information we possess about cognition to improve the performance of machine learning algorithms trained on human-generated information. In this type of work, I like to mix and match methods from Cognitive Science and Machine Learning in combination with large, real-world data-sets."  duration=2s delay=1s >}}
+{{< animate fadeIn "Whenever people are interacting with machine-learning based systems, (human) biases can propagate through the model leading to distorted predictions. Therefore, one strand of work I am interested in pursuing in this area is to derive the transformations that lead to better alignment, thus increasing the validity of predictions. I am also interested in addressing more engineering related concerns, such as how to use information we possess about cognition to improve the performance of machine learning algorithms trained on human-generated information. In this type of work, I like to mix and match methods from Cognitive Science and Machine Learning in combination with large, real-world data-sets."  duration=2s >}}
 
-{{< animate fadeIn "One fairly recent project I have completed in this domain was my master’s thesis. In it, I was able to show how re-weighting a feature space in line with some theory borrowed from multi-attribute multi-alternative decision-making can improve the performance of machine learning algorithms tasked with predicting human choices."  duration=2s delay=1s >}}
+{{< animate fadeIn "One fairly recent project I have completed in this domain was my master’s thesis. In it, I was able to show how re-weighting a feature space in line with some theory borrowed from multi-attribute multi-alternative decision-making can improve the performance of machine learning algorithms tasked with predicting human choices."  duration=2s >}}
 
 
 
