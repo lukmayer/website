@@ -24,6 +24,7 @@ I got into habit tracking some time during my undergraduate degree to help me lo
 For someone like me back then, who had little in the way of a structured approach to achieving goals, habit tracking has really helped me make lifestyle changes that would have been pretty hard otherwise.
 For example, I doubt I would have been able to keep up my roughly 2000 day Duolingo streak if it had not been for habit tracking apps. 
 
+\
 
 ## The what and why of habit tracking
 
@@ -36,11 +37,14 @@ Habit trackers as a piece of software are similar in concept to recurring tasks 
 Habit trackers offer specific features tailored for measuring how well you are doing, in the form of streaks, habit strength metrics, rewards, social features and other so-called "commitment devices" to help you stay on track.
 Besides, having personal-life stuff like habits be separated from work tasks just gives you that little extra bit of mental peace, so I'd advise against just using recurring tasks on your productivity apps for this purpose. 
 
+\
+
 ## Habitica: gamify your life
 
 I used the "[Loop Habit Tracker](https://loophabits.org)" for the longest time. I liked the simple UI, the fact that it was free of ads and paid features, and the "sticky reminder" setting it has. In case you don't know, sticky reminders are notifications on your phone that cannot just be swiped away - they persist until you interact with them. This is nice because you can't accidentally dismiss them, helping you ensure you don't forget about that thing you meant to do. 
 
 After some years of this, I was looking for a way to track habits that did not require a mobile phone app. Basically, I got fed up with "freemium" services, which all seem to constantly bug you for premium subscriptions. Of course, Loop is not one of these apps, which is why I would still whole-heartedly recommend it to anyone who is looking to use a simple phone application for habit tracking. The problem is that 99% of apps seem to operate under a subscription-supported freemium model, which is not a problem in itself. I'm just the type of person to look for truly free options, without ads or annoying pop-ups. Of course, there is the F-droid app store for free software, but the reality is that free software is much more limited on mobile than it is on PC. So I basically more or less decided to only use my phone for tasks that cannot be completed on a PC, but that is a story for another post.  
+
 Somewhat to my dismay, there really aren't many fully-featured habit tracking apps on the market at the moment that support a web interface.
 Habitica was the only one I could find that seemed to actually still be operating, but I thought the Role-playing game plus habit tracking app concept was too gimmicky for me - I just wanted something simple after all.
 But I could not have been more wrong. I reluctantly tried the app, just to very quickly realize that turning habit tracking into a video game is a match made in heaven. 
@@ -61,6 +65,7 @@ Habitica has tons of features that interact with this basic game play loop which
 
 So if you're wanting behavior change on steroids, I'd say Habitica is the way to do it!
 
+\
 
 ## Some simple tips for getting started
 
@@ -72,6 +77,8 @@ Just make sure you don't buy off more than you can chew! It's better to do few t
 The second general tip I'd give that beginners often get wrong is that you want to make sure your goals are well-defined. 
 A simple guideline here is to make S.M.A.R.T. goals, that is Specific, Measurable, Achievable, Relevant, and Time-bound.
 In other words, try to make your goal as quantifiable as possible, how will you know you completed the task? By when?
+
+\
 
 ## Further reading
 
