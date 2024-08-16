@@ -26,14 +26,20 @@
 <p>The rest was just a matter of figuring out how to make this compatible with Quarto. It’s surprisingly easy!</p>
 <p>For a demonstration, click on [Login] in the top right and log in with username = <code>username</code> and password = <code>password</code>.</p>
 <p>Alternatively, visit <a href="lukmayer.github.io/login_portal">lukmayer.github.io/login_portal</a> to directly go to the login portal.</p>
+<p><br>
+</p>
 <section id="important-information" class="level2">
 <h2 class="anchored" data-anchor-id="important-information">Important information</h2>
 <p>The method I show here is meant for use-cases were you need a login portal for a static site. This method is NOT appropriate to use for enterprise applications, or critically sensitive information, as a sophisticated threat agent could figure out how to bypass the login portal. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, so it’s not a good idea to use this method for anything that could get you into trouble.</p>
+<p><br>
+</p>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <p>You want to be hosting the site somewhere where the source files are not accessible to the public.</p>
 <p>This can be for example, a private github repository with github pages enabled, etc.</p>
+<p><br>
+</p>
 </section>
 <section id="step-1-creating-hashes" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-creating-hashes">Step 1: Creating hashes</h2>
@@ -43,6 +49,8 @@
 <p><code>echo -n "&lt;password&gt;" | openssl dgst -sha1</code></p>
 <p><em>Note: replace <code>&lt;username&gt;</code> and <code>&lt;password&gt;</code> with the username and password of your choice.</em></p>
 <p>Copy the hashes these commands produce, we will need them in a second.</p>
+<p><br>
+</p>
 </section>
 <section id="step-2-setting-up-the-initial-login-page" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-setting-up-the-initial-login-page">Step 2: Setting up the initial login page</h2>
@@ -477,9 +485,13 @@ font-style: inherit;">&lt;/</span>html<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
 </div>
+<p><br>
+</p>
 <p>You may want to modify the footer to link to your own website.</p>
 <p>The <code>styles.css</code> should be a file in the same directory as <code>index.html</code>.</p>
 <p>You can put whatever you like in the <code>styles.css</code>, but here is mine:</p>
+<p><br>
+</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">body {</span>
 <span id="cb2-2">  background<span class="sc" style="color: #5E5E5E;
@@ -926,6 +938,8 @@ background-color: null;
 font-style: inherit;">#198754; /* Darker green on hover from Darkly theme */</span></span>
 <span id="cb2-81">}</span></code></pre></div>
 </div>
+<p><br>
+</p>
 </section>
 <section id="step-3-creating-the-gated-content" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-creating-the-gated-content">Step 3: Creating the gated content</h2>
@@ -935,6 +949,8 @@ font-style: inherit;">#198754; /* Darker green on hover from Darkly theme */</sp
 <p>Next, in the project folder, create a new folder of the name <code>a{yourpasswordhash}</code>.</p>
 <p><em>Note: replace <code>{yourusernamehash}</code> and <code>{yourpasswordhash}</code> with the hashes you generated in Step 1.</em></p>
 <p>Finally, open your <code>_quarto.yml</code> and make sure it has the following:</p>
+<p><br>
+</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">project<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -950,15 +966,21 @@ font-style: inherit;">:</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"a{yourpasswordhash}"</span></span></code></pre></div>
 </div>
+<p><br>
+</p>
 <p>This ensures that the rendered file sit in the folder that is named after the password hash.</p>
 <p>When you log in, you will be redirected to the URL constructed from the username and password hashes.</p>
 <p>This means you’ll be redirected to the files that sit in this folder named after the password hash.</p>
+<p><br>
+</p>
 </section>
 <section id="step-4-hiding-the-hashed-urls" class="level2">
 <h2 class="anchored" data-anchor-id="step-4-hiding-the-hashed-urls">Step 4: Hiding the hashed URLs</h2>
 <p>You don’t want the hashed URLs to leak, since knowing them allows you to bypass the login portal.</p>
 <p>The method I’m going to show you here can’t stop a determined hacker, but it will stop whoever you’re sharing this with from accidentally leaking the URLs.</p>
 <p>All you need to do is paste the following HTML/JS on every Quarto document behind the login portal:</p>
+<p><br>
+</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -994,9 +1016,13 @@ font-style: inherit;">/</span>script<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
 </div>
+<p><br>
+</p>
 <p>So, for example, the index page has this script embedded, and so does this page.</p>
 <p>What this does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.</p>
 <p><code>"/login_portal/"</code> is optional, you can set this to whatever you like.</p>
+<p><br>
+</p>
 </section>
 <section id="step-5-deploying" class="level2">
 <h2 class="anchored" data-anchor-id="step-5-deploying">Step 5: Deploying</h2>
@@ -1005,12 +1031,15 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 <p>DO NOT <code>git init</code> on the project folder, but instead where the index.html sits, which should be one level above the project folder.</p>
 <p>Then add the remote origin, commit and push to the remote.</p>
 <p>Finally, go to the settings of the repository on Github, and enable Github pages.</p>
+<p><br>
+</p>
 </section>
 <section id="step-6-making-more-content" class="level2">
 <h2 class="anchored" data-anchor-id="step-6-making-more-content">Step 6: Making more content</h2>
 <p>To add more gated content with different access credentials, simply create another Quarto project with different hash names at the same level as the first one.</p>
 <p>This also means that you need to render each project separately.</p>
-<hr>
+<p><br>
+</p>
 <p>If you make use of my code or took inspiration from my solution, I’d love to see your result! :)</p>
 <p>Enjoy!</p>
 

@@ -29,10 +29,14 @@ For a demonstration, click on [Login] in the top right and log in with username 
 
 Alternatively, visit [lukmayer.github.io/login_portal](lukmayer.github.io/login_portal) to directly go to the login portal.
 
+\
+
 ## Important information
 
 The method I show here is meant for use-cases were you need a login portal for a static site.
 This method is NOT appropriate to use for enterprise applications, or critically sensitive information, as a sophisticated threat agent could figure out how to bypass the login portal. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, so it's not a good idea to use this method for anything that could get you into trouble. 
+
+\
 
 ## Prerequisites
 
@@ -40,6 +44,7 @@ You want to be hosting the site somewhere where the source files are not accessi
 
 This can be for example, a private github repository with github pages enabled, etc.
 
+\
 
 ## Step 1: Creating hashes
 
@@ -55,6 +60,7 @@ Run the following commands in your terminal to generate the hashes for the usern
 
 Copy the hashes these commands produce, we will need them in a second.
 
+\
 
 ## Step 2: Setting up the initial login page
 
@@ -139,11 +145,15 @@ Now, in this directory, create index.html with the following content:
 
 ```
 
+\
+
 You may want to modify the footer to link to your own website.
 
 The `styles.css` should be a file in the same directory as `index.html`.
 
 You can put whatever you like in the `styles.css`, but here is mine:
+
+\
 
 ```{r, eval=FALSE}
 body {
@@ -229,8 +239,7 @@ footer a:hover {
 }
 ```
 
-
-
+\
 
 ## Step 3: Creating the gated content
 
@@ -246,6 +255,8 @@ Next, in the project folder, create a new folder of the name `a{yourpasswordhash
 
 Finally, open your `_quarto.yml` and make sure it has the following:
 
+\
+
 ```{r, eval=FALSE}
 
 project:
@@ -254,12 +265,15 @@ project:
 
 ```
 
+\
+
 This ensures that the rendered file sit in the folder that is named after the password hash.
 
 When you log in, you will be redirected to the URL constructed from the username and password hashes.
 
 This means you'll be redirected to the files that sit in this folder named after the password hash.
 
+\
 
 ## Step 4: Hiding the hashed URLs
 
@@ -268,6 +282,8 @@ You don't want the hashed URLs to leak, since knowing them allows you to bypass 
 The method I'm going to show you here can't stop a determined hacker, but it will stop whoever you're sharing this with from accidentally leaking the URLs.
 
 All you need to do is paste the following HTML/JS on every Quarto document behind the login portal:
+
+\
 
 ```{r, eval=FALSE}
 <script>
@@ -278,12 +294,15 @@ window.addEventListener('load', () => {
 </script>
 ```
 
+\
+
 So, for example, the index page has this script embedded, and so does this page.
 
 What this does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.
 
 `"/login_portal/"` is optional, you can set this to whatever you like. 
 
+\
 
 ## Step 5: Deploying
 
@@ -297,7 +316,7 @@ Then add the remote origin, commit and push to the remote.
 
 Finally, go to the settings of the repository on Github, and enable Github pages.
 
-
+\
 
 ## Step 6: Making more content
 
@@ -305,7 +324,7 @@ To add more gated content with different access credentials, simply create anoth
 
 This also means that you need to render each project separately.
 
----
+\
 
 If you make use of my code or took inspiration from my solution, I'd love to see your result! :)
 
