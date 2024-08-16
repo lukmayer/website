@@ -27,7 +27,7 @@ The rest was just a matter of figuring out how to make this compatible with Quar
 
 For a demonstration, click on [Login] in the top right and log in with username = `username` and password = `password`.
 
-Alternatively, visit [lukmayer.github.io/login_portal](lukmayer.github.io/login_portal) to directly go to the login portal.
+Alternatively, visit [lukmayer.github.io/login_portal](https://lukmayer.github.io/login_portal/) to directly go to the login portal.
 
 \
 
