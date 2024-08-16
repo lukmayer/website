@@ -328,7 +328,7 @@ This also means that you need to render each project separately.
 
 ## Troubleshooting
 
-Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your teminal, then rename the files.
+Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your terminal, then rename the files.
 
 ---
 

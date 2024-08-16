@@ -263,7 +263,7 @@
     "href": "posts/login.html#troubleshooting",
     "title": "How to make a login portal for Quarto sites",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\nShould the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your teminal, then rename the files.\n\n\n\nIf you make use of my code or took inspiration from my solution, I’d love to see your result! :)\nEnjoy!"
+    "text": "Troubleshooting\nShould the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your terminal, then rename the files.\n\n\n\nIf you make use of my code or took inspiration from my solution, I’d love to see your result! :)\nEnjoy!"
   },
   {
     "objectID": "posts/quarto.html",
