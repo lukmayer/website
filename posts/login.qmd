@@ -66,7 +66,7 @@ Copy the hashes these commands produce, we will need them in a second.
 
 Create a directory. In this example, we'll call it `login_portal`.
 
-Now, in this directory, create index.html with the following content:
+Now, in this directory, create `index.html` with the following content:
 
 ```{r, eval=FALSE}
 
@@ -243,7 +243,7 @@ footer a:hover {
 
 ## Step 3: Creating the gated content
 
-Initialize a Quarto website project in the directory in which index.html sits.
+Initialize a Quarto website project in the directory in which `index.html` sits.
 
 The name of the project MUST be `a{yourusernamehash}`
 
@@ -310,7 +310,7 @@ I'm assuming you are planning to use Github with Github pages for this.
 
 First, render your Quarto project to HTML.
 
-DO NOT `git init` on the project folder, but instead where the index.html sits, which should be one level above the project folder.
+DO NOT `git init` on the project folder, but instead where the `index.html` sits, which should be one level above the project folder.
 
 Then add the remote origin, commit and push to the remote. 
 

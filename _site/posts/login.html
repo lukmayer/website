@@ -278,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="step-2-setting-up-the-initial-login-page" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-setting-up-the-initial-login-page">Step 2: Setting up the initial login page</h2>
 <p>Create a directory. In this example, we’ll call it <code>login_portal</code>.</p>
-<p>Now, in this directory, create index.html with the following content:</p>
+<p>Now, in this directory, create <code>index.html</code> with the following content:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;!</span>DOCTYPE html<span class="sc">&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;</span>html<span class="sc">&gt;</span></span>
@@ -448,7 +448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-3-creating-the-gated-content" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-creating-the-gated-content">Step 3: Creating the gated content</h2>
-<p>Initialize a Quarto website project in the directory in which index.html sits.</p>
+<p>Initialize a Quarto website project in the directory in which <code>index.html</code> sits.</p>
 <p>The name of the project MUST be <code>a{yourusernamehash}</code></p>
 <p>The reason the “a” is prepended to the hash is that Github pages will not serve a directory that starts with a number.</p>
 <p>Next, in the project folder, create a new folder of the name <code>a{yourpasswordhash}</code>.</p>
@@ -496,7 +496,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="step-5-deploying">Step 5: Deploying</h2>
 <p>I’m assuming you are planning to use Github with Github pages for this.</p>
 <p>First, render your Quarto project to HTML.</p>
-<p>DO NOT <code>git init</code> on the project folder, but instead where the index.html sits, which should be one level above the project folder.</p>
+<p>DO NOT <code>git init</code> on the project folder, but instead where the <code>index.html</code> sits, which should be one level above the project folder.</p>
 <p>Then add the remote origin, commit and push to the remote.</p>
 <p>Finally, go to the settings of the repository on Github, and enable Github pages.</p>
 <p><br>
