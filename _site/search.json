@@ -235,14 +235,14 @@
     "href": "posts/login.html#step-3-creating-the-gated-content",
     "title": "How to make a login portal for Quarto sites",
     "section": "Step 3: Creating the gated content",
-    "text": "Step 3: Creating the gated content\nInitialize a Quarto website project in the directory in which index.html sits.\nThe name of the project MUST be a{yourusernamehash}\nThe reason the “a” is prepended to the hash is that Github pages will not serve a directory that starts with a number.\nNext, in the project folder, create a new folder of the name a{yourpasswordhash}.\nNote: replace {yourusernamehash} and {yourpasswordhash} with the hashes you generated in Step 1.\nFinally, open your _quarto.yml and make sure it has the following:\n\n\n\nproject:\n  type: website\n  output-dir: \"a{yourpasswordhash}\"\n\n\n\nThis ensures that the rendered file sit in the folder that is named after the password hash.\nWhen you log in, you will be redirected to the URL constructed from the username and password hashes.\nThis means you’ll be redirected to the files that sit in this folder named after the password hash."
+    "text": "Step 3: Creating the gated content\nInitialize a Quarto website project in the directory in which index.html sits.\nThe name of the project MUST be a{yourusernamehash}\nThe reason the “a” is prepended to the hash is that Github pages will not serve a directory that starts with a number.\nNext, in the project folder, create a new folder of the name a{yourpasswordhash}.\nNote: replace {yourusernamehash} and {yourpasswordhash} with the hashes you generated in Step 1.\nFinally, open your _quarto.yml and make sure it has the following:\n\n\n\nproject:\n  type: website\n  output-dir: \"a{yourpasswordhash}\"\n\n\n\nThis ensures that the rendered files sit in the folder that is named after the password hash.\nWhen you log in, you will be redirected to the URL constructed from the username and password hashes.\nThis means you’ll be redirected to the files that sit in this folder named after the password hash."
   },
   {
     "objectID": "posts/login.html#step-4-hiding-the-hashed-urls",
     "href": "posts/login.html#step-4-hiding-the-hashed-urls",
     "title": "How to make a login portal for Quarto sites",
     "section": "Step 4: Hiding the hashed URLs",
-    "text": "Step 4: Hiding the hashed URLs\nYou don’t want the hashed URLs to leak, since knowing them allows you to bypass the login portal.\nThe method I’m going to show you here can’t stop a determined hacker, but it will stop whoever you’re sharing this with from accidentally leaking the URLs.\nAll you need to do is paste the following HTML/JS on every Quarto document behind the login portal:\n\n\n\n&lt;script&gt;\nwindow.addEventListener('load', () =&gt; {\n  // Change the URL in the address bar after load\n  history.replaceState(null, null, \"/login_portal/\");\n});\n&lt;/script&gt;\n\n\n\nSo, for example, the index page on the demo I mentioned at the beginning of the post has this script embedded, and so does the “Guide” page.\nWhat this code does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.\n\"/login_portal/\" is optional, you can set this to whatever you like."
+    "text": "Step 4: Hiding the hashed URLs\nYou don’t want the hashed URLs to leak, since knowing them allows you to bypass the login portal.\nThe method I’m going to show you here can’t stop a determined hacker, but it will stop whoever you’re sharing this with from accidentally leaking the hashed URLs.\nAll you need to do is paste the following HTML/JS on every Quarto document behind the login portal:\n\n\n\n&lt;script&gt;\nwindow.addEventListener('load', () =&gt; {\n  // Change the URL in the address bar after load\n  history.replaceState(null, null, \"/login_portal/\");\n});\n&lt;/script&gt;\n\n\n\nSo, for example, the index page on the demo I mentioned at the beginning of the post has this script embedded, and so does the “Guide” page.\nWhat this code does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.\n\"/login_portal/\" is optional, you can set this to whatever you like."
   },
   {
     "objectID": "posts/login.html#step-5-deploying",
@@ -263,7 +263,7 @@
     "href": "posts/login.html#troubleshooting",
     "title": "How to make a login portal for Quarto sites",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\nShould the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console!\n\n\n\nIf you make use of my code or took inspiration from my solution, I’d love to see your result! :)\nEnjoy!"
+    "text": "Troubleshooting\nShould the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your teminal, then rename the files.\n\n\n\nIf you make use of my code or took inspiration from my solution, I’d love to see your result! :)\nEnjoy!"
   },
   {
     "objectID": "posts/quarto.html",

@@ -267,7 +267,7 @@ project:
 
 \
 
-This ensures that the rendered file sit in the folder that is named after the password hash.
+This ensures that the rendered files sit in the folder that is named after the password hash.
 
 When you log in, you will be redirected to the URL constructed from the username and password hashes.
 
@@ -279,7 +279,7 @@ This means you'll be redirected to the files that sit in this folder named after
 
 You don't want the hashed URLs to leak, since knowing them allows you to bypass the login portal.
 
-The method I'm going to show you here can't stop a determined hacker, but it will stop whoever you're sharing this with from accidentally leaking the URLs.
+The method I'm going to show you here can't stop a determined hacker, but it will stop whoever you're sharing this with from accidentally leaking the hashed URLs.
 
 All you need to do is paste the following HTML/JS on every Quarto document behind the login portal:
 
@@ -328,7 +328,7 @@ This also means that you need to render each project separately.
 
 ## Troubleshooting
 
-Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console!
+Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your teminal, then rename the files.
 
 ---
 

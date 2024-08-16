@@ -463,7 +463,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><br>
 </p>
-<p>This ensures that the rendered file sit in the folder that is named after the password hash.</p>
+<p>This ensures that the rendered files sit in the folder that is named after the password hash.</p>
 <p>When you log in, you will be redirected to the URL constructed from the username and password hashes.</p>
 <p>This means you’ll be redirected to the files that sit in this folder named after the password hash.</p>
 <p><br>
@@ -472,7 +472,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="step-4-hiding-the-hashed-urls" class="level2">
 <h2 class="anchored" data-anchor-id="step-4-hiding-the-hashed-urls">Step 4: Hiding the hashed URLs</h2>
 <p>You don’t want the hashed URLs to leak, since knowing them allows you to bypass the login portal.</p>
-<p>The method I’m going to show you here can’t stop a determined hacker, but it will stop whoever you’re sharing this with from accidentally leaking the URLs.</p>
+<p>The method I’m going to show you here can’t stop a determined hacker, but it will stop whoever you’re sharing this with from accidentally leaking the hashed URLs.</p>
 <p>All you need to do is paste the following HTML/JS on every Quarto document behind the login portal:</p>
 <p><br>
 </p>
@@ -511,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p>Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console!</p>
+<p>Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your teminal, then rename the files.</p>
 <hr>
 <p><br>
 </p>
