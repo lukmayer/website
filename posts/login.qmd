@@ -1,6 +1,6 @@
 ---
 title: "How to make a login portal for Quarto sites"
-description: "Personalize/Paywall content on static websites"
+description: "Personalized/Gated content on static websites"
 author: "Luke"
 date: "08/15/2024"
 categories:
