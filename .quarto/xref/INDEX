@@ -41,5 +41,8 @@
   },
   "posts/habit.qmd": {
     "habit.html": "c0468d72"
+  },
+  "posts/login.qmd": {
+    "login.html": "0546b16c"
   }
 }

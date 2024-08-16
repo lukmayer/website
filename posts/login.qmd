@@ -1,0 +1,313 @@
+---
+title: "How to make a login portal for Quarto sites"
+description: "Personalize/Paywall content on static websites"
+author: "Luke"
+date: "08/15/2024"
+categories:
+  - webdev
+  - quarto
+image: "images/login.png"
+comments:
+    utterances:
+      repo: lukmayer/site_comments
+      theme: github-dark
+      issue-term: url
+format:
+  html:
+    smooth-scroll: true
+---
+
+Hello again!
+
+I stumbled upon this [blog post](https://www.agalera.eu/github-pages-password/) while trying to figure out whether it was possible to set up a login portal for static webpages. It seems that so far, no one else has figured out how to do this with Quarto, so I've been hacking away at it in my free time for the last few days, and finally figured it out!
+
+Basically, the idea is to use the SHA1 hash of the username and password as a part of the URL to the gated content. This way, the URL to the gated content is not easily guessable, and the user has to go through the login portal to access the content.
+
+The rest was just a matter of figuring out how to make this compatible with Quarto. It's surprisingly easy!
+
+For a demonstration, click on [Login] in the top right and log in with username = `username` and password = `password`.
+
+Alternatively, visit [lukmayer.github.io/login_portal](lukmayer.github.io/login_portal) to directly go to the login portal.
+
+## Important information
+
+The method I show here is meant for use-cases were you need a login portal for a static site.
+This method is NOT appropriate to use for enterprise applications, or critically sensitive information, as a sophisticated threat agent could figure out how to bypass the login portal. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, so it's not a good idea to use this method for anything that could get you into trouble. 
+
+## Prerequisites
+
+You want to be hosting the site somewhere where the source files are not accessible to the public.
+
+This can be for example, a private github repository with github pages enabled, etc.
+
+
+## Step 1: Creating hashes
+
+You need to come up with username and password for the gated content BEFORE you create the gated content
+
+Run the following commands in your terminal to generate the hashes for the username and password of your choice:
+
+`echo -n "<username>" | openssl dgst -sha1`
+
+`echo -n "<password>" | openssl dgst -sha1`
+
+*Note: replace `<username>` and `<password>` with the username and password of your choice.*
+
+Copy the hashes these commands produce, we will need them in a second.
+
+
+## Step 2: Setting up the initial login page
+
+Create a directory. In this example, we'll call it `login_portal`.
+
+Now, in this directory, create index.html with the following content:
+
+```{r, eval=FALSE}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Portal</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <h1>Login Portal</h1>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Enter username">
+    <input type="password" id="password" placeholder="Enter password">
+    <button id="login-btn" type="button">Login</button>
+  </form>
+  <div id="alert" style="display: none;" data-id="alert">Incorrect username or password</div>
+
+  <script>
+    const loginBtn = document.getElementById('login-btn');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const alertDiv = document.getElementById('alert');
+
+    function sha1(message) {
+      return CryptoJS.SHA1(message).toString(CryptoJS.enc.Hex);
+    }
+
+    async function urlExists(url) {
+      try {
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    async function login(username, password) {
+      const usernameHash = sha1(username);
+      const passwordHash = sha1(password);
+
+      // Log the hashes for debugging
+      console.log("Username Hash:", usernameHash);
+      console.log("Password Hash:", passwordHash);
+
+      const url = 'a' + usernameHash + '/a' + passwordHash + '/index.html'; // Construct URL
+      console.log("Constructed URL:", url); // Log the constructed URL
+
+      if (await urlExists(url)) {
+        window.location = url;
+      } else {
+        alertDiv.style.display = 'block'; // Show alert
+        usernameInput.value = '';
+        passwordInput.value = '';
+        console.log("Login failed, incorrect username or password.");
+      }
+    }
+
+    loginBtn.addEventListener('click', function () {
+      login(usernameInput.value, passwordInput.value);
+    });
+
+    passwordInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        login(usernameInput.value, passwordInput.value);
+      }
+    });
+  </script>
+
+  <footer>
+    <a href="https://lukmayer.github.io">Return to lukmayer.github.io</a>
+  </footer>
+</body>
+</html>
+
+```
+
+You may want to modify the footer to link to your own website.
+
+The `styles.css` should be a file in the same directory as `index.html`.
+
+You can put whatever you like in the `styles.css`, but here is mine:
+
+```{r, eval=FALSE}
+body {
+  background-color: #4f4f4f; /* Dark grey background from Darkly theme */
+  color: #ffffff; /* Light text */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column; /* Arrange elements in a column */
+}
+h1 {
+  color: #00bf63; /* Green color from Darkly theme */
+  margin-bottom: 20px; /* Space between title and form */
+}
+.form-container {
+  background-color: #777777; /* Slightly lighter dark background for form from Darkly theme */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 191, 99, 0.5); /* Adjusted shadow to match theme */
+  width: 100%;
+  max-width: 400px; /* Set a max-width for better alignment */
+  box-sizing: border-box; /* Ensure padding is included in overall width */
+}
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #00bf63; /* Green border from Darkly theme */
+  border-radius: 5px;
+  background-color: #777777; /* Dark input background from Darkly theme */
+  color: #ffffff; /* Light text in input */
+  box-sizing: border-box; /* Ensure padding is included in overall width */
+}
+input::placeholder {
+  color: #ced4da; /* Light grey color for placeholder text from Darkly theme */
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00bf63; /* Green button background from Darkly theme */
+  color: #ffffff; /* Light text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #198754; /* Darker green on hover from Darkly theme */
+}
+#alert {
+  color: #ff0000; /* Red alert message */
+  margin-top: 10px;
+  align-self: center; /* Align to the start of the form */
+}
+
+/* Center the container, form, and alert */
+.container {
+  display: flex;
+  flex-direction: column; /* Arrange title, form, and alert in a column */
+  align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #00bf63; /* Green color from Darkly theme */
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #00bf63; /* Green color from Darkly theme */
+}
+
+footer a:hover {
+  color: #198754; /* Darker green on hover from Darkly theme */
+}
+```
+
+
+
+
+## Step 3: Creating the gated content
+
+Initialize a Quarto website project in the directory in which index.html sits.
+
+The name of the project MUST be `a{yourusernamehash}`
+
+The reason the "a" is prepended to the hash is that Github pages will not serve a directory that starts with a number.
+
+Next, in the project folder, create a new folder of the name `a{yourpasswordhash}`.
+
+*Note: replace `{yourusernamehash}` and `{yourpasswordhash}` with the hashes you generated in Step 1.*
+
+Finally, open your `_quarto.yml` and make sure it has the following:
+
+```{r, eval=FALSE}
+
+project:
+  type: website
+  output-dir: "a{yourpasswordhash}"
+
+```
+
+This ensures that the rendered file sit in the folder that is named after the password hash.
+
+When you log in, you will be redirected to the URL constructed from the username and password hashes.
+
+This means you'll be redirected to the files that sit in this folder named after the password hash.
+
+
+## Step 4: Hiding the hashed URLs
+
+You don't want the hashed URLs to leak, since knowing them allows you to bypass the login portal.
+
+The method I'm going to show you here can't stop a determined hacker, but it will stop whoever you're sharing this with from accidentally leaking the URLs.
+
+All you need to do is paste the following HTML/JS on every Quarto document behind the login portal:
+
+```{r, eval=FALSE}
+<script>
+window.addEventListener('load', () => {
+  // Change the URL in the address bar after load
+  history.replaceState(null, null, "/login_portal/");
+});
+</script>
+```
+
+So, for example, the index page has this script embedded, and so does this page.
+
+What this does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.
+
+`"/login_portal/"` is optional, you can set this to whatever you like. 
+
+
+## Step 5: Deploying
+
+I'm assuming you are planning to use Github with Github pages for this.
+
+First, render your Quarto project to HTML.
+
+DO NOT `git init` on the project folder, but instead where the index.html sits, which should be one level above the project folder.
+
+Then add the remote origin, commit and push to the remote. 
+
+Finally, go to the settings of the repository on Github, and enable Github pages.
+
+
+
+## Step 6: Making more content
+
+To add more gated content with different access credentials, simply create another Quarto project with different hash names at the same level as the first one.
+
+This also means that you need to render each project separately.
+
+---
+
+If you make use of my code or took inspiration from my solution, I'd love to see your result! :)
+
+Enjoy!
+
