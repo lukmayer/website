@@ -7,7 +7,7 @@ categories:
   - emacs
   - webdev
   - software
-image: "images/doom.jpg"
+image: "images/doom.png"
 comments:
     utterances:
       repo: lukmayer/site_comments
