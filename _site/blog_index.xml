@@ -1018,8 +1018,8 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 </div>
 <p><br>
 </p>
-<p>So, for example, the index page has this script embedded, and so does this page.</p>
-<p>What this does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.</p>
+<p>So, for example, the index page on the demo I mentioned at the beginning of the post has this script embedded, and so does the “Guide” page.</p>
+<p>What this code does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.</p>
 <p><code>"/login_portal/"</code> is optional, you can set this to whatever you like.</p>
 <p><br>
 </p>

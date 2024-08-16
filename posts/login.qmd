@@ -296,9 +296,9 @@ window.addEventListener('load', () => {
 
 \
 
-So, for example, the index page has this script embedded, and so does this page.
+So, for example, the index page on the demo I mentioned at the beginning of the post has this script embedded, and so does the "Guide" page.
 
-What this does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.
+What this code does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.
 
 `"/login_portal/"` is optional, you can set this to whatever you like. 
 
