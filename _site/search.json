@@ -203,11 +203,11 @@
     "text": "Hello again!\nI stumbled upon this blog post while trying to figure out whether it was possible to set up a login portal for static webpages. It seems that so far, no one else has figured out how to do this with Quarto, so I’ve been hacking away at it in my free time for the last few days, and finally figured it out!\nBasically, the idea is to use the SHA1 hash of the username and password as a part of the URL to the gated content. This way, the URL to the gated content is not easily guessable, and the user has to go through the login portal to access the content.\nThe rest was just a matter of figuring out how to make this compatible with Quarto. It’s surprisingly easy!\nFor a demonstration, click on [Login] in the top right and log in with username = username and password = password.\nAlternatively, visit lukmayer.github.io/login_portal to directly go to the login portal."
   },
   {
-    "objectID": "posts/login.html#important-information",
-    "href": "posts/login.html#important-information",
+    "objectID": "posts/login.html#disclaimer",
+    "href": "posts/login.html#disclaimer",
     "title": "How to make a login portal for Quarto sites",
-    "section": "Important information",
-    "text": "Important information\nThe method I show here is meant for use-cases were you need a login portal for a static site. This method is NOT appropriate to use for enterprise applications, or critically sensitive information, as a sophisticated threat agent could figure out how to bypass the login portal. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, so it’s not a good idea to use this method for anything that could get you into trouble."
+    "section": "Disclaimer",
+    "text": "Disclaimer\nThe method I show here is meant for use-cases were you need a login portal for a static site. This method is NOT appropriate to use for enterprise applications, or critically sensitive information, as a sophisticated threat agent could figure out how to bypass the login portal. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, so it’s not a good idea to use this method for anything that could get you into trouble."
   },
   {
     "objectID": "posts/login.html#prerequisites",

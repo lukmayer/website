@@ -31,7 +31,7 @@ Alternatively, visit [lukmayer.github.io/login_portal](https://lukmayer.github.i
 
 \
 
-## Important information
+## Disclaimer
 
 The method I show here is meant for use-cases were you need a login portal for a static site.
 This method is NOT appropriate to use for enterprise applications, or critically sensitive information, as a sophisticated threat agent could figure out how to bypass the login portal. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, so it's not a good idea to use this method for anything that could get you into trouble. 
