@@ -326,6 +326,14 @@ This also means that you need to render each project separately.
 
 \
 
+## Troubleshooting
+
+Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console!
+
+---
+
+\
+
 If you make use of my code or took inspiration from my solution, I'd love to see your result! :)
 
 Enjoy!

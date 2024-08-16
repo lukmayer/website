@@ -193,7 +193,7 @@
     "href": "blog_index.html",
     "title": "Blog",
     "section": "",
-    "text": "A dedicated space for me to rant!\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHow to make a login portal for Quarto sites\n\n\n8 min\n\n\nPersonalized/Gated content on static websites\n\n\n\nAug 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHabit tracking with Habitica - a quick tour\n\n\n7 min\n\n\nTurn your life into a video-game? It’s better than you think\n\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA comprehensive review of non-obscure search engines\n\n\n14 min\n\n\nTo google or not to google, that is the question.\n\n\n\nAug 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStop ‘Doom-scrolling’, start using RSS\n\n\n4 min\n\n\nAnother hot-take on old technology that was ahead of its time\n\n\n\nAug 6, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Vivaldi is the least and most minimal browser at the same time\n\n\n7 min\n\n\nMy take on how to make a piece of maximalist software easy on the eyes\n\n\n\nAug 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to easily make a website for free\n\n\n14 min\n\n\nA jumpstart guide to creating websites with Quarto\n\n\n\nJul 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to achieve the Visual Studio Code ‘Live Server’ extension in Doom Emacs\n\n\n5 min\n\n\nSome reflections on how I configured Doom to locally host a site\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy first DIY web-app\n\n\n6 min\n\n\nJust a quick post to test the blog and briefly talk about my first ventures into JavaScript\n\n\n\nJul 21, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "A dedicated space for me to rant!\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHow to make a login portal for Quarto sites\n\n\n9 min\n\n\nPersonalized/Gated content on static websites\n\n\n\nAug 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHabit tracking with Habitica - a quick tour\n\n\n7 min\n\n\nTurn your life into a video-game? It’s better than you think\n\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA comprehensive review of non-obscure search engines\n\n\n14 min\n\n\nTo google or not to google, that is the question.\n\n\n\nAug 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStop ‘Doom-scrolling’, start using RSS\n\n\n4 min\n\n\nAnother hot-take on old technology that was ahead of its time\n\n\n\nAug 6, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Vivaldi is the least and most minimal browser at the same time\n\n\n7 min\n\n\nMy take on how to make a piece of maximalist software easy on the eyes\n\n\n\nAug 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to easily make a website for free\n\n\n14 min\n\n\nA jumpstart guide to creating websites with Quarto\n\n\n\nJul 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to achieve the Visual Studio Code ‘Live Server’ extension in Doom Emacs\n\n\n5 min\n\n\nSome reflections on how I configured Doom to locally host a site\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy first DIY web-app\n\n\n6 min\n\n\nJust a quick post to test the blog and briefly talk about my first ventures into JavaScript\n\n\n\nJul 21, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/login.html",
@@ -256,7 +256,14 @@
     "href": "posts/login.html#step-6-making-more-content",
     "title": "How to make a login portal for Quarto sites",
     "section": "Step 6: Making more content",
-    "text": "Step 6: Making more content\nTo add more gated content with different access credentials, simply create another Quarto project with different hash names at the same level as the first one.\nThis also means that you need to render each project separately.\n\n\nIf you make use of my code or took inspiration from my solution, I’d love to see your result! :)\nEnjoy!"
+    "text": "Step 6: Making more content\nTo add more gated content with different access credentials, simply create another Quarto project with different hash names at the same level as the first one.\nThis also means that you need to render each project separately."
+  },
+  {
+    "objectID": "posts/login.html#troubleshooting",
+    "href": "posts/login.html#troubleshooting",
+    "title": "How to make a login portal for Quarto sites",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nShould the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console!\n\n\n\nIf you make use of my code or took inspiration from my solution, I’d love to see your result! :)\nEnjoy!"
   },
   {
     "objectID": "posts/quarto.html",
