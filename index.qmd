@@ -13,6 +13,9 @@ about:
    - icon: envelope
      text: Email
      href: mailto:willuk@vivaldi.net
+format: 
+  html:
+    toc: false
 ---
 
 ::: {.text-center}
