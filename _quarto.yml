@@ -35,6 +35,7 @@ blog:
 
 format:
   html:
+    code-line-numbers: "1"
     smooth-scroll: true
     theme: [darkly, theme-dark.scss]
     css: styles.css

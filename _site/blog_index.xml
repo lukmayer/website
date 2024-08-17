@@ -57,7 +57,7 @@
 <p>Create a directory. In this example, we’ll call it <code>login_portal</code>.</p>
 <p>Now, in this directory, create <code>index.html</code> with the following content:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;!</span>DOCTYPE html<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -493,7 +493,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">body {</span>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1">body {</span>
 <span id="cb2-2">  background<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span>color<span class="sc" style="color: #5E5E5E;
@@ -952,7 +952,7 @@ font-style: inherit;">#198754; /* Darker green on hover from Darkly theme */</sp
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">project<span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">project<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span></span>
 <span id="cb3-2">  type<span class="sc" style="color: #5E5E5E;
@@ -982,7 +982,7 @@ font-style: inherit;">"a{yourpasswordhash}"</span></span></code></pre></div>
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span>script<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1314,7 +1314,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 <h4 class="anchored" data-anchor-id="the-_quarto.yml">The _quarto.yml</h4>
 <p>Here’s what my .yml file looks like:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">project<span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1">project<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span></span>
 <span id="cb1-2">  type<span class="sc" style="color: #5E5E5E;
@@ -1489,7 +1489,7 @@ font-style: inherit;">-</span>button</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="setting-up-a-blog-within-the-website">Setting up a blog within the website</h2>
 <p>A blog is a nice place to share things in posts. In Quarto, that basically means having a list of pages on a blog index page. The pages listed on this index all sit inside a folder inside your project directory. In case you didn’t realize yet, every quarto markdown document has a so-called “YAML header” which is indicated by the three hyphens that denote the beginning and ending of this header. The header specifies fields and settings for that page alone. Here’s what the header looks like for my blog index.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">---</span></span>
 <span id="cb2-2">title<span class="sc" style="color: #5E5E5E;
@@ -1539,7 +1539,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 <p>So in my case, I give my <code>blog_index.qmd</code> a title, choose a layout for my blog (there are a couple of options here), some fields that will be shown in my blog such as how long it takes to read the post (again, there is a list of things you can easily put here). The contents field specifies the folder that features all the pages I want to be listed on <code>blog_index.qmd</code>. The next couple fields add UI for sorting/filtering and the categories field allows you to add category tags to posts which can be nice. I’ll show you how to add categories to posts in a second. The feed field enables RSS feed generation, meaning people will be able to follow updates to your blog with RSS. I plan on making a post about RSS at some point, so look out for that if that caught your interest.</p>
 <p>With this in place, here is what the header of a given blog post looks like for me:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">---</span></span>
 <span id="cb3-2">title<span class="sc" style="color: #5E5E5E;
@@ -1605,7 +1605,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 <h2 class="anchored" data-anchor-id="about-pages">About pages</h2>
 <p>Quarto provides some templates for easily configuring a rather stylish “About the author” page. Here is how I set up mine:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">---</span></span>
 <span id="cb4-2">title<span class="sc" style="color: #5E5E5E;
@@ -1691,7 +1691,7 @@ font-style: inherit;">---</span></span></code></pre></div>
 <p>If you want to host your finished site on Github, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the <code>_site</code> folder. Then you push these files to a Github repository that you named <code>[yourgithubusername].github.io</code>. Then, on the settings page of this Github repository you enable <code>pages</code>. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debugging.</p>
 <p>Because I have my website source files on a different repository on Github, I created a little shell script that I can push updates to both repositories with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#!/bin/bash</span></span>
 <span id="cb5-2"></span>
@@ -1795,7 +1795,7 @@ font-style: inherit;">/</span>.git</span></code></pre></div>
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">(message <span class="st" style="color: #20794D;
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1">(message <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Setting up live-server"</span>)</span>
 <span id="cb1-2">;; Load simple<span class="sc" style="color: #5E5E5E;

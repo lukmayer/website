@@ -239,27 +239,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(message <span class="st">"Setting up live-server"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>;; Load simple<span class="sc">-</span>httpd and impatient<span class="sc">-</span>mode</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>(use<span class="sc">-</span>package simple<span class="sc">-</span>httpd</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">:</span>config</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  (setq httpd<span class="sc">-</span>root <span class="st">"~/public_html"</span>) ; set your desired root directory</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  (setq httpd<span class="sc">-</span>port <span class="dv">8080</span>))</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>(use<span class="sc">-</span>package impatient<span class="sc">-</span>mode</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="sc">:</span><span class="fu">hook</span> (html<span class="sc">-</span>mode . impatient<span class="sc">-</span>mode)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">:</span>config</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  (defun my<span class="sc">/</span>start<span class="sc">-</span>httpd<span class="sc">-</span>and<span class="sc">-</span>impatient<span class="sc">-</span><span class="fu">mode</span> ()</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Start httpd and impatient-mode, then open the browser."</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    (interactive)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    (httpd<span class="sc">-</span>start)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    (impatient<span class="sc">-</span>mode)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    (browse<span class="sc">-</span>url <span class="st">"http://localhost:8080/imp/"</span>))</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  (defun my<span class="sc">/</span>impatient<span class="sc">-</span>mode<span class="sc">-</span><span class="fu">hook</span> ()</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    (my<span class="sc">/</span>start<span class="sc">-</span>httpd<span class="sc">-</span>and<span class="sc">-</span>impatient<span class="sc">-</span>mode))</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  (add<span class="sc">-</span>hook <span class="st">'html-mode-hook '</span>my<span class="sc">/</span>impatient<span class="sc">-</span>mode<span class="sc">-</span>hook))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>(message <span class="st">"Setting up live-server"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>;; Load simple<span class="sc">-</span>httpd and impatient<span class="sc">-</span>mode</span>
+<span id="cb1-3"><a href="#cb1-3"></a>(use<span class="sc">-</span>package simple<span class="sc">-</span>httpd</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="sc">:</span>config</span>
+<span id="cb1-5"><a href="#cb1-5"></a>  (setq httpd<span class="sc">-</span>root <span class="st">"~/public_html"</span>) ; set your desired root directory</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  (setq httpd<span class="sc">-</span>port <span class="dv">8080</span>))</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a>(use<span class="sc">-</span>package impatient<span class="sc">-</span>mode</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="sc">:</span><span class="fu">hook</span> (html<span class="sc">-</span>mode . impatient<span class="sc">-</span>mode)</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="sc">:</span>config</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  (defun my<span class="sc">/</span>start<span class="sc">-</span>httpd<span class="sc">-</span>and<span class="sc">-</span>impatient<span class="sc">-</span><span class="fu">mode</span> ()</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="st">"Start httpd and impatient-mode, then open the browser."</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    (interactive)</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    (httpd<span class="sc">-</span>start)</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    (impatient<span class="sc">-</span>mode)</span>
+<span id="cb1-16"><a href="#cb1-16"></a>    (browse<span class="sc">-</span>url <span class="st">"http://localhost:8080/imp/"</span>))</span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a>  (defun my<span class="sc">/</span>impatient<span class="sc">-</span>mode<span class="sc">-</span><span class="fu">hook</span> ()</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    (my<span class="sc">/</span>start<span class="sc">-</span>httpd<span class="sc">-</span>and<span class="sc">-</span>impatient<span class="sc">-</span>mode))</span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a>  (add<span class="sc">-</span>hook <span class="st">'html-mode-hook '</span>my<span class="sc">/</span>impatient<span class="sc">-</span>mode<span class="sc">-</span>hook))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

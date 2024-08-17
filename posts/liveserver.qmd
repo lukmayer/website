@@ -13,9 +13,6 @@ comments:
       repo: lukmayer/site_comments
       theme: github-dark
       issue-term: url
-format:
-  html:
-    smooth-scroll: true
 ---
 
 Hello again :)

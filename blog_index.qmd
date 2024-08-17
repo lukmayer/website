@@ -11,9 +11,6 @@ listing:
   filter-ui: [title, date]
   categories: true
   feed: true
-format:
-  html:
-    smooth-scroll: true
 ---
 
 <style>

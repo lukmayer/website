@@ -280,78 +280,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Create a directory. In this example, we’ll call it <code>login_portal</code>.</p>
 <p>Now, in this directory, create <code>index.html</code> with the following content:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;!</span>DOCTYPE html<span class="sc">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;</span>html<span class="sc">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;</span>head<span class="sc">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>title<span class="sc">&gt;</span>Login Portal<span class="sc">&lt;</span><span class="er">/</span>title<span class="sc">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>link rel<span class="ot">=</span><span class="st">"stylesheet"</span> type<span class="ot">=</span><span class="st">"text/css"</span> href<span class="ot">=</span><span class="st">"styles.css"</span><span class="sc">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>script src<span class="ot">=</span><span class="st">"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"</span><span class="sc">&gt;</span><span class="er">&lt;/</span>script<span class="sc">&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;/</span>head<span class="sc">&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;</span>body<span class="sc">&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>h1<span class="sc">&gt;</span>Login Portal<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>form id<span class="ot">=</span><span class="st">"login-form"</span><span class="sc">&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="er">&lt;</span>input type<span class="ot">=</span><span class="st">"text"</span> id<span class="ot">=</span><span class="st">"username"</span> placeholder<span class="ot">=</span><span class="st">"Enter username"</span><span class="sc">&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="er">&lt;</span>input type<span class="ot">=</span><span class="st">"password"</span> id<span class="ot">=</span><span class="st">"password"</span> placeholder<span class="ot">=</span><span class="st">"Enter password"</span><span class="sc">&gt;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="er">&lt;</span>button id<span class="ot">=</span><span class="st">"login-btn"</span> type<span class="ot">=</span><span class="st">"button"</span><span class="sc">&gt;</span>Login<span class="sc">&lt;</span><span class="er">/</span>button<span class="sc">&gt;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;/</span>form<span class="sc">&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>div id<span class="ot">=</span><span class="st">"alert"</span> style<span class="ot">=</span><span class="st">"display: none;"</span> data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"alert"</span><span class="sc">&gt;</span>Incorrect username or password<span class="sc">&lt;</span><span class="er">/</span>div<span class="sc">&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>script<span class="sc">&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    const loginBtn <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'login-btn'</span>);</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    const usernameInput <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'username'</span>);</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    const passwordInput <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'password'</span>);</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    const alertDiv <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'alert'</span>);</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span> <span class="fu">sha1</span>(message) {</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      return <span class="fu">CryptoJS.SHA1</span>(message)<span class="fu">.toString</span>(CryptoJS.enc.Hex);</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    async <span class="cf">function</span> <span class="fu">urlExists</span>(url) {</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      try {</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        const response <span class="ot">=</span> await <span class="fu">fetch</span>(url, { method<span class="sc">:</span> <span class="st">'HEAD'</span> });</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        return response.ok;</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>      } <span class="fu">catch</span> (error) {</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        return false;</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    async <span class="cf">function</span> <span class="fu">login</span>(username, password) {</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>      const usernameHash <span class="ot">=</span> <span class="fu">sha1</span>(username);</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>      const passwordHash <span class="ot">=</span> <span class="fu">sha1</span>(password);</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>      <span class="sc">/</span><span class="er">/</span> Log the hashes <span class="cf">for</span> debugging</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>      <span class="fu">console.log</span>(<span class="st">"Username Hash:"</span>, usernameHash);</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>      <span class="fu">console.log</span>(<span class="st">"Password Hash:"</span>, passwordHash);</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>      const url <span class="ot">=</span> <span class="st">'a'</span> <span class="sc">+</span> usernameHash <span class="sc">+</span> <span class="st">'/a'</span> <span class="sc">+</span> passwordHash <span class="sc">+</span> <span class="st">'/index.html'</span>; <span class="sc">/</span><span class="er">/</span> Construct URL</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>      <span class="fu">console.log</span>(<span class="st">"Constructed URL:"</span>, url); <span class="sc">/</span><span class="er">/</span> Log the constructed URL</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (await <span class="fu">urlExists</span>(url)) {</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        window.location <span class="ot">=</span> url;</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        alertDiv.style.display <span class="ot">=</span> <span class="st">'block'</span>; <span class="sc">/</span><span class="er">/</span> Show alert</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>        usernameInput.value <span class="ot">=</span> <span class="st">''</span>;</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        passwordInput.value <span class="ot">=</span> <span class="st">''</span>;</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>        <span class="fu">console.log</span>(<span class="st">"Login failed, incorrect username or password."</span>);</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="fu">loginBtn.addEventListener</span>(<span class="st">'click'</span>, <span class="cf">function</span> () {</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>      <span class="fu">login</span>(usernameInput.value, passwordInput.value);</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    });</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    <span class="fu">passwordInput.addEventListener</span>(<span class="st">'keydown'</span>, <span class="cf">function</span> (e) {</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (e.key <span class="sc">==</span><span class="er">=</span> <span class="st">'Enter'</span>) {</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="fu">login</span>(usernameInput.value, passwordInput.value);</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    });</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span><span class="er">/</span>script<span class="sc">&gt;</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;</span>footer<span class="sc">&gt;</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>    <span class="er">&lt;</span>a href<span class="ot">=</span><span class="st">"https://lukmayer.github.io"</span><span class="sc">&gt;</span>Return to lukmayer.github.io<span class="sc">&lt;</span><span class="er">/</span>a<span class="sc">&gt;</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  <span class="er">&lt;/</span>footer<span class="sc">&gt;</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;/</span>body<span class="sc">&gt;</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;/</span>html<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">&lt;!</span>DOCTYPE html<span class="sc">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="er">&lt;</span>html<span class="sc">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="er">&lt;</span>head<span class="sc">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="er">&lt;</span>title<span class="sc">&gt;</span>Login Portal<span class="sc">&lt;</span><span class="er">/</span>title<span class="sc">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="er">&lt;</span>link rel<span class="ot">=</span><span class="st">"stylesheet"</span> type<span class="ot">=</span><span class="st">"text/css"</span> href<span class="ot">=</span><span class="st">"styles.css"</span><span class="sc">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="er">&lt;</span>script src<span class="ot">=</span><span class="st">"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"</span><span class="sc">&gt;</span><span class="er">&lt;/</span>script<span class="sc">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="er">&lt;/</span>head<span class="sc">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="er">&lt;</span>body<span class="sc">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="er">&lt;</span>h1<span class="sc">&gt;</span>Login Portal<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="er">&lt;</span>form id<span class="ot">=</span><span class="st">"login-form"</span><span class="sc">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="er">&lt;</span>input type<span class="ot">=</span><span class="st">"text"</span> id<span class="ot">=</span><span class="st">"username"</span> placeholder<span class="ot">=</span><span class="st">"Enter username"</span><span class="sc">&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="er">&lt;</span>input type<span class="ot">=</span><span class="st">"password"</span> id<span class="ot">=</span><span class="st">"password"</span> placeholder<span class="ot">=</span><span class="st">"Enter password"</span><span class="sc">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="er">&lt;</span>button id<span class="ot">=</span><span class="st">"login-btn"</span> type<span class="ot">=</span><span class="st">"button"</span><span class="sc">&gt;</span>Login<span class="sc">&lt;</span><span class="er">/</span>button<span class="sc">&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="er">&lt;/</span>form<span class="sc">&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>  <span class="er">&lt;</span>div id<span class="ot">=</span><span class="st">"alert"</span> style<span class="ot">=</span><span class="st">"display: none;"</span> data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"alert"</span><span class="sc">&gt;</span>Incorrect username or password<span class="sc">&lt;</span><span class="er">/</span>div<span class="sc">&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="er">&lt;</span>script<span class="sc">&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>    const loginBtn <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'login-btn'</span>);</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    const usernameInput <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'username'</span>);</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    const passwordInput <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'password'</span>);</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    const alertDiv <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'alert'</span>);</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a>    <span class="cf">function</span> <span class="fu">sha1</span>(message) {</span>
+<span id="cb1-24"><a href="#cb1-24"></a>      return <span class="fu">CryptoJS.SHA1</span>(message)<span class="fu">.toString</span>(CryptoJS.enc.Hex);</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    }</span>
+<span id="cb1-26"><a href="#cb1-26"></a></span>
+<span id="cb1-27"><a href="#cb1-27"></a>    async <span class="cf">function</span> <span class="fu">urlExists</span>(url) {</span>
+<span id="cb1-28"><a href="#cb1-28"></a>      try {</span>
+<span id="cb1-29"><a href="#cb1-29"></a>        const response <span class="ot">=</span> await <span class="fu">fetch</span>(url, { method<span class="sc">:</span> <span class="st">'HEAD'</span> });</span>
+<span id="cb1-30"><a href="#cb1-30"></a>        return response.ok;</span>
+<span id="cb1-31"><a href="#cb1-31"></a>      } <span class="fu">catch</span> (error) {</span>
+<span id="cb1-32"><a href="#cb1-32"></a>        return false;</span>
+<span id="cb1-33"><a href="#cb1-33"></a>      }</span>
+<span id="cb1-34"><a href="#cb1-34"></a>    }</span>
+<span id="cb1-35"><a href="#cb1-35"></a></span>
+<span id="cb1-36"><a href="#cb1-36"></a>    async <span class="cf">function</span> <span class="fu">login</span>(username, password) {</span>
+<span id="cb1-37"><a href="#cb1-37"></a>      const usernameHash <span class="ot">=</span> <span class="fu">sha1</span>(username);</span>
+<span id="cb1-38"><a href="#cb1-38"></a>      const passwordHash <span class="ot">=</span> <span class="fu">sha1</span>(password);</span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a>      <span class="sc">/</span><span class="er">/</span> Log the hashes <span class="cf">for</span> debugging</span>
+<span id="cb1-41"><a href="#cb1-41"></a>      <span class="fu">console.log</span>(<span class="st">"Username Hash:"</span>, usernameHash);</span>
+<span id="cb1-42"><a href="#cb1-42"></a>      <span class="fu">console.log</span>(<span class="st">"Password Hash:"</span>, passwordHash);</span>
+<span id="cb1-43"><a href="#cb1-43"></a></span>
+<span id="cb1-44"><a href="#cb1-44"></a>      const url <span class="ot">=</span> <span class="st">'a'</span> <span class="sc">+</span> usernameHash <span class="sc">+</span> <span class="st">'/a'</span> <span class="sc">+</span> passwordHash <span class="sc">+</span> <span class="st">'/index.html'</span>; <span class="sc">/</span><span class="er">/</span> Construct URL</span>
+<span id="cb1-45"><a href="#cb1-45"></a>      <span class="fu">console.log</span>(<span class="st">"Constructed URL:"</span>, url); <span class="sc">/</span><span class="er">/</span> Log the constructed URL</span>
+<span id="cb1-46"><a href="#cb1-46"></a></span>
+<span id="cb1-47"><a href="#cb1-47"></a>      <span class="cf">if</span> (await <span class="fu">urlExists</span>(url)) {</span>
+<span id="cb1-48"><a href="#cb1-48"></a>        window.location <span class="ot">=</span> url;</span>
+<span id="cb1-49"><a href="#cb1-49"></a>      } <span class="cf">else</span> {</span>
+<span id="cb1-50"><a href="#cb1-50"></a>        alertDiv.style.display <span class="ot">=</span> <span class="st">'block'</span>; <span class="sc">/</span><span class="er">/</span> Show alert</span>
+<span id="cb1-51"><a href="#cb1-51"></a>        usernameInput.value <span class="ot">=</span> <span class="st">''</span>;</span>
+<span id="cb1-52"><a href="#cb1-52"></a>        passwordInput.value <span class="ot">=</span> <span class="st">''</span>;</span>
+<span id="cb1-53"><a href="#cb1-53"></a>        <span class="fu">console.log</span>(<span class="st">"Login failed, incorrect username or password."</span>);</span>
+<span id="cb1-54"><a href="#cb1-54"></a>      }</span>
+<span id="cb1-55"><a href="#cb1-55"></a>    }</span>
+<span id="cb1-56"><a href="#cb1-56"></a></span>
+<span id="cb1-57"><a href="#cb1-57"></a>    <span class="fu">loginBtn.addEventListener</span>(<span class="st">'click'</span>, <span class="cf">function</span> () {</span>
+<span id="cb1-58"><a href="#cb1-58"></a>      <span class="fu">login</span>(usernameInput.value, passwordInput.value);</span>
+<span id="cb1-59"><a href="#cb1-59"></a>    });</span>
+<span id="cb1-60"><a href="#cb1-60"></a></span>
+<span id="cb1-61"><a href="#cb1-61"></a>    <span class="fu">passwordInput.addEventListener</span>(<span class="st">'keydown'</span>, <span class="cf">function</span> (e) {</span>
+<span id="cb1-62"><a href="#cb1-62"></a>      <span class="cf">if</span> (e.key <span class="sc">==</span><span class="er">=</span> <span class="st">'Enter'</span>) {</span>
+<span id="cb1-63"><a href="#cb1-63"></a>        <span class="fu">login</span>(usernameInput.value, passwordInput.value);</span>
+<span id="cb1-64"><a href="#cb1-64"></a>      }</span>
+<span id="cb1-65"><a href="#cb1-65"></a>    });</span>
+<span id="cb1-66"><a href="#cb1-66"></a>  <span class="sc">&lt;</span><span class="er">/</span>script<span class="sc">&gt;</span></span>
+<span id="cb1-67"><a href="#cb1-67"></a></span>
+<span id="cb1-68"><a href="#cb1-68"></a>  <span class="er">&lt;</span>footer<span class="sc">&gt;</span></span>
+<span id="cb1-69"><a href="#cb1-69"></a>    <span class="er">&lt;</span>a href<span class="ot">=</span><span class="st">"https://lukmayer.github.io"</span><span class="sc">&gt;</span>Return to lukmayer.github.io<span class="sc">&lt;</span><span class="er">/</span>a<span class="sc">&gt;</span></span>
+<span id="cb1-70"><a href="#cb1-70"></a>  <span class="er">&lt;/</span>footer<span class="sc">&gt;</span></span>
+<span id="cb1-71"><a href="#cb1-71"></a><span class="er">&lt;/</span>body<span class="sc">&gt;</span></span>
+<span id="cb1-72"><a href="#cb1-72"></a><span class="er">&lt;/</span>html<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br>
 </p>
@@ -361,87 +361,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>body {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#4f4f4f; /* Dark grey background from Darkly theme */</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text */</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  font<span class="sc">-</span>family<span class="sc">:</span> <span class="st">'Arial'</span>, sans<span class="sc">-</span>serif;</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  display<span class="sc">:</span> flex;</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  justify<span class="sc">-</span>content<span class="sc">:</span> center;</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  align<span class="sc">-</span>items<span class="sc">:</span> center;</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  height<span class="sc">:</span> <span class="dv">100</span>vh;</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  margin<span class="sc">:</span> <span class="dv">0</span>;</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  flex<span class="sc">-</span>direction<span class="sc">:</span> column; <span class="sc">/</span><span class="er">*</span> Arrange elements <span class="cf">in</span> a column <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>h1 {</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  margin<span class="sc">-</span>bottom<span class="sc">:</span> <span class="dv">20</span>px; <span class="sc">/</span><span class="er">*</span> Space between title and form <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>.form<span class="sc">-</span>container {</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#777777; /* Slightly lighter dark background for form from Darkly theme */</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  padding<span class="sc">:</span> <span class="dv">30</span>px;</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">10</span>px;</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  box<span class="sc">-</span>shadow<span class="sc">:</span> <span class="dv">0</span>px <span class="dv">0</span>px <span class="dv">15</span>px <span class="fu">rgba</span>(<span class="dv">0</span>, <span class="dv">191</span>, <span class="dv">99</span>, <span class="fl">0.5</span>); <span class="sc">/</span><span class="er">*</span> Adjusted shadow to match theme <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  max<span class="sc">-</span>width<span class="sc">:</span> <span class="dv">400</span>px; <span class="sc">/</span><span class="er">*</span> Set a max<span class="sc">-</span>width <span class="cf">for</span> better alignment <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  box<span class="sc">-</span>sizing<span class="sc">:</span> border<span class="sc">-</span>box; <span class="sc">/</span><span class="er">*</span> Ensure padding is included <span class="cf">in</span> overall width <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>input[type<span class="ot">=</span><span class="st">"text"</span>], input[type<span class="ot">=</span><span class="st">"password"</span>] {</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  padding<span class="sc">:</span> <span class="dv">10</span>px;</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  margin<span class="sc">:</span> <span class="dv">10</span>px <span class="dv">0</span>;</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  border<span class="sc">:</span> <span class="dv">1</span>px solid <span class="co">#00bf63; /* Green border from Darkly theme */</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">5</span>px;</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#777777; /* Dark input background from Darkly theme */</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text in input */</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  box<span class="sc">-</span>sizing<span class="sc">:</span> border<span class="sc">-</span>box; <span class="sc">/</span><span class="er">*</span> Ensure padding is included <span class="cf">in</span> overall width <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>input<span class="sc">::</span>placeholder {</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#ced4da; /* Light grey color for placeholder text from Darkly theme */</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>button {</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  padding<span class="sc">:</span> <span class="dv">10</span>px;</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#00bf63; /* Green button background from Darkly theme */</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text */</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  border<span class="sc">:</span> none;</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">5</span>px;</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  cursor<span class="sc">:</span> pointer;</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  font<span class="sc">-</span>weight<span class="sc">:</span> bold;</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>button<span class="sc">:</span>hover {</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#198754; /* Darker green on hover from Darkly theme */</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co">#alert {</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#ff0000; /* Red alert message */</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>  margin<span class="sc">-</span>top<span class="sc">:</span> <span class="dv">10</span>px;</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  align<span class="sc">-</span>self<span class="sc">:</span> center; <span class="sc">/</span><span class="er">*</span> Align to the start of the form <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span><span class="er">*</span> Center the container, form, and alert <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>.container {</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  display<span class="sc">:</span> flex;</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>  flex<span class="sc">-</span>direction<span class="sc">:</span> column; <span class="sc">/</span><span class="er">*</span> Arrange title, form, and alert <span class="cf">in</span> a column <span class="sc">*</span><span class="er">/</span></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  align<span class="sc">-</span>items<span class="sc">:</span> center;</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>footer {</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  position<span class="sc">:</span> absolute;</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>  bottom<span class="sc">:</span> <span class="dv">20</span>px;</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  left<span class="sc">:</span> <span class="dv">50</span>%;</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  transform<span class="sc">:</span> <span class="fu">translateX</span>(<span class="sc">-</span><span class="dv">50</span>%);</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  font<span class="sc">-</span>size<span class="sc">:</span> <span class="dv">18</span>px;</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>  text<span class="sc">-</span>align<span class="sc">:</span> center;</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>footer a {</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>  text<span class="sc">-</span>decoration<span class="sc">:</span> none;</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>footer a<span class="sc">:</span>hover {</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>  color<span class="sc">:</span> <span class="co">#198754; /* Darker green on hover from Darkly theme */</span></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>body {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#4f4f4f; /* Dark grey background from Darkly theme */</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text */</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  font<span class="sc">-</span>family<span class="sc">:</span> <span class="st">'Arial'</span>, sans<span class="sc">-</span>serif;</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  display<span class="sc">:</span> flex;</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  justify<span class="sc">-</span>content<span class="sc">:</span> center;</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  align<span class="sc">-</span>items<span class="sc">:</span> center;</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  height<span class="sc">:</span> <span class="dv">100</span>vh;</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  margin<span class="sc">:</span> <span class="dv">0</span>;</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  flex<span class="sc">-</span>direction<span class="sc">:</span> column; <span class="sc">/</span><span class="er">*</span> Arrange elements <span class="cf">in</span> a column <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>}</span>
+<span id="cb2-12"><a href="#cb2-12"></a>h1 {</span>
+<span id="cb2-13"><a href="#cb2-13"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>  margin<span class="sc">-</span>bottom<span class="sc">:</span> <span class="dv">20</span>px; <span class="sc">/</span><span class="er">*</span> Space between title and form <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>}</span>
+<span id="cb2-16"><a href="#cb2-16"></a>.form<span class="sc">-</span>container {</span>
+<span id="cb2-17"><a href="#cb2-17"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#777777; /* Slightly lighter dark background for form from Darkly theme */</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>  padding<span class="sc">:</span> <span class="dv">30</span>px;</span>
+<span id="cb2-19"><a href="#cb2-19"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">10</span>px;</span>
+<span id="cb2-20"><a href="#cb2-20"></a>  box<span class="sc">-</span>shadow<span class="sc">:</span> <span class="dv">0</span>px <span class="dv">0</span>px <span class="dv">15</span>px <span class="fu">rgba</span>(<span class="dv">0</span>, <span class="dv">191</span>, <span class="dv">99</span>, <span class="fl">0.5</span>); <span class="sc">/</span><span class="er">*</span> Adjusted shadow to match theme <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
+<span id="cb2-22"><a href="#cb2-22"></a>  max<span class="sc">-</span>width<span class="sc">:</span> <span class="dv">400</span>px; <span class="sc">/</span><span class="er">*</span> Set a max<span class="sc">-</span>width <span class="cf">for</span> better alignment <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a>  box<span class="sc">-</span>sizing<span class="sc">:</span> border<span class="sc">-</span>box; <span class="sc">/</span><span class="er">*</span> Ensure padding is included <span class="cf">in</span> overall width <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a>}</span>
+<span id="cb2-25"><a href="#cb2-25"></a>input[type<span class="ot">=</span><span class="st">"text"</span>], input[type<span class="ot">=</span><span class="st">"password"</span>] {</span>
+<span id="cb2-26"><a href="#cb2-26"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
+<span id="cb2-27"><a href="#cb2-27"></a>  padding<span class="sc">:</span> <span class="dv">10</span>px;</span>
+<span id="cb2-28"><a href="#cb2-28"></a>  margin<span class="sc">:</span> <span class="dv">10</span>px <span class="dv">0</span>;</span>
+<span id="cb2-29"><a href="#cb2-29"></a>  border<span class="sc">:</span> <span class="dv">1</span>px solid <span class="co">#00bf63; /* Green border from Darkly theme */</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">5</span>px;</span>
+<span id="cb2-31"><a href="#cb2-31"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#777777; /* Dark input background from Darkly theme */</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text in input */</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>  box<span class="sc">-</span>sizing<span class="sc">:</span> border<span class="sc">-</span>box; <span class="sc">/</span><span class="er">*</span> Ensure padding is included <span class="cf">in</span> overall width <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a>}</span>
+<span id="cb2-35"><a href="#cb2-35"></a>input<span class="sc">::</span>placeholder {</span>
+<span id="cb2-36"><a href="#cb2-36"></a>  color<span class="sc">:</span> <span class="co">#ced4da; /* Light grey color for placeholder text from Darkly theme */</span></span>
+<span id="cb2-37"><a href="#cb2-37"></a>}</span>
+<span id="cb2-38"><a href="#cb2-38"></a>button {</span>
+<span id="cb2-39"><a href="#cb2-39"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
+<span id="cb2-40"><a href="#cb2-40"></a>  padding<span class="sc">:</span> <span class="dv">10</span>px;</span>
+<span id="cb2-41"><a href="#cb2-41"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#00bf63; /* Green button background from Darkly theme */</span></span>
+<span id="cb2-42"><a href="#cb2-42"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text */</span></span>
+<span id="cb2-43"><a href="#cb2-43"></a>  border<span class="sc">:</span> none;</span>
+<span id="cb2-44"><a href="#cb2-44"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">5</span>px;</span>
+<span id="cb2-45"><a href="#cb2-45"></a>  cursor<span class="sc">:</span> pointer;</span>
+<span id="cb2-46"><a href="#cb2-46"></a>  font<span class="sc">-</span>weight<span class="sc">:</span> bold;</span>
+<span id="cb2-47"><a href="#cb2-47"></a>}</span>
+<span id="cb2-48"><a href="#cb2-48"></a>button<span class="sc">:</span>hover {</span>
+<span id="cb2-49"><a href="#cb2-49"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#198754; /* Darker green on hover from Darkly theme */</span></span>
+<span id="cb2-50"><a href="#cb2-50"></a>}</span>
+<span id="cb2-51"><a href="#cb2-51"></a><span class="co">#alert {</span></span>
+<span id="cb2-52"><a href="#cb2-52"></a>  color<span class="sc">:</span> <span class="co">#ff0000; /* Red alert message */</span></span>
+<span id="cb2-53"><a href="#cb2-53"></a>  margin<span class="sc">-</span>top<span class="sc">:</span> <span class="dv">10</span>px;</span>
+<span id="cb2-54"><a href="#cb2-54"></a>  align<span class="sc">-</span>self<span class="sc">:</span> center; <span class="sc">/</span><span class="er">*</span> Align to the start of the form <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-55"><a href="#cb2-55"></a><span class="er">}</span></span>
+<span id="cb2-56"><a href="#cb2-56"></a></span>
+<span id="cb2-57"><a href="#cb2-57"></a><span class="sc">/</span><span class="er">*</span> Center the container, form, and alert <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-58"><a href="#cb2-58"></a>.container {</span>
+<span id="cb2-59"><a href="#cb2-59"></a>  display<span class="sc">:</span> flex;</span>
+<span id="cb2-60"><a href="#cb2-60"></a>  flex<span class="sc">-</span>direction<span class="sc">:</span> column; <span class="sc">/</span><span class="er">*</span> Arrange title, form, and alert <span class="cf">in</span> a column <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-61"><a href="#cb2-61"></a>  align<span class="sc">-</span>items<span class="sc">:</span> center;</span>
+<span id="cb2-62"><a href="#cb2-62"></a>}</span>
+<span id="cb2-63"><a href="#cb2-63"></a></span>
+<span id="cb2-64"><a href="#cb2-64"></a>footer {</span>
+<span id="cb2-65"><a href="#cb2-65"></a>  position<span class="sc">:</span> absolute;</span>
+<span id="cb2-66"><a href="#cb2-66"></a>  bottom<span class="sc">:</span> <span class="dv">20</span>px;</span>
+<span id="cb2-67"><a href="#cb2-67"></a>  left<span class="sc">:</span> <span class="dv">50</span>%;</span>
+<span id="cb2-68"><a href="#cb2-68"></a>  transform<span class="sc">:</span> <span class="fu">translateX</span>(<span class="sc">-</span><span class="dv">50</span>%);</span>
+<span id="cb2-69"><a href="#cb2-69"></a>  font<span class="sc">-</span>size<span class="sc">:</span> <span class="dv">18</span>px;</span>
+<span id="cb2-70"><a href="#cb2-70"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
+<span id="cb2-71"><a href="#cb2-71"></a>  text<span class="sc">-</span>align<span class="sc">:</span> center;</span>
+<span id="cb2-72"><a href="#cb2-72"></a>}</span>
+<span id="cb2-73"><a href="#cb2-73"></a></span>
+<span id="cb2-74"><a href="#cb2-74"></a>footer a {</span>
+<span id="cb2-75"><a href="#cb2-75"></a>  text<span class="sc">-</span>decoration<span class="sc">:</span> none;</span>
+<span id="cb2-76"><a href="#cb2-76"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
+<span id="cb2-77"><a href="#cb2-77"></a>}</span>
+<span id="cb2-78"><a href="#cb2-78"></a></span>
+<span id="cb2-79"><a href="#cb2-79"></a>footer a<span class="sc">:</span>hover {</span>
+<span id="cb2-80"><a href="#cb2-80"></a>  color<span class="sc">:</span> <span class="co">#198754; /* Darker green on hover from Darkly theme */</span></span>
+<span id="cb2-81"><a href="#cb2-81"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br>
 </p>
@@ -457,9 +457,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> <span class="st">"a{yourpasswordhash}"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>project<span class="sc">:</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>  type<span class="sc">:</span> website</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> <span class="st">"a{yourpasswordhash}"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br>
 </p>
@@ -477,12 +477,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>script<span class="sc">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">window.addEventListener</span>(<span class="st">'load'</span>, () <span class="sc">=&gt;</span> {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">/</span><span class="er">/</span> Change the URL <span class="cf">in</span> the address bar after load</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">history.replaceState</span>(null, null, <span class="st">"/login_portal/"</span>);</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>});</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span><span class="er">/</span>script<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="sc">&lt;</span>script<span class="sc">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">window.addEventListener</span>(<span class="st">'load'</span>, () <span class="sc">=&gt;</span> {</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="sc">/</span><span class="er">/</span> Change the URL <span class="cf">in</span> the address bar after load</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">history.replaceState</span>(null, null, <span class="st">"/login_portal/"</span>);</span>
+<span id="cb4-5"><a href="#cb4-5"></a>});</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="sc">&lt;</span><span class="er">/</span>script<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br>
 </p>

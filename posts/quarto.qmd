@@ -14,7 +14,6 @@ comments:
       issue-term: url
 format:
   html:
-    smooth-scroll: true
     code-links:
       - text: Website Source Code
         icon: file-code

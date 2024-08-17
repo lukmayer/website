@@ -283,47 +283,47 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="the-_quarto.yml">The _quarto.yml</h4>
 <p>Here’s what my .yml file looks like:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> _site</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>website<span class="sc">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  favicon<span class="sc">:</span> <span class="st">"assets/favicons/favicon.ico"</span> </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  page<span class="sc">-</span>footer<span class="sc">:</span> <span class="st">"Powered by &lt;a href='https://quarto.org' target='_blank'&gt;Quarto&lt;/a&gt;"</span>  </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  open<span class="sc">-</span>graph<span class="sc">:</span> true</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  site<span class="sc">-</span>url<span class="sc">:</span> <span class="st">"https://lukmayer.github.io"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  title<span class="sc">:</span> <span class="st">"&lt;img src='assets/favicons/favicon.ico' alt='Logo' style='height:40px; vertical-align:middle;'&gt;"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  navbar<span class="sc">:</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    left<span class="sc">:</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> href<span class="sc">:</span> index.qmd</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        text<span class="sc">:</span> <span class="st">"Home"</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> href<span class="sc">:</span> research.qmd</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        text<span class="sc">:</span> <span class="st">"Research"</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> href<span class="sc">:</span> cv.qmd</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        text<span class="sc">:</span> <span class="st">"CV"</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> href<span class="sc">:</span> blog_index.qmd</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        text<span class="sc">:</span> <span class="st">"Blog"</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> href<span class="sc">:</span> about.qmd</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        text<span class="sc">:</span> <span class="st">"About"</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    right<span class="sc">:</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> icon<span class="sc">:</span> rss</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        href<span class="sc">:</span> blog_index.xml</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> icon<span class="sc">:</span> envelope</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        href<span class="sc">:</span> mailto<span class="sc">:</span>willuk<span class="sc">@</span>vivaldi.net</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        aria<span class="sc">-</span>label<span class="sc">:</span> E<span class="sc">-</span>Mail</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  html<span class="sc">:</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    theme<span class="sc">:</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      dark<span class="sc">:</span> [darkly, theme<span class="sc">-</span>dark.scss]</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      light<span class="sc">:</span> [flatly, theme<span class="sc">-</span>light.scss]</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    css<span class="sc">:</span> styles.css</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    toc<span class="sc">:</span> true</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>extensions<span class="sc">:</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> copy<span class="sc">-</span>button</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>project<span class="sc">:</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  type<span class="sc">:</span> website</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> _site</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>website<span class="sc">:</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  favicon<span class="sc">:</span> <span class="st">"assets/favicons/favicon.ico"</span> </span>
+<span id="cb1-7"><a href="#cb1-7"></a>  page<span class="sc">-</span>footer<span class="sc">:</span> <span class="st">"Powered by &lt;a href='https://quarto.org' target='_blank'&gt;Quarto&lt;/a&gt;"</span>  </span>
+<span id="cb1-8"><a href="#cb1-8"></a>  open<span class="sc">-</span>graph<span class="sc">:</span> true</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  site<span class="sc">-</span>url<span class="sc">:</span> <span class="st">"https://lukmayer.github.io"</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  title<span class="sc">:</span> <span class="st">"&lt;img src='assets/favicons/favicon.ico' alt='Logo' style='height:40px; vertical-align:middle;'&gt;"</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>  navbar<span class="sc">:</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    left<span class="sc">:</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>      <span class="sc">-</span> href<span class="sc">:</span> index.qmd</span>
+<span id="cb1-14"><a href="#cb1-14"></a>        text<span class="sc">:</span> <span class="st">"Home"</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>      <span class="sc">-</span> href<span class="sc">:</span> research.qmd</span>
+<span id="cb1-16"><a href="#cb1-16"></a>        text<span class="sc">:</span> <span class="st">"Research"</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>      <span class="sc">-</span> href<span class="sc">:</span> cv.qmd</span>
+<span id="cb1-18"><a href="#cb1-18"></a>        text<span class="sc">:</span> <span class="st">"CV"</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>      <span class="sc">-</span> href<span class="sc">:</span> blog_index.qmd</span>
+<span id="cb1-20"><a href="#cb1-20"></a>        text<span class="sc">:</span> <span class="st">"Blog"</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>      <span class="sc">-</span> href<span class="sc">:</span> about.qmd</span>
+<span id="cb1-22"><a href="#cb1-22"></a>        text<span class="sc">:</span> <span class="st">"About"</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a>    right<span class="sc">:</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a>      <span class="sc">-</span> icon<span class="sc">:</span> rss</span>
+<span id="cb1-25"><a href="#cb1-25"></a>        href<span class="sc">:</span> blog_index.xml</span>
+<span id="cb1-26"><a href="#cb1-26"></a>      <span class="sc">-</span> icon<span class="sc">:</span> envelope</span>
+<span id="cb1-27"><a href="#cb1-27"></a>        href<span class="sc">:</span> mailto<span class="sc">:</span>willuk<span class="sc">@</span>vivaldi.net</span>
+<span id="cb1-28"><a href="#cb1-28"></a>        aria<span class="sc">-</span>label<span class="sc">:</span> E<span class="sc">-</span>Mail</span>
+<span id="cb1-29"><a href="#cb1-29"></a>  </span>
+<span id="cb1-30"><a href="#cb1-30"></a></span>
+<span id="cb1-31"><a href="#cb1-31"></a></span>
+<span id="cb1-32"><a href="#cb1-32"></a>format<span class="sc">:</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a>  html<span class="sc">:</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a>    theme<span class="sc">:</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a>      dark<span class="sc">:</span> [darkly, theme<span class="sc">-</span>dark.scss]</span>
+<span id="cb1-36"><a href="#cb1-36"></a>      light<span class="sc">:</span> [flatly, theme<span class="sc">-</span>light.scss]</span>
+<span id="cb1-37"><a href="#cb1-37"></a>    css<span class="sc">:</span> styles.css</span>
+<span id="cb1-38"><a href="#cb1-38"></a>    toc<span class="sc">:</span> true</span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a>extensions<span class="sc">:</span></span>
+<span id="cb1-41"><a href="#cb1-41"></a>  <span class="sc">-</span> copy<span class="sc">-</span>button</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s go over what each section does. In the project header, one important thing to note is the <code>output-dir</code>. Here, I specify that I want Quarto to render the files we will host later into the directory called <code>_site</code>. This will be a sub-directory in your project folder and can have any name. The reason we are not rendering to the root project directory is that Github really does not like this, and may fail to host your site as a result. In the website header, I have the field “favicon”. If you don’t yet know, a favicon is the little image that websites feature on your browser tab, most commonly their logo. In the field, I simply specify the relative directory (relative in the sense of within my project files) in which the image I would like to use sits. I made my favicon using <a href="https://favicon.io">favicon.io</a>. The “page-footer” field displays a message of your choice at the bottom of each page in your site. In this case, I embedded a link into the string with HTML. In case you don’t know HTML, its the stuff between <a and="" a="">. The “href” field specifies the link, “target = ‘_blank’” will ensure that clicking the link opens a new tab, and finally, the text between &gt; and &lt; specifies the text that I want to embed this link in. If you’re confused by that have a look at the rendered version. The open-graph tag is for link previews, which some websites use. So if someone shares a link to your website on a site that allows link previews, it’ll show a nice pretty preview with a picture. You can configure exactly what the link preview will show, but I didn’t bother with this. The “site-url” field specifies the domain your website will be on. I needed this for some links to work correctly on the finished page. It’s not necessary to have this before you have deployed your site I don’t think. My “title” field uses HTML to link to my favicon and render it at a certain size, which I felt looked quite stylish. This can just be text if you prefer. The “navbar” field controls what my navigation menu looks like. In this case, I use a bar at the top of the website. On the left side of the bar, I link to different pages (my markdown files) and control the text that will be displayed on these links. On the right, I use some icons and add links to things, such as my RSS feed (this is to follow my blog, don’t worry about this for now), as well as for authoring an email to me. There are tons of icons available that are built-in to Quarto, which you can find </a><a href="https://icons.getbootstrap.com">here</a>. In the “format” section, I basically specify the themes of my website, one dark theme and one light theme. The built-in themes can be found <a href="https://quarto.org/docs/output-formats/html-themes.html">here</a>. If you specify one dark and one light theme, Quarto will add a toggle for people to switch between them in the navbar. The order of the fields determines which one is active by default. So in my case, the page is dark by default. In the dark and light fields I also add some .scss files that basically just change the color of the navbar and the font. This can get a little more technical so don’t worry too much about it if you like one of the built-in themes. Finally, in the “extensions” field I add the copy-button extension which allows people to copy the code from any code chunks I am embedding in one click. There are actually tons of cool extensions you can use, which are linked <a href="https://quarto.org/docs/extensions/">here</a>.</p>
 </section>
@@ -332,36 +332,36 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="setting-up-a-blog-within-the-website">Setting up a blog within the website</h2>
 <p>A blog is a nice place to share things in posts. In Quarto, that basically means having a list of pages on a blog index page. The pages listed on this index all sit inside a folder inside your project directory. In case you didn’t realize yet, every quarto markdown document has a so-called “YAML header” which is indicated by the three hyphens that denote the beginning and ending of this header. The header specifies fields and settings for that page alone. Here’s what the header looks like for my blog index.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Blog"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>listing<span class="sc">:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> grid</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  fields<span class="sc">:</span> [image, date, title, description, reading<span class="sc">-</span>time]</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  contents<span class="sc">:</span> posts</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  sort<span class="sc">:</span> <span class="st">"date desc"</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  sort<span class="sc">-</span>ui<span class="sc">:</span> [title, date]</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  filter<span class="sc">-</span>ui<span class="sc">:</span> [title, date]</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  categories<span class="sc">:</span> true</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  feed<span class="sc">:</span> true</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="sc">---</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>title<span class="sc">:</span> <span class="st">"Blog"</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>listing<span class="sc">:</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  type<span class="sc">:</span> grid</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  fields<span class="sc">:</span> [image, date, title, description, reading<span class="sc">-</span>time]</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  contents<span class="sc">:</span> posts</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  sort<span class="sc">:</span> <span class="st">"date desc"</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>  sort<span class="sc">-</span>ui<span class="sc">:</span> [title, date]</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  filter<span class="sc">-</span>ui<span class="sc">:</span> [title, date]</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  categories<span class="sc">:</span> true</span>
+<span id="cb2-11"><a href="#cb2-11"></a>  feed<span class="sc">:</span> true</span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>So in my case, I give my <code>blog_index.qmd</code> a title, choose a layout for my blog (there are a couple of options here), some fields that will be shown in my blog such as how long it takes to read the post (again, there is a list of things you can easily put here). The contents field specifies the folder that features all the pages I want to be listed on <code>blog_index.qmd</code>. The next couple fields add UI for sorting/filtering and the categories field allows you to add category tags to posts which can be nice. I’ll show you how to add categories to posts in a second. The feed field enables RSS feed generation, meaning people will be able to follow updates to your blog with RSS. I plan on making a post about RSS at some point, so look out for that if that caught your interest.</p>
 <p>With this in place, here is what the header of a given blog post looks like for me:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"My first DIY web-app"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>description<span class="sc">:</span> <span class="st">"Just a quick post to test the blog and brielfy talk about my first ventures into JavaScript"</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">"Luke"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> <span class="st">"07/21/2024"</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>categories<span class="sc">:</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> webdev</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>image<span class="sc">:</span> <span class="st">"images/luke-23.jpg"</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>comments<span class="sc">:</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    utterances<span class="sc">:</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      repo<span class="sc">:</span> lukmayer<span class="sc">/</span>site_comments</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      theme<span class="sc">:</span> github<span class="sc">-</span>dark</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      issue<span class="sc">-</span>term<span class="sc">:</span> url</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="sc">---</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>title<span class="sc">:</span> <span class="st">"My first DIY web-app"</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>description<span class="sc">:</span> <span class="st">"Just a quick post to test the blog and brielfy talk about my first ventures into JavaScript"</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>author<span class="sc">:</span> <span class="st">"Luke"</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>date<span class="sc">:</span> <span class="st">"07/21/2024"</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>categories<span class="sc">:</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="sc">-</span> webdev</span>
+<span id="cb3-8"><a href="#cb3-8"></a>image<span class="sc">:</span> <span class="st">"images/luke-23.jpg"</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>comments<span class="sc">:</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>    utterances<span class="sc">:</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a>      repo<span class="sc">:</span> lukmayer<span class="sc">/</span>site_comments</span>
+<span id="cb3-12"><a href="#cb3-12"></a>      theme<span class="sc">:</span> github<span class="sc">-</span>dark</span>
+<span id="cb3-13"><a href="#cb3-13"></a>      issue<span class="sc">-</span>term<span class="sc">:</span> url</span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The only thing that might be unexpected here is the <code>comments</code> field, where I configure a piece of software that allows people to comment on posts with their github accounts. I will not be covering how to set this up, but if you’re interested in having this also be part of your website look <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting">here</a>.</p>
 <p>Hopefully, you have a decent idea of how to achieve a blog on your webpage now!</p>
@@ -370,22 +370,22 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="about-pages">About pages</h2>
 <p>Quarto provides some templates for easily configuring a rather stylish “About the author” page. Here is how I set up mine:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Lukas W. Mayer"</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>about<span class="sc">:</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a> template<span class="sc">:</span> jolla</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a> image<span class="sc">:</span> assets<span class="sc">/</span>luke<span class="fl">-23.</span>jpg</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a> links<span class="sc">:</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>   <span class="sc">-</span> icon<span class="sc">:</span> github</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>     text<span class="sc">:</span> Github</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>     href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>lukmayer</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>   <span class="sc">-</span> icon<span class="sc">:</span> medium</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>     text<span class="sc">:</span> Medium</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>     href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>medium.com<span class="sc">/</span><span class="er">@</span>willuk</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>   <span class="sc">-</span> icon<span class="sc">:</span> envelope</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>     text<span class="sc">:</span> Email</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>     href<span class="sc">:</span> mailto<span class="sc">:</span>willuk<span class="sc">@</span>vivaldi.net</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="sc">---</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>title<span class="sc">:</span> <span class="st">"Lukas W. Mayer"</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>about<span class="sc">:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a> template<span class="sc">:</span> jolla</span>
+<span id="cb4-5"><a href="#cb4-5"></a> image<span class="sc">:</span> assets<span class="sc">/</span>luke<span class="fl">-23.</span>jpg</span>
+<span id="cb4-6"><a href="#cb4-6"></a> links<span class="sc">:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>   <span class="sc">-</span> icon<span class="sc">:</span> github</span>
+<span id="cb4-8"><a href="#cb4-8"></a>     text<span class="sc">:</span> Github</span>
+<span id="cb4-9"><a href="#cb4-9"></a>     href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>lukmayer</span>
+<span id="cb4-10"><a href="#cb4-10"></a>   <span class="sc">-</span> icon<span class="sc">:</span> medium</span>
+<span id="cb4-11"><a href="#cb4-11"></a>     text<span class="sc">:</span> Medium</span>
+<span id="cb4-12"><a href="#cb4-12"></a>     href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>medium.com<span class="sc">/</span><span class="er">@</span>willuk</span>
+<span id="cb4-13"><a href="#cb4-13"></a>   <span class="sc">-</span> icon<span class="sc">:</span> envelope</span>
+<span id="cb4-14"><a href="#cb4-14"></a>     text<span class="sc">:</span> Email</span>
+<span id="cb4-15"><a href="#cb4-15"></a>     href<span class="sc">:</span> mailto<span class="sc">:</span>willuk<span class="sc">@</span>vivaldi.net</span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The documentation for these is super easy to understand and can be found <a href="https://quarto.org/docs/websites/website-about.html">here</a>. There are a couple templates to select from and at the bottom I add some links to other things related to me. This YAML stuff should start to look familiar at this point ;) .</p>
 </section>
@@ -394,31 +394,31 @@ window.Quarto = {
 <p>If you want to host your finished site on Github, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the <code>_site</code> folder. Then you push these files to a Github repository that you named <code>[yourgithubusername].github.io</code>. Then, on the settings page of this Github repository you enable <code>pages</code>. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debugging.</p>
 <p>Because I have my website source files on a different repository on Github, I created a little shell script that I can push updates to both repositories with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Build the site with Quarto</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>quarto render</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Push file changes to master</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>git add .</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"Update website code"</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>git push <span class="sc">-</span>f origin master</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Navigate to the _site directory</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>cd _site</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a new Git repository</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>git init</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>git add .</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"Deploy updates"</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Force push to the gh-pages branch of the GitHub Pages repository</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>git remote add origin git<span class="sc">@</span>github.com<span class="sc">:</span>lukmayer<span class="sc">/</span>lukmayer.github.io.git</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>git push <span class="sc">-</span>f origin master<span class="sc">:</span>gh<span class="sc">-</span>pages</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>cd ..</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>rm <span class="sc">-</span>rf _site<span class="sc">/</span>.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Build the site with Quarto</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>quarto render</span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co"># Push file changes to master</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>git add .</span>
+<span id="cb5-8"><a href="#cb5-8"></a>git commit <span class="sc">-</span>m <span class="st">"Update website code"</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>git push <span class="sc">-</span>f origin master</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="co"># Navigate to the _site directory</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>cd _site</span>
+<span id="cb5-13"><a href="#cb5-13"></a></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="co"># Initialize a new Git repository</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>git init</span>
+<span id="cb5-16"><a href="#cb5-16"></a>git add .</span>
+<span id="cb5-17"><a href="#cb5-17"></a>git commit <span class="sc">-</span>m <span class="st">"Deploy updates"</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="co"># Force push to the gh-pages branch of the GitHub Pages repository</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a>git remote add origin git<span class="sc">@</span>github.com<span class="sc">:</span>lukmayer<span class="sc">/</span>lukmayer.github.io.git</span>
+<span id="cb5-21"><a href="#cb5-21"></a>git push <span class="sc">-</span>f origin master<span class="sc">:</span>gh<span class="sc">-</span>pages</span>
+<span id="cb5-22"><a href="#cb5-22"></a></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="co"># Clean up</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a>cd ..</span>
+<span id="cb5-25"><a href="#cb5-25"></a>rm <span class="sc">-</span>rf _site<span class="sc">/</span>.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The script essentially just runs a couple standard commands. First, I render my website and push the source files to their repository. After this, I change to the folder with the rendered files and force push these to the repositories that hosts the website. Then I remove this nested git, just in case it causes problems with the root-level git. With this script my workflow basically just becomes: 1) Make changes, 2) open terminal, 3) go to source directory, 4) run deploy.sh (the shell script). If you plan on using this script, keep in mind that your repository will be a different one than mine, which is further complicated by the fact that I use SSH, which will require a tutorial to set up if you are not familiar (search: “how to set up SSH with Github”).</p>
 </section>
