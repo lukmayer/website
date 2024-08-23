@@ -18,10 +18,37 @@ format:
     toc: false
 ---
 
+<style>
+/* CSS for fade-in effect */
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.fade-in.loaded {
+  opacity: 1;
+}
+</style>
+
+
+<script>
+  window.addEventListener("load", function() {
+    var image = document.querySelector(".fade-in");
+    if (image.complete) {
+      image.classList.add("loaded");
+    } else {
+      image.addEventListener("load", function() {
+        image.classList.add("loaded");
+      });
+    }
+  });
+</script>
+
+
+
 ::: {.text-center}
 
-![](assets/luke-23.jpg){.circle width=45% height=45% alt="Lukas/Luke William Mayer"}
-
+![](assets/luke-23.jpg){.circle .fade-in width=45% height=45% alt="Lukas/Luke William Mayer"}
 :::
 
 # Lukas W. Mayer
@@ -32,7 +59,7 @@ format:
 
 {{< animate fadeIn "I'm Luke, and I'm currently a PhD Student in Cognitive Science at the University of California, Irvine.
 In my research, I investigate the limits of human causal reasoning through Bayesian computational models.
-I'm particularly interested in applying these models to enhance human-AI collaboration."  duration=4s >}}
+I'm particularly interested in applying these models to enhance human-AI collaboration." duration=6s >}}
 
 
 
