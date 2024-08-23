@@ -121,3 +121,9 @@ ol > li::marker {
   background-color: black;
   padding: 2px;
 }
+
+/* Style the active tab */
+.nav.nav-tabs .nav-item .nav-link.active {
+  background-color: #4f4f4f; /* Slightly lighter than the page background */
+  border-color: #d0d0d0;     /* Adjust border color as needed */
+}
