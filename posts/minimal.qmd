@@ -50,7 +50,7 @@ knitr::include_graphics(c("assets/home.png", "assets/apps.png", "assets/shortcut
 
 \
 
-## On keeping tabs on things and interrogating yourself
+## Keeping tabs on things, including yourself
 
 This tip is something I have never seen anyone else talk about, even though it is so simple. All those services that want you to use their dedicated apps? About 90% of them also have a web-site with the same functionality. After all, most apps are really just front-ends for websites, with design tailored for hand-held devices... Therefore, why not just set a bookmark on your browser and get rid of the app? This is great for anything that you "need" to be able to access but use very infrequently. If you make wide-spread use of this, a nice side effect is that you have a lot fewer apps that need to be updated!  
 
