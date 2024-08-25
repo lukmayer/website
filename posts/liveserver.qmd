@@ -13,6 +13,7 @@ comments:
       repo: lukmayer/site_comments
       theme: github-dark
       issue-term: url
+draft: true
 ---
 
 Hello again :)
