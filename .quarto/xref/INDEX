@@ -44,5 +44,8 @@
   },
   "posts/login.qmd": {
     "login.html": "0546b16c"
+  },
+  "posts/minimal.qmd": {
+    "minimal.html": "7ffaa145"
   }
 }

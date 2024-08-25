@@ -22,11 +22,11 @@ website:
       - href: about.qmd
         text: "About"
     right:
-      - icon: rss
-        href: blog_index.xml
       - icon: envelope
         href: mailto:willuk@vivaldi.net
         aria-label: E-Mail
+      - icon: rss
+        href: blog_index.xml
       - text: "[Login]"
         href: https://lukmayer.github.io/login_portal/
   

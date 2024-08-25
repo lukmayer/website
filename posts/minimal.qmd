@@ -1,0 +1,28 @@
+---
+title: ""
+description: "Some simple tricks for cutting down that digital bloat"
+author: "Luke"
+date: "2024-08-24"
+categories:
+  - software
+  - phone
+image: "images/.png"
+comments:
+    utterances:
+      #image needed
+      repo: lukmayer/site_comments
+      theme: github-dark
+      issue-term: url
+
+draft: true
+---
+
+
+- Turn off notifications for anything not so important
+- Replace apps with bookmarks
+- Remove apps you do not use
+- Android derivatives:
+    - use a custom launcher
+    - Hide apps
+    - out of sight out of mind for other UI stuff
+    - minimal homescreen
