@@ -53,9 +53,9 @@ format:
   \end{tabularx}
 \end{minipage}
 
-\textbf{Thesis:} Bayesian modelling of inversion problems in human-AI interaction (preliminary title) 
+\textbf{Thesis:} Bayesian modelling of inversion problems in human-AI interaction (preliminary title)  
 \textbf{Advisor:} Professor Mark Steyvers  
-\textbf{Focus:} Computational modelling of human problem-solving abilities and alignment of AI systems with human cognition  
+\textbf{Focus:} Computational modelling of human problem-solving abilities and alignment of AI systems with human cognition 
 
   
 \vspace{0.2cm}
@@ -74,7 +74,7 @@ format:
 \textbf{Thesis:} Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice  
 \textbf{Advisor:} Professor Nick Chater  
 \textbf{Awards:} \textbf{Best Overall Score}: Behavioral and Data Science (equivalent to \textbf{Summa Cum Laude})  
-\textbf{Focus:} Unifying models from computational cognitive science and machine learning  \\
+\textbf{Focus:} Unifying models from computational cognitive science and machine learning  
 
 \vspace{0.2cm}
 
@@ -91,10 +91,9 @@ format:
 
 \textbf{Thesis:} Cooperation does not improve selective and/or sustained attention  
 \textbf{Advisors:} Dr. John Michael and Dr. Ross Goutcher  
-\textbf{Awards:} \textbf{Peter McEwan Prize} for the Best Single Honours Psychology Student (equivalent to \textbf{Summa Cum Laude}),  
-\phantom{} \textbf{Alan Baddeley Prize} for the Best Psychology Dissertation  
-\textbf{Focus:} Measuring cognitive abilities in online games  
-
+\textbf{Awards:} \textbf{Peter McEwan Prize} for the Best Single Honours Psychology Student (equivalent to \textbf{Summa Cum Laude})  
+\phantom{} \hspace{1.2cm} \textbf{Alan Baddeley Prize} for the Best Psychology Dissertation  
+\textbf{Focus:} Measuring cognitive abilities in online games
 
 
 
@@ -114,10 +113,8 @@ format:
 \end{minipage}
 
 
-Conducted large-scale mixed methods study concerned with the prediction of online group communications which translate into real-world actions
-
-Developed own project investigating algorithms for complex research appointment scheduling
-
+Conducted large-scale mixed methods study concerned with the prediction of online group communications which translate into real-world actions  
+Developed own project investigating algorithms for complex research appointment scheduling  
 **Principal Investigator**: Professor Adam Joinson
 
 \vspace{0.2cm}
@@ -134,8 +131,7 @@ Developed own project investigating algorithms for complex research appointment 
 \end{minipage}
 
 
-Execution and data analysis of experiments concerning face matching and concealed identity recognition
-
+Execution and data analysis of experiments concerning face matching and concealed identity recognition  
 **Principal Investigator**: Dr. Ailsa E. Millen
 
 \vspace{0.2cm}
@@ -151,8 +147,7 @@ Execution and data analysis of experiments concerning face matching and conceale
   \end{tabularx}
 \end{minipage}
 
-Automated video analysis for discrimination learning in lumpfish
-
+Automated video analysis for discrimination learning in lumpfish  
 **Principal Investigator**: Dr. Jamie Murray
 
 
@@ -160,11 +155,11 @@ Automated video analysis for discrimination learning in lumpfish
 # Publications {#publications}
 \hrule
 
-Karny, S., **Mayer, L. W.**, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M. (2024). Learning with AI Assistance: A Path to Better Task Performance or Dependence? *Proceedings of the ACM Collective Intelligence Conference, 10–17*. https://doi.org/10.1145/3643562.3672610
+Karny, S., **Mayer, L. W.**, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M. (2024). Learning with AI Assistance: A Path to Better Task Performance or Dependence? *Proceedings of the ACM Collective Intelligence Conference, 10–17*. https://doi.org/10.1145/3643562.3672610 
 
-Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W.**, & Smyth, P. (2024). The Calibration Gap between Model and Human Confidence in Large Language Models. arXiv preprint arXiv:2401.13835.
+Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W.**, & Smyth, P. (2024). The Calibration Gap between Model and Human Confidence in Large Language Models. arXiv preprint arXiv:2401.13835. 
 
-**Mayer, L. W.**, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) Waste not want not: Computational methods to maximise attendance in group research. *Behavior Research Methods*.
+**Mayer, L. W.**, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) Waste not want not: Computational methods to maximise attendance in group research. *Behavior Research Methods*. 
 
 
 
