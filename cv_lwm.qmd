@@ -59,7 +59,7 @@ format:
     \textbf{Focus:} & Computational modelling of human problem-solving abilities and alignment of AI systems with human cognition  \\
   \end{tabularx}
   
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/warwick.jpg}
@@ -79,7 +79,7 @@ format:
     \textbf{Focus:} & Unifying models from computational cognitive science and machine learning  \\
   \end{tabularx}
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
@@ -121,9 +121,11 @@ format:
 
 Conducted large-scale mixed methods study concerned with the prediction of online group communications which translate into real-world actions
 
+Developed own project investigating algorithms for complex research appointment scheduling
+
 **Principal Investigator**: Professor Adam Joinson
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
@@ -137,11 +139,11 @@ Conducted large-scale mixed methods study concerned with the prediction of onlin
 \end{minipage}
 
 
-Research project work around face matching and concealed identity recognition
+Execution and data analysis of experiments concerning face matching and concealed identity recognition
 
 **Principal Investigator**: Dr. Ailsa E. Millen
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
@@ -186,7 +188,7 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
   \end{tabularx}
 \end{minipage}
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/tubingen.jpg}
@@ -200,7 +202,7 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
   \end{tabularx}
 \end{minipage}
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/neuromatch}
