@@ -53,11 +53,10 @@ format:
   \end{tabularx}
 \end{minipage}
 
-\begin{tabularx}{\textwidth}{p{1.4cm} X}
-    \textbf{Thesis:} & Bayesian modelling of inversion problems in human-AI interaction (preliminary title) \\
-    \textbf{Advisor:} & Professor Mark Steyvers  \\
-    \textbf{Focus:} & Computational modelling of human problem-solving abilities and alignment of AI systems with human cognition  \\
-  \end{tabularx}
+\textbf{Thesis:} Bayesian modelling of inversion problems in human-AI interaction (preliminary title) 
+\textbf{Advisor:} Professor Mark Steyvers  
+\textbf{Focus:} Computational modelling of human problem-solving abilities and alignment of AI systems with human cognition  
+
   
 \vspace{0.2cm}
 
@@ -72,12 +71,10 @@ format:
   \end{tabularx}
 \end{minipage}
 
-\begin{tabularx}{\textwidth}{p{1.5cm} X}
-    \textbf{Thesis:} & Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice  \\
-    \textbf{Advisor:} & Professor Nick Chater  \\
-    \textbf{Awards:} & \textbf{Best Overall Score}: Behavioral and Data Science (equivalent to \textbf{Summa Cum Laude})  \\
-    \textbf{Focus:} & Unifying models from computational cognitive science and machine learning  \\
-  \end{tabularx}
+\textbf{Thesis:} Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice  
+\textbf{Advisor:} Professor Nick Chater  
+\textbf{Awards:} \textbf{Best Overall Score}: Behavioral and Data Science (equivalent to \textbf{Summa Cum Laude})  
+\textbf{Focus:} Unifying models from computational cognitive science and machine learning  \\
 
 \vspace{0.2cm}
 
@@ -92,13 +89,11 @@ format:
   \end{tabularx}
 \end{minipage}
 
-\begin{tabularx}{\textwidth}{p{1.5cm} X}
-    \textbf{Thesis:} & Cooperation does not improve selective and/or sustained attention  \\
-    \textbf{Advisors:} & Dr. John Michael and Dr. Ross Goutcher  \\
-    \textbf{Awards:} & \textbf{Peter McEwan Prize} for the Best Single Honours Psychology Student (equivalent to \textbf{Summa Cum Laude})  \\
-    \phantom{} & \textbf{Alan Baddeley Prize} for the Best Psychology Dissertation  \\
-    \textbf{Focus:} & Measuring cognitive abilities in online games  \\
-  \end{tabularx}
+\textbf{Thesis:} Cooperation does not improve selective and/or sustained attention  
+\textbf{Advisors:} Dr. John Michael and Dr. Ross Goutcher  
+\textbf{Awards:} \textbf{Peter McEwan Prize} for the Best Single Honours Psychology Student (equivalent to \textbf{Summa Cum Laude})  
+\phantom{} \textbf{Alan Baddeley Prize} for the Best Psychology Dissertation  
+\textbf{Focus:} Measuring cognitive abilities in online games  
 
 
 
@@ -211,7 +206,7 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
     \textbf{NeuroMatch Academy Summer School: Deep Learning} & \textbf{2022}  \\
-    \textit{NeuroMatch Academy, Los Angeles, CA, USA} & \phantom{}  \\
+    \textit{NeuroMatch Academy, Los Angeles, California, USA} & \phantom{}  \\
   \end{tabularx}
 \end{minipage}
 
