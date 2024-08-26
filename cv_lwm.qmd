@@ -91,7 +91,7 @@ format:
 
 \textbf{Thesis:} Cooperation does not improve selective and/or sustained attention  
 \textbf{Advisors:} Dr. John Michael and Dr. Ross Goutcher  
-\textbf{Awards:} \textbf{Peter McEwan Prize} for the Best Single Honours Psychology Student (equivalent to \textbf{Summa Cum Laude})  
+\textbf{Awards:} \textbf{Peter McEwan Prize} for the Best Single Honours Psychology Student (equivalent to \textbf{Summa Cum Laude}),  
 \phantom{} \textbf{Alan Baddeley Prize} for the Best Psychology Dissertation  
 \textbf{Focus:} Measuring cognitive abilities in online games  
 
