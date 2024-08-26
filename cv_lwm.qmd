@@ -18,7 +18,9 @@ format:
     include-in-header: 
       text: |
         \usepackage{multicol}
+        \usepackage{tabularx}
         \usepackage{lipsum}
+        \usepackage{graphicx}
         \usepackage{hyperref}
         \usepackage{libertine}
         \pagestyle{empty}
@@ -31,75 +33,129 @@ format:
 \begin{huge}\begin{center}{\bf Lukas William Mayer}\end{center}\end{huge}
 
 <!-- CONTACT INFO -->
-\begin{center}willuk@vivaldi.net ∙ \href{https://steyvers.socsci.uci.edu/madlab/}{Lab} ∙ \href{https://github.com/lukmayer}{Github} ∙ \href{https://lukmayer.github.io}{Website}
+\begin{center}
+\href{mailto:willuk@vivaldi.net}{willuk@vivaldi.net} ∙ \href{https://steyvers.socsci.uci.edu/madlab/}{Lab} ∙ \href{https://github.com/lukmayer}{Github} ∙ \href{https://lukmayer.github.io}{Website}
 \end{center}
-\vspace{15pt}
 
 
 
 # Education 
 \hrule
 
-## **PhD in Cognitive Science, 2028 (Expected)**
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/uci.png}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{PhD Cognitive Science } & \textbf{2028 (Expected)}  \\
+    \textit{University of California, Irvine} & \textit{Irvine, CA, USA}  \\
+  \end{tabularx}
+\end{minipage}
 
-*University of California, Irvine, Irvine, CA, USA*
-
-**Thesis (preliminary title)**: “Computational modelling of inversion problems in human-AI interaction”
-
-**Advisor**: Prof. Mark Steyvers
-
-Bayesian modelling of human problem-solving abilities and alignment of AI systems with human cognition
-
-
-
-## **MSc in Behavioural and Data Sciences (Distinction), 2022**
-
-*University of Warwick, Coventry, England, UK*
-
-**Thesis**: “Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice”
-
-**Advisor**: Prof. Nick Chater
-
-Unifying models from computational cognitive science and machine learning
+\begin{tabularx}{\textwidth}{p{1.4cm} X}
+    \textbf{Thesis:} & Bayesian modelling of inversion problems in human-AI interaction (preliminary title) \\
+    \textbf{Advisor:} & Professor Mark Steyvers  \\
+    \textbf{Focus:} & Computational modelling of human problem-solving abilities and alignment of AI systems with human cognition  \\
+  \end{tabularx}
 
 
+\vspace{4pt}
 
-## **BSc (Hons) in Psychology (First-Class), 2021**
 
-*University of Stirling, Stirling, Scotland, UK*
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/warwick.jpg}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{MSc Behavioral and Data Science (Distinction)} & \textbf{2022}  \\
+    \textit{University of Warwick} & \textit{Coventry, England, UK}  \\
+  \end{tabularx}
+\end{minipage}
 
-**Thesis**: “Cooperation does not improve selective and/or sustained attention”
+\begin{tabularx}{\textwidth}{p{1.5cm} X}
+    \textbf{Thesis:} & Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice  \\
+    \textbf{Advisor:} & Professor Nick Chater  \\
+    \textbf{Awards:} & \textbf{Best Overall Score}: Behavioral and Data Science (equivalent to \textbf{Summa Cum Laude})  \\
+    \textbf{Focus:} & Unifying models from computational cognitive science and machine learning  \\
+  \end{tabularx}
 
-**Advisors**: Dr. John Michael and Dr. Ross Goutcher
 
-Measuring cognitive abilities in online games
+\vspace{4pt}
+
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{BSc (with Honors) Psychology (First-Class)} & \textbf{2021}  \\
+    \textit{University of Stirling} & \textit{Stirling, Scotland, UK}  \\
+  \end{tabularx}
+\end{minipage}
+
+\begin{tabularx}{\textwidth}{p{1.5cm} X}
+    \textbf{Thesis:} & Cooperation does not improve selective and/or sustained attention  \\
+    \textbf{Advisors:} & Dr. John Michael and Dr. Ross Goutcher  \\
+    \textbf{Awards:} & \textbf{Peter McEwan Prize} for the Best Single Honours Psychology Student (equivalent to \textbf{Summa Cum Laude})  \\
+    \phantom{} & \textbf{Alan Baddeley Prize} for the Best Psychology Dissertation  \\
+    \textbf{Focus:} & Measuring cognitive abilities in online games  \\
+  \end{tabularx}
+
 
 
 
 # Research Experience 
 \hrule
 
-## **Research Assistant: Centre for Research and Evidence on Security Threats 2022 - 2023**
 
-*University of Bath, School of Management, Bath, England, UK*
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/bath.png}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{Research Assistant: Center for Research and Evidence on Security Threats } & \textbf{2022 - 2023 }  \\
+    \textit{University of Bath, School of Management} & \textit{Bath, England, UK}  \\
+  \end{tabularx}
+\end{minipage}
+
 
 Conducted large-scale mixed methods study concerned with the prediction of online group communications which translate into real-world actions
 
-**Principal Investigator**: Prof. Adam Joinson
+**Principal Investigator**: Professor Adam Joinson
 
+\vspace{4pt}
 
-## **Research Assistant: Centre for Cognition in Complex Environments 2019- 2021**
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{Research Assistant: Centre for Cognition in Complex Environments} & \textbf{2019 - 2021}  \\
+    \textit{University of Stirling, Department of Psychology} & \textit{Stirling, Scotland, UK}  \\
+  \end{tabularx}
+\end{minipage}
 
-*University of Stirling, Department of Psychology, Stirling, Scotland, UK*
 
 Research project work around face matching and concealed identity recognition
 
 **Principal Investigator**: Dr. Ailsa E. Millen
 
+\vspace{4pt}
 
-## **Research Assistant: Centre for Cognition in Complex Environments 2021**
-
-*University of Stirling, Department of Psychology, Stirling, Scotland, UK*
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{Research Assistant: Centre for Cognition in Complex Environments} & \textbf{2021}  \\
+    \textit{University of Stirling, Department of Psychology} & \textit{Stirling, Scotland, UK}  \\
+  \end{tabularx}
+\end{minipage}
 
 Automated video analysis for discrimination learning in lumpfish
 
@@ -118,27 +174,46 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
 
 
 
-# Awards and Honors 
-\hrule
-
-**Best Overall Score: Behavioural and Data Science (2022)**
-
-**Peter McEwan Prize for the Best Single Honours Psychology Student (2021)**
-
-**Alan Baddeley Prize for the Best Psychology Dissertation (2021)**
-
-
-
 # Miscellaneous
 \hrule
 
-**Digital Methods Initiative Winter School - The use and misuse of Open Source Intelligence, 2023**
-- *University of Amsterdam, Amsterdam, North Holland, The Netherlands*
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/uva.png}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{Digital Methods Initiative Winter School - The use and misuse of Open Source Intelligence} & \textbf{2023 }  \\
+    \textit{University of Amsterdam} & \textit{Amsterdam, North Holland, The Netherlands}  \\
+  \end{tabularx}
+\end{minipage}
 
-**International Interdisciplinary Computational Cognitive Science Summer School, 2022**
-- *University of Tübingen, Tübingen, Baden-Württemberg, Germany*
+\vspace{4pt}
 
-**NeuroMatch Academy Summer School: Deep Learning, 2022**
-- *NeuroMatch Academy, Los Angeles, CA, USA*
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/tubingen.jpg}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{International Interdisciplinary Computational Cognitive Science Summer School} & \textbf{2023 }  \\
+    \textit{University of Tübingen} & \textit{Tübingen, Baden-Württemberg, Germany}  \\
+  \end{tabularx}
+\end{minipage}
+
+
+\vspace{4pt}
+
+
+\begin{minipage}{0.05\textwidth}
+  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/neuromatch}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.95\textwidth}
+  \begin{tabularx}{\textwidth}{p{12cm} X}
+    \textbf{NeuroMatch Academy Summer School: Deep Learning} & \textbf{2022}  \\
+    \textit{NeuroMatch Academy} & \textit{Los Angeles, CA, USA}  \\
+  \end{tabularx}
+\end{minipage}
 
 
