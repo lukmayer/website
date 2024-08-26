@@ -49,7 +49,7 @@ format:
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
     \textbf{PhD Cognitive Science } & \textbf{2028 (Expected)}  \\
-    \textit{University of California, Irvine} & \textit{Irvine, CA, USA}  \\
+    \textit{University of California, Irvine} & \textit{Irvine, California, USA}  \\
   \end{tabularx}
 \end{minipage}
 
@@ -90,7 +90,7 @@ format:
 \hfill 
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{BSc (with Honors) Psychology (First-Class)} & \textbf{2021}  \\
+    \textbf{BSc with Honors Psychology (First-Class)} & \textbf{2021}  \\
     \textit{University of Stirling} & \textit{Stirling, Scotland, UK}  \\
   \end{tabularx}
 \end{minipage}
