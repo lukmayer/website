@@ -179,6 +179,7 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/uva.png}
+  \phantom{}
 \end{minipage}
 \hfill 
 \begin{minipage}{0.95\textwidth}
@@ -192,6 +193,7 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/tubingen.jpg}
+  \phantom{}
 \end{minipage}
 \hfill 
 \begin{minipage}{0.95\textwidth}
