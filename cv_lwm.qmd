@@ -59,9 +59,7 @@ format:
     \textbf{Focus:} & Computational modelling of human problem-solving abilities and alignment of AI systems with human cognition  \\
   \end{tabularx}
   
-\begin{center}
-  \rule{16cm}{0.2pt}
-\end{center}
+\vspace{0.5cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/warwick.jpg}
@@ -81,9 +79,7 @@ format:
     \textbf{Focus:} & Unifying models from computational cognitive science and machine learning  \\
   \end{tabularx}
 
-\begin{center}
-  \rule{16cm}{0.2pt}
-\end{center}
+\vspace{0.5cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
@@ -127,9 +123,7 @@ Conducted large-scale mixed methods study concerned with the prediction of onlin
 
 **Principal Investigator**: Professor Adam Joinson
 
-\begin{center}
-  \rule{16cm}{0.2pt}
-\end{center}
+\vspace{0.5cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
@@ -147,9 +141,7 @@ Research project work around face matching and concealed identity recognition
 
 **Principal Investigator**: Dr. Ailsa E. Millen
 
-\begin{center}
-  \rule{16cm}{0.2pt}
-\end{center}
+\vspace{0.5cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
@@ -190,13 +182,11 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
     \textbf{Digital Methods Initiative Winter School - The use and misuse of Open Source Intelligence} & \textbf{2023 }  \\
-    \textit{University of Amsterdam} & \textit{Amsterdam, North Holland, The Netherlands}  \\
+    \textit{University of Amsterdam, Amsterdam, North Holland, The Netherlands} & \phantom{}  \\
   \end{tabularx}
 \end{minipage}
 
-\begin{center}
-  \rule{16cm}{0.2pt}
-\end{center}
+\vspace{0.5cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/tubingen.jpg}
@@ -206,14 +196,11 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
     \textbf{International Interdisciplinary Computational Cognitive Science Summer School} & \textbf{2023 }  \\
-    \textit{University of Tübingen} & \textit{Tübingen, Baden-Württemberg, Germany}  \\
+    \textit{University of Tübingen, Tübingen, Baden-Württemberg, Germany} & \phantom{}  \\
   \end{tabularx}
 \end{minipage}
 
-\begin{center}
-  \rule{16cm}{0.2pt}
-\end{center}
-
+\vspace{0.5cm}
 
 \begin{minipage}{0.05\textwidth}
   \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/neuromatch}
@@ -222,7 +209,7 @@ Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
     \textbf{NeuroMatch Academy Summer School: Deep Learning} & \textbf{2022}  \\
-    \textit{NeuroMatch Academy} & \textit{Los Angeles, CA, USA}  \\
+    \textit{NeuroMatch Academy, Los Angeles, CA, USA} & \phantom{}  \\
   \end{tabularx}
 \end{minipage}
 
