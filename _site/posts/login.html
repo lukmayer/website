@@ -159,16 +159,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:willuk@vivaldi.net"> <i class="bi bi-envelope" role="img" aria-label="E-Mail">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../blog_index.xml"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://lukmayer.github.io/login_portal/"> 
 <span class="menu-text">[Login]</span></a>
@@ -226,8 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#disclaimer" id="toc-disclaimer" class="nav-link active" data-scroll-target="#disclaimer">Disclaimer</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#step-1-creating-hashes" id="toc-step-1-creating-hashes" class="nav-link" data-scroll-target="#step-1-creating-hashes">Step 1: Creating hashes</a></li>
   <li><a href="#step-2-setting-up-the-initial-login-page" id="toc-step-2-setting-up-the-initial-login-page" class="nav-link" data-scroll-target="#step-2-setting-up-the-initial-login-page">Step 2: Setting up the initial login page</a></li>
   <li><a href="#step-3-creating-the-gated-content" id="toc-step-3-creating-the-gated-content" class="nav-link" data-scroll-target="#step-3-creating-the-gated-content">Step 3: Creating the gated content</a></li>
@@ -253,12 +242,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Alternatively, visit <a href="https://lukmayer.github.io/login_portal/">lukmayer.github.io/login_portal</a> to directly go to the login portal.</p>
 <p><br>
 </p>
-<section id="disclaimer" class="level2">
-<h2 class="anchored" data-anchor-id="disclaimer">Disclaimer</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Disclaimer
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>The method I show here is meant for use-cases were you need a login portal for a static site. This method is NOT appropriate to use for enterprise applications, or critically sensitive information, as a sophisticated threat agent could figure out how to bypass the login portal. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, so it’s not a good idea to use this method for anything that could get you into trouble.</p>
+</div>
+</div>
 <p><br>
 </p>
-</section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <p>You want to be hosting the site somewhere where the source files are not accessible to the public.</p>
@@ -973,7 +971,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>Powered by <a href="https://quarto.org" target="_blank">Quarto</a></p>
 </div>
     <div class="nav-footer-right">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="../blog_index.xml">
+      <i class="bi bi-rss" role="img" aria-label="Blog RSS feed">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>

@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-main-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-main-listing'] = new List('listing-main-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -183,16 +183,6 @@ window.Quarto = {
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:willuk@vivaldi.net"> <i class="bi bi-envelope" role="img" aria-label="E-Mail">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="./blog_index.xml"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://lukmayer.github.io/login_portal/"> 
 <span class="menu-text">[Login]</span></a>
@@ -245,15 +235,11 @@ window.Quarto = {
 }
 </style>
 <p><span class="animate__animated animate__zoomIn" style="display: inline-block;animation-duration:2s">A dedicated space for me to rant!</span></p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div id="listing-main-listing" class="quarto-listing quarto-listing-container-grid">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+     <select id="listing-main-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-main-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
          <option value="listing-title" data-direction="asc">
@@ -298,7 +284,7 @@ Aug 25, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="webdev,quarto" data-listing-date-sort="1723705200000" data-listing-file-modified-sort="1723859476830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1625">
+<div class="g-col-1" data-index="1" data-categories="webdev,quarto" data-listing-date-sort="1723705200000" data-listing-file-modified-sort="1724733083454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1626">
 <a href="./posts/login.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -477,10 +463,16 @@ Jul 21, 2024
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+<nav id="main-listing-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
-</div></main> <!-- /main -->
+</div>
+<p>Follow my blog with RSS <a href="blog_index.xml" target="_blank"> <i class="bi bi-rss"></i> </a></p>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -916,7 +908,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>Powered by <a href="https://quarto.org" target="_blank">Quarto</a></p>
 </div>
     <div class="nav-footer-right">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="./blog_index.xml">
+      <i class="bi bi-rss" role="img" aria-label="Blog RSS feed">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>

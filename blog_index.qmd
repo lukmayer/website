@@ -2,6 +2,7 @@
 title: "Blog"
 description: "Lukas Mayer's personal blog - tech tips, life-style recommendations, software development, research, data science"
 listing:
+  id: main-listing
   type: grid
   grid-columns: 2
   fields: [image, date, title, description, reading-time]
@@ -20,5 +21,15 @@ listing:
 }
 </style>
 
+
+
 {{< animate zoomIn "A dedicated space for me to rant!" duration=2s >}}
 
+
+:::{#main-listing}
+:::
+
+Follow my blog with RSS
+<a href="blog_index.xml" target="_blank">
+    <i class="bi bi-rss"></i>
+</a>

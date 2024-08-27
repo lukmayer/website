@@ -123,16 +123,6 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:willuk@vivaldi.net"> <i class="bi bi-envelope" role="img" aria-label="E-Mail">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="./blog_index.xml"> <i class="bi bi-rss" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://lukmayer.github.io/login_portal/"> 
 <span class="menu-text">[Login]</span></a>
@@ -703,11 +693,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>Powered by <a href="https://quarto.org" target="_blank">Quarto</a></p>
 </div>
     <div class="nav-footer-right">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="./blog_index.xml">
+      <i class="bi bi-rss" role="img" aria-label="Blog RSS feed">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
