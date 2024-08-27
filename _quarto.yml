@@ -63,7 +63,7 @@ format:
     toc-title: "Sections:"
     toc-depth: 4
     toc-expand: 2
-    title-block-style: default
+    title-block-style: manuscript
     title-block-banner: true
     title-block-categories: true
     code-fold: show

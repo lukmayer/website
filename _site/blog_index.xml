@@ -19,6 +19,7 @@
 
 
 
+  
 
 
 <section id="say-what" class="level2">
@@ -45,7 +46,7 @@
 <div>
 
 </div>
-<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout="columns" data-layout-nrow="1">
+<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout-nrow="1" data-layout="columns">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><a href="assets/home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://lukmayer.github.io/posts/assets/home.png" class="img-fluid" width="270"></a></p>
@@ -94,6 +95,7 @@
 
 
 
+  
 
 
 <p>Hello again!</p>
@@ -1165,6 +1167,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 
 
+  
 
 
 <p>Hello internet!</p>
@@ -1235,6 +1238,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 
 
+  
 
 
 <p>Hello and welcome to yet another technology-fuelled rant from yours truly!</p>
@@ -1324,6 +1328,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 
 
+  
 
 
 <p>Hello once again!</p>
@@ -1355,6 +1360,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 
 
+  
 
 
 <p>I’ve noticed that with software there sometimes exists a bit of an ironic relationship where the product with the most features somehow is also able to be the most minimal. Emacs is one such example, as it’s a text editor that can be configured to perform tasks you’d never think a text editor would be able to - and it does this with almost no UI whatsoever. It’s fair to say I’m a big fan of reducing visual clutter on my devices. For example, my laptop runs Linux with no Desktop environment, and my phone home screen is basically just a calendar widget. Neither device is minimal in the sense of having little functionality, but both are definitely minimal in the sense of keeping the interface to a minimum.</p>
@@ -1416,6 +1422,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 
 
+  
 
 
 <p>Since I am not much of a social media user (never have been), I have come to think about personal websites as a useful way to still have a presence on the internet, either as a way to share what I’m up to or as a sort of virtual business card. However, I am also neither a professional web developer nor willing to spend money to make something as simple as a ‘static’ webpage. Luckily, I did not have to and you should not have to either.</p>
@@ -1932,6 +1939,7 @@ font-style: inherit;">/</span>.git</span></code></pre></div>
 
 
 
+  
 
 
 <p>Hello world!</p>
