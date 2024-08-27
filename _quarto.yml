@@ -55,7 +55,7 @@ format:
     footnotes-hover: true
     reference-location: margin
     link-external-newwindow: true
-    link-external-icon: true
+    # link-external-icon: true
     link-external-filter: "https://www.lukmayer.github.io"
     canonical-url: true
     toc-location: right
