@@ -127,3 +127,15 @@ ol > li::marker {
   background-color: #4f4f4f; /* Slightly lighter than the page background */
   border-color: #d0d0d0;     /* Adjust border color as needed */
 }
+
+
+/* Target the pagination links */
+.pagination a {
+  color: black !important; /* Set the text color to black */
+}
+
+/* Optionally, change the color for active and hover states */
+.pagination a:hover, 
+.pagination .active a {
+  color: black !important;
+}
