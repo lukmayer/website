@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.53">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Luke">
+<meta name="dcterms.date" content="2024-08-15">
+<meta name="description" content="Personalized/Gated content on static websites">
+
+<title>How to make a login portal for Quarto sites – Lukas W. Mayer</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicons/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="How to make a login portal for Quarto sites – Lukas W. Mayer">
+<meta property="og:description" content="Personalized/Gated content on static websites">
+<meta property="og:image" content="https://lukmayer.github.io/posts/images/login.png">
+<meta property="og:site_name" content="Lukas W. Mayer">
+<meta property="og:image:height" content="506">
+<meta property="og:image:width" content="793">
+<link rel="canonical" href="https://lukmayer.github.io/posts/login.html">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/favicons/android-chrome-512x512.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Lukas W. Mayer</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog_index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:willuk@vivaldi.net"> <i class="bi bi-envelope" role="img" aria-label="E-Mail">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../blog_index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lukmayer.github.io/login_portal/"> 
+<span class="menu-text">[Login]</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">How to make a login portal for Quarto sites</h1>
+                  <div>
+        <div class="description">
+          Personalized/Gated content on static websites
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">webdev</div>
+                <div class="quarto-category">quarto</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Luke </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 15, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#disclaimer" id="toc-disclaimer" class="nav-link active" data-scroll-target="#disclaimer">Disclaimer</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#step-1-creating-hashes" id="toc-step-1-creating-hashes" class="nav-link" data-scroll-target="#step-1-creating-hashes">Step 1: Creating hashes</a></li>
+  <li><a href="#step-2-setting-up-the-initial-login-page" id="toc-step-2-setting-up-the-initial-login-page" class="nav-link" data-scroll-target="#step-2-setting-up-the-initial-login-page">Step 2: Setting up the initial login page</a></li>
+  <li><a href="#step-3-creating-the-gated-content" id="toc-step-3-creating-the-gated-content" class="nav-link" data-scroll-target="#step-3-creating-the-gated-content">Step 3: Creating the gated content</a></li>
+  <li><a href="#step-4-hiding-the-hashed-urls" id="toc-step-4-hiding-the-hashed-urls" class="nav-link" data-scroll-target="#step-4-hiding-the-hashed-urls">Step 4: Hiding the hashed URLs</a></li>
+  <li><a href="#step-5-deploying" id="toc-step-5-deploying" class="nav-link" data-scroll-target="#step-5-deploying">Step 5: Deploying</a></li>
+  <li><a href="#step-6-making-more-content" id="toc-step-6-making-more-content" class="nav-link" data-scroll-target="#step-6-making-more-content">Step 6: Making more content</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Hello again!</p>
+<p>I stumbled upon this <a href="https://www.agalera.eu/github-pages-password/">blog post</a> while trying to figure out whether it was possible to set up a login portal for static webpages. It seems that so far, no one else has figured out how to do this with Quarto, so I’ve been hacking away at it in my free time for the last few days, and finally figured it out!</p>
+<p>Basically, the idea is to use the SHA1 hash of the username and password as a part of the URL to the gated content. This way, the URL to the gated content is not easily guessable, and the user has to go through the login portal to access the content.</p>
+<p>The rest was just a matter of figuring out how to make this compatible with Quarto. It’s surprisingly easy!</p>
+<p>For a demonstration, click on [Login] in the top right and log in with username = <code>username</code> and password = <code>password</code>.</p>
+<p>Alternatively, visit <a href="https://lukmayer.github.io/login_portal/">lukmayer.github.io/login_portal</a> to directly go to the login portal.</p>
+<p><br>
+</p>
+<section id="disclaimer" class="level2">
+<h2 class="anchored" data-anchor-id="disclaimer">Disclaimer</h2>
+<p>The method I show here is meant for use-cases were you need a login portal for a static site. This method is NOT appropriate to use for enterprise applications, or critically sensitive information, as a sophisticated threat agent could figure out how to bypass the login portal. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, so it’s not a good idea to use this method for anything that could get you into trouble.</p>
+<p><br>
+</p>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>You want to be hosting the site somewhere where the source files are not accessible to the public.</p>
+<p>This can be for example, a private github repository with github pages enabled, etc.</p>
+<p><br>
+</p>
+</section>
+<section id="step-1-creating-hashes" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-creating-hashes">Step 1: Creating hashes</h2>
+<p>You need to come up with username and password for the gated content BEFORE you create the gated content</p>
+<p>Run the following commands in your terminal to generate the hashes for the username and password of your choice:</p>
+<p><code>echo -n "&lt;username&gt;" | openssl dgst -sha1</code></p>
+<p><code>echo -n "&lt;password&gt;" | openssl dgst -sha1</code></p>
+<p><em>Note: replace <code>&lt;username&gt;</code> and <code>&lt;password&gt;</code> with the username and password of your choice.</em></p>
+<p>Copy the hashes these commands produce, we will need them in a second.</p>
+<p><br>
+</p>
+</section>
+<section id="step-2-setting-up-the-initial-login-page" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-setting-up-the-initial-login-page">Step 2: Setting up the initial login page</h2>
+<p>Create a directory. In this example, we’ll call it <code>login_portal</code>.</p>
+<p>Now, in this directory, create <code>index.html</code> with the following content:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">&lt;!</span>DOCTYPE html<span class="sc">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="er">&lt;</span>html<span class="sc">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="er">&lt;</span>head<span class="sc">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="er">&lt;</span>title<span class="sc">&gt;</span>Login Portal<span class="sc">&lt;</span><span class="er">/</span>title<span class="sc">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="er">&lt;</span>link rel<span class="ot">=</span><span class="st">"stylesheet"</span> type<span class="ot">=</span><span class="st">"text/css"</span> href<span class="ot">=</span><span class="st">"styles.css"</span><span class="sc">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="er">&lt;</span>script src<span class="ot">=</span><span class="st">"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"</span><span class="sc">&gt;</span><span class="er">&lt;/</span>script<span class="sc">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="er">&lt;/</span>head<span class="sc">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="er">&lt;</span>body<span class="sc">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="er">&lt;</span>h1<span class="sc">&gt;</span>Login Portal<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="er">&lt;</span>form id<span class="ot">=</span><span class="st">"login-form"</span><span class="sc">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="er">&lt;</span>input type<span class="ot">=</span><span class="st">"text"</span> id<span class="ot">=</span><span class="st">"username"</span> placeholder<span class="ot">=</span><span class="st">"Enter username"</span><span class="sc">&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="er">&lt;</span>input type<span class="ot">=</span><span class="st">"password"</span> id<span class="ot">=</span><span class="st">"password"</span> placeholder<span class="ot">=</span><span class="st">"Enter password"</span><span class="sc">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="er">&lt;</span>button id<span class="ot">=</span><span class="st">"login-btn"</span> type<span class="ot">=</span><span class="st">"button"</span><span class="sc">&gt;</span>Login<span class="sc">&lt;</span><span class="er">/</span>button<span class="sc">&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="er">&lt;/</span>form<span class="sc">&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>  <span class="er">&lt;</span>div id<span class="ot">=</span><span class="st">"alert"</span> style<span class="ot">=</span><span class="st">"display: none;"</span> data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"alert"</span><span class="sc">&gt;</span>Incorrect username or password<span class="sc">&lt;</span><span class="er">/</span>div<span class="sc">&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="er">&lt;</span>script<span class="sc">&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>    const loginBtn <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'login-btn'</span>);</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    const usernameInput <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'username'</span>);</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    const passwordInput <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'password'</span>);</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    const alertDiv <span class="ot">=</span> <span class="fu">document.getElementById</span>(<span class="st">'alert'</span>);</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a>    <span class="cf">function</span> <span class="fu">sha1</span>(message) {</span>
+<span id="cb1-24"><a href="#cb1-24"></a>      return <span class="fu">CryptoJS.SHA1</span>(message)<span class="fu">.toString</span>(CryptoJS.enc.Hex);</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    }</span>
+<span id="cb1-26"><a href="#cb1-26"></a></span>
+<span id="cb1-27"><a href="#cb1-27"></a>    async <span class="cf">function</span> <span class="fu">urlExists</span>(url) {</span>
+<span id="cb1-28"><a href="#cb1-28"></a>      try {</span>
+<span id="cb1-29"><a href="#cb1-29"></a>        const response <span class="ot">=</span> await <span class="fu">fetch</span>(url, { method<span class="sc">:</span> <span class="st">'HEAD'</span> });</span>
+<span id="cb1-30"><a href="#cb1-30"></a>        return response.ok;</span>
+<span id="cb1-31"><a href="#cb1-31"></a>      } <span class="fu">catch</span> (error) {</span>
+<span id="cb1-32"><a href="#cb1-32"></a>        return false;</span>
+<span id="cb1-33"><a href="#cb1-33"></a>      }</span>
+<span id="cb1-34"><a href="#cb1-34"></a>    }</span>
+<span id="cb1-35"><a href="#cb1-35"></a></span>
+<span id="cb1-36"><a href="#cb1-36"></a>    async <span class="cf">function</span> <span class="fu">login</span>(username, password) {</span>
+<span id="cb1-37"><a href="#cb1-37"></a>      const usernameHash <span class="ot">=</span> <span class="fu">sha1</span>(username);</span>
+<span id="cb1-38"><a href="#cb1-38"></a>      const passwordHash <span class="ot">=</span> <span class="fu">sha1</span>(password);</span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a>      <span class="sc">/</span><span class="er">/</span> Log the hashes <span class="cf">for</span> debugging</span>
+<span id="cb1-41"><a href="#cb1-41"></a>      <span class="fu">console.log</span>(<span class="st">"Username Hash:"</span>, usernameHash);</span>
+<span id="cb1-42"><a href="#cb1-42"></a>      <span class="fu">console.log</span>(<span class="st">"Password Hash:"</span>, passwordHash);</span>
+<span id="cb1-43"><a href="#cb1-43"></a></span>
+<span id="cb1-44"><a href="#cb1-44"></a>      const url <span class="ot">=</span> <span class="st">'a'</span> <span class="sc">+</span> usernameHash <span class="sc">+</span> <span class="st">'/a'</span> <span class="sc">+</span> passwordHash <span class="sc">+</span> <span class="st">'/index.html'</span>; <span class="sc">/</span><span class="er">/</span> Construct URL</span>
+<span id="cb1-45"><a href="#cb1-45"></a>      <span class="fu">console.log</span>(<span class="st">"Constructed URL:"</span>, url); <span class="sc">/</span><span class="er">/</span> Log the constructed URL</span>
+<span id="cb1-46"><a href="#cb1-46"></a></span>
+<span id="cb1-47"><a href="#cb1-47"></a>      <span class="cf">if</span> (await <span class="fu">urlExists</span>(url)) {</span>
+<span id="cb1-48"><a href="#cb1-48"></a>        window.location <span class="ot">=</span> url;</span>
+<span id="cb1-49"><a href="#cb1-49"></a>      } <span class="cf">else</span> {</span>
+<span id="cb1-50"><a href="#cb1-50"></a>        alertDiv.style.display <span class="ot">=</span> <span class="st">'block'</span>; <span class="sc">/</span><span class="er">/</span> Show alert</span>
+<span id="cb1-51"><a href="#cb1-51"></a>        usernameInput.value <span class="ot">=</span> <span class="st">''</span>;</span>
+<span id="cb1-52"><a href="#cb1-52"></a>        passwordInput.value <span class="ot">=</span> <span class="st">''</span>;</span>
+<span id="cb1-53"><a href="#cb1-53"></a>        <span class="fu">console.log</span>(<span class="st">"Login failed, incorrect username or password."</span>);</span>
+<span id="cb1-54"><a href="#cb1-54"></a>      }</span>
+<span id="cb1-55"><a href="#cb1-55"></a>    }</span>
+<span id="cb1-56"><a href="#cb1-56"></a></span>
+<span id="cb1-57"><a href="#cb1-57"></a>    <span class="fu">loginBtn.addEventListener</span>(<span class="st">'click'</span>, <span class="cf">function</span> () {</span>
+<span id="cb1-58"><a href="#cb1-58"></a>      <span class="fu">login</span>(usernameInput.value, passwordInput.value);</span>
+<span id="cb1-59"><a href="#cb1-59"></a>    });</span>
+<span id="cb1-60"><a href="#cb1-60"></a></span>
+<span id="cb1-61"><a href="#cb1-61"></a>    <span class="fu">passwordInput.addEventListener</span>(<span class="st">'keydown'</span>, <span class="cf">function</span> (e) {</span>
+<span id="cb1-62"><a href="#cb1-62"></a>      <span class="cf">if</span> (e.key <span class="sc">==</span><span class="er">=</span> <span class="st">'Enter'</span>) {</span>
+<span id="cb1-63"><a href="#cb1-63"></a>        <span class="fu">login</span>(usernameInput.value, passwordInput.value);</span>
+<span id="cb1-64"><a href="#cb1-64"></a>      }</span>
+<span id="cb1-65"><a href="#cb1-65"></a>    });</span>
+<span id="cb1-66"><a href="#cb1-66"></a>  <span class="sc">&lt;</span><span class="er">/</span>script<span class="sc">&gt;</span></span>
+<span id="cb1-67"><a href="#cb1-67"></a></span>
+<span id="cb1-68"><a href="#cb1-68"></a>  <span class="er">&lt;</span>footer<span class="sc">&gt;</span></span>
+<span id="cb1-69"><a href="#cb1-69"></a>    <span class="er">&lt;</span>a href<span class="ot">=</span><span class="st">"https://lukmayer.github.io"</span><span class="sc">&gt;</span>Return to lukmayer.github.io<span class="sc">&lt;</span><span class="er">/</span>a<span class="sc">&gt;</span></span>
+<span id="cb1-70"><a href="#cb1-70"></a>  <span class="er">&lt;/</span>footer<span class="sc">&gt;</span></span>
+<span id="cb1-71"><a href="#cb1-71"></a><span class="er">&lt;/</span>body<span class="sc">&gt;</span></span>
+<span id="cb1-72"><a href="#cb1-72"></a><span class="er">&lt;/</span>html<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><br>
+</p>
+<p>You may want to modify the footer to link to your own website.</p>
+<p>The <code>styles.css</code> should be a file in the same directory as <code>index.html</code>.</p>
+<p>You can put whatever you like in the <code>styles.css</code>, but here is mine:</p>
+<p><br>
+</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>body {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#4f4f4f; /* Dark grey background from Darkly theme */</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text */</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  font<span class="sc">-</span>family<span class="sc">:</span> <span class="st">'Arial'</span>, sans<span class="sc">-</span>serif;</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  display<span class="sc">:</span> flex;</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  justify<span class="sc">-</span>content<span class="sc">:</span> center;</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  align<span class="sc">-</span>items<span class="sc">:</span> center;</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  height<span class="sc">:</span> <span class="dv">100</span>vh;</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  margin<span class="sc">:</span> <span class="dv">0</span>;</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  flex<span class="sc">-</span>direction<span class="sc">:</span> column; <span class="sc">/</span><span class="er">*</span> Arrange elements <span class="cf">in</span> a column <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>}</span>
+<span id="cb2-12"><a href="#cb2-12"></a>h1 {</span>
+<span id="cb2-13"><a href="#cb2-13"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>  margin<span class="sc">-</span>bottom<span class="sc">:</span> <span class="dv">20</span>px; <span class="sc">/</span><span class="er">*</span> Space between title and form <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>}</span>
+<span id="cb2-16"><a href="#cb2-16"></a>.form<span class="sc">-</span>container {</span>
+<span id="cb2-17"><a href="#cb2-17"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#777777; /* Slightly lighter dark background for form from Darkly theme */</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>  padding<span class="sc">:</span> <span class="dv">30</span>px;</span>
+<span id="cb2-19"><a href="#cb2-19"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">10</span>px;</span>
+<span id="cb2-20"><a href="#cb2-20"></a>  box<span class="sc">-</span>shadow<span class="sc">:</span> <span class="dv">0</span>px <span class="dv">0</span>px <span class="dv">15</span>px <span class="fu">rgba</span>(<span class="dv">0</span>, <span class="dv">191</span>, <span class="dv">99</span>, <span class="fl">0.5</span>); <span class="sc">/</span><span class="er">*</span> Adjusted shadow to match theme <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
+<span id="cb2-22"><a href="#cb2-22"></a>  max<span class="sc">-</span>width<span class="sc">:</span> <span class="dv">400</span>px; <span class="sc">/</span><span class="er">*</span> Set a max<span class="sc">-</span>width <span class="cf">for</span> better alignment <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a>  box<span class="sc">-</span>sizing<span class="sc">:</span> border<span class="sc">-</span>box; <span class="sc">/</span><span class="er">*</span> Ensure padding is included <span class="cf">in</span> overall width <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a>}</span>
+<span id="cb2-25"><a href="#cb2-25"></a>input[type<span class="ot">=</span><span class="st">"text"</span>], input[type<span class="ot">=</span><span class="st">"password"</span>] {</span>
+<span id="cb2-26"><a href="#cb2-26"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
+<span id="cb2-27"><a href="#cb2-27"></a>  padding<span class="sc">:</span> <span class="dv">10</span>px;</span>
+<span id="cb2-28"><a href="#cb2-28"></a>  margin<span class="sc">:</span> <span class="dv">10</span>px <span class="dv">0</span>;</span>
+<span id="cb2-29"><a href="#cb2-29"></a>  border<span class="sc">:</span> <span class="dv">1</span>px solid <span class="co">#00bf63; /* Green border from Darkly theme */</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">5</span>px;</span>
+<span id="cb2-31"><a href="#cb2-31"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#777777; /* Dark input background from Darkly theme */</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text in input */</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>  box<span class="sc">-</span>sizing<span class="sc">:</span> border<span class="sc">-</span>box; <span class="sc">/</span><span class="er">*</span> Ensure padding is included <span class="cf">in</span> overall width <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a>}</span>
+<span id="cb2-35"><a href="#cb2-35"></a>input<span class="sc">::</span>placeholder {</span>
+<span id="cb2-36"><a href="#cb2-36"></a>  color<span class="sc">:</span> <span class="co">#ced4da; /* Light grey color for placeholder text from Darkly theme */</span></span>
+<span id="cb2-37"><a href="#cb2-37"></a>}</span>
+<span id="cb2-38"><a href="#cb2-38"></a>button {</span>
+<span id="cb2-39"><a href="#cb2-39"></a>  width<span class="sc">:</span> <span class="dv">100</span>%;</span>
+<span id="cb2-40"><a href="#cb2-40"></a>  padding<span class="sc">:</span> <span class="dv">10</span>px;</span>
+<span id="cb2-41"><a href="#cb2-41"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#00bf63; /* Green button background from Darkly theme */</span></span>
+<span id="cb2-42"><a href="#cb2-42"></a>  color<span class="sc">:</span> <span class="co">#ffffff; /* Light text */</span></span>
+<span id="cb2-43"><a href="#cb2-43"></a>  border<span class="sc">:</span> none;</span>
+<span id="cb2-44"><a href="#cb2-44"></a>  border<span class="sc">-</span>radius<span class="sc">:</span> <span class="dv">5</span>px;</span>
+<span id="cb2-45"><a href="#cb2-45"></a>  cursor<span class="sc">:</span> pointer;</span>
+<span id="cb2-46"><a href="#cb2-46"></a>  font<span class="sc">-</span>weight<span class="sc">:</span> bold;</span>
+<span id="cb2-47"><a href="#cb2-47"></a>}</span>
+<span id="cb2-48"><a href="#cb2-48"></a>button<span class="sc">:</span>hover {</span>
+<span id="cb2-49"><a href="#cb2-49"></a>  background<span class="sc">-</span>color<span class="sc">:</span> <span class="co">#198754; /* Darker green on hover from Darkly theme */</span></span>
+<span id="cb2-50"><a href="#cb2-50"></a>}</span>
+<span id="cb2-51"><a href="#cb2-51"></a><span class="co">#alert {</span></span>
+<span id="cb2-52"><a href="#cb2-52"></a>  color<span class="sc">:</span> <span class="co">#ff0000; /* Red alert message */</span></span>
+<span id="cb2-53"><a href="#cb2-53"></a>  margin<span class="sc">-</span>top<span class="sc">:</span> <span class="dv">10</span>px;</span>
+<span id="cb2-54"><a href="#cb2-54"></a>  align<span class="sc">-</span>self<span class="sc">:</span> center; <span class="sc">/</span><span class="er">*</span> Align to the start of the form <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-55"><a href="#cb2-55"></a><span class="er">}</span></span>
+<span id="cb2-56"><a href="#cb2-56"></a></span>
+<span id="cb2-57"><a href="#cb2-57"></a><span class="sc">/</span><span class="er">*</span> Center the container, form, and alert <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-58"><a href="#cb2-58"></a>.container {</span>
+<span id="cb2-59"><a href="#cb2-59"></a>  display<span class="sc">:</span> flex;</span>
+<span id="cb2-60"><a href="#cb2-60"></a>  flex<span class="sc">-</span>direction<span class="sc">:</span> column; <span class="sc">/</span><span class="er">*</span> Arrange title, form, and alert <span class="cf">in</span> a column <span class="sc">*</span><span class="er">/</span></span>
+<span id="cb2-61"><a href="#cb2-61"></a>  align<span class="sc">-</span>items<span class="sc">:</span> center;</span>
+<span id="cb2-62"><a href="#cb2-62"></a>}</span>
+<span id="cb2-63"><a href="#cb2-63"></a></span>
+<span id="cb2-64"><a href="#cb2-64"></a>footer {</span>
+<span id="cb2-65"><a href="#cb2-65"></a>  position<span class="sc">:</span> absolute;</span>
+<span id="cb2-66"><a href="#cb2-66"></a>  bottom<span class="sc">:</span> <span class="dv">20</span>px;</span>
+<span id="cb2-67"><a href="#cb2-67"></a>  left<span class="sc">:</span> <span class="dv">50</span>%;</span>
+<span id="cb2-68"><a href="#cb2-68"></a>  transform<span class="sc">:</span> <span class="fu">translateX</span>(<span class="sc">-</span><span class="dv">50</span>%);</span>
+<span id="cb2-69"><a href="#cb2-69"></a>  font<span class="sc">-</span>size<span class="sc">:</span> <span class="dv">18</span>px;</span>
+<span id="cb2-70"><a href="#cb2-70"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
+<span id="cb2-71"><a href="#cb2-71"></a>  text<span class="sc">-</span>align<span class="sc">:</span> center;</span>
+<span id="cb2-72"><a href="#cb2-72"></a>}</span>
+<span id="cb2-73"><a href="#cb2-73"></a></span>
+<span id="cb2-74"><a href="#cb2-74"></a>footer a {</span>
+<span id="cb2-75"><a href="#cb2-75"></a>  text<span class="sc">-</span>decoration<span class="sc">:</span> none;</span>
+<span id="cb2-76"><a href="#cb2-76"></a>  color<span class="sc">:</span> <span class="co">#00bf63; /* Green color from Darkly theme */</span></span>
+<span id="cb2-77"><a href="#cb2-77"></a>}</span>
+<span id="cb2-78"><a href="#cb2-78"></a></span>
+<span id="cb2-79"><a href="#cb2-79"></a>footer a<span class="sc">:</span>hover {</span>
+<span id="cb2-80"><a href="#cb2-80"></a>  color<span class="sc">:</span> <span class="co">#198754; /* Darker green on hover from Darkly theme */</span></span>
+<span id="cb2-81"><a href="#cb2-81"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><br>
+</p>
+</section>
+<section id="step-3-creating-the-gated-content" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-creating-the-gated-content">Step 3: Creating the gated content</h2>
+<p>Initialize a Quarto website project in the directory in which <code>index.html</code> sits.</p>
+<p>The name of the project MUST be <code>a{yourusernamehash}</code></p>
+<p>The reason the “a” is prepended to the hash is that Github pages will not serve a directory that starts with a number.</p>
+<p>Next, in the project folder, create a new folder of the name <code>a{yourpasswordhash}</code>.</p>
+<p><em>Note: replace <code>{yourusernamehash}</code> and <code>{yourpasswordhash}</code> with the hashes you generated in Step 1.</em></p>
+<p>Finally, open your <code>_quarto.yml</code> and make sure it has the following:</p>
+<p><br>
+</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>project<span class="sc">:</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>  type<span class="sc">:</span> website</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> <span class="st">"a{yourpasswordhash}"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><br>
+</p>
+<p>This ensures that the rendered files sit in the folder that is named after the password hash.</p>
+<p>When you log in, you will be redirected to the URL constructed from the username and password hashes.</p>
+<p>This means you’ll be redirected to the files that sit in this folder named after the password hash.</p>
+<p><br>
+</p>
+</section>
+<section id="step-4-hiding-the-hashed-urls" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-hiding-the-hashed-urls">Step 4: Hiding the hashed URLs</h2>
+<p>You don’t want the hashed URLs to leak, since knowing them allows you to bypass the login portal.</p>
+<p>The method I’m going to show you here can’t stop a determined hacker, but it will stop whoever you’re sharing this with from accidentally leaking the hashed URLs.</p>
+<p>All you need to do is paste the following HTML/JS on every Quarto document behind the login portal:</p>
+<p><br>
+</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="sc">&lt;</span>script<span class="sc">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">window.addEventListener</span>(<span class="st">'load'</span>, () <span class="sc">=&gt;</span> {</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="sc">/</span><span class="er">/</span> Change the URL <span class="cf">in</span> the address bar after load</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">history.replaceState</span>(null, null, <span class="st">"/login_portal/"</span>);</span>
+<span id="cb4-5"><a href="#cb4-5"></a>});</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="sc">&lt;</span><span class="er">/</span>script<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><br>
+</p>
+<p>So, for example, the index page on the demo I mentioned at the beginning of the post has this script embedded, and so does the “Guide” page.</p>
+<p>What this code does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.</p>
+<p><code>"/login_portal/"</code> is optional, you can set this to whatever you like.</p>
+<p><br>
+</p>
+</section>
+<section id="step-5-deploying" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-deploying">Step 5: Deploying</h2>
+<p>I’m assuming you are planning to use Github with Github pages for this.</p>
+<p>First, render your Quarto project to HTML.</p>
+<p>DO NOT <code>git init</code> on the project folder, but instead where the <code>index.html</code> sits, which should be one level above the project folder.</p>
+<p>Then add the remote origin, commit and push to the remote.</p>
+<p>Finally, go to the settings of the repository on Github, and enable Github pages.</p>
+<p><br>
+</p>
+</section>
+<section id="step-6-making-more-content" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-making-more-content">Step 6: Making more content</h2>
+<p>To add more gated content with different access credentials, simply create another Quarto project with different hash names at the same level as the first one.</p>
+<p>This also means that you need to render each project separately.</p>
+<p><br>
+</p>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<p>Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your terminal, then rename the files.</p>
+<hr>
+<p><br>
+</p>
+<p>If you make use of my code or took inspiration from my solution, I’d love to see your result! :)</p>
+<p>Enjoy!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https://www.lukmayer.github.io");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="lukmayer/site_comments" issue-term="url" theme="github-dark" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Powered by <a href="https://quarto.org" target="_blank">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

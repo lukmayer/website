@@ -11,6 +11,7 @@ listing:
   filter-ui: [title, date]
   categories: true
   feed: true
+  page-size: 4
 ---
 
 <style>
