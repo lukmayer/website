@@ -139,3 +139,9 @@ ol > li::marker {
 .pagination .active a {
   color: black !important;
 }
+
+#quarto-sidebar {
+    background-color: transparent !important; /* Make the sidebar background transparent */
+    box-shadow: none !important; /* Remove any shadows if present */
+    border: none !important; /* Remove any borders if present */
+}

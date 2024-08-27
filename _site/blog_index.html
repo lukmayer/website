@@ -141,7 +141,7 @@ window.Quarto = {
 <link rel="canonical" href="https://lukmayer.github.io/blog_index.html">
 </head>
 
-<body class="nav-fixed">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -195,7 +195,7 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Blog</h1>
@@ -218,9 +218,12 @@ window.Quarto = {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="habits">habits <span class="quarto-category-count">(1)</span></div><div class="category" data-category="phone">phone <span class="quarto-category-count">(1)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="rss">rss <span class="quarto-category-count">(1)</span></div><div class="category" data-category="search engines">search engines <span class="quarto-category-count">(1)</span></div><div class="category" data-category="software">software <span class="quarto-category-count">(5)</span></div><div class="category" data-category="vivaldi">vivaldi <span class="quarto-category-count">(1)</span></div><div class="category" data-category="webdev">webdev <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -234,6 +237,24 @@ window.Quarto = {
     display: none;
 }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Find the element containing the categories
+    var categoryContent = document.querySelector("#quarto-margin-sidebar");
+    
+    // Find the sidebar where we want to move the categories
+    var sidebar = document.querySelector("#quarto-sidebar");
+
+    // Move the content to the sidebar without changing any positioning
+    if (categoryContent && sidebar) {
+        sidebar.appendChild(categoryContent);
+        
+        // Ensure no additional styles are applied that affect the layout
+        categoryContent.style.position = "static"; // Keep it in normal flow
+        categoryContent.style.transition = "none"; // Disable any transitions
+    }
+});
+</script>
 <p><span class="animate__animated animate__zoomIn" style="display: inline-block;animation-duration:2s">A dedicated space for me to rant!</span></p>
 <div id="listing-main-listing" class="quarto-listing quarto-listing-container-grid">
 <div class="listing-actions-group">
@@ -259,7 +280,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="software,phone" data-listing-date-sort="1724569200000" data-listing-file-modified-sort="1724728953663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1623">
+<div class="g-col-1" data-index="0" data-categories="software,phone" data-listing-date-sort="1724569200000" data-listing-file-modified-sort="1724774613315" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1623">
 <a href="./posts/minimal.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -284,7 +305,7 @@ Aug 25, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="webdev,quarto" data-listing-date-sort="1723705200000" data-listing-file-modified-sort="1724733083454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1626">
+<div class="g-col-1" data-index="1" data-categories="webdev,quarto" data-listing-date-sort="1723705200000" data-listing-file-modified-sort="1724774596628" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1626">
 <a href="./posts/login.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -309,7 +330,7 @@ Aug 15, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="software,habits" data-listing-date-sort="1723446000000" data-listing-file-modified-sort="1724617560791" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1325">
+<div class="g-col-1" data-index="2" data-categories="software,habits" data-listing-date-sort="1723446000000" data-listing-file-modified-sort="1724774565128" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1325">
 <a href="./posts/habit.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -334,7 +355,7 @@ Aug 12, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="software,search engines" data-listing-date-sort="1723273200000" data-listing-file-modified-sort="1724618009239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2800">
+<div class="g-col-1" data-index="3" data-categories="software,search engines" data-listing-date-sort="1723273200000" data-listing-file-modified-sort="1724774656239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2800">
 <a href="./posts/search.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -359,7 +380,7 @@ Aug 10, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="software,rss" data-listing-date-sort="1722927600000" data-listing-file-modified-sort="1723859512202" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="759">
+<div class="g-col-1" data-index="4" data-categories="software,rss" data-listing-date-sort="1722927600000" data-listing-file-modified-sort="1724774649715" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="759">
 <a href="./posts/rss.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -384,7 +405,7 @@ Aug 6, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="software,vivaldi" data-listing-date-sort="1722582000000" data-listing-file-modified-sort="1724628203245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1299">
+<div class="g-col-1" data-index="5" data-categories="software,vivaldi" data-listing-date-sort="1722582000000" data-listing-file-modified-sort="1724774664979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1299">
 <a href="./posts/vivaldi1.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -409,7 +430,7 @@ Aug 2, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="webdev,quarto" data-listing-date-sort="1722150000000" data-listing-file-modified-sort="1724617796719" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2692">
+<div class="g-col-1" data-index="6" data-categories="webdev,quarto" data-listing-date-sort="1722150000000" data-listing-file-modified-sort="1724774642263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2692">
 <a href="./posts/quarto.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -434,7 +455,7 @@ Jul 28, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="webdev" data-listing-date-sort="1721545200000" data-listing-file-modified-sort="1724617627179" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1014">
+<div class="g-col-1" data-index="7" data-categories="webdev" data-listing-date-sort="1721545200000" data-listing-file-modified-sort="1724774623411" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1014">
 <a href="./posts/post1.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">

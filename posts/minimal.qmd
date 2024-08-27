@@ -12,7 +12,9 @@ comments:
     repo: lukmayer/site_comments
     theme: github-dark
     issue-term: url
-format: html
+format:
+  html:
+    title-block-banner: "assets/blurry_waves1.gif"
 ---
 
 ## Say what?

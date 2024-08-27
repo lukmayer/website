@@ -13,6 +13,9 @@ listing:
   categories: true
   feed: true
   page-size: 4
+format: 
+  html:
+    toc: false
 ---
 
 <style>
@@ -21,6 +24,25 @@ listing:
 }
 </style>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Find the element containing the categories
+    var categoryContent = document.querySelector("#quarto-margin-sidebar");
+    
+    // Find the sidebar where we want to move the categories
+    var sidebar = document.querySelector("#quarto-sidebar");
+
+    // Move the content to the sidebar without changing any positioning
+    if (categoryContent && sidebar) {
+        sidebar.appendChild(categoryContent);
+        
+        // Ensure no additional styles are applied that affect the layout
+        categoryContent.style.position = "static"; // Keep it in normal flow
+        categoryContent.style.transition = "none"; // Disable any transitions
+    }
+});
+</script>
 
 
 {{< animate zoomIn "A dedicated space for me to rant!" duration=2s >}}

@@ -59,11 +59,12 @@ format:
     # link-external-icon: true
     link-external-filter: "https://www.lukmayer.github.io"
     canonical-url: true
-    toc-location: right
+    toc-location: left
+    toc-title: "Sections:"
     toc-depth: 4
     toc-expand: 2
-    title-block-banner: true
     title-block-style: default
+    title-block-banner: true
     title-block-categories: true
     code-fold: show
     code-copy: true

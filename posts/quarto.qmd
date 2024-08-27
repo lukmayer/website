@@ -18,6 +18,7 @@ format:
       - text: Website Source Code
         icon: file-code
         href: https://github.com/lukmayer/website
+    title-block-banner: "assets/blurry_waves1.gif"
 ---
 
 

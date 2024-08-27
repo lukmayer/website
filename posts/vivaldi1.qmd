@@ -12,6 +12,9 @@ comments:
       repo: lukmayer/site_comments
       theme: github-dark
       issue-term: url
+format:
+  html:
+    title-block-banner: "assets/blurry_waves1.gif"
 ---
 
 I've noticed that with software there sometimes exists a bit of an ironic relationship where the product with the most features somehow is also able to be the most minimal. Emacs is one such example, as it's a text editor that can be configured to perform tasks you'd never think a text editor would be able to - and it does this with almost no UI whatsoever. It's fair to say I'm a big fan of reducing visual clutter on my devices. For example, my laptop runs Linux with no Desktop environment, and my phone home screen is basically just a calendar widget. Neither device is minimal in the sense of having little functionality, but both are definitely minimal in the sense of keeping the interface to a minimum. 
