@@ -13,9 +13,9 @@ about:
    - icon: medium
      text: Medium
      href: https://medium.com/@willuk
-  - icon: rss
-    text: RSS
-    href: blog_index.xml
+   - icon: rss
+     text: RSS
+     href: blog_index.xml
 format: 
   html:
     toc: false

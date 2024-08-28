@@ -197,6 +197,10 @@ ul.task-list li input[type="checkbox"] {
 </main> 
   <hr class="about-sep">
    <div class="about-links">
+  <a href="mailto:willuk@vivaldi.net" class="about-link" rel="" target="">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text">Email</span>
+  </a>
   <a href="https://github.com/lukmayer" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
@@ -205,9 +209,9 @@ ul.task-list li input[type="checkbox"] {
     <i class="bi bi-medium"></i>
      <span class="about-link-text">Medium</span>
   </a>
-  <a href="mailto:willuk@vivaldi.net" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
+  <a href="/blog_index.xml" class="about-link" rel="" target="">
+    <i class="bi bi-rss"></i>
+     <span class="about-link-text">RSS</span>
   </a>
 </div>
 </div>
@@ -651,7 +655,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
