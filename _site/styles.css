@@ -157,9 +157,9 @@ ol > li::marker {
     padding: 40px; /* Optional: Adjust the padding */
     border-radius: 20px;
     margin-top: 0px; /* Adjust the top margin */
-    margin-right: 300px; /* Right margin */
+    margin-right: 20px; /* Right margin */
     margin-bottom: 0px; /* Bottom margin */
-    margin-left: 300px; /* Left margin */
+    margin-left: 20px; /* Left margin */
 }
 
 #quarto-header {
