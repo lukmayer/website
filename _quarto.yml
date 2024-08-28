@@ -1,19 +1,19 @@
 project:
   type: website
   output-dir: _site
-  # render:
-  #   - "*.qmd"
+  render:
+    - "*.qmd"
   #   - "!about.qmd"
   #   - "!index.qmd"
   #   - "!cv.qmd"
-  #   - "!posts/post1.qmd"
-  #   - "!posts/vivaldi1.qmd"
-  #   - "!posts/search.qmd"
-  #   - "!posts/quarto.qmd"
-  #   - "!posts/rss.qmd"
-  #   - "!posts/login.qmd"
-  #   - "!posts/liveserver.qmd"
-  #   - "!posts/habit.qmd"
+    - "!posts/post1.qmd"
+    - "!posts/vivaldi1.qmd"
+    - "!posts/search.qmd"
+    - "!posts/quarto.qmd"
+    - "!posts/rss.qmd"
+    - "!posts/login.qmd"
+    - "!posts/liveserver.qmd"
+    - "!posts/habit.qmd"
 
 website:
   back-to-top-navigation: true

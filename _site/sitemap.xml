@@ -1,56 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lukmayer.github.io/cv.html</loc>
-    <lastmod>2024-08-28T05:43:40.200Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmayer.github.io/posts/rss.html</loc>
-    <lastmod>2024-08-28T03:59:33.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmayer.github.io/posts/quarto.html</loc>
-    <lastmod>2024-08-28T03:59:24.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmayer.github.io/posts/login.html</loc>
-    <lastmod>2024-08-28T03:58:48.954Z</lastmod>
+    <loc>https://lukmayer.github.io/research.html</loc>
+    <lastmod>2024-08-17T01:50:50.098Z</lastmod>
   </url>
   <url>
     <loc>https://lukmayer.github.io/blog_index.html</loc>
     <lastmod>2024-08-28T05:05:21.668Z</lastmod>
   </url>
   <url>
-    <loc>https://lukmayer.github.io/about.html</loc>
-    <lastmod>2024-08-17T01:50:03.150Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmayer.github.io/research.html</loc>
-    <lastmod>2024-08-17T01:50:50.098Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmayer.github.io/index.html</loc>
-    <lastmod>2024-08-28T15:45:01.755Z</lastmod>
-  </url>
-  <url>
     <loc>https://lukmayer.github.io/cv_lwm.html</loc>
     <lastmod>2024-08-26T21:01:56.601Z</lastmod>
   </url>
   <url>
-    <loc>https://lukmayer.github.io/posts/habit.html</loc>
-    <lastmod>2024-08-28T03:58:17.267Z</lastmod>
+    <loc>https://lukmayer.github.io/about.html</loc>
+    <lastmod>2024-08-17T01:50:03.150Z</lastmod>
   </url>
   <url>
-    <loc>https://lukmayer.github.io/posts/post1.html</loc>
-    <lastmod>2024-08-28T03:59:07.597Z</lastmod>
+    <loc>https://lukmayer.github.io/cv.html</loc>
+    <lastmod>2024-08-28T05:43:40.200Z</lastmod>
   </url>
   <url>
-    <loc>https://lukmayer.github.io/posts/search.html</loc>
-    <lastmod>2024-08-28T03:59:39.549Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmayer.github.io/posts/vivaldi1.html</loc>
-    <lastmod>2024-08-28T03:59:45.789Z</lastmod>
+    <loc>https://lukmayer.github.io/index.html</loc>
+    <lastmod>2024-08-28T15:45:01.755Z</lastmod>
   </url>
   <url>
     <loc>https://lukmayer.github.io/posts/minimal.html</loc>
