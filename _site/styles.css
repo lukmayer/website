@@ -154,7 +154,7 @@ ol > li::marker {
     background-color: #2f2f2f; /* White background with transparency */
     backdrop-filter: blur(10px); /* Apply blur effect */
     -webkit-backdrop-filter: blur(10px); /* Support for Safari */
-    padding: 40px; /* Optional: Adjust the padding */
+    padding: 20px; /* Optional: Adjust the padding */
     border-radius: 20px;
     margin-top: 0px; /* Adjust the top margin */
     margin-right: 20px; /* Right margin */
