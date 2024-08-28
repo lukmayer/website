@@ -4,15 +4,18 @@ description: "Lukas Mayer's personal website - research in Cognitive Science, AI
 about:
  template: jolla
  links:
+   - icon: envelope
+     text: Email
+     href: mailto:willuk@vivaldi.net
    - icon: github
      text: Github
      href: https://github.com/lukmayer
    - icon: medium
      text: Medium
      href: https://medium.com/@willuk
-   - icon: envelope
-     text: Email
-     href: mailto:willuk@vivaldi.net
+  - icon: rss
+    text: RSS
+    href: blog_index.xml
 format: 
   html:
     toc: false
