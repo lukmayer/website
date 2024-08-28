@@ -134,13 +134,29 @@ ol > li::marker {
 .pagination a {
   color: black !important; /* Set the text color to black */
   font-weight: normal; /* Default font weight */
+  background-color: #00bf63; /* Set the background color to #00bf63 */
+  padding: 10px 15px; /* Add padding for better button appearance */
+  border-radius: 5px; /* Add border-radius to make them rounded */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease; /* Add a transition for smooth hover effect */
 }
 
-/* Change the font weight to bold on hover and for active pagination */
-.pagination a:hover, 
-.pagination .active a {
+/* Change the font weight to bold on hover */
+.pagination a:hover {
   color: black !important; /* Ensure the text remains black */
   font-weight: bold; /* Make the text bold */
+  background-color: #00a653; /* Slightly darken the background on hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+/* Style the active pagination link */
+.pagination .active a {
+  color: white !important; /* Set the text color to white */
+  font-weight: bold; /* Make the text bold */
+  background-color: #007b3a; /* Darken the background color for active link */
+  border: 2px solid black; /* Add a border to make the active link stand out */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
+  transform: scale(1.1); /* Slightly enlarge the active link */
 }
 
 #quarto-sidebar {
@@ -160,6 +176,7 @@ ol > li::marker {
     margin-right: 20px; /* Right margin */
     margin-bottom: 0px; /* Bottom margin */
     margin-left: 20px; /* Left margin */
+    border: 1px solid black; /* Add a thin black border */
 }
 
 #quarto-header {
@@ -173,6 +190,7 @@ ol > li::marker {
 
 .navbar.navbar-expand-lg {
     background-color: #2f2f2f; /* Semi-transparent background */
+    border: 1px solid black; /* Add a thin black border */
 }
 
 
@@ -229,6 +247,7 @@ ol > li::marker {
 .card {
     border-radius: 15px; /* Adjust the value for desired roundness */
     overflow: hidden; /* Ensures the content stays within the rounded corners */
+    border: 1px solid black; /* Add a thin black border */
 }
 
 .card-img {
