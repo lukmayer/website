@@ -16,6 +16,7 @@ about:
 format: 
   html:
     toc: false
+back-to-top-navigation: false
 ---
 
 <style>

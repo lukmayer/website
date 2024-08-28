@@ -87,6 +87,7 @@ h6 {
 
 .navbar {
     font-size: 1.1em; /* Navbar links */
+    border-radius: 20px; /* Adjust the value to change the roundness */
 }
 
 .navbar-logo {
@@ -132,16 +133,116 @@ ol > li::marker {
 /* Target the pagination links */
 .pagination a {
   color: black !important; /* Set the text color to black */
+  font-weight: normal; /* Default font weight */
 }
 
-/* Optionally, change the color for active and hover states */
+/* Change the font weight to bold on hover and for active pagination */
 .pagination a:hover, 
 .pagination .active a {
-  color: black !important;
+  color: black !important; /* Ensure the text remains black */
+  font-weight: bold; /* Make the text bold */
 }
 
 #quarto-sidebar {
     background-color: transparent !important; /* Make the sidebar background transparent */
     box-shadow: none !important; /* Remove any shadows if present */
     border: none !important; /* Remove any borders if present */
+}
+
+
+.quarto-title-banner {
+    background-color: #2f2f2f; /* White background with transparency */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+    padding: 40px; /* Optional: Adjust the padding */
+    border-radius: 20px;
+    margin-top: 0px; /* Adjust the top margin */
+    margin-right: 300px; /* Right margin */
+    margin-bottom: 0px; /* Bottom margin */
+    margin-left: 300px; /* Left margin */
+}
+
+#quarto-header {
+    background-color: rgba(255, 255, 255, 0); /* White background with transparency */
+    /*backdrop-filter: blur(10px); /* Apply blur effect */
+    /*-webkit-backdrop-filter: blur(10px); /* Support for Safari */
+    padding: 20px; /* Optional: Adjust the padding */
+}
+
+
+
+.navbar.navbar-expand-lg {
+    background-color: #2f2f2f; /* Semi-transparent background */
+}
+
+
+#quarto-back-to-top {
+    position: fixed; /* Keep the button fixed in place */
+    bottom: 100px; /* Position it 100px from the bottom */
+    display: flex; /* Align the content inside the button properly */
+    align-items: center; /* Center align any icons or text vertically */
+    justify-content: center; /* Center align horizontally */
+    z-index: 1000; /* Ensure it stays above other elements */
+    background-color: #00bf63; /* Background color */
+    border-radius: 40px; /* Round the corners */
+    color: black; /* Set text color to black */
+}
+
+
+.footer {
+    overflow: hidden; /* Ensures that the content stays within the rounded corners */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.nav-footer {
+  background-color: #2f2f2f;
+  display: flex;
+  justify-content: space-between; /* Distribute the items evenly with space between them */
+  align-items: center; /* Vertically center the child elements */
+  padding: 10px; /* Optional: Adjust padding if needed */
+}
+
+.nav-footer-left,
+.nav-footer-center,
+.nav-footer-right {
+    align-items: center; /* Vertically center content within each section */
+}
+
+/* Set the color of the links inside .nav-footer to #00bf63 */
+.nav-footer a {
+    color: #00bf63;
+    text-decoration: none; /* Optional: remove underline from links */
+}
+
+/* Apply the initial white color to the RSS button icon */
+.nav-footer .bi-rss {
+    color: white;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Change the RSS button icon color on hover */
+.nav-footer .bi-rss:hover {
+    color: #00bf63;
+}
+
+.card {
+    border-radius: 15px; /* Adjust the value for desired roundness */
+    overflow: hidden; /* Ensures the content stays within the rounded corners */
+}
+
+.card-img {
+    border-radius: 15px 15px 0 0; /* Apply rounding only to the top corners of the image */
+}
+
+.tab-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack the content vertically */
+    text-align: center; /* Center text content */
+}
+
+.tab-pane {
+    width: 100%; /* Ensure the tab-pane takes full width of the container */
 }

@@ -2,6 +2,7 @@ project:
   type: website
   output-dir: _site
   # render:
+  #   - "*.qmd"
   #   - "!about.qmd"
   #   - "!index.qmd"
   #   - "!cv.qmd"
@@ -15,6 +16,7 @@ project:
   #   - "!posts/habit.qmd"
 
 website:
+  back-to-top-navigation: true
   favicon: "assets/favicons/favicon.ico" 
   page-footer:
     center: |
@@ -65,6 +67,7 @@ format:
     toc-expand: 2
     title-block-style: manuscript
     title-block-banner: true
+    title-block-banner-color: "#00bf63"
     title-block-categories: true
     code-fold: show
     code-copy: true

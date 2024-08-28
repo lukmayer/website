@@ -12,9 +12,6 @@ comments:
       repo: lukmayer/site_comments
       theme: github-dark
       issue-term: url
-format:
-  html:
-    title-block-banner: "assets/blurry_waves1.gif"
 ---
 
 Hello and welcome to yet another technology-fuelled rant from yours truly!

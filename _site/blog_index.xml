@@ -30,7 +30,7 @@
 </p>
 </section>
 <section id="just-say-no" class="level2">
-<h2 class="anchored" data-anchor-id="just-say-no">Just say no</h2>
+<h2 class="anchored" data-anchor-id="just-say-no">“Just say no”</h2>
 <p>Notifications are a feature that many of us don’t think very hard about, while others intentionally use it as a tool, like an inbox for unprocessed messages, say. Notifications have a very behaviorist flavor to them, not completely unlike the bell to Pavlov’s dog. Because the pairing of sound/vibration is so attention-grabbing, we really ought to reserve the privilege of definite distraction to important events. That is why I would recommend turning off notifications for everything besides the calendar and to do list. These apps in particular serve the important purpose of reminding you what you should be doing or where you’re expected to be. Everything else, including e-mails, messages, and other forms of regular communication that rarely are critically important should not have notifications with sound/vibration enabled.</p>
 <p>There are two reasons why removing notifications for seemingly important things like e-mail is not nearly as radical or life changing as one might think. Firstly, as you learn that your e-mail will not make a sound on your phone, you learn to regularly check the app yourself. Secondly, most people who sent a time critical message will also call you if you did not respond immediately. It’s important to realize that turning notifications off does not magically remove the information from your phone, but it allows you to exercise intentionality when engaging with it. In other words, it’s not the buzzing phone that is making me disengage from my work, but my volitional decision to check it - I am now in control of my distraction. If you want to go even further with reducing distractions, you could turn off your phone while working, and/or put it out of sight/reach. Of course, these methods will stop critical messages from reaching you, so beware.</p>
 <p><br>
@@ -64,8 +64,8 @@
 <p><br>
 </p>
 </section>
-<section id="keeping-tabs-on-things-including-yourself" class="level2">
-<h2 class="anchored" data-anchor-id="keeping-tabs-on-things-including-yourself">Keeping tabs on things, including yourself</h2>
+<section id="keeping-tabs-on-yourself" class="level2">
+<h2 class="anchored" data-anchor-id="keeping-tabs-on-yourself">Keeping tabs on yourself</h2>
 <p>This tip is something I have never seen anyone else talk about, even though it is so simple. All those services that want you to use their dedicated apps? About 90% of them also have a web-site with the same functionality. After all, most apps are really just front-ends for websites, with design tailored for hand-held devices… Therefore, why not just set a bookmark on your browser and get rid of the app? This is great for anything that you “need” to be able to access but use very infrequently. If you make wide-spread use of this, a nice side effect is that you have a lot fewer apps that need to be updated!</p>
 <p>This last idea is by far the most radical to people who have never tried it - ask yourself do you really, really <strong>need</strong> [X], specifically on your <strong>phone</strong>? Do you strictly need social media on your phone? Messaging apps? E-mail? Music/Audio players? I’m not suggesting you should abstain from music or social connection. However, most of us have more than one device, like a laptop, therefore raising the question whether we really need anything that can be done on a laptop replicated on our phone. If reducing phone use is the goal, then migrating as many services as possible to a laptop can be a good idea.</p>
 <p>Personally, I still have messaging and email on my phone, as every now and then situations do come up where you need to access that one email attachment or something else when the laptop is out of reach. What’s more, on a laptop you have much more control, especially if you replaced apps with websites. You can use browser extensions to modify website behavior, easily block ads, and much more. Phone apps, by design, take this control away from you, which maybe we should question a bit more. Phones are pretty restrictive, whereas PCs give you quite a bit of freedom.</p>
@@ -80,7 +80,7 @@
 
 </section>
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>software</category>
   <category>phone</category>
   <guid>https://lukmayer.github.io/posts/minimal.html</guid>
@@ -1152,7 +1152,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 </section>
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>webdev</category>
   <category>quarto</category>
   <guid>https://lukmayer.github.io/posts/login.html</guid>
@@ -1223,7 +1223,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 </section>
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>software</category>
   <category>habits</category>
   <guid>https://lukmayer.github.io/posts/habit.html</guid>
@@ -1313,7 +1313,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 </section>
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>software</category>
   <category>search engines</category>
   <guid>https://lukmayer.github.io/posts/search.html</guid>
@@ -1345,7 +1345,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>software</category>
   <category>rss</category>
   <guid>https://lukmayer.github.io/posts/rss.html</guid>
@@ -1407,7 +1407,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 
 
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>software</category>
   <category>vivaldi</category>
   <guid>https://lukmayer.github.io/posts/vivaldi1.html</guid>
@@ -1924,7 +1924,7 @@ font-style: inherit;">/</span>.git</span></code></pre></div>
 
 </section>
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>webdev</category>
   <category>quarto</category>
   <guid>https://lukmayer.github.io/posts/quarto.html</guid>
@@ -1954,7 +1954,7 @@ font-style: inherit;">/</span>.git</span></code></pre></div>
 
 
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>webdev</category>
   <guid>https://lukmayer.github.io/posts/post1.html</guid>
   <pubDate>Sun, 21 Jul 2024 07:00:00 GMT</pubDate>
