@@ -3,17 +3,6 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
-  #   - "!about.qmd"
-  #   - "!index.qmd"
-  #   - "!cv.qmd"
-    # - "!posts/post1.qmd"
-    # - "!posts/vivaldi1.qmd"
-    # - "!posts/search.qmd"
-    # - "!posts/quarto.qmd"
-    # - "!posts/rss.qmd"
-    # - "!posts/login.qmd"
-    # - "!posts/liveserver.qmd"
-    # - "!posts/habit.qmd"
 
 website:
   back-to-top-navigation: true
@@ -42,9 +31,9 @@ website:
       - href: about.qmd
         text: "About"
     right:
-      - text: "[Login]"
+      - text: "Login"
         href: https://lukmayer.github.io/login_portal/
-  
+
 blog:
   title: "Luke's Blog"
 
@@ -58,7 +47,6 @@ format:
     footnotes-hover: true
     reference-location: margin
     link-external-newwindow: true
-    # link-external-icon: true
     link-external-filter: "https://www.lukmayer.github.io"
     canonical-url: true
     toc-location: left
@@ -78,12 +66,9 @@ format:
     fig-responsive: true
     lightbox: true
     
-    
-
 execute:
   cache: true
   freeze: auto
-
 
 extensions:
   - animate
