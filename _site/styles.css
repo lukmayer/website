@@ -328,9 +328,25 @@ ol > li::marker {
 }
 
 
-
 .tab-content {
     background-color: #2f2f2f;
 }
 
+
+/* Start with the paginated content invisible */
+body.preload #listing-main-listing {
+    opacity: 0;
+}
+
+/* When the fadein class is added, paginated content fades in */
+body.fadein #listing-main-listing {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+/* Paginated content fades out when navigating away */
+body.fadeout #listing-main-listing {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 

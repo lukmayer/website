@@ -35,7 +35,7 @@ format:
 
 <!-- CONTACT INFO -->
 \begin{center}
-\href{mailto:willuk@vivaldi.net}{willuk@vivaldi.net} ∙ \href{https://steyvers.socsci.uci.edu/madlab/}{Lab} ∙ \href{https://github.com/lukmayer}{Github} ∙ \href{https://lukmayer.github.io}{Website}
+\href{mailto:willuk@vivaldi.net}{Willuk@vivaldi.net} ∙ \href{https://steyvers.socsci.uci.edu/madlab/}{Lab} ∙ \href{https://github.com/lukmayer}{Github} ∙ \href{https://lukmayer.github.io}{Website}
 \end{center}
 
 
