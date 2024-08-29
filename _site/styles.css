@@ -214,7 +214,7 @@ ol > li::marker {
 
 
 .quarto-title-banner {
-    background-color: #2f2f2f; /* White background with transparency */
+    background-color: rgba(47, 47, 47, 0.5); /* White background with transparency */
     backdrop-filter: blur(10px); /* Apply blur effect */
     -webkit-backdrop-filter: blur(10px); /* Support for Safari */
     padding: 20px; /* Optional: Adjust the padding */
@@ -223,7 +223,6 @@ ol > li::marker {
     margin-right: 20px; /* Right margin */
     margin-bottom: 0px; /* Bottom margin */
     margin-left: 20px; /* Left margin */
-    border: 1px solid black; /* Add a thin black border */
 }
 
 #quarto-header {
