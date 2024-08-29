@@ -5,6 +5,8 @@ project:
     - "*.qmd"
 
 website:
+  twitter-card: true
+  search: false
   back-to-top-navigation: true
   favicon: "assets/favicons/favicon.ico" 
   page-footer:

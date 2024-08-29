@@ -123,11 +123,27 @@ ol > li::marker {
   padding: 2px;
 }
 
-/* Style the active tab */
-.nav.nav-tabs .nav-item .nav-link.active {
-  background-color: #4f4f4f; /* Slightly lighter than the page background */
-  border-color: #d0d0d0;     /* Adjust border color as needed */
+
+
+/* Inactive tabs styling */
+.nav-tabs .nav-link {
+    background-color: #1f1f1f; /* Black background for inactive tabs */
+    border: 1px solid #2f2f2f; /* Dark grey border for inactive tabs */
+    color: white; /* Text color for inactive tabs */
 }
+
+/* Active tab styling (optional) */
+.nav-tabs .nav-link.active {
+    background-color: #2f2f2f; /* Dark grey background for active tab */
+    border: 1px solid #white; /* Dark grey border for active tab */
+    color: white; /* Text color for active tab */
+}
+
+/* Inactive tabs hover effect */
+.nav-tabs .nav-link:hover {
+    border-color: white; /* White border on hover */
+}
+
 
 
 /* Target the pagination links */
@@ -135,6 +151,7 @@ ol > li::marker {
   color: black !important; /* Set the text color to black */
   font-weight: normal; /* Default font weight */
   background-color: #00bf63; /* Set the background color to #00bf63 */
+  border: 4px solid #00a653; 
   padding: 10px 15px; /* Add padding for better button appearance */
   border-radius: 5px; /* Add border-radius to make them rounded */
   text-decoration: none; /* Remove underline */
@@ -146,6 +163,7 @@ ol > li::marker {
   color: black !important; /* Ensure the text remains black */
   font-weight: bold; /* Make the text bold */
   background-color: #00a653; /* Slightly darken the background on hover */
+  border: 4px solid #00a653; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
 }
 
@@ -154,9 +172,9 @@ ol > li::marker {
   color: white !important; /* Set the text color to white */
   font-weight: bold; /* Make the text bold */
   background-color: #007b3a; /* Darken the background color for active link */
-  border: 2px solid black; /* Add a border to make the active link stand out */
+  border: 4px solid #005b2a; /* Add a border to make the active link stand out */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
-  transform: scale(1.1); /* Slightly enlarge the active link */
+  transform: scale(1.0); /* Slightly enlarge the active link */
 }
 
 #quarto-sidebar {
@@ -265,3 +283,17 @@ ol > li::marker {
 .tab-pane {
     width: 100%; /* Ensure the tab-pane takes full width of the container */
 }
+
+
+/* Darken the overlay */
+.aa-DetachedOverlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker transparent background */
+}
+
+
+
+.tab-content {
+    background-color: #2f2f2f;
+}
+
+
