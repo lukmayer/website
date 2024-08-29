@@ -162,7 +162,7 @@ ol > li::marker {
 /* Active tab styling (optional) */
 .nav-tabs .nav-link.active {
     background-color: #2f2f2f; /* Dark grey background for active tab */
-    border: 1px solid white; /* Dark grey border for active tab */
+    border: 1px solid #2f2f2f; /* Dark grey border for active tab */
     color: white; /* Text color for active tab */
 }
 
