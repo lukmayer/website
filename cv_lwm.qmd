@@ -6,13 +6,14 @@ format:
     theme: [darkly, theme-dark.scss]
   pdf: 
     documentclass: article
+    self-contained: false
     geometry:
       - top=10mm
       - left=15mm
       - right=15mm
       - bottom=5mm
       - heightrounded
-    fontfamily: libertine
+    fontfamily: helvetica
     colorlinks: true
     fontsize: '16'
     include-in-header: 

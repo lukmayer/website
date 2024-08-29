@@ -213,6 +213,10 @@ ol > li::marker {
 
 
 #quarto-back-to-top {
+    box-shadow: none; /* Remove any box shadow */
+    text-shadow: none; /* Remove any text shadow */
+    background: none; /* Remove any background styling that might cause shading */
+    border: none; /* Remove any border that might be causing a shadow effect */
     position: fixed; /* Keep the button fixed in place */
     bottom: 100px; /* Position it 100px from the bottom */
     display: flex; /* Align the content inside the button properly */
