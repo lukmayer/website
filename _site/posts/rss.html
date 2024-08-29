@@ -211,30 +211,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Add the fade-in class before the page is fully loaded
-  document.body.classList.add('preload');
-
-  // Remove the preload class after the page is fully loaded
-  setTimeout(function() {
-    document.body.classList.remove('preload');
-  }, 50); // Small delay to ensure the class is removed after the page starts loading
-
-  // Add event listeners to all internal links
-  document.querySelectorAll('a[href]').forEach(function(link) {
-    if (link.href.includes(window.location.origin)) {
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
-        document.body.classList.add('fade-out');
-        setTimeout(function() {
-          window.location.href = link.href;
-        }, 500); // Match the CSS transition duration
-      });
-    }
-  });
-});
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
