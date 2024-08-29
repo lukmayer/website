@@ -67,6 +67,8 @@ format:
     highlight-style: atom-one
     fig-responsive: true
     lightbox: true
+    include-after-body: page-transitions.html
+
     
 execute:
   cache: true

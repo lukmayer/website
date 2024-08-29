@@ -35,6 +35,31 @@ body {
     min-height: 100vh;
 }
 
+.content.quarto-banner-title-block,
+.quarto-title-banner.page-columns.page-full,
+#quarto-sidebar {
+    opacity: 1;
+    transition: opacity 0.5s ease; /* This handles both fade-in and fade-out */
+}
+
+/* Initial state for the fade-in effect */
+body.preload .content.quarto-banner-title-block,
+body.preload .quarto-title-banner.page-columns.page-full,
+body.preload #quarto-sidebar {
+    opacity: 0;
+}
+
+/* Fade out for old content */
+body.fade-out .content.quarto-banner-title-block,
+body.fade-out .quarto-title-banner.page-columns.page-full,
+body.fade-out #quarto-sidebar {
+    opacity: 0;
+}
+
+
+
+
+/* Background image styling */
 body::before {
     content: "";
     position: fixed;
@@ -48,8 +73,10 @@ body::before {
     background-attachment: fixed; /* Make the background fixed on scroll */
     background-position: center; /* Center the background image */
     filter: blur(5px); /* Adjust the blur value to achieve the desired effect */
-    z-index: -1;
+    z-index: -1; /* Place it behind the content */
 }
+
+
 
 p {
     font-size: 20px; /* Paragraphs */
@@ -135,7 +162,7 @@ ol > li::marker {
 /* Active tab styling (optional) */
 .nav-tabs .nav-link.active {
     background-color: #2f2f2f; /* Dark grey background for active tab */
-    border: 1px solid #white; /* Dark grey border for active tab */
+    border: 1px solid white; /* Dark grey border for active tab */
     color: white; /* Text color for active tab */
 }
 
