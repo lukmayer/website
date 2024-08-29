@@ -35,27 +35,29 @@ body {
     min-height: 100vh;
 }
 
-.content.quarto-banner-title-block,
-.quarto-title-banner.page-columns.page-full,
-#quarto-sidebar {
-    opacity: 1;
-    transition: opacity 0.5s ease; /* This handles both fade-in and fade-out */
-}
 
-/* Initial state for the fade-in effect */
+/* Start with the content invisible */
 body.preload .content.quarto-banner-title-block,
 body.preload .quarto-title-banner.page-columns.page-full,
-body.preload #quarto-sidebar {
+body.preload #quarto-content {
     opacity: 0;
 }
 
-/* Fade out for old content */
-body.fade-out .content.quarto-banner-title-block,
-body.fade-out .quarto-title-banner.page-columns.page-full,
-body.fade-out #quarto-sidebar {
-    opacity: 0;
+/* When the fadein class is added, content fades in */
+body.fadein .content.quarto-banner-title-block,
+body.fadein .quarto-title-banner.page-columns.page-full,
+body.fadein #quarto-content {
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
+/* Content fades out when navigating away */
+body.fadeout .content.quarto-banner-title-block,
+body.fadeout .quarto-title-banner.page-columns.page-full,
+body.fadeout #quarto-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 
 
 

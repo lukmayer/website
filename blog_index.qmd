@@ -29,19 +29,47 @@ format:
 document.addEventListener("DOMContentLoaded", function() {
     // Find the element containing the categories
     var categoryContent = document.querySelector("#quarto-margin-sidebar");
-    
+
     // Find the sidebar where we want to move the categories
     var sidebar = document.querySelector("#quarto-sidebar");
 
     // Move the content to the sidebar without changing any positioning
     if (categoryContent && sidebar) {
         sidebar.appendChild(categoryContent);
-        
+
         // Ensure no additional styles are applied that affect the layout
         categoryContent.style.position = "static"; // Keep it in normal flow
         categoryContent.style.transition = "none"; // Disable any transitions
     }
+
+    // Pagination handling
+    const paginationNav = document.querySelector('#main-listing-pagination');
+
+    if (paginationNav) {
+        paginationNav.querySelectorAll('a.page-link').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Fade out the pagination before loading new content
+                paginationNav.style.transition = 'opacity 0.5s ease';
+                paginationNav.style.opacity = '0';
+
+                // Simulate content loading and then fade in the pagination
+                setTimeout(function() {
+                    // Here, you would load your content. Simulating with a delay.
+                    // For example, you might use fetch to load new content.
+
+                    // Ensure the pagination is fully faded out before fading in
+                    setTimeout(function() {
+                        paginationNav.style.opacity = '1';
+                    }, 50); // Slight delay to ensure the fade-out completes
+                }, 500); // Adjust the timing if necessary to match content load time
+            });
+        });
+    }
 });
+
+
 </script>
 
 
