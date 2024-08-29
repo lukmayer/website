@@ -282,6 +282,11 @@ ol > li::marker {
     align-items: center; /* Center vertically */
     flex-direction: column; /* Stack the content vertically */
     text-align: center; /* Center text content */
+    border-radius: 0 15px 15px 15px; /* Only apply border-radius to the bottom corners */
+}
+
+.nav-tabs {
+    border-bottom: none; /* Removes the bottom border */
 }
 
 .tab-pane {

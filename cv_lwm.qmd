@@ -13,7 +13,7 @@ format:
       - right=15mm
       - bottom=5mm
       - heightrounded
-    fontfamily: helvetica
+    fontfamily: libertine
     colorlinks: true
     fontsize: '16'
     include-in-header: 

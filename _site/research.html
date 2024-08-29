@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Lukas Mayer’s mini biography, and his hobbies and interests - exercise, technology, languages, and gaming.">
+<meta name="description" content="Lukas Mayer’s research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development">
 
-<title>About – Lukas W. Mayer</title>
+<title>Research – Lukas W. Mayer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,9 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -72,16 +70,20 @@ ul.task-list li input[type="checkbox"] {
         color: #00bf63;
       }
 </style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="About – Lukas W. Mayer">
-<meta property="og:description" content="Lukas Mayer’s mini biography, and his hobbies and interests - exercise, technology, languages, and gaming.">
+<meta property="og:title" content="Research – Lukas W. Mayer">
+<meta property="og:description" content="Lukas Mayer’s research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development">
 <meta property="og:site_name" content="Lukas W. Mayer">
-<meta name="twitter:title" content="About – Lukas W. Mayer">
-<meta name="twitter:description" content="Lukas Mayer’s mini biography, and his hobbies and interests - exercise, technology, languages, and gaming.">
+<meta name="twitter:title" content="Research – Lukas W. Mayer">
+<meta name="twitter:description" content="Lukas Mayer’s research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development">
 <meta name="twitter:card" content="summary">
-<link rel="canonical" href="https://lukmayer.github.io/about.html">
+<link rel="canonical" href="https://lukmayer.github.io/research.html">
 </head>
 
 <body class="floating nav-fixed">
@@ -108,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link active" href="./research.html" aria-current="page"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
@@ -120,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -140,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">About</h1>
+      <h1 class="title">Research</h1>
           </div>
 
     
@@ -169,8 +171,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sections:</h2>
    
   <ul>
-  <li><a href="#short-biography" id="toc-short-biography" class="nav-link active" data-scroll-target="#short-biography">Short biography</a></li>
-  <li><a href="#hobbies-and-interests" id="toc-hobbies-and-interests" class="nav-link" data-scroll-target="#hobbies-and-interests">Hobbies and interests</a></li>
+  <li><a href="#research-interests" id="toc-research-interests" class="nav-link active" data-scroll-target="#research-interests">Research Interests</a>
+  <ul>
+  <li><a href="#computational-cognitive-science" id="toc-computational-cognitive-science" class="nav-link" data-scroll-target="#computational-cognitive-science">1) Computational Cognitive Science</a></li>
+  <li><a href="#inversion-problems-in-cognitive-science" id="toc-inversion-problems-in-cognitive-science" class="nav-link" data-scroll-target="#inversion-problems-in-cognitive-science">2) Inversion problems in Cognitive Science</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -191,80 +196,41 @@ ul.task-list li input[type="checkbox"] {
     display: none;
 }
 </style>
-<section id="short-biography" class="level2">
-<h2 class="anchored" data-anchor-id="short-biography">Short biography</h2>
-<p>Hi, I’m Luke, or more formally known as Lukas. I’m a German national with dual citizenship in the US. I was born in Wisconsin, USA but grew up in the greater Stuttgart area (Germany), which is known for its car industry and the Swabian dialect.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/reutlingen.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Reutlingen, Germany (my local town) - Credit"><img src="assets/reutlingen.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://www.nts.eu/en/nts-reutlingen/" alt="Lukas Mayer's hometown - Reutlingen, Germany"></a></p>
-<figcaption>Reutlingen, Germany (my local town) - <a href="https://www.nts.eu/en/nts-reutlingen/">Credit</a></figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/stuttgart.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Stuttgart, Germany - Credit"><img src="assets/stuttgart.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://www.tripadvisor.com/Tourism-g187291-Stuttgart_Baden_Wurttemberg-Vacations.html" alt="Lukas Mayer's local city - Stuttgart, Germany"></a></p>
-<figcaption>Stuttgart, Germany - <a href="https://www.tripadvisor.com/Tourism-g187291-Stuttgart_Baden_Wurttemberg-Vacations.html">Credit</a></figcaption>
-</figure>
-</div>
-<p>After a brief stint working in a closed psychiatric ward at my local university hospital in Tübingen, I decided to pursue undergraduate education at a <a href="https://www.stir.ac.uk">small university in beautiful Scotland</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/tuebingen.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Tübingen, Germany - Credit: Westend61/Getty Images"><img src="assets/tuebingen.jpg" class="img-fluid figure-img" data-fig-cap="Credit: Westend61/Getty Images" alt="Lukas Mayer's first job was in a closed psychiatric ward at the University Hospital in Tübingen, Germany"></a></p>
-<figcaption>Tübingen, Germany - Credit: Westend61/Getty Images</figcaption>
-</figure>
-</div>
-<p>Despite my initial ambitions to pursue a career in clinical psychology, I discovered my analytical side when I was introduced to computer programming by a PhD student in the lab I was helping out in. I got very lucky in this regard as just prior to graduating, I was offered a summer internship at a London-based Data-Science consultancy. I enjoyed the work as it offered diverse problems to solve from different clients, but ultimately I felt that I should also seek formal education in data analytics.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/stirling.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Stirling, Scotland - Credit"><img src="assets/stirling.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/" alt="Lukas Mayer's undergraduate university city - Stirling, Scotland"></a></p>
-<figcaption>Stirling, Scotland - <a href="https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/">Credit</a></figcaption>
-</figure>
-</div>
-<p>The Behavioural and Data Science MSc at the <a href="https://warwick.ac.uk">University of Warwick</a> was very much the perfect fit for me, as it combined my interest in behavioral research with my newfound passion for select topics in Computer Science. It was at Warwick were I first came to appreciate the application of computational modelling to describe cognitive processes. This was when things “clicked” in my head, and I knew that I wanted to pursue a PhD in this area.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/leamington.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Royal Leamington Spa, England (where I stayed during my MSc) - Credit"><img src="assets/leamington.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://royal-leamington-spa.co.uk/visit/" alt="Lukas Mayer studied at the University of Warwick, which is located near Royal Leamington Spa, England"></a></p>
-<figcaption>Royal Leamington Spa, England (where I stayed during my MSc) - <a href="https://royal-leamington-spa.co.uk/visit/">Credit</a></figcaption>
-</figure>
-</div>
-<p>I spent a very fun year working in the Applied Digital Behaviour Lab at the University of <a href="https://visitbath.co.uk">Bath</a> while preparing my PhD applications and was fortunate to be accepted into the Cognitive Science PhD program at the University of California, Irvine, where I am currently working in <a href="https://steyvers.socsci.uci.edu/madlab/">Mark Steyvers’ lab</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/bath.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Bath, England - Credit: Ian Woolcock/Shutterstock"><img src="assets/bath.jpg" class="img-fluid figure-img" data-fig-cap="Credit: Ian Woolcock — Shutterstock" alt="Lukas Mayer worked at the business school/management school of the University of Bath - Bath, England"></a></p>
-<figcaption>Bath, England - Credit: Ian Woolcock/Shutterstock</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/sbsg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="The building that houses the Cognitive Science department at the University of California, Irvine, USA - Credit"><img src="assets/sbsg.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php)](assets/sbsg.jpg" alt="Lukas Mayer is currently a PhD student in Cognitive Science at the University of California, Irvine, USA"></a></p>
-<figcaption>The building that houses the Cognitive Science department at the University of California, Irvine, USA - <a href="https://www.undergrad.socsci.uci.edu/ssusa/policies.php">Credit</a></figcaption>
-</figure>
-</div>
+<p><br>
+</p>
+<section id="research-interests" class="level2">
+<h2 class="anchored" data-anchor-id="research-interests">Research Interests</h2>
+<section id="computational-cognitive-science" class="level3">
+<h3 class="anchored" data-anchor-id="computational-cognitive-science">1) Computational Cognitive Science</h3>
+<p><span class="animate__animated animate__fadeIn" style="display: inline-block;animation-duration:2s">As humans, we possess a remarkable cognitive flexibility that enables us to solve problems in various domains that are still completely intractable to modern methods in Artificial Intelligence. Therefore, I think that by studying human behavior we may be able to reverse-engineer some of the machinery that gives rise to these amazing abilities, paving the way for new kinds of algorithms.</span></p>
+<p><span class="animate__animated animate__fadeIn" style="display: inline-block;animation-duration:2s">At the moment, I am working on a project series aiming to develop a computational account of causal reasoning for intervention on other agents. In these projects I will be using a considerable amount of simulation, computational modelling, and a series of custom-designed web experiments to develop reasoning models that exhibit human-like abilities to flexibly generalize to new contexts. My goal here is to show how this causal account can outperform sophisticated Reinforcement Learning models in dynamic environments, which includes most of the real world.</span></p>
+<p><br>
+</p>
 </section>
-<section id="hobbies-and-interests" class="level2">
-<h2 class="anchored" data-anchor-id="hobbies-and-interests">Hobbies and interests</h2>
-<ol type="1">
-<li><strong>Exercise</strong> - I’ve always been active as a kid, but when I was younger I somehow never really stuck with any particular sport for too long. To give you an idea, I’ve had a phase for: archery, badminton, crossfit, golf, parkour, powerlifting, and skateboarding. I’m still interested in strength training, which I have been doing in some form for 10+ years, and badminton. I have limited means to engage with these in an organized format at the moment, so to fill the hole in my heart, I’ve been investing some time to figure out the perfect home gym setup that still fits inside my bedroom. I think I’ve been pretty successful with this, so maybe I’ll show it off in a post sometime.</li>
-</ol>
+<section id="inversion-problems-in-cognitive-science" class="level3">
+<h3 class="anchored" data-anchor-id="inversion-problems-in-cognitive-science">2) Inversion problems in Cognitive Science</h3>
+<p><span class="animate__animated animate__fadeIn" style="display: inline-block;animation-duration:2s">Whenever people are interacting with machine-learning based systems, (human) biases can propagate through the model leading to distorted predictions. Therefore, one strand of work I am interested in pursuing in this area is to derive the transformations that lead to better alignment, thus increasing the validity of predictions. I am also interested in addressing more engineering related concerns, such as how to use information we possess about cognition to improve the performance of machine learning algorithms trained on human-generated information. In this type of work, I like to mix and match methods from Cognitive Science and Machine Learning in combination with large, real-world data-sets.</span></p>
+<p><span class="animate__animated animate__fadeIn" style="display: inline-block;animation-duration:2s">One fairly recent project I have completed in this domain was my master’s thesis. In it, I was able to show how re-weighting a feature space in line with some theory borrowed from multi-attribute multi-alternative decision-making can improve the performance of machine learning algorithms tasked with predicting human choices.</span></p>
 <p><br>
 </p>
-<ol start="2" type="1">
-<li><strong>Technology</strong> - Everyone who has had to deal with me in the last few years knows that I’m fully committed to using GNU/Linux as my daily driver. It’s actually quite amazing how much you learn about the inner workings of a computer when you start customizing your setup and ripping out the stuff that’s annoying. As you can see, I’ve also taken an interest in web development. While <a href="https://www.quarto.org">Quarto</a> admittedly makes this website dead-easy to create, I also use web development in my research to create experiments that run in a browser. I’m super interested in picking up <a href="https://openprocessing.org/discover/#/trending">creative coding</a> and am hoping to eventually generate some art that I can post on here! :)</li>
-</ol>
-<p><br>
-</p>
-<ol start="3" type="1">
-<li><strong>Languages</strong> - English used to be my first language as I only started learning German after relocating to <a href="https://www.thelaend.de/en/kampagne/">the Länd</a> at age six. Maybe because of this experience, I’ve had a bit of an interest in languages. These days, I do language lessons for fun on <a href="https://www.duolingo.com/profile/luwmayer">Duolingo</a>, where I have a streak of around 2000 days. I’m mostly learning French and Dutch at the moment. My Dutch is definitely better than my French, probably just by virtue of being so similar to German, but both are good enough to follow a Youtube video. I hope to eventually move away from Duolingo and bring my skills to the next level, but don’t feel I have the bandwidth for it just now. If you know a good free resource, <a href="mailto:willuk@vivaldi.net">be sure to let me know</a>!</li>
-</ol>
-<p><br>
-</p>
-<ol start="4" type="1">
-<li><strong>Gaming</strong> - I was quite the avid gamer as a teen, spending countless hours on the likes of Team Fortress 2, Minecraft and Guild Wars 2. I don’t actively play much these days, but I still like to keep up with the industry. Perhaps I’m just waiting for the next big thing to come along. I also really enjoy going to boardgame cafés and completing escape rooms!</li>
-</ol>
-<p><br>
-</p>
+<div id="embedded-publications">
+
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('cv_lwm.html') // Adjust the path to your CV page as needed
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const publicationsSection = doc.querySelector('#publications');
+        document.getElementById('embedded-publications').innerHTML = publicationsSection.innerHTML;
+      });
+  });
+</script>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -714,38 +680,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

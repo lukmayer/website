@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Lukas Mayer’s mini biography, and his hobbies and interests - exercise, technology, languages, and gaming.">
+<meta name="description" content="Lukas Mayer’s personal blog - tech tips, life-style recommendations, software development, research, data science">
 
-<title>About – Lukas W. Mayer</title>
+<title>Blog – Lukas W. Mayer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -27,6 +27,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <link href="./assets/favicons/favicon.ico" rel="icon">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -37,9 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -55,6 +55,36 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-main-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      page: 4,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-main-listing'] = new List('listing-main-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <style>
 
@@ -72,16 +102,46 @@ ul.task-list li input[type="checkbox"] {
         color: #00bf63;
       }
 </style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="About – Lukas W. Mayer">
-<meta property="og:description" content="Lukas Mayer’s mini biography, and his hobbies and interests - exercise, technology, languages, and gaming.">
+<link rel="alternate" type="application/rss+xml" title="Lukas W. Mayer" href="blog_index.xml" data-external="1"><meta property="og:title" content="Blog – Lukas W. Mayer">
+<meta property="og:description" content="Lukas Mayer’s personal blog - tech tips, life-style recommendations, software development, research, data science">
 <meta property="og:site_name" content="Lukas W. Mayer">
-<meta name="twitter:title" content="About – Lukas W. Mayer">
-<meta name="twitter:description" content="Lukas Mayer’s mini biography, and his hobbies and interests - exercise, technology, languages, and gaming.">
+<meta name="twitter:title" content="Blog – Lukas W. Mayer">
+<meta name="twitter:description" content="Lukas Mayer’s personal blog - tech tips, life-style recommendations, software development, research, data science">
 <meta name="twitter:card" content="summary">
-<link rel="canonical" href="https://lukmayer.github.io/about.html">
+<link rel="canonical" href="https://lukmayer.github.io/blog_index.html">
 </head>
 
 <body class="floating nav-fixed">
@@ -116,11 +176,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog_index.html"> 
+    <a class="nav-link active" href="./blog_index.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -140,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">About</h1>
+      <h1 class="title">Blog</h1>
           </div>
 
     
@@ -165,19 +225,12 @@ ul.task-list li input[type="checkbox"] {
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
-    <h2 id="toc-title">Sections:</h2>
-   
-  <ul>
-  <li><a href="#short-biography" id="toc-short-biography" class="nav-link active" data-scroll-target="#short-biography">Short biography</a></li>
-  <li><a href="#hobbies-and-interests" id="toc-hobbies-and-interests" class="nav-link" data-scroll-target="#hobbies-and-interests">Hobbies and interests</a></li>
-  </ul>
-</nav>
+    
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="habits">habits <span class="quarto-category-count">(1)</span></div><div class="category" data-category="phone">phone <span class="quarto-category-count">(1)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="rss">rss <span class="quarto-category-count">(1)</span></div><div class="category" data-category="search engines">search engines <span class="quarto-category-count">(1)</span></div><div class="category" data-category="software">software <span class="quarto-category-count">(5)</span></div><div class="category" data-category="vivaldi">vivaldi <span class="quarto-category-count">(1)</span></div><div class="category" data-category="webdev">webdev <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -191,81 +244,261 @@ ul.task-list li input[type="checkbox"] {
     display: none;
 }
 </style>
-<section id="short-biography" class="level2">
-<h2 class="anchored" data-anchor-id="short-biography">Short biography</h2>
-<p>Hi, I’m Luke, or more formally known as Lukas. I’m a German national with dual citizenship in the US. I was born in Wisconsin, USA but grew up in the greater Stuttgart area (Germany), which is known for its car industry and the Swabian dialect.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/reutlingen.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Reutlingen, Germany (my local town) - Credit"><img src="assets/reutlingen.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://www.nts.eu/en/nts-reutlingen/" alt="Lukas Mayer's hometown - Reutlingen, Germany"></a></p>
-<figcaption>Reutlingen, Germany (my local town) - <a href="https://www.nts.eu/en/nts-reutlingen/">Credit</a></figcaption>
-</figure>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Find the element containing the categories
+    var categoryContent = document.querySelector("#quarto-margin-sidebar");
+    
+    // Find the sidebar where we want to move the categories
+    var sidebar = document.querySelector("#quarto-sidebar");
+
+    // Move the content to the sidebar without changing any positioning
+    if (categoryContent && sidebar) {
+        sidebar.appendChild(categoryContent);
+        
+        // Ensure no additional styles are applied that affect the layout
+        categoryContent.style.position = "static"; // Keep it in normal flow
+        categoryContent.style.transition = "none"; // Disable any transitions
+    }
+});
+</script>
+<p><span class="animate__animated animate__zoomIn" style="display: inline-block;animation-duration:2s">A dedicated space for me to rant!</span></p>
+<div id="listing-main-listing" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-main-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-main-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/stuttgart.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Stuttgart, Germany - Credit"><img src="assets/stuttgart.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://www.tripadvisor.com/Tourism-g187291-Stuttgart_Baden_Wurttemberg-Vacations.html" alt="Lukas Mayer's local city - Stuttgart, Germany"></a></p>
-<figcaption>Stuttgart, Germany - <a href="https://www.tripadvisor.com/Tourism-g187291-Stuttgart_Baden_Wurttemberg-Vacations.html">Credit</a></figcaption>
-</figure>
-</div>
-<p>After a brief stint working in a closed psychiatric ward at my local university hospital in Tübingen, I decided to pursue undergraduate education at a <a href="https://www.stir.ac.uk">small university in beautiful Scotland</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/tuebingen.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Tübingen, Germany - Credit: Westend61/Getty Images"><img src="assets/tuebingen.jpg" class="img-fluid figure-img" data-fig-cap="Credit: Westend61/Getty Images" alt="Lukas Mayer's first job was in a closed psychiatric ward at the University Hospital in Tübingen, Germany"></a></p>
-<figcaption>Tübingen, Germany - Credit: Westend61/Getty Images</figcaption>
-</figure>
-</div>
-<p>Despite my initial ambitions to pursue a career in clinical psychology, I discovered my analytical side when I was introduced to computer programming by a PhD student in the lab I was helping out in. I got very lucky in this regard as just prior to graduating, I was offered a summer internship at a London-based Data-Science consultancy. I enjoyed the work as it offered diverse problems to solve from different clients, but ultimately I felt that I should also seek formal education in data analytics.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/stirling.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Stirling, Scotland - Credit"><img src="assets/stirling.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/" alt="Lukas Mayer's undergraduate university city - Stirling, Scotland"></a></p>
-<figcaption>Stirling, Scotland - <a href="https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/">Credit</a></figcaption>
-</figure>
-</div>
-<p>The Behavioural and Data Science MSc at the <a href="https://warwick.ac.uk">University of Warwick</a> was very much the perfect fit for me, as it combined my interest in behavioral research with my newfound passion for select topics in Computer Science. It was at Warwick were I first came to appreciate the application of computational modelling to describe cognitive processes. This was when things “clicked” in my head, and I knew that I wanted to pursue a PhD in this area.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/leamington.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Royal Leamington Spa, England (where I stayed during my MSc) - Credit"><img src="assets/leamington.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://royal-leamington-spa.co.uk/visit/" alt="Lukas Mayer studied at the University of Warwick, which is located near Royal Leamington Spa, England"></a></p>
-<figcaption>Royal Leamington Spa, England (where I stayed during my MSc) - <a href="https://royal-leamington-spa.co.uk/visit/">Credit</a></figcaption>
-</figure>
-</div>
-<p>I spent a very fun year working in the Applied Digital Behaviour Lab at the University of <a href="https://visitbath.co.uk">Bath</a> while preparing my PhD applications and was fortunate to be accepted into the Cognitive Science PhD program at the University of California, Irvine, where I am currently working in <a href="https://steyvers.socsci.uci.edu/madlab/">Mark Steyvers’ lab</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/bath.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Bath, England - Credit: Ian Woolcock/Shutterstock"><img src="assets/bath.jpg" class="img-fluid figure-img" data-fig-cap="Credit: Ian Woolcock — Shutterstock" alt="Lukas Mayer worked at the business school/management school of the University of Bath - Bath, England"></a></p>
-<figcaption>Bath, England - Credit: Ian Woolcock/Shutterstock</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="assets/sbsg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="The building that houses the Cognitive Science department at the University of California, Irvine, USA - Credit"><img src="assets/sbsg.jpg" class="img-fluid figure-img" data-fig-cap="Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php)](assets/sbsg.jpg" alt="Lukas Mayer is currently a PhD student in Cognitive Science at the University of California, Irvine, USA"></a></p>
-<figcaption>The building that houses the Cognitive Science department at the University of California, Irvine, USA - <a href="https://www.undergrad.socsci.uci.edu/ssusa/policies.php">Credit</a></figcaption>
-</figure>
-</div>
-</section>
-<section id="hobbies-and-interests" class="level2">
-<h2 class="anchored" data-anchor-id="hobbies-and-interests">Hobbies and interests</h2>
-<ol type="1">
-<li><strong>Exercise</strong> - I’ve always been active as a kid, but when I was younger I somehow never really stuck with any particular sport for too long. To give you an idea, I’ve had a phase for: archery, badminton, crossfit, golf, parkour, powerlifting, and skateboarding. I’m still interested in strength training, which I have been doing in some form for 10+ years, and badminton. I have limited means to engage with these in an organized format at the moment, so to fill the hole in my heart, I’ve been investing some time to figure out the perfect home gym setup that still fits inside my bedroom. I think I’ve been pretty successful with this, so maybe I’ll show it off in a post sometime.</li>
-</ol>
-<p><br>
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="software,phone" data-listing-date-sort="1724569200000" data-listing-file-modified-sort="1724824249320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1621">
+<a href="./posts/minimal.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/images/phone.jpg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
-<ol start="2" type="1">
-<li><strong>Technology</strong> - Everyone who has had to deal with me in the last few years knows that I’m fully committed to using GNU/Linux as my daily driver. It’s actually quite amazing how much you learn about the inner workings of a computer when you start customizing your setup and ripping out the stuff that’s annoying. As you can see, I’ve also taken an interest in web development. While <a href="https://www.quarto.org">Quarto</a> admittedly makes this website dead-easy to create, I also use web development in my research to create experiments that run in a browser. I’m super interested in picking up <a href="https://openprocessing.org/discover/#/trending">creative coding</a> and am hoping to eventually generate some art that I can post on here! :)</li>
-</ol>
-<p><br>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Phone less, without being phoneless
+</h5>
+<div class="listing-reading-time card-text text-muted">
+9 min
+</div>
+<div class="card-text listing-description">
+Some simple tricks for cutting down
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Aug 25, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="webdev,quarto" data-listing-date-sort="1723705200000" data-listing-file-modified-sort="1724817528954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1626">
+<a href="./posts/login.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/images/login.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
-<ol start="3" type="1">
-<li><strong>Languages</strong> - English used to be my first language as I only started learning German after relocating to <a href="https://www.thelaend.de/en/kampagne/">the Länd</a> at age six. Maybe because of this experience, I’ve had a bit of an interest in languages. These days, I do language lessons for fun on <a href="https://www.duolingo.com/profile/luwmayer">Duolingo</a>, where I have a streak of around 2000 days. I’m mostly learning French and Dutch at the moment. My Dutch is definitely better than my French, probably just by virtue of being so similar to German, but both are good enough to follow a Youtube video. I hope to eventually move away from Duolingo and bring my skills to the next level, but don’t feel I have the bandwidth for it just now. If you know a good free resource, <a href="mailto:willuk@vivaldi.net">be sure to let me know</a>!</li>
-</ol>
-<p><br>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+How to make a login portal for Quarto sites
+</h5>
+<div class="listing-reading-time card-text text-muted">
+9 min
+</div>
+<div class="card-text listing-description">
+Personalized/Gated content on static websites
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Aug 15, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="software,habits" data-listing-date-sort="1723446000000" data-listing-file-modified-sort="1724817497267" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1325">
+<a href="./posts/habit.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/images/habitica.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
-<ol start="4" type="1">
-<li><strong>Gaming</strong> - I was quite the avid gamer as a teen, spending countless hours on the likes of Team Fortress 2, Minecraft and Guild Wars 2. I don’t actively play much these days, but I still like to keep up with the industry. Perhaps I’m just waiting for the next big thing to come along. I also really enjoy going to boardgame cafés and completing escape rooms!</li>
-</ol>
-<p><br>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Habit tracking with Habitica - a quick tour
+</h5>
+<div class="listing-reading-time card-text text-muted">
+7 min
+</div>
+<div class="card-text listing-description">
+Turn your life into a video-game? It’s better than you think
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Aug 12, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="software,search engines" data-listing-date-sort="1723273200000" data-listing-file-modified-sort="1724817579549" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2800">
+<a href="./posts/search.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/images/dots.jpg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+A comprehensive review of non-obscure search engines
+</h5>
+<div class="listing-reading-time card-text text-muted">
+14 min
+</div>
+<div class="card-text listing-description">
+To google or not to google, that is the question.
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Aug 10, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="software,rss" data-listing-date-sort="1722927600000" data-listing-file-modified-sort="1724817573273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="759">
+<a href="./posts/rss.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/images/rss.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Stop ‘Doom-scrolling’, start using RSS
+</h5>
+<div class="listing-reading-time card-text text-muted">
+4 min
+</div>
+<div class="card-text listing-description">
+Another hot-take on old technology that was ahead of its time
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Aug 6, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="software,vivaldi" data-listing-date-sort="1722582000000" data-listing-file-modified-sort="1724817585789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1299">
+<a href="./posts/vivaldi1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/images/vivaldi_logo.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Why Vivaldi is the least and most minimal browser at the same time
+</h5>
+<div class="listing-reading-time card-text text-muted">
+7 min
+</div>
+<div class="card-text listing-description">
+My take on how to make a piece of maximalist software easy on the eyes
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Aug 2, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="webdev,quarto" data-listing-date-sort="1722150000000" data-listing-file-modified-sort="1724817564705" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2692">
+<a href="./posts/quarto.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/images/quarto.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+How to easily make a website for free
+</h5>
+<div class="listing-reading-time card-text text-muted">
+14 min
+</div>
+<div class="card-text listing-description">
+A jumpstart guide to creating websites with Quarto
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 28, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="webdev" data-listing-date-sort="1721545200000" data-listing-file-modified-sort="1724817547597" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1014">
+<a href="./posts/post1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./posts/images/luke-23.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+My first DIY web-app
+</h5>
+<div class="listing-reading-time card-text text-muted">
+6 min
+</div>
+<div class="card-text listing-description">
+Just a quick post to test the blog and briefly talk about my first ventures into JavaScript
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 21, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="main-listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+<p>Follow my blog with RSS <a href="blog_index.xml" target="_blank"> <i class="bi bi-rss"></i> </a></p>
 
 
-</section>
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -714,38 +947,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
