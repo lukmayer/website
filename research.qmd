@@ -1,6 +1,7 @@
 ---
 title: "Research"
 description: "Lukas Mayer's research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development"
+
 ---
 <style>
 .description {
@@ -44,4 +45,32 @@ description: "Lukas Mayer's research in computational cognitive science, Human-A
       });
   });
 </script>
+
+<style>
+
+#embedded-publications {
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#embedded-publications * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  #embedded-publications {
+    font-size: 0.9em;
+    padding: 5px;
+  }
+
+  #embedded-publications hr {
+    margin: 10px 0;
+  }
+}
+
+</style>
+
 
