@@ -45,7 +45,7 @@ If you haven't yet, just render the files to get a first feel for what the final
 Here's what my .yml file looks like:
 
 
-```{r, eval=F}
+```{yaml, eval=F}
 
 project:
   type: website
@@ -115,7 +115,7 @@ Finally, in the "extensions" field I add the copy-button extension which allows 
 
 A blog is a nice place to share things in posts. In Quarto, that basically means having a list of pages on a blog index page. The pages listed on this index all sit inside a folder inside your project directory. In case you didn't realize yet, every quarto markdown document has a so-called "YAML header" which is indicated by the three hyphens that denote the beginning and ending of this header. The header specifies fields and settings for that page alone. Here's what the header looks like for my blog index.  
 
-```{r, eval=F}
+```{yaml, eval=F}
 ---
 title: "Blog"
 listing:
@@ -137,7 +137,7 @@ The next couple fields add UI for sorting/filtering and the categories field all
 With this in place, here is what the header of a given blog post looks like for me:
 
 
-```{r, eval=F}
+```{yaml, eval=F}
 
 ---
 title: "My first DIY web-app"
@@ -166,7 +166,7 @@ Quarto provides some templates for easily configuring a rather stylish "About th
 Here is how I set up mine: 
 
 
-```{r, eval=F}
+```{yaml, eval=F}
 ---
 title: "Lukas W. Mayer"
 about:

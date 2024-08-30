@@ -46,7 +46,7 @@
 <div>
 
 </div>
-<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout-nrow="1" data-layout="columns">
+<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout="columns" data-layout-nrow="1">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><a href="assets/home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://lukmayer.github.io/posts/assets/home.png" class="img-fluid" width="270"></a></p>
@@ -146,431 +146,729 @@ Disclaimer
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;!</span>DOCTYPE html<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span></span>
-<span id="cb1-2"><span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">&lt;</span>html<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;!DOCTYPE</span> html<span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-3"><span class="er" style="color: #AD0000;
+<span id="cb1-2"><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>head<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&gt;</span></span>
-<span id="cb1-4">  <span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">&lt;</span>title<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span>Login Portal<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span><span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">/</span>title<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">html</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-5">  <span class="er" style="color: #AD0000;
+<span id="cb1-3"><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>link rel<span class="ot" style="color: #003B4F;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"stylesheet"</span> type<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"text/css"</span> href<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"styles.css"</span><span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">head</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-6">  <span class="er" style="color: #AD0000;
+<span id="cb1-4">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>script src<span class="ot" style="color: #003B4F;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
+font-weight: bold;
+font-style: inherit;">title</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"</span><span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&gt;</span>Login Portal<span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&gt;</span><span class="er" style="color: #AD0000;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&lt;/</span>script<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span></span>
-<span id="cb1-7"><span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">&lt;/</span>head<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">title</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-8"><span class="er" style="color: #AD0000;
+<span id="cb1-5">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>body<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">link</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> rel</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"stylesheet"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> type</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text/css"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> href</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"styles.css"</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-9">  <span class="er" style="color: #AD0000;
+<span id="cb1-6">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>h1<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&gt;</span>Login Portal<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">script</span><span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&lt;</span><span class="er" style="color: #AD0000;
+font-style: inherit;"> src</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span>h1<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">script</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-10">  <span class="er" style="color: #AD0000;
+<span id="cb1-7"><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>form id<span class="ot" style="color: #003B4F;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"login-form"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span></span>
-<span id="cb1-11">    <span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">&lt;</span>input type<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"text"</span> id<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"username"</span> placeholder<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Enter username"</span><span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">head</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-12">    <span class="er" style="color: #AD0000;
+<span id="cb1-8"><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>input type<span class="ot" style="color: #003B4F;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"password"</span> id<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"password"</span> placeholder<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Enter password"</span><span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">body</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-13">    <span class="er" style="color: #AD0000;
+<span id="cb1-9">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>button id<span class="ot" style="color: #003B4F;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
+font-weight: bold;
+font-style: inherit;">h1</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">"login-btn"</span> type<span class="ot" style="color: #003B4F;
+font-style: inherit;">&gt;</span>Login Portal<span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">"button"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span>Login<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span><span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">/</span>button<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">h1</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-14">  <span class="er" style="color: #AD0000;
+<span id="cb1-10">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;/</span>form<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">form</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"login-form"</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-15">  <span class="er" style="color: #AD0000;
+<span id="cb1-11">    <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>div id<span class="ot" style="color: #003B4F;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
+font-weight: bold;
+font-style: inherit;">input</span><span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">"alert"</span> style<span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"display: none;"</span> data<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>id<span class="ot" style="color: #003B4F;
+font-style: inherit;"> type</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"alert"</span><span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"text"</span><span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&gt;</span>Incorrect username or password<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> id</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">&lt;</span><span class="er" style="color: #AD0000;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">/</span>div<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"username"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> placeholder</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Enter username"</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb1-12">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">input</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> type</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"password"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"password"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> placeholder</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Enter password"</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb1-13">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">button</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"login-btn"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> type</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"button"</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>Login<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">button</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb1-14">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">form</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb1-15">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">div</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"alert"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> style</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"display: none;"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> data-id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"alert"</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span>Incorrect username or password<span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">div</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
 <span id="cb1-16"></span>
-<span id="cb1-17">  <span class="er" style="color: #AD0000;
+<span id="cb1-17">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>script<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">script</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-18">    const loginBtn <span class="ot" style="color: #003B4F;
+<span id="cb1-18">    <span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+font-weight: bold;
+font-style: inherit;">const</span> loginBtn <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">document.getElementById</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">'login-btn'</span>);</span>
-<span id="cb1-19">    const usernameInput <span class="ot" style="color: #003B4F;
+font-style: inherit;">document</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">document.getElementById</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">getElementById</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'username'</span>);</span>
-<span id="cb1-20">    const passwordInput <span class="ot" style="color: #003B4F;
+font-style: inherit;">'login-btn'</span>)<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+font-style: inherit;">;</span></span>
+<span id="cb1-19">    <span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">document.getElementById</span>(<span class="st" style="color: #20794D;
+font-weight: bold;
+font-style: inherit;">const</span> usernameInput <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">'password'</span>);</span>
-<span id="cb1-21">    const alertDiv <span class="ot" style="color: #003B4F;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+font-style: inherit;">document</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">document.getElementById</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">'alert'</span>);</span>
+font-style: inherit;">getElementById</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'username'</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-20">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> passwordInput <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">document</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">getElementById</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'password'</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-21">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> alertDiv <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">document</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">getElementById</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'alert'</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-22"></span>
-<span id="cb1-23">    <span class="cf" style="color: #003B4F;
+<span id="cb1-23">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sha1</span>(message) {</span>
-<span id="cb1-24">      return <span class="fu" style="color: #4758AB;
+<span id="cb1-24">      <span class="cf" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">CryptoJS.SHA1</span>(message)<span class="fu" style="color: #4758AB;
+font-weight: bold;
+font-style: inherit;">return</span> CryptoJS<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">.toString</span>(CryptoJS.enc.Hex);</span>
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">SHA1</span>(message)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">toString</span>(CryptoJS<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">enc</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Hex</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-25">    }</span>
 <span id="cb1-26"></span>
-<span id="cb1-27">    async <span class="cf" style="color: #003B4F;
+<span id="cb1-27">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">async</span> <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">urlExists</span>(url) {</span>
-<span id="cb1-28">      try {</span>
-<span id="cb1-29">        const response <span class="ot" style="color: #003B4F;
+<span id="cb1-28">      <span class="cf" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">=</span> await <span class="fu" style="color: #4758AB;
+font-weight: bold;
+font-style: inherit;">try</span> {</span>
+<span id="cb1-29">        <span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">fetch</span>(url, { method<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">const</span> response <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">await</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fetch</span>(url<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> { <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">method</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'HEAD'</span> });</span>
-<span id="cb1-30">        return response.ok;</span>
-<span id="cb1-31">      } <span class="fu" style="color: #4758AB;
+font-style: inherit;">'HEAD'</span> })<span class="op" style="color: #5E5E5E;
 background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-30">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> response<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ok</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-31">      } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">catch</span> (error) {</span>
-<span id="cb1-32">        return false;</span>
+<span id="cb1-32">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">false</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-33">      }</span>
 <span id="cb1-34">    }</span>
 <span id="cb1-35"></span>
-<span id="cb1-36">    async <span class="cf" style="color: #003B4F;
+<span id="cb1-36">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">async</span> <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">login</span>(username, password) {</span>
-<span id="cb1-37">      const usernameHash <span class="ot" style="color: #003B4F;
+font-style: inherit;">login</span>(username<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sha1</span>(username);</span>
-<span id="cb1-38">      const passwordHash <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sha1</span>(password);</span>
-<span id="cb1-39"></span>
-<span id="cb1-40">      <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span><span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">/</span> Log the hashes <span class="cf" style="color: #003B4F;
+font-style: inherit;">,</span> password) {</span>
+<span id="cb1-37">      <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">for</span> debugging</span>
-<span id="cb1-41">      <span class="fu" style="color: #4758AB;
+font-style: inherit;">const</span> usernameHash <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">console.log</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">"Username Hash:"</span>, usernameHash);</span>
-<span id="cb1-42">      <span class="fu" style="color: #4758AB;
+font-style: inherit;">sha1</span>(username)<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">console.log</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">;</span></span>
+<span id="cb1-38">      <span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">"Password Hash:"</span>, passwordHash);</span>
+font-weight: bold;
+font-style: inherit;">const</span> passwordHash <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sha1</span>(password)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-39"></span>
+<span id="cb1-40">      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Log the hashes for debugging</span></span>
+<span id="cb1-41">      <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Username Hash:"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> usernameHash)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-42">      <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Password Hash:"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> passwordHash)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-43"></span>
-<span id="cb1-44">      const url <span class="ot" style="color: #003B4F;
+<span id="cb1-44">      <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> url <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'a'</span> <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">'a'</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">+</span> usernameHash <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'/a'</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> passwordHash <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">+</span> usernameHash <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'/index.html'</span>; <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">'/a'</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span><span class="er" style="color: #AD0000;
+font-style: inherit;">+</span> passwordHash <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span> Construct URL</span>
-<span id="cb1-45">      <span class="fu" style="color: #4758AB;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">console.log</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">'/index.html'</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">"Constructed URL:"</span>, url); <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">;</span> <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span><span class="er" style="color: #AD0000;
+font-style: inherit;">// Construct URL</span></span>
+<span id="cb1-45">      <span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">/</span> Log the constructed URL</span>
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Constructed URL:"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> url)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Log the constructed URL</span></span>
 <span id="cb1-46"></span>
 <span id="cb1-47">      <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">if</span> (await <span class="fu" style="color: #4758AB;
+font-style: inherit;">if</span> (<span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">await</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">urlExists</span>(url)) {</span>
-<span id="cb1-48">        window.location <span class="ot" style="color: #003B4F;
+<span id="cb1-48">        <span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">=</span> url;</span>
+font-style: inherit;">window</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">location</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> url<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-49">      } <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">else</span> {</span>
-<span id="cb1-50">        alertDiv.style.display <span class="ot" style="color: #003B4F;
+<span id="cb1-50">        alertDiv<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">style</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">display</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'block'</span>; <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">'block'</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span><span class="er" style="color: #AD0000;
+font-style: inherit;">;</span> <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span> Show alert</span>
-<span id="cb1-51">        usernameInput.value <span class="ot" style="color: #003B4F;
+font-style: inherit;">// Show alert</span></span>
+<span id="cb1-51">        usernameInput<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">''</span>;</span>
-<span id="cb1-52">        passwordInput.value <span class="ot" style="color: #003B4F;
+font-style: inherit;">''</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-52">        passwordInput<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">''</span>;</span>
-<span id="cb1-53">        <span class="fu" style="color: #4758AB;
+font-style: inherit;">''</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">console.log</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">;</span></span>
+<span id="cb1-53">        <span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">"Login failed, incorrect username or password."</span>);</span>
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Login failed, incorrect username or password."</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-54">      }</span>
 <span id="cb1-55">    }</span>
 <span id="cb1-56"></span>
-<span id="cb1-57">    <span class="fu" style="color: #4758AB;
+<span id="cb1-57">    loginBtn<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">loginBtn.addEventListener</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">'click'</span>, <span class="cf" style="color: #003B4F;
+font-style: inherit;">addEventListener</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'click'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span> () {</span>
 <span id="cb1-58">      <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">login</span>(usernameInput.value, passwordInput.value);</span>
-<span id="cb1-59">    });</span>
+font-style: inherit;">login</span>(usernameInput<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> passwordInput<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-59">    })<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-60"></span>
-<span id="cb1-61">    <span class="fu" style="color: #4758AB;
+<span id="cb1-61">    passwordInput<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">passwordInput.addEventListener</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">'keydown'</span>, <span class="cf" style="color: #003B4F;
+font-style: inherit;">addEventListener</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'keydown'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span> (e) {</span>
 <span id="cb1-62">      <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">if</span> (e.key <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">if</span> (e<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">==</span><span class="er" style="color: #AD0000;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+font-style: inherit;">key</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">===</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'Enter'</span>) {</span>
 <span id="cb1-63">        <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">login</span>(usernameInput.value, passwordInput.value);</span>
+font-style: inherit;">login</span>(usernameInput<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> passwordInput<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-64">      }</span>
-<span id="cb1-65">    });</span>
-<span id="cb1-66">  <span class="sc" style="color: #5E5E5E;
+<span id="cb1-65">    })<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">&lt;</span><span class="er" style="color: #AD0000;
+font-style: inherit;">;</span></span>
+<span id="cb1-66">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">/</span>script<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">script</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
 <span id="cb1-67"></span>
-<span id="cb1-68">  <span class="er" style="color: #AD0000;
+<span id="cb1-68">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>footer<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">footer</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-69">    <span class="er" style="color: #AD0000;
+<span id="cb1-69">    <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>a href<span class="ot" style="color: #003B4F;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">a</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"> href</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"https://lukmayer.github.io"</span><span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"https://lukmayer.github.io"</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&gt;</span>Return to lukmayer.github.io<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&gt;</span>Return to lukmayer.github.io<span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span><span class="er" style="color: #AD0000;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">/</span>a<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span></span>
-<span id="cb1-70">  <span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">&lt;/</span>footer<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">a</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-71"><span class="er" style="color: #AD0000;
+<span id="cb1-70">  <span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;/</span>body<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">footer</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
-<span id="cb1-72"><span class="er" style="color: #AD0000;
+<span id="cb1-71"><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;/</span>html<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">body</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb1-72"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">html</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
 </details>
@@ -1047,17 +1345,32 @@ font-style: inherit;">#198754; /* Darker green on hover from Darkly theme */</sp
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1">project<span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
+font-style: inherit;">project</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb3-2">  type<span class="sc" style="color: #5E5E5E;
+<span id="cb3-2"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> website</span>
-<span id="cb3-3">  output<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">-</span>dir<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">type</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> website</span></span>
+<span id="cb3-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">output-dir</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"a{yourpasswordhash}"</span></span></code></pre></div>
 </details>
@@ -1080,37 +1393,59 @@ font-style: inherit;">"a{yourpasswordhash}"</span></span></code></pre></div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;</span>script<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span></span>
-<span id="cb4-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">window.addEventListener</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'load'</span>, () <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=&gt;</span> {</span>
-<span id="cb4-3">  <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span><span class="er" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">/</span> Change the URL <span class="cf" style="color: #003B4F;
+font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">in</span> the address bar after load</span>
-<span id="cb4-4">  <span class="fu" style="color: #4758AB;
+font-style: inherit;">script</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">history.replaceState</span>(null, null, <span class="st" style="color: #20794D;
+font-style: inherit;">&gt;</span></span>
+<span id="cb4-2"><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">"/login_portal/"</span>);</span>
-<span id="cb4-5">});</span>
-<span id="cb4-6"><span class="sc" style="color: #5E5E5E;
+font-style: inherit;">window</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">&lt;</span><span class="er" style="color: #AD0000;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">/</span>script<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">addEventListener</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'load'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> () <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">=&gt;</span> {</span>
+<span id="cb4-3">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Change the URL in the address bar after load</span></span>
+<span id="cb4-4">  history<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">replaceState</span>(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">null</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">null</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/login_portal/"</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb4-5">})<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb4-6"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">script</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
 </details>
@@ -1445,173 +1780,433 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1">project<span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
 background-color: null;
+font-style: inherit;">project</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-2">  type<span class="sc" style="color: #5E5E5E;
+<span id="cb1-3"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> website</span>
-<span id="cb1-3">  output<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">-</span>dir<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">type</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> _site</span>
-<span id="cb1-4"></span>
-<span id="cb1-5">website<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;"> website</span></span>
+<span id="cb1-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">output-dir</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> _site</span></span>
+<span id="cb1-5"></span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">website</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-6">  favicon<span class="sc" style="color: #5E5E5E;
+<span id="cb1-7"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">"assets/favicons/favicon.ico"</span> </span>
-<span id="cb1-7">  page<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">favicon</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">-</span>footer<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Powered by &lt;a href='https://quarto.org' target='_blank'&gt;Quarto&lt;/a&gt;"</span>  </span>
-<span id="cb1-8">  open<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"assets/favicons/favicon.ico"</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span>graph<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> </span></span>
+<span id="cb1-8"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> true</span>
-<span id="cb1-9">  site<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">-</span>url<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">page-footer</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Powered by &lt;a href='https://quarto.org' target='_blank'&gt;Quarto&lt;/a&gt;"</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span></span>
+<span id="cb1-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">open-graph</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb1-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">site-url</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"https://lukmayer.github.io"</span></span>
-<span id="cb1-10">  title<span class="sc" style="color: #5E5E5E;
+<span id="cb1-11"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"&lt;img src='assets/favicons/favicon.ico' alt='Logo' style='height:40px; vertical-align:middle;'&gt;"</span></span>
-<span id="cb1-11">  navbar<span class="sc" style="color: #5E5E5E;
+<span id="cb1-12"><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">navbar</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-12">    left<span class="sc" style="color: #5E5E5E;
+<span id="cb1-13"><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">left</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-13">      <span class="sc" style="color: #5E5E5E;
+<span id="cb1-14"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> href<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> index.qmd</span>
-<span id="cb1-14">        text<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> index.qmd</span></span>
+<span id="cb1-15"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Home"</span></span>
-<span id="cb1-15">      <span class="sc" style="color: #5E5E5E;
+<span id="cb1-16"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> href<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> research.qmd</span>
-<span id="cb1-16">        text<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> research.qmd</span></span>
+<span id="cb1-17"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Research"</span></span>
-<span id="cb1-17">      <span class="sc" style="color: #5E5E5E;
+<span id="cb1-18"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> href<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> cv.qmd</span>
-<span id="cb1-18">        text<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> cv.qmd</span></span>
+<span id="cb1-19"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"CV"</span></span>
-<span id="cb1-19">      <span class="sc" style="color: #5E5E5E;
+<span id="cb1-20"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> href<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> blog_index.qmd</span>
-<span id="cb1-20">        text<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> blog_index.qmd</span></span>
+<span id="cb1-21"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Blog"</span></span>
-<span id="cb1-21">      <span class="sc" style="color: #5E5E5E;
+<span id="cb1-22"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> href<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> about.qmd</span>
-<span id="cb1-22">        text<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> about.qmd</span></span>
+<span id="cb1-23"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"About"</span></span>
-<span id="cb1-23">    right<span class="sc" style="color: #5E5E5E;
+<span id="cb1-24"><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">right</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-24">      <span class="sc" style="color: #5E5E5E;
+<span id="cb1-25"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> icon<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> rss</span>
-<span id="cb1-25">        href<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> blog_index.xml</span>
-<span id="cb1-26">      <span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">-</span> icon<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> envelope</span>
-<span id="cb1-27">        href<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> mailto<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> rss</span></span>
+<span id="cb1-26"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span>willuk<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">@</span>vivaldi.net</span>
-<span id="cb1-28">        aria<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">-</span>label<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> E<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> blog_index.xml</span></span>
+<span id="cb1-27"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span>Mail</span>
-<span id="cb1-29">  </span>
-<span id="cb1-30"></span>
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> envelope</span></span>
+<span id="cb1-28"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> mailto:willuk@vivaldi.net</span></span>
+<span id="cb1-29"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aria-label</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> E-Mail</span></span>
+<span id="cb1-30"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span></span>
 <span id="cb1-31"></span>
-<span id="cb1-32">format<span class="sc" style="color: #5E5E5E;
+<span id="cb1-32"></span>
+<span id="cb1-33"><span class="fu" style="color: #4758AB;
 background-color: null;
+font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-33">  html<span class="sc" style="color: #5E5E5E;
+<span id="cb1-34"><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-34">    theme<span class="sc" style="color: #5E5E5E;
+<span id="cb1-35"><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-35">      dark<span class="sc" style="color: #5E5E5E;
+<span id="cb1-36"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> [darkly, theme<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">-</span>dark.scss]</span>
-<span id="cb1-36">      light<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">dark</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> [flatly, theme<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span>light.scss]</span>
-<span id="cb1-37">    css<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> styles.css</span>
-<span id="cb1-38">    toc<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> true</span>
-<span id="cb1-39"></span>
-<span id="cb1-40">extensions<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">darkly</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> theme-dark.scss</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">]</span></span>
+<span id="cb1-37"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">light</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">flatly</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> theme-light.scss</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">]</span></span>
+<span id="cb1-38"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">css</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> styles.css</span></span>
+<span id="cb1-39"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">toc</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb1-40"></span>
+<span id="cb1-41"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">extensions</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb1-41">  <span class="sc" style="color: #5E5E5E;
+<span id="cb1-42"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> copy<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">-</span>button</span></code></pre></div>
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> copy-button</span></span></code></pre></div>
 </details>
 </div>
 <p>Let’s go over what each section does. In the project header, one important thing to note is the <code>output-dir</code>. Here, I specify that I want Quarto to render the files we will host later into the directory called <code>_site</code>. This will be a sub-directory in your project folder and can have any name. The reason we are not rendering to the root project directory is that Github really does not like this, and may fail to host your site as a result.</p>
@@ -1631,50 +2226,166 @@ font-style: inherit;">-</span>button</span></code></pre></div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span>
-<span id="cb2-2">title<span class="sc" style="color: #5E5E5E;
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Blog"</span></span>
-<span id="cb2-3">listing<span class="sc" style="color: #5E5E5E;
+<span id="cb2-3"><span class="fu" style="color: #4758AB;
 background-color: null;
+font-style: inherit;">listing</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb2-4">  type<span class="sc" style="color: #5E5E5E;
+<span id="cb2-4"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> grid</span>
-<span id="cb2-5">  fields<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> [image, date, title, description, reading<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">type</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">-</span>time]</span>
-<span id="cb2-6">  contents<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> posts</span>
-<span id="cb2-7">  sort<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> grid</span></span>
+<span id="cb2-5"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fields</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> date</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> description</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> reading-time</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">]</span></span>
+<span id="cb2-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">contents</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> posts</span></span>
+<span id="cb2-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sort</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"date desc"</span></span>
-<span id="cb2-8">  sort<span class="sc" style="color: #5E5E5E;
+<span id="cb2-8"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span>ui<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> [title, date]</span>
-<span id="cb2-9">  filter<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">sort-ui</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">-</span>ui<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> [title, date]</span>
-<span id="cb2-10">  categories<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> true</span>
-<span id="cb2-11">  feed<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> true</span>
-<span id="cb2-12"><span class="sc" style="color: #5E5E5E;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> date</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">]</span></span>
+<span id="cb2-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter-ui</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> date</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">]</span></span>
+<span id="cb2-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">categories</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb2-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">feed</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb2-12"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span></code></pre></div>
 </details>
@@ -1685,62 +2396,119 @@ font-style: inherit;">---</span></span></code></pre></div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"></span>
+<span id="cb3-2"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span>
-<span id="cb3-2">title<span class="sc" style="color: #5E5E5E;
+<span id="cb3-3"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"My first DIY web-app"</span></span>
-<span id="cb3-3">description<span class="sc" style="color: #5E5E5E;
+<span id="cb3-4"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">description</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Just a quick post to test the blog and brielfy talk about my first ventures into JavaScript"</span></span>
-<span id="cb3-4">author<span class="sc" style="color: #5E5E5E;
+<span id="cb3-5"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">author</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Luke"</span></span>
-<span id="cb3-5">date<span class="sc" style="color: #5E5E5E;
+<span id="cb3-6"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">date</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"07/21/2024"</span></span>
-<span id="cb3-6">categories<span class="sc" style="color: #5E5E5E;
+<span id="cb3-7"><span class="fu" style="color: #4758AB;
 background-color: null;
+font-style: inherit;">categories</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb3-7">  <span class="sc" style="color: #5E5E5E;
+<span id="cb3-8"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> webdev</span>
-<span id="cb3-8">image<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">  </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> webdev</span></span>
+<span id="cb3-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"images/luke-23.jpg"</span></span>
-<span id="cb3-9">comments<span class="sc" style="color: #5E5E5E;
+<span id="cb3-10"><span class="fu" style="color: #4758AB;
 background-color: null;
+font-style: inherit;">comments</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb3-10">    utterances<span class="sc" style="color: #5E5E5E;
+<span id="cb3-11"><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">utterances</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb3-11">      repo<span class="sc" style="color: #5E5E5E;
+<span id="cb3-12"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> lukmayer<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">/</span>site_comments</span>
-<span id="cb3-12">      theme<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">repo</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> github<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span>dark</span>
-<span id="cb3-13">      issue<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> lukmayer/site_comments</span></span>
+<span id="cb3-13"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span>term<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> url</span>
-<span id="cb3-14"><span class="sc" style="color: #5E5E5E;
+font-style: inherit;">theme</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> github-dark</span></span>
+<span id="cb3-14"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">issue-term</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> url</span></span>
+<span id="cb3-15"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span></code></pre></div>
 </details>
@@ -1754,82 +2522,159 @@ font-style: inherit;">---</span></span></code></pre></div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span>
-<span id="cb4-2">title<span class="sc" style="color: #5E5E5E;
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Lukas W. Mayer"</span></span>
-<span id="cb4-3">about<span class="sc" style="color: #5E5E5E;
+<span id="cb4-3"><span class="fu" style="color: #4758AB;
 background-color: null;
+font-style: inherit;">about</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb4-4"> template<span class="sc" style="color: #5E5E5E;
+<span id="cb4-4"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> jolla</span>
-<span id="cb4-5"> image<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> assets<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">template</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">/</span>luke<span class="fl" style="color: #AD0000;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-23.</span>jpg</span>
-<span id="cb4-6"> links<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> jolla</span></span>
+<span id="cb4-5"><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> assets/luke-23.jpg</span></span>
+<span id="cb4-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">links</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
-<span id="cb4-7">   <span class="sc" style="color: #5E5E5E;
+<span id="cb4-7"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">-</span> icon<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">   </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> github</span>
-<span id="cb4-8">     text<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> Github</span>
-<span id="cb4-9">     href<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> https<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span><span class="er" style="color: #AD0000;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">//</span>github.com<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> github</span></span>
+<span id="cb4-8"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">/</span>lukmayer</span>
-<span id="cb4-10">   <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">     </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">-</span> icon<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> medium</span>
-<span id="cb4-11">     text<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> Medium</span>
-<span id="cb4-12">     href<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> Github</span></span>
+<span id="cb4-9"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> https<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">     </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span><span class="er" style="color: #AD0000;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">//</span>medium.com<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">/</span><span class="er" style="color: #AD0000;
+font-style: inherit;"> https://github.com/lukmayer</span></span>
+<span id="cb4-10"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">@</span>willuk</span>
-<span id="cb4-13">   <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">   </span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">-</span> icon<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span> envelope</span>
-<span id="cb4-14">     text<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">:</span> Email</span>
-<span id="cb4-15">     href<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">:</span> mailto<span class="sc" style="color: #5E5E5E;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">:</span>willuk<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"> medium</span></span>
+<span id="cb4-11"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">@</span>vivaldi.net</span>
-<span id="cb4-16"><span class="sc" style="color: #5E5E5E;
+font-style: inherit;">     </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Medium</span></span>
+<span id="cb4-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">     </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> https://medium.com/@willuk</span></span>
+<span id="cb4-13"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">   </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> envelope</span></span>
+<span id="cb4-14"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">     </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">text</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Email</span></span>
+<span id="cb4-15"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">     </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">href</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> mailto:willuk@vivaldi.net</span></span>
+<span id="cb4-16"><span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">---</span></span></code></pre></div>
 </details>

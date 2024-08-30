@@ -66,8 +66,7 @@ Create a directory. In this example, we'll call it `login_portal`.
 
 Now, in this directory, create `index.html` with the following content:
 
-```{r, eval=FALSE}
-
+```{html, eval=FALSE}
 <!DOCTYPE html>
 <html>
 <head>
@@ -255,8 +254,7 @@ Finally, open your `_quarto.yml` and make sure it has the following:
 
 \
 
-```{r, eval=FALSE}
-
+```{yaml, eval=FALSE}
 project:
   type: website
   output-dir: "a{yourpasswordhash}"
@@ -283,7 +281,7 @@ All you need to do is paste the following HTML/JS on every Quarto document behin
 
 \
 
-```{r, eval=FALSE}
+```{html, eval=FALSE}
 <script>
 window.addEventListener('load', () => {
   // Change the URL in the address bar after load
