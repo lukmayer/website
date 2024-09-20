@@ -9,7 +9,7 @@
 <link>https://lukmayer.github.io/blog_index.html</link>
 <atom:link href="https://lukmayer.github.io/blog_index.xml" rel="self" type="application/rss+xml"/>
 <description>Lukas Mayer&#39;s personal blog - tech tips, life-style recommendations, software development, research, data science</description>
-<generator>quarto-1.5.53</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Sun, 25 Aug 2024 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Phone less, without being phoneless</title>
@@ -46,7 +46,7 @@
 <div>
 
 </div>
-<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout-nrow="1" data-layout="columns">
+<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout="columns" data-layout-nrow="1">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><a href="assets/home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://lukmayer.github.io/posts/assets/home.png" class="img-fluid" width="270"></a></p>
