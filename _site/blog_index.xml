@@ -87,6 +87,7 @@ BigBurger®
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>software</category>
   <category>languages</category>
+  <category>duolingo</category>
   <guid>https://lukmayer.github.io/posts/duolingo.html</guid>
   <pubDate>Sat, 21 Sep 2024 07:00:00 GMT</pubDate>
   <media:content url="https://lukmayer.github.io/posts/assets/duo.png" medium="image" type="image/png" height="81" width="144"/>
@@ -126,7 +127,7 @@ BigBurger®
 <div>
 
 </div>
-<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout-nrow="1" data-layout="columns">
+<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout="columns" data-layout-nrow="1">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><a href="assets/home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://lukmayer.github.io/posts/assets/home.png" class="img-fluid" width="270"></a></p>

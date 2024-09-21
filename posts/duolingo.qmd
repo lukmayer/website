@@ -6,6 +6,7 @@ date: "2024-09-21"
 categories:
   - software
   - languages
+  - duolingo
 image: "assets/duo.png"
 comments:
   utterances:
