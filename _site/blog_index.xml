@@ -10,7 +10,86 @@
 <atom:link href="https://lukmayer.github.io/blog_index.xml" rel="self" type="application/rss+xml"/>
 <description>Lukas Mayer&#39;s personal blog - tech tips, life-style recommendations, software development, research, data science</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Sat, 21 Sep 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 22 Sep 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Vivaldi is a strange browser</title>
+  <dc:creator>Luke </dc:creator>
+  <link>https://lukmayer.github.io/posts/vivaldi2.html</link>
+  <description><![CDATA[ 
+
+
+
+  
+
+
+<p>Vivaldi is by-far my favorite browser thanks to its unique and extensive feature set, which I touched on in my first Vivaldi post. However, as a power-user of two years going strong, I have noticed a thing or two about it that seem a little odd! Here is a collection of all those little things that to me were unexpected, frustrating, or desperately needed in Vivaldi. I’ll be talking from the perspective of someone who uses the flatpak version of Vivaldi, assuming that the quirks are the same across platforms.</p>
+<p><br>
+</p>
+<section id="what-is-up-with-sync" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-up-with-sync">What is up with Sync?</h2>
+<p>Vivaldi offers a feature that allows you to sync things like your bookmarks and your settings to their server (encrypted), so that you can easily recreate your configuration on a different machine. This is of course a great feature and I’m glad it’s there. However, what’s really frustrating about it is that it doesn’t sync everything. For example, notes and reading list contents are synced, but the list of RSS feeds you follow is not. Settings are synced, except the keyboard shortcuts (very annoying). Your theme is not synced, and neither is your configuration of the UI. Your calendar and mail accounts need to be added anew every time as well. From the user’s perspective, this feels like a mess. Isn’t my list of feeds literally just a list of links? Why would that not be syncable? Same with the keyboard shortcuts etc. It’s just really confusing and I hope they expand sync soon to include basically everything.</p>
+<p><br>
+</p>
+</section>
+<section id="calendar-is-weird-on-android-its-even-weirder" class="level2">
+<h2 class="anchored" data-anchor-id="calendar-is-weird-on-android-its-even-weirder">Calendar is weird; on Android it’s even weirder!</h2>
+<p>The built-in calendar is amazing, and currently it’s the main way I organize my schedule and To-Do’s. However, it’s not without its quirks. For example, if you use the To-Do list, you can’t create multiple different lists. Or can you? Actually, you can, but it’s unintuitive to the point I only learned about it a few months ago. Basically, you have to create a new calendar, and then you can create a new To-Do and assign it to that calendar. To view one list at a time, modify the list of calendars being shown. If you use the tasks panel you would never know this, because it doesn’t show the list of calendars. You only come to appreciate the existence of this “naturally” if you use the internal calendar page rather than the panel.</p>
+<p>Using calendar on mobile devices is even stranger. Unlike the Desktop client, the mobile app does not have the calendar built-in. This is surprising in itself, as it does seem like something that mobile users of Vivaldi would really want, especially given that other “productivity features”, e.g., notes, are available on mobile. What’s weird is that this does not imply you can’t use the calendar on mobile. Of course if you use a popular calendar that you set up with Vivaldi like Google Calendar, you can access it on your phone using Google’s app. But what if you use Vivaldi Webmail as the calendar provider, like me? After all, there is no Vivaldi Webmail app, so how to do it? It turns out you can use a third-party app that supports CalDAV, like DAVx5, to sync your Vivaldi calendar to your phone. This is a bit of a hassle, and it’s not clear to me why Vivaldi doesn’t just integrate the calendar and everything else into the mobile app.</p>
+<p><br>
+</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you want to use DAVx5, be sure to download it from F-droid, where it’s free, rather than the Play Store where it costs money.</p>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="panels-and-pop-outs-should-have-feature-parity-with-internal-pages" class="level2">
+<h2 class="anchored" data-anchor-id="panels-and-pop-outs-should-have-feature-parity-with-internal-pages">Panels (and Pop-outs) should have feature parity with internal pages</h2>
+<p>As I mentioned in the calendar section, using the panel version of a feature is often inferior to the non-panel implementation. This is pretty strange when considering that the default configuration of Vivaldi heavily nudges you towards using the panels since it’s part of the default UI. This is very unfortunate as in the past it has led me (and therefore probably also others) to initially write off features as not mature enough for my use-case, when actually they were, just not their panel implementation. Given this situation, the Vivaldi team should strive to ensure that the features are identical across the different instantiations, so that users have the flexibility to pick and choose the version that suits them better, without compromising on functionality.</p>
+<p>Feature parity also implies that there should be an internal page version, a panel version and a pop-out version of every major feature. This is not the case for most features! I think Downloads is the only one to have all three versions close to parity.</p>
+<p><br>
+</p>
+</section>
+<section id="the-unwritten-rules-of-ui-customization" class="level2">
+<h2 class="anchored" data-anchor-id="the-unwritten-rules-of-ui-customization">The unwritten rules of UI customization</h2>
+<p>Vivaldi lets you add/remove buttons from the UI, as well as move them around. You can also hide/unhide the bars on which these buttons sit. Basically there is the Window Title bar, the Tab bar, the Address bar, and the Status bar. There are quite a few non-obvious rules about this customization. For example, you can put icons (e.g.&nbsp;panels) on the status bar, hide the status bar, and still use the panel so long as you hit the keyboard shortcut to activate it! This is not true for the panel bar, which is usually the home of these buttons. Every time you hide the panel bar, the panel will unload, which means opening panels takes a lot longer than it should. If you activate a panel while the panel bar is hidden, it will become unhidden even if the panel button is not actually on the panel bar. Personally, I find this automatic unhiding of the panel bar and its associated unloading behavior pretty annoying, and I wish this could be changed.</p>
+<p>The address bar needs to contain an address field if you wish to use the keyboard shortcuts to focus the address bar. What’s strange is that you can hide the address bar and the keyboard short cut will still work, with a field opening so that you can see what you are typing. This is awesome! Whats less good however is that it’s not really feasible to hide the address bar, especially if you use the built-in mail client. This is because the mail client uses the address bar to show mail UI, and some of it cannot be replaced with keyboard shortcuts. This forces you to either manually hide/unhide the address bar or just live with one more bar than you would like. If you commit to hiding the address bar and do not have tabs on top, Vivaldi will replace it with a window title bar instead of just having nothing at the top like you asked. This is not a big deal, but it’s a little annoying.</p>
+<p>Lastly, you can’t put anything anywhere, which is a little disappointing. For example, you can have only some very specific things on the window title bar, and only the workspace switcher on the tab bar. I would like to see more flexibility in this regard.</p>
+<p><br>
+</p>
+</section>
+<section id="what-i-want-for-christmas" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-want-for-christmas">What I want for Christmas</h2>
+<p>All the little annoyances aside, I really love Vivaldi and I think it’s the best browser out there. However, there are a few features that I would really like to see added. One such feature is the introduction of a Firefox-style overflow menu. I’d like it to basically be an icon you can add to the UI which acts as a folder for other icons. Let’s say you have some panels for work, some for personal stuff, and some for fun. You could put all the work panels in the work overflow menu, and all the personal panels in the personal overflow menu. This would make the UI a lot cleaner (especially if you use lots of panels) and more organized.</p>
+<p>Workspace specific UI is tangentally related to the first point. Basically, let’s again think about you having a work workspace and a personal workspace. You could have a different set of panels, buttons, and bars for each workspace. This would be really cool, and would make it easier to separate work and personal stuff. This should probably be optional though, in case you only use workspaces for tab separation.</p>
+<p>The ability to have a “One line” configuration is something I’d love to see. I have seen this in custom Firefox CSS, where basically the tab bar and the address bar are combined into one. This would be great for people who want to maximize screen real estate, or those who crave minimalistic configurations.</p>
+<p>Another minimalism craving I have would be an option to automatically hide menu bars when not in use. Brave browser has this, where if you hover your cursor over the vertical tab bar, it will expand, while only showing you the favicons when not in use. This is a great feature and I would love to see an expanded version of this idea that applies to most, maybe all menu bars in Vivaldi.</p>
+<p>Lastly, since Vivaldi is all about customization, I would love to see what other people are doing with it. Therefore, it would be amazing to export the entire setup you have for Vivaldi (minus your personal data of course) and share it with others. Kind of like how you can share themes, but with the entire configuration. This would be a great way to learn about how other people use Vivaldi, which could serve as an inspiration for your own setup.</p>
+<p><br>
+</p>
+<hr>
+<p>That’s all I have right now! Are there any quirks I missed? Or any features you’re dying to see? I’d be interested to hear about them in the comments :)</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>software</category>
+  <category>vivaldi</category>
+  <guid>https://lukmayer.github.io/posts/vivaldi2.html</guid>
+  <pubDate>Sun, 22 Sep 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://lukmayer.github.io/posts/images/vivaldi_logo.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>2000+ days of Duolingo - Worth it?</title>
   <dc:creator>Luke </dc:creator>
@@ -90,7 +169,7 @@ BigBurger®
   <category>duolingo</category>
   <guid>https://lukmayer.github.io/posts/duolingo.html</guid>
   <pubDate>Sat, 21 Sep 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://lukmayer.github.io/posts/assets/duo.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://lukmayer.github.io/posts/images/duo.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Phone less, without being phoneless</title>
@@ -127,7 +206,7 @@ BigBurger®
 <div>
 
 </div>
-<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout-nrow="1" data-layout="columns">
+<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout="columns" data-layout-nrow="1">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><a href="assets/home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://lukmayer.github.io/posts/assets/home.png" class="img-fluid" width="270"></a></p>

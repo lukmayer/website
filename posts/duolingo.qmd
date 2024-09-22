@@ -7,7 +7,7 @@ categories:
   - software
   - languages
   - duolingo
-image: "assets/duo.png"
+image: "images/duo.png"
 comments:
   utterances:
     repo: lukmayer/site_comments
