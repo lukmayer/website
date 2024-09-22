@@ -78,7 +78,7 @@ Tip
 <p><br>
 </p>
 <hr>
-<p>That’s all I have right now! Are there any quirks I missed? Or any features you’re dying to see? I’d be interested to hear about them in the comments :)</p>
+<p>That’s all I have right now! Are there any quirks I missed? Or any features you’re dying to see? If so, I’d be interested to hear about them in the comments :)</p>
 
 
 </section>
@@ -206,7 +206,7 @@ BigBurger®
 <div>
 
 </div>
-<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout="columns" data-layout-nrow="1">
+<div class="cell column-screen-inset-shaded quarto-layout-panel" data-layout-nrow="1" data-layout="columns">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><a href="assets/home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://lukmayer.github.io/posts/assets/home.png" class="img-fluid" width="270"></a></p>
