@@ -1,0 +1,51 @@
+---
+title: "How to use R in Visual Studio Code"
+description: "A guide to setting up R in Visual Studio Code"
+author: "Luke"
+date: "2024-10-2"
+categories:
+  - programming
+  - R
+  - vscode
+image: "images/" #TODO
+comments:
+  utterances:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    issue-term: url
+draft: true #TODO
+---
+
+- Radian
+- R extension
+- some settings in settings.json
+- Quarto (if you use rmd)
+
+
+Settings to make radian work properly
+
+  "r.rterm.linux": "/home/lm/.local/bin/radian",
+  "r.bracketedPaste": true,  
+
+
+Setting to make plotting work more smoothly
+
+  "r.plot.useHttpgd": true,
+
+
+change where plots pop up
+
+"r.session.viewers.viewColumn": {
+    "plot": "Active",
+    "viewer": "Active",
+    "view": "Active",
+    "helpPanel": "Active"
+  },
+
+Change where quarto preview pops up
+
+  "quarto.render.previewType": "external",
+
+
+
+Make sure R is "attached"
