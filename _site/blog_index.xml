@@ -10,7 +10,165 @@
 <atom:link href="https://lukmayer.github.io/blog_index.xml" rel="self" type="application/rss+xml"/>
 <description>Lukas Mayer&#39;s personal blog - tech tips, life-style recommendations, software development, research, data science</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Sun, 22 Sep 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 04 Oct 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>How to use R in Visual Studio Code - The Essentials</title>
+  <dc:creator>Luke </dc:creator>
+  <link>https://lukmayer.github.io/posts/r_vscode.html</link>
+  <description><![CDATA[ 
+
+
+
+  
+
+
+<p>Have you ever wanted to use R in an IDE that is not RStudio? I’m sure many of you are already using the immensely popular Visual Studio Code for other programming languages or programming related tasks. Perhaps you have even gone so far and installed the R extension in VS Code, just to learn that it offers no way near the power and convenience of RStudio?</p>
+<p>But worry not, I’m here to share with you the gospel of R in VS Code! I have been fiddling with my set up for a little while now, searching far and wide for the best resources to make R in VS Code a pleasent experience. And I think I have gotten to the point where I don’t really need RStudio anymore.</p>
+<p>You really only need to install a few things to reproduce a good base workflow. I don’t know what kind of obscure Rstudio features you consider essential, so I can’t promise to cover anything and everything. But this should be a good starting point, and is in fact enough for me to do all my work with only negligible inconveniences.</p>
+<p>So let’s get started.</p>
+<p><br>
+</p>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<p>First things first, you need to install the R extension for Visual Studio Code from the extension marketplace. This will give you syntax highlighting, code completion, and a few other essentials like the variable manager.</p>
+<p><br>
+</p>
+<section id="radian" class="level3">
+<h3 class="anchored" data-anchor-id="radian">Radian</h3>
+<p>Unfortunately using an R terminal in VS Code is not as nice as it is in RStudio. One thing I really missed was being able to tell whether the terminal was busy or not. Thankfully, we can install Radian, which is a python package that provides a nicer R terminal. You can install it with the following command:</p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pip</span> install radian</span></code></pre></div>
+<p><br>
+</p>
+<p>Once installed, you can set it as the R terminal in the settings.json file. You can open the settings.json file by pressing <code>Ctrl + ,</code> and then clicking on the three dots in the top right corner and selecting “Open settings.json”. Then you can add the following line to the file:</p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"r.rterm.linux":</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"/home/usr/.local/bin/radian",</span></span></code></pre></div>
+<p><br>
+</p>
+<p>The exact path may vary depending on your system, but you can find it by running <code>which radian</code> in the terminal. Also note that the command is specific to Linux, so you may need to change it if you are on Windows or MacOS.</p>
+<p>What’s nice about Radian is that it has a few features that the default R terminal in VS Code doesn’t have. For example, it has syntax highlighting. The prompt is also a bit more informative, as it tells you when R is busy.</p>
+<p>However, there are still some tweaks we need to make to make Radian work properly in VS Code. First, we need to enable bracketed paste mode in the settings.json file. This will make it so that when you paste code into the terminal, it will be pasted as a single block, rather than line by line. This can be done by adding the following line to the settings.json file:</p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb3-1"><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"r.bracketedPaste":</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">true,</span></span></code></pre></div>
+<p><br>
+</p>
+</section>
+<section id="plots" class="level3">
+<h3 class="anchored" data-anchor-id="plots">Plots</h3>
+<p>By default, plots will pop up in a separate window. I find this very annoying, and would much rather have my plots be in a tab in the editor. This can be done by adding the following line to the settings.json file:</p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb4-1"><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"r.session.viewers.viewColumn":</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span> </span>
+<span id="cb4-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"plot"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Active"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-3">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"viewer"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Active"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-4">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"view"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Active"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-5">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"helpPanel"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Active"</span> </span>
+<span id="cb4-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">,</span></span></code></pre></div>
+<p><br>
+</p>
+<p>Another nicety is to switch to the httpgd backend for plotting. This will make it so that plots are rendered in a browser (inside VSCode), which allows you to interact with them more. This can be done by adding the following line to the settings.json file:</p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb5-1"><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"r.plot.useHttpgd":</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">true,</span></span></code></pre></div>
+<p><br>
+</p>
+</section>
+<section id="quarto-for-rmarkdown-users" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-for-rmarkdown-users">Quarto (for Rmarkdown users)</h3>
+<p>If you love Rmarkdown, you will miss it sorely in VS Code. Configuring it to work properly is pretty involved. Thankfully, the folks at Posit have revamped Rmarkdown into a new package called Quarto. It’s almost identical to Rmarkdown, but with a more unified development effort. Most importantly, it is designed to be IDE agnostic, so it works great in VS Code.</p>
+<p>To install Quarto, simply head to Quarto’s <a href="https://quarto.org/">website</a> and follow the instructions there. You will also need to install the Quarto extension for VS Code from the marketplace.</p>
+<p>I really love Quarto, and I use it for pretty much everything now, including this website. However, it’s still a new extension so there are some bugs and missing features. For example, the preview window can be a bit more buggy than it is in Rstudio. I find that it works best when you set it to open in an external browser, and then kill and restart the preview server everything you want to see changes you made. This can be done by adding the following line to the settings.json file:</p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb6-1"><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"quarto.render.previewType":</span> <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"external",</span></span></code></pre></div>
+<p><br>
+</p>
+<p>Make sure to double check the keyboard shortcuts Quarto uses, as they are not always identical to the ones in Rstudio.</p>
+<p><br>
+</p>
+</section>
+<section id="make-sure-r-is-attached" class="level3">
+<h3 class="anchored" data-anchor-id="make-sure-r-is-attached">Make sure R is attached</h3>
+<p>Sometimes the R extension will not automatically “attach” R to the session. This means the environment will not be shared between the terminal and the editor, meaning you won’t see anything in the variable manager. You can fix this by clicking the button in the bottom right corner of the status bar that says “R: not attached”. This will open paste a terminal command that will attach R to the session.</p>
+<p><br>
+</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>And that’s it! You should now have a functioning variable manager, terminal, plotting panel, and markdown setup. If you found any other tricks that you think I missed, do let me know in the comments!</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>programming</category>
+  <category>R</category>
+  <category>vscode</category>
+  <category>quarto</category>
+  <guid>https://lukmayer.github.io/posts/r_vscode.html</guid>
+  <pubDate>Fri, 04 Oct 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://lukmayer.github.io/posts/images/vscode.png" medium="image" type="image/png" height="102" width="144"/>
+</item>
 <item>
   <title>Vivaldi is a strange browser</title>
   <dc:creator>Luke </dc:creator>
