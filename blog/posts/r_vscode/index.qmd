@@ -5,7 +5,7 @@ author: "Luke"
 date: "2024-10-4"
 categories:
   - programming
-  - R
+  - r
   - vscode
   - quarto
 image: "images/vscode.png" 
