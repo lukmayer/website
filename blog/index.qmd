@@ -10,12 +10,14 @@ listing:
   sort: "date desc"
   sort-ui: [title, date, reading-time]
   filter-ui: [title, date, categories]
-  categories: true
+  categories: numbered
   feed: true
   page-size: 6
 format: 
   html:
     toc: false
+    grid:
+      margin-width: 300px
 ---
 
 <div class="quarto-content hidden">

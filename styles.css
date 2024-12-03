@@ -280,20 +280,21 @@ ol > li::marker {
     color: black; /* Set text color to black */
 }
 
-
 .footer {
     overflow: hidden; /* Ensures that the content stays within the rounded corners */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+    background-color: #2f2f2f; /* Non-transparent background */
 }
 
 .nav-footer {
-    background-color: rgba(47, 47, 47, 0.6); /* Semi-transparent background */
+    background-color: #2f2f2f; /* Non-transparent background */
     display: flex;
     justify-content: space-between; /* Distribute the items evenly with space between them */
     align-items: center; /* Vertically center the child elements */
     padding: 10px; /* Optional: Adjust padding if needed */
-  }
+    border-radius: 15px; /* Rounded corners */
+}
 
 .nav-footer-left,
 .nav-footer-center,
@@ -317,7 +318,7 @@ ol > li::marker {
     color: #00bf63;
 }
 
-/* apply the initial white color to the code-slash button icon */
+/* Apply the initial white color to the code-slash button icon */
 .nav-footer .bi-code-slash {
     color: white;
     transition: color 0.3s ease; /* Smooth transition on hover */
@@ -620,15 +621,17 @@ body div.sourceCode {
 
 .category-container {
     background-color: #1a1a1a;
-    padding: 20px;
+    padding: 2px;
     border-radius: 8px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
 }
 
 .category {
     display: inline-block;
-    padding: 8px 16px;
-    margin: 4px;
+    padding: 2px 8px;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 4px;
     background-color: #2d2d2d;
     border-radius: 20px;
     color: #e0e0e0;
@@ -643,10 +646,12 @@ body div.sourceCode {
 
 .quarto-category-count {
     display: inline-block;
-    padding: 2px 8px;
-    margin-left: 6px;
+    padding: 2px 2px;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 4px;
     background-color: #404040;
-    border-radius: 12px;
+    border-radius: 20px;
     font-size: 0.9em;
     color: #9e9e9e;
 }

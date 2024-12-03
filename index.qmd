@@ -14,19 +14,20 @@ back-to-top-navigation: false
 
 :::{.column-page}
 
-\
-
 :::: {.columns}
 
-::: {.column width="40%" style="padding-right: 20px;"}
+::: {.column style="padding-right: 20px;"}
 
 ::: {.animate__animated .animate__fadeIn style="--animate-duration: 2s;"}
+
+\
+
 ![](assets/luke-23-circle.png)
 :::
 
 :::
 
-::: {.column width="60%" style="padding-left: 20px;"}
+::: {.column style="padding-left: 20px;"}
 
 ### Welcome to my website!
 
@@ -57,7 +58,7 @@ I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers
     <i class="bi bi-mastodon" style="font-size: 1.5rem; margin-right: 8px;"></i>Mastodon
 </a>
 <!-- Google scholar -->
-<a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=xl >}}</i> Google Scholar
+<a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Google Scholar
 </a>
 
 </div>

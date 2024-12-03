@@ -1330,10 +1330,10 @@ url("./bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("woff");
 .bi-watch::before { content: "\f616"; }
 .bi-water::before { content: "\f617"; }
 .bi-whatsapp::before { content: "\f618"; }
-.bi-wifi-1::before { content: "\f619"; }
-.bi-wifi-2::before { content: "\f61a"; }
-.bi-wifi-off::before { content: "\f61b"; }
-.bi-wifi::before { content: "\f61c"; }
+.bi-WiFi-1::before { content: "\f619"; }
+.bi-WiFi-2::before { content: "\f61a"; }
+.bi-WiFi-off::before { content: "\f61b"; }
+.bi-WiFi::before { content: "\f61c"; }
 .bi-wind::before { content: "\f61d"; }
 .bi-window-dock::before { content: "\f61e"; }
 .bi-window-sidebar::before { content: "\f61f"; }
