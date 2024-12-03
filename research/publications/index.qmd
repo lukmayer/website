@@ -3,7 +3,7 @@ title: "Publications"
 description: "Lukas Mayer's research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development"
 format: 
   html:
-    callout-appearance: "default"
+    callout-appearance: default
     code-overflow: wrap
     code-line-numbers: true
     code-block-border-left: false
@@ -49,6 +49,17 @@ format:
 .citation-box:hover {
   background-color: #222222;
 }
+
+/* change the drop-down arrow */
+.py-1 {
+    padding-top: .25rem !important;
+    padding-bottom: .25rem !important;
+    scale: 2;
+}
+
+div.callout-important.callout {
+    border-left-color: #5f5f5f;
+}
 </style>
 
 <script>
@@ -76,7 +87,7 @@ format:
 
 
 ## Under Review / in Progress 
-::: {.callout collapse="true"}
+::: {.callout-important collapse="true" icon=false}
 
 # ***<span style="color: #00a653;">"The Calibration Gap between Model and Human Confidence in Large Language Models"</span>*** <br> Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., <span style="color: #c678dd;">Mayer, L. W.</span>, & Smyth, P. (2024) *arXiv preprint*
 ---
@@ -105,7 +116,7 @@ Citation:
 :::
 
 
-::: {.callout collapse="true"}
+::: {.callout-important collapse="true" icon=false}
 # ***<span style="color: #00a653;">"Waste not want not: Computational methods to maximise attendance in group research"</span>*** <br> <span style="color: #c678dd;">Mayer, L. W.</span>, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) *Behavior Research Methods*. 
 
 
@@ -128,7 +139,7 @@ Citation:
 ## 2024
 
 
-::: {.callout collapse="true"}
+::: {.callout-important collapse="true" icon=false}
 
 # ***<span style="color: #00a653;">"Learning with AI Assistance: A Path to Better Task Performance or Dependence?"</span>*** <br> Karny, S., <span style="color: #c678dd;">Mayer, L. W.</span>, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M. (2024). *Proceedings of the ACM Collective Intelligence Conference*. 
 
