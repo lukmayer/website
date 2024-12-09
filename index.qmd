@@ -54,7 +54,7 @@ I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers
     <i class="bi bi-medium" style="font-size: 1.5rem; margin-right: 8px;"></i>Medium
 </a>
 <!-- Mastodon -->
-<a href="https://vivaldi.social/@willuk" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
+<a rel="me" href="https://social.vivaldi.net/@Willuk" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
     <i class="bi bi-mastodon" style="font-size: 1.5rem; margin-right: 8px;"></i>Mastodon
 </a>
 <!-- Google scholar -->
