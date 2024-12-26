@@ -1,0 +1,161 @@
+---
+title: "Statistical Bouqets: My first venture into creative coding"
+description: "Random.jl + Distribution.jl + CairoMakie.jl = Flowers?"
+author: "Luke"
+date: "2024-12-26"
+categories:
+  - art
+  - julia
+image: "images/371907020.png"
+comments:
+  utterances:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    issue-term: url
+---
+
+Creative coding, where one leverages computer programming to make art, comes in many names and forms. Some people call this practice "creative coding", others "procedural art", and yet others "generative art"[^1]. The work itself is even more varied than its various umbrella terms: static images, animations, interactive pieces, transformations of existing media, and so much more. 
+
+[^1]: "Generative Art" "should not be confused with visualizations made using Generative AI, as the creation of the underlying code is essential to the process. 
+
+I was first exposed to code art through academics in the R community that I followed on Twitter, which must have been sometime in 2021. I was pretty impressed with the creative use of random number generation and "hacking" what was meant to be a data visualization package to make art. Since then, I've uncovered a few different venues where people share their code art, such as the [OpenProcessing Community](https://openprocessing.org/discover/#/trending), and [r/generative on Reddit](https://www.reddit.com/r/generative/).
+
+I was attracted to code art not just because of the beauty of the pieces and the sheer possibilities the method gives rise to, but also because I felt it would be a nice way of practicing programming skills without having to wait for a "real" project to come along. 
+
+What took me 3 years then to get going? Well, getting started is kind of the hardest part. All the work you see is extremely impressive, at the same time, its a very niché subject. This means there are not that many resources available for beginners, especially if you have a specific language in mind. On top of that, there is that feeling of "this is not good enough to be art" that holds one back. Finally there is the typical "I don't know what to make" problem. 
+
+In a weird seeming way, it was exactly this assumption that I needed structure in my learning process that seemed to be holding me back from commencing my journey. What I ended up doing to get over this initial hurdle is very simple. Have a basic understanding of the general process of creation (specifying some structure, leaving other parts random), and then just experiment. The "just play around and see what happens" approach was actually the only way that seemed sensible given I had no idea what I wanted to make, but did want to use Julia - a language that is not widely used in the code art community.
+
+My process began with picking a visualization library that I wanted to use. I chose Makie because it seemed to be highly versatile (judging by the github repo) and critically-acclaimed (as judged by reddit comments). I then figured out how to go from a 2D-plot to a "Canvas". In other words, how to remove all the elements that normal people want in their plots, like axes, labels, etc. I then tried to figure out how to generate some random values to plot as a scatter plot on this canvas. After that, I explored different geometries and color scales, until I had something that looked like a crazy bowl of neon spaghetti. My 2D bowl of unappetizing angular pasta actually looked kind of artsy, so I was starting to feel a little inspired. I decided to add other graphical elements on top, and the whole piece evolved into a kind of abstract flower bouqet.   
+
+It really took me a bit to start thinking less in terms of matching the visualization to the data I had, which is what you usually do in dataviz, and instead think more so about how to make data that will look like something I want to see. A second surprise I experienced during the process was to intentionally refrain from planning the output too much. Most traditional art forms require a lot of planning, but with creative coding, it should be the randomness inherent in the generative process that makes one instance ugly, and another beautiful. So if you look at my code attached at the end of this post, you can see that there some additional elements that I ended up not using because the result started to look "over-engineered". 
+
+What I settled on after a few hours of tinkering was neither technically nor visually complex, and yet, quite beatiful in my opinion.
+
+\
+
+![](images/371907020.png)
+
+::: {.text-center}
+  *Statistical Bouqets: #371907020*
+::: 
+
+\
+
+The code simply generates start and end points for lines, as well as some color values. The values are all drawn from statistical distributions. Then I layer two scatter plots on top of the lines, one for the petals and one for the flower head. The scatter plot layers simply differ in the marker shape and size. One flower (Stem + Petals + Head) is generated at a time so that layers do not overlap illogically. The background is a heatmap of random values. I tweaked the color scales and their effective ranges until I was satisfied with the color scheme in the output. If you look closely at my code, you can see how I modified specific lines of code to place elements and achieve the shapes I wanted.
+
+
+I very much enjoyed this learning experience! I definitely learned quite a bit about the plotting library, and it's pretty interesting to play with code with no overly specific end-goal in mind. I'm really looking forward to learning how to give rise to more complex geometries, incorporate more randomness, and add motion in the future!
+
+---
+
+For anyone curious, here is my code :)
+
+```julia
+
+using Random
+using Distributions
+using CairoMakie
+
+function generate_random_graph(seed=nothing; n=200)
+  if seed === nothing
+    seed = rand(1:10^9)
+  end
+  Random.seed!(seed)
+
+  # flower stems
+  x_start = rand(Normal(50, 2), n÷2)
+  y_start = rand(Normal(4, 1), n÷2)
+  x_end = rand(Normal(50, 15), n÷2)
+  y_end = rand(Normal(10, 1), n÷2)
+
+  x = vcat(x_start, x_end)
+  y = vcat(y_start, y_end)
+
+  # stem color
+  z = rand(Beta(2,1), n÷2)
+
+  # Petal color
+  c = rand(Beta(1,1), n÷2)
+
+  #flower head color
+  h = rand(Beta(1,1), n÷2)
+  
+  #Petal size
+  s = rand(50:160, n÷2)
+
+  # FLower pot
+  px = rand(Uniform(35, 65), n*20)
+  py = rand(Uniform(1, 5), n*20)
+  pc = rand(Beta(2,1), n*20)
+
+  #Background color
+  n_rows, n_cols = 100, 15
+  data = rand(Normal(0, 1), n_rows, n_cols)
+
+  #table color
+  nrows2, ncols2 = 20, 40
+  data2 = rand(Normal(0, 0.5), nrows2, ncols2)
+
+  # Create the figure
+  fig = Figure(size = (800, 800))
+  ax = Axis(fig[1, 1], 
+    xticklabelsvisible = false,
+    yticklabelsvisible = false,
+    xticksvisible = false,
+    yticksvisible = false,
+    xgridvisible = false,
+    ygridvisible = false,
+    backgroundcolor = :black,
+    leftspinevisible = false,  
+    rightspinevisible = false,
+    topspinevisible = false,
+    bottomspinevisible = false,
+    spinewidth = 0)
+
+
+  #layers
+  #background
+  heatmap!(ax, data,
+    colormap = :blues, colorrange = (-2, 3))
+
+  #table
+  #=
+  x_pos = range(0, 100, length=n_cols)  # Horizontal position
+  y_pos = range(0, 8, length=n_rows)   # Vertical position
+  heatmap!(ax, x_pos, y_pos, data2,
+      colormap = :YlOrBr, colorrange = (-5, .1))
+  =#
+
+  #flowers
+  for g in 1:(n÷2)
+      lines!(ax, [x_start[g], x_end[g]], [y_start[g], y_end[g]],
+          color = z[g], colormap = :speed, colorrange = (-0.1, 1),
+          linewidth = 5, linestyle = :solid)
+      scatter!(ax, x_end[g], y_end[g],
+      color = c[g], colormap = :inferno, colorrange = (-0.2, 1.4),
+      marker = :cross, markersize = s[g])
+      scatter!(ax, x_end[g], y_end[g],
+      color = h[g], colormap = :heat, colorrange = (0, 1.4),
+      marker = :circle, markersize = (s[g]÷4))
+  end
+
+  #flower pot
+  #=
+  scatter!(ax, px, py,
+   color = pc, colormap = :greys, colorrange = (-0.5, 1),
+   marker = :octagon, markersize = 10)
+  =#
+
+  return fig, seed
+end
+
+fig1 = generate_random_graph()
+fig1[1]
+
+
+name = string(fig1[2])
+#save to file
+#save(name*".png", fig1[1])
+ 
+```

@@ -15,7 +15,7 @@ website:
         href: https://github.com/lukmayer/website
         aria-label: Source code
     center: |
-      Powered by <a href='https://quarto.org' target='_blank'><img src='assets/quarto.png' alt='Quarto' style='width: 100px;'></a>
+      Made with <a href='https://quarto.org' target='_blank'><img src='assets/quarto.png' alt='Quarto' style='width: 100px;'></a>
     right:
       - icon: rss
         href: /blog/index.xml
