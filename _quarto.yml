@@ -76,6 +76,7 @@ format:
     fig-responsive: true
     lightbox: true
     include-after-body: page-transitions.html
+    include-before-body: mods.html
 
     
 execute:
