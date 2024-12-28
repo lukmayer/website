@@ -1,6 +1,6 @@
 ---
 title: "Statistical Bouqets: My first venture into creative coding"
-description: "Random.jl + Distribution.jl + CairoMakie.jl = Flowers?"
+description: "Random.jl + Distributions.jl + CairoMakie.jl = Flowers?"
 author: "Luke"
 date: "2024-12-26"
 categories:
