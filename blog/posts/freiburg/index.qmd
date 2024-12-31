@@ -1,0 +1,386 @@
+---
+title: "A day trip to Freiburg"
+description: "My first shot at a travel blog post"
+author: "Luke"
+date: "2024-12-31"
+categories:
+  - travel
+  - germany
+image: "images/schlossberg_aussicht.jpg"
+comments:
+  utterances:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    issue-term: url
+---
+
+I grew up in South-West Germany, but in my 13 years there I never visited some of the cities of my state of Baden-Württemberg. That's why my sister and I decided to make a day trip to Freiburg im Breisgau, the only major city in the Black Forest region. Since I was home for the holidays, we took the first best chance to do the 2.5h drive after christmas. Unfortunately, this timing does imply that we did not get to see what Freiburg is like at maximum christmas. Despite that, I was pretty impressed with the city and its surroundings! I'm obviously used to the aestethics of more traditional German cities[^1], but Freiburg has an impressively large and beautiful old-town for its modest size (Population: approx 200k). It's also remarkably close to nature. 
+
+[^1]: Berlin differs significantly from the "German city recipe".
+
+Here's a little photo diary of the trip :)
+
+\
+
+## Road trip to Freiburg
+
+Once we really started to get outside the Stuttgart metropolitan area, temperatures dropped (from -1°C to -8°C) and the landscape became very snowy. 
+
+\
+
+![](images/verschneit1.jpg)
+
+::: {.text-center}
+Zooming past the frozen landscapes part 1.
+:::
+
+\
+
+![](images/verschneit2.jpg)
+
+::: {.text-center}
+Zooming past the frozen landscapes part 2.
+:::
+
+\
+
+
+We also saw lots of old traditional houses typical to the far south of Germany.
+
+\
+
+![](images/hütte1.jpg)
+
+::: {.text-center}
+Traditional family house (left) with some barns (right).
+:::
+
+\
+
+![](images/hütte2.jpg)
+
+::: {.text-center}
+Wooden shingle houses at the border to the Black Forest.
+:::
+
+\
+
+![](images/skifahrer.jpg)
+
+::: {.text-center}
+Villagers casually skiing on the side of the road.
+:::
+
+\
+
+We also drove past this huge 240m tall tower (500+ ft), which sticks out like a sore thumb in the otherwise rural landscape.
+
+\
+
+![](images/aufzugturm.jpg)
+
+::: {.text-center}
+The Thyssenkrupp elevator test tower in Rottweil.
+:::
+
+\
+
+There is also this very cliffy area on the way.
+
+\
+
+![](images/fels1.jpg)
+
+::: {.text-center}
+Cliff with cross on the way to Freiburg.
+:::
+
+\
+
+![](images/fels2.jpg)
+
+::: {.text-center}
+Cliff with cross on the way home from Freiburg.
+:::
+
+\
+
+
+![](images/schwarzwald.jpg)
+
+::: {.text-center}
+The snowy Black Forest.
+:::
+
+\
+
+## Freiburg old town
+
+As I mentioned, the old town of Freiburg is fairly extensive. It's also quite ornamented, with lots of little details on the buildings.
+
+\
+
+![](images/alstadt1.jpg)
+
+::: {.text-center}
+The large cathedral (Münster) can be seem from almost anywhere in the old town.
+:::
+
+\
+
+![](images/altstadt2.jpg)
+
+
+::: {.text-center}
+The city center with view of the Martinstor. The entire core is mostly devoid of cars, with trams, bikes and good old feet being the main modes of transport.
+:::
+
+\
+
+![](images/altstadt3.jpg)
+
+::: {.text-center}
+A lively and quaint street at the edge of the old town. The christmas decorations are still up. 
+:::
+
+\
+
+![](images/naturblick.jpg)
+
+::: {.text-center}
+In some places in the city, you get an unexpected view of the surrounding nature.
+:::
+
+\
+
+![](images/schwabentor.jpg)
+
+::: {.text-center}
+The Schwabentor (lit. "Swabian's Gate"), one of the multiple remaining city gates.
+:::
+
+\
+
+![](images/martinstor.jpg)
+
+::: {.text-center}
+The Martinstor, now featuring a *familiar* business. Also note that trams can pass through both openings of the gate.
+:::
+
+\
+
+![](images/schlossbergsteg.jpg)
+
+::: {.text-center}
+The Schlossbergsteg offers another angle of life in the old town.
+:::
+
+\
+
+![](images/schlossbergsteg2.jpg)
+
+::: {.text-center}
+A hidden private entrance to houses near the Schlossbergsteg. Free view of the Schwabentor included.
+:::
+
+\
+
+![](images/Konviktstrasse.jpg)
+
+::: {.text-center}
+The Konviktstraße, a street with a lot of character thanks to overgrown facades.
+:::
+
+\
+
+![](images/augustinerplatz.jpg)
+
+::: {.text-center}
+The Augustinerplatz, a square with extra fancy decorated buildings.
+:::
+
+\
+
+![](images/mini_bächle.jpg)
+
+::: {.text-center}
+Many streets in the center are lined with these water channels called "Bächle" (lit. "little creek"). They are a unique feature of Freiburg, and a major tripping hazard. Unfortunately they seem to be devoid of water in the winter. The cobbled sidewalks also tend to have mosaic patterns built-in (see top left).
+:::
+
+\
+
+## The Münster and Münsterplatz
+
+The Münster is the main cathedral of Freiburg and is located on the Münsterplatz. The square is also home to the market. The Münsterplatz is a very lively place, even in the cold. It also has a lot of interesting buildings around it.
+
+\
+
+![](images/muensterplatz.jpg)
+
+::: {.text-center}
+The Münsterplatz with the a piece of the market. The only cars allowed here are those of the market vendors.
+:::
+
+\
+
+![](images/historisches_kaufhaus.jpg)
+
+::: {.text-center}
+The historical merchant's hall (Historisches Kaufhaus) on the Münsterplatz with its impressive facade.
+:::
+
+\
+
+![](images/muenster.jpg)
+
+::: {.text-center}
+A profile view of the huge Münster. The tower is 116m tall (that's almost 400 feet).
+:::
+
+\
+
+![](images/muenster_eingang.jpg)
+
+::: {.text-center}
+The large portal into the Münster is lined with many painted statues.
+:::
+
+\
+
+![](images/muenster_innen.jpg)
+
+::: {.text-center}
+The inside of the cathedral was suprisingly dark, but features beautiful stained glass windows (not shown). The christmas trees are still up.
+::: 
+
+\
+
+## Schlossberg
+
+The city has its personal hill, the Schlossberg, which offers a nice nature-getaway right in the city. The hill is sufficiently high to offer a good view of the city and the surrounding area. It also features multiple historical structures and vista points.
+
+\
+
+There are many paths up the hill, but the most convenient way up is to take the Schlossbergbahn, a funicular railway. The entrance to the station is wedged right in between the historical core and a large city park. The end station on the hill features a restaurant.
+
+\
+
+::: {.text-center}
+![](images/schlossbergbahn.mp4)
+
+
+The Schlossbergbahn in action.
+:::
+
+\
+
+![](images/schlossbergturm.jpg)
+
+::: {.text-center}
+The top of the Schlossberg features a tower with a viewing platform.
+:::
+
+\
+
+I actually overcame my fear of heights to take a picture from the tower. The tower may look pretty sturdy, but it has some noticeable wobble at the top.
+
+\
+
+![](images/schlossbergturm_aussicht.jpg)
+
+::: {.text-center}
+Top of the tower. Unfortunateley, my good deeds were not rewarded, as the extra height made the fog even worse.
+:::
+
+\
+
+![](images/schlossberg_aussicht.jpg)
+
+::: {.text-center}
+This was the best view I could get from near the Kanonenplatz on the Schlossberg.
+:::
+
+\
+
+![](images/oberau.jpg)
+
+::: {.text-center}
+A view of Oberau, a district of Freiburg, from the Schlossberg.
+:::
+
+## Schauinsland
+
+There is a close by mountain called the Schauinsland, which is a popular destination for hiking, skiing and some attractions. You can actually reach it with public transport by taking the Tram 2 to its terminal station and then hopping on Bus 21. In our case it made more sense to just take the car to the foot of the mountain. You reach the top with a cable car, which takes you up almost 1.3km (0.8 miles) in altitude. 
+
+\
+
+![](images/schauinslandstrasse.jpg)
+
+::: {.text-center}
+The road to the foot of the Schauinsland has you drive through someone's house.
+:::
+
+\
+
+![](images/seilbahn1.jpg)
+
+::: {.text-center}
+Here's what the cable cars look like. We got lucky and got one for just the two of us.
+:::
+
+\
+
+![](images/seilbahn2.jpg)
+
+::: {.text-center}
+Leaving the station at the foot of the mountain.
+:::
+
+\
+
+![](images/seilbahn3.jpg)
+
+::: {.text-center}
+The view from the cable car up the mountain is pretty nice.
+:::
+
+\
+
+![](images/seilbahn4.jpg)
+
+::: {.text-center}
+Turns out 1.3km of altitude is enough to get above the fog.
+:::
+
+\
+
+![](images/seilbahn6.jpg)
+
+::: {.text-center}
+High up above the clouds.
+:::
+
+\
+
+\
+
+![](images/schauinsland.jpg)
+
+::: {.text-center}
+The view from the top of the Schauinsland. It's noticeably warmer up here.
+:::
+
+## Conclusion
+
+![](images/mittagessen.jpg)
+
+::: {.text-center}
+My sister repping some UCI merch. Also, lunch.
+:::
+
+\
+
+This was an exceptionally nice day trip. I don't usually take many pictures, so that should tell you everything. Of course, we got a little bit unlucky with the timing and the weather in the city, but it was still an amazing experience. It's definetely worth a visit if you're in the area. 
+
+Thanks for following along :)
+

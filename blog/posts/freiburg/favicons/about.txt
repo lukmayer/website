@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Workbench
+- Font Author: Copyright 2021 The Workbench Project Authors (https://github.com/jenskutilek/homecomputer-fonts)
+- Font Source: https://fonts.gstatic.com/s/workbench/v1/FeV8S05Gp6Et7FcfbPFK1rynGd_MxtkvNFmoUDFhgF2VKTGQk6vapdOL0GKqgZyb.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
