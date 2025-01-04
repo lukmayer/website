@@ -271,6 +271,23 @@ This means you'll be redirected to the files that sit in this folder named after
 
 \
 
+
+
+As a sanity check, post-render the login portal should now have a file structure like this:
+
+```
+login_portal/
+├── index.html
+├── styles.css
+├── favicons/  # if you have favicons
+├── project1_username_hash/
+│   └── project1_password_hash/
+└── project2_username_hash/  # a second, separate gated project
+    └── project2_password_hash/
+```
+
+\
+
 ## Step 4: Hiding the hashed URLs
 
 You don't want the hashed URLs to leak, since knowing them allows you to bypass the login portal.
@@ -313,6 +330,8 @@ format:
 
 
 \
+
+
 
 ## Step 5: Deploying
 
