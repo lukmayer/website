@@ -280,10 +280,9 @@ login_portal/
 ├── index.html
 ├── styles.css
 ├── favicons/  # if you have favicons
-├── project1_username_hash/
-│   └── project1_password_hash/
-└── project2_username_hash/  # a second, separate gated project
-    └── project2_password_hash/
+├── username_hash/
+│   └── password_hash/
+
 ```
 
 \
@@ -352,6 +351,19 @@ Finally, go to the settings of the repository on Github, and enable Github pages
 To add more gated content with different access credentials, simply create another Quarto project with different hash names at the same level as the first one.
 
 This also means that you need to render each project separately.
+
+\
+
+```
+login_portal/
+├── index.html
+├── styles.css
+├── favicons/  # if you have favicons
+├── project1_username_hash/
+│   └── project1_password_hash/
+└── project2_username_hash/  # a second, separate gated project
+    └── project2_password_hash/
+```
 
 \
 
