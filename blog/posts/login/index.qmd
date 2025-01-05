@@ -280,8 +280,8 @@ login_portal/
 ├── index.html
 ├── styles.css
 ├── favicons/  # if you have favicons
-├── username_hash/
-│   └── password_hash/
+└── username_hash/
+    └── password_hash/
 
 ```
 

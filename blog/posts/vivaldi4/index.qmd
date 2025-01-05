@@ -1,0 +1,178 @@
+---
+title: "Vivaldi features: Personal Best-of" 
+description: "My favourite features in the Vivaldi browser" 
+author: "Luke"
+date: "01/05/2025"
+categories:
+  - software
+  - vivaldi
+image: "images/vivaldi_logo.png"
+comments:
+    utterances:
+      repo: lukmayer/site_comments
+      theme: github-dark
+      issue-term: url
+---
+
+I've written quite a bit about Vivaldi by now [[1](https://lukmayer.github.io/blog/posts/vivaldi1/index.html)], [[2](https://lukmayer.github.io/blog/posts/vivaldi2/index.html)], [[3](https://lukmayer.github.io/blog/posts/vivaldi3/index.html)] but so far I've never really gone into detail about what I like about it. 
+
+In this post, I'll highlight all the features I like that together make Vivaldi my favourite browser by far.
+
+\
+
+## Customization
+
+Vivaldi is famous for its flexibility. By default, the [Vivaldi UI is quite busy](https://lukmayer.github.io/blog/posts/vivaldi1/index.html), probably to give new users a good impression of just how extensive the feature set is. But if you're like me and prefer a more minimalistic look, then you will be happy to know that you can customize the UI to your heart's content. In principle, you can arbitrarily hide and/or rearrange every button you want, though there are some [(unwritten) rules](https://lukmayer.github.io/blog/posts/vivaldi2/index.html) to what is possible. This is similar to what you can do in Firefox, but on steroids. 
+
+\
+
+![](images/minimal_viv.png)
+
+::: {.text-center}
+My minimal Vivaldi setup
+:::
+
+\
+
+Vivaldi does not force you into a particular workflow, instead consistently giving users multiple options to choose from. As a small example, you can set the tab bar to whichever edge of the window you prefer, use a "panel" to manage tabs instead or not have any tab UI at all. Users can opt-in to Vivaldi's "productivity features" or keep using their own preferred methods. You can use configure mouse gestures if that is of interest to you. You can set custom keyboard shortcuts for almost anything. The list goes on, but basically, Vivaldi is not invested in getting you to use anything in particular, instead it gives you tools and a platform to craft your own workflow in a way that is accessible to most people (in other words, low/no-code).
+
+If that wasn't enough for you, you can also very easily install mods (CSS and JS code) to further tweak Vivaldi, [something I make use of](https://lukmayer.github.io/blog/posts/vivaldi3/) to add polish to some rough edges I ran into for my particular setup.
+
+Finally, themes are easily created, shared, installed, and tweaked. [I've even made a few myself](https://themes.vivaldi.net/users/Willuk).
+
+
+\
+
+## Mail, Calendar, RSS feed reader integration
+
+Vivaldi has full integration for E-mail, Calendars, and RSS feeds. In this particular aspect, Vivaldi is entirely unique among contemporary browsers. 
+
+
+The mail and calendar client is a full-featured client that can handle multiple accounts, and has a very nice UI that adapts to your theme. Mail has a lot of features that you would expect from a desktop client, like filters, labels, and search. Composing a mail opens a tab. It's more powerful than Outlook or Gmail web-clients since neither can handle multiple accounts without compromises, though Outlook probably has some niché features that Vivaldi doesn't have. I also find it better designed than Thunderbird, with common tasks being easier to do. 
+
+
+
+\
+
+![](images/mail_viv.png)
+
+::: {.text-center}
+A screenshot of Vivaldi's mail client
+:::
+
+\
+
+Calendar supports tasks, keyboard shortcuts, multiple views. It also allows you to create templates for event categories. Again, it's pretty powerful and yet super easy to use. 
+
+
+
+
+
+\
+
+![](images/cal_viv.png)
+
+::: {.text-center}
+My calendar in Vivaldi
+:::
+
+\
+
+
+I've previously written about [RSS feeds](https://lukmayer.github.io/blog/posts/rss/) and why it's a good idea to make use of them. I actually never knew RSS was a thing before using Vivaldi. I quickly discovered how useful it is for keeping up with scientific publications, and greatly expanded my use of it since then. Vivaldi offers a built-in RSS feed reader that's super easy to use, since Vivaldi helps you find RSS feeds on websites. It has no useage limits, stores data locally, and feeds can be exported if you decide to switch. I use the Feed reader to keep up with blogs, scientific publications, and youtube channels. It's a great way to stay up to date without having to visit dozens of websites.
+
+
+\
+
+![](images/rss_viv.png)
+
+::: {.text-center}
+The RSS feed reader in Vivaldi
+:::
+
+\
+
+I also like that Vivaldi offers these things for free to make their browser more attractive, rather than trying to generate ad-revenue from them like other companies. [More on Vivaldi's business model here](https://vivaldi.com/blog/vivaldi-business-model/).
+
+
+\
+
+## Tab switcher, Command palette, Tab-tiling
+
+
+Now I want to highlight some smaller features that just make life easier.
+
+
+First up is the **tab switcher**. If you use keyboard shortcuts to switch tabs, you'll love this feature. It's similar to what many coding IDE's have. That is, if you hit `Ctrl + Tab` you get a preview of all your tabs and can navigate which tab you want to switch to by repeatedly hitting `Tab`. There's even a little preview image of the tab you're about to switch to. It's nice because you don't have to flip through every tab until you get to the one you wanted. It's definetely a small change, but wow does it feel good. 
+
+\
+
+![](images/switch_viv.png)
+
+::: {.text-center}
+Tab switcher: A feature I never knew I needed
+:::
+
+\
+
+
+Next up, the **command palette**. By default you can open the command palette with `Ctrl + E`. This opens a little pop-out that has many uses. It let's you change settings on the fly, has access to tools like a calculator, can be used to open a bookmark, or perform an internet search in a new tab. I use this all the time to quickly open a new tab and search for something, or crunch some numbers. I really miss this whenever I have to use another browser.
+
+
+
+\
+
+![](images/command_viv.png)
+
+::: {.text-center}
+Command palette: Really hard to go without once you're used to it
+:::
+
+\
+
+
+Finally, **tab-tiling**. Tab-tiling is a feature that increasingly many browsers have, but Vivaldi's had this for many years, and it's really well implemented. Using keyboard shortcuts or a UI button, you can tile tabs in a grid, horizontally, or vertically. What this does is split the window into multiple panes, each showing a different tab. This is great for multitasking, say if you want to to watch a video and take notes.
+
+
+\
+
+![](images/tile_viv.png)
+
+::: {.text-center}
+Tab tiling: Perfect for multitasking
+:::
+
+\
+
+
+
+## Other niceties
+
+Now some features I use in Vivaldi that are nice but not as flashy or unique as the ones mentioned previously.
+
+- **Custom search engines**: Set as many search engines as you want, and give them a keyword to quickly search with them. 
+ 
+ - **Reading list**: Save pages for later reading. I use this for saving journal articles that caught my eye but I don't have time to read right now.
+
+ - **Web panels**: A view that can open a partition of the window to show an internal page of Vivaldi (e.g. Mail), or some arbitrary website. For example, I use Vivaldi's "Window" panel to manage my tabs, which is a bit like "Tree Style Tabs" in Firefox.
+ 
+ - **Work spaces**: Workspaces are like having multiple browser windows open at once, but in one window. You can have different tabs open in different workspaces, and switch between them easily via the UI or a keyboard shortcut. I use this to keep my work tabs separate from my personal tabs.
+ 
+
+\
+
+![](images/window_panel.png)
+
+::: {.text-center}
+The window panel: A different take on vertical tabs
+:::
+
+\
+
+
+## There's way more
+
+I'm really just scratching the surface here, since I focussed on *what I use*. For example, Vivaldi recently added a feature that lets you add widgets to the new tab page. Widgets can be things like a clock, a weather forecast, your RSS feed, or some arbitrary website. It's cool but doesn't fit my minimalistic setup. Then there are niché features like tab groups (kind of similar to work spaces), mouse gestures (configuring commands to mouse movements), and sessions (saving a collection of tabs to open later). There's also a built in markdown-based note-taking client I didn't even touch upon. I also didn't really mention all the little settings you can tweak, for example that there are 2 different styles to choose from for the tab switcher. 
+
+The point is, [Vivaldi](https://vivaldi.com) is a user-friendly canvas for browsing the internet, and you can paint it however you like with a rich set of brushes. It may be overwhelming at first, but once you get the hang of it, it's really hard to use anything else.
+
