@@ -21,7 +21,7 @@ I'm sure many of you are already using the immensely popular Visual Studio Code 
 Perhaps you have even gone so far and installed the R extension in VS Code, just to learn that it offers no way near the power and convenience of RStudio?
 
 But worry not, I'm here to share with you the gospel of R in VS Code!
-I have been fiddling with my set up for a little while now, searching far and wide for the best resources to make R in VS Code a pleasent experience.
+I have been fiddling with my setup for a little while now, searching far and wide for the best resources to make R in VS Code a pleasant experience.
 And I think I have gotten to the point where I don't really need RStudio anymore.
 
 You actually only need to install a few things to reproduce a good base workflow.
@@ -40,7 +40,7 @@ First things first, you need to install the R extension for Visual Studio Code f
 
 ### Radian
 
-Unfortunately, using an R terminal in VS Code is not as nice as it is in RStudio. One thing I really missed was being able to visually tell whether the terminal was busy or not. Thankfully, we can install Radian, which is a python package that provides a R terminal that's even nicer than the one Rstudio has. You can install it with the following command:
+Unfortunately, using an R terminal in VS Code is not as nice as it is in RStudio. One thing I really missed was being able to visually tell whether the terminal was busy or not. Thankfully, we can install Radian, which is a python package that provides an R terminal that's even nicer than the one Rstudio has. You can install it with the following command:
 
 \
 
@@ -60,12 +60,12 @@ Once installed, you can set it as the R terminal in VSCode. To do this, press `C
 
 \
 
-Do note that this command is specific to Linux, so you will need to change it if you are on Windows or MacOS. 
+Do note that this command is specific to Linux, so you will need to change it if you are on Windows or macOS. 
 The exact path may vary depending on your system, but you can find it by running `which radian` in the terminal (this command may also be Unix-specific). 
 
 What's nice about Radian is that it has a few features that the default R terminal in VS Code doesn't have, like syntax highlighting. I find the console prompt is sufficiently informative, as it gives you a visual indication for when R is busy.
 
-However, there is still one more tweak we need to make to make Radian work properly in VS Code. That is, we need to enable bracketed paste mode in the settings.json file. This will make it so that when you paste code into the terminal, it will be pasted as a single block, rather than line by line (which would cause a lot of error messages if you don't write code like a savage). To open settings.json press `Ctrl + Shift + P` and start typing `Settings`. You should see the following option come up: `Preferences: Open User Settings (JSON)`. Open this and add the following line to the settings.json file:
+However, there is still one more tweak we need to make Radian work properly in VS Code. That is, we need to enable bracketed paste mode in the settings.json file. This will make it so that when you paste code into the terminal, it will be pasted as a single block, rather than line by line (which would cause a lot of error messages if you don't write code like a savage). To open settings.json press `Ctrl + Shift + P` and start typing `Settings`. You should see the following option come up: `Preferences: Open User Settings (JSON)`. Open this and add the following line to the settings.json file:
 
 \
 
@@ -108,7 +108,7 @@ If you love Rmarkdown, you will miss it sorely in VS Code, as configuring it to 
 
 To install Quarto, simply head to Quarto's [website](https://quarto.org/) and follow the instructions there. You will also need to install the Quarto extension for VS Code from the marketplace.
 
-I really love Quarto, and I use it for pretty much everything now, including this website. However, it's still a new extension so there are some bugs and missing features. For example, the preview window can be a bit more buggy than it is in Rstudio. I find that it works best when you set it to open in an external browser, and then kill and restart the preview server every now and then because it will get stuck. If you are working on a project with a lot of computation, you may want to consider enabling caching, as otherwise restarting the preview server will be time-consuming.Caching should be done with care though, as I've found it can sometimes cause issues with downstream code. You can make quarto open the preview in your browser by adding the following line to the settings.json file:
+I really love Quarto, and I use it for pretty much everything now, including this website. However, it's still a new extension, so there are some bugs and missing features. For example, the preview window can be a bit more buggy than it is in Rstudio. I find that it works best when you set it to open in an external browser, and then kill and restart the preview server every now and then because it will get stuck. If you are working on a project with a lot of computation, you may want to consider enabling caching, as otherwise restarting the preview server will be time-consuming. Caching should be done with care though, as I've found it can sometimes cause issues with downstream code. You can make quarto open the preview in your browser by adding the following line to the settings.json file:
 
 \
 
@@ -118,7 +118,7 @@ I really love Quarto, and I use it for pretty much everything now, including thi
 
 \
 
-By the way, you might want to double check the keyboard shortcuts Quarto uses, as they are not always identical to the ones in Rstudio.
+By the way, you might want to double-check the keyboard shortcuts Quarto uses, as they are not always identical to the ones in Rstudio.
 
 \
 

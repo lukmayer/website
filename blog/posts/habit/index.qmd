@@ -51,15 +51,15 @@ Here's how Habitica works in a nutshell. You create a character to your liking a
 
 ::: {.text-center}
 
-![My Habitica homescreen](assets/habitica_home.png){fig-cap="My Habitica homescreen" alt="My Habitica homescreen"}
+![My Habitica homescreen](assets/habitica_home.png){fig-cap="My Habitica home-screen" alt="My Habitica home-screen"}
 
 :::
 
 \
 
-Habitica has tons of features that interact with this basic game play loop which I feel improve your success for establishing habits. Obviously there's the rewards and social accountability aspect. Then there's all the basic habit tracker features you would expect such as streaks and different recurring schedules. But here's where it gets really cool: Habitica distinguishes between different types of tasks: There's Dailies, which are tasks you are looking to complete every day. Then, there's habits, which are tasks that you want to reward yourself for doing, but follow no particular schedule. Finally, there's To-Do's which are one-off tasks, say a mini project, like writing a blog post about habit tracking ;). 
+Habitica has tons of features that interact with this basic game play loop which I feel improve your success for establishing habits. Obviously there are the rewards and social accountability aspect. Then there's all the basic habit tracker features you would expect such as streaks and different recurring schedules. But here's where it gets really cool: Habitica distinguishes between different types of tasks: There are dailies, which are tasks you are looking to complete every day. Then, there are habits, which are tasks that you want to reward yourself for doing, but follow no particular schedule. Finally, there's To-Do's which are one-off tasks, say a mini project, like writing a blog post about habit tracking ;). 
 
-The gamified nature does not stop at rewards. If you miss Dailies, your character will take damage and can die, which might result in you losing some of those rewards you worked so hard for. I think having both the carrot and the stick really improves your accountability in this case. There are extra rewards for maintaining streaks and you can also set how difficult the task is you're looking to do, which will actually modify the size of the reward. Moreover, the strength of the habit also changes how big the reward is. Basically, if you set up a difficult task that you have been pushing away, Habitica will lure you into finally doing it as you'll learn that it will absolutely shower you with rewards if you finally go through with it!  
+The gamified nature does not stop at rewards. If you miss Dailies, your character will take damage and can die, which might result in you losing some of those rewards you worked so hard for. I think having both the carrot and the stick really improves your accountability in this case. There are extra rewards for maintaining streaks, and you can also set how difficult the task is you're looking to do, which will actually modify the size of the reward. Moreover, the strength of the habit also changes how big the reward is. Basically, if you set up a difficult task that you have been pushing away, Habitica will lure you into finally doing it as you'll learn that it will absolutely shower you with rewards if you finally go through with it!  
 
 So if you're wanting behavior change on steroids, I'd say Habitica is the way to do it!
 
@@ -67,7 +67,7 @@ So if you're wanting behavior change on steroids, I'd say Habitica is the way to
 
 ## Some simple tips for getting started
 
-If you're just getting started with habit-tracking, the key is too keep it simple. 
+If you're just getting started with habit-tracking, the key is to keep it simple. 
 Habitica users are known for having a ridiculous amount of tasks that they do on a regular basis to maximize rewards, but you really should not be doing more than one or two habits in the first couple of months.
 As these initial tasks become more routine to you, you can add more :) 
 Just make sure you don't bite off more than you can chew! It's better to do few things well than do many things half-heartedly.
@@ -86,6 +86,6 @@ A highly popular one is ["Atomic habits" by James Clear](https://jamesclear.com/
 
 \
 
-Hope you'll give these recommendations a shot and thanks for reading! :)
+Hope you'll give these recommendations a shot, and thanks for reading! :)
 
 

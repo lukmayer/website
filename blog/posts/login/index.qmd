@@ -12,6 +12,9 @@ comments:
       repo: lukmayer/site_comments
       theme: github-dark
       issue-term: url
+format:
+  html:
+    code-fold: show
 ---
 
 Hello again!
@@ -40,7 +43,7 @@ This method is NOT appropriate to use for enterprise applications, or critically
 
 You want to be hosting the site somewhere where the source files are not accessible to the public.
 
-This can be for example, a private github repository with github pages enabled, etc.
+This can be for example, a private gitHub repository with gitHub pages enabled, etc.
 
 \
 
@@ -244,7 +247,7 @@ Initialize a Quarto website project in the directory in which `index.html` sits.
 
 The name of the project MUST be `a{yourusernamehash}`
 
-The reason the "a" is prepended to the hash is that Github pages will not serve a directory that starts with a number.
+The reason the "a" is prepended to the hash is that GitHub pages will not serve a directory that starts with a number.
 
 Next, in the project folder, create a new folder of the name `a{yourpasswordhash}`.
 
@@ -334,7 +337,7 @@ format:
 
 ## Step 5: Deploying
 
-I'm assuming you are planning to use Github with Github pages for this.
+I'm assuming you are planning to use GitHub with GitHub pages for this.
 
 First, render your Quarto project to HTML.
 
@@ -342,7 +345,7 @@ DO NOT `git init` on the project folder, but instead where the `index.html` sits
 
 Then add the remote origin, commit and push to the remote. 
 
-Finally, go to the settings of the repository on Github, and enable Github pages.
+Finally, go to the settings of the repository on GitHub, and enable GitHub pages.
 
 \
 

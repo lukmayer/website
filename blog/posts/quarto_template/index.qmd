@@ -39,7 +39,7 @@ This guide will show you how to set up a simple website with Quarto using my tem
 
 2. The next step depends on the IDE you are using. If you use Rstudio, you can skip this step. If you use another IDE like VSCode, you need to install the Quarto extension. You can find the installation instructions [here](https://quarto.org/docs/getting-started/installation.html).
 
-3. Github: You need to create a new repository on Github. You can find the instructions [here](https://docs.github.com/en/get-started/quickstart/create-a-repo). This is also where we will host our website.
+3. GitHub: You need to create a new repository on GitHub. You can find the instructions [here](https://docs.github.com/en/get-started/quickstart/create-a-repo). This is also where we will host our website.
 
 4. [Download my template](https://github.com/lukmayer/website_template/archive/refs/heads/master.zip)
 
@@ -47,11 +47,11 @@ This guide will show you how to set up a simple website with Quarto using my tem
 
 ## About the template
 
-First of all, if you want to see what the template looks like by default, you can check out a hosted version [here](https://lukmayer.github.io/website_template_live/).
+First, if you want to see what the template looks like by default, you can check out a hosted version [here](https://lukmayer.github.io/website_template_live/).
 
 The template is a heavily stripped down version of my current website design. I tried to strip it down as much as possible for teaching purposes while also showing off some of the best features of Quarto. Additionally, I included a lot of comments in all the source files to help teach you what everything does.
 
-By default the template features:
+By default, the template features:
 
 - An attractive homepage layout in which you can slot in your own images, links and text
 - A CV section to show off your work experience
@@ -63,7 +63,7 @@ Maybe more importantly, through the template I can teach you how to:
 - Set a theme
 - Add icons, including your own logo
 - Add images, math, code, text formatting, references, tables and more
-- Make use of tab-sets, call outs, and buttons
+- Make use of tab-sets, call-outs, and buttons
 - Embed files like PDFs and presentations
 - Create blogs or other collections of posts and RSS feeds
 - How to customize your website further with CSS 
@@ -77,7 +77,7 @@ I would recommend you look over the source files in the following order:
 
 1) `_quarto.yml` to learn about how to configure the global settings of the website
 2) `about/index.qmd` to learn about the basic features of Quarto
-3) check out `cv/index.qmd` to learn about how to use tab-sets and embed a pdf
+3) check out `cv/index.qmd` to learn about how to use tab-sets and embed a PDF
 4) `blog/index.qmd` to learn about how to create listed collections of posts
 5) read through the posts in the `blog/posts` folder to learn about advanced features and workflows.
 
@@ -98,11 +98,11 @@ With this procedure of editing, rendering, and previewing you can simply keep ti
 ## Hosting the website
 
 For other people to see your shiny new website it needs to be hosted on a server.
-The easiest way to do this for free is to use Github Pages.
-You simply head to Github, login, and create a repository with the name `yourgithubusername.github.io`.
+The easiest way to do this for free is to use GitHub Pages.
+You simply head to GitHub, login, and create a repository with the name `yourgithubusername.github.io`.
 Then, you upload all the files in the `_site` folder to the repository.
-The easiest way to upload is to simply drag and drop all the files in that folder after clicking the upload files button on Github.
-Finally, go to the settings of the repository and scroll down to the Github Pages section.
+The easiest way to upload is to simply drag and drop all the files in that folder after clicking the upload files button on GitHub.
+Finally, go to the settings of the repository and scroll down to the GitHub Pages section.
 Here you can select the branch you want to host from and the folder.
 Don't worry too much about what a branch is for now - it will most likely be called `main` or `master` and the folder you want will be almost certainly be called `root` or `/`.
 After a view minutes, your website should be live at `www.yourgithubusername.github.io`!

@@ -14,7 +14,7 @@ comments:
     issue-term: url
 ---
 
-I grew up in South-West Germany, but in my 13 years there I never visited some of the cities of my state of Baden-Württemberg. That's why my sister and I decided to make a day trip to Freiburg im Breisgau, the only major city in the Black Forest region. Since I was home for the holidays, we took the first best chance to do the 2.5h drive after christmas. Unfortunately, this timing does imply that we did not get to see what Freiburg is like at maximum christmas. Despite that, I was pretty impressed with the city and its surroundings! I'm obviously used to the aestethics of more traditional German cities[^1], but Freiburg has an impressively large and beautiful old-town for its modest size (Population: approx 200k). It's also remarkably close to nature. 
+I grew up in South-West Germany, but in my 13 years there I never visited some cities of my state of Baden-Württemberg. That's why my sister and I decided to make a day trip to Freiburg im Breisgau, the only major city in the Black Forest region. Since I was home for the holidays, we took the first best chance to do the 2.5h drive after Christmas. Unfortunately, this timing does imply that we did not get to see what Freiburg is like at maximum Christmas. Despite that, I was pretty impressed with the city and its surroundings! I'm obviously used to the aesthetics of more traditional German cities[^1], but Freiburg has an impressively large and beautiful old-town for its modest size (Population: approx 200k). It's also remarkably close to nature. 
 
 [^1]: Berlin differs significantly from the "German city recipe".
 
@@ -123,7 +123,7 @@ As I mentioned, the old town of Freiburg is fairly extensive. It's also quite or
 ![](images/alstadt1.jpg)
 
 ::: {.text-center}
-The large cathedral (Münster) can be seem from almost anywhere in the old town.
+The large cathedral (Münster) can be seen from almost anywhere in the old town.
 :::
 
 \
@@ -140,7 +140,7 @@ The city center with view of the Martinstor. The entire core is mostly devoid of
 ![](images/altstadt3.jpg)
 
 ::: {.text-center}
-A lively and quaint street at the edge of the old town. The christmas decorations are still up. 
+A lively and quaint street at the edge of the old town. The Christmas decorations are still up. 
 :::
 
 \
@@ -218,7 +218,7 @@ The Münster is the main cathedral of Freiburg and is located on the Münsterpla
 ![](images/muensterplatz.jpg)
 
 ::: {.text-center}
-The Münsterplatz with the a piece of the market. The only cars allowed here are those of the market vendors.
+The Münsterplatz with a piece of the market. The only cars allowed here are those of the market vendors.
 :::
 
 \
@@ -250,7 +250,7 @@ The large portal into the Münster is lined with many painted statues.
 ![](images/muenster_innen.jpg)
 
 ::: {.text-center}
-The inside of the cathedral was suprisingly dark, but features beautiful stained glass windows (not shown). The christmas trees are still up.
+The inside of the cathedral was surprisingly dark, but features beautiful stained-glass windows (not shown). The Christmas trees are still up.
 ::: 
 
 \
@@ -289,7 +289,7 @@ I actually overcame my fear of heights to take a picture from the tower. The tow
 ![](images/schlossbergturm_aussicht.jpg)
 
 ::: {.text-center}
-Top of the tower. Unfortunateley, my good deeds were not rewarded, as the extra height made the fog even worse.
+Top of the tower. Unfortunately, my good deeds were not rewarded, as the extra height made the fog even worse.
 :::
 
 \
@@ -380,7 +380,7 @@ My sister repping some UCI merch. Also, lunch.
 
 \
 
-This was an exceptionally nice day trip. I don't usually take many pictures, so that should tell you everything. Of course, we got a little bit unlucky with the timing and the weather in the city, but it was still an amazing experience. It's definetely worth a visit if you're in the area. 
+This was an exceptionally nice day trip. I don't usually take many pictures, so that should tell you everything. Of course, we got a little unlucky with the timing and the weather in the city, but it was still an amazing experience. It's definitely worth a visit if you're in the area. 
 
 Thanks for following along :)
 

@@ -34,23 +34,22 @@ I decided then, especially because I was planning to do computational cognitive 
 that I should start teaching myself math. 
 
 Over the last 3 years, I worked through the basics of most topics you'd cover in a high-school or general education curriculum at college mostly with the help of KhanAcademy, Coursera, and some textbooks. 
-I basically just tried to do whatever I could at the end of my work day, even if its just a few exercises on KhanAcademy. I made this my daily ritual, and stuck with it fairly strongly until very recently. 
+I basically just tried to do whatever I could at the end of my work day, even if it is just a few exercises on KhanAcademy. I made this my daily ritual, and stuck with it fairly strongly until very recently. 
 I can't claim that this has turned me into a math wizard, 
-I definetely have knowledge gaps and I'm neither as fast nor as precise as I'd like to be... but I'm starting to see why the nerds like this stuff... ;)
+I definitely have knowledge gaps, and I'm neither as fast nor as precise as I'd like to be... but I'm starting to see why the nerds like this stuff... ;)
 
 Now that I started my PhD, I'm in the interesting position where I actually just happen to have the option to take graduate level mathematical statistics courses from a fully fledged statistics department. 
-Taking advantage of this is actually pretty attractive, as those willing to persist with it can totally earn an MSc in Stats as part of their PhD in another department. 
+Taking advantage of this is actually pretty attractive, as those willing to persist with it can totally earn an M.Sc. in Stats as part of their PhD in another department. 
 Little first-year me, just having landed in the US, signed up for the first course. 
 First reaction: "Wow, this is pretty different to what I've seen before". 
-I did not know how to do any of the derivations that my first homework asked me for. 
-I panicked and dropped the course. 
-I decided to take a step back, I needed a better plan to be able to pull this off. 
-After all, I am lacking **years** of experience compared to the average person in a Stats PhD program.
+I did not know how to do any of the derivations that my first homework asked me for, so I panicked and dropped the course. 
+I took a step back, I needed a better plan to be able to pull this off. 
+After all, I was lacking **years** of experience compared to the average person in a Stats PhD program.
 
 I learned that in the US, it's expected that you consult with the lecturer when you don't understand things.
 This was perhaps a bit of a culture shock moment for me, as in the UK (where I studied before) you'd typically have little to no interaction with your lecturers outside of class. 
 So maybe my approach was a less than optimal one from the very beginning. 
-I started asking lecturers and students who had done the MSc for tips on how to prepare. 
+I started asking lecturers and students who had done the M.Sc. for tips on how to prepare. 
 I studied a bit more Calculus, and started learning a bit more about how you actually prove and derive things. 
 I also learned that the course actually still has a considerable applied component,
 so I should be able to get through it even if I don't perfectly know everything. 
@@ -58,7 +57,7 @@ I decided to give it another shot.
 
 So here we are, I've started my second year and committed to actually taking and finishing the first mathematical statistics course in the stats program. 
 With all the new things I've learned in the last year, I was actually surprised to find that I can keep up okay? 
-Proofs are still really, really hard as I still lack the intuition and experience (sometimes the neccessary knowledge) to do them myself rather than just passively consume them on the whiteboard. 
+Proofs are still really, really hard as I still lack the intuition and experience (sometimes the necessary knowledge) to do them myself rather than just passively consume them on the whiteboard. 
 Thankfully, for the homework problems we get, I can consult mathematical statistics books which often feature similar problems. Or even better, I can beg my mathy peers for help.
 Maybe it's like this by design? 
 My main bottleneck is definitely that I have not fully internalized all the rules and quantities I've been learning about and still lack some practice in doing derivations. 
@@ -66,7 +65,7 @@ I'll definitely have to work a bit harder than the average student in my course 
 At the same time, wow is it satisfying to actually come up with a correct proof after a bit of struggle?!  
 
 So this is where I start talking about the thing this post is meant to be about. 
-I thought, what better way to do some revision for my mid-term and keep my blog alive in this busy time than to write up some of the things I'm learning as little stats blog posts? 
+I thought, what better way to do some revision for my midterm and keep my blog alive in this busy time than to write up some of the things I'm learning as little stats blog posts? 
 I'll probably keep these short and sweet (except this one), limited to information I am confident is correct.
 
 \
