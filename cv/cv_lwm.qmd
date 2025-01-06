@@ -45,7 +45,7 @@ format:
 \hfill 
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{PhD Cognitive Science } & \textbf{\hfill 2028 (Expected)}  \\
+    \textbf{Ph.D. Cognitive Sciences } & \textbf{\hfill 2028 (Expected)}  \\
     \textit{University of California, Irvine} & \textit{\hfill Irvine, California, USA}  \\
   \end{tabularx}
 \end{minipage}
@@ -63,7 +63,7 @@ format:
 \hfill 
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{MSc Behavioral and Data Science (Distinction)} & \textbf{\hfill 2022}  \\
+    \textbf{M.Sc. Behavioral and Data Science (Distinction)} & \textbf{\hfill 2022}  \\
     \textit{University of Warwick} & \textit{\hfill Coventry, England, UK}  \\
   \end{tabularx}
 \end{minipage}
@@ -81,7 +81,7 @@ format:
 \hfill 
 \begin{minipage}{0.95\textwidth}
   \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{BSc with Honors Psychology (First-Class)} & \textbf{\hfill 2021}  \\
+    \textbf{B.Sc. with Honors Psychology (First-Class)} & \textbf{\hfill 2021}  \\
     \textit{University of Stirling} & \textit{\hfill Stirling, Scotland, UK}  \\
   \end{tabularx}
 \end{minipage}

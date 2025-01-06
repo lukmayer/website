@@ -28,7 +28,7 @@ description: "Lukas Mayer's mini biography"
 
 ::: {.animate__animated .animate__fadeIn}
 
-Hi, I'm Luke, or more formally known as Lukas.
+Hi, I'm Luke, or more formally Lukas.
 I'm a German national with dual citizenship in the US. 
 I was born in Wisconsin, USA but grew up in the greater Stuttgart area (Germany), which is known for its car industry and the Swabian dialect.
 
@@ -50,13 +50,13 @@ Despite my initial ambitions to pursue a career in clinical psychology, I discov
 
 ![Stirling, Scotland - [Credit](https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/)](assets/stirling.jpg){fig-cap="Credit: https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/" alt="Lukas Mayer's undergraduate university city - Stirling, Scotland"}
 
-The Behavioural and Data Science MSc at the [University of Warwick](https://warwick.ac.uk) was very much the perfect fit for me, as it combined my interest in behavioral research with my newfound passion for select topics in Computer Science. It was at Warwick were I first came to appreciate the application of computational modelling to describe cognitive processes. This was when things "clicked" in my head, and I knew that I wanted to pursue a PhD in this area.
+The Behavioral and Data Science M.Sc. at the [University of Warwick](https://warwick.ac.uk) was very much the perfect fit for me, as it combined my interest in behavioral research with my newfound passion for select topics in Computer Science. It was at Warwick where I first came to appreciate the application of computational modelling to describe cognitive processes. This was when things "clicked" in my head, and I knew that I wanted to pursue a PhD in this area.
 
 
 ![Royal Leamington Spa, England (where I stayed during my MSc) -  [Credit](https://royal-leamington-spa.co.uk/visit/)](assets/leamington.jpg){fig-cap="Credit: https://royal-leamington-spa.co.uk/visit/" alt="Lukas Mayer studied at the University of Warwick, which is located near Royal Leamington Spa, England"}
 
 
-I spent a very fun year working in the Applied Digital Behaviour Lab at the University of [Bath](https://visitbath.co.uk) while preparing my PhD applications and was fortunate to be accepted into the Cognitive Science PhD program at the University of California, Irvine, where I am currently working in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/).
+I spent a very fun year working in the Applied Digital Behavior Lab at the University of [Bath](https://visitbath.co.uk) while preparing my PhD applications and was fortunate to be accepted into the Cognitive Science PhD program at the University of California, Irvine, where I am currently working in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/).
 
 
 
