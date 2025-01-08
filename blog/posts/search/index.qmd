@@ -95,7 +95,7 @@ Now I want to briefly introduce you to some of my favorite features with these s
 
 3) DuckDuckGo currently is the only smaller search engine that also gives you access to a range of **language models** for free. I don't mean those AI-generated page summaries but a separate space for you to chat with these models. The functionality is a bit limited in this dedicated space, and the models available are obviously not the state-of-the-art ones. However, if DuckDuckGo keeps improving this feature, it might eventually become a real game-changer! 
 
-4) Both Startpage and DuckDuckGo provide you with methods to **anonymously view content**. The approach Startpage takes is more general, with you being able to view any page inside a proxy. This means it becomes harder to track you, as the website is talking to the proxy, not directly to you. DuckDuckGo, on the other hand, lets you view Youtube videos on their video results page, allowing you to watch them without Youtube being able to associate them to your Google account. Personally, I think these are pretty niche features, but maybe you'll like them? 
+4) Both Startpage and DuckDuckGo provide you with methods to **anonymously view content**. The approach Startpage takes is more general, with you being able to view any page inside a proxy. This means it becomes harder to track you, as the website is talking to the proxy, not directly to you. DuckDuckGo, on the other hand, lets you view YouTube videos on their video results page, allowing you to watch them without YouTube being able to associate them to your Google account. Personally, I think these are pretty niche features, but maybe you'll like them? 
  
 
 ## Some hard truths

@@ -148,5 +148,5 @@ I'm so glad I can finally use panels again without having to manually hide UI el
 
 \
 
-So there you have it, two mods that make Vivaldi just that extra bit nicer for me. I think it's really cool that Vivaldi allows this, since it does not only empower their users, but can also serve as inspiration for the developers to implement some of these features in the browser itself. But then again, most of the things the company does are very well thought-out. I'm looking forward to seeing what they come up with next!
+So there you have it, two mods that make Vivaldi just that extra bit nicer for me. I think it's really cool that Vivaldi allows this, since it does not only empower their users, but can also serve as inspiration for the developers to implement some of these features in the browser itself. But then again, most of the things the company does are very well-thought-out. I'm looking forward to seeing what they come up with next!
 

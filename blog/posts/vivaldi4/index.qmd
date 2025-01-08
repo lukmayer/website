@@ -22,7 +22,7 @@ In this post, I'll highlight all the features I like that together make Vivaldi 
 
 ## Customization
 
-Vivaldi is famous for its flexibility. By default, the [Vivaldi UI is quite busy](https://lukmayer.github.io/blog/posts/vivaldi1/index.html), probably to give new users a good impression of just how extensive the feature set is. But if you're like me and prefer a more minimalistic look, then you will be happy to know that you can customize the UI to your heart's content. In principle, you can arbitrarily hide and/or rearrange every button you want, though there are some [(unwritten) rules](https://lukmayer.github.io/blog/posts/vivaldi2/index.html) to what is possible. This is similar to what you can do in Firefox, but on steroids. 
+Vivaldi is famous for its flexibility. By default, the [Vivaldi UI is quite busy](https://lukmayer.github.io/blog/posts/vivaldi1/index.html), probably to give new users a good impression of just how extensive the feature set is. But if you are like me and prefer a more minimalistic look, then you will be happy to know that you can customize the UI to your heart's content. In principle, you can arbitrarily hide and/or rearrange every button you want, though there are some [(unwritten) rules](https://lukmayer.github.io/blog/posts/vivaldi2/index.html) to what is possible. This is similar to what you can do in Firefox, but on steroids. 
 
 \
 
@@ -34,7 +34,7 @@ My minimal Vivaldi setup
 
 \
 
-Vivaldi does not force you into a particular workflow, instead consistently giving users multiple options to choose from. As a small example, you can set the tab bar to whichever edge of the window you prefer, use a "panel" to manage tabs instead or not have any tab UI at all. Users can opt in to Vivaldi's "productivity features" or keep using their own preferred methods. You can use configure mouse gestures if that is of interest to you. You can set custom keyboard shortcuts for almost anything. The list goes on, but basically, Vivaldi is not invested in getting you to use anything in particular, instead it gives you tools and a platform to craft your own workflow in a way that is accessible to most people (in other words, low/no-code).
+Vivaldi does not force you into a particular workflow, instead consistently giving users multiple options to choose from. As a small example, you can set the tab bar to whichever edge of the window you prefer, use a "panel" to manage tabs instead or not have any tab UI at all. Users can opt in to Vivaldi's "productivity features" or keep using their own preferred methods. You can configure mouse gestures if that is of interest to you. You can set custom keyboard shortcuts for almost anything. The list goes on, but basically, Vivaldi is not invested in getting you to use anything in particular, instead it gives you tools and a platform to craft your own workflow in a way that is accessible to most people (in other words, low/no-code).
 
 If that wasn't enough for you, you can also very easily install mods (CSS and JS code) to further tweak Vivaldi, [something I make use of](https://lukmayer.github.io/blog/posts/vivaldi3/) to add polish to some rough edges I ran into for my particular setup.
 
@@ -103,7 +103,7 @@ I also like that Vivaldi offers these things for free to make their browser more
 Now I want to highlight some smaller features that just make life easier.
 
 
-First up is the **tab switcher**. If you use keyboard shortcuts to switch tabs, you'll love this feature. It's similar to what many coding IDE's have. That is, if you hit `Ctrl + Tab` you get a preview of all your tabs and can navigate which tab you want to switch to by repeatedly hitting `Tab`. There's even a little preview image of the tab you're about to switch to. It's nice because you don't have to flip through every tab until you get to the one you wanted. It's definitely a small change, but wow does it feel good. 
+First up is the **tab switcher**. If you use keyboard shortcuts to switch tabs, you'll love this feature. It's similar to what many coding IDE's have. That is, if you hit `Ctrl + Tab` you get a preview of all your tabs and can navigate which tab you want to switch to by repeatedly hitting `Tab`. There's even a little preview image of the tab you're about to switch to. It's nice because you don't have to flip through every tab until you get to the one you wanted. It's definitely a small touch, but wow does it feel good. 
 
 \
 
