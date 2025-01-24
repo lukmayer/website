@@ -36,7 +36,7 @@ description: "Lukas Mayer's hobbies and interests - exercise, technology, langua
 
 \
 
-3)  **Languages** - English used to be my first language as I only started learning German after relocating to [the Länd](https://www.thelaend.de/en/kampagne/) at age six. Fast-forward to now, English has become my second language. Maybe because of this strange experience, I've had a bit of an interest in language-learning. I have a habit of doing language lessons for fun on [Duolingo](https://www.duolingo.com/profile/luwmayer), where I have a streak of around 2000 days. I'm mostly learning French and Dutch at the moment. My Dutch is definitely better than my French, probably just by virtue of being so similar to German, but both are good enough to follow a YouTube video. I hope to eventually move away from Duolingo and bring my skills to the next level, but don't feel I have the bandwidth for it just now. If you know a good free resource, [be sure to let me know](mailto:willuk@vivaldi.net)!
+3)  **Languages** - English used to be my first language as I only started learning German after relocating to [the Länd](https://www.thelaend.de/en/kampagne/) at age six. Fast-forward to now, English has become my second language. Maybe because of this strange experience, I've had a bit of an interest in language-learning. I have a habit of doing language lessons for fun on [Duolingo](https://www.duolingo.com/profile/luwmayer), where I have a streak of over 2000 days. I'm mostly learning French and Dutch at the moment. My Dutch is definitely better than my French, probably just by virtue of being so similar to German, but both are good enough to follow a YouTube video. I hope to eventually move away from Duolingo and bring my skills to the next level, but don't feel I have the bandwidth for it just now. If you know a good free resource, [be sure to let me know](mailto:willuk@vivaldi.net)!
 
 \
 
@@ -46,10 +46,10 @@ description: "Lukas Mayer's hobbies and interests - exercise, technology, langua
 :::
 
 #### Likes
-In no particular order: sugar-free gum, sunscreen, social mobility, high-quality public transport, "meal substitutes", the color black, progressive taxation, antitrust law, free software, kindness, ""IDM"", Radler.
+In no particular order: sugar-free gum, social mobility, "meal substitutes", high-quality public transport, the color black, progressive taxation, kindness, antitrust, libreware, ""IDM"", Radler.
 
 #### Dislikes
 
-Again, in no particular order: heights, bureaucracy, loud engines, cigarette smoke, meat on the bone, cold hands, direct sunlight, mint-flavored foods.
+Again, in no particular order: heights, cold hands, loud engines, cigarette smoke, meat on the bone, collective action problems, direct sunlight.
 
 ::::
