@@ -44,7 +44,7 @@ Some of my recent work in this area can be broadly described with the umbrella t
 
 :::{.text-center}
 
-<a href="../publications/index.qmd" class="button">Check out my current publications</a>
+<a href="../publications/index.qmd" class="button">Click here for my publications</a>
 
 <style>
 .button {

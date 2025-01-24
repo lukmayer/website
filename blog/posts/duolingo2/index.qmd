@@ -1,0 +1,191 @@
+---
+title: "How to survive Free-tier Duolingo"
+description: "A guide for overcoming freemium limitations"
+author: "Luke"
+date: "2025-01-23"
+categories:
+  - software
+  - languages
+  - duolingo
+image: "images/duo.png"
+comments:
+  utterances:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    issue-term: url
+---
+
+## Why write this post?
+
+Duolingo has been my preferred language learning app for over 5 years now, simply due to its impressive scale and thoughtful design.
+It is still the best app for language learning in my opinion, given you are aware of its limits and put in the work to overcome them.
+I've discussed the Pros and Cons of Duolingo, and its evolution over the years in my [previous Duolingo post](https://lukmayer.github.io/blog/posts/duolingo/) - so for more background read that post.
+One pain point I have with the app is that it's creators are monetizing the app more and more in the pursuit of profitability as a publicly traded company.
+Unfortunately, as a long time user I have therefore witnessed multiple major changes that I believe have made the user experience worse (rather than better) in specific ways.
+
+In its current state, Duolingo is barely useable anymore as a free user, regardless of Duolingo's self-proclaimed mission to be "[Universally accessible](https://www.duolingo.com/info)".
+The reason you are practically almost obliged to pay [\~84 USD](https://www.duolingo.com/super) a year to continue using this free service[^1] is simple.
+Duolingo has a "hearts" system in which you have a limited number of mistakes you can make before the app boots you out of a lesson.
+By default, you have 5 hearts, with one heart replenishing every 5 hours, and an option to perform practice lessons to replenish one heart for each.
+Should you run out of hearts during a lesson, your only options are to quit that lesson or pay 450 "Gems" to refill your hearts to 5.
+Being a premium user removes all need to worry about these silly hearts.
+
+[^1]: as a non "tech-savvy" user
+
+This seems like a fair amount of options, doesn't it?
+Well, there are a couple of problems here.
+First of all, the hearts system did not used to exist, meaning its main purpose is without a doubt to push users towards premium.
+Secondly, Duolingo is not infallible, with tiny typos or alternative expressions potentially costing you hearts.
+Third is the problem that gems are not that easily earned.
+You earn them for completing lessons and challenges, but the average user probably only earns 5-20 per day.
+Compare that to the 450 gem cost of replenishing hearts in a pinch - it's not hard to see that you soon will be gems bankrupt (assuming you had any in the first place).
+Finally, if all of this was not enough, Duolingo has recently made a change limiting how many hearts you can earn through practice lessons.
+On the mobile app, you are now only eligible for **a single practice lesson** at certain times.
+Since you will be broke for gems, your only realistic options are now: wait and risk not being able to continue your streak[^2], or pay.
+
+[^2]: An otherwise great feature, that is now working against you!
+
+Yet more cynically, one might **speculate** that since Duolingo's exercises are personalized to the user, they could (and probably would) use all their analytics to ensure that you regularly run out of hearts due to exercises that are just "a tad bit" out of reach for you, if they believe you would be likely to pay as a result.
+It's certainly a **possibility** if achieving sufficient shareholder returns required it.
+
+I was successfully nudged by the aforementioned tactics into buying the premium subscription for two years, but I no longer "feel good" about financially supporting a company that is squeezing its users so relentlessly...
+
+This is why I asked myself what would it take to make the free-tier version of Duolingo sustainable in its current form?
+I think you will find that what I suggest here will not only improve your sanity while using Duolingo, but also quite possibly your learning.
+
+\
+
+## Improving your heart health
+
+### Part 1: Making better use of the hearts you get
+
+#### STOP using the app![^3]
+
+[^3]: Not using the mobile app for services that also have a website is a good idea in general because it is easier to modify websites.
+
+A little known fact about Duolingo is that their website is always *at least* a year behind the app on any "feature" introductions.
+Many things seemingly never make it to the web-app.
+The reason this is important for this guide is extremely simple: You can still do unlimited practice lessons on the website.
+This means that so long you manage to finish lessons by the skin of your teeth, you can keep learning.
+The practice lessons are actually nice, as they serve as revision of old content[^4].
+
+[^4]: Weirdly, the practice lessons you get as a free-tier user are of much higher quality and less repetitive than the ones you get access to as a premium user...
+
+So the strategy is simple: Do a lesson, try to complete it with at least one heart, do practice lessons until you are topped up, repeat until you're done learning for the day.
+
+Do note though, some things are not available on the website.
+For example, timed challenges.
+Luckily, these missing features are pretty insignificant anyway.
+
+\
+
+#### A tale of early birds and night owls
+
+Duolingo had a period where they rewarded you to check in twice a day, by giving you temporary boosts to how much XP a lesson would give you.
+The way it worked was that if you did a lesson in the morning, you would become eligible for this boost later on in the day.
+If you did a lesson during this later "evening" stage you would get a boost available the next morning.
+This was actually a great system because you felt strongly incentivized to do lessons so that "future you" will feel good when it comes to the next practice time.
+It's actually been my habit to do lessons twice a day ever since this existed.
+
+Of course, with the hearts systems mechanics, this habit is dually valuable.
+Firstly, doing lessons first thing in the morning is hands-down the best thing you can do.
+This is because your mind will be fresh and focused, resulting in less mistakes and a higher capacity to practice.
+Doing lessons in the late evening can be **really hard** simply due to being so fatigued at the end of your day.
+But establishing this evening habit as well lets you maximize your hearts since you will have "gained" up to two hearts since your morning practice.
+
+Therefore, the strategy now is: Do lessons primarily in the morning, try to squeeze one or two more lessons into the evening to make sure you're using those hearts as soon as they become available.
+
+\
+
+### Part 2: Preventing heart-aches
+
+#### Babble like the baby you are
+
+I have previously faulted Duolingo for having relatively few/poor speaking practice options.
+Therefore, if you are using Duolingo you should take matters into your own hands a bit more.
+One easy way to do this is to simply sound everything out loud during lessons.
+Not only does this help you get valuable pronunciation and speaking practice, it also clearly improves your retention, and makes you less likely to make mistakes.
+The reason you are less likely to make mistakes is that when you are sounding everything out loud, you are taking the lessons a bit slower.
+In other words, you are reading more carefully, and thus will avoid misinterpretation errors.
+A bit awkward a first, but doing this is basically a no-brainer if hearts are at stake!
+
+\
+
+#### Work smarter, not harder
+
+Another one of these little known features of Duolingo is that most of the time, you can either submit your answer during a lesson, or hit the "skip" button.
+Pressing the skip button will reveal the solution to the question, and add the question to the back of the stack of lesson exercises, much like a mistake would.
+Unlike a mistake however, pressing skip will not cost you a heart.
+Thus, if you are unsure about how to spell something, what the word was, etc. you should make use of this.
+
+\
+
+![](images/skip.png){fig-align="center"}
+
+::: text-center
+The elusive skip button (bottom-left) in the wild
+:::
+
+\
+
+Of course, you're also not forbidden from opening another tab and translating answers you are foggy on.
+Language models are decent at fixing grammar and spelling errors.
+Remember, the goal is to not let Duolingo drain your gems wallet any more than strictly necessary.
+
+\
+
+## "Hacking" Duolingo
+
+To be honest, following everything in Part 1 might still not be enough to make your net gem earnings positive.
+Again, the reason we care so much about gems is that they are the only way to continue a lesson when you run out of hearts.
+Having to abandon a lesson you struggled so hard on because you can't afford to continue is extremely frustrating.
+
+So the next level is to use more advanced tools to help you.
+
+Since we are using the website, we can use browser extensions that modify how Duolingo works.
+There are a couple that are very recommendable.
+For our goals, one really stands out.
+
+\
+
+#### Almost essential: Duolingo Fast Mode
+
+[Duolingo Fast Mode](https://chromewebstore.google.com/detail/duolingo-fast-mode/mhmipgjhaailkgpdknkibeacoifgfddd) has almost no users, even though it makes free-tier Duolingo so much nicer.
+This extension gives you instant feedback while you are doing exercises, allowing you to know *before* you submit your answer whether it will be accepted.
+It will even help you notice if you are using the wrong word form.
+However, note that these suggestions are not always 100% accurate!
+
+\
+
+![](images/typo.png){fig-align="center"}
+
+::: text-center
+Fast Mode helping me spot a typo before submitting (highlight just underneath Bea)
+:::
+
+\
+
+![](images/feedback.png){fig-align="center"}
+
+::: text-center
+Fast Mode helping me realize I'm not using the right word
+:::
+
+\
+
+Some other nice extensions include: [Duoleavemealone](https://chromewebstore.google.com/detail/duoleavemealone-for-duoli/clipadhhddnpnocanhnbonnhppdibnpf/reviews), which will automatically skip through unnecessary screens during lessons, and [Duolingo Solution Viewer](https://chromewebstore.google.com/detail/duolingo-solution-viewer/idffaipgnlkhfhibgnodeiogpgojcmfm), which provides additional information on what solutions would have been accepted whenever you do make a mistake.
+
+Finally, being a free user on Duolingo also means enduring tons of ads.
+So if you have not already, do yourself a favor and install an ad-blocker.
+Some useful information on ad-blockers and other essential web tools [here](https://lukmayer.github.io/blog/posts/essentials/).\
+
+\
+
+## Conclusion
+
+I hope this guide has successfully shown you how to make the most out of the free user experience on Duolingo.
+While some of these tips may appear like "cheating", I actually believe the learning experience is either improved or at least not harmed by using them.
+You might find that the more "hacky" solutions are not necessary at the moment, but as a long time user I can tell you that they most likely will eventually be needed[^5].
+Good luck on your language learning journey!
+
+[^5]: For reference, Duolingo initially promised they would not introduce the hearts system to their website, and yet here we are.
