@@ -22,7 +22,7 @@ comments:
 Today a super quick tip on how to achieve the a grid-like layout in Visual Studio Code similar to more dedicated Data-Science IDE's like Rstudio and Spyder.
 See image above (click for zoom).
 
-I had been working with a 3-Column layout for the longest time: Activity bar, workbench, panel.
+I had been working with a 3-Column layout for the longest time: Activity Bar, Workbench, Panel.
 However, having the panel take up the entirety of one of these columns felt a bit wasteful given that: 1) I don't use the terminal **that** much, 2) The layout looks weird when your working directory has a long path, 3) My plots are annoyingly in a separate workbench tab.
 
 So how to limit the panel to one corner of the screen?
@@ -43,6 +43,6 @@ Now terminals will be workbench tabs, so all you need to do is drag them to your
 Same with the plots tab that you probably already have.
 Behold the beauty!
 
-[By the way, if you work with .ipynb files, you'll find that the panel has a "jupyter" view, which will feature a variable manager (currently python only). You can drag and drop this view to live on the activity bar if you prefer]{.aside}\
+[By the way, if you work with .ipynb files, you'll find that the Panel has a "Jupyter" view, which will feature a variable manager (currently Python only). You can drag and drop this view to live on the Activity Bar if you prefer]{.aside}.\
 
 [For information on how to set up R or Rmarkdown for VS Code, see this post.](https://lukmayer.github.io/blog/posts/r_vscode/)
