@@ -43,6 +43,6 @@ Now terminals will be workbench tabs, so all you need to do is drag them to your
 Same with the plots tab that you probably already have.
 Behold the beauty!
 
-\
+[By the way, if you work with .ipynb files, you'll find that the panel has a "jupyter" view, which will feature a variable manager (currently python only). You can drag and drop this view to live on the activity bar if you prefer]{.aside}\
 
 [For information on how to set up R or Rmarkdown for VS Code, see this post.](https://lukmayer.github.io/blog/posts/r_vscode/)
