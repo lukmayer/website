@@ -20,44 +20,72 @@ format:
         href: https://github.com/lukmayer/website
 ---
 
-
-::: {.callout-important}
+::: callout-important
 ## Disclaimer (dated 2024-11-03)
 
-- While all the code in this post still works, I consider this post "outdated".
-- I have learned a lot more about Quarto since writing this post, and would structure this guide differently today.
-- For example, I would reconsider the whole "hosting" section, as it's not very beginner-friendly.
-- Check out my updated guide [here](https://lukmayer.github.io/blog/posts/quarto_template/index.html)
-
+-   While all the code in this post still works, I consider this post "outdated".
+-   I have learned a lot more about Quarto since writing this post, and would structure this guide differently today.
+-   For example, I would reconsider the whole "hosting" section, as it's not very beginner-friendly.
+-   Check out my updated guide [here](https://lukmayer.github.io/blog/posts/quarto_template/index.html)
 :::
 
 \
 
-Since I am not much of a social media user (never have been), I have come to think about personal websites as a useful way to still have a presence on the internet, either as a way to share what I'm up to or as a sort of virtual business card. However, I am also neither a professional web developer nor willing to spend money to make something as simple as a 'static' webpage. Luckily, I did not have to, and you should not have to either. 
+Since I am not much of a social media user (never have been), I have come to think about personal websites as a useful way to still have a presence on the internet, either as a way to share what I'm up to or as a sort of virtual business card.
+However, I am also neither a professional web developer nor willing to spend money to make something as simple as a 'static' webpage.
+Luckily, I did not have to, and you should not have to either.
 
-As it turns out, there are multiple frameworks you can use to quite easily make a website, using almost zero actual web development code (think: HTML, CSS, JavaScript), although knowing these certainly helps. Some popular open-source ones include [Jekyll](https://jekyllrb.com), and [Hugo](https://gohugo.io), but today I want to talk about [Quarto](https://quarto.org), which is particularly useful if you use $\LaTeX$ or want to show off some code/computations. 
+As it turns out, there are multiple frameworks you can use to quite easily make a website, using almost zero actual web development code (think: HTML, CSS, JavaScript), although knowing these certainly helps.
+Some popular open-source ones include [Jekyll](https://jekyllrb.com), and [Hugo](https://gohugo.io), but today I want to talk about [Quarto](https://quarto.org), which is particularly useful if you use $\LaTeX$ or want to show off some code/computations.
 
-Quarto, which is an open-source project developed by Posit, the company behind the popular IDE called "RStudio" is actually much more than just a framework for creating websites. This project really was intended to unify a series of different R-markdown extensions people wrote over the years. This means you can use Quarto not just for websites, blogs, and code notebooks, but also data dashboards, books, presentations, and who knows what else. 
+Quarto, which is an open-source project developed by Posit, the company behind the popular IDE called "RStudio" is actually much more than just a framework for creating websites.
+This project really was intended to unify a series of different R-markdown extensions people wrote over the years.
+This means you can use Quarto not just for websites, blogs, and code notebooks, but also data dashboards, books, presentations, and who knows what else.
 
-If you're not familiar with R-markdown, it's essentially how people who code in R prefer to have code and text in one file (like a Jupyter notebook, if you know that). If you don't know any R, don't worry. Despite the historic links to R, Quarto is actually completely language and IDE agnostic. The only languages required for setting up a website with Quarto are Markdown, which can be learned by anyone with 5 minutes to spare, and YAML, which also can be learned as you go along. 
+If you're not familiar with R-markdown, it's essentially how people who code in R prefer to have code and text in one file (like a Jupyter notebook, if you know that).
+If you don't know any R, don't worry.
+Despite the historic links to R, Quarto is actually completely language and IDE agnostic.
+The only languages required for setting up a website with Quarto are Markdown, which can be learned by anyone with 5 minutes to spare, and YAML, which also can be learned as you go along.
 
-If you want to use the code and files I will be sharing, some knowledge of Git (version control software) will be valuable. Bash (the language that terminals on Linux and macOS use) will also be helpful. If you don't know anything about git and terminals don't worry too much, as I'll try to make it as approachable as possible here by showing you how I did it. If in doubt, I encourage you to search for the relevant information you need, or perhaps use the AI model of your trust. I personally think that Git is the hardest part about copying my set-up as it's something people who don't write a lot of code are unlikely to know very well. Luckily, the commands we will be using are quite basic, so it should not be too hard to find the information you need if you get stuck.  
+If you want to use the code and files I will be sharing, some knowledge of Git (version control software) will be valuable.
+Bash (the language that terminals on Linux and macOS use) will also be helpful.
+If you don't know anything about git and terminals don't worry too much, as I'll try to make it as approachable as possible here by showing you how I did it.
+If in doubt, I encourage you to search for the relevant information you need, or perhaps use the AI model of your trust.
+I personally think that Git is the hardest part about copying my set-up as it's something people who don't write a lot of code are unlikely to know very well.
+Luckily, the commands we will be using are quite basic, so it should not be too hard to find the information you need if you get stuck.
 
-So let's get started, shall we? We can use Quarto to render Quarto markdown (`.qmd`) files into HTML which will be hosted on a GitHub server, enabling us to have a publicly available website. The files have to be hosted on a server connected to the internet if you want other people to be able to see the website. If you want to host your code somewhere other than GitHub, my incoming blabbering about Git and GitHub might not be terribly relevant to you. Instead, you should probably check out this [site](https://quarto.org/docs/publishing/) once you're ready to show off that shiny new site.
+So let's get started, shall we?
+We can use Quarto to render Quarto markdown (`.qmd`) files into HTML which will be hosted on a GitHub server, enabling us to have a publicly available website.
+The files have to be hosted on a server connected to the internet if you want other people to be able to see the website.
+If you want to host your code somewhere other than GitHub, my incoming blabbering about Git and GitHub might not be terribly relevant to you.
+Instead, you should probably check out this [site](https://quarto.org/docs/publishing/) once you're ready to show off that shiny new site.
 
-## Installation and setup 
-First, you'll need to install Quarto and Git. For Git, there must be endless tutorials, just search "How to install git on [your operating system]". For Quarto I'd encourage you to just follow their guide on their [website](https://quarto.org/docs/get-started/) for this, as there really is nothing much I can add to this part of the process. Then, for actually setting up the website project, their [guide](https://quarto.org/docs/websites/) is perfectly comprehensive. It's only after this step where you would have to dig deeper in the documentation (which you should definitely be reading after giving my suggestions a shot) and experiment yourself to figure out how to achieve the website of your dreams, so hopefully this is where sharing my process will actually start to be helpful.
+## Installation and setup
+
+First, you'll need to install Quarto and Git.
+For Git, there must be endless tutorials, just search "How to install git on \[your operating system\]".
+For Quarto I'd encourage you to just follow their guide on their [website](https://quarto.org/docs/get-started/) for this, as there really is nothing much I can add to this part of the process.
+Then, for actually setting up the website project, their [guide](https://quarto.org/docs/websites/) is perfectly comprehensive.
+It's only after this step where you would have to dig deeper in the documentation (which you should definitely be reading after giving my suggestions a shot) and experiment yourself to figure out how to achieve the website of your dreams, so hopefully this is where sharing my process will actually start to be helpful.
 
 ## Key files and commands
-Now with your project initialized. Let's quickly highlight some important files and concepts. The most important file is the `_quarto.yml` file, which basically controls the high-level structure of the website and some global settings. I'll assume you have figured out how to render and preview the files you currently have in place from the guide on how to create the project. As you should be able to see with the default files, each page is a `.qmd` file. 
 
-If you haven't yet, just render the files to get a first feel for what the final product looks like. Rendering and then previewing should open your browser, with the site your files give rise to displayed. If not, you are probably overdue some bug hunting. Keep in mind that our preview showing in the browser does NOT mean that the website is public!  
+Now with your project initialized.
+Let's quickly highlight some important files and concepts.
+The most important file is the `_quarto.yml` file, which basically controls the high-level structure of the website and some global settings.
+I'll assume you have figured out how to render and preview the files you currently have in place from the guide on how to create the project.
+As you should be able to see with the default files, each page is a `.qmd` file.
 
-#### The _quarto.yml
+If you haven't yet, just render the files to get a first feel for what the final product looks like.
+Rendering and then previewing should open your browser, with the site your files give rise to displayed.
+If not, you are probably overdue some bug hunting.
+Keep in mind that our preview showing in the browser does NOT mean that the website is public!
+
+#### The \_quarto.yml
+
 Here's what my .yml file looks like:
 
-
-```yaml
+``` yaml
 
 project:
   type: website
@@ -100,34 +128,63 @@ format:
 
 extensions:
   - copy-button
-
 ```
 
-Let's go over what each section does. In the project header, one important thing to note is the `output-dir`. Here, I specify that I want Quarto to render the files we will host later into the directory called `_site`. This will be a subdirectory in your project folder and can have any name. The reason we are not rendering to the root project directory is that GitHub really does not like this, and may fail to host your site as a result. 
+Let's go over what each section does.
+In the project header, one important thing to note is the `output-dir`.
+Here, I specify that I want Quarto to render the files we will host later into the directory called `_site`.
+This will be a subdirectory in your project folder and can have any name.
+The reason we are not rendering to the root project directory is that GitHub really does not like this, and may fail to host your site as a result.
 
-In the website header, I have the field "favicon". If you don't yet know, a favicon is the little image that websites feature on your browser tab, most commonly their logo. In the field, I simply specify the relative directory (relative in the sense of within my project files) in which the image I would like to use sits. I made my favicon using [favicon.io](https://favicon.io). 
+In the website header, I have the field "favicon".
+If you don't yet know, a favicon is the little image that websites feature on your browser tab, most commonly their logo.
+In the field, I simply specify the relative directory (relative in the sense of within my project files) in which the image I would like to use sits.
+I made my favicon using [favicon.io](https://favicon.io).
 
-The "page-footer" field displays a message of your choice at the bottom of each page in your site. In this case, I embedded a link into the string with HTML. In case you don't know HTML, it is the stuff between <a and /a>. 
+The "page-footer" field displays a message of your choice at the bottom of each page in your site.
+In this case, I embedded a link into the string with HTML.
+In case you don't know HTML, it is the stuff between <a and /a>.
 
-The "href" field specifies the link, "target = '\_blank'" will ensure that clicking the link opens a new tab, and finally, the text between > and < specifies the text that I want to embed this link in. If you're confused by that have a look at the rendered version. The open-graph tag is for link previews, which some websites use. So if someone shares a link to your website on a site that allows link previews, it'll show a nice pretty preview with a picture. You can configure exactly what the link preview will show, but I didn't bother with this. 
+The "href" field specifies the link, "target = '\_blank'" will ensure that clicking the link opens a new tab, and finally, the text between \> and \< specifies the text that I want to embed this link in.
+If you're confused by that have a look at the rendered version.
+The open-graph tag is for link previews, which some websites use.
+So if someone shares a link to your website on a site that allows link previews, it'll show a nice pretty preview with a picture.
+You can configure exactly what the link preview will show, but I didn't bother with this.
 
-The "site-url" field specifies the domain your website will be on. I needed this for some links to work correctly on the finished page. It's not necessary to have this before you have deployed your site I don't think.
+The "site-url" field specifies the domain your website will be on.
+I needed this for some links to work correctly on the finished page.
+It's not necessary to have this before you have deployed your site I don't think.
 
-My "title" field uses HTML to link to my favicon and render it at a certain size, which I felt looked quite stylish. This can just be text if you prefer. The "navbar" field controls what my navigation menu looks like. In this case, I use a bar at the top of the website. 
+My "title" field uses HTML to link to my favicon and render it at a certain size, which I felt looked quite stylish.
+This can just be text if you prefer.
+The "navbar" field controls what my navigation menu looks like.
+In this case, I use a bar at the top of the website.
 
-On the left side of the bar, I link to different pages (my markdown files) and control the text that will be displayed on these links. On the right, I use some icons and add links to things, such as my RSS feed (this is to follow my blog, don't worry about this for now), as well as for authoring an email to me. There are tons of icons available that are built-in to Quarto, which you can find [here](https://icons.getbootstrap.com).
+On the left side of the bar, I link to different pages (my markdown files) and control the text that will be displayed on these links.
+On the right, I use some icons and add links to things, such as my RSS feed (this is to follow my blog, don't worry about this for now), as well as for authoring an email to me.
+There are tons of icons available that are built-in to Quarto, which you can find [here](https://icons.getbootstrap.com).
 
-In the "format" section, I basically specify the themes of my website, one dark theme and one light theme. The built-in themes can be found [here](https://quarto.org/docs/output-formats/html-themes.html). If you specify one dark and one light theme, Quarto will add a toggle for people to switch between them in the navbar. The order of the fields determines which one is active by default. So in my case, the page is dark by default. In the dark and light fields I also add some .scss files that basically just change the color of the navbar and the font. This can get a little more technical so don't worry too much about it if you like one of the built-in themes. 
+In the "format" section, I basically specify the themes of my website, one dark theme and one light theme.
+The built-in themes can be found [here](https://quarto.org/docs/output-formats/html-themes.html).
+If you specify one dark and one light theme, Quarto will add a toggle for people to switch between them in the navbar.
+The order of the fields determines which one is active by default.
+So in my case, the page is dark by default.
+In the dark and light fields I also add some .scss files that basically just change the color of the navbar and the font.
+This can get a little more technical so don't worry too much about it if you like one of the built-in themes.
 
-Finally, in the "extensions" field I add the copy-button extension which allows people to copy the code from any code chunks I am embedding in one click. There are actually tons of cool extensions you can use, which are linked [here](https://quarto.org/docs/extensions/).
-
-
+Finally, in the "extensions" field I add the copy-button extension which allows people to copy the code from any code chunks I am embedding in one click.
+There are actually tons of cool extensions you can use, which are linked [here](https://quarto.org/docs/extensions/).
 
 ## Setting up a blog within the website
 
-A blog is a nice place to share things in posts. In Quarto, that basically means having a list of pages on a blog index page. The pages listed on this index all sit inside a folder inside your project directory. In case you didn't realize yet, every quarto Markdown document has a so-called "YAML header" which is indicated by the three hyphens that denote the beginning and ending of this header. The header specifies fields and settings for that page alone. Here's what the header looks like for my blog index.  
+A blog is a nice place to share things in posts.
+In Quarto, that basically means having a list of pages on a blog index page.
+The pages listed on this index all sit inside a folder inside your project directory.
+In case you didn't realize yet, every quarto Markdown document has a so-called "YAML header" which is indicated by the three hyphens that denote the beginning and ending of this header.
+The header specifies fields and settings for that page alone.
+Here's what the header looks like for my blog index.
 
-```yaml
+``` yaml
 ---
 title: "Blog"
 listing:
@@ -142,14 +199,17 @@ listing:
 ---
 ```
 
-So in my case, I give my `blog_index.qmd` a title, choose a layout for my blog (there are a couple of options here), some fields that will be shown in my blog such as how long it takes to read the post (again, there is a list of things you can easily put here). The contents field specifies the folder that features all the pages I want to be listed on `blog_index.qmd`. 
+So in my case, I give my `blog_index.qmd` a title, choose a layout for my blog (there are a couple of options here), some fields that will be shown in my blog such as how long it takes to read the post (again, there is a list of things you can easily put here).
+The contents field specifies the folder that features all the pages I want to be listed on `blog_index.qmd`.
 
-The next couple fields add UI for sorting/filtering and the categories field allows you to add category tags to posts which can be nice. I'll show you how to add categories to posts in a second. The feed field enables RSS feed generation, meaning people will be able to follow updates to your blog with RSS. I plan on making a post about RSS at some point, so look out for that if that caught your interest.
+The next couple fields add UI for sorting/filtering and the categories field allows you to add category tags to posts which can be nice.
+I'll show you how to add categories to posts in a second.
+The feed field enables RSS feed generation, meaning people will be able to follow updates to your blog with RSS.
+I plan on making a post about RSS at some point, so look out for that if that caught your interest.
 
 With this in place, here is what the header of a given blog post looks like for me:
 
-
-```yaml
+``` yaml
 
 ---
 title: "My first DIY web-app"
@@ -165,20 +225,19 @@ comments:
       theme: github-dark
       issue-term: url
 ---
-
 ```
 
-The only thing that might be unexpected here is the `comments` field, where I configure a piece of software that allows people to comment on posts with their GitHub accounts. I will not be covering how to set this up, but if you're interested in having this also be part of your website look [here](https://quarto.org/docs/output-formats/html-basics.html#commenting).
+The only thing that might be unexpected here is the `comments` field, where I configure a piece of software that allows people to comment on posts with their GitHub accounts.
+I will not be covering how to set this up, but if you're interested in having this also be part of your website look [here](https://quarto.org/docs/output-formats/html-basics.html#commenting).
 
 Hopefully, you have a decent idea of how to achieve a blog on your webpage now!
 
-
 ## About pages
-Quarto provides some templates for easily configuring a rather stylish "About the author" page. 
-Here is how I set up mine: 
 
+Quarto provides some templates for easily configuring a rather stylish "About the author" page.
+Here is how I set up mine:
 
-```yaml
+``` yaml
 ---
 title: "Lukas W. Mayer"
 about:
@@ -195,19 +254,23 @@ about:
      text: Email
      href: mailto:willuk@vivaldi.net
 ---
-
 ```
 
 The documentation for these is super easy to understand and can be found [here](https://quarto.org/docs/websites/website-about.html).
-There are a couple templates to select from and at the bottom I add some links to other things related to me. This YAML stuff should start to look familiar at this point ;).
+There are a couple templates to select from and at the bottom I add some links to other things related to me.
+This YAML stuff should start to look familiar at this point ;).
 
 ## Hosting + My shell script for pushing updates to GitHub
 
-If you want to host your finished site on GitHub, you need to initialize a local git repository in the directory that holds the rendered files. In my case that is the `_site` folder. Then you push these files to a GitHub repository that you named `[yourgithubusername].github.io`. Then, on the settings page of this GitHub repository you enable `pages`. If you struggle with this step, AI tools might be more helpful than the average search for this kind of debugging. 
+If you want to host your finished site on GitHub, you need to initialize a local git repository in the directory that holds the rendered files.
+In my case that is the `_site` folder.
+Then you push these files to a GitHub repository that you named `[yourgithubusername].github.io`.
+Then, on the settings page of this GitHub repository you enable `pages`.
+If you struggle with this step, AI tools might be more helpful than the average search for this kind of debugging.
 
-Because I have my website source files on a different repository on GitHub, I created a little shell script that I can push updates to both repositories with:  
+Because I have my website source files on a different repository on GitHub, I created a little shell script that I can push updates to both repositories with:
 
-```bash
+``` bash
 #!/bin/bash
 
 # --- Build the site with Quarto ---
@@ -253,34 +316,28 @@ git push -f origin master:gh-pages  # Ensure that 'gh-pages' is the correct bran
 
 # Navigate back to the root directory of the project
 cd ..
-
 ```
 
-The script essentially just runs a couple standard commands. First, I render my website and push the source files to their repository. After this, I change to the folder with the rendered files and force push these to the repositories that hosts the website. To use this, make sure that `_site` has been added to the `.gitignore` file in the main project directory. 
+The script essentially just runs a couple standard commands.
+First, I render my website and push the source files to their repository.
+After this, I change to the folder with the rendered files and force push these to the repositories that hosts the website.
+To use this, make sure that `_site` has been added to the `.gitignore` file in the main project directory.
 
-With this script my workflow basically just becomes: 1) Make changes, 2) open terminal, 3) go to source directory, 4) run deploy.sh (the shell script). If you plan on using this script, keep in mind that your repository will be a different one than mine, which is further complicated by the fact that I use SSH, which will require a tutorial to set up if you are not familiar (search: "how to set up SSH with GitHub").   
-
+With this script my workflow basically just becomes: 1) Make changes, 2) open terminal, 3) go to source directory, 4) run deploy.sh (the shell script).
+If you plan on using this script, keep in mind that your repository will be a different one than mine, which is further complicated by the fact that I use SSH, which will require a tutorial to set up if you are not familiar (search: "how to set up SSH with GitHub").
 
 ## Conclusion
 
-So that's it! I hope you have a good idea of how to configure a website using my approach. There are a few tricks my website uses that I didn't cover here, but I encourage you to just check my source files if you see something that catches your interest. My source repository is public, meaning that even if you found this all still a little much, with some git skills you could just grab my source code and use it as a template to get started with!
+So that's it!
+I hope you have a good idea of how to configure a website using my approach.
+There are a few tricks my website uses that I didn't cover here, but I encourage you to just check my source files if you see something that catches your interest.
+My source repository is public, meaning that even if you found this all still a little much, with some git skills you could just grab my source code and use it as a template to get started with!
 
-From here, you should definitely also check the Quarto documentation mentioned above. It's currently not always extremely detailed for all possible configurations and setups, but it gives you a pretty good idea of what is possible. 
+From here, you should definitely also check the Quarto documentation mentioned above.
+It's currently not always extremely detailed for all possible configurations and setups, but it gives you a pretty good idea of what is possible.
 
 Find my source file repository [here](https://github.com/lukmayer/website).
 
-If you make a website based on my files I'd love to see it! 
+If you make a website based on my files I'd love to see it!
 
-Thanks for reading! 
-
-
-
-
-
-
-
-
-
-
-
-
+Thanks for reading!

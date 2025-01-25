@@ -1,0 +1,48 @@
+---
+title: "How to make VS Code look like Rstudio/Spyder"
+description: "Optimizing VS Code for Data Science"
+author: "Luke"
+date: "2025-01-24"
+categories:
+  - programming
+  - software
+  - quarto
+image: "images/vscode.png" 
+comments:
+  utterances:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    issue-term: url
+---
+
+![All in one: editor, variable manager, plotting pane, terminal - she's a beauty!](images/vscode_setup.png){fig-align="center"}
+
+\
+
+Today a super quick tip on how to achieve the a grid-like layout in Visual Studio Code similar to more dedicated Data-Science IDE's like Rstudio and Spyder.
+See image above (click for zoom).
+
+I had been working with a 3-Column layout for the longest time: Activity bar, workbench, panel.
+However, having the panel take up the entirety of one of these columns felt a bit wasteful given that: 1) I don't use the terminal **that** much, 2) The layout looks weird when your working directory has a long path, 3) My plots are annoyingly in a separate workbench tab.
+
+So how to limit the panel to one corner of the screen?
+
+Long story short, that's not currently possible.
+
+However, what we can do, is make terminals be a workbench tab by default, and then tile the tabs to our liking (e.g. via drag-and-drop).
+
+Step 1 is to press `CTRL + SHIFT + P` and then open `Preferences: Open User Settings (JSON)`.
+
+Then, add the following to this `.json`\`:
+
+```         
+"terminal.integrated.defaultLocation": "editor"
+```
+
+Now terminals will be workbench tabs, so all you need to do is drag them to your preferred location.
+Same with the plots tab that you probably already have.
+Behold the beauty!
+
+\
+
+[For information on how to set up R or Rmarkdown for VS Code, see this post.](https://lukmayer.github.io/blog/posts/r_vscode/)

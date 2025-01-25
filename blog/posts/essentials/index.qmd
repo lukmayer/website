@@ -5,7 +5,6 @@ author: "Luke"
 date: "2024-12-28"
 categories:
   - extensions
-  - dns
   - rss
 image: "images/puzzle.jpg" 
 comments:
@@ -15,48 +14,126 @@ comments:
     issue-term: url
 ---
 
+If you somehow found this page, you probably use the internet quite a bit in your daily life.
+It will not come as a shock to you then, if I remind you that most if not all the online services you like to use are largely funded by advertising, and controlled by one of approximately five companies.
+This model has some advantages and some disadvantages, the discussion of which is not really the focus of this post.
 
-If you somehow found this page, you probably use the internet quite a bit in your daily life. It will not come as a shock to you then, if I remind you that most if not all the online services you like to use are largely funded by advertising, and controlled by one of approximately five companies. This model has some advantages and some disadvantages, the discussion of which is not really the focus of this post. 
-
-Because a lot of the internet is controlled by a very small number of companies, people have created tons of tools to make using services that lack viable competitors more bearable. Admittedly, a lot of these tools are pretty esoteric, expecting significant programming experience and knowledge of computing. However, there are a few tools that I think are pretty accessible and could make your internet experience a lot more enjoyable.
+Because a lot of the internet is controlled by a very small number of companies, people have created tons of tools to make using services that lack viable competitors more bearable.
+Admittedly, a lot of these tools are pretty esoteric, expecting significant programming experience and knowledge of computing.
+However, there are a few tools that I think are pretty accessible and could make your internet experience a lot more enjoyable.
 
 \
 
 ## Escaping the ads
 
-Blocking ads is good for your privacy, security, and sanity. It's good for your privacy because most ad-blocking services also interfere with tracking technologies. It's good for your security because fraudulent ads are a common means of distributing malware. Naturally, it's good for your sanity because ads are abundant and usually annoying. 
+Blocking ads is good for your privacy, security, and sanity.
+It's good for your privacy because most ad-blocking services also interfere with tracking technologies.
+It's good for your security because fraudulent ads are a common means of distributing malware.
+Naturally, it's good for your sanity because ads are abundant and usually annoying.
 
-Most of the time, ads are injected into websites. Basically, the ads you see come from somewhere else, and are placed on the website you are visiting. The reason for this is ad-personalization. A simplified example: Google keeps logs of your activities, then uses that information to sell the right to show you ads to companies. The website you visited, which likely uses Google's ad services, then asks Google to show you the ad of the highest bidder. Thus, the website itself has limited control over what ads you see, because the actual ads come from Google. Various ad-blocking technologies take advantage of this arrangement to block the ads before they are shown to you. They simply block the request to Google's ad servers.
+Most of the time, ads are injected into websites.
+Basically, the ads you see come from somewhere else, and are placed on the website you are visiting.
+The reason for this is ad-personalization.
+A simplified example: Google keeps logs of your activities, then uses that information to sell the right to show you ads to companies.
+The website you visited, which likely uses Google's ad services, then asks Google to show you the ad of the highest bidder.
+Thus, the website itself has limited control over what ads you see, because the actual ads come from Google.
+Various ad-blocking technologies take advantage of this arrangement to block the ads before they are shown to you.
+They simply block the request to Google's ad servers.
 
-The most user-friendly way to block ads on desktop is to use an ad-blocking extension in your browser. The main thing to be aware of is that some ad-blockers use monetization strategies that "soften" their ambitions (search "acceptable ads"). I would recommend [uBlock Origin Lite](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh) (I assume you are using Chrome). Two additional things about ad-blocking to note: Blocking ads is generally easier on desktop than on mobile, and (at the time of writing) ad-blocking extensions are more effective on [Firefox](https://www.mozilla.org/en-US/firefox/) desktop than on Chrome desktop.
+The most user-friendly way to block ads on desktop is to use an ad-blocking extension in your browser.
+The main thing to be aware of is that some ad-blockers use monetization strategies that "soften" their ambitions (search "acceptable ads").
+I would recommend [uBlock Origin Lite](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh) (I assume you are using Chrome).
+Two additional things about ad-blocking to note: Blocking ads is generally easier on desktop than on mobile, and (at the time of writing) ad-blocking extensions are more effective on [Firefox](https://www.mozilla.org/en-US/firefox/) desktop than on Chrome desktop.
 
-"Okay but what about my phone? Apps have ads!" I hear you say. You are correct, ads are a bit more wide-spread on mobile phones than they are on PCs, so a browser extension wouldn't cut it even if you could install one. Luckily there are more "system-wide" ad-blockers available. The idea here is very much the same, blocking requests to Ad servers before they are shown to you. "DNS-filtering" as its called, is simply passing all your internet traffic (so not just the browser's traffic) through someone's server that blocks the requests to Ad servers. This does mean you have to trust the provider of this filtering server with all your internet traffic. I would recommend using [Mullvad DNS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls#mobile-os). Not only is it completely free and extremely easy to set up on mobile, the company is also universally praised for their privacy practices. They even have a few different options you can choose from, depending on what sorts of things you want to block. If you need something more customizable, you may want to look into [NextDNS](https://nextdns.io/), but it is slightly more work to set up. Very occasionally, DNS filtering can cause issues with some services. In my experience, this is very rare. If something does seem broken, try switching back to the default DNS provider in the network settings of your phone and see if that fixes it. Don't forget to turn the filtering back on afterwards!
+"Okay but what about my phone? Apps have ads!" I hear you say.
+You are correct, ads are a bit more wide-spread on mobile phones than they are on PCs, so a browser extension wouldn't cut it even if you could install one.
+Luckily there are more "system-wide" ad-blockers available.
+The idea here is very much the same, blocking requests to Ad servers before they are shown to you.
+"DNS-filtering" as its called, is simply passing all your internet traffic (so not just the browser's traffic) through someone's server that blocks the requests to Ad servers.
+This does mean you have to trust the provider of this filtering server with all your internet traffic.
+I would recommend using [Mullvad DNS](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls#mobile-os). Not only is it completely free and extremely easy to set up on mobile, the company is also universally praised for their privacy practices.
+They even have a few different options you can choose from, depending on what sorts of things you want to block.
+If you need something more customizable, you may want to look into [NextDNS](https://nextdns.io/), but it is slightly more work to set up.
+Very occasionally, DNS filtering can cause issues with some services.
+In my experience, this is very rare.
+If something does seem broken, try switching back to the default DNS provider in the network settings of your phone and see if that fixes it.
+Don't forget to turn the filtering back on afterwards!
 
 \
 
 ## Peering behind the paywalls
 
-Is access to information a universal right or a privilege? Depending on your answer to this question, you may have mixed feelings about removing paywalls. I am all for paying for services that I get a lot of value from. I rarely run into a pay-wall in the first place. But when I do run into one, it's usually because some article from an outlet I don't frequent caught my interest and is behind a very strict pay-wall. Sorry, but I'm not about to fork over $10+ for a single article I don't even know the quality of. 
+Is access to information a universal right or a privilege?
+Depending on your answer to this question, you may have mixed feelings about removing paywalls.
+I am all for paying for services that I get a lot of value from.
+I rarely run into a pay-wall in the first place.
+But when I do run into one, it's usually because some article from an outlet I don't frequent caught my interest and is behind a very strict pay-wall.
+Sorry, but I'm not about to fork over \$10+ for a single article I don't even know the quality of.
 
-Some pay-walls are more technically sophisticated than others, so the things I am about to mention may not even work for you. I think they are worth bookmarking even if not 100% reliable. If you are lucky, the pay-wall is essentially a bit of JavaScript code layered on top of the article, in which case using a service that shows you the page without loading this JavaScript code will do the trick. If you paste the link to your article into [12ft.io](https://12ft.io/), you may be able to read the article without any issues. If your browser has a "reader mode" this may also work. Should this trick not work for you don't lose hope quite yet. 
+Some pay-walls are more technically sophisticated than others, so the things I am about to mention may not even work for you.
+I think they are worth bookmarking even if not 100% reliable.
+If you are lucky, the pay-wall is essentially a bit of JavaScript code layered on top of the article, in which case using a service that shows you the page without loading this JavaScript code will do the trick.
+If you paste the link to your article into [12ft.io](https://12ft.io/), you may be able to read the article without any issues.
+If your browser has a "reader mode" this may also work.
+Should this trick not work for you don't lose hope quite yet.
 
-Some outlets will have impenetrable pay-walls - unless you are a robot, in which case they may grant you a free peek. This is because these outlets want their articles to be indexed by search engines so that they show up when people search for stuff. Search engines basically have bots "crawl" from web-page to web-page to make sense of the pages content and importance. If the article you want to read has been visited by the internet archive's bot, you have a pretty solid chance of being able to read that article.
-Simply copy the link to the article and paste it into the search bar on [archive.org](https://archive.org/). If the article is in the archive, you should now be able to see the full thing. If it's not, you can request it to be archived or just try again later. Of course, very recent articles are unlikely to have been archived already. Sometimes even if the page is archived it will still show the pay wall. Sad times.
+Some outlets will have impenetrable pay-walls - unless you are a robot, in which case they may grant you a free peek.
+This is because these outlets want their articles to be indexed by search engines so that they show up when people search for stuff.
+Search engines basically have bots "crawl" from web-page to web-page to make sense of the pages content and importance.
+If the article you want to read has been visited by the internet archive's bot, you have a pretty solid chance of being able to read that article.
+Simply copy the link to the article and paste it into the search bar on [archive.org](https://archive.org/).
+If the article is in the archive, you should now be able to see the full thing.
+If it's not, you can request it to be archived or just try again later.
+Of course, very recent articles are unlikely to have been archived already.
+Sometimes even if the page is archived it will still show the pay wall.
+Sad times.
 
 \
 
 ## Resisting the addictive design
 
-Many businesses whose financial viability depends on maximizing ad revenue essentially aim to keep you on their platform for as long as possible so that you will be exposed to more ads. As a result, many sites are designed to be addictive. There are many elements that contribute to this addictive design, but some are more easily resisted against than others. One key mechanism is the algorithmic curation of what you are shown. Take the example of social media. Social media sites often have a premise of social connection. However, one's feed is usually far more than just the posts of people you chose to follow, with ads, and various forms of "recommended" content. There is nothing inherently wrong with recommending other things to check out, as it may serve onboarding of new users etc., but it may not be your taste. Personally, I prefer receiving authentic recommendations from real people. Browser extensions like [SocialFocus](https://chromewebstore.google.com/detail/socialfocus-hide-distract/abocjojdmemdpiffeadpdnicnlhcndcg) can help you see the content you want to see, and not the content that the algorithm thinks you want to see. For example, this extension lets you turn off all sorts of things on YouTube.com from Auto-play to Shorts, and even the "Recommended" section. There are settings for several websites including Facebook, Instagram, LinkedIn, X, Reddit, and more. The same developer made an even more in-depth extension dedicated to YouTube called [UnTrap](https://chromewebstore.google.com/detail/untrap-for-youtube/enboaomnljigfhfjfoalacienlhjlfil). This self-imposed censorship of unwanted "features" seems essential for reducing the likelihood of badly spent time, e.g., "YouTube rabbit holes". That being said, reducing the exposure to curation is not really an option on mobile as far as I am aware. You may start to recognize lack of control being a theme with mobile devices.
+Many businesses whose financial viability depends on maximizing ad revenue essentially aim to keep you on their platform for as long as possible so that you will be exposed to more ads.
+As a result, many sites are designed to be addictive.
+There are many elements that contribute to this addictive design, but some are more easily resisted against than others.
+One key mechanism is the algorithmic curation of what you are shown.
+Take the example of social media.
+Social media sites often have a premise of social connection.
+However, one's feed is usually far more than just the posts of people you chose to follow, with ads, and various forms of "recommended" content.
+There is nothing inherently wrong with recommending other things to check out, as it may serve onboarding of new users etc., but it may not be your taste.
+Personally, I prefer receiving authentic recommendations from real people.
+Browser extensions like [SocialFocus](https://chromewebstore.google.com/detail/socialfocus-hide-distract/abocjojdmemdpiffeadpdnicnlhcndcg) can help you see the content you want to see, and not the content that the algorithm thinks you want to see.
+For example, this extension lets you turn off all sorts of things on YouTube.com from Auto-play to Shorts, and even the "Recommended" section.
+There are settings for several websites including Facebook, Instagram, LinkedIn, X, Reddit, and more.
+The same developer made an even more in-depth extension dedicated to YouTube called [UnTrap](https://chromewebstore.google.com/detail/untrap-for-youtube/enboaomnljigfhfjfoalacienlhjlfil).
+This self-imposed censorship of unwanted "features" seems essential for reducing the likelihood of badly spent time, e.g., "YouTube rabbit holes".
+That being said, reducing the exposure to curation is not really an option on mobile as far as I am aware.
+You may start to recognize lack of control being a theme with mobile devices.
 
-You can also break the addictiveness of sites by setting yourself some healthy boundaries. A tool that serves this purpose well and is completely free is the popular [LeechBlockNG](https://chromewebstore.google.com/detail/leechblock-ng/blaaajhemilngeeffpbfkdjjoefldkok) extension. This extension lets you block certain sites for certain periods of time. You can even set up a schedule for when you want to block certain sites. There are a lot of options for how you can set up the blocking, so you can really tailor it to your needs. The creator is a pretty interesting guy too, not the typical developer type. Instead, he's a [professor of theology](https://www.zotero.org/proginosko)?!
+You can also break the addictiveness of sites by setting yourself some healthy boundaries.
+A tool that serves this purpose well and is completely free is the popular [LeechBlockNG](https://chromewebstore.google.com/detail/leechblock-ng/blaaajhemilngeeffpbfkdjjoefldkok) extension.
+This extension lets you block certain sites for certain periods of time.
+You can even set up a schedule for when you want to block certain sites.
+There are a lot of options for how you can set up the blocking, so you can really tailor it to your needs.
+The creator is a pretty interesting guy too, not the typical developer type.
+Instead, he's a [professor of theology](https://www.zotero.org/proginosko)?!
 
-Finally, I wrote a [previous post about RSS feed readers](https://lukmayer.github.io/blog/posts/rss/) you may want to check out. This is admittedly a little more niche, but it can be a great way to drastically reduce the time you spend on various sites, without missing any of the action. RSS feed readers essentially let you follow websites that publish their updates in a certain format. Imagine it like YouTube subscriptions, but across websites. For example, you can have Youtube creators, Subreddit updates, and news outlets all in the same feed. There's a really great browser extension called [Feedbro](https://chromewebstore.google.com/detail/feedbro/mefgmmbdailogpfhfblcnnjfmnpnmdfa) that I found since writing my RSS post. If you're interested in checking it out, do note that Feedbro stores your list of subscriptions on your computer, so you will have to export your list and save it somewhere safe if you need to switch browsers or devices. There are also cloud-based RSS readers where feeds are not stored locally (e.g., [Inoreader](https://www.inoreader.com/)), but they usually come with usage limits. To identify RSS feeds, maybe use [Get RSS Feed URL](https://chromewebstore.google.com/detail/get-rss-feed-url/kfghpdldaipanmkhfpdcjglncmilendn) or some other similar extension. For more information on the how, what, and why of RSS feed readers, check out [my previous RSS post](https://lukmayer.github.io/blog/posts/rss/).
-
+Finally, I wrote a [previous post about RSS feed readers](https://lukmayer.github.io/blog/posts/rss/) you may want to check out.
+This is admittedly a little more niche, but it can be a great way to drastically reduce the time you spend on various sites, without missing any of the action.
+RSS feed readers essentially let you follow websites that publish their updates in a certain format.
+Imagine it like YouTube subscriptions, but across websites.
+For example, you can have Youtube creators, Subreddit updates, and news outlets all in the same feed.
+There's a really great browser extension called [Feedbro](https://chromewebstore.google.com/detail/feedbro/mefgmmbdailogpfhfblcnnjfmnpnmdfa) that I found since writing my RSS post.
+If you're interested in checking it out, do note that Feedbro stores your list of subscriptions on your computer, so you will have to export your list and save it somewhere safe if you need to switch browsers or devices.
+There are also cloud-based RSS readers where feeds are not stored locally (e.g., [Inoreader](https://www.inoreader.com/)), but they usually come with usage limits.
+To identify RSS feeds, maybe use [Get RSS Feed URL](https://chromewebstore.google.com/detail/get-rss-feed-url/kfghpdldaipanmkhfpdcjglncmilendn) or some other similar extension.
+For more information on the how, what, and why of RSS feed readers, check out [my previous RSS post](https://lukmayer.github.io/blog/posts/rss/).
 
 ## Conclusion
 
-I hope you found something here that you had not heard of before and are now curious to try. There are a lot of other things I could have written about in this post[^1], but this felt like a good starting point with a clear theme. If you have any suggestions for tools that you think I should try, please let me know in the comments or by email. Thanks for reading!
+I hope you found something here that you had not heard of before and are now curious to try.
+There are a lot of other things I could have written about in this post[^1], but this felt like a good starting point with a clear theme.
+If you have any suggestions for tools that you think I should try, please let me know in the comments or by email.
+Thanks for reading!
 
-
-[^1]: For example, I could have written about password managers, alternative search engines, privacy focussed browser extensions, or other tools like a better PDF reader for chrome-based browsers. If you are interested in any of these topics, stay tuned for an upcoming post.
+[^1]: For example, I could have written about password managers, alternative search engines, privacy focussed browser extensions, or other tools like a better PDF reader for chrome-based browsers.
+    If you are interested in any of these topics, stay tuned for an upcoming post.

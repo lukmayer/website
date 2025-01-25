@@ -16,21 +16,41 @@ comments:
 
 Hello once again!
 
-Today I want to quickly introduce you to a piece of ingenious technology that you might never have heard about if you are less than 30 years old at the time this post goes out. If you are above that age, you may have forgotten this existed. I don't blame you. I am of course talking about a special something called RSS.
+Today I want to quickly introduce you to a piece of ingenious technology that you might never have heard about if you are less than 30 years old at the time this post goes out.
+If you are above that age, you may have forgotten this existed.
+I don't blame you.
+I am of course talking about a special something called RSS.
 
-Way before social media existed, people had to constantly check websites they were interested in (e.g., personal blogs, news sites) for updates. Of course, this was quite tedious to do. Luckily, in the late 90s some people at a former big-tech company called Netscape finally succeeded in popularizing a standardized format for websites to publish their updates in. Importantly, this format could be automatically accessed by other computers. They managed to pull this off because back then people commonly used "web portals" (think a browser start page that a corporation controls). The general idea was to help new internet users navigate the internet by showing them what sort of information is available on the mysterious inter-webs. Netscape's portal was quite popular at the time and of course companies wanted their content to be featured on users pages, so they quickly adopted the "Really Simple Syndication" format. This wide adoption of the format in turn allowed people to later customize their portals with whatever content they wanted to follow. 
+Way before social media existed, people had to constantly check websites they were interested in (e.g., personal blogs, news sites) for updates.
+Of course, this was quite tedious to do.
+Luckily, in the late 90s some people at a former big-tech company called Netscape finally succeeded in popularizing a standardized format for websites to publish their updates in.
+Importantly, this format could be automatically accessed by other computers.
+They managed to pull this off because back then people commonly used "web portals" (think a browser start page that a corporation controls).
+The general idea was to help new internet users navigate the internet by showing them what sort of information is available on the mysterious inter-webs.
+Netscape's portal was quite popular at the time and of course companies wanted their content to be featured on users pages, so they quickly adopted the "Really Simple Syndication" format.
+This wide adoption of the format in turn allowed people to later customize their portals with whatever content they wanted to follow.
 
-Since then, we seem to have shifted away from this decentralized, user-centric approach to content procurement. In its place we adopted more centralized services, like social media platforms, which focus on algorithm-centric content delivery. I am speculating here, but intuitively this may have happened for two big reasons. Firstly, finding and accumulating feeds of interest is effortful and time-consuming for the user. Social media feeds do this for you, and they actually try to both the following and the exploring at the same time. They achieve this mixing things you're not following but might like into your feed. Secondly, I suspect single corporations could not make as much money with RSS feeds as social media companies. As a centralized service, you are in complete control of what your users see, meaning you can get many more advertisers to pay for the privilege of accessing your user base. 
+Since then, we seem to have shifted away from this decentralized, user-centric approach to content procurement.
+In its place we adopted more centralized services, like social media platforms, which focus on algorithm-centric content delivery.
+I am speculating here, but intuitively this may have happened for two big reasons.
+Firstly, finding and accumulating feeds of interest is effortful and time-consuming for the user.
+Social media feeds do this for you, and they actually try to both the following and the exploring at the same time.
+They achieve this mixing things you're not following but might like into your feed.
+Secondly, I suspect single corporations could not make as much money with RSS feeds as social media companies.
+As a centralized service, you are in complete control of what your users see, meaning you can get many more advertisers to pay for the privilege of accessing your user base.
 
-While I am sure many people have greatly benefitted from the existence of these centralized services, for example by being able to gain much more interest in their person or business thanks to the more centralized structure of these networks, I also can't help but feel that the average user bears a lot of costs from this arrangement. This is because these services still struggle to contain dubious information, and otherwise extreme content, while also using very aggressive methods of advertising. Besides the obvious benefits of having access to content recommendation systems, there may also be a slightly sinister social dimension to this. I suspect many people feel compelled to use these services because everyone else is, and/or don't know that there are alternatives with which you can remove some of these drawbacks (if they annoy you). Using RSS is one alternative, because it allows you to just follow the content you want, across sites. Many sites including YouTube, Reddit, almost all news sites, podcasts, and academic journals still use RSS feeds, meaning you totally can get the content without any "algorithm" shenanigans. And guess what, even when sites no longer support RSS, there are tools like [Politepol](https://politepol.com/en/), which let you easily generate an RSS feed for any website. RSS is therefore a bit of an escape from platforms that you would like to stop using, but are not quite ready to leave the feeds behind.
+While I am sure many people have greatly benefitted from the existence of these centralized services, for example by being able to gain much more interest in their person or business thanks to the more centralized structure of these networks, I also can't help but feel that the average user bears a lot of costs from this arrangement.
+This is because these services still struggle to contain dubious information, and otherwise extreme content, while also using very aggressive methods of advertising.
+Besides the obvious benefits of having access to content recommendation systems, there may also be a slightly sinister social dimension to this.
+I suspect many people feel compelled to use these services because everyone else is, and/or don't know that there are alternatives with which you can remove some of these drawbacks (if they annoy you).
+Using RSS is one alternative, because it allows you to just follow the content you want, across sites.
+Many sites including YouTube, Reddit, almost all news sites, podcasts, and academic journals still use RSS feeds, meaning you totally can get the content without any "algorithm" shenanigans.
+And guess what, even when sites no longer support RSS, there are tools like [Politepol](https://politepol.com/en/), which let you easily generate an RSS feed for any website.
+RSS is therefore a bit of an escape from platforms that you would like to stop using, but are not quite ready to leave the feeds behind.
 
 So if you are interested in taking back a bit of control, here is what I would recommend that I feel is pragmatic:
 
-- To address the feeling of being locked in because everyone else is using [service], try using a unified messenger app like [Beeper](https://www.beeper.com), which lets you retain all those DMs that are being left on read, across services. 
-- Try out some RSS reader service. [Inoreader](https://www.inoreader.com) has a very generous free offering, and is super easy to use because you can just paste in the name or URL of the page you want to follow. The RSS feed reader built-into the Vivaldi browser is also pretty nice because it has no usage limits and [Vivaldi](https://vivaldi.com) helps you locate the RSS feed on websites. There are also lots of [Free Open-Source (FOSS) alternatives](https://alternativeto.net/software/inoreader/?license=opensource) that people like. Naturally, there's an [Emacs package](https://github.com/skeeto/elfeed) that does it.  
+-   To address the feeling of being locked in because everyone else is using \[service\], try using a unified messenger app like [Beeper](https://www.beeper.com), which lets you retain all those DMs that are being left on read, across services.
+-   Try out some RSS reader service. [Inoreader](https://www.inoreader.com) has a very generous free offering, and is super easy to use because you can just paste in the name or URL of the page you want to follow. The RSS feed reader built-into the Vivaldi browser is also pretty nice because it has no usage limits and [Vivaldi](https://vivaldi.com) helps you locate the RSS feed on websites. There are also lots of [Free Open-Source (FOSS) alternatives](https://alternativeto.net/software/inoreader/?license=opensource) that people like. Naturally, there's an [Emacs package](https://github.com/skeeto/elfeed) that does it.
 
 In case you didn't realize, my page (like most blogs) has an [RSS feed](https://lukmayer.github.io/blog_index.xml), so if you're feeling crazy, why not give that new RSS reader a test drive?
-
-
-
-

@@ -5,7 +5,6 @@ author: "Luke"
 date: "2024-09-21"
 categories:
   - software
-  - languages
   - duolingo
 image: "images/duo.png"
 comments:

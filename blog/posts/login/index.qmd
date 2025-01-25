@@ -19,24 +19,30 @@ format:
 
 Hello again!
 
-I stumbled upon this [blog post](https://www.agalera.eu/github-pages-password/) while trying to figure out whether it was possible to set up a login portal for static webpages. It seems that so far, no one else has figured out how to do this with Quarto, so I've been hacking away at it in my free time for the last few days, and finally figured it out!
+I stumbled upon this [blog post](https://www.agalera.eu/github-pages-password/) while trying to figure out whether it was possible to set up a login portal for static webpages.
+It seems that so far, no one else has figured out how to do this with Quarto, so I've been hacking away at it in my free time for the last few days, and finally figured it out!
 
-Basically, the idea is to use the SHA1 hash of the username and password as a part of the URL to the gated content. This way, the URL to the gated content is not easily guessable, and the user has to go through the login portal to access the content.
+Basically, the idea is to use the SHA1 hash of the username and password as a part of the URL to the gated content.
+This way, the URL to the gated content is not easily guessable, and the user has to go through the login portal to access the content.
 
-The rest was just a matter of figuring out how to make this compatible with Quarto. It's surprisingly easy!
+The rest was just a matter of figuring out how to make this compatible with Quarto.
+It's surprisingly easy!
 
-For a demonstration, click on [Login] in the top right and log in with username = `username` and password = `password`.
+For a demonstration, click on \[Login\] in the top right and log in with username = `username` and password = `password`.
 
 Alternatively, visit [lukmayer.github.io/login_portal](https://lukmayer.github.io/login_portal/) to directly go to the login portal.
 
 \
 
-::: {.callout-important}
+::: callout-important
 ## Disclaimer
 
 The method I show here is meant for use-cases were you need a login portal for a static site.
-This method is NOT appropriate to use for enterprise applications, or critically sensitive information. The main reason for this is that you have no way of telling *who* is accessing pages. It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, it's not a good idea to use this method for anything that could get you into trouble. 
+This method is NOT appropriate to use for enterprise applications, or critically sensitive information.
+The main reason for this is that you have no way of telling *who* is accessing pages.
+It should also be noted that the admin of the server that the site is hosted on can see the hashed URLs, it's not a good idea to use this method for anything that could get you into trouble.
 :::
+
 \
 
 ## Prerequisites
@@ -65,11 +71,12 @@ Copy the hashes these commands produce, we will need them in a second.
 
 ## Step 2: Setting up the initial login page
 
-Create a directory. In this example, we'll call it `login_portal`.
+Create a directory.
+In this example, we'll call it `login_portal`.
 
 Now, in this directory, create `index.html` with the following content:
 
-```html
+``` html
 <!DOCTYPE html>
 <html>
 <head>
@@ -142,7 +149,6 @@ Now, in this directory, create `index.html` with the following content:
   </footer>
 </body>
 </html>
-
 ```
 
 \
@@ -155,7 +161,7 @@ You can put whatever you like in the `styles.css`, but here is mine:
 
 \
 
-```css
+``` css
 body {
   background-color: #4f4f4f; /* Dark grey background from Darkly theme */
   color: #ffffff; /* Light text */
@@ -257,11 +263,10 @@ Finally, open your `_quarto.yml` and make sure it has the following:
 
 \
 
-```yaml
+``` yaml
 project:
   type: website
   output-dir: "a{yourpasswordhash}"
-
 ```
 
 \
@@ -274,18 +279,15 @@ This means you'll be redirected to the files that sit in this folder named after
 
 \
 
-
-
 As a sanity check, post-render the login portal should now have a file structure like this:
 
-```
+```         
 login_portal/
 ├── index.html
 ├── styles.css
 ├── favicons/  # if you have favicons
 └── username_hash/
     └── password_hash/
-
 ```
 
 \
@@ -300,7 +302,7 @@ All you need to do is paste the following HTML/JS on every Quarto document behin
 
 \
 
-```html
+``` html
 <script>
 window.addEventListener('load', () => {
   // Change the URL in the address bar after load
@@ -315,12 +317,11 @@ So, for example, the index page on the demo I mentioned at the beginning of the 
 
 What this code does is override the URL shown in the address bar once the page loaded, thus hiding the hashes.
 
-`"/login_portal/"` is optional, you can set this to whatever you like. 
-
+`"/login_portal/"` is optional, you can set this to whatever you like.
 
 Alternatively, you can add the following to the `_quarto.yml` to hide the hashed URLs on all pages automatically:
 
-```yaml
+``` yaml
 format:
   html:
     include-in-header: 
@@ -330,10 +331,7 @@ format:
           </script>
 ```
 
-
 \
-
-
 
 ## Step 5: Deploying
 
@@ -343,7 +341,7 @@ First, render your Quarto project to HTML.
 
 DO NOT `git init` on the project folder, but instead where the `index.html` sits, which should be one level above the project folder.
 
-Then add the remote origin, commit and push to the remote. 
+Then add the remote origin, commit and push to the remote.
 
 Finally, go to the settings of the repository on GitHub, and enable GitHub pages.
 
@@ -357,7 +355,7 @@ This also means that you need to render each project separately.
 
 \
 
-```
+```         
 login_portal/
 ├── index.html
 ├── styles.css
@@ -372,13 +370,14 @@ login_portal/
 
 ## Troubleshooting
 
-Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console! Should they somehow not match, verify the hash on your terminal, then rename the files.
+Should the login portal not redirect correctly, make sure that the folder names match the hashes that are printed to the browser console!
+Should they somehow not match, verify the hash on your terminal, then rename the files.
 
----
+------------------------------------------------------------------------
 
 \
 
-If you make use of my code or took inspiration from my solution, I'd love to see your result! :)
+If you make use of my code or took inspiration from my solution, I'd love to see your result!
+:)
 
 Enjoy!
-

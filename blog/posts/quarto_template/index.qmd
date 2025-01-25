@@ -22,12 +22,12 @@ format:
 
 Today, I will show you a new and improved guide for creating a website like [this](https://lukmayer.github.io/website_template_live/) with Quarto!
 
-If you didn't know, [Quarto](https://quarto.org) is a powerful open-source tool for creating websites, documents, and presentations. 
-It's a great way to share your work with the world. 
-What's nice is that you can combine code, math, and text - similar to a Jupyter notebook. 
-Unlike Jupyter, everything in Quarto is written in plain text, which makes it easy to use in any IDE. 
-Creating a website with Quarto is easy, fun, and requires very little knowledge of web development. 
-It's amazing for people who have basic coding knowledge but don't want to dive more heavily into web-development than strictly necessary. 
+If you didn't know, [Quarto](https://quarto.org) is a powerful open-source tool for creating websites, documents, and presentations.
+It's a great way to share your work with the world.
+What's nice is that you can combine code, math, and text - similar to a Jupyter notebook.
+Unlike Jupyter, everything in Quarto is written in plain text, which makes it easy to use in any IDE.
+Creating a website with Quarto is easy, fun, and requires very little knowledge of web development.
+It's amazing for people who have basic coding knowledge but don't want to dive more heavily into web-development than strictly necessary.
 
 This guide will show you how to set up a simple website with Quarto using my template.
 
@@ -35,13 +35,19 @@ This guide will show you how to set up a simple website with Quarto using my tem
 
 ## Set up
 
-1. First, you need to install Quarto. You can find the installation instructions [here](https://quarto.org/docs/getting-started/installation.html).
+1.  First, you need to install Quarto.
+    You can find the installation instructions [here](https://quarto.org/docs/getting-started/installation.html).
 
-2. The next step depends on the IDE you are using. If you use Rstudio, you can skip this step. If you use another IDE like VSCode, you need to install the Quarto extension. You can find the installation instructions [here](https://quarto.org/docs/getting-started/installation.html).
+2.  The next step depends on the IDE you are using.
+    If you use Rstudio, you can skip this step.
+    If you use another IDE like VSCode, you need to install the Quarto extension.
+    You can find the installation instructions [here](https://quarto.org/docs/getting-started/installation.html).
 
-3. GitHub: You need to create a new repository on GitHub. You can find the instructions [here](https://docs.github.com/en/get-started/quickstart/create-a-repo). This is also where we will host our website.
+3.  GitHub: You need to create a new repository on GitHub.
+    You can find the instructions [here](https://docs.github.com/en/get-started/quickstart/create-a-repo).
+    This is also where we will host our website.
 
-4. [Download my template](https://github.com/lukmayer/website_template/archive/refs/heads/master.zip)
+4.  [Download my template](https://github.com/lukmayer/website_template/archive/refs/heads/master.zip)
 
 \
 
@@ -49,49 +55,52 @@ This guide will show you how to set up a simple website with Quarto using my tem
 
 First, if you want to see what the template looks like by default, you can check out a hosted version [here](https://lukmayer.github.io/website_template_live/).
 
-The template is a heavily stripped down version of my current website design. I tried to strip it down as much as possible for teaching purposes while also showing off some of the best features of Quarto. Additionally, I included a lot of comments in all the source files to help teach you what everything does.
+The template is a heavily stripped down version of my current website design.
+I tried to strip it down as much as possible for teaching purposes while also showing off some of the best features of Quarto.
+Additionally, I included a lot of comments in all the source files to help teach you what everything does.
 
 By default, the template features:
 
-- An attractive homepage layout in which you can slot in your own images, links and text
-- A CV section to show off your work experience
-- A blog section where you can write posts
-- An about section where you can share more personal information
+-   An attractive homepage layout in which you can slot in your own images, links and text
+-   A CV section to show off your work experience
+-   A blog section where you can write posts
+-   An about section where you can share more personal information
 
 Maybe more importantly, through the template I can teach you how to:
 
-- Set a theme
-- Add icons, including your own logo
-- Add images, math, code, text formatting, references, tables and more
-- Make use of tab-sets, call-outs, and buttons
-- Embed files like PDFs and presentations
-- Create blogs or other collections of posts and RSS feeds
-- How to customize your website further with CSS 
-- Where to find more information
+-   Set a theme
+-   Add icons, including your own logo
+-   Add images, math, code, text formatting, references, tables and more
+-   Make use of tab-sets, call-outs, and buttons
+-   Embed files like PDFs and presentations
+-   Create blogs or other collections of posts and RSS feeds
+-   How to customize your website further with CSS
+-   Where to find more information
 
 \
 
 ## Editing the website
 
-I would recommend you look over the source files in the following order: 
+I would recommend you look over the source files in the following order:
 
-1) `_quarto.yml` to learn about how to configure the global settings of the website
-2) `about/index.qmd` to learn about the basic features of Quarto
-3) check out `cv/index.qmd` to learn about how to use tab-sets and embed a PDF
-4) `blog/index.qmd` to learn about how to create listed collections of posts
-5) read through the posts in the `blog/posts` folder to learn about advanced features and workflows.
+1)  `_quarto.yml` to learn about how to configure the global settings of the website
+2)  `about/index.qmd` to learn about the basic features of Quarto
+3)  check out `cv/index.qmd` to learn about how to use tab-sets and embed a PDF
+4)  `blog/index.qmd` to learn about how to create listed collections of posts
+5)  read through the posts in the `blog/posts` folder to learn about advanced features and workflows.
 
-Now you can change the file content to your liking. 
-The main files you will be editing are the `_quarto.yml`, any `.qmd` files, and the `styles.css` file if you're feeling adventurous. 
-The general workflow is to make edits, and then "render" the website to see the changes. 
-Essentially, Quarto has to translate all that markdown into HTML, and it will only do so when you tell it to. 
-In Rstudio, there is a UI button for this. It's simply a blue arrow reading "Render" that is visible when on a `.qmd` file. 
-In VSCode, you can use the command `Quarto: Render` to render the website. 
-You can search for this command by pressing `Ctrl+Shift+P` and typing `Quarto: Render`. 
-Either way, rendering the website will create a preview of the site, which your browser should open automatically. 
-This is local to you, meaning other people cannot see the website yet. 
-All the files that have been translated to HTML are stored in the `_site` folder. 
-With this procedure of editing, rendering, and previewing you can simply keep tinkering on your website until you are happy with it and want to make it public. 
+Now you can change the file content to your liking.
+The main files you will be editing are the `_quarto.yml`, any `.qmd` files, and the `styles.css` file if you're feeling adventurous.
+The general workflow is to make edits, and then "render" the website to see the changes.
+Essentially, Quarto has to translate all that markdown into HTML, and it will only do so when you tell it to.
+In Rstudio, there is a UI button for this.
+It's simply a blue arrow reading "Render" that is visible when on a `.qmd` file.
+In VSCode, you can use the command `Quarto: Render` to render the website.
+You can search for this command by pressing `Ctrl+Shift+P` and typing `Quarto: Render`.
+Either way, rendering the website will create a preview of the site, which your browser should open automatically.
+This is local to you, meaning other people cannot see the website yet.
+All the files that have been translated to HTML are stored in the `_site` folder.
+With this procedure of editing, rendering, and previewing you can simply keep tinkering on your website until you are happy with it and want to make it public.
 
 \
 

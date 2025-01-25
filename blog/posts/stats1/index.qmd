@@ -14,58 +14,54 @@ comments:
       issue-term: url
 ---
 
-Ever since learning about research methods as an undergrad,
-I was curious about how the statistics we do in our research actually worked. 
+Ever since learning about research methods as an undergrad, I was curious about how the statistics we do in our research actually worked.
 So in 2018, I decided to take an additional statistics course from the math department.
 Unfortunately, I did not necessarily learn what I had hoped for.
-The courses the department offered were fairly applied,
-meaning that we spent a lot of time learning about which formula to select when,
-what the degrees of freedom were for the test statistic, how to perform the computation,
-and how to interpret the result. 
-This certainly helped me be more confident in my data analysis,
-but I still did not feel like I actually deeply understood what was going on,
-relying mostly on verbal rules and formulas I was taught to make decisions about my data. 
+The courses the department offered were fairly applied, meaning that we spent a lot of time learning about which formula to select when, what the degrees of freedom were for the test statistic, how to perform the computation, and how to interpret the result.
+This certainly helped me be more confident in my data analysis, but I still did not feel like I actually deeply understood what was going on, relying mostly on verbal rules and formulas I was taught to make decisions about my data.
 
-Similarly, in my Master's I was taking a lot of computer science courses,
-but again the teaching was pretty applied besides a bit of a math crash course that was meant to catch us up to the pure CS students.
-Sure, I know how decision trees, and KNN and co. work in algorithmic terms,
-but *why* they work in mathematical terms? I could only tell you the very basics.
-I decided then, especially because I was planning to do computational cognitive science research,
-that I should start teaching myself math. 
+Similarly, in my Master's I was taking a lot of computer science courses, but again the teaching was pretty applied besides a bit of a math crash course that was meant to catch us up to the pure CS students.
+Sure, I know how decision trees, and KNN and co. work in algorithmic terms, but *why* they work in mathematical terms?
+I could only tell you the very basics.
+I decided then, especially because I was planning to do computational cognitive science research, that I should start teaching myself math.
 
-Over the last 3 years, I worked through the basics of most topics you'd cover in a high-school or general education curriculum at college mostly with the help of KhanAcademy, Coursera, and some textbooks. 
-I basically just tried to do whatever I could at the end of my work day, even if it is just a few exercises on KhanAcademy. I made this my daily ritual, and stuck with it fairly strongly until very recently. 
-I can't claim that this has turned me into a math wizard, 
-I definitely have knowledge gaps, and I'm neither as fast nor as precise as I'd like to be... but I'm starting to see why the nerds like this stuff... ;)
+Over the last 3 years, I worked through the basics of most topics you'd cover in a high-school or general education curriculum at college mostly with the help of KhanAcademy, Coursera, and some textbooks.
+I basically just tried to do whatever I could at the end of my work day, even if it is just a few exercises on KhanAcademy.
+I made this my daily ritual, and stuck with it fairly strongly until very recently.
+I can't claim that this has turned me into a math wizard, I definitely have knowledge gaps, and I'm neither as fast nor as precise as I'd like to be...
+but I'm starting to see why the nerds like this stuff...
+;)
 
-Now that I started my PhD, I'm in the interesting position where I actually just happen to have the option to take graduate level mathematical statistics courses from a fully fledged statistics department. 
-Taking advantage of this is actually pretty attractive, as those willing to persist with it can totally earn an M.Sc. in Stats as part of their PhD in another department. 
-Little first-year me, just having landed in the US, signed up for the first course. 
-First reaction: "Wow, this is pretty different to what I've seen before". 
-I did not know how to do any of the derivations that my first homework asked me for, so I panicked and dropped the course. 
-I took a step back, I needed a better plan to be able to pull this off. 
+Now that I started my PhD, I'm in the interesting position where I actually just happen to have the option to take graduate level mathematical statistics courses from a fully fledged statistics department.
+Taking advantage of this is actually pretty attractive, as those willing to persist with it can totally earn an M.Sc.
+in Stats as part of their PhD in another department.
+Little first-year me, just having landed in the US, signed up for the first course.
+First reaction: "Wow, this is pretty different to what I've seen before".
+I did not know how to do any of the derivations that my first homework asked me for, so I panicked and dropped the course.
+I took a step back, I needed a better plan to be able to pull this off.
 After all, I was lacking **years** of experience compared to the average person in a Stats PhD program.
 
 I learned that in the US, it's expected that you consult with the lecturer when you don't understand things.
-This was perhaps a bit of a culture shock moment for me, as in the UK (where I studied before) you'd typically have little to no interaction with your lecturers outside of class. 
-So maybe my approach was a less than optimal one from the very beginning. 
-I started asking lecturers and students who had done the M.Sc. for tips on how to prepare. 
-I studied a bit more Calculus, and started learning a bit more about how you actually prove and derive things. 
-I also learned that the course actually still has a considerable applied component,
-so I should be able to get through it even if I don't perfectly know everything. 
+This was perhaps a bit of a culture shock moment for me, as in the UK (where I studied before) you'd typically have little to no interaction with your lecturers outside of class.
+So maybe my approach was a less than optimal one from the very beginning.
+I started asking lecturers and students who had done the M.Sc.
+for tips on how to prepare.
+I studied a bit more Calculus, and started learning a bit more about how you actually prove and derive things.
+I also learned that the course actually still has a considerable applied component, so I should be able to get through it even if I don't perfectly know everything.
 I decided to give it another shot.
 
-So here we are, I've started my second year and committed to actually taking and finishing the first mathematical statistics course in the stats program. 
-With all the new things I've learned in the last year, I was actually surprised to find that I can keep up okay? 
-Proofs are still really, really hard as I still lack the intuition and experience (sometimes the necessary knowledge) to do them myself rather than just passively consume them on the whiteboard. 
-Thankfully, for the homework problems we get, I can consult mathematical statistics books which often feature similar problems. Or even better, I can beg my mathy peers for help.
-Maybe it's like this by design? 
-My main bottleneck is definitely that I have not fully internalized all the rules and quantities I've been learning about and still lack some practice in doing derivations. 
+So here we are, I've started my second year and committed to actually taking and finishing the first mathematical statistics course in the stats program.
+With all the new things I've learned in the last year, I was actually surprised to find that I can keep up okay?
+Proofs are still really, really hard as I still lack the intuition and experience (sometimes the necessary knowledge) to do them myself rather than just passively consume them on the whiteboard.
+Thankfully, for the homework problems we get, I can consult mathematical statistics books which often feature similar problems.
+Or even better, I can beg my mathy peers for help.
+Maybe it's like this by design?
+My main bottleneck is definitely that I have not fully internalized all the rules and quantities I've been learning about and still lack some practice in doing derivations.
 I'll definitely have to work a bit harder than the average student in my course to stay afloat.
-At the same time, wow is it satisfying to actually come up with a correct proof after a bit of struggle?!  
+At the same time, wow is it satisfying to actually come up with a correct proof after a bit of struggle?!
 
-So this is where I start talking about the thing this post is meant to be about. 
-I thought, what better way to do some revision for my midterm and keep my blog alive in this busy time than to write up some of the things I'm learning as little stats blog posts? 
+So this is where I start talking about the thing this post is meant to be about.
+I thought, what better way to do some revision for my midterm and keep my blog alive in this busy time than to write up some of the things I'm learning as little stats blog posts?
 I'll probably keep these short and sweet (except this one), limited to information I am confident is correct.
 
 \
@@ -78,13 +74,14 @@ I'll skip the definition of expectation and Random Variables for now, and just g
 
 Let $c$ be a constant, let $g(Y)$ be a function of the continuous random variable $Y$:
 
-1. $E[c] = c$
-2. $E[cY] = cE[Y]$
-3. $E[g_1(Y) + g_2(Y)] = E[g_1(Y)] + E[g_2(Y)]$
+1.  $E[c] = c$
+2.  $E[cY] = cE[Y]$
+3.  $E[g_1(Y) + g_2(Y)] = E[g_1(Y)] + E[g_2(Y)]$
 
 \
 
-In statistics, we often want $E[g(Y)]$ where $g(Y) = (Y - \mu)^2$. In this case:
+In statistics, we often want $E[g(Y)]$ where $g(Y) = (Y - \mu)^2$.
+In this case:
 
 $$Var(Y) = E[(Y - \mu)^2]$$
 
@@ -92,28 +89,26 @@ This also implies:
 
 $$Var(Y) = E[Y^2] - \mu^2$$
 
-
 \
 
 ## Variance
 
-Definition of Variance:
-$$ Var(Y) = E[(Y - E(Y))^2] = E(Y^2) - (E(Y))^2 = \sigma^2_Y $$
+Definition of Variance: $$ Var(Y) = E[(Y - E(Y))^2] = E(Y^2) - (E(Y))^2 = \sigma^2_Y $$
 
-1. Variance is always non-negative: $Var(Y) \geq 0$
-2. Constants have zero variance: $Var(c) = 0$
-3. Variance scales with constants: $Var(cY) = c^2 Var(Y)$ [^1]
-  
-[^1]: This is easily forgotten. The reason you square is because the deviations are squared in the definition of variance.
+1.  Variance is always non-negative: $Var(Y) \geq 0$
+2.  Constants have zero variance: $Var(c) = 0$
+3.  Variance scales with constants: $Var(cY) = c^2 Var(Y)$ [^1]
+
+[^1]: This is easily forgotten.
+    The reason you square is because the deviations are squared in the definition of variance.
 
 The general case for the variance of a sum of random variables is:
 
 $$Var(Y_1 + Y_2) = Var(Y_1) + Var(Y_2) + 2Cov(Y_1, Y_2)$$
 
-Where $Cov(Y_1, Y_2)$ is the covariance of $Y_1$ and $Y_2$. 
+Where $Cov(Y_1, Y_2)$ is the covariance of $Y_1$ and $Y_2$.
 
 I'll cover covariance in a bit, so hold on tight!
-
 
 When summing independent random variables, the general case simplifies to:
 
@@ -129,7 +124,6 @@ $$Var(Y_1 - Y_2) = Var(Y_1) + Var(Y_2)$$ [^2]
 
 [^2]: Note the plus!
 
-
 Another thing good to know with sums and variance is:
 
 $$Var(\sum_{i=1}^{n} Y_i) = \sum_{i=1}^{n} Var(Y_i)$$
@@ -144,15 +138,14 @@ $$ = E(Y_1Y_2) - E(Y_1)E(Y_2)$$
 
 Let $a$, $b$, $c$ be constants:
 
-1. Covariance is symmetric: $Cov(Y_1, Y_2) = Cov(Y_2, Y_1)$
-2. Covariance is linear: $Cov(aY_1 + bY_2) = abCov(Y_1, Y_2)$
-3. Constants are dropped: $Cov(Y_1+c, Y_2+c) = Cov(Y_1, Y_2)$
-4. Relationship to variance: $Cov(Y, Y) = Var(Y)$
+1.  Covariance is symmetric: $Cov(Y_1, Y_2) = Cov(Y_2, Y_1)$
+2.  Covariance is linear: $Cov(aY_1 + bY_2) = abCov(Y_1, Y_2)$
+3.  Constants are dropped: $Cov(Y_1+c, Y_2+c) = Cov(Y_1, Y_2)$
+4.  Relationship to variance: $Cov(Y, Y) = Var(Y)$
 
 Much like before, sums can be pulled out:
 
 $$Cov(\sum_{i=1}^{n} Y_i, \sum_{j=1}^{m} Z_j) = \sum_{i=1}^{n} \sum_{j=1}^{m} Cov(Y_i, Z_j)$$
-
 
 \
 

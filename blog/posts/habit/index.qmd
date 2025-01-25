@@ -5,7 +5,6 @@ author: "Luke"
 date: "2024-08-12"
 categories:
   - software
-  - habits
   - habitica
 image: "images/habitica.png"
 comments:
@@ -17,49 +16,68 @@ comments:
 
 Hello internet!
 
-Today I want to briefly introduce you to the concept of habit trackers. 
-I got into habit tracking some time during my undergraduate degree to help me log my fruit and vegetable intake, and have applied it to many aspects of my life from there. 
+Today I want to briefly introduce you to the concept of habit trackers.
+I got into habit tracking some time during my undergraduate degree to help me log my fruit and vegetable intake, and have applied it to many aspects of my life from there.
 For someone like me back then, who had little in the way of a structured approach to achieving goals, habit tracking has really helped me make lifestyle changes that would have been pretty hard otherwise.
-For example, I doubt I would have been able to keep up my roughly 2000 day Duolingo streak if it had not been for habit tracking apps. 
+For example, I doubt I would have been able to keep up my roughly 2000 day Duolingo streak if it had not been for habit tracking apps.
 
 \
 
 ## The what and why of habit tracking
 
-Habit tracking is the practice of regularly logging the outcome of tasks that you are wanting to incorporate in your routine. 
-These tasks can be part of a daily ritual to get into the habit of something like exercise, or part of a commitment to break a bad habit like spending too much time on your phone. 
-Tracking your success in establishing these goal behaviors helps you hold yourself accountable. 
+Habit tracking is the practice of regularly logging the outcome of tasks that you are wanting to incorporate in your routine.
+These tasks can be part of a daily ritual to get into the habit of something like exercise, or part of a commitment to break a bad habit like spending too much time on your phone.
+Tracking your success in establishing these goal behaviors helps you hold yourself accountable.
 This is helpful since when you notice that you are lagging behind your goals, you can make a more intentional effort to address whatever is stopping you from being consistent.
 
-Habit trackers as a piece of software are similar in concept to recurring tasks on a to-do list application, but differ in their feature-set. 
+Habit trackers as a piece of software are similar in concept to recurring tasks on a to-do list application, but differ in their feature-set.
 Habit trackers offer specific features tailored for measuring how well you are doing, in the form of streaks, habit strength metrics, rewards, social features and other so-called "commitment devices" to help you stay on track.
-Besides, having personal-life stuff like habits be separated from work tasks just gives you that little extra bit of mental peace, so I'd recommend against just using recurring tasks on your productivity apps for this purpose. 
+Besides, having personal-life stuff like habits be separated from work tasks just gives you that little extra bit of mental peace, so I'd recommend against just using recurring tasks on your productivity apps for this purpose.
 
 \
 
 ## Habitica: gamify your life
 
-I used the "[Loop Habit Tracker](https://loophabits.org)" for the longest time. I liked the simple UI, the fact that it was free of ads and paid features, and the "sticky reminder" setting it has. In case you don't know, sticky reminders are notifications on your phone that cannot just be swiped away - they persist until you interact with them. This is nice because you can't accidentally dismiss them, helping you ensure you don't forget about that thing you meant to do. 
+I used the "[Loop Habit Tracker](https://loophabits.org)" for the longest time.
+I liked the simple UI, the fact that it was free of ads and paid features, and the "sticky reminder" setting it has.
+In case you don't know, sticky reminders are notifications on your phone that cannot just be swiped away - they persist until you interact with them.
+This is nice because you can't accidentally dismiss them, helping you ensure you don't forget about that thing you meant to do.
 
-After some years of this, I was looking for a way to track habits that did not require a mobile phone app. Somewhat to my dismay, there really aren't many fully-featured habit tracking apps on the market at the moment that support a web interface.
+After some years of this, I was looking for a way to track habits that did not require a mobile phone app.
+Somewhat to my dismay, there really aren't many fully-featured habit tracking apps on the market at the moment that support a web interface.
 Habitica was the only one I could find that seemed to actually still be operating, but I thought the Role-playing game plus habit tracking app concept was too gimmicky for me - I just wanted something simple after all.
-But I could not have been more wrong. I reluctantly tried the app, just to very quickly realize that turning habit tracking into a video game is a match made in heaven. 
+But I could not have been more wrong.
+I reluctantly tried the app, just to very quickly realize that turning habit tracking into a video game is a match made in heaven.
 
-Here's how Habitica works in a nutshell. You create a character to your liking and then this basic character will grow with you as you complete tasks. There are a ridiculous amount of things you can collect for your character, including hundreds of pets, mounts, and pieces of equipment. Your character can go on quests with other people that grant additional/special rewards and introduce a social component. Your character gets stronger as you level up and gain better equipment, allowing you to gain basic rewards more easily. This means you have long-term progression in-game, as you may be grinding away for that special mount or that cool armor set, which keeps you super motivated to do all that boring real-life stuff you set out to. Since this wasn't already enough depth, you eventually get to select a class for your character, each of which have different abilities that help you do certain type of things more easily in-game, for example by granting you the ability to keep a streak you are about to break at the cost of some resource.
+Here's how Habitica works in a nutshell.
+You create a character to your liking and then this basic character will grow with you as you complete tasks.
+There are a ridiculous amount of things you can collect for your character, including hundreds of pets, mounts, and pieces of equipment.
+Your character can go on quests with other people that grant additional/special rewards and introduce a social component.
+Your character gets stronger as you level up and gain better equipment, allowing you to gain basic rewards more easily.
+This means you have long-term progression in-game, as you may be grinding away for that special mount or that cool armor set, which keeps you super motivated to do all that boring real-life stuff you set out to.
+Since this wasn't already enough depth, you eventually get to select a class for your character, each of which have different abilities that help you do certain type of things more easily in-game, for example by granting you the ability to keep a streak you are about to break at the cost of some resource.
 
 \
 
-::: {.text-center}
-
-![My Habitica homescreen](assets/habitica_home.png){fig-cap="My Habitica home-screen" alt="My Habitica home-screen"}
-
+::: text-center
+![My Habitica home-screen](assets/habitica_home.png){fig-cap="My Habitica home-screen"}
 :::
 
 \
 
-Habitica has tons of features that interact with this basic game play loop which I feel improve your success for establishing habits. Obviously there are the rewards and social accountability aspect. Then there's all the basic habit tracker features you would expect such as streaks and different recurring schedules. But here's where it gets really cool: Habitica distinguishes between different types of tasks: There are dailies, which are tasks you are looking to complete every day. Then, there are habits, which are tasks that you want to reward yourself for doing, but follow no particular schedule. Finally, there's To-Do's which are one-off tasks, say a mini project, like writing a blog post about habit tracking ;). 
+Habitica has tons of features that interact with this basic game play loop which I feel improve your success for establishing habits.
+Obviously there are the rewards and social accountability aspect.
+Then there's all the basic habit tracker features you would expect such as streaks and different recurring schedules.
+But here's where it gets really cool: Habitica distinguishes between different types of tasks: There are dailies, which are tasks you are looking to complete every day.
+Then, there are habits, which are tasks that you want to reward yourself for doing, but follow no particular schedule.
+Finally, there's To-Do's which are one-off tasks, say a mini project, like writing a blog post about habit tracking ;).
 
-The gamified nature does not stop at rewards. If you miss Dailies, your character will take damage and can die, which might result in you losing some of those rewards you worked so hard for. I think having both the carrot and the stick really improves your accountability in this case. There are extra rewards for maintaining streaks, and you can also set how difficult the task is you're looking to do, which will actually modify the size of the reward. Moreover, the strength of the habit also changes how big the reward is. Basically, if you set up a difficult task that you have been pushing away, Habitica will lure you into finally doing it as you'll learn that it will absolutely shower you with rewards if you finally go through with it!  
+The gamified nature does not stop at rewards.
+If you miss Dailies, your character will take damage and can die, which might result in you losing some of those rewards you worked so hard for.
+I think having both the carrot and the stick really improves your accountability in this case.
+There are extra rewards for maintaining streaks, and you can also set how difficult the task is you're looking to do, which will actually modify the size of the reward.
+Moreover, the strength of the habit also changes how big the reward is.
+Basically, if you set up a difficult task that you have been pushing away, Habitica will lure you into finally doing it as you'll learn that it will absolutely shower you with rewards if you finally go through with it!
 
 So if you're wanting behavior change on steroids, I'd say Habitica is the way to do it!
 
@@ -67,14 +85,15 @@ So if you're wanting behavior change on steroids, I'd say Habitica is the way to
 
 ## Some simple tips for getting started
 
-If you're just getting started with habit-tracking, the key is to keep it simple. 
+If you're just getting started with habit-tracking, the key is to keep it simple.
 Habitica users are known for having a ridiculous amount of tasks that they do on a regular basis to maximize rewards, but you really should not be doing more than one or two habits in the first couple of months.
-As these initial tasks become more routine to you, you can add more :) 
-Just make sure you don't bite off more than you can chew! It's better to do few things well than do many things half-heartedly.
+As these initial tasks become more routine to you, you can add more :) Just make sure you don't bite off more than you can chew!
+It's better to do few things well than do many things half-heartedly.
 
-The second general tip I'd give that beginners often get wrong is that you want to make sure your goals are well-defined. 
+The second general tip I'd give that beginners often get wrong is that you want to make sure your goals are well-defined.
 A simple guideline here is to make S.M.A.R.T. goals, that is Specific, Measurable, Achievable, Relevant, and Time-bound.
-In other words, try to make your goal as quantifiable as possible, how will you know you completed the task? By when?
+In other words, try to make your goal as quantifiable as possible, how will you know you completed the task?
+By when?
 
 \
 
@@ -86,6 +105,5 @@ A highly popular one is ["Atomic habits" by James Clear](https://jamesclear.com/
 
 \
 
-Hope you'll give these recommendations a shot, and thanks for reading! :)
-
-
+Hope you'll give these recommendations a shot, and thanks for reading!
+:)
