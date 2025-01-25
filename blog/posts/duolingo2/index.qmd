@@ -4,8 +4,9 @@ description: "A guide for overcoming freemium limitations"
 author: "Luke"
 date: "2025-01-23"
 categories:
-  - software
-  - duolingo
+ - software
+ - duolingo
+ - extensions
 image: "images/duo.png"
 comments:
   utterances:

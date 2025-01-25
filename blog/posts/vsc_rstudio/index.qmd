@@ -4,7 +4,6 @@ description: "Optimizing VS Code for Data Science"
 author: "Luke"
 date: "2025-01-24"
 categories:
-  - programming
   - software
   - vscode
 image: "images/vscode.png" 
