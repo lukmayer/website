@@ -6,7 +6,7 @@ date: "2025-01-24"
 categories:
   - programming
   - software
-  - quarto
+  - vscode
 image: "images/vscode.png" 
 comments:
   utterances:
@@ -19,7 +19,7 @@ comments:
 
 \
 
-Today a super quick tip on how to achieve the a grid-like layout in Visual Studio Code similar to more dedicated Data-Science IDE's like Rstudio and Spyder.
+Today a super quick tip on how to achieve a grid-like layout in Visual Studio Code similar to more dedicated Data-Science IDE's like Rstudio and Spyder.
 See image above (click for zoom).
 
 I had been working with a 3-Column layout for the longest time: Activity Bar, Workbench, Panel.
