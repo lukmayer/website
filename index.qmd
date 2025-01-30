@@ -9,68 +9,52 @@ format:
 back-to-top-navigation: false
 ---
 
+```{=html}
 <script data-goatcounter="https://lukmayer.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+```
 
-:::{.column-page}
-
-:::: {.columns}
-
-::: {.column style="padding-right: 20px;"}
-
+::::::::: column-page
+:::::::: columns
+:::: {.column style="padding-right: 20px;"}
 ::: {.animate__animated .animate__fadeIn style="--animate-duration: 2s;"}
-
 \
 
 ![](assets/luke-23-circle.png)
 :::
+::::
 
-:::
-
-::: {.column style="padding-left: 20px;"}
-
+::::: {.column style="padding-left: 20px;"}
 ### Welcome to my website!
 
 ::: {.animate__animated .animate__fadeIn style="--animate-duration: 3s;"}
 I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/) at the University of California, Irvine.
 :::
 
-
 {{< animate fadeIn "In my research, I investigate the limits of human causal reasoning through Bayesian computational models. I'm particularly interested in applying these models to enhance human-AI collaboration." duration=3s >}}
 
 \
 
-<div class="button-group" style="display: flex; gap: 20px;">
+::: {.button-group style="display: flex; gap: 10px;"}
 <!-- Mail -->
-<a href="mailto:willuk@vivaldi.net" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
-    <i class="bi bi-envelope" style="font-size: 1.5rem; margin-right: 8px;"></i>Email
-</a>
-<!-- Github -->
-<a href="https://github.com/lukmayer" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
-    <i class="bi bi-github" style="font-size: 1.5rem; margin-right: 8px;"></i>Github
-</a>
-<!-- Medium -->
-<a href="https://medium.com/@willuk" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
-    <i class="bi bi-medium" style="font-size: 1.5rem; margin-right: 8px;"></i>Medium
-</a>
-<!-- Mastodon -->
-<a rel="me" href="https://social.vivaldi.net/@Willuk" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
-    <i class="bi bi-mastodon" style="font-size: 1.5rem; margin-right: 8px;"></i>Mastodon
-</a>
-<!-- Google scholar -->
-<a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Google Scholar
-</a>
+<a href="mailto:willuk@vivaldi.net" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-envelope" style="font-size: 1.5rem; margin-right: 8px;"></i>Email </a> 
 
-</div>
+<!-- Mastodon --> 
+<a rel="me" href="https://social.vivaldi.net/@Willuk" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-mastodon" style="font-size: 1.5rem; margin-right: 8px;"></i>Mastodon </a> 
+
+<!-- Github --> 
+<a href="https://github.com/lukmayer" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-github" style="font-size: 1.5rem; margin-right: 8px;"></i>Github </a> 
+
+<!-- Google scholar --> 
+<a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Google Scholar </a>
+
 
 :::
+:::::
+::::::::
+:::::::::
 
-::::
-
-:::
-
-
-
+```{=html}
 <style>
 /* CSS for fade-in effect */
 .fade-in {
@@ -161,8 +145,9 @@ I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers
 
 
 </style>
+```
 
-
+```{=html}
 <script>
 
   window.addEventListener("load", function() {
@@ -170,15 +155,4 @@ I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers
     aboutEntity.classList.add("fade-in");
   });
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
+```
