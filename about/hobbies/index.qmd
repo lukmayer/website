@@ -47,9 +47,9 @@ description: "Lukas Mayer's hobbies and interests - exercise, technology, langua
 
 #### Likes
 
-In no particular order: sugar-free gum, high-quality public transport, "meal substitutes", social mobility, the color black, progressive taxation, antitrust, ""IDM"", Radler.
+In no particular order: sugar-free gum, high-quality public transport, "meal substitutes", social mobility, the color black, ""IDM"", Radler.
 
 #### Dislikes
 
-Again, in no particular order: heights, cold hands, loud engines, cigarette smoke, meat on the bone, collective action problems, direct sunlight.
+Again, in no particular order: heights, cold hands, meat on the bone, collective action problems, direct sunlight.
 ::::
