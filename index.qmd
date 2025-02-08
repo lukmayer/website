@@ -1,6 +1,6 @@
 ---
-title: "Lukas W. Mayer"
-description: "Lukas Mayer's personal website - PhD student researching Computational Cognitive Science and Human-AI collaboration. Also posts about Data Science/statistics, software development, tech tips, and more."
+title: "Lukas William Mayer"
+description: "Lukas Mayer's personal website - PhD student researching Computational Cognitive Science and Human-AI collaboration. Also posts about Data Science/statistics, software development, technology, and more."
 
 format: 
   html:
@@ -31,7 +31,8 @@ back-to-top-navigation: false
 I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/) at the University of California, Irvine.
 :::
 
-{{< animate fadeIn "In my research, I investigate the limits of human causal reasoning through Bayesian computational models. I'm particularly interested in applying these models to enhance human-AI collaboration." duration=3s >}}
+{{< animate fadeIn "In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration." duration=3s >}}
+{{< animate fadeIn "I'm particularly interested in the application of model-based reinforcement learning, Bayesian computational models, and causal reasoning." duration=3s >}}
 
 \
 
