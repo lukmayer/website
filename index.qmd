@@ -14,8 +14,8 @@ back-to-top-navigation: false
         async src="//gc.zgo.at/count.js"></script>
 ```
 
-::::::::: column-page
-:::::::: columns
+::::::::: {.column-page}
+:::::::: {.columns}
 :::: {.column style="padding-right: 20px;"}
 ::: {.animate__animated .animate__fadeIn style="--animate-duration: 2s;"}
 \
@@ -31,25 +31,26 @@ back-to-top-navigation: false
 I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/) at the University of California, Irvine.
 :::
 
-{{< animate fadeIn "In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration." duration=3s >}}
-{{< animate fadeIn "I'm particularly interested in the application of model-based reinforcement learning, Bayesian computational models, and causal reasoning." duration=3s >}}
+{{< animate fadeIn "In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration." duration=3s >}} {{< animate fadeIn "I'm particularly interested in the application of model-based reinforcement learning, Bayesian computational models, and causal reasoning." duration=3s >}}
 
 \
 
 ::: {.button-group style="display: flex; gap: 10px;"}
 <!-- Mail -->
-<a href="mailto:willuk@vivaldi.net" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-envelope" style="font-size: 1.5rem; margin-right: 8px;"></i>Email </a> 
 
-<!-- Mastodon --> 
-<a rel="me" href="https://social.vivaldi.net/@Willuk" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-mastodon" style="font-size: 1.5rem; margin-right: 8px;"></i>Mastodon </a> 
+<a href="mailto:willuk@vivaldi.net" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-envelope" style="font-size: 1.5rem; margin-right: 8px;"></i>Email </a>
 
-<!-- Github --> 
-<a href="https://github.com/lukmayer" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-github" style="font-size: 1.5rem; margin-right: 8px;"></i>Github </a> 
+<!-- Mastodon -->
 
-<!-- Google scholar --> 
+<a rel="me" href="https://social.vivaldi.net/@Willuk" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-mastodon" style="font-size: 1.5rem; margin-right: 8px;"></i>Mastodon </a>
+
+<!-- Github -->
+
+<a href="https://github.com/lukmayer" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-github" style="font-size: 1.5rem; margin-right: 8px;"></i>Github </a>
+
+<!-- Google scholar -->
+
 <a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Google Scholar </a>
-
-
 :::
 :::::
 ::::::::
@@ -78,8 +79,9 @@ I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers
 
 
 .quarto-title {
-    margin: 0; /* Ensure no default margin */
     text-align: left; /* Center the title text */
+    padding-right: 100px; /* Add padding to the right */
+    margin-left: -5% !important; /* Reset the default margin */
 }
 
 
