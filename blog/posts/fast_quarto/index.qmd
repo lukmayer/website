@@ -65,7 +65,7 @@ Then there's an if clause and some print statements.
 Finally, identified files are rendered.
 Dead simple!
 
-This is super convenient and speed up the process of updating my website by a factor of 100 or so.
+This is super convenient and speeds up the process of updating my website by a factor of 100 or so.
 
 In case you're interested, here's the full bash script I use (at the time of writing):
 
