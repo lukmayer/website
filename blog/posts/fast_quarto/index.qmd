@@ -137,4 +137,4 @@ cd ..
 If you use this script, make sure to give it execute permissions with `chmod +x update.sh`[^1] and run it with `./update.sh`. Enjoy!
 :)
 
-[^1]: **Always** make sure you know shell commands do before doing this!
+[^1]: **Always** make sure you know what shell commands do before doing this!
