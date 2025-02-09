@@ -6,17 +6,17 @@ format:
 back-to-top-navigation: false
 ---
 
-
 \
 
 \
 
 \
 
-:::{.text-center}
-
+::: {.text-center}
 <h2>Sorry, it seems the link you clicked was broken :(</h2>
 
-<h3><a href="mailto:willuk@vivaldi.net?subject=lukmayer.github.io%20page%20404">Could you please let me know where the broken link is?</a></h3>
+<h3>
+<a href="mailto:willuk@vivaldi.net?subject=lukmayer.github.io%20page%20404">Could you please let me know where the broken link is?</a>
+</h3>
 
 :::
