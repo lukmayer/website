@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git add .
+
 # Get list of changed .qmd or .md files in git working tree
 CHANGED_FILES=$(git status --porcelain --untracked-files=no | awk '{print $2}' | grep -E '\.qmd$|\.md$')
 
@@ -22,7 +24,7 @@ read commit_message
 
 # Ensure the current directory is your main project directory (not _site)
 # Add and commit changes to the source repo
-git add .
+
 git commit -m "$commit_message"
 
 git remote add origin git@github.com:lukmayer/website.git
