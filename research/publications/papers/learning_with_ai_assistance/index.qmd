@@ -28,6 +28,31 @@ format:
   background-color: #00bf63 !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
 }
+  
+  @media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100% !important;
+        padding: 0;
+    }
+
+    .button-link {
+        display: block;
+        width: calc(100% - 20px); /* Account for margins */
+        margin: 10px;
+        text-align: center;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 0; /* Remove gap since we're using margins */
+        width: 100%;
+        margin: 0; /* Reset margin for mobile */
+    }
+}
 </style>
 ```
 
