@@ -44,11 +44,11 @@ We also show how prompting LLM's to include appropriate uncertainty language in 
 \
 
 ::: {.text-center}
-<a href="https://www.nature.com/articles/s42256-024-00976-7" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the paper</a>
 
-
-<a href="https://osf.io/y7pr6/" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">OSF repository</a>
-
+<div style="display: flex; gap: 10px;">
+  <a href="https://www.nature.com/articles/s42256-024-00976-7" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the paper</a>
+  <a href="https://osf.io/y7pr6/" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">OSF repository</a>
+</div>
 
 :::
 
