@@ -9,7 +9,7 @@ format:
     toc: false
 ---
 
-
+```{=html}
 <style>
 .button {
   display: inline-block !important;
@@ -29,14 +29,13 @@ format:
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
 }
 </style>
+```
 
-
-::: {.column-page}
-:::: {.columns}
-
-::: {.column style="padding-right: 20px;"}
-
+:::::::: column-page
+::::::: columns
+:::: {.column style="padding-right: 20px;"}
 #### Is receiving AI assistance on tasks degrading our skills, or improving them?
+
 To answer this question, we developed a gamified task in which participants needed to intercept moving, point-valued targets before they escape.
 During the game, an AI assistant suggests optimal actions to take to maximize player score.
 We manipulated when people were given this assistance to see whether its presence harmed or boosted their learning during the task.
@@ -45,25 +44,19 @@ This finding highlights the possibility that there exist a subset of tasks in wh
 
 \
 
-::: {.text-center}
+::: text-center
 <a href="https://dl.acm.org/doi/pdf/10.1145/3643562.3672610" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the paper</a>
-
 :::
+::::
 
-:::
-
-::: {.column style="padding-left: 20px;"}
-
-::: {.text-center}
-
+:::: {.column style="padding-left: 20px;"}
+::: text-center
 \
 
 ![](images/assistance.png)
 :::
 
 \
-
-
-:::
 ::::
-:::
+:::::::
+::::::::

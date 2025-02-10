@@ -173,3 +173,9 @@ Narrowly optimizing the performance of AI agents may be convenient, but can caus
 :::
 
 
+::: column-page
+:::{.text-center}
+<a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #00a653; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Find more on Google Scholar </a>
+:::
+:::
+
