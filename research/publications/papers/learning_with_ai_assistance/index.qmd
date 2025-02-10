@@ -1,0 +1,69 @@
+---
+title: "Learning with AI Assistance: A Path to Better Task Performance or Dependence? (2024)"
+subtitle: "Karny, S., Mayer, L. W., Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M."
+description: "Proceedings of the ACM Collective Intelligence Conference"
+date: "2024-07-18"
+image: "images/assistance.png"
+format: 
+  html:
+    toc: false
+---
+
+
+<style>
+.button {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  color: white !important;
+  background-color: #00a653 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border-radius: 5px !important;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.button:hover {
+  transform: scale(1.05) !important;
+  background-color: #00bf63 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+</style>
+
+
+::: {.column-page}
+:::: {.columns}
+
+::: {.column style="padding-right: 20px;"}
+
+#### Is receiving AI assistance on tasks degrading our skills, or improving them?
+To answer this question, we developed a gamified task in which participants needed to intercept moving, point-valued targets before they escape.
+During the game, an AI assistant suggests optimal actions to take to maximize player score.
+We manipulated when people were given this assistance to see whether its presence harmed or boosted their learning during the task.
+Despite many media fears of skill degradation and/or hopes of AI-boosted learning, we find that in our task, AI assistance neither harms nor enhances learning.
+This finding highlights the possibility that there exist a subset of tasks in which AI assistance can be provided risk-free, which we hypothesize may include many tasks that do not require higher-level reasoning.
+
+\
+
+::: {.text-center}
+<a href="https://dl.acm.org/doi/pdf/10.1145/3643562.3672610" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the paper</a>
+
+:::
+
+:::
+
+::: {.column style="padding-left: 20px;"}
+
+::: {.text-center}
+
+\
+
+![](images/assistance.png)
+:::
+
+\
+
+
+:::
+::::
+:::

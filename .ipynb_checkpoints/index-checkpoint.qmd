@@ -14,8 +14,8 @@ back-to-top-navigation: false
         async src="//gc.zgo.at/count.js"></script>
 ```
 
-::::::::: column-page
-:::::::: columns
+::::::::: {.column-page}
+:::::::: {.columns}
 :::: {.column style="padding-right: 20px;"}
 ::: {.animate__animated .animate__fadeIn style="--animate-duration: 2s;"}
 \

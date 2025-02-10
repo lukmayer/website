@@ -1,5 +1,5 @@
 ---
-title: "Luke's Blog"
+title: "Blog"
 description: "Lukas Mayer's personal blog - tech tips, life-style recommendations, software development, research, data science"
 listing:
   id: main-listing
@@ -20,9 +20,10 @@ format:
       margin-width: 300px
 ---
 
-<div class="quarto-content hidden">
-</div>
+::: {.quarto-content .hidden}
+:::
 
+```{=html}
 <style>
 .description {
     display: none;
@@ -85,10 +86,9 @@ format:
 }
 
 </style>
+```
 
-
-
-
+```{=html}
 <script>
   window.addEventListener("load", function() {
     var content = document.querySelector(".quarto-content");
@@ -98,20 +98,17 @@ format:
     }
   });
 </script>
+```
 
-:::{.column-page-inset-left}
+:::::: column-page-inset-left
 {{< animate zoomIn "A dedicated space for me to rant!" duration=2s >}}
 
-::: {.animate__animated .animate__fadeIn}
-:::{#main-listing}
+:::: {.animate__animated .animate__fadeIn}
+::: {#main-listing}
 :::
-:::
+::::
 
-::: {.rainbow-animation}
-<a href="/blog/index.xml" target="_blank">
-    Follow my blog with RSS <i class="bi bi-rss"></i>
-</a>
+::: rainbow-animation
+<a href="/blog/index.xml" target="_blank"> Follow my blog with RSS <i class="bi bi-rss"></i> </a>
 :::
-:::
-
-
+::::::

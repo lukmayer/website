@@ -1,0 +1,72 @@
+---
+title: "What large language models know and what people think they know (2025)"
+description: "Nature Machine Intelligence"
+subtitle: "Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., Mayer, L. W., & Smyth, P. "
+
+date: "2025-01-21"
+image: "images/confidence.png"
+format: 
+  html:
+    toc: false
+---
+
+<style>
+.button {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  color: white !important;
+  background-color: #00a653 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border-radius: 5px !important;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.button:hover {
+  transform: scale(1.05) !important;
+  background-color: #00bf63 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+</style>
+
+
+::: {.column-page}
+:::: {.columns}
+
+::: {.column style="padding-right: 20px;"}
+
+#### Have you ever noticed that ChatGPT speaks like a know-it-all?
+In this paper, we show that there is misalignment in the confidence LLM's are perceived to have in their answers, and what their internal confidence values reflect.
+In essence, LLM's routinely appear more confident than they should, despite model weights accurately reflecting the uncertainty associated with the answer.
+We also show how prompting LLM's to include appropriate uncertainty language in the answer text diminishes this gap between perceived and actual confidence considerably.
+
+\
+
+::: {.text-center}
+<a href="https://www.nature.com/articles/s42256-024-00976-7" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the paper</a>
+
+
+<a href="https://osf.io/y7pr6/" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">OSF repository</a>
+
+
+:::
+
+:::
+
+::: {.column style="padding-left: 20px;"}
+
+::: {.text-center}
+
+\
+
+![](images/confidence.png)
+:::
+
+\
+
+
+
+:::
+::::
+:::

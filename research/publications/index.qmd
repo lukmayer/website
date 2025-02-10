@@ -1,15 +1,29 @@
 ---
 title: "Publications"
 description: "Lukas Mayer's research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development"
+listing:
+  id: papers-listing
+  type: default
+  fields: [image, title, subtitle, description]
+  contents: papers
+  sort: "date desc"
+  feed: true
+  page-size: 60
+
 format: 
   html:
+    toc: false
+    grid:
+      margin-width: 300px
     callout-appearance: default
     code-overflow: wrap
     code-line-numbers: true
     code-block-border-left: false
 ---
 
+```{=html}
 <style>
+
 .description {
     display: none;
 }
@@ -38,18 +52,6 @@ format:
     border: 1px solid #dee2e6;  /* Light border */
 }
 
-.citation-box {
-  padding: 10px;
-  border: 1px solid #00a653;
-  border-radius: 5px;
-  background-color: #111111;
-  cursor: pointer;
-  margin-top: 10px;
-}
-.citation-box:hover {
-  background-color: #222222;
-}
-
 /* change the drop-down arrow */
 .py-1 {
     padding-top: .25rem !important;
@@ -60,59 +62,54 @@ format:
 div.callout-important.callout {
     border-left-color: #5f5f5f;
 }
+
+
+div.quarto-post {
+    display: flex;
+    gap: 2em;
+    margin-bottom: 1.5em;
+    border-bottom: none !important; /* Removes the border-bottom */
+}
+
+
+
+.listing-title {
+  background-color: #222222; /* Dark background for the title */
+  color: #00bf63; /* Green text color */
+  padding: 10px; /* Add some padding for better spacing */
+  border-radius: 15px; /* Optional: Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.listing-title:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+.listing-title a {
+  color: #00bf63 !important;
+}
+
+.listing-description a {
+  color: #c678dd !important;
+}
+
+
+.listing-subtitle {
+  padding: 10px; /* Add padding to the subtitle */
+}
+
+.listing-description {
+  padding: 10px; /* Add padding to the description */
+}
+
 </style>
-
-<script>
-  window.addEventListener("load", function() {
-    var content = document.querySelector(".quarto-content");
-    if (content) {
-      content.classList.remove("hidden");  // Remove the hidden class to allow transition
-      content.classList.add("fade-in");    // Add the fade-in class for the transition effect
-    }
-  });
-
-  function copyCitation(element) {
-  const citationText = element.innerText;
-  navigator.clipboard.writeText(citationText).then(function() {
-    alert("Citation copied to clipboard!");
-  }, function(err) {
-    console.error("Could not copy text: ", err);
-  });
-  }
-</script>
-
-:::{.column-body-outset}
-
-::: {.animate__animated .animate__fadeIn}
+```
 
 
-## Under Review / in Progress 
-::: {.callout-important collapse="true" icon=false}
-
-# ***<span style="color: #00a653;">"The Calibration Gap between Model and Human Confidence in Large Language Models"</span>*** <br> Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., <span style="color: #c678dd;">Mayer, L. W.</span>, & Smyth, P. (2024) *arXiv preprint*
----
-
+::: column-page
 :::{.text-center}
-![](assets/confidence.png)
-:::
-
-\
-
-**<span style="color: #00a653;">Have you ever noticed that ChatGPT speaks like a know-it-all?</span>** In this paper, we show that there is misalignment in the confidence LLM's are perceived to have in their answers, and what their internal confidence values reflect. In essence, LLM's routinely appear more confident than they should, despite model weights accurately reflecting the uncertainty associated with the answer. We also show how prompting LLM's to include appropriate uncertainty language in the answer text diminishes this gap between perceived and actual confidence considerably.
-
-::: {.text-center}
-<a href="https://arxiv.org/pdf/2401.13835" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the paper</a>
-
-:::
-
-Citation:
-
-
-<div class="citation-box" onclick="copyCitation(this)">
-  <p>Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., Mayer, L. W. & Smyth, P. (2024). The calibration gap between model and human confidence in large language models. arXiv preprint arXiv:2401.13835.</p>
-</div>
-
-
+# In Progress
 :::
 
 
@@ -136,41 +133,46 @@ Citation:
 
 :::
 
-## 2024
-
 
 ::: {.callout-important collapse="true" icon=false}
-
-# ***<span style="color: #00a653;">"Learning with AI Assistance: A Path to Better Task Performance or Dependence?"</span>*** <br> Karny, S., <span style="color: #c678dd;">Mayer, L. W.</span>, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M. (2024). *Proceedings of the ACM Collective Intelligence Conference*. 
+# ***<span style="color: #00a653;">"Human-AI Collaboration: Trade-offs Between Performance and Preferences"</span>*** <br> <span style="color: #c678dd;">Mayer, L. W.</span>, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (Submitted) *Nature Machine Intelligence*. 
 
 
 :::{.text-center}
-<div style="background-color: white; display: inline-block;">
-  ![](assets/assistance.png)
-</div>
+![](assets/collab_ai.png)
 :::
 
 \
 
-**<span style="color: #00a653;">Is receiving AI assistance on tasks degrading our skills, or improving them?</span>** To answer this question, we developed a gamified task in which participants needed to intercept moving, point-valued targets before they escape. During the game, an AI assistant suggests optimal actions to take to maximize player score. We manipulated when people were given this assistance to see whether its presence harmed or boosted their learning during the task. Despite many media fears of skill degradation and/or hopes of AI-boosted learning, we find that in our task, AI assistance neither harms nor enhances learning. This finding highlights the possibility that there exist a subset of tasks in which AI assistance can be provided risk-free, which we hypothesize may include many tasks that do not require higher-level reasoning. 
-
-
+**<span style="color: #00a653;">How can we make AI collaborate well with people?</span>** 
+Narrowly optimizing the performance of AI agents may be convenient, but can cause frustration when people are then asked to work with this agent. In this paper, we show that people prefer AI agents that are considerate of their preferences, even when this comes at the cost of performance. We also find that certain human-centric design choices boost people's liking of the agent, without harming the performance of the human-AI team. Our results strongly suggest that leveraging both subjective and objective metrics is crucial when designing AI agents for human collaboration. 
 
 
 ::: {.text-center}
-<a href="https://dl.acm.org/doi/pdf/10.1145/3643562.3672610" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the paper</a>
+<a href="https://osf.io/ybweq/?view_only=cb4d4c7ac0b848b79b6ae8c7b09278cc" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">OSF repository</a>
 
 :::
-
-Citation:
-
-<div class="citation-box" onclick="copyCitation(this)">
-  <p>Karny, S., Mayer, L. W., Ayoub, J., Song, M., Su, H., Tian, D., ... & Steyvers, M. (2024, June). Learning with AI Assistance: A Path to Better Task Performance or Dependence?. In Proceedings of the ACM Collective Intelligence Conference (pp. 10-17).</p>
-</div>
 
 :::
 
 
 
+
+\
+
+:::{.text-center}
+# Published
 :::
 :::
+
+::: {.column-screen-inset-left}
+
+::: {#papers-listing}
+:::
+
+:::
+
+
+<!--
+TODO: add AI COLLAB paper 
+-->
