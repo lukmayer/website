@@ -75,7 +75,6 @@ This finding highlights the possibility that there exist a subset of tasks in wh
 
 \
 
-
 ::::
 
 :::: {.column style="padding-left: 20px;"}
