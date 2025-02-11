@@ -53,6 +53,12 @@ format:
         margin: 0; /* Reset margin for mobile */
     }
 }
+
+ .quarto-title {
+    text-align: left; /* Center the title text */
+    padding-right: 100px; /* Add padding to the right */
+    margin-left: -5% !important; /* Reset the default margin */
+}
 </style>
 ```
 
@@ -72,6 +78,7 @@ This finding highlights the possibility that there exist a subset of tasks in wh
 ::: text-center
 <a href="https://dl.acm.org/doi/pdf/10.1145/3643562.3672610" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the paper</a>
 :::
+
 ::::
 
 :::: {.column style="padding-left: 20px;"}

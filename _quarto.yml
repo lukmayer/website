@@ -11,15 +11,23 @@ website:
   favicon: "assets/favicons/favicon.ico" 
   page-footer:
     left: #add source code icon 
-      - icon: code-slash
+      - text: Site source code
         href: https://github.com/lukmayer/website
         aria-label: Source code
     center: |
       Made with <a href='https://quarto.org' target='_blank'><img src='assets/quarto.png' alt='Quarto' style='width: 100px;'></a>
     right:
-      - icon: rss
+
+      - text: Blog RSS
+        icon: rss
         href: /blog/index.xml
         aria-label: Blog RSS feed
+
+      - text: Publications RSS
+        icon: rss
+        href: research/publications/index.xml
+        aria-label: Publications RSS feed
+
   open-graph: true
   site-url: "https://lukmayer.github.io"
   title: "Lukas W. Mayer"

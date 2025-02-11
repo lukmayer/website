@@ -103,79 +103,93 @@ div.quarto-post {
   padding: 10px; /* Add padding to the description */
 }
 
+
+.button-link {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    display: inline-block; /* Ensure the button scales correctly */
+}
+
+.button-link:hover {
+    transform: scale(1.05); /* Slightly scale up the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
 </style>
 ```
 
-
-::: column-page
-:::{.text-center}
+::::::::::: column-page
+::: text-center
 # In Progress
 :::
 
+::::: {.callout-important collapse="true" icon="false"}
+# [***"Waste not want not: Computational methods to maximise attendance in group research"***]{style="color: #00a653;"} <br> [Mayer, L. W.]{style="color: #c678dd;"}, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) *Behavior Research Methods*.
 
-::: {.callout-important collapse="true" icon=false}
-# ***<span style="color: #00a653;">"Waste not want not: Computational methods to maximise attendance in group research"</span>*** <br> <span style="color: #c678dd;">Mayer, L. W.</span>, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) *Behavior Research Methods*. 
-
-
-:::{.text-center}
+::: text-center
 ![](assets/sets.png)
 :::
 
 \
 
-**<span style="color: #00a653;">Do your studies rely on groups of people?</span>** Recruiting participants for group sessions can be arduous, often costing a lot of time, effort, and resources. In this work, we demonstrate the complete lack of tools that can appropriately allocate a sample of interested participants to a set of group sessions. We then mathematically derive metrics that can quantify the effectiveness of any tool attempting to solve this problem. Finally, we develop an algorithm that outperforms any existing utility on this task using simulation and a large-scale pre-registered user study. Our scheduling utility is free and open-source, available to anyone through a web-applet. 
+[**Do your studies rely on groups of people?**]{style="color: #00a653;"} Recruiting participants for group sessions can be arduous, often costing a lot of time, effort, and resources.
+In this work, we demonstrate the complete lack of tools that can appropriately allocate a sample of interested participants to a set of group sessions.
+We then mathematically derive metrics that can quantify the effectiveness of any tool attempting to solve this problem.
+Finally, we develop an algorithm that outperforms any existing utility on this task using simulation and a large-scale pre-registered user study.
+Our scheduling utility is free and open-source, available to anyone through a web-applet.
 
-
-::: {.text-center}
+::: text-center
 <a href="https://lukmayer.github.io/appointment_sets" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">Link to the web-app</a>
-
 :::
+:::::
 
-:::
+::::: {.callout-important collapse="true" icon="false"}
+# [***"Human-AI Collaboration: Trade-offs Between Performance and Preferences"***]{style="color: #00a653;"} <br> [Mayer, L. W.]{style="color: #c678dd;"}, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (Submitted) *Nature Machine Intelligence*.
 
-
-::: {.callout-important collapse="true" icon=false}
-# ***<span style="color: #00a653;">"Human-AI Collaboration: Trade-offs Between Performance and Preferences"</span>*** <br> <span style="color: #c678dd;">Mayer, L. W.</span>, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (Submitted) *Nature Machine Intelligence*. 
-
-
-:::{.text-center}
+::: text-center
 ![](assets/collab_ai.png)
 :::
 
 \
 
-**<span style="color: #00a653;">How can we make AI collaborate well with people?</span>** 
-Narrowly optimizing the performance of AI agents may be convenient, but can cause frustration when people are then asked to work with this agent. In this paper, we show that people prefer AI agents that are considerate of their preferences, even when this comes at the cost of performance. We also find that certain human-centric design choices boost people's liking of the agent, without harming the performance of the human-AI team. Our results strongly suggest that leveraging both subjective and objective metrics is crucial when designing AI agents for human collaboration. 
+[**How can we make AI collaborate well with people?**]{style="color: #00a653;"} Narrowly optimizing the performance of AI agents may be convenient, but can cause frustration when people are then asked to work with this agent.
+In this paper, we show that people prefer AI agents that are considerate of their preferences, even when this comes at the cost of performance.
+We also find that certain human-centric design choices boost people's liking of the agent, without harming the performance of the human-AI team.
+Our results strongly suggest that leveraging both subjective and objective metrics is crucial when designing AI agents for human collaboration.
 
-
-::: {.text-center}
+::: text-center
 <a href="https://osf.io/ybweq/?view_only=cb4d4c7ac0b848b79b6ae8c7b09278cc" class="button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 5px;">OSF repository</a>
-
 :::
-
-:::
-
-
-
+:::::
 
 \
 
-:::{.text-center}
+::: text-center
 # Published
 :::
-:::
+:::::::::::
 
-::: {.column-screen-inset-left}
-
+:::: column-screen-inset-left
 ::: {#papers-listing}
 :::
+::::
 
-:::
+:::: column-page
+
+:::::::: columns
+:::: {.column style="padding-right: 20px;"}
+
+<a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: #00a653; background-color: #333333; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Find more on Google Scholar </a>
+::::
+
+:::: {.column style="padding-left: 20px;"}
 
 
-::: column-page
-:::{.text-center}
-<a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #00a653; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Find more on Google Scholar </a>
-:::
-:::
+<a href="/research/publications/index.xml" class="button-link" target="_blank" style="text-decoration: none; color: #00a653; background-color: #333333; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
+    Follow my publications with RSS <i class="bi bi-rss"></i>
+</a>
 
+::::
+
+::::::::
+
+::::

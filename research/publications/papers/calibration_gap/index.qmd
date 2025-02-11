@@ -54,6 +54,12 @@ format:
         margin: 0; /* Reset margin for mobile */
     }
 }
+
+ .quarto-title {
+    text-align: left; /* Center the title text */
+    padding-right: 100px; /* Add padding to the right */
+    margin-left: -5% !important; /* Reset the default margin */
+}
 </style>
 ```
 
