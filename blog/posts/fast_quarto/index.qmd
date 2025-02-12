@@ -38,7 +38,7 @@ However, as my website started to have more and more pages, I realized that usin
 So it dawned upon me the other day that I could simply only render the files that have changed.
 Conveniently, git already tracks file changes, meaning I could use some git commands to figure out which files to render.
 
-This was surprisingly easy to achieve with a bit of AI help (I'm not a bash/git expert).
+This was surprisingly easy to achieve.
 Here's the essential part:
 
 \
