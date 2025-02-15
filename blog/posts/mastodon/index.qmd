@@ -45,7 +45,7 @@ This probably seems like a weird concept to anyone less-technologically inclined
 
 \
 
-![A great visualization of how the Fediverse is a network of different platform layouts that all use the ActivityPub protocol. [Source](https://fedi.tips/what-is-mastodon-what-is-the-fediverse/)](images/fediverse.png){fig-alt="A network graph of different fediverse services like mastodon, pixelfed, and peertube." fig-align="center"}
+![A great visualization of how the Fediverse is a network of servers with different layouts that all use the ActivityPub protocol. [Source](https://fedi.tips/what-is-mastodon-what-is-the-fediverse/)](images/fediverse.png){fig-alt="A network graph of different fediverse services like mastodon, pixelfed, and peertube." fig-align="center"}
 
 \
 
