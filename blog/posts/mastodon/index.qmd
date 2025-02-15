@@ -52,7 +52,7 @@ This probably seems like a weird concept to anyone less-technologically inclined
 ### What's Mastodon?
 
 Mastodon is currently the most popular "layout" of ActivityPub, with many different people hosting copies of this layout.
-Mastodon looks similar to X/Twitter/Threads/BlueSky.
+Mastodon looks similar to X/Twitter/Threads/Bluesky.
 There are many other layouts for Activitypub, for example something equivalent to Instagram, Youtube, TikTok, Reddit, etc.
 
 Even though these other flavors of ActivityPub are much less popular than Mastodon, they will inevitably grow (my opinion).
@@ -117,7 +117,7 @@ While Bluesky is currently getting a lot of attention from X/Twitter refugees, i
 [^7]: This is a slight upgrade to being locked in to the platform of one billionaire I guess?
 
 Personally, I strongly recognize parts of the tech-company playbook here that I described in the beginning.
-To me, it seems almost inevitable that BlueSky, once popular, will also make a turn for the worse.
+To me, it seems almost inevitable that Bluesky, once popular, will also make a turn for the worse.
 
 \
 
