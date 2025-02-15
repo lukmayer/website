@@ -1,0 +1,134 @@
+---
+title: "Why Mastodon is the only social network I use"
+description: "The Fediverse is the true digital town square"
+author: "Luke"
+date: "02/14/2025"
+categories:
+  - mastodon
+  - social media
+image: "images/mastodon.png" 
+comments:
+    utterances:
+      repo: lukmayer/site_comments
+      theme: github-dark
+      issue-term: url
+---
+
+I'm writing this post at a time where a lot of the online platforms we have come accustomed to over the last decade or so are changing in ways we might not appreciate.
+Some places have seen increasingly aggressive forms of advertising, others questionable changes in policy, and yet others have either new or existing owners that increasingly show their true, not so nice, colors.
+
+Does it really need to be like this?
+
+\
+
+## The life cycle of big-tech
+
+There is a noticeable pattern that once-beloved, now-bemoaned services have in common.
+Namely, they all start with a huge pile of cash ("Venture Capital") that they use to dominate a market with.
+Sometimes it's well-done marketing, [other times it's selling at a loss, or just straight up breaking laws that gets them to the number one spot in their niche](https://en.wikipedia.org/wiki/Uber#Controversies).
+Only once this goal is achieved do these companies actually start monetizing with ads or price hikes.
+Typically, it's hard for users to switch services, sometimes deliberately so.
+For example, social networks typically rely on you not being able to convince most of your friends to go somewhere else.
+
+\
+
+## The alternative path: the Fediverse
+
+If you're not loving the tech-company life cycle, I have good news for you.
+
+In 2018 the people who decide the standards for the internet released [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub), which is in essence a standardized format for social media platforms.
+Importantly, this means that any platform that uses this format can talk to any other platform that also use the ActivityPub format.
+
+Thanks to this development anyone can create their own social platform, with users being able to freely move between them.
+This network of platforms is called the Fediverse (Federated + Universe).
+This probably seems like a weird concept to anyone less-technologically inclined, but what's important here is that this allows for a social network that is not controlled by any single entity.
+
+\
+
+![A great visualization of how the Fediverse is a network of different platform layouts that all use the ActivityPub protocol. [Source](https://fedi.tips/what-is-mastodon-what-is-the-fediverse/)](images/fediverse.png){fig-alt="A network graph of different fediverse services like mastodon, pixelfed, and peertube." fig-align="center"}
+
+\
+
+### What's Mastodon?
+
+Mastodon is currently the most popular "layout" of ActivityPub, with many different people hosting copies of this layout.
+Mastodon looks similar to X/Twitter/Threads/BlueSky.
+There are many other layouts for Activitypub, for example something equivalent to Instagram, Youtube, TikTok, Reddit, etc.
+
+Even though these other flavors of ActivityPub are much less popular than Mastodon, they will inevitably grow (my opinion).
+Every time a big-tech platform does something crappy, some people permanently join the Fediverse.
+Every time the Fediverse grows it becomes better, and more attractive for others.
+Eventually, it will hit critical mass.
+
+\
+
+### Why does this Fediverse stuff matter?
+
+There are two big reasons.
+
+1\) If any Fediverse platform turns crappy, you are free to migrate your account somewhere else.
+
+2\) If you migrate your account somewhere else, you retain your followers and followed.
+
+There is no money to be made on the Fediverse[^1].
+It's just people hosting these "instances" on their hardware because they want to[^2]
+. As such, there are no Ads, no AI-generated content, no algorithm shenanigans, no being subject to censorship you do not agree with
+.
+
+[^1]: This is currently also one of the biggest limitations.
+    The Fediverse is yet to settle on a form of monetization that is both viable and ethical.
+
+[^2]: A lot of servers are crowd-funded
+
+Platforms like Mastodon guarantee freedom in its truest form, far more than any corporate owned social media platform ever could.
+If you so wish you could create your own instance where no-one can censor you, and all your followers would still be able to see your postings, even if their accounts are registered somewhere else.
+
+At the same time, you also do not need to subject yourself to spam, or content that you find deeply undesirable.
+There is no algorithm in your main feed, just the people you follow.
+
+\
+
+### Is Bluesky part of the Fediverse?
+
+No.
+
+While Bluesky is currently getting a lot of attention from X/Twitter refugees, it is also:
+
+-   Funded by [Venture Capital, a large part of which comes from Crypto Companies](https://bsky.social/about/blog/10-24-2024-series-a)[^3].
+
+-   Not currently federated, you can only join the server that Bluesky owns[^4].
+
+-   Using an in-house protocol[^5], not ActivityPub, meaning you cannot interface with the Fediverse[^6]
+    .
+
+-   Not controllable by the users because their protocol [requires more centralization for moderation and content distribution](https://bsky.social/about/blog/5-5-2023-federation-architecture).
+    In essence, only companies and rich people can run a server[^7].
+
+[^3]: Do I even need to explain why this is a massive red flag?
+    Also why is this information super hidden...
+
+[^4]: Big red flag.
+    Doesn't even receive much mention on their blog...
+
+[^5]: Questionable at best given that ActivityPub is the officially recommended protocol.
+
+[^6]: While annoying, definitely solvable with some compatibility code.
+
+[^7]: This is a slight upgrade to being locked in to the platform of one billionaire I guess?
+
+Personally, I strongly recognize parts of the tech-company playbook here that I described in the beginning.
+To me, it seems almost inevitable that BlueSky, once popular, will also make a turn for the worse.
+
+\
+
+## How to join Mastodon?
+
+-   <https://joinmastodon.org>
+
+-   mastodon.social is the server that the developers of Mastodon own.
+    Either join this one, or click on another server.
+    Which specific one does not matter much, as you can change it later.
+    You could pick one simply because you like the handle.
+
+-   Read the rules of the server you are about to join.
+    Servers can differ in what you are allowed to post.
