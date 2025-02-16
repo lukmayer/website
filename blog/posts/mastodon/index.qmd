@@ -70,7 +70,7 @@ There are two big reasons.
 
 1\) **If any Fediverse platform turns crappy, you are free to migrate your account somewhere else.**
 
-2\) **If you migrate your account somewhere else, you retain your followers and followed.**
+2\) **If you migrate your account somewhere else, you retain your follows and followers.**
 
 There is no money to be made on the Fediverse[^1].
 It's more or less just people hosting these "instances" on their hardware because they want to[^2]. 
@@ -92,7 +92,9 @@ This is because every time a big-tech platform does something crappy, some peopl
 Every time the Fediverse grows it becomes better (more users, more content), and more attractive for others.
 Eventually, it will hit critical mass where most people will agree that the switch is worth it.
 This is all to say that since the Fediverse is B.S.
-proof by design I believe it's growth benefits from the [ratchet-effect](https://en.wikipedia.org/wiki/Ratchet_effect).\
+proof by design I believe it's growth benefits from the [ratchet-effect](https://en.wikipedia.org/wiki/Ratchet_effect).
+
+\
 
 ### Is Bluesky part of the Fediverse?
 
