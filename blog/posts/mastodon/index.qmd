@@ -92,7 +92,7 @@ This is because every time a big-tech platform does something crappy, some peopl
 Every time the Fediverse grows it becomes better (more users, more content), and more attractive for others.
 Eventually, it will hit critical mass where most people will agree that the switch is worth it.
 This is all to say that since the Fediverse is B.S.
-proof by design I believe it's growth benefits from the [ratchet-effect](https://en.wikipedia.org/wiki/Ratchet_effect).
+proof by design it benefits from the mistakes of others.
 
 \
 
