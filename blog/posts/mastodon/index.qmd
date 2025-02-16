@@ -30,7 +30,7 @@ Most often, it's a mix of all three and more.
 Only once this goal of capturing market share is achieved do these companies actually start monetizing with ads or price hikes.
 Typically, it's hard for users to switch services, sometimes deliberately so.
 For example, social networks typically rely on you not being able to convince most of your friends to go somewhere else.
-Emerging competitors are routinely bought out, or copied.
+Emerging competitors are routinely bought out or copied.
 
 \
 
@@ -39,11 +39,11 @@ Emerging competitors are routinely bought out, or copied.
 If you're not loving the tech-company life cycle, I have good news for you.
 
 In 2018 the people who decide the standards for the internet released [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub), which is in essence a standardized format for social media platforms.
-Importantly, this means that any platform that uses this format can talk to any other platform that also use the ActivityPub format.
+Importantly, this means that any platforms that have the ActivityPub format in common can talk to each other.
 
-Thanks to this development anyone can create their own social platform, with users being able to freely move between them.
-This network of platforms is called the Fediverse (Federated + Universe).
-This probably seems like a weird concept to anyone less-technologically inclined, but what's important here is that this allows for a social network that is not controlled by any single entity.
+Thanks to this development, users are able to freely move between platforms that use ActivityPub. Not only does this mean that you are not locked in to a single platform, but it also means that if you come up with a better platform, you can just start it and people can join without needing a new account.
+This network of interconnected platforms is called the Fediverse (Federated + Universe).
+What I've just described probably seems like a weird concept to anyone less-technologically inclined, but what's important here is that this allows for a social network that is not controlled by any single entity.
 
 \
 
@@ -53,9 +53,9 @@ This probably seems like a weird concept to anyone less-technologically inclined
 
 ### What's Mastodon?
 
-[Mastodon](https://joinmastodon.org) is currently the most popular format for presenting ActivityPub information, with many different people hosting copies of this layout.
+[Mastodon](https://joinmastodon.org) is currently the most popular platform based on ActivityPub, with many different people hosting copies ("Instances") of Mastodon. Think of each instance as a different community. All these instances can talk to each other, and you can follow people from other instances. As per the ActivityPub standard, you can also follow people from other platforms that use ActivityPub, like PeerTube or Pixelfed. 
 Mastodon looks similar to X/Twitter/Threads/Bluesky.
-There are many other layouts for Activitypub, for example something equivalent to Instagram (Pixelfed), Youtube (Peertube), TikTok (Loops), Reddit (Lemmy), etc.
+
 
 \
 
