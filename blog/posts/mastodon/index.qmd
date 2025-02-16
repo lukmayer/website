@@ -21,14 +21,16 @@ Does it really need to be like this?
 
 \
 
-## The life cycle of big-tech
+## The life cycle of modern tech
 
 There is a noticeable pattern that once-beloved, now-bemoaned services have in common.
-Namely, they all start with a huge pile of cash ("Venture Capital") that they use to dominate a market with.
+Namely, they all start with a huge pile of cash ("Venture Capital") that they use to dominate a niche with.
 Sometimes it's well-done marketing, [other times it's selling at a loss, or just straight up breaking laws that gets them to the number one spot in their niche](https://en.wikipedia.org/wiki/Uber#Controversies).
-Only once this goal is achieved do these companies actually start monetizing with ads or price hikes.
+Most often, it's a mix of all three and more.
+Only once this goal of capturing market share is achieved do these companies actually start monetizing with ads or price hikes.
 Typically, it's hard for users to switch services, sometimes deliberately so.
 For example, social networks typically rely on you not being able to convince most of your friends to go somewhere else.
+Emerging competitors are routinely bought out, or copied.
 
 \
 
@@ -45,20 +47,20 @@ This probably seems like a weird concept to anyone less-technologically inclined
 
 \
 
-![A great visualization of how the Fediverse is a network of servers with different layouts that all use the ActivityPub protocol. [Source](https://fedi.tips/what-is-mastodon-what-is-the-fediverse/)](images/fediverse.png){fig-alt="A network graph of different fediverse services like mastodon, pixelfed, and peertube." fig-align="center"}
+![A great visualization of how the Fediverse is a network of servers with different methods of formatting the ActivityPub protocol information. [Source](https://fedi.tips/what-is-mastodon-what-is-the-fediverse/)](images/fediverse.png){fig-alt="A network graph of different fediverse services like mastodon, pixelfed, and peertube." fig-align="center"}
 
 \
 
 ### What's Mastodon?
 
-Mastodon is currently the most popular "layout" of ActivityPub, with many different people hosting copies of this layout.
+[Mastodon](https://joinmastodon.org) is currently the most popular format for presenting ActivityPub information, with many different people hosting copies of this layout.
 Mastodon looks similar to X/Twitter/Threads/Bluesky.
-There are many other layouts for Activitypub, for example something equivalent to Instagram, Youtube, TikTok, Reddit, etc.
+There are many other layouts for Activitypub, for example something equivalent to Instagram (Pixelfed), Youtube (Peertube), TikTok (Loops), Reddit (Lemmy), etc.
 
-Even though these other flavors of ActivityPub are much less popular than Mastodon, they will inevitably grow (my opinion).
-Every time a big-tech platform does something crappy, some people permanently join the Fediverse.
-Every time the Fediverse grows it becomes better, and more attractive for others.
-Eventually, it will hit critical mass.
+\
+
+![A screenshot of my Mastodon feed.](images/feed.png){fig-alt="A screenshot of my Mastodon feed." fig-align="center"}
+
 
 \
 
@@ -66,14 +68,13 @@ Eventually, it will hit critical mass.
 
 There are two big reasons.
 
-1\) If any Fediverse platform turns crappy, you are free to migrate your account somewhere else.
+1\) **If any Fediverse platform turns crappy, you are free to migrate your account somewhere else.**
 
-2\) If you migrate your account somewhere else, you retain your followers and followed.
+2\) **If you migrate your account somewhere else, you retain your followers and followed.**
 
 There is no money to be made on the Fediverse[^1].
-It's just people hosting these "instances" on their hardware because they want to[^2]
-. As such, there are no Ads, no AI-generated content, no algorithm shenanigans, no being subject to censorship you do not agree with
-.
+It's more or less just people hosting these "instances" on their hardware because they want to[^2]. 
+As such, there are no Ads, no AI-generated content, no algorithm shenanigans, no being subject to censorship you do not agree with.
 
 [^1]: This is currently also one of the biggest limitations.
     The Fediverse is yet to settle on a form of monetization that is both viable and ethical.
@@ -86,11 +87,16 @@ If you so wish you could create your own instance where no-one can censor you, a
 At the same time, you also do not need to subject yourself to spam, or content that you find deeply undesirable.
 There is no algorithm in your main feed, just the people you follow.
 
-\
+Even though other platforms leveraging ActivityPub are much less popular than Mastodon, my sense is that they will inevitably grow.
+This is because every time a big-tech platform does something crappy, some people permanently join the extremely diversified Fediverse.
+Every time the Fediverse grows it becomes better (more users, more content), and more attractive for others.
+Eventually, it will hit critical mass where most people will agree that the switch is worth it.
+This is all to say that since the Fediverse is B.S.
+proof by design I believe it's growth benefits from the [ratchet-effect](https://en.wikipedia.org/wiki/Ratchet_effect).\
 
 ### Is Bluesky part of the Fediverse?
 
-No.
+Sadly, no.
 
 While Bluesky is currently getting a lot of attention from X/Twitter refugees, it is also:
 
@@ -98,8 +104,7 @@ While Bluesky is currently getting a lot of attention from X/Twitter refugees, i
 
 -   Not currently federated, you can only join the server that Bluesky owns[^4].
 
--   Using an in-house protocol[^5], not ActivityPub, meaning you cannot interface with the Fediverse[^6]
-    .
+-   Using an in-house protocol[^5], not ActivityPub, meaning you cannot directly interface with the Fediverse[^6].
 
 -   Not controllable by the users because their protocol [requires more centralization for moderation and content distribution](https://bsky.social/about/blog/5-5-2023-federation-architecture).
     In essence, only companies and rich people can run a server[^7].
@@ -118,6 +123,11 @@ While Bluesky is currently getting a lot of attention from X/Twitter refugees, i
 
 Personally, I strongly recognize parts of the tech-company playbook here that I described in the beginning.
 To me, it seems almost inevitable that Bluesky, once popular, will also make a turn for the worse.
+I am open to being proven wrong, but I am not holding my breath.
+
+Mastodon may not have as good of a marketing team as Bluesky, and may also have some rough edges in the onboarding experience.
+However, it's already heavily diversified, with individuals empowered to make meaningful contributions, and the development effort is moving to a non-profit model to ensure the project stays mission-driven.
+So yes, compared to Bluesky, I am pretty bullish on Mastodon not going rogue.
 
 \
 
@@ -132,3 +142,6 @@ To me, it seems almost inevitable that Bluesky, once popular, will also make a t
 
 -   Read the rules of the server you are about to join.
     Servers can differ in what you are allowed to post.
+
+-   Follow some people.
+    For recommendations on how to curate your feed in the absence of algorithms, check out [fedi.tips](https://fedi.tips)
