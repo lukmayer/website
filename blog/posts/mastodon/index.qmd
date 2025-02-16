@@ -41,7 +41,8 @@ If you're not loving the tech-company life cycle, I have good news for you.
 In 2018 the people who decide the standards for the internet released [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub), which is in essence a standardized format for social media platforms.
 Importantly, this means that any platforms that have the ActivityPub format in common can talk to each other.
 
-Thanks to this development, users are able to freely move between platforms that use ActivityPub. Not only does this mean that you are not locked in to a single platform, but it also means that if you come up with a better platform, you can just start it and people can join without needing a new account.
+Thanks to this development, users are able to freely move between platforms that use ActivityPub.
+Not only does this mean that you are not locked in to a single platform, but it also means that if you come up with a better platform, you can just start it and people can join without needing a new account.
 This network of interconnected platforms is called the Fediverse (Federated + Universe).
 What I've just described probably seems like a weird concept to anyone less-technologically inclined, but what's important here is that this allows for a social network that is not controlled by any single entity.
 
@@ -53,14 +54,15 @@ What I've just described probably seems like a weird concept to anyone less-tech
 
 ### What's Mastodon?
 
-[Mastodon](https://joinmastodon.org) is currently the most popular platform based on ActivityPub, with many different people hosting copies ("Instances") of Mastodon. Think of each instance as a different community. All these instances can talk to each other, and you can follow people from other instances. As per the ActivityPub standard, you can also follow people from other platforms that use ActivityPub, like PeerTube or Pixelfed. 
+[Mastodon](https://joinmastodon.org) is currently the most popular platform based on ActivityPub, with many different people hosting copies ("Instances") of Mastodon.
+Think of each instance as a different community.
+All these instances can talk to each other, and you can follow people from other instances.
+As per the ActivityPub standard, you can also follow people from other platforms that use ActivityPub, like PeerTube or Pixelfed.
 Mastodon looks similar to X/Twitter/Threads/Bluesky.
-
 
 \
 
 ![A screenshot of my Mastodon feed.](images/feed.png){fig-alt="A screenshot of my Mastodon feed." fig-align="center"}
-
 
 \
 
@@ -73,8 +75,9 @@ There are two big reasons.
 2\) **If you migrate your account somewhere else, you retain your follows and followers.**
 
 There is no money to be made on the Fediverse[^1].
-It's more or less just people hosting these "instances" on their hardware because they want to[^2]. 
-As such, there are no Ads, no AI-generated content, no algorithm shenanigans, no being subject to censorship you do not agree with.
+It's more or less just people hosting these "instances" on their hardware because they want to[^2]
+. As such, there are no Ads, no AI-generated content, no algorithm shenanigans, no being subject to censorship you do not agree with
+.
 
 [^1]: This is currently also one of the biggest limitations.
     The Fediverse is yet to settle on a form of monetization that is both viable and ethical.
@@ -90,9 +93,12 @@ There is no algorithm in your main feed, just the people you follow.
 Even though other platforms leveraging ActivityPub are much less popular than Mastodon, my sense is that they will inevitably grow.
 This is because every time a big-tech platform does something crappy, some people permanently join the extremely diversified Fediverse.
 Every time the Fediverse grows it becomes better (more users, more content), and more attractive for others.
-Eventually, it will hit critical mass where most people will agree that the switch is worth it.
+Eventually, it could hit critical mass where most people will agree that the switch is worth it.
 This is all to say that since the Fediverse is B.S.
-proof by design it benefits from the mistakes of others.
+proof by design it benefits from the mistakes of others[^3].
+
+[^3]: Mainstream platforms have a tough choice: either become more like the Fediverse, or risk inducing migration from their platform to the Fediverse.
+    I think this explains why Threads and Tumblr are embracing ActivityPub; to not appear crappy enough that it would inspire their users to switch.
 
 \
 
@@ -102,26 +108,27 @@ Sadly, no.
 
 While Bluesky is currently getting a lot of attention from X/Twitter refugees, it is also:
 
--   Funded by [Venture Capital, a large part of which comes from Crypto Companies](https://bsky.social/about/blog/10-24-2024-series-a)[^3].
+-   Funded by [Venture Capital, a large part of which comes from Crypto Companies](https://bsky.social/about/blog/10-24-2024-series-a)[^4].
 
--   Not currently federated, you can only join the server that Bluesky owns[^4].
+-   Not currently federated, you can only join the server that Bluesky owns[^5].
 
--   Using an in-house protocol[^5], not ActivityPub, meaning you cannot directly interface with the Fediverse[^6].
+-   Using an in-house protocol[^6], not ActivityPub, meaning you cannot directly interface with the Fediverse[^7]
+    .
 
 -   Not controllable by the users because their protocol [requires more centralization for moderation and content distribution](https://bsky.social/about/blog/5-5-2023-federation-architecture).
-    In essence, only companies and rich people can run a server[^7].
+    In essence, only companies and rich people can run a server[^8].
 
-[^3]: Do I even need to explain why this is a massive red flag?
+[^4]: Do I even need to explain why this is a massive red flag?
     Also why is this information super hidden...
 
-[^4]: Big red flag.
+[^5]: Big red flag.
     Doesn't even receive much mention on their blog...
 
-[^5]: Questionable at best given that ActivityPub is the officially recommended protocol.
+[^6]: Questionable at best given that ActivityPub is the officially recommended protocol.
 
-[^6]: While annoying, definitely solvable with some compatibility code.
+[^7]: While annoying, definitely solvable with some compatibility code.
 
-[^7]: This is a slight upgrade to being locked in to the platform of one billionaire I guess?
+[^8]: This is a slight upgrade to being locked in to the platform of one billionaire I guess?
 
 Personally, I strongly recognize parts of the tech-company playbook here that I described in the beginning.
 To me, it seems almost inevitable that Bluesky, once popular, will also make a turn for the worse.
