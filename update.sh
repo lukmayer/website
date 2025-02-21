@@ -27,7 +27,7 @@ read commit_message
 
 git commit -m "$commit_message"
 
-git remote add origin git@github.com:lukmayer/website.git
+git remote set-url  origin git@github.com:lukmayer/website.git
 
 # Push changes to the main repository (lukmayer/website.git)
 # Ensure 'origin' points to the source repo (lukmayer/website.git)

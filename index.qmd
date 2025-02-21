@@ -2,6 +2,7 @@
 title: "Lukas William Mayer"
 description: "Lukas Mayer's personal website - PhD student researching Computational Cognitive Science and Human-AI collaboration. Also posts about Data Science/statistics, software development, technology, and more."
 
+
 format: 
   html:
     toc: false
