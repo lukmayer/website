@@ -24,6 +24,13 @@ format:
 ```{=html}
 <style>
 
+
+.quarto-title {
+    text-align: left; /* Center the title text */
+    padding-right: 100px; /* Add padding to the right */
+    margin-left: -5% !important; /* Reset the default margin */
+}
+
 .description {
     display: none;
 }
