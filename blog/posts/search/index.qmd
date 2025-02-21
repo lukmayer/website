@@ -1,5 +1,5 @@
 ---
-title: "A comprehensive review of non-obscure search engines"
+title: "A review of search engines"
 description: "To google or not to google, that is the question."
 author: "Luke"
 date: "08/10/2024"
