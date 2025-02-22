@@ -51,6 +51,120 @@ I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers
 <!-- Google scholar -->
 
 <a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Google Scholar </a>
+
+
+<!-- Signal -->
+
+<button class="button-link2" onclick="copySignalHandle()" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
+    <i class="bi bi-signal"></i> <span class="handle-text"><span class="default">Signal</span><span class="hover">L11.98</span></span>
+</button>
+
+<style>
+/* Base button styles */
+.button-link, .button-link2 {
+    cursor: pointer;
+    background-color: #222;
+    color: white;
+    padding: 0 20px;  /* Remove vertical padding */
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: none;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;  /* This centers content vertically */
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    transform-origin: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Icon styles */
+.button-link i, 
+.button-link2 i,
+.button-link .ai {
+    font-size: 1.5rem !important;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Signal button text container */
+.handle-text {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-width: 60px;
+    height: 100%;
+}
+
+/* Signal button text states */
+.handle-text .default,
+.handle-text .hover {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+/* Rest remains the same */
+.handle-text .default {
+    opacity: 1;
+}
+
+.handle-text .hover {
+    opacity: 0;
+}
+
+.button-link2:hover .handle-text .default {
+    opacity: 0;
+}
+
+.button-link2:hover .handle-text .hover {
+    opacity: 1;
+}
+
+.button-link:hover,
+.button-link2:hover {
+    background-color: #444 !important;
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+
+</style>
+
+<script>
+function copySignalHandle() {
+    const signalHandle = "L11.98";
+    navigator.clipboard.writeText(signalHandle).then(() => {
+        const handleText = document.querySelector('.handle-text');
+        const originalContent = handleText.innerHTML;
+        handleText.innerHTML = '<span class="default">Copied!</span><span class="hover">Copied!</span>';
+        setTimeout(() => {
+            handleText.innerHTML = originalContent;
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+    });
+}
+
+</script>
+
+
+
+
+
+
 :::
 :::::
 ::::::::
@@ -85,32 +199,6 @@ I'm Luke, and I'm currently a PhD Student in Cognitive Science in [Mark Steyvers
 }
 
 
-.button-link {
-    background-color: #222;
-    color: white;
-    transition: background-color 0.3s, transform 0.3s;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    font-size: 1.2rem;
-    text-align: center;
-    text-decoration: none;
-    /* Add margin to account for scale transform */
-    margin: 5px;
-    /* Ensure consistent height behavior */
-    line-height: 1.5;
-    /* Add transform-origin to control scaling */
-    transform-origin: center;
-    /* Add z-index handling for hover state */
-    position: relative;
-    z-index: 1;
-}
-
-.button-link:hover {
-    background-color: #444 !important;
-    transform: scale(1.2);
-    z-index: 2; /* Bring hovered button to front */
-}
 
 /* Default desktop view */
 .button-group {
