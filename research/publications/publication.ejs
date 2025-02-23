@@ -19,17 +19,26 @@
               <span class="authors-string"><%= item.authors %></span>
             </p>
           <% } %>
-          <% if (item["paragraph-header"]) { %>
-            <h4 class="listing-paragraph-header special-header"><%= item["paragraph-header"] %></h4>
-          <% } %>
+
+          <% /* Check if descriptive paragraph exists.
+                Both the paragraph-header (if any) and descriptive paragraph are hidden initially in this container.
+          */ %>
           <% if (item["descriptive-paragraph"]) { %>
             <button class="toggle-button" onclick="toggleParagraph('desc-<%= index %>')">
-                 Show More
-                </button>
-            <p class="listing-descriptive-paragraph" id="desc-<%= index %>" style="display: none;">
-              <%= item["descriptive-paragraph"] %>
-            </p>
+              Show More
+            </button>
+            <div id="desc-<%= index %>" style="display: none;">
+              <% if (item["paragraph-header"]) { %>
+                <h4 class="listing-paragraph-header special-header">
+                  <%= item["paragraph-header"] %>
+                </h4>
+              <% } %>
+              <p class="listing-descriptive-paragraph">
+                <%= item["descriptive-paragraph"] %>
+              </p>
+            </div>
           <% } %>
+
           <p class="listing-links">
             <% if (item.osf) { %>
               <a href="<%- item.osf %>" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">OSF</a>
