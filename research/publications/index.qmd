@@ -9,9 +9,7 @@ listing:
     - publications.yml
   sort-ui: true
   filter-ui: true
-  page-size: 10
-  template-params:
-    myname: "John Smith"  # Replace with the exact name to be highlighted
+  page-size: 100
   field-display-names:
     title: "Title"
     journal: "Journal"
