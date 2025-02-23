@@ -32,7 +32,7 @@ Hi, I'm Luke!
 I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/) at the University of California, Irvine.
 :::
 
-{{< animate fadeIn "In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration." duration=3s >}} {{< animate fadeIn "To this end, I'm exploring the application of model-based reinforcement learning, Bayesian computational models, and ideas from causal reasoning research." duration=3s >}}
+{{< animate fadeIn "In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration." duration=3s >}} {{< animate fadeIn "To this end, I'm exploring the application of model-based reinforcement learning, Bayesian computational models, and causal reasoning." duration=3s >}}
 
 \
 
