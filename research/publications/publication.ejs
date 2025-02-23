@@ -1,0 +1,63 @@
+```{=html}
+
+<ul class="pub-list list">
+  <% for (const item of items) { %>
+    <li <%= metadataAttrs(item) %>>
+      <!-- Wrap image and details together in a flex container -->
+      <div class="pub-item">
+
+        <!-- Image -->
+        <% if (item.image) { %>
+          <div class="pub-image">
+            <img src="<%- item.image %>" alt="Image for <%- item.title %>" class="listing-image"/>
+          </div>
+        <% } %>
+
+        <!-- Publication Details -->
+        <div class="pub-details">
+
+          <!-- Title -->
+          <h2 class="listing-title"><%= item.title %></h2>
+
+          <!-- Journal -->
+          <% if (item.journal) { %>
+            <p class="listing-journal"> <%- item.journal %></p>
+          <% } %>
+
+          <!-- Authors (plain escaped output) -->
+          <% if (item.authors) { %>
+            <p class="listing-authors">
+              <span class="authors-string"><%= item.authors %></span>
+            </p>
+          <% } %>
+
+          <!-- Paragraph Header with special styling -->
+          <% if (item["paragraph-header"]) { %>
+            <h4 class="listing-paragraph-header special-header"><%= item["paragraph-header"] %></h4>
+          <% } %>
+
+          <!-- Descriptive Paragraph -->
+          <% if (item["descriptive-paragraph"]) { %>
+            <p class="listing-descriptive-paragraph"><%= item["descriptive-paragraph"] %></p>
+          <% } %>
+
+          <!-- Links: OSF and Paper -->
+          <p class="listing-links">
+            <% if (item.osf) { %>
+              <a href="<%- item.osf %>" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">OSF</a>
+            <% } %>
+            <% if (item.paper) { %>
+              <a href="<%- item.paper %>" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
+            <% } %>
+          </p>
+
+        </div><!-- end pub-details -->
+      </div><!-- end pub-item -->
+    </li>
+  <% } %>
+</ul>
+
+
+
+
+```

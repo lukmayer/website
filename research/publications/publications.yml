@@ -1,0 +1,20 @@
+- title: "What large language models know and what people think they know (2025)"
+  journal: "Nature Machine Intelligence"
+  authors: "Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., Mayer, L. W., & Smyth, P."
+  date: "2025-01-21"
+  image: "images/confidence.png"
+  osf: "https://osf.io/y7pr6"
+  paper: "https://www.nature.com/articles/s42256-024-00976-7"
+  paragraph-header: "Have you ever noticed that ChatGPT speaks like a know-it-all?"
+  descriptive-paragraph: "In this paper, we show that there is misalignment in the confidence LLM's are perceived to have in their answers, and what their internal confidence values reflect. In essence, LLM's routinely appear more confident than they should, despite model weights accurately reflecting the uncertainty associated with the answer. We also show how prompting LLM's to include appropriate uncertainty language in the answer text diminishes this gap between perceived and actual confidence considerably."
+
+- title: "Learning with AI Assistance: A Path to Better Task Performance or Dependence? (2024)"
+  journal: "Proceedings of the ACM Collective Intelligence Conference"
+  authors: "Karny, S., Mayer, L. W., Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M."
+  date: "2024-07-18"
+  image: "images/assistance.png"
+  paper: "https://dl.acm.org/doi/pdf/10.1145/3643562.3672610"
+  paragraph-header: "Is receiving AI assistance on tasks degrading our skills, or improving them?"
+  descriptive-paragraph: "To answer this question, we developed a gamified task in which participants needed to intercept moving, point-valued targets before they escape. During the game, an AI assistant suggests optimal actions to take to maximize player score. We manipulated when people were given this assistance to see whether its presence harmed or boosted their learning during the task. Despite many media fears of skill degradation and/or hopes of AI-boosted learning, we find that in our task, AI assistance neither harms nor enhances learning. This finding highlights the possibility that there exist a subset of tasks in which AI assistance can be provided risk-free, which we hypothesize may include many tasks that do not require higher-level reasoning."
+
+

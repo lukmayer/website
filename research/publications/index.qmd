@@ -1,14 +1,27 @@
 ---
 title: "Publications"
 description: "Lukas Mayer's research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development"
+
 listing:
-  id: papers-listing
-  type: default
-  fields: [image, title, subtitle, description]
-  contents: papers
-  sort: "date desc"
-  feed: true
-  page-size: 60
+  id: publications
+  template: publication.ejs
+  contents:
+    - publications.yml
+  sort-ui: true
+  filter-ui: true
+  page-size: 10
+  template-params:
+    myname: "John Smith"  # Replace with the exact name to be highlighted
+  field-display-names:
+    title: "Title"
+    journal: "Journal"
+    authors: "Authors"
+    image: "Image"
+    osf: "OSF"
+    paper: "Paper"
+    paragraph-header: "Header"
+    descriptive-paragraph: "Description"
+
 
 format: 
   html:
@@ -24,6 +37,83 @@ format:
 ```{=html}
 <style>
 
+.button-link {
+  transition: transform 0.3s ease;
+}
+
+.button-link:hover {
+  transform: scale(1.1);
+}
+
+.btn-primary {
+  background-color: #333333; /* Change the button color */
+  color: white;              /* Change the text color */
+  border-radius: 5px;        /* Add rounded corners */
+  padding: 10px 20px;        /* Add padding */
+  font-size: 16px;           /* Increase font size */
+  text-align: center;        /* Center the text */
+  text-decoration: none;     /* Remove underline */
+  border: 1px solid #333333; /* Add border */
+}
+
+.btn-secondary {
+  background-color: #333333; /* Change the button color */
+  color: white;              /* Change the text color */
+  border-radius: 5px;        /* Add rounded corners */
+  padding: 10px 20px;        /* Add padding */
+  font-size: 16px;           /* Increase font size */
+  text-align: center;        /* Center the text */
+  text-decoration: none;     /* Remove underline */
+  border: 1px solid #333333; /* Add border */
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #555555; /* Change the button color on hover */
+  border: 1px solid #333333; /* Add border */
+}
+
+.btn-secondary:hover {
+  background-color: #555555; /* Change the button color on hover */
+  border: 1px solid #333333; /* Add border */
+}
+
+/* Remove bullet points from the list */
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set the pub-item as a flex container with vertical centering */
+.pub-item {
+  display: flex;
+  align-items: center;   /* Change from flex-start to center for vertical centering */
+  gap: 20px;             /* Adjust gap as needed */
+}
+
+/* Optional: Constrain the image size */
+.pub-image img {
+  max-width: 400px;      /* Adjust width as desired */
+  height: auto;
+  border-radius: 4px;    /* Optional: rounded corners */
+}
+
+/* Let the details container fill the remaining space */
+.pub-details {
+  flex: 1;
+}
+.highlight-author {
+  color: #c678dd; /* For example, red */
+  font-weight: bold;
+}
+
+.special-header {
+  color: #c678dd; /* Example: blue color */
+}
+
+.listing-journal {
+  color: #c678dd; /* Example: blue color */
+}
 
 .quarto-title {
     text-align: left; /* Center the title text */
@@ -70,57 +160,24 @@ div.callout-important.callout {
     border-left-color: #5f5f5f;
 }
 
+@media (max-width: 768px) {
+  .pub-item {
+    flex-direction: column;  /* Stack image and text vertically */
+    align-items: center;     /* Center them horizontally */
+    gap: 15px;               /* Reduced gap for small screens */
+  }
 
-div.quarto-post {
-    display: flex;
-    gap: 2em;
-    margin-bottom: 1.5em;
-    border-bottom: none !important; /* Removes the border-bottom */
+  /* Adjust the image container if needed */
+  .pub-image img {
+    max-width: 80%;  /* The image will take up most of the container's width */
+  }
+
+  /* Optionally, adjust text alignment for better presentation */
+  .pub-details {
+    text-align: center;
+  }
 }
 
-
-
-.listing-title {
-  background-color: #222222; /* Dark background for the title */
-  color: #00bf63; /* Green text color */
-  padding: 10px; /* Add some padding for better spacing */
-  border-radius: 15px; /* Optional: Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.listing-title:hover {
-  transform: scale(1.05); /* Slightly scale up on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-}
-
-.listing-title a {
-  color: #00bf63 !important;
-}
-
-.listing-description a {
-  color: #c678dd !important;
-}
-
-
-.listing-subtitle {
-  padding: 10px; /* Add padding to the subtitle */
-}
-
-.listing-description {
-  padding: 10px; /* Add padding to the description */
-}
-
-
-.button-link {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Initial shadow */
-    display: inline-block; /* Ensure the button scales correctly */
-}
-
-.button-link:hover {
-    transform: scale(1.05); /* Slightly scale up the button */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-}
 </style>
 ```
 
@@ -175,28 +232,40 @@ Our results strongly suggest that leveraging both subjective and objective metri
 :::
 :::::::::::
 
-:::: column-screen-inset-left
-::: {#papers-listing}
-:::
-::::
-
 :::: column-page
 
-:::::::: columns
-:::: {.column style="padding-right: 20px;"}
+:::{#publications}
+:::
+
+
+::::
+
+:::::: column-page
+
+\
+
+---
+
+::: text-center
 
 <a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: #00a653; background-color: #333333; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Find more on Google Scholar </a>
-::::
 
-:::: {.column style="padding-left: 20px;"}
+:::
+
+::::::
 
 
-<a href="/research/publications/index.xml" class="button-link" target="_blank" style="text-decoration: none; color: #00a653; background-color: #333333; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
-    Follow my publications with RSS <i class="bi bi-rss"></i>
-</a>
-
-::::
-
-::::::::
-
-::::
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var myName = "Mayer, L. W.";
+    // Select all elements that contain the authors string.
+    var authorElements = document.querySelectorAll('.authors-string');
+    var regex = new RegExp(myName, 'g');
+    authorElements.forEach(function(elem) {
+      elem.innerHTML = elem.innerHTML.replace(
+        regex,
+        '<span class="highlight-author">' + myName + '</span>'
+      );
+    });
+  });
+</script>

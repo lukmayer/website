@@ -11,7 +11,7 @@ website:
   favicon: "assets/favicons/favicon.ico" 
   page-footer:
     left: #add source code icon 
-      - text: Site source code
+      - text: Source code
         href: https://github.com/lukmayer/website
         aria-label: Source code
     center: |
@@ -23,10 +23,6 @@ website:
         href: /blog/index.xml
         aria-label: Blog RSS feed
 
-      - text: Publications RSS
-        icon: rss
-        href: research/publications/index.xml
-        aria-label: Publications RSS feed
 
   open-graph: true
   site-url: "https://lukmayer.github.io"
