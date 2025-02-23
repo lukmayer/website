@@ -11,7 +11,7 @@ image: "images/371907020.png"
 comments:
   giscus:
     repo: lukmayer/site_comments
-    theme: github-dark
+    theme: dark
     mapping: url
     reactions-enabled: true
 ---

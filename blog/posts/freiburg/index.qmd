@@ -9,7 +9,7 @@ image: "images/schlossberg_aussicht.jpg"
 comments:
   giscus:
     repo: lukmayer/site_comments
-    theme: github-dark
+    theme: dark
     mapping: url
     reactions-enabled: true
 ---

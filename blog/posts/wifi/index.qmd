@@ -9,7 +9,7 @@ image: "images/linux_wifi.png"
 comments:
   giscus:
     repo: lukmayer/site_comments
-    theme: github-dark
+    theme: dark
     mapping: url
     reactions-enabled: true
 
