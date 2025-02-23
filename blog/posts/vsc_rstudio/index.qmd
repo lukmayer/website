@@ -8,10 +8,11 @@ categories:
   - vscode
 image: "images/vscode.png" 
 comments:
-  utterances:
+  giscus:
     repo: lukmayer/site_comments
     theme: github-dark
-    issue-term: url
+    mapping: url
+    reactions-enabled: true
 ---
 
 ![All in one: editor, variable manager, plotting pane, terminal - she's a beauty!](images/vscode_setup.png){fig-align="center"}

@@ -7,10 +7,11 @@ categories:
   - webdev
 image: "images/js.png"
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
 Hello world!

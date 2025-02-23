@@ -8,10 +8,11 @@ categories:
   - math
 image: "images/grid.jpg"
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
 Ever since learning about research methods as an undergrad, I was curious about how the statistics we do in our research actually worked.

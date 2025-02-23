@@ -8,10 +8,11 @@ categories:
   - vivaldi
 image: "images/vivaldi_logo.png"
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
 I've written quite a bit about Vivaldi by now \[[1](https://lukmayer.github.io/blog/posts/vivaldi1/index.html)\], \[[2](https://lukmayer.github.io/blog/posts/vivaldi2/index.html)\], \[[3](https://lukmayer.github.io/blog/posts/vivaldi3/index.html)\] but so far I've never really gone into detail about what I like about it.

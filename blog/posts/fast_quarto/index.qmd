@@ -9,10 +9,11 @@ categories:
   - code
 image: "images/quarto.png" 
 comments:
-  utterances:
+  giscus:
     repo: lukmayer/site_comments
     theme: github-dark
-    issue-term: url
+    mapping: url
+    reactions-enabled: true
 ---
 
 Today a quick hack for pushing website updates.\

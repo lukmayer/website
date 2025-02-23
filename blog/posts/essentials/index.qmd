@@ -8,10 +8,11 @@ categories:
   - rss
 image: "images/puzzle.jpg" 
 comments:
-  utterances:
+  giscus:
     repo: lukmayer/site_comments
     theme: github-dark
-    issue-term: url
+    mapping: url
+    reactions-enabled: true
 ---
 
 If you somehow found this page, you probably use the internet quite a bit in your daily life.

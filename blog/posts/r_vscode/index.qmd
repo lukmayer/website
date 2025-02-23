@@ -11,10 +11,11 @@ categories:
   - software
 image: "images/vscode.png" 
 comments:
-  utterances:
+  giscus:
     repo: lukmayer/site_comments
     theme: github-dark
-    issue-term: url
+    mapping: url
+    reactions-enabled: true
 ---
 
 Have you ever wanted to use R in an IDE that is not RStudio?

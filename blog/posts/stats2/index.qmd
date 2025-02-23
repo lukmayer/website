@@ -8,25 +8,40 @@ categories:
   - math
 image: "images/grid.jpg"
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
-
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
+```{=html}
 <!-- If in doubt, clear _freeze/site_libs/revealjs and render anew
 Make sure that chalkbord is disabled - things will break
 also wrap the presentation in ::: syntax at your own risk - it will probably break the slides -->
+```
 
 Hello world!
 
-<iframe src="../../../presentations/stats210_1.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+<iframe src="../../../presentations/stats210_1.html" width="800" height="600" frameborder="0" allowfullscreen>
 
+</iframe>
 
-So I'm currently revising for a stats exam. 
-Since I like reorganizing notes I've taken to see how all the things I've been learning fit together, I've created a presentation on simple linear regression. It was the perfect excuse to try out the revealjs presentation format in Quarto. I have to say, it was trickier than expected to embed the presentation inside a page. I was trying to study the source code of quarto.org, but I couldn't replicate the method they use to embed their presentations. But after some tinkering, I finally found a way to embed the presentation. I've been planning to make an "advanced quarto" tutorial at some point soon when I'm less swamped. It will probably include my workflow for customizing my website, some notes on ::: syntax and how to embed things and the like. So if you're interested in that, stay tuned.
+So I'm currently revising for a stats exam.
+Since I like reorganizing notes I've taken to see how all the things I've been learning fit together, I've created a presentation on simple linear regression.
+It was the perfect excuse to try out the revealjs presentation format in Quarto.
+I have to say, it was trickier than expected to embed the presentation inside a page.
+I was trying to study the source code of quarto.org, but I couldn't replicate the method they use to embed their presentations.
+But after some tinkering, I finally found a way to embed the presentation.
+I've been planning to make an "advanced quarto" tutorial at some point soon when I'm less swamped.
+It will probably include my workflow for customizing my website, some notes on ::: syntax and how to embed things and the like.
+So if you're interested in that, stay tuned.
 
-With that out the way, here are two bare-bones presentations on the mathematics of simple linear regression. Proofs omitted because typing it all in Latex takes too long! I have to say though, I'm pretty impressed with the convenience and feature set of these revealjs presentations. For technical content, it seems easier to make than a standard Powerpoint presentation.
+With that out the way, here are two bare-bones presentations on the mathematics of simple linear regression.
+Proofs omitted because typing it all in Latex takes too long!
+I have to say though, I'm pretty impressed with the convenience and feature set of these revealjs presentations.
+For technical content, it seems easier to make than a standard Powerpoint presentation.
 
-<iframe src="../../../presentations/s210_midterm2.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+<iframe src="../../../presentations/s210_midterm2.html" width="800" height="600" frameborder="0" allowfullscreen>
+
+</iframe>

@@ -9,10 +9,11 @@ categories:
   - code
 image: "images/371907020.png"
 comments:
-  utterances:
+  giscus:
     repo: lukmayer/site_comments
     theme: github-dark
-    issue-term: url
+    mapping: url
+    reactions-enabled: true
 ---
 
 Creative coding, where one leverages computer programming to make art, comes in many names and forms.

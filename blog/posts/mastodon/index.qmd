@@ -8,10 +8,11 @@ categories:
   - social media
 image: "images/mastodon.png" 
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
 I'm writing this post at a time where a lot of the online platforms we have come accustomed to over the last decade or so are changing in ways we might not appreciate.

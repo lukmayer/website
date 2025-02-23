@@ -8,23 +8,27 @@ categories:
   - vivaldi
 image: "images/vivaldi_logo.png"
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
 As reported in my last Vivaldi post, there are some things that I find a bit annoying about Vivaldi.
 With a lot of software, this is where you would be stuck with the annoyances until someone bothers to fix them, but Vivaldi is a bit different.
-Vivaldi, like Firefox, supports modifications, meaning you can inject your own CSS and JavaScript into the browser to change its behavior. This is very powerful as it allows you to change almost anything about the front-end of the browser. 
+Vivaldi, like Firefox, supports modifications, meaning you can inject your own CSS and JavaScript into the browser to change its behavior.
+This is very powerful as it allows you to change almost anything about the front-end of the browser.
 While the modding community for Vivaldi is fairly small compared to that of Firefox (smaller user base), there are still some very useful mods on the [forums](https://forum.vivaldi.net/category/52/modifications) that can be used to fix some of the annoyances I have with Vivaldi.
 
 In my case, I had two main things I was looking to fix with mods:
 
-1) I wanted the vertical tab bar to expand on hover, like it does in Brave or MS Edge. This is because dragging tabs around in a minimized vertical tab bar requires quite a bit more precision than in a nice and wide one.
-2) I want to hide the panel bar. I don't use many panels, so to me, it was super annoying that the panel bar would show itself whenever I did use one. As reported in my other posts, this drove me to the point where I was trying to completely avoid using panels so that I would not have to deal with this anymore. 
+1)  I wanted the vertical tab bar to expand on hover, like it does in Brave or MS Edge. This is because dragging tabs around in a minimized vertical tab bar requires quite a bit more precision than in a nice and wide one.
+2)  I want to hide the panel bar. I don't use many panels, so to me, it was super annoying that the panel bar would show itself whenever I did use one. As reported in my other posts, this drove me to the point where I was trying to completely avoid using panels so that I would not have to deal with this anymore.
 
-So how to go about it? Basically you just start browsing the forums for code that sounds interesting, then paste that code into a CSS file in a folder you point Vivaldi to. The full instructions on how to do this can be found [here](https://forum.vivaldi.net/topic/10549/modding-vivaldi).
+So how to go about it?
+Basically you just start browsing the forums for code that sounds interesting, then paste that code into a CSS file in a folder you point Vivaldi to.
+The full instructions on how to do this can be found [here](https://forum.vivaldi.net/topic/10549/modding-vivaldi).
 
 I'm afraid I did not keep track of the source posts for the mods I used, but I can provide the code I use for the mods I mentioned above.
 
@@ -32,7 +36,7 @@ I'm afraid I did not keep track of the source posts for the mods I used, but I c
 
 #### Expanding vertical tab bar on hover
 
-```css
+``` css
 #tabs-tabbar-container:is(.left, .right) {
     position: fixed; 
     height: -webkit-fill-available !important;
@@ -113,16 +117,15 @@ I'm afraid I did not keep track of the source posts for the mods I used, but I c
 #browser:has(footer > .toolbar-statusbar) #tabs-tabbar-container {
     margin-bottom: 24px;
 }
-
 ```
 
-Now I can't vouch for the future viability of this code, so if it stops working in the future, you definitely want to be checking the forums for updated code. 
+Now I can't vouch for the future viability of this code, so if it stops working in the future, you definitely want to be checking the forums for updated code.
 
 \
 
 #### Hiding the panel bar
 
-```css
+``` css
 /* hide panel bar */
 #panels #switch {
     display: none;
@@ -140,13 +143,15 @@ Now I can't vouch for the future viability of this code, so if it stops working 
 .panel-group .panel {
     padding: 5px 5px 0 !important;
 }
-
 ```
 
 This one is so simple, your grandma could have written it!
-I'm so glad I can finally use panels again without having to manually hide UI elements every time I open one. Hurray!
+I'm so glad I can finally use panels again without having to manually hide UI elements every time I open one.
+Hurray!
 
 \
 
-So there you have it, two mods that make Vivaldi just that extra bit nicer for me. I think it's really cool that Vivaldi allows this, since it does not only empower their users, but can also serve as inspiration for the developers to implement some of these features in the browser itself. But then again, most of the things the company does are very well-thought-out. I'm looking forward to seeing what they come up with next!
-
+So there you have it, two mods that make Vivaldi just that extra bit nicer for me.
+I think it's really cool that Vivaldi allows this, since it does not only empower their users, but can also serve as inspiration for the developers to implement some of these features in the browser itself.
+But then again, most of the things the company does are very well-thought-out.
+I'm looking forward to seeing what they come up with next!

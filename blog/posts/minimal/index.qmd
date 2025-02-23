@@ -8,10 +8,11 @@ categories:
   - phone
 image: "images/phone.jpg"
 comments:
-  utterances:
+  giscus:
     repo: lukmayer/site_comments
     theme: github-dark
-    issue-term: url
+    mapping: url
+    reactions-enabled: true
 ---
 
 ## Say what?

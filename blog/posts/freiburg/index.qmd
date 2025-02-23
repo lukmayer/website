@@ -7,10 +7,11 @@ categories:
   - travel
 image: "images/schlossberg_aussicht.jpg"
 comments:
-  utterances:
+  giscus:
     repo: lukmayer/site_comments
     theme: github-dark
-    issue-term: url
+    mapping: url
+    reactions-enabled: true
 ---
 
 I grew up in South-West Germany, but in my 13 years there I never visited some cities of my state of Baden-Württemberg.

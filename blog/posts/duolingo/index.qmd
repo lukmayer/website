@@ -8,10 +8,11 @@ categories:
   - duolingo
 image: "images/duo.png"
 comments:
-  utterances:
+  giscus:
     repo: lukmayer/site_comments
     theme: github-dark
-    issue-term: url
+    mapping: url
+    reactions-enabled: true
 ---
 
 I started using Duolingo as an undergraduate student wanting to learn a bit of Swedish all the way back in 2019.

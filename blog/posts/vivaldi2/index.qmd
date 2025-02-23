@@ -8,32 +8,62 @@ categories:
   - vivaldi
 image: "images/vivaldi_logo.png"
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
-
-Vivaldi is by-far my favorite browser thanks to its unique and extensive feature set, which I touched on in my first Vivaldi post. However, as a power-user of two years going strong, I have noticed a thing or two about it that seem a little odd! Here is a collection of all those little things that to me were unexpected, frustrating, or desperately needed in Vivaldi. I'll be talking from the perspective of someone who uses the flatpak version of Vivaldi, assuming that the quirks are the same across platforms. 
+Vivaldi is by-far my favorite browser thanks to its unique and extensive feature set, which I touched on in my first Vivaldi post.
+However, as a power-user of two years going strong, I have noticed a thing or two about it that seem a little odd!
+Here is a collection of all those little things that to me were unexpected, frustrating, or desperately needed in Vivaldi.
+I'll be talking from the perspective of someone who uses the flatpak version of Vivaldi, assuming that the quirks are the same across platforms.
 
 \
 
 ## What is up with Sync?
 
-Vivaldi offers a feature that allows you to sync things like your bookmarks and your settings to their server (encrypted), so that you can easily recreate your configuration on a different machine. This is of course a great feature, and I'm glad it's there. However, what's really frustrating about it is that it doesn't sync everything. For example, notes and reading list contents are synced, but the list of RSS feeds you follow is not. Settings are synced, except the keyboard shortcuts (very annoying). Your theme is not synced, and neither is your configuration of the UI. Your calendar and mail accounts need to be added anew every time as well. From the user's perspective, this feels like a mess. Isn't my list of feeds literally just a list of links? Why would that not be sync-able? Same with the keyboard shortcuts etc. It's just really confusing, and I hope they expand sync soon to include basically everything. 
+Vivaldi offers a feature that allows you to sync things like your bookmarks and your settings to their server (encrypted), so that you can easily recreate your configuration on a different machine.
+This is of course a great feature, and I'm glad it's there.
+However, what's really frustrating about it is that it doesn't sync everything.
+For example, notes and reading list contents are synced, but the list of RSS feeds you follow is not.
+Settings are synced, except the keyboard shortcuts (very annoying).
+Your theme is not synced, and neither is your configuration of the UI.
+Your calendar and mail accounts need to be added anew every time as well.
+From the user's perspective, this feels like a mess.
+Isn't my list of feeds literally just a list of links?
+Why would that not be sync-able?
+Same with the keyboard shortcuts etc.
+It's just really confusing, and I hope they expand sync soon to include basically everything.
 
 \
 
 ## Calendar is weird; on Android it's even weirder!
 
-The built-in calendar is amazing, and currently it's the main way I organize my schedule and To-Do's. However, it's not without its quirks. For example, if you use the To-Do list, you can't create multiple different lists. Or can you? Actually, you can, but it's unintuitive to the point I only learned about it a few months ago. Basically, you have to create a new calendar, and then you can create a new To-Do and assign it to that calendar. To view one list at a time, modify the list of calendars being shown. If you use the 'Tasks' panel you would never know this, because it doesn't show the list of calendars. You only come to appreciate the existence of this "naturally" if you use the internal calendar page rather than the panel.
+The built-in calendar is amazing, and currently it's the main way I organize my schedule and To-Do's.
+However, it's not without its quirks.
+For example, if you use the To-Do list, you can't create multiple different lists.
+Or can you?
+Actually, you can, but it's unintuitive to the point I only learned about it a few months ago.
+Basically, you have to create a new calendar, and then you can create a new To-Do and assign it to that calendar.
+To view one list at a time, modify the list of calendars being shown.
+If you use the 'Tasks' panel you would never know this, because it doesn't show the list of calendars.
+You only come to appreciate the existence of this "naturally" if you use the internal calendar page rather than the panel.
 
-Using calendar on mobile devices is even stranger. Unlike the Desktop client, the mobile app does not have the calendar built-in. This is surprising in itself, as it does seem like something that mobile users of Vivaldi would really want, especially given that other "productivity features", e.g., notes, are available on mobile. What's weird is that this does not imply you can't use the calendar on mobile. Of course if you use a popular calendar that you set up with Vivaldi like Google Calendar, you can access it on your phone using Google's app. But what if you use Vivaldi Webmail as the calendar provider, like me? After all, there is no Vivaldi Webmail app, so how to do it? It turns out you can use a third-party app that supports CalDAV, like DAVx5, to sync your Vivaldi calendar to your phone. This is a bit of a hassle, and it's not clear to me why Vivaldi doesn't just integrate the calendar and everything else into the mobile app. 
+Using calendar on mobile devices is even stranger.
+Unlike the Desktop client, the mobile app does not have the calendar built-in.
+This is surprising in itself, as it does seem like something that mobile users of Vivaldi would really want, especially given that other "productivity features", e.g., notes, are available on mobile.
+What's weird is that this does not imply you can't use the calendar on mobile.
+Of course if you use a popular calendar that you set up with Vivaldi like Google Calendar, you can access it on your phone using Google's app.
+But what if you use Vivaldi Webmail as the calendar provider, like me?
+After all, there is no Vivaldi Webmail app, so how to do it?
+It turns out you can use a third-party app that supports CalDAV, like DAVx5, to sync your Vivaldi calendar to your phone.
+This is a bit of a hassle, and it's not clear to me why Vivaldi doesn't just integrate the calendar and everything else into the mobile app.
 
 \
 
-::: {.callout-tip}
+::: callout-tip
 If you want to use DAVx5, be sure to download it from F-droid, where it's free, rather than the Play Store where it costs money.
 :::
 
@@ -41,39 +71,86 @@ If you want to use DAVx5, be sure to download it from F-droid, where it's free, 
 
 ## Panels (and Pop-outs) should have feature parity with internal pages
 
-As I mentioned in the calendar section, using the panel version of a feature is often inferior to the non-panel implementation. This is pretty strange when considering that the default configuration of Vivaldi heavily nudges you towards using the panels since it's part of the default UI. This is very unfortunate as in the past it has led me (and therefore probably also others) to initially write off features as not mature enough for my use-case, when actually they were, just not their panel implementation. Given this situation, the Vivaldi team should strive to ensure that the features are identical across the different instantiations, so that users have the flexibility to pick and choose the version that suits them better, without compromising on functionality.
+As I mentioned in the calendar section, using the panel version of a feature is often inferior to the non-panel implementation.
+This is pretty strange when considering that the default configuration of Vivaldi heavily nudges you towards using the panels since it's part of the default UI.
+This is very unfortunate as in the past it has led me (and therefore probably also others) to initially write off features as not mature enough for my use-case, when actually they were, just not their panel implementation.
+Given this situation, the Vivaldi team should strive to ensure that the features are identical across the different instantiations, so that users have the flexibility to pick and choose the version that suits them better, without compromising on functionality.
 
-Feature parity also implies that there should be an internal page version, a panel version and a pop-out version of every major feature. This is not the case for most features! I think Downloads is the only one to have all three versions close to parity. An option to configure a keyboard shortcut to activate each version is also a must! 
+Feature parity also implies that there should be an internal page version, a panel version and a pop-out version of every major feature.
+This is not the case for most features!
+I think Downloads is the only one to have all three versions close to parity.
+An option to configure a keyboard shortcut to activate each version is also a must!
 
 \
 
 ## The unwritten rules of UI customization
 
-Vivaldi lets you add/remove buttons from the UI, as well as move them around. You can also hide/show the bars on which these buttons sit. Basically there is the Window Title bar, the Tab bar, the Address bar, the Panel bar, and the Status bar. There are quite a few non-obvious rules about this customization. For example, you can put icons (e.g. panels) on the status bar, hide the status bar, and still use the panel so long as you hit the keyboard shortcut to activate it! You do not get this same behavior if you put panel icons on a hidden address bar, for example. However, every time you hide the panel bar, the panel will unload, which means opening panels when this bar is hidden takes a lot longer than it should. If you activate a panel while the panel bar is hidden, the bar will become unhidden even if the panel button is not actually on the panel bar. Personally, I find this automatic displaying of the panel bar and its associated unloading behavior pretty annoying, and I wish this could be changed.
+Vivaldi lets you add/remove buttons from the UI, as well as move them around.
+You can also hide/show the bars on which these buttons sit.
+Basically there is the Window Title bar, the Tab bar, the Address bar, the Panel bar, and the Status bar.
+There are quite a few non-obvious rules about this customization.
+For example, you can put icons (e.g. panels) on the status bar, hide the status bar, and still use the panel so long as you hit the keyboard shortcut to activate it!
+You do not get this same behavior if you put panel icons on a hidden address bar, for example.
+However, every time you hide the panel bar, the panel will unload, which means opening panels when this bar is hidden takes a lot longer than it should.
+If you activate a panel while the panel bar is hidden, the bar will become unhidden even if the panel button is not actually on the panel bar.
+Personally, I find this automatic displaying of the panel bar and its associated unloading behavior pretty annoying, and I wish this could be changed.
 
-The address bar needs to contain an address field if you wish to use the keyboard shortcuts to focus the address bar. What's strange is that you can hide the address bar and the keyboard short-cut will still work, with a field opening so that you can see what you are typing. This is awesome! What's less good however is that it's not really feasible to hide the address bar, especially if you use the built-in mail client. This is because the mail client uses the address bar to show mail UI, and some of it cannot be replaced with keyboard shortcuts. This forces you to either manually hide/show the address bar or just live with one more bar than you would like. If you commit to hiding the address bar and do not have tabs on top, Vivaldi will replace it with a window title bar instead of just having nothing at the top like you asked. This is not a big deal, but it's a little annoying. 
+The address bar needs to contain an address field if you wish to use the keyboard shortcuts to focus the address bar.
+What's strange is that you can hide the address bar and the keyboard short-cut will still work, with a field opening so that you can see what you are typing.
+This is awesome!
+What's less good however is that it's not really feasible to hide the address bar, especially if you use the built-in mail client.
+This is because the mail client uses the address bar to show mail UI, and some of it cannot be replaced with keyboard shortcuts.
+This forces you to either manually hide/show the address bar or just live with one more bar than you would like.
+If you commit to hiding the address bar and do not have tabs on top, Vivaldi will replace it with a window title bar instead of just having nothing at the top like you asked.
+This is not a big deal, but it's a little annoying.
 
-Lastly, you can't put anything anywhere, which is a little disappointing. For example, you can have only some very specific things on the window title bar, and only the workspace switcher on the tab bar. I would like to see more flexibility in this regard.
+Lastly, you can't put anything anywhere, which is a little disappointing.
+For example, you can have only some very specific things on the window title bar, and only the workspace switcher on the tab bar.
+I would like to see more flexibility in this regard.
 
 \
 
 ## What I want for Christmas
 
-All the little annoyances aside, I really love Vivaldi and I think it's the best browser out there. However, there are a few features that I would really like to see added. One such feature is the introduction of a Firefox-style overflow menu. I'd like it to basically be an icon you can add to the UI which acts as a folder for other icons. Let's say you have some panels for work, some for personal stuff, and some for fun. You could put all the work panels in the work overflow menu, and all the personal panels in the personal overflow menu. This would make the UI a lot cleaner (especially if you use lots of panels) and more organized.
+All the little annoyances aside, I really love Vivaldi and I think it's the best browser out there.
+However, there are a few features that I would really like to see added.
+One such feature is the introduction of a Firefox-style overflow menu.
+I'd like it to basically be an icon you can add to the UI which acts as a folder for other icons.
+Let's say you have some panels for work, some for personal stuff, and some for fun.
+You could put all the work panels in the work overflow menu, and all the personal panels in the personal overflow menu.
+This would make the UI a lot cleaner (especially if you use lots of panels) and more organized.
 
-Workspace specific UI is related to the first point. Basically, let's again think about you having a work workspace and a personal workspace. You could have a different set of panels, buttons, and bars for each workspace. This would be really cool, and would make it easier to separate work and personal stuff. This should probably be optional though, in case you only use workspaces for tab separation.
+Workspace specific UI is related to the first point.
+Basically, let's again think about you having a work workspace and a personal workspace.
+You could have a different set of panels, buttons, and bars for each workspace.
+This would be really cool, and would make it easier to separate work and personal stuff.
+This should probably be optional though, in case you only use workspaces for tab separation.
 
-The ability to have a "One line" configuration is something I'd love to see. I have seen this in custom Firefox CSS, where basically the tab bar and the address bar are combined into one. This would be great for people who want to maximize screen real estate, or those who crave minimalistic configurations.
+The ability to have a "One line" configuration is something I'd love to see.
+I have seen this in custom Firefox CSS, where basically the tab bar and the address bar are combined into one.
+This would be great for people who want to maximize screen real estate, or those who crave minimalistic configurations.
 
-Another minimalism craving I have would be an option to automatically hide menu bars when not in use. Brave browser has this, where if you hover your cursor over the vertical tab bar, it will expand, while only showing you the favicons when not in use. This is a great feature and I would love to see an expanded version of this idea that applies to most, maybe all menu bars in Vivaldi.
+Another minimalism craving I have would be an option to automatically hide menu bars when not in use.
+Brave browser has this, where if you hover your cursor over the vertical tab bar, it will expand, while only showing you the favicons when not in use.
+This is a great feature and I would love to see an expanded version of this idea that applies to most, maybe all menu bars in Vivaldi.
 
-There is a dark mode for all websites option for Vivaldi, but it's a bit annoying to use. I would like to have it on by default and only toggle it off for specific websites. Unfortunately, the way it currently works you need to restart the browser each time you toggle. This is quite the hassle, and is the only reason I still rely on extensions for my dark mode needs. I wish there was a little button you could press to easily switch between light and dark mode, without needing to restart the browser. If I remember correctly, that is how it used to work in Opera, which I quite enjoyed.
+There is a dark mode for all websites option for Vivaldi, but it's a bit annoying to use.
+I would like to have it on by default and only toggle it off for specific websites.
+Unfortunately, the way it currently works you need to restart the browser each time you toggle.
+This is quite the hassle, and is the only reason I still rely on extensions for my dark mode needs.
+I wish there was a little button you could press to easily switch between light and dark mode, without needing to restart the browser.
+If I remember correctly, that is how it used to work in Opera, which I quite enjoyed.
 
-Lastly, since Vivaldi is all about customization, I would love to see what other people are doing with it. Therefore, it would be amazing to export the entire setup you have for Vivaldi (minus your personal data of course) and share it with others. Kind of like how you can share themes, but with the entire configuration. This would be a great way to learn about how other people use Vivaldi, which could serve as an inspiration for your own setup.
-
+Lastly, since Vivaldi is all about customization, I would love to see what other people are doing with it.
+Therefore, it would be amazing to export the entire setup you have for Vivaldi (minus your personal data of course) and share it with others.
+Kind of like how you can share themes, but with the entire configuration.
+This would be a great way to learn about how other people use Vivaldi, which could serve as an inspiration for your own setup.
 
 \
 
----
+------------------------------------------------------------------------
 
-That's all I have right now! Are there any quirks I missed? Or any features you're dying to see? If so, I'd be interested to hear about them in the comments :)
+That's all I have right now!
+Are there any quirks I missed?
+Or any features you're dying to see?
+If so, I'd be interested to hear about them in the comments :)

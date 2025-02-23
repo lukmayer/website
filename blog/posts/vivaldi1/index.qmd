@@ -8,10 +8,11 @@ categories:
   - vivaldi
 image: "images/vivaldi_logo.png"
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
 I've noticed that with software there sometimes exists a bit of an ironic relationship where the product with the most features somehow is also able to be the most minimal.

@@ -8,12 +8,15 @@ categories:
   - math
 image: "images/grid.jpg"
 comments:
-    utterances:
-      repo: lukmayer/site_comments
-      theme: github-dark
-      issue-term: url
+  giscus:
+    repo: lukmayer/site_comments
+    theme: github-dark
+    mapping: url
+    reactions-enabled: true
 ---
 
-<iframe src="../../../presentations/s210_midterm3.html" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+<iframe src="../../../presentations/s210_midterm3.html" width="800" height="600" frameborder="0" allowfullscreen>
+
+</iframe>
 
 Note: I omitted ANOVA stuff from this presentation because I already used the general notation in the presentation for Simple Linear Regression
