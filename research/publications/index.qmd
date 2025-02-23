@@ -38,6 +38,7 @@ format:
 <style>
   .toggle-button {
     background-color: #00a653;  
+    border-radius: 5px; 
     color: white;               
     border: none;               
     padding: 0.5em 1em;        
