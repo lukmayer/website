@@ -36,6 +36,23 @@ format:
 
 ```{=html}
 <style>
+  .toggle-button {
+    background-color: #00a653;  
+    color: white;               
+    border: none;               
+    padding: 0.5em 1em;        
+    margin-bottom: 1em;         
+    cursor: pointer;
+  }
+
+  .toggle-button:hover {
+    background-color: #00bf63;
+  }
+
+.listing-descriptive-paragraph {
+  transition: max-height 0.5s ease;
+  overflow: hidden; /* Helps in controlling the transition */
+}
 
 .button-link {
   transition: transform 0.3s ease;
@@ -233,28 +250,21 @@ Our results strongly suggest that leveraging both subjective and objective metri
 :::::::::::
 
 :::: column-page
-
-:::{#publications}
+::: {#publications}
 :::
-
-
 ::::
 
-:::::: column-page
-
+:::: column-page
 \
 
----
+------------------------------------------------------------------------
 
 ::: text-center
-
 <a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: #00a653; background-color: #333333; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Find more on Google Scholar </a>
-
 :::
+::::
 
-::::::
-
-
+```{=html}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var myName = "Mayer, L. W.";
@@ -268,4 +278,14 @@ Our results strongly suggest that leveraging both subjective and objective metri
       );
     });
   });
+
+ function toggleParagraph(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === "none" || element.style.display === "") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
 </script>
+```
