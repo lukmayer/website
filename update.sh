@@ -3,7 +3,7 @@
 git add .
 
 # Get list of changed .qmd or .md files in git working tree
-CHANGED_FILES=$(git status --porcelain --untracked-files=no | awk '{print $2}' | grep -E '\.qmd$|\.md$')
+CHANGED_FILES=$(git status --porcelain --untracked-files=no | awk '{print $2}' | grep -E '\.qmd$')
 
 if [ -z "$CHANGED_FILES" ]; then
     echo "No changed Quarto files to render"
