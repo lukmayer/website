@@ -575,6 +575,8 @@ I was born in Wisconsin, USA but grew up in the greater Stuttgart area (Germany)
 
 After a brief stint working in a closed psychiatric ward at my local university hospital in Tübingen, I decided to pursue undergraduate education at a [small university in beautiful Scotland](https://www.stir.ac.uk).
 
+\
+
 ![Lukas Mayer's first job was in a closed psychiatric ward at the University Hospital in Tübingen, Germany](assets/tuebingen.jpg){fig-cap="Credit: Westend61/Getty Images"}
 
 ![Lukas Mayer's undergraduate university city - Stirling, Scotland](assets/stirling.jpg){fig-cap="Credit: https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/"}
