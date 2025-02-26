@@ -569,17 +569,17 @@ I was born in Wisconsin, USA but grew up in the greater Stuttgart area (Germany)
 
 \
 
-![My hometown - Reutlingen, Germany](assets/reutlingen.jpg){fig-cap="Credit: https://www.nts.eu/en/nts-reutlingen/"}
+![Reutlingen, Germany - Credit: https://www.nts.eu/en/nts-reutlingen/](assets/reutlingen.jpg){fig-cap="Reutlingen, Germany - Credit: https://www.nts.eu/en/nts-reutlingen/"}
 
-![My city - Stuttgart, Germany](assets/stuttgart.jpg){fig-cap="Credit: https://www.tripadvisor.com/Tourism-g187291-Stuttgart_Baden_Wurttemberg-Vacations.html"}
+![Stuttgart, Germany - Credit: https://www.tripadvisor.com/Tourism-g187291-Stuttgart_Baden_Wurttemberg-Vacations.html](assets/stuttgart.jpg){fig-cap="Stuttgart, Germany - Credit: https://www.tripadvisor.com/Tourism-g187291-Stuttgart_Baden_Wurttemberg-Vacations.html"}
 
 After a brief stint working in a closed psychiatric ward at my local university hospital in Tübingen, I decided to pursue undergraduate education at a [small university in beautiful Scotland](https://www.stir.ac.uk).
 
 \
 
-![Lukas Mayer's first job was in a closed psychiatric ward at the University Hospital in Tübingen, Germany](assets/tuebingen.jpg){fig-cap="Credit: Westend61/Getty Images"}
+![Tübingen, Germany - Credit: Westend61/Getty Images](assets/tuebingen.jpg){fig-cap="Tübingen, Germany - Credit: Westend61/Getty Images"}
 
-![Lukas Mayer's undergraduate university city - Stirling, Scotland](assets/stirling.jpg){fig-cap="Credit: https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/"}
+![Stirling, Scotland - Credit: https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/](assets/stirling.jpg){fig-cap="Stirling, Scotland - Credit: https://www.yopa.co.uk/homeowners-hub/whats-it-like-to-live-in-stirling/"}
 
 Despite my initial ambitions to pursue a career in clinical psychology, I discovered my analytical side when I was introduced to computer programming by a PhD student in the lab I was helping out in.
 I got very lucky in this regard as just prior to graduating, I was offered a summer internship at a London-based Data-Science consultancy.
@@ -593,15 +593,15 @@ This was when things "clicked" in my head, and I knew that I wanted to pursue a 
 
 \
 
-![Lukas Mayer studied at the University of Warwick, which is located near Royal Leamington Spa, England](assets/leamington.jpg){fig-cap="Credit: https://royal-leamington-spa.co.uk/visit/"}
+![Royal Leamington Spa, England - Credit: https://royal-leamington-spa.co.uk/visit/](assets/leamington.jpg){fig-cap="Royal Leamington Spa, England - Credit: https://royal-leamington-spa.co.uk/visit/"}
 
 
 I spent a very fun year working in the Applied Digital Behavior Lab at the University of [Bath](https://visitbath.co.uk) while preparing my PhD applications and was fortunate to be accepted into the Cognitive Science PhD program at the University of California, Irvine, where I am currently working in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/).
 
 \
 
-![Lukas Mayer worked at the business school/management school of the University of Bath - Bath, England](assets/bath.jpg){fig-cap="Credit: Ian Woolcock — Shutterstock"}
+![Bath, England - Credit: Ian Woolcock — Shutterstock](assets/bath.jpg){fig-cap="Bath, England - Credit: Ian Woolcock — Shutterstock"}
 
-![Lukas Mayer is currently a PhD student in Cognitive Science at the University of California, Irvine, USA](assets/sbsg.jpg){fig-cap="Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php)](assets/sbsg.jpg"}
+![University of California, Irvine, USA - Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php](assets/sbsg.jpg){fig-cap="University of California, Irvine, USA - Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php" }
 :::
 ::::
