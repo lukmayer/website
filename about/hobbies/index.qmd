@@ -1,6 +1,8 @@
 ---
 title: "Hobbies & Interests"
 description: "Lukas Mayer's hobbies and interests - exercise, technology, languages, and gaming."
+execute:
+  echo: false
 ---
 
 ::: {.quarto-content .hidden}
@@ -28,28 +30,379 @@ description: "Lukas Mayer's hobbies and interests - exercise, technology, langua
 
 :::: column-body-outset
 ::: {.animate__animated .animate__fadeIn}
-1)  **Exercise** - I've always been pretty active, but when I was younger I somehow never really stuck with any particular sport for too long. To give you an idea, I've had a phase for: archery, badminton, Crossfit, golf, parkour, powerlifting, and skateboarding. I'm still interested in strength training, which I have been doing in some form for 10+ years, and badminton. I have limited means to engage with these in an organized format at the moment, so to fill the hole in my heart, I've been investing some time to figure out the perfect home gym setup that still fits inside my bedroom. I think I've been pretty successful with this, so maybe I'll show it off in a post sometime.
 
-\
+::: {.callout-important collapse="false" icon="false"}
+# 1. Exercise 
 
-2)  **Technology** - I like GNU/Linux, and use it as my everyday operating system. At the moment, my laptop runs Debian with KDE. I've also played around with operating systems on mobile devices, currently using GrapheneOS. I enjoy coding, and wish I could do it more! My favorite languages at the moment are Julia, R, and Python. As you can see, I've also taken an interest in web development. While [Quarto](https://www.quarto.org) admittedly makes this website pretty easy to create, I also use web development in my research to create experiments that run in a browser. I'm super interested in picking up [creative coding](https://openprocessing.org/discover/#/trending) and I am hoping to eventually generate some art that I can post on here! :)
+I've always been pretty active, but when I was younger I somehow never really stuck with any particular sport for too long. To give you an idea, I've had a phase for: archery, badminton, Crossfit, golf, parkour, powerlifting, and skateboarding. I'm still interested in strength training, which I have been doing in some form for 10+ years, and badminton. I have limited means to engage with these in an organized format at the moment, so to fill the hole in my heart, I've been investing some time to figure out the perfect home gym setup that still fits inside my bedroom. I think I've been pretty successful with this, so maybe I'll show it off in a post sometime.
+:::
 
-\
 
-3)  **Languages** - English used to be my first language as I only started learning German after relocating to [the Länd](https://www.thelaend.de/en/kampagne/) at age six. Fast-forward to now, English has become my second language. Maybe because of this strange experience, I've had a bit of an interest in language-learning. I have a habit of doing language lessons for fun on [Duolingo](https://www.duolingo.com/profile/luwmayer), where I have a streak of over 2000 days. I'm mostly learning French and Dutch at the moment. My Dutch is definitely better than my French, probably just by virtue of being so similar to German, but both are good enough to follow a YouTube video. I hope to eventually move away from Duolingo and bring my skills to the next level, but don't feel I have the bandwidth for it just now. If you know a good free resource, [be sure to let me know](mailto:willuk@vivaldi.net)!
+::: {.callout-important collapse="false" icon="false"}
+# 2. Technology
+I like GNU/Linux, and use it as my everyday operating system. At the moment, my laptop runs Debian with KDE. I've also played around with operating systems on mobile devices, currently using GrapheneOS. I enjoy coding, and wish I could do it more! My favorite languages at the moment are Julia, R, and Python. As you can see, I've also taken an interest in web development. While [Quarto](https://www.quarto.org) admittedly makes this website pretty easy to create, I also use web development in my research to create experiments that run in a browser. I'm super interested in picking up [creative coding](https://openprocessing.org/discover/#/trending) and I am hoping to eventually generate some art that I can post on here! :)
 
-\
+:::
 
-4)  **Gaming** - I was quite the avid gamer as a teen, spending countless hours on the likes of Team Fortress 2, Minecraft and Guild Wars 2. I don't actively play much these days, but I still like to keep up with the industry. Perhaps I'm just waiting for the next big thing to come along. I also really enjoy going to board game cafés and completing escape rooms with friends!
+
+::: {.callout-important collapse="false" icon="false"}
+# 3. Languages
+
+English used to be my first language as I only started learning German after relocating to [the Länd](https://www.thelaend.de/en/kampagne/) at age six. Fast-forward to now, English has become my second language. Maybe because of this strange experience, I've had a bit of an interest in language-learning. I have a habit of doing language lessons for fun on [Duolingo](https://www.duolingo.com/profile/luwmayer), where I have a streak of over 2000 days. I'm mostly learning French and Dutch at the moment. My Dutch is definitely better than my French, probably just by virtue of being so similar to German, but both are good enough to follow a YouTube video. I hope to eventually move away from Duolingo and bring my skills to the next level, but don't feel I have the bandwidth for it just now. If you know a good free resource, [be sure to let me know](mailto:willuk@vivaldi.net)!
+
+:::
+
+
+::: {.callout-important collapse="false" icon="false"}
+# 4. Gaming
+I was quite the avid gamer as a teen, spending countless hours on the likes of Team Fortress 2, Minecraft and Guild Wars 2. I don't actively play much these days, but I still like to keep up with the industry. Perhaps I'm just waiting for the next big thing to come along. I also really enjoy going to board game cafés and completing escape rooms with friends!
+:::
+
+<style>
+.callout-title-container {
+    font-size: 1.2rem;
+}
+
+.callout-title-container strong em {
+    font-size: 1.5rem;
+}
+
+
+/* Title block background */
+.callout-header {
+    background-color: #222222 !important;  /* Light gray */
+}
+
+/* Main text area background */
+.callout-body-container {
+    background-color: #111111;  /* dark gray */
+}
+
+/* Optional: if you want to style the entire callout container */
+.callout {
+    border: 1px solid #dee2e6;  /* Light border */
+}
+
+/* change the drop-down arrow */
+.py-1 {
+    padding-top: .25rem !important;
+    padding-bottom: .25rem !important;
+    scale: 2;
+}
+
+div.callout-important.callout {
+    border-left-color: #5f5f5f;
+}
+
+</style>
 
 \
 :::
 
-#### Likes
+\
 
-In no particular order: sugar-free gum, high-quality public transport, "meal substitutes", social mobility, the color black, ""IDM"", Radler.
+## Places I've been
 
-#### Dislikes
+```{ojs}
+// Import required libraries with unique variable names
+d3Highlight = require("d3@7")
+topoHighlight = require("topojson-client@3")
 
-Again, in no particular order: heights, cold hands, meat on the bone, collective action problems, direct sunlight.
+// Your list of visited countries
+countriesVisited = [
+  "Germany", "France", "USA", "Spain", "Italy", "Austria", 
+  "Switzerland", "Netherlands", "Belgium", "San Marino", 
+  "Vatican", "Malta", "Monaco", "United Kingdom"
+]
+
+// Load world map data with a unique variable name
+worldGeoData = {
+  const response = await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
+  return topoHighlight.feature(await response.json(), "countries");
+}
+
+// Map visualization with highlighted countries
+highlightedCountriesMap = {
+  // Set up dimensions and projection
+  const mapWidth = 900;
+  const mapHeight = 500;
+
+  // Create a projection focused on the world
+  const mapProjection = d3Highlight.geoMercator()
+    .center([10, 45])  // Centered more on Europe
+    .scale(150)
+    .translate([mapWidth / 2, mapHeight / 2]);
+
+  // Create path generator
+  const mapPath = d3Highlight.geoPath().projection(mapProjection);
+
+  // Create SVG with transparent background
+  const mapSvg = d3Highlight.create("svg")
+    .attr("width", mapWidth)
+    .attr("height", mapHeight)
+    .attr("viewBox", [0, 0, mapWidth, mapHeight])
+    .attr("style", "max-width: 100%; height: auto; background: none;");
+
+  // Create a group for all map elements that will be transformed during zoom/pan
+  const mapGroup = mapSvg.append("g");
+
+  // Create a tooltip
+  const mapTooltip = d3Highlight.select(document.createElement("div"))
+    .attr("class", "highlight-map-tooltip")
+    .style("position", "absolute")
+    .style("background", "rgba(40, 40, 40, 0.9)")
+    .style("color", "#fff")
+    .style("border-radius", "5px")
+    .style("padding", "8px")
+    .style("pointer-events", "none")
+    .style("opacity", 0)
+    .style("z-index", 1000);
+
+  document.body.appendChild(mapTooltip.node());
+
+  // Country name mapping for special cases
+  const countryNameMap = {
+    "United States of America": "USA",
+    "United States": "USA",
+    "Holy See": "Vatican",
+    "Vatican City": "Vatican",
+    "Vatican": "Vatican",
+    "San Marino": "San Marino"
+  };
+
+  // Draw countries
+  mapGroup.selectAll("path")
+    .data(worldGeoData.features)
+    .join("path")
+    .attr("fill", d => {
+      // Check if this country is in your visited list
+      const countryName = d.properties.name;
+      const normalizedName = countryNameMap[countryName] || countryName;
+
+      // Check if the country is in the visited list
+      return countriesVisited.includes(normalizedName) ? "#00a653" : "#333333";
+    })
+    .attr("stroke", "#555")
+    .attr("stroke-width", 0.5)
+    .attr("d", mapPath)
+    .on("mouseover", function(event, d) {
+      d3Highlight.select(this).attr("stroke-width", 1.5).attr("stroke", "#fff");
+
+      // Check if this is a visited country
+      const countryName = d.properties.name;
+      const normalizedName = countryNameMap[countryName] || countryName;
+      const isVisited = countriesVisited.includes(normalizedName);
+
+      // Show tooltip
+      mapTooltip
+        .style("opacity", 1)
+        .html(`<strong>${countryName} </strong>${isVisited ? "Visited" : "Not visited"}`)
+        .style("left", (event.pageX + 10) + "px")
+        .style("top", (event.pageY - 28) + "px");
+    })
+    .on("mouseout", function() {
+      d3Highlight.select(this).attr("stroke-width", 0.5).attr("stroke", "#555");
+      mapTooltip.style("opacity", 0);
+    })
+    .on("mousemove", function(event) {
+      mapTooltip
+        .style("left", (event.pageX + 10) + "px")
+        .style("top", (event.pageY - 28) + "px");
+    });
+
+  // Add a legend
+  const mapLegend = mapSvg.append("g")
+    .attr("transform", `translate(20, ${mapHeight - 60})`);
+
+  // Background for legend
+  mapLegend.append("rect")
+    .attr("x", -5)
+    .attr("y", -15)
+    .attr("width", 120)
+    .attr("height", 70)
+    .attr("fill", "rgba(0, 0, 0, 0.5)")
+    .attr("rx", 5)
+    .attr("ry", 5);
+
+  // Visited countries
+  mapLegend.append("rect")
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#00a653");
+
+  mapLegend.append("text")
+    .attr("x", 30)
+    .attr("y", 15)
+    .text("Visited")
+    .style("font-family", "sans-serif")
+    .style("font-size", "14px")
+    .style("fill", "#ffffff");
+
+  // Not visited countries
+  mapLegend.append("rect")
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("y", 30)
+    .attr("fill", "#333333");
+
+  mapLegend.append("text")
+    .attr("x", 30)
+    .attr("y", 45)
+    .text("Not Visited")
+    .style("font-family", "sans-serif")
+    .style("font-size", "14px")
+    .style("fill", "#ffffff");
+
+  // Add zoom controls
+  const mapZoomControls = mapSvg.append("g")
+    .attr("transform", `translate(${mapWidth - 70}, 20)`);
+
+  // Background for zoom controls
+  mapZoomControls.append("rect")
+    .attr("x", -5)
+    .attr("y", -5)
+    .attr("width", 40)
+    .attr("height", 120)
+    .attr("fill", "rgba(0, 0, 0, 0.5)")
+    .attr("rx", 5)
+    .attr("ry", 5);
+
+  // Zoom in button
+  mapZoomControls.append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("width", 30)
+    .attr("height", 30)
+    .attr("fill", "rgba(60, 60, 60, 0.7)")
+    .attr("stroke", "#777")
+    .attr("rx", 5)
+    .attr("ry", 5)
+    .attr("cursor", "pointer")
+    .on("click", () => mapZoomBehavior.scaleBy(mapSvg.transition().duration(300), 1.5));
+
+  mapZoomControls.append("text")
+    .attr("x", 15)
+    .attr("y", 20)
+    .attr("text-anchor", "middle")
+    .attr("fill", "#ffffff")
+    .attr("font-size", "18px")
+    .attr("font-weight", "bold")
+    .attr("pointer-events", "none")
+    .text("+");
+
+  // Zoom out button
+  mapZoomControls.append("rect")
+    .attr("x", 0)
+    .attr("y", 40)
+    .attr("width", 30)
+    .attr("height", 30)
+    .attr("fill", "rgba(60, 60, 60, 0.7)")
+    .attr("stroke", "#777")
+    .attr("rx", 5)
+    .attr("ry", 5)
+    .attr("cursor", "pointer")
+    .on("click", () => mapZoomBehavior.scaleBy(mapSvg.transition().duration(300), 0.75));
+
+  mapZoomControls.append("text")
+    .attr("x", 15)
+    .attr("y", 60)
+    .attr("text-anchor", "middle")
+    .attr("fill", "#ffffff")
+    .attr("font-size", "18px")
+    .attr("font-weight", "bold")
+    .attr("pointer-events", "none")
+    .text("−");
+
+  // Reset button
+  mapZoomControls.append("rect")
+    .attr("x", 0)
+    .attr("y", 80)
+    .attr("width", 30)
+    .attr("height", 30)
+    .attr("fill", "rgba(60, 60, 60, 0.7)")
+    .attr("stroke", "#777")
+    .attr("rx", 5)
+    .attr("ry", 5)
+    .attr("cursor", "pointer")
+    .on("click", resetMapZoom);
+
+  mapZoomControls.append("text")
+    .attr("x", 15)
+    .attr("y", 100)
+    .attr("text-anchor", "middle")
+    .attr("fill", "#ffffff")
+    .attr("font-size", "14px")
+    .attr("font-weight", "bold")
+    .attr("pointer-events", "none")
+    .text("R");
+
+  // Define zoom behavior
+  const mapZoomBehavior = d3Highlight.zoom()
+    .scaleExtent([1, 8])
+    .on("zoom", mapZoomed);
+
+  function mapZoomed(event) {
+    mapGroup.attr("transform", event.transform);
+
+    // Adjust stroke widths based on zoom level
+    const mapStrokeScale = 1 / Math.sqrt(event.transform.k);
+    mapGroup.selectAll("path").attr("stroke-width", 0.5 * mapStrokeScale);
+  }
+
+  function resetMapZoom() {
+    mapSvg.transition().duration(750).call(
+      mapZoomBehavior.transform,
+      d3Highlight.zoomIdentity
+    );
+  }
+
+  // Enable zoom and pan on the SVG
+  mapSvg.call(mapZoomBehavior);
+
+  return mapSvg.node();
+}
+
+// Display the map
+highlightedCountriesMap
+
+```
+
+<style>
+
+.observablehq--collapsed,
+.observablehq--inspect {
+  display: none;
+}
+
+</style>
+
+\
+
+---
+
+\
+
+:::: panel-tabset
+## Likes
+
+- Sugar-free gum
+- High-quality public transport
+- "Meal substitutes"
+- Social mobility
+- The color black 
+- ""IDM"" 
+- Radler
+
+
+## Dislikes
+
+- Heights 
+- Meat on the bone
+- Collective action problems
+- Direct sunlight (just kidding... unless?)
+::::
+
+
+
+
 ::::

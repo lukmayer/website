@@ -6,8 +6,8 @@ format:
     page-layout: full
 ---
 
-<div class="quarto-content hidden">
-
+::::: {.quarto-content .hidden}
+```{=html}
 <style>
 .description {
     display: none;
@@ -32,7 +32,9 @@ format:
     height: 100%;
 }
 </style>
+```
 
+```{=html}
 <script>
   window.addEventListener("load", function() {
     var content = document.querySelector(".quarto-content");
@@ -42,20 +44,19 @@ format:
     }
   });
 </script>
+```
 
-::: {.panel-tabset}
+:::: panel-tabset
 ## Academic
+
 If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf).
 
-<div class="responsive-pdf">
-  <embed src="cv_lwm.pdf" type="application/pdf">
-</div>
+::: responsive-pdf
+<embed src="cv_lwm.pdf" type="application/pdf">
+:::
 
 ## Industry
 
 TBD
-
-:::
-
-</div> 
- 
+::::
+:::::

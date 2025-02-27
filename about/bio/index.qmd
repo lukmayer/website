@@ -8,7 +8,6 @@ format:
     include-in-header:
       - text: |
           <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
 ---
 
 ::: {.quarto-content .hidden}
@@ -34,11 +33,8 @@ format:
 </script>
 ```
 
-:::: column-body-outset
-
-::: {.text-center}
-
-
+::::: column-body-outset
+::: text-center
 ```{ojs}
 
 // Import required libraries
@@ -553,6 +549,7 @@ mapVisualization;
 
 \
 
+```{=html}
 <style>
 
 .observablehq--collapsed,
@@ -561,6 +558,7 @@ mapVisualization;
 }
 
 </style>
+```
 
 ::: {.animate__animated .animate__fadeIn}
 Hi, I'm Luke, or more formally Lukas.
@@ -585,7 +583,6 @@ Despite my initial ambitions to pursue a career in clinical psychology, I discov
 I got very lucky in this regard as just prior to graduating, I was offered a summer internship at a London-based Data-Science consultancy.
 I enjoyed the work as it offered diverse problems to solve from different clients, but ultimately I felt that I should also seek formal education in data analytics.
 
-
 The Behavioral and Data Science M.Sc.
 at the [University of Warwick](https://warwick.ac.uk) was very much the perfect fit for me, as it combined my interest in behavioral research with my newfound passion for select topics in Computer Science.
 It was at Warwick where I first came to appreciate the application of computational modelling to describe cognitive processes.
@@ -595,13 +592,12 @@ This was when things "clicked" in my head, and I knew that I wanted to pursue a 
 
 ![Royal Leamington Spa, England - Credit: https://royal-leamington-spa.co.uk/visit/](assets/leamington.jpg){fig-cap="Royal Leamington Spa, England - Credit: https://royal-leamington-spa.co.uk/visit/"}
 
-
 I spent a very fun year working in the Applied Digital Behavior Lab at the University of [Bath](https://visitbath.co.uk) while preparing my PhD applications and was fortunate to be accepted into the Cognitive Science PhD program at the University of California, Irvine, where I am currently working in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/).
 
 \
 
 ![Bath, England - Credit: Ian Woolcock — Shutterstock](assets/bath.jpg){fig-cap="Bath, England - Credit: Ian Woolcock — Shutterstock"}
 
-![University of California, Irvine, USA - Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php](assets/sbsg.jpg){fig-cap="University of California, Irvine, USA - Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php" }
+![University of California, Irvine, USA - Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php](assets/sbsg.jpg){fig-cap="University of California, Irvine, USA - Credit: https://www.undergrad.socsci.uci.edu/ssusa/policies.php"}
 :::
-::::
+:::::

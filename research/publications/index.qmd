@@ -32,7 +32,6 @@ format:
     code-block-border-left: false
 ---
 
-
 ```{=html}
 <style>
   .toggle-button {
