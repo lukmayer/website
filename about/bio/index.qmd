@@ -257,7 +257,7 @@ mapVisualization = {
     .y(d => projection([d.lon, d.lat])[1])
     .curve(d3.curveCardinal.tension(0.5)); // Reduce tension to prevent overshooting
 
-  // Draw the complete path
+  // Draw the complete path 
   g.append("path")
     .attr("d", lineGenerator(uniqueLocations))
     .attr("fill", "none")
