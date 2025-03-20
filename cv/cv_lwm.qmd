@@ -150,13 +150,13 @@ Automated video analysis for discrimination learning in lumpfish\
 Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W.**, & Smyth, P. (2025).
 What large language models know and what people think they know.
 *Nature Machine Intelligence*.
-[https://doi.org/10.1038/s42256-024-00976-7](https://doi.org/10.1038/s42256-024-00976-7)
+<https://doi.org/10.1038/s42256-024-00976-7>
 
 Karny, S., **Mayer, L. W.**, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M.
 (2024).
 Learning with AI Assistance: A Path to Better Task Performance or Dependence?
 *Proceedings of the ACM Collective Intelligence Conference, 10–17*.
-[https://doi.org/10.1145/3643562.3672610](https://doi.org/10.1145/3643562.3672610)
+<https://doi.org/10.1145/3643562.3672610>
 
 **Mayer, L. W.**, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D.
 (under Review) Waste not want not: Computational methods to maximise attendance in group research.

@@ -223,7 +223,7 @@ Our scheduling utility is free and open-source, available to anyone through a we
 :::::
 
 ::::: {.callout-important collapse="true" icon="false"}
-# [***"Human-AI Collaboration: Trade-offs Between Performance and Preferences"***]{style="color: #00a653;"} <br> [Mayer, L. W.]{style="color: #c678dd;"}, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (Submitted) *Nature Machine Intelligence*.
+# [***"Human-AI Collaboration: Trade-offs Between Performance and Preferences"***]{style="color: #00a653;"} <br> [Mayer, L. W.]{style="color: #c678dd;"}, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (Submitted).
 
 ::: text-center
 ![](assets/collab_ai.png)
