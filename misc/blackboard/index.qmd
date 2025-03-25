@@ -28,7 +28,7 @@ format:
 </script>
 ```
 
-::: column-screen
+::: column-page
 <iframe src="blackboard.html" width="100%" height="800px" allowfullscreen>
 
 </iframe>
@@ -98,6 +98,6 @@ I felt like having a tool like this on my site would be cool, and pretty easy to
 
 Technically, this is a Reveal.js presentation that is embedded on this page with an iframe.
 The blackboard is an Excalidraw plugin that is part of the Reveal.js presentation.
-This was simply the first idea I had for implementing this quickly; not claiming this is the best way to do it.
+This was simply the first idea I had for implementing this quickly; not claiming this is the best way to do it. I added some JavaScript to be able to toggle the blackboard on mobile devices.
 :::
 
