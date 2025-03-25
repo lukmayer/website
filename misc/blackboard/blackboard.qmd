@@ -23,11 +23,96 @@ resources:
   - template.excalidraw
 ---
 
-<!-- 
-## How to use
+```{=html}
+<script>
 
-1)  Click on this slide to focus the canvas
-2)  Press `F` to toggle fullscreen-mode
-3)  Press `#` to toggle the **blackboard**
-4)  Press `ESC` to exit fullscreen-mode 
--->
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("Mobile blackboard toggle script loaded");
+
+  // Create a floating button for mobile users
+  const toggleButton = document.createElement('button');
+  toggleButton.textContent = 'Toggle Blackboard';
+  toggleButton.style.position = 'fixed';
+  toggleButton.style.bottom = '50%';
+  toggleButton.style.left = '20px';
+  toggleButton.style.zIndex = '1000';
+  toggleButton.style.padding = '10px';
+  toggleButton.style.backgroundColor = 'rgba(0,0,0,0.5)';
+  toggleButton.style.color = 'white';
+  toggleButton.style.border = 'none';
+  toggleButton.style.borderRadius = '5px';
+  toggleButton.style.cursor = 'pointer';
+
+  // Track the state of the excalidraw mode
+  let excalidrawMode = false;
+
+  // Add event listener to toggle the blackboard
+  toggleButton.addEventListener('click', function() {
+    console.log("Toggle button clicked, current excalidraw mode:", excalidrawMode);
+
+    // Get the Reveal element
+    const revealEl = document.querySelector('.reveal');
+    if (revealEl) {
+      // Create a keyboard event that exactly matches what the # key would generate
+      const keyEvent = new KeyboardEvent('keydown', {
+        key: '#',
+        code: 'Digit3',
+        keyCode: 51,
+        which: 51,
+        shiftKey: true,
+        bubbles: true,
+        cancelable: true,
+        view: window
+      });
+
+      // Dispatch to the Reveal element
+      revealEl.dispatchEvent(keyEvent);
+
+      // Toggle our tracking state
+      excalidrawMode = !excalidrawMode;
+
+      // If we're entering excalidraw mode, make sure the canvas is visible
+      if (excalidrawMode) {
+        console.log("Entering excalidraw mode, ensuring canvas is visible");
+
+        // Wait a short time for the canvas to be created/updated
+        setTimeout(function() {
+          const excalidrawCanvas = document.querySelector('.excalidraw.excalidraw-container');
+          if (excalidrawCanvas) {
+            console.log("Making excalidraw canvas visible");
+            excalidrawCanvas.style.visibility = 'visible';
+            excalidrawCanvas.style.display = 'flex';
+            excalidrawCanvas.style.opacity = '1';
+            excalidrawCanvas.style.pointerEvents = 'auto';
+
+            // Try to focus the canvas
+            excalidrawCanvas.focus();
+
+            // Make sure all canvas elements inside are visible
+            const canvases = excalidrawCanvas.querySelectorAll('canvas');
+            canvases.forEach(canvas => {
+              canvas.style.visibility = 'visible';
+              canvas.style.display = 'block';
+
+              // Try to trigger a resize to force redraw
+              const resizeEvent = new Event('resize');
+              canvas.dispatchEvent(resizeEvent);
+            });
+          }
+        }, 100); // Small delay to ensure the DOM has updated
+      }
+    }
+  });
+
+  // Add the button to the document body
+  document.body.appendChild(toggleButton);
+  console.log("Toggle button added to document body");
+
+  // Always show for testing
+  toggleButton.style.display = 'block';
+});
+
+
+</script>
+```
