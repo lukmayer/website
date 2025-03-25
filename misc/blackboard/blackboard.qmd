@@ -1,0 +1,33 @@
+---
+title: "<h2>How to use</h2><strong>Click on this slide</strong> to focus the canvas<br>Press <code>F</code> to <strong>toggle fullscreen-mode</strong><br>Press <code>#</code> to <strong>toggle the blackboard</strong><br>Press <code>ESC</code> to <strong>exit fullscreen-mode</strong>"
+format: 
+  revealjs:
+    navigation-mode: linear 
+    theme: [blood, custom.scss]
+    logo: logo.png
+    menu: false
+
+    excalidraw:
+      button: false
+      shortcut: "#"
+      theme: "dark"
+      template: "template.excalidraw"
+
+title-slide-attributes:
+    data-background-image: nets_bw.png
+
+revealjs-plugins:
+  - excalidraw
+
+resources:
+  - template.excalidraw
+---
+
+<!-- 
+## How to use
+
+1)  Click on this slide to focus the canvas
+2)  Press `F` to toggle fullscreen-mode
+3)  Press `#` to toggle the **blackboard**
+4)  Press `ESC` to exit fullscreen-mode 
+-->

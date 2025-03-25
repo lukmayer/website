@@ -43,6 +43,9 @@ website:
         menu: 
           - about/bio/index.qmd
           - about/hobbies/index.qmd
+      - text: "Misc"
+        menu:
+          - misc/blackboard/index.qmd
     right:
       - text: "Login"
         href: https://lukmayer.github.io/login_portal/
