@@ -53,10 +53,16 @@ If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf).
 
 ::: responsive-pdf
 <embed src="cv_lwm.pdf" type="application/pdf">
+
 :::
 
 ## Industry
 
 TBD
+
+::::
+
+:::::
+:::
 ::::
 :::::
