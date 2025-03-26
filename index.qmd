@@ -9,22 +9,22 @@ format:
 back-to-top-navigation: false
 ---
 
-```{=html}
+
 <script data-goatcounter="https://lukmayer.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-```
 
-::::::::: column-page
-:::::::: columns
-:::: {.column style="padding-right: 20px;"}
+
+::: column-page
+::: columns
+::: {.column style="padding-right: 20px;"}
 ::: {.animate__animated .animate__fadeIn style="--animate-duration: 2s;"}
 \
 
 ![](assets/luke-23-circle.png)
 :::
-::::
+:::
 
-::::: {.column style="padding-left: 20px;"}
+::: {.column style="padding-left: 20px;"}
 ### Welcome to my website!
 
 ::: {.animate__animated .animate__fadeIn style="--animate-duration: 3s;"}
@@ -55,13 +55,14 @@ I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https:/
 
 <!-- Signal -->
 
+
 <button class="button-link2" onclick="copySignalHandle()" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
-
-<i class="bi bi-signal"></i> [ ]{.handle-text}[Signal]{.default} [L11.98]{.hover}
-
+  <i class="bi bi-signal"></i>
+  <span class="signal-default">Signal</span>
+  <span class="signal-hover" style="display: none;">L11.98</span>
 </button>
 
-```{=html}
+
 <style>
 /* Base button styles */
 .button-link, .button-link2 {
@@ -128,13 +129,14 @@ I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https:/
     opacity: 0;
 }
 
-.button-link2:hover .handle-text .default {
-    opacity: 0;
+
+.button-link2:hover .signal-default {
+display: none;
+}
+.button-link2:hover .signal-hover {
+display: inline !important;
 }
 
-.button-link2:hover .handle-text .hover {
-    opacity: 1;
-}
 
 .button-link:hover,
 .button-link2:hover {
@@ -145,9 +147,9 @@ I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https:/
 
 
 </style>
-```
 
-```{=html}
+
+
 <script>
 function copySignalHandle() {
     const signalHandle = "L11.98";
@@ -164,13 +166,14 @@ function copySignalHandle() {
 }
 
 </script>
-```
-:::
-:::::
-::::::::
-:::::::::
 
-```{=html}
+
+:::
+:::
+:::
+:::
+
+
 <style>
 /* CSS for fade-in effect */
 .fade-in {
@@ -236,9 +239,9 @@ function copySignalHandle() {
 
 
 </style>
-```
 
-```{=html}
+
+
 <script>
 
   window.addEventListener("load", function() {
@@ -246,4 +249,3 @@ function copySignalHandle() {
     aboutEntity.classList.add("fade-in");
   });
 </script>
-```

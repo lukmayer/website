@@ -15,11 +15,6 @@ comments:
     reactions-enabled: true
 ---
 
-```{=html}
-<!-- If in doubt, clear _freeze/site_libs/revealjs and render anew
-Make sure that chalkbord is disabled - things will break
-also wrap the presentation in ::: syntax at your own risk - it will probably break the slides -->
-```
 
 Hello world!
 
@@ -34,7 +29,7 @@ I have to say, it was trickier than expected to embed the presentation inside a 
 I was trying to study the source code of quarto.org, but I couldn't replicate the method they use to embed their presentations.
 But after some tinkering, I finally found a way to embed the presentation.
 I've been planning to make an "advanced quarto" tutorial at some point soon when I'm less swamped.
-It will probably include my workflow for customizing my website, some notes on ::: syntax and how to embed things and the like.
+It will probably include my workflow for customizing my website, some notes on triple ':' syntax and how to embed things and the like.
 So if you're interested in that, stay tuned.
 
 With that out the way, here are two bare-bones presentations on the mathematics of simple linear regression.

@@ -6,35 +6,13 @@ format:
     page-layout: full
 ---
 
-::::: {.quarto-content .hidden}
-```{=html}
 <style>
 .description {
     display: none;
 }
 
-/* Responsive PDF container for more vertical documents */
-.responsive-pdf {
-    position: relative;
-    padding-bottom: 90%; /* More vertical aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #f0f0f0;
-    margin-bottom: 20px;
-}
 
-.responsive-pdf embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 </style>
-```
-
-```{=html}
 <script>
   window.addEventListener("load", function() {
     var content = document.querySelector(".quarto-content");
@@ -44,25 +22,18 @@ format:
     }
   });
 </script>
-```
 
-:::: panel-tabset
+
+::: panel-tabset
 ## Academic
 
 If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf).
 
-::: responsive-pdf
-<embed src="cv_lwm.pdf" type="application/pdf">
-
-:::
+<iframe src="cv_lwm.pdf" style="width: 100%; height: 1000px; border: none;"></iframe>
 
 ## Industry
 
-TBD
-
-::::
-
-:::::
+To be added soon.
 :::
-::::
-:::::
+
+
