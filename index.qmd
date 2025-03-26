@@ -55,15 +55,11 @@ I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https:/
 
 <!-- Signal -->
 
-
 <button class="button-link2" onclick="copySignalHandle()" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
-    <i class="bi bi-signal"></i>
-    <span class="handle-text">
-        <span class="default">Signal</span>
-        <span class="hover">L11.98</span>
-    </span>
-</button>
 
+<i class="bi bi-signal"></i> [ ]{.handle-text}[Signal]{.default} [L11.98]{.hover}
+
+</button>
 
 ```{=html}
 <style>

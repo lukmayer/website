@@ -89,8 +89,8 @@ I don't store any of the drawings you make here.
 ::: {.callout-important collapse="true" icon="false"}
 # Why did you make this?
 
-Every now and then you just want to quickly draw something to explain a concept.
-I felt like having a tool like this on my site would be cool, and pretty easy to reach in a pinch.
+Every now and then I just want to quickly draw something to explain a concept.
+I felt like having a tool for this on my site would be cool, and pretty easy to reach in a pinch.
 :::
 
 ::: {.callout-important collapse="true" icon="false"}
