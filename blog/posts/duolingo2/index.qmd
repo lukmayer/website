@@ -24,45 +24,45 @@ I've discussed the Pros and Cons of Duolingo, and its evolution over the years i
 One pain point I have with the app is that its creators are monetizing the app more and more in the pursuit of profitability as a publicly traded company.
 Unfortunately, as a long time user I have therefore witnessed multiple major changes that I believe have made the user experience worse (rather than better) in specific ways.
 
-In its current state, Duolingo is barely useable anymore as a free user, regardless of Duolingo's self-proclaimed mission to be "[Universally accessible](https://www.duolingo.com/info)".
-The reason you are practically obliged to pay [\~84 USD](https://www.duolingo.com/super) a year to continue using this free service[^1] is simple.
+In its current state, Duolingo is challenging to use as a free user, somewhat contrasting Duolingo's self-proclaimed mission to be "[Universally accessible](https://www.duolingo.com/info)".
+The reason you are more-or-ess obliged to pay [\~84 USD](https://www.duolingo.com/super) a year to continue using the free service[^1] is simple.
 Duolingo has a "hearts" system in which you have a limited number of mistakes you can make before the app refuses to let you continue.
-Being booted out of a lesson is obviously an extremely frustrating experience that poses a real risk to maintaining your language learning ambitions.
+Being booted out of a lesson is obviously an extremely frustrating experience that poses a real risk to your motivation for maintaining language learning ambitions.
 By default, you have 5 hearts, with one heart replenishing every 5 hours, and an option to perform practice lessons to replenish one heart for each.
 Should you run out of hearts during a lesson, your only options are to quit that lesson or pay 450 "Gems" to refill your hearts to 5.
-Being a premium user removes all need to worry about these silly hearts.
+Being a premium user removes all need to worry about silly hearts.
 
 [^1]: as a non "tech-savvy" user
 
-At first glance, it seems like a fair amount of options for restoring hearts, doesn't it?
+At first glance, it seems like there are fair amount of options for restoring hearts, doesn't it?
 Well, there are a couple of problems here.
-First of all, the hearts system did not used to exist at all, meaning its main purpose is without a doubt to push users towards premium.
+First of all, the hearts system did not used to exist at all, suggesting to me that its main purpose is to push users towards premium.
 Secondly, Duolingo is not infallible, with tiny typos or alternative expressions potentially costing you hearts when you can't afford to lose them.
 Third is the problem that gems are not that easily earned.
 You earn them for completing lessons and challenges, but the average user probably only earns 5-20 per day.
 Compare that to the 450 gem cost of replenishing hearts in a pinch - it's not hard to see that you soon will be gems bankrupt (assuming you had any in the first place).
-Finally, if all of this was not enough, Duolingo has recently made a change limiting how many hearts you can earn through practice lessons.
-On the mobile app, you are now only eligible for **a single practice lesson** at certain times.
+Finally, if all of this was not enough, Duolingo has recently made a change on their app limiting how many hearts you can earn through practice lessons.
+On the mobile app, you are now only eligible for **a single practice lesson** at specific times.
 Since you will be broke for gems, your only realistic options are now: wait and risk not being able to continue your streak[^2], quit out of frustration, or pay.
 
 [^2]: An otherwise great feature, that is now working against you!
 
-Yet more cynically, one might **speculate** that since Duolingo's exercises are personalized to the user, they could (and probably would) use their analytics to ensure that you regularly run out of hearts due to exercises that are just "a tad bit" out of reach for you.
+Putting on my cynic hat, I might **speculate** that since Duolingo's exercises are personalized to the user, they could (and probably would) use their analytics to ensure that you regularly run out of hearts due to exercises that are just "a tad bit" out of reach for you.
 They would conceivably do this if they believe you would be likely to pay as a result.
-It's certainly a **possibility** if achieving sufficient shareholder returns required it.
+I would not be shocked to learn they already do this, as it would be very much in line with the other changes they have made to become more profitable.
 
-I was successfully nudged into buying the premium subscription for two years, but I no longer "feel good" about financially supporting a company that is squeezing its users so relentlessly...
+I bought the premium subscription for two years, but I have very mixed feelings about supporting Duolingo's current business strategy. From what I gather, it feels as though their mission to make language learning universally accessible is being compromised, with their focus seemingly shifting towards more polished experiences that require much more funding. 
 
-This is why I asked myself what would it take to make the free-tier version of Duolingo sustainable in its current form?
+This is why I asked myself what would it take to make the free-tier version of Duolingo sustainable in its current form? In essence, how can one maximize their learning within the contraints of Duolingo's freemium model?
 I think you will find that what I suggest here will not only improve your sanity while using Duolingo, but also quite possibly your learning.
 
 \
 
-## Improving your heart health
+## Improving your heart health 
 
 ### Part 1: Making better use of the hearts you get
 
-#### STOP using the app!!![^3]
+#### STOP using the app!!!1!!eleven!![^3]
 
 [^3]: Not using the mobile app for services that also have a website is a good idea in general because it is easier to modify websites.
 
@@ -140,8 +140,8 @@ Remember, the goal is to not let Duolingo drain your gems wallet any more than s
 ## "Hacking" Duolingo
 
 To be honest, following everything in Part 1 might still not be enough to make your net gem earnings positive.
-Again, the reason we care so much about gems is that they are the only way to continue a lesson when you run out of hearts.
-Having to abandon a lesson you struggled so hard on because you can't afford to continue is frustrating to the point where you might quit all together.
+The reason we care so much about gems is that they are the only way to continue a lesson when you're having a bad day.
+Having to abandon a lesson you struggled so hard on because you can't afford to continue is really frustrating and may even lead you to quit all together.
 
 So the next level is to use more advanced tools to help you.
 
@@ -156,7 +156,7 @@ For our goals, one really stands out.
 [Duolingo Fast Mode](https://chromewebstore.google.com/detail/duolingo-fast-mode/mhmipgjhaailkgpdknkibeacoifgfddd) has almost no users, even though it makes free-tier Duolingo so much nicer.
 This extension gives you instant feedback while you are doing exercises, allowing you to know *before* you submit your answer whether it will be accepted.
 It will even help you notice if you are using the wrong word form.
-However, note that these suggestions are not always 100% accurate!
+However, note that these suggestions are very picky, and will expect you to type out all punctuation and special characters!
 
 \
 

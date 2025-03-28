@@ -406,22 +406,5 @@ I have also visited a few micro-states including: Malta, Monaco, San Marino, and
 
 \
 
-::: panel-tabset
-## Likes
 
--   Sugar-free gum
--   High-quality public transport
--   "Meal substitutes"
--   Social mobility
--   The color black
--   ""IDM""
--   Radler
-
-## Dislikes
-
--   Heights
--   Meat on the bone
--   Collective action problems
--   Direct sunlight (just kidding... unless?)
-:::
 :::::::::

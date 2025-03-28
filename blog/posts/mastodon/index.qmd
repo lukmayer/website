@@ -15,23 +15,23 @@ comments:
     reactions-enabled: true
 ---
 
-I'm writing this post at a time where a lot of the online platforms we have come accustomed to over the last decade or so are changing in ways we might not appreciate.
-Some places have seen increasingly aggressive forms of advertising, others questionable changes in policy, and yet others have either new or existing owners that increasingly show their true, not so nice, colors.
+A lot of the online platforms we have come accustomed to over the last decade or so are changing in ways we might not always appreciate.
+Some places have seen increasingly aggressive forms of advertising, others questionable changes in company policy, and yet others have either new or existing owners that increasingly show their true, not so nice, colors.
 
 Does it really need to be like this?
 
 \
 
-## The life cycle of modern tech
+## The life cycle of many tech companies
 
 There is a noticeable pattern that once-beloved, now-bemoaned services have in common.
-Namely, they all start with a huge pile of cash ("Venture Capital") that they use to dominate a niche with.
-Sometimes it's well-done marketing, [other times it's selling at a loss, or just straight up breaking laws that gets them to the number one spot in their niche](https://en.wikipedia.org/wiki/Uber#Controversies).
+Namely, they all start with a huge pile of cash ("Venture Capital") that they use to firmly establish themselves with.
+Sometimes it's well-done marketing, [other times it's selling at a loss, or just straight up breaking laws that gets them ahead of competitors](https://en.wikipedia.org/wiki/Uber#Controversies).
 Most often, it's a mix of all three and more.
-Only once this goal of capturing market share is achieved do these companies actually start monetizing with ads or price hikes.
-Typically, it's hard for users to switch services, sometimes deliberately so.
-For example, social networks typically rely on you not being able to convince most of your friends to go somewhere else.
-Emerging competitors are routinely bought out or copied.
+Only once firmly established do these companies actually start monetizing with ads or price hikes in a way that can recoup their vast, initial costs. 
+Typically, it's hard for users to switch services, sometimes deliberately so. 
+For example, social networks typically rely on you not being able to convince most of your friends to go somewhere else. Once this transition to profitability takes place, you often see outcries of users lamenting the changes that come with it.
+
 
 \
 
@@ -45,7 +45,7 @@ Importantly, this means that any platforms that have the ActivityPub format in c
 Thanks to this development, users are able to freely move between platforms that use ActivityPub.
 Not only does this mean that you are not locked in to a single platform, but it also means that if you come up with a better platform, you can just start it and people can join without needing a new account.
 This network of interconnected platforms is called the Fediverse (Federated + Universe).
-What I've just described probably seems like a weird concept to anyone less-technologically inclined, but what's important here is that this allows for a social network that is not controlled by any single entity.
+What I've just described probably seems like a weird concept to anyone less-technologically inclined, but what's important here is that this allows for a social network that is not controlled by any single entity. A common comparison people draw upon is e-mail, which has a similar structure of independently run services (mail providers) that interface with each other. 
 
 \
 
@@ -58,7 +58,7 @@ What I've just described probably seems like a weird concept to anyone less-tech
 [Mastodon](https://joinmastodon.org) is currently the most popular platform based on ActivityPub, with many different people hosting copies ("Instances") of Mastodon.
 Think of each instance as a different community.
 All these instances can talk to each other, and you can follow people from other instances.
-As per the ActivityPub standard, you can also follow people from other platforms that use ActivityPub, like PeerTube or Pixelfed.
+As per the ActivityPub standard, you can also follow people from other platforms that use ActivityPub, like PeerTube (think: Youtube) or Pixelfed (think: Instagram).
 Mastodon looks similar to X/Twitter/Threads/Bluesky.
 
 \
@@ -75,61 +75,54 @@ There are two big reasons.
 
 2\) **If you migrate your account somewhere else, you retain your follows and followers.**
 
-There is no money to be made on the Fediverse[^1].
-It's more or less just people hosting these "instances" on their hardware because they want to[^2]
-. As such, there are no Ads, no AI-generated content, no algorithm shenanigans, no being subject to censorship you do not agree with
-.
+These two attributes directly protect you from the tech-company life cycle I described above.
 
-[^1]: This is currently also one of the biggest limitations.
-    The Fediverse is yet to settle on a form of monetization that is both viable and ethical.
+My take is that this makes Fediverse platforms much more sustainable than the more traditional social media platforms. Creators especially should be paying attention to this, because it's fairly hard (and risky) to convince your following to move from one traditional platform to another one. A creator's career can take a serious hit if they are forced to switch platforms. That being said, the Fediverse is not big enough yet to be of serious interest for creators looking to make their living on social media. 
 
-[^2]: A lot of servers are crowd-funded
-
+Besides some of the very big servers, the Fediverse is more or less just people hosting these "instances" on their hardware because they want to[^2]
+. As such, there are no Ads, no AI-generated content, no algorithm shenanigans, no being subject to censorship you do not agree with.
 Platforms like Mastodon guarantee freedom in its truest form, far more than any corporate owned social media platform ever could.
-If you so wish you could create your own instance where no-one can censor you, and all your followers would still be able to see your postings, even if their accounts are registered somewhere else.
+If you so wish you could create your own instance where no-one can censor you, and all your followers would still be able to see your postings, even if their accounts are registered somewhere else. 
 
 At the same time, you also do not need to subject yourself to spam, or content that you find deeply undesirable.
-There is no algorithm in your main feed, just the people you follow.
+Both of these things can be true at the same time for the simple reason that there is no algorithm in your main feed, just the people you follow.
 
 Even though other platforms leveraging ActivityPub are much less popular than Mastodon, my sense is that they will inevitably grow.
 This is because every time a big-tech platform does something crappy, some people permanently join the extremely diversified Fediverse.
 Every time the Fediverse grows it becomes better (more users, more content), and more attractive for others.
 Eventually, it could hit critical mass where most people will agree that the switch is worth it.
 This is all to say that since the Fediverse is B.S.
-proof by design it benefits from the mistakes of others[^3].
+proof by design it benefits from the mistakes of others[^2].
 
-[^3]: Mainstream platforms have a tough choice: either become more like the Fediverse, or risk inducing migration from their platform to the Fediverse.
-    I think this explains why Threads and Tumblr are embracing ActivityPub; to not appear crappy enough that it would inspire their users to switch.
+[^2]: Mainstream platforms have a tough choice: either become more like the Fediverse, or risk inducing migration from their platform to the Fediverse.
+    I think this explains why Threads and Tumblr are embracing ActivityPub; to not appear crappy enough that it would inspire their users to switch. 
 
 \
 
 ### Is Bluesky part of the Fediverse?
 
-Sadly, no.
+Sadly, not really.
 
 While Bluesky is currently getting a lot of attention from X/Twitter refugees, it is also:
 
--   Funded by [Venture Capital, a large part of which comes from Crypto Companies](https://bsky.social/about/blog/10-24-2024-series-a)[^4].
+-   Funded by [Venture Capital, a large part of which comes from Crypto Companies](https://bsky.social/about/blog/10-24-2024-series-a)[^3].
 
--   Not currently federated, you can only join the server that Bluesky owns[^5].
+-   Not currently federated, you can only join the server that Bluesky owns.
 
--   Using an in-house protocol[^6], not ActivityPub, meaning you cannot directly interface with the Fediverse[^7]
+-   Using an in-house protocol[^4], not ActivityPub, meaning you cannot directly interface with the Fediverse[^5]
     .
 
 -   Not controllable by the users because their protocol [requires more centralization for moderation and content distribution](https://bsky.social/about/blog/5-5-2023-federation-architecture).
-    In essence, only companies and rich people can run a server[^8].
+    In essence, only companies and rich people can run a server[^6].
 
-[^4]: Do I even need to explain why this is a massive red flag?
-    Also why is this information super hidden...
+[^3]: Do I even need to explain why this is a massive red flag?
 
-[^5]: Big red flag.
-    Doesn't even receive much mention on their blog...
 
-[^6]: Questionable at best given that ActivityPub is the officially recommended protocol.
+[^4]: Questionable at best given that ActivityPub is the officially recommended protocol.
 
-[^7]: While annoying, definitely solvable with some compatibility code.
+[^5]: While annoying, definitely solvable with some compatibility code.
 
-[^8]: This is a slight upgrade to being locked in to the platform of one billionaire I guess?
+[^6]: This is a slight upgrade to being locked in to the platform of one billionaire I guess?
 
 Personally, I strongly recognize parts of the tech-company playbook here that I described in the beginning.
 To me, it seems almost inevitable that Bluesky, once popular, will also make a turn for the worse.
@@ -147,11 +140,7 @@ So yes, compared to Bluesky, I am pretty bullish on Mastodon not going rogue.
 
 -   mastodon.social is the server that the developers of Mastodon own.
     Either join this one, or click on another server.
-    Which specific one does not matter much, as you can change it later.
-    You could pick one simply because you like the handle.
-
--   Read the rules of the server you are about to join.
-    Servers can differ in what you are allowed to post.
+    Which specific one does not matter much, you can change it later, but you should pay attention to the rules of the server you are joining. Servers differ in what types of content is allowed. 
 
 -   Follow some people.
     For recommendations on how to curate your feed in the absence of algorithms, check out [fedi.tips](https://fedi.tips)
