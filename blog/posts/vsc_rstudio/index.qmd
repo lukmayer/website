@@ -15,7 +15,7 @@ comments:
     reactions-enabled: true
 ---
 
-![All in one: editor, variable manager, plotting pane, terminal - she's a beauty!](images/vscode_setup.png){fig-align="center"}
+![All in one: editor, variable manager, plotting pane, terminal - beautiful!](images/vscode_setup.png){fig-align="center"}
 
 \
 
