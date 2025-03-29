@@ -296,6 +296,11 @@ document.addEventListener('DOMContentLoaded', function() {
         clearTimeout(previewTimeout);
       }
 
+      // Skip empty links, javascript: links, or anchor-only links
+      if (!link.href || link.href.startsWith('javascript:') || link.href === '#') {
+        return;
+      }
+
       // Normalize the link URL for comparison
       const normalizedLinkUrl = normalizeUrl(link.href);
 
@@ -307,7 +312,14 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      // Set timeout for preview (1 second delay)
+      // Fix for homepage: Don't skip links that point to subpages
+      // If we're on the homepage and the link points to a subpage, show the preview
+      const isHomepage = window.location.pathname === '/' || 
+                         window.location.pathname === '/index.html';
+      const isSubpage = normalizedLinkUrl.includes(window.location.hostname + '/') && 
+                        normalizedLinkUrl !== normalizeUrl(window.location.origin + '/');
+
+      // Set timeout for preview (3 second delay)
       previewTimeout = setTimeout(() => {
         console.log("Opening preview for:", link.href);
         currentLink = link;
@@ -329,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loadingIndicator.style.display = 'none';
           };
         }, 100);
-      }, 3000);
+      }, 3000); // Changed to 3000ms (3 seconds) delay
     });
 
     // Clear timeout on mouse leave
@@ -340,5 +352,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
 
 </script>
