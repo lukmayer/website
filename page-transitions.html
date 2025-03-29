@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // pop-up link preview
 document.addEventListener('DOMContentLoaded', function() {
+  // Global flag to track if a popup is open
+  window.linkPreviewOpen = false;
+
   // Normalize the current page URL: remove hash and handle index.html
   let currentPageUrl = window.location.href.split('#')[0];
   // Remove index.html from the end if present
@@ -42,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Create preview container
   const previewContainer = document.createElement('div');
+  previewContainer.id = 'link-preview-container';
   previewContainer.className = 'link-preview-container';
   previewContainer.style.cssText = `
     position: fixed;
@@ -127,40 +131,40 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   titleBar.appendChild(titleText);
 
-  // Create "Open in New Tab" button (center-aligned)
-  const openButton = document.createElement('button');
-  openButton.className = 'preview-open-button';
-  openButton.style.cssText = `
-    background: #333;
-    color: #ddd;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 12px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
+  // Create a div for the "Open in New Tab" button (center-aligned)
+  const openButtonContainer = document.createElement('div');
+  openButtonContainer.style.cssText = `
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 6px;
-    margin: 0 auto;
-    font-weight: normal;
+    flex: 1;
+  `;
+  titleBar.appendChild(openButtonContainer);
+
+  // Create "Open in New Tab" button using HTML instead of JS styling
+  openButtonContainer.innerHTML = `
+    <button id="preview-open-button" style="
+      background: #333;
+      color: #ddd;
+      border: none;
+      border-radius: 4px;
+      padding: 5px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: normal;
+    ">
+      <span style="font-size: 15px; font-weight: bold;">⧉</span>
+      <span>Open in New Tab</span>
+    </button>
   `;
 
-  // Add black and white icon to button (using Unicode external link symbol)
-  const openIcon = document.createElement('span');
-  openIcon.textContent = '⧉';  // Unicode "VIEWDATA SQUARE" symbol
-  openIcon.style.cssText = `
-    font-size: 15px;
-    font-weight: bold;
-  `;
-  openButton.appendChild(openIcon);
+  // Get the button element
+  const openButton = document.getElementById('preview-open-button');
 
-  // Add text to button
-  const openText = document.createElement('span');
-  openText.textContent = 'Open in New Tab';
-  openButton.appendChild(openText);
-
-  // Hover effect for open button (matching close button)
+  // Add hover effects
   openButton.onmouseover = function() { 
     this.style.background = '#555'; 
     this.style.color = '#fff';
@@ -169,8 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
     this.style.background = '#333'; 
     this.style.color = '#ddd';
   };
-
-  titleBar.appendChild(openButton);
 
   // Add empty div to balance the layout (right-aligned)
   const spacer = document.createElement('div');
@@ -198,6 +200,9 @@ document.addEventListener('DOMContentLoaded', function() {
     border: none;
     background: #1e1e1e;
   `;
+
+  // Add sandbox attribute to restrict iframe capabilities
+  iframe.sandbox = 'allow-same-origin allow-scripts';
   iframeContainer.appendChild(iframe);
 
   // Add loading indicator
@@ -240,24 +245,38 @@ document.addEventListener('DOMContentLoaded', function() {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    /* Add a global style to prevent link previews within iframes */
+    .link-preview-disabled a {
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+
+    /* Fix for blurry text in the iframe */
+    #link-preview-container iframe {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
   `;
   document.head.appendChild(style);
 
   iframeContainer.appendChild(loadingIndicator);
 
-  // Track current link, timeout, and popup state
+  // Track current link and timeout
   let currentLink = null;
   let previewTimeout = null;
-  let isPopupOpen = false; // Track if a popup is currently open
 
-  // Close button event
-  closeButton.addEventListener('click', function() {
+  // Function to close the preview
+  function closePreview() {
     previewContainer.style.display = 'none';
     iframe.src = 'about:blank';
     currentLink = null;
-    isPopupOpen = false; // Update popup state
-    console.log("Popup closed");
-  });
+    window.linkPreviewOpen = false;
+    console.log("Preview closed");
+  }
+
+  // Close button event
+  closeButton.addEventListener('click', closePreview);
 
   // Open in new tab button event
   openButton.addEventListener('click', function() {
@@ -269,11 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Escape key to close
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && previewContainer.style.display === 'block') {
-      previewContainer.style.display = 'none';
-      iframe.src = 'about:blank';
-      currentLink = null;
-      isPopupOpen = false; // Update popup state
-      console.log("Popup closed with Escape key");
+      closePreview();
     }
   });
 
@@ -290,133 +305,175 @@ document.addEventListener('DOMContentLoaded', function() {
     return normalized.toLowerCase(); // Convert to lowercase for case-insensitive comparison
   }
 
-  // Helper function to check if an element is inside the preview container
-  function isInsidePreview(element) {
-    let current = element;
-    while (current) {
-      if (current === previewContainer) {
-        return true;
-      }
-      current = current.parentElement;
-    }
-    return false;
+  // Find all links on the page
+  function setupLinkPreviews() {
+    const links = document.querySelectorAll('a[href]');
+
+    links.forEach(link => {
+      // Skip if this link already has event listeners
+      if (link.dataset.previewEnabled) return;
+
+      // Mark this link as having preview enabled
+      link.dataset.previewEnabled = 'true';
+
+      // Show preview on hover
+      link.addEventListener('mouseenter', function(e) {
+        // Clear any existing timeout
+        if (previewTimeout) {
+          clearTimeout(previewTimeout);
+        }
+
+        // Skip if a popup is already open
+        if (window.linkPreviewOpen) {
+          console.log("Preview already open, skipping new preview");
+          return;
+        }
+
+        // Skip empty links, javascript: links, or anchor-only links
+        if (!link.href || link.href.startsWith('javascript:') || link.href === '#') {
+          return;
+        }
+
+        // Skip if link is inside an iframe
+        if (window.self !== window.top) {
+          console.log("Link is inside an iframe, skipping preview");
+          return;
+        }
+
+        // Normalize the link URL for comparison
+        const normalizedLinkUrl = normalizeUrl(link.href);
+
+        // Skip if link points to current page (after normalization)
+        if (normalizedLinkUrl === currentPageUrl) {
+          console.log("MATCH - Skipping preview for:", link.href);
+          return;
+        }
+
+        // Set timeout for preview (2 second delay)
+        previewTimeout = setTimeout(() => {
+          console.log("Opening preview for:", link.href);
+          currentLink = link;
+          window.linkPreviewOpen = true;
+
+          // Set title
+          titleText.textContent = link.textContent || link.href;
+
+          // Show container and loading indicator
+          previewContainer.style.display = 'block';
+          loadingIndicator.style.display = 'flex';
+
+          // Load URL in iframe
+          iframe.src = 'about:blank'; // Start with blank page
+          setTimeout(() => {
+            iframe.src = link.href; // Then load actual URL
+
+            // Hide loading indicator when iframe loads
+            iframe.onload = function() {
+              loadingIndicator.style.display = 'none';
+
+              // Try to disable links inside the iframe
+              try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+                // Add class to body to disable all links
+                iframeDoc.body.classList.add('link-preview-disabled');
+
+                // Add a style element to disable all links
+                const styleEl = iframeDoc.createElement('style');
+                styleEl.textContent = `
+                  a {
+                    pointer-events: none !important;
+                    cursor: default !important;
+                  }
+
+                  /* Fix blurry text */
+                  body, p, h1, h2, h3, h4, h5, h6, span, div, a {
+                    -webkit-font-smoothing: antialiased !important;
+                    -moz-osx-font-smoothing: grayscale !important;
+                  }
+                `;
+                iframeDoc.head.appendChild(styleEl);
+
+                // Inject a script to prevent link previews inside the iframe
+                const scriptEl = iframeDoc.createElement('script');
+                scriptEl.textContent = `
+                  window.linkPreviewOpen = true;
+
+                  // Disable all link clicks
+                  document.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A' || e.target.closest('a')) {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      return false;
+                    }
+                  }, true);
+                `;
+                iframeDoc.body.appendChild(scriptEl);
+              } catch (e) {
+                console.log("Could not access iframe content due to cross-origin policy:", e);
+              }
+            };
+          }, 100);
+        }, 2000);
+      });
+
+      // Clear timeout on mouse leave
+      link.addEventListener('mouseleave', function() {
+        if (previewTimeout) {
+          clearTimeout(previewTimeout);
+        }
+      });
+    });
   }
 
-  // Find all links
-  const links = document.querySelectorAll('a[href]');
+  // Initial setup
+  setupLinkPreviews();
 
-  links.forEach(link => {
-    // Show preview on hover
-    link.addEventListener('mouseenter', function(e) {
-      // Clear any existing timeout
-      if (previewTimeout) {
-        clearTimeout(previewTimeout);
-      }
-
-      // Skip if a popup is already open
-      if (isPopupOpen) {
-        console.log("Popup already open, skipping new preview");
-        return;
-      }
-
-      // Skip if this link is inside a preview container
-      if (isInsidePreview(link)) {
-        console.log("Link is inside preview, skipping nested preview");
-        return;
-      }
-
-      // Skip empty links, javascript: links, or anchor-only links
-      if (!link.href || link.href.startsWith('javascript:') || link.href === '#') {
-        return;
-      }
-
-      // Normalize the link URL for comparison
-      const normalizedLinkUrl = normalizeUrl(link.href);
-
-      console.log("Comparing:", normalizedLinkUrl, "with", currentPageUrl);
-
-      // Skip if link points to current page (after normalization)
-      if (normalizedLinkUrl === currentPageUrl) {
-        console.log("MATCH - Skipping preview for:", link.href);
-        return;
-      }
-
-      // Fix for homepage: Don't skip links that point to subpages
-      const isHomepage = window.location.pathname === '/' || 
-                         window.location.pathname === '/index.html';
-      const isSubpage = normalizedLinkUrl.includes(window.location.hostname + '/') && 
-                        normalizedLinkUrl !== normalizeUrl(window.location.origin + '/');
-
-      // Set timeout for preview (2 second delay)
-      previewTimeout = setTimeout(() => {
-        console.log("Opening preview for:", link.href);
-        currentLink = link;
-        isPopupOpen = true; // Update popup state
-
-        // Set title
-        titleText.textContent = link.textContent || link.href;
-
-        // Show container and loading indicator
-        previewContainer.style.display = 'block';
-        loadingIndicator.style.display = 'flex';
-
-        // Load URL in iframe
-        iframe.src = 'about:blank'; // Start with blank page
-        setTimeout(() => {
-          iframe.src = link.href; // Then load actual URL
-
-          // Hide loading indicator when iframe loads
-          iframe.onload = function() {
-            loadingIndicator.style.display = 'none';
-
-            // Disable all links inside the iframe to prevent nested popups
-            try {
-              const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-              // Add a style to disable pointer events on all links
-              const disableLinksStyle = iframeDoc.createElement('style');
-              disableLinksStyle.textContent = `
-                a { 
-                  pointer-events: none !important;
-                  cursor: default !important;
-                }
-              `;
-              iframeDoc.head.appendChild(disableLinksStyle);
-            } catch (e) {
-              console.log("Could not disable links in iframe due to cross-origin policy");
-            }
-          };
-        }, 100);
-      }, 2000); // Changed to 2000ms (2 seconds) delay
-    });
-
-    // Clear timeout on mouse leave
-    link.addEventListener('mouseleave', function() {
-      if (previewTimeout) {
-        clearTimeout(previewTimeout);
-      }
-    });
+  // Set up a MutationObserver to handle dynamically added links
+  const observer = new MutationObserver(function(mutations) {
+    // Only run if we're in the main window, not in an iframe
+    if (window.self === window.top) {
+      setupLinkPreviews();
+    }
   });
 
-  // When iframe is loaded, we need to prevent links inside it from opening new popups
+  // Start observing the document with the configured parameters
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // When iframe is loaded, make sure to prevent any link previews inside it
   iframe.addEventListener('load', function() {
     try {
-      // Try to access iframe content (may fail due to cross-origin policy)
       const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-      // Find all links in the iframe
-      const iframeLinks = iframeDoc.querySelectorAll('a[href]');
+      // Add a script to the iframe to prevent link previews
+      const script = iframeDoc.createElement('script');
+      script.textContent = `
+        // Set global flag to prevent link previews
+        window.linkPreviewOpen = true;
 
-      // Disable click events on all links
-      iframeLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          console.log("Link click prevented in iframe");
-          return false;
-        });
-      });
+        // Disable all link clicks
+        document.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A' || e.target.closest('a')) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("Link click prevented in iframe");
+            return false;
+          }
+        }, true);
+      `;
+      iframeDoc.body.appendChild(script);
+
+      // Add CSS to disable pointer events on all links
+      const style = iframeDoc.createElement('style');
+      style.textContent = `
+        a {
+          pointer-events: none !important;
+          cursor: default !important;
+        }
+      `;
+      iframeDoc.head.appendChild(style);
     } catch (e) {
-      console.log("Could not access iframe content due to cross-origin policy");
+      console.log("Could not access iframe content due to cross-origin policy:", e);
     }
   });
 });
