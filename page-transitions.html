@@ -32,21 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Global flag to track if a popup is open
   window.linkPreviewOpen = false;
 
-  // Normalize the current page URL: remove hash and handle index.html
+  // Normalize the current page URL
   let currentPageUrl = window.location.href.split('#')[0];
-  // Remove index.html from the end if present
   currentPageUrl = currentPageUrl.replace(/\/index\.html$/, '/');
-  // Ensure URL ends with trailing slash for consistency
   if (!currentPageUrl.endsWith('/')) {
     currentPageUrl += '/';
   }
 
-  console.log("Normalized current page URL:", currentPageUrl);
-
   // Create preview container
   const previewContainer = document.createElement('div');
   previewContainer.id = 'link-preview-container';
-  previewContainer.className = 'link-preview-container';
   previewContainer.style.cssText = `
     position: fixed;
     width: 80vw;
@@ -64,179 +59,108 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   document.body.appendChild(previewContainer);
 
-  // Create title bar
-  const titleBar = document.createElement('div');
-  titleBar.className = 'preview-title-bar';
-  titleBar.style.cssText = `
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: #252525;
-    border-bottom: 1px solid #444;
-    padding: 0 50px;
-    display: flex;
-    align-items: center;
-    color: #eee;
-    font-size: 16px;
-    font-weight: bold;
-    z-index: 10000;
-  `;
-  previewContainer.appendChild(titleBar);
-
-  // Create close button - positioned relative to the title bar
-  const closeButton = document.createElement('div');
-  closeButton.className = 'preview-close-button';
-  closeButton.style.cssText = `
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background: #333;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 28px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    z-index: 10001;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-    color: #ddd;
-    transition: background 0.2s, color 0.2s;
-  `;
-  closeButton.textContent = '×';
-  // Hover effect for close button
-  closeButton.onmouseover = function() { 
-    this.style.background = '#555'; 
-    this.style.color = '#fff';
-  };
-  closeButton.onmouseout = function() { 
-    this.style.background = '#333'; 
-    this.style.color = '#ddd';
-  };
-  titleBar.appendChild(closeButton);
-
-  // Create title text container (left-aligned)
-  const titleText = document.createElement('div');
-  titleText.className = 'preview-title-text';
-  titleText.style.cssText = `
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding-right: 10px;
-  `;
-  titleBar.appendChild(titleText);
-
-  // Create a div for the "Open in New Tab" button (center-aligned)
-  const openButtonContainer = document.createElement('div');
-  openButtonContainer.style.cssText = `
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  `;
-  titleBar.appendChild(openButtonContainer);
-
-  // Create "Open in New Tab" button using HTML instead of JS styling
-  openButtonContainer.innerHTML = `
-    <button id="preview-open-button" style="
-      background: #333;
-      color: #ddd;
-      border: none;
-      border-radius: 4px;
-      padding: 5px 12px;
-      font-size: 13px;
-      cursor: pointer;
+  // Create title bar with all elements using innerHTML for consistency
+  const titleBarHTML = `
+    <div class="preview-title-bar" style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: #252525;
+      border-bottom: 1px solid #444;
+      padding: 0 50px;
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-weight: normal;
+      color: #eee;
+      font-size: 16px;
+      font-weight: bold;
+      z-index: 10000;
     ">
-      <span style="font-size: 15px; font-weight: bold;">⧉</span>
-      <span>Open in New Tab</span>
-    </button>
+      <div class="preview-title-text" style="
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px;
+      "></div>
+
+      <div style="flex: 1; display: flex; justify-content: center;">
+        <button id="preview-open-button" style="
+          background: #333;
+          color: #ddd;
+          border: none;
+          border-radius: 4px;
+          padding: 5px 12px;
+          font-size: 13px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        ">
+          <span style="font-size: 15px; font-weight: bold;">⧉</span>
+          <span>Open in New Tab</span>
+        </button>
+      </div>
+
+      <div style="flex: 1; display: flex; justify-content: flex-end;">
+        <div id="preview-close-button" style="
+          width: 30px;
+          height: 30px;
+          background: #333;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 28px;
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: bold;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+          color: #ddd;
+        ">×</div>
+      </div>
+    </div>
+
+    <div class="iframe-container" style="
+      width: 100%;
+      height: calc(100% - 40px);
+      margin-top: 40px;
+      background: #1e1e1e;
+      position: relative;
+    ">
+      <iframe id="preview-iframe" style="
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: #1e1e1e;
+      "></iframe>
+
+      <div id="loading-indicator" style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        color: #aaa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        z-index: 10000;
+      ">
+        <div style="
+          width: 40px;
+          height: 40px;
+          border: 4px solid #333;
+          border-top: 4px solid #aaa;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        "></div>
+        <div>Loading preview...</div>
+      </div>
+    </div>
   `;
 
-  // Get the button element
-  const openButton = document.getElementById('preview-open-button');
-
-  // Add hover effects
-  openButton.onmouseover = function() { 
-    this.style.background = '#555'; 
-    this.style.color = '#fff';
-  };
-  openButton.onmouseout = function() { 
-    this.style.background = '#333'; 
-    this.style.color = '#ddd';
-  };
-
-  // Add empty div to balance the layout (right-aligned)
-  const spacer = document.createElement('div');
-  spacer.style.cssText = `
-    flex: 1;
-  `;
-  titleBar.appendChild(spacer);
-
-  // Create iframe container
-  const iframeContainer = document.createElement('div');
-  iframeContainer.style.cssText = `
-    width: 100%;
-    height: calc(100% - 40px);
-    margin-top: 40px;
-    background: #1e1e1e;
-    position: relative;
-  `;
-  previewContainer.appendChild(iframeContainer);
-
-  // Create iframe
-  const iframe = document.createElement('iframe');
-  iframe.style.cssText = `
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: #1e1e1e;
-  `;
-
-  // Add sandbox attribute to restrict iframe capabilities
-  iframe.sandbox = 'allow-same-origin allow-scripts';
-  iframeContainer.appendChild(iframe);
-
-  // Add loading indicator
-  const loadingIndicator = document.createElement('div');
-  loadingIndicator.style.cssText = `
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    color: #aaa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    z-index: 10000;
-  `;
-
-  // Add loading spinner
-  const spinner = document.createElement('div');
-  spinner.style.cssText = `
-    width: 40px;
-    height: 40px;
-    border: 4px solid #333;
-    border-top: 4px solid #aaa;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  `;
-  loadingIndicator.appendChild(spinner);
-
-  // Add loading text
-  const loadingText = document.createElement('div');
-  loadingText.textContent = 'Loading preview...';
-  loadingIndicator.appendChild(loadingText);
+  previewContainer.innerHTML = titleBarHTML;
 
   // Add spinner animation
   const style = document.createElement('style');
@@ -245,22 +169,34 @@ document.addEventListener('DOMContentLoaded', function() {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
-    /* Add a global style to prevent link previews within iframes */
-    .link-preview-disabled a {
-      pointer-events: none !important;
-      cursor: default !important;
-    }
-
-    /* Fix for blurry text in the iframe */
-    #link-preview-container iframe {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
   `;
   document.head.appendChild(style);
 
-  iframeContainer.appendChild(loadingIndicator);
+  // Get references to elements
+  const titleText = previewContainer.querySelector('.preview-title-text');
+  const closeButton = document.getElementById('preview-close-button');
+  const openButton = document.getElementById('preview-open-button');
+  const iframe = document.getElementById('preview-iframe');
+  const loadingIndicator = document.getElementById('loading-indicator');
+
+  // Add hover effects
+  closeButton.onmouseover = function() { 
+    this.style.background = '#555'; 
+    this.style.color = '#fff';
+  };
+  closeButton.onmouseout = function() { 
+    this.style.background = '#333'; 
+    this.style.color = '#ddd';
+  };
+
+  openButton.onmouseover = function() { 
+    this.style.background = '#555'; 
+    this.style.color = '#fff';
+  };
+  openButton.onmouseout = function() { 
+    this.style.background = '#333'; 
+    this.style.color = '#ddd';
+  };
 
   // Track current link and timeout
   let currentLink = null;
@@ -272,7 +208,6 @@ document.addEventListener('DOMContentLoaded', function() {
     iframe.src = 'about:blank';
     currentLink = null;
     window.linkPreviewOpen = false;
-    console.log("Preview closed");
   }
 
   // Close button event
@@ -294,15 +229,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Helper function to normalize URLs for comparison
   function normalizeUrl(url) {
-    // Remove hash fragment
     let normalized = url.split('#')[0];
-    // Remove index.html
     normalized = normalized.replace(/\/index\.html$/, '/');
-    // Ensure trailing slash
     if (!normalized.endsWith('/')) {
       normalized += '/';
     }
-    return normalized.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+    return normalized.toLowerCase();
+  }
+
+  // Function to force a repaint in the iframe
+  function forceIframeRepaint(iframeDoc) {
+    try {
+      // Method 1: Trigger a layout recalculation by getting offsetHeight
+      iframeDoc.body.offsetHeight;
+
+      // Method 2: Add and remove a class to force a repaint
+      iframeDoc.body.classList.add('force-repaint');
+      setTimeout(() => {
+        iframeDoc.body.classList.remove('force-repaint');
+      }, 0);
+
+      // Method 3: Slightly modify zoom level to force a repaint
+      iframeDoc.body.style.zoom = '100.001%';
+      setTimeout(() => {
+        iframeDoc.body.style.zoom = '100%';
+      }, 50);
+
+      // Method 4: Simulate a scroll event
+      const scrollEvent = new Event('scroll');
+      iframeDoc.dispatchEvent(scrollEvent);
+
+      // Method 5: Inject a script to simulate user interaction
+      const script = iframeDoc.createElement('script');
+      script.textContent = `
+        // Force layout recalculation
+        document.body.style.opacity = 0.99;
+        setTimeout(() => {
+          document.body.style.opacity = 1;
+        }, 100);
+
+        // Simulate a small scroll
+        setTimeout(() => {
+          window.scrollBy(0, 1);
+          setTimeout(() => {
+            window.scrollBy(0, -1);
+          }, 10);
+        }, 200);
+      `;
+      iframeDoc.body.appendChild(script);
+
+    } catch (e) {
+      console.log("Could not force repaint due to cross-origin policy");
+    }
   }
 
   // Find all links on the page
@@ -325,7 +303,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Skip if a popup is already open
         if (window.linkPreviewOpen) {
-          console.log("Preview already open, skipping new preview");
           return;
         }
 
@@ -336,7 +313,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Skip if link is inside an iframe
         if (window.self !== window.top) {
-          console.log("Link is inside an iframe, skipping preview");
           return;
         }
 
@@ -344,14 +320,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const normalizedLinkUrl = normalizeUrl(link.href);
 
         // Skip if link points to current page (after normalization)
-        if (normalizedLinkUrl === currentPageUrl) {
-          console.log("MATCH - Skipping preview for:", link.href);
+        if (normalizedLinkUrl === normalizeUrl(currentPageUrl)) {
           return;
         }
 
         // Set timeout for preview (2 second delay)
         previewTimeout = setTimeout(() => {
-          console.log("Opening preview for:", link.href);
           currentLink = link;
           window.linkPreviewOpen = true;
 
@@ -362,58 +336,58 @@ document.addEventListener('DOMContentLoaded', function() {
           previewContainer.style.display = 'block';
           loadingIndicator.style.display = 'flex';
 
-          // Load URL in iframe
+          // Set up iframe load handler before setting src
+          iframe.onload = function() {
+            // Hide loading indicator
+            loadingIndicator.style.display = 'none';
+
+            // Try to access iframe content
+            try {
+              const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+              // Add a style element to disable all links
+              const styleEl = iframeDoc.createElement('style');
+              styleEl.textContent = `
+                a {
+                  pointer-events: none !important;
+                  cursor: default !important;
+                }
+              `;
+              iframeDoc.head.appendChild(styleEl);
+
+              // Inject a script to prevent link previews inside the iframe
+              const scriptEl = iframeDoc.createElement('script');
+              scriptEl.textContent = `
+                window.linkPreviewOpen = true;
+
+                // Disable all link clicks
+                document.addEventListener('click', function(e) {
+                  if (e.target.tagName === 'A' || e.target.closest('a')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                  }
+                }, true);
+              `;
+              iframeDoc.body.appendChild(scriptEl);
+
+              // Force a repaint immediately after load
+              forceIframeRepaint(iframeDoc);
+
+              // Schedule additional repaints to ensure text clarity
+              setTimeout(() => forceIframeRepaint(iframeDoc), 500);
+              setTimeout(() => forceIframeRepaint(iframeDoc), 1000);
+
+            } catch (e) {
+              console.log("Could not access iframe content due to cross-origin policy");
+            }
+          };
+
+          // Load URL in iframe (after setting up the onload handler)
           iframe.src = 'about:blank'; // Start with blank page
           setTimeout(() => {
             iframe.src = link.href; // Then load actual URL
-
-            // Hide loading indicator when iframe loads
-            iframe.onload = function() {
-              loadingIndicator.style.display = 'none';
-
-              // Try to disable links inside the iframe
-              try {
-                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-                // Add class to body to disable all links
-                iframeDoc.body.classList.add('link-preview-disabled');
-
-                // Add a style element to disable all links
-                const styleEl = iframeDoc.createElement('style');
-                styleEl.textContent = `
-                  a {
-                    pointer-events: none !important;
-                    cursor: default !important;
-                  }
-
-                  /* Fix blurry text */
-                  body, p, h1, h2, h3, h4, h5, h6, span, div, a {
-                    -webkit-font-smoothing: antialiased !important;
-                    -moz-osx-font-smoothing: grayscale !important;
-                  }
-                `;
-                iframeDoc.head.appendChild(styleEl);
-
-                // Inject a script to prevent link previews inside the iframe
-                const scriptEl = iframeDoc.createElement('script');
-                scriptEl.textContent = `
-                  window.linkPreviewOpen = true;
-
-                  // Disable all link clicks
-                  document.addEventListener('click', function(e) {
-                    if (e.target.tagName === 'A' || e.target.closest('a')) {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      return false;
-                    }
-                  }, true);
-                `;
-                iframeDoc.body.appendChild(scriptEl);
-              } catch (e) {
-                console.log("Could not access iframe content due to cross-origin policy:", e);
-              }
-            };
-          }, 100);
+          }, 50);
         }, 2000);
       });
 
@@ -430,52 +404,13 @@ document.addEventListener('DOMContentLoaded', function() {
   setupLinkPreviews();
 
   // Set up a MutationObserver to handle dynamically added links
-  const observer = new MutationObserver(function(mutations) {
-    // Only run if we're in the main window, not in an iframe
+  const observer = new MutationObserver(function() {
     if (window.self === window.top) {
       setupLinkPreviews();
     }
   });
 
-  // Start observing the document with the configured parameters
   observer.observe(document.body, { childList: true, subtree: true });
-
-  // When iframe is loaded, make sure to prevent any link previews inside it
-  iframe.addEventListener('load', function() {
-    try {
-      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-      // Add a script to the iframe to prevent link previews
-      const script = iframeDoc.createElement('script');
-      script.textContent = `
-        // Set global flag to prevent link previews
-        window.linkPreviewOpen = true;
-
-        // Disable all link clicks
-        document.addEventListener('click', function(e) {
-          if (e.target.tagName === 'A' || e.target.closest('a')) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log("Link click prevented in iframe");
-            return false;
-          }
-        }, true);
-      `;
-      iframeDoc.body.appendChild(script);
-
-      // Add CSS to disable pointer events on all links
-      const style = iframeDoc.createElement('style');
-      style.textContent = `
-        a {
-          pointer-events: none !important;
-          cursor: default !important;
-        }
-      `;
-      iframeDoc.head.appendChild(style);
-    } catch (e) {
-      console.log("Could not access iframe content due to cross-origin policy:", e);
-    }
-  });
 });
 
 
