@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         padding-right: 10px;
       "></div>
 
-      <div style="flex: 1; display: flex; justify-content: center;">
+      <div style="flex: 1; display: flex; justify-content: center; gap: 10px;">
         <button id="preview-open-button" style="
           background: #333;
           color: #ddd;
@@ -100,6 +100,22 @@ document.addEventListener('DOMContentLoaded', function() {
         ">
           <span style="font-size: 15px; font-weight: bold;">⧉</span>
           <span>Open in New Tab</span>
+        </button>
+
+        <button id="preview-open-current-button" style="
+          background: #333;
+          color: #ddd;
+          border: none;
+          border-radius: 4px;
+          padding: 5px 12px;
+          font-size: 13px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        ">
+          <span style="font-size: 15px; font-weight: bold;">↗</span>
+          <span>Open in Current Tab</span>
         </button>
       </div>
 
@@ -181,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const titleText = previewContainer.querySelector('.preview-title-text');
   const closeButton = document.getElementById('preview-close-button');
   const openButton = document.getElementById('preview-open-button');
+  const openCurrentButton = document.getElementById('preview-open-current-button');
   const iframe = document.getElementById('preview-iframe');
   const loadingIndicator = document.getElementById('loading-indicator');
 
@@ -199,6 +216,15 @@ document.addEventListener('DOMContentLoaded', function() {
     this.style.color = '#fff';
   };
   openButton.onmouseout = function() { 
+    this.style.background = '#333'; 
+    this.style.color = '#ddd';
+  };
+
+  openCurrentButton.onmouseover = function() { 
+    this.style.background = '#555'; 
+    this.style.color = '#fff';
+  };
+  openCurrentButton.onmouseout = function() { 
     this.style.background = '#333'; 
     this.style.color = '#ddd';
   };
@@ -222,6 +248,13 @@ document.addEventListener('DOMContentLoaded', function() {
   openButton.addEventListener('click', function() {
     if (currentLink) {
       window.open(currentLink.href, '_blank');
+    }
+  });
+
+  // Open in current tab button event
+  openCurrentButton.addEventListener('click', function() {
+    if (currentLink) {
+      window.location.href = currentLink.href;
     }
   });
 
