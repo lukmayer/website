@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Clear any existing timeout
       if (previewTimeout) clearTimeout(previewTimeout);
 
-      // Set delay before showing preview (500ms)
+      // Set delay before showing preview (1000ms)
       previewTimeout = setTimeout(() => {
         // Create a new preview container for this link
         const currentPreview = createPreviewContainer();
@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           };
         }, 100);
-      }, 500);
+      }, 1000);
     });
 
     // Clear timeout when mouse leaves, but don't hide the preview
