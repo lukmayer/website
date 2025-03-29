@@ -29,6 +29,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // pop-up link preview
 document.addEventListener('DOMContentLoaded', function() {
+  // Normalize the current page URL: remove hash and handle index.html
+  let currentPageUrl = window.location.href.split('#')[0];
+  // Remove index.html from the end if present
+  currentPageUrl = currentPageUrl.replace(/\/index\.html$/, '/');
+  // Ensure URL ends with trailing slash for consistency
+  if (!currentPageUrl.endsWith('/')) {
+    currentPageUrl += '/';
+  }
+
+  console.log("Normalized current page URL:", currentPageUrl);
+
   // Create preview container
   const previewContainer = document.createElement('div');
   previewContainer.className = 'link-preview-container';
@@ -70,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   previewContainer.appendChild(titleBar);
 
-  // Create close button - now positioned relative to the title bar
+  // Create close button - positioned relative to the title bar
   const closeButton = document.createElement('div');
   closeButton.className = 'preview-close-button';
   closeButton.style.cssText = `
@@ -168,9 +179,8 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   titleBar.appendChild(spacer);
 
-  // Create iframe container (dark background that will show during loading)
+  // Create iframe container
   const iframeContainer = document.createElement('div');
-  iframeContainer.className = 'iframe-container';
   iframeContainer.style.cssText = `
     width: 100%;
     height: calc(100% - 40px);
@@ -180,23 +190,18 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   previewContainer.appendChild(iframeContainer);
 
-  // Create iframe inside container with transparent background
-  const previewFrame = document.createElement('iframe');
-  previewFrame.style.cssText = `
+  // Create iframe
+  const iframe = document.createElement('iframe');
+  iframe.style.cssText = `
     width: 100%;
     height: 100%;
     border: none;
-    background: transparent;
-    z-index: 9999;
+    background: #1e1e1e;
   `;
-
-  // Add a special attribute to help with styling
-  previewFrame.setAttribute('allowtransparency', 'true');
-  iframeContainer.appendChild(previewFrame);
+  iframeContainer.appendChild(iframe);
 
   // Add loading indicator
   const loadingIndicator = document.createElement('div');
-  loadingIndicator.className = 'preview-loading';
   loadingIndicator.style.cssText = `
     position: absolute;
     top: 50%;
@@ -228,228 +233,112 @@ document.addEventListener('DOMContentLoaded', function() {
   loadingText.textContent = 'Loading preview...';
   loadingIndicator.appendChild(loadingText);
 
-  // Add spinner animation and iframe styling
+  // Add spinner animation
   const style = document.createElement('style');
   style.textContent = `
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
-    /* Ensure our elements are always on top */
-    .link-preview-container {
-      z-index: 10000 !important;
-    }
-
-    .preview-close-button {
-      z-index: 10001 !important;
-    }
-
-    /* Dark mode for iframe content */
-    iframe.dark-mode-iframe {
-      background-color: #1e1e1e !important;
-    }
-
-    /* Button focus styles */
-    .preview-open-button:focus {
-      outline: 2px solid #777;
-    }
   `;
   document.head.appendChild(style);
 
   iframeContainer.appendChild(loadingIndicator);
 
-  // Track current link being previewed
+  // Track current link and timeout
+  let currentLink = null;
   let previewTimeout = null;
-  let activePreviewContainers = [];
 
-  // Close button event handler
+  // Close button event
   closeButton.addEventListener('click', function() {
     previewContainer.style.display = 'none';
-    previewFrame.src = 'about:blank';
+    iframe.src = 'about:blank';
+    currentLink = null;
+  });
 
-    // Remove from active previews
-    const index = activePreviewContainers.indexOf(previewContainer);
-    if (index > -1) {
-      activePreviewContainers.splice(index, 1);
+  // Open in new tab button event
+  openButton.addEventListener('click', function() {
+    if (currentLink) {
+      window.open(currentLink.href, '_blank');
     }
   });
 
-  // Function to create a new preview container
-  function createPreviewContainer() {
-    const newContainer = previewContainer.cloneNode(true);
-    document.body.appendChild(newContainer);
-
-    // Set up close button for the new container
-    const newCloseButton = newContainer.querySelector('.preview-close-button');
-    newCloseButton.addEventListener('click', function() {
-      newContainer.style.display = 'none';
-      newContainer.querySelector('iframe').src = 'about:blank';
-
-      // Remove from active previews
-      const index = activePreviewContainers.indexOf(newContainer);
-      if (index > -1) {
-        activePreviewContainers.splice(index, 1);
-      }
-    });
-
-    // Add hover effect for the new close button
-    newCloseButton.onmouseover = function() { 
-      this.style.background = '#555'; 
-      this.style.color = '#fff';
-    };
-    newCloseButton.onmouseout = function() { 
-      this.style.background = '#333'; 
-      this.style.color = '#ddd';
-    };
-
-    // Set up open button for the new container
-    const newOpenButton = newContainer.querySelector('.preview-open-button');
-
-    // Add hover effect for the new open button (matching close button)
-    newOpenButton.onmouseover = function() { 
-      this.style.background = '#555'; 
-      this.style.color = '#fff';
-    };
-    newOpenButton.onmouseout = function() { 
-      this.style.background = '#333'; 
-      this.style.color = '#ddd';
-    };
-
-    return newContainer;
-  }
-
-  // Function to inject dark mode styles into iframe
-  function injectDarkModeStyles(iframe) {
-    try {
-      // Wait for iframe to load
-      iframe.onload = function() {
-        try {
-          // Try to access iframe content
-          const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-          // Create a style element
-          const darkModeStyle = iframeDoc.createElement('style');
-          darkModeStyle.textContent = `
-            /* Dark mode override for iframe content */
-            body {
-              background-color: #1e1e1e !important;
-              color: #eee !important;
-            }
-          `;
-
-          // Append to iframe head
-          iframeDoc.head.appendChild(darkModeStyle);
-        } catch (e) {
-          // Cross-origin restrictions may prevent this
-          console.log("Could not inject styles into iframe due to cross-origin policy");
-        }
-      };
-    } catch (e) {
-      console.log("Error setting up iframe style injection:", e);
+  // Escape key to close
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && previewContainer.style.display === 'block') {
+      previewContainer.style.display = 'none';
+      iframe.src = 'about:blank';
+      currentLink = null;
     }
+  });
+
+  // Helper function to normalize URLs for comparison
+  function normalizeUrl(url) {
+    // Remove hash fragment
+    let normalized = url.split('#')[0];
+    // Remove index.html
+    normalized = normalized.replace(/\/index\.html$/, '/');
+    // Ensure trailing slash
+    if (!normalized.endsWith('/')) {
+      normalized += '/';
+    }
+    return normalized.toLowerCase(); // Convert to lowercase for case-insensitive comparison
   }
 
-  // Find all links within your domain
-  const links = document.querySelectorAll('a[href*="lukmayer.github.io"]');
+  // Find all links
+  const links = document.querySelectorAll('a[href]');
 
   links.forEach(link => {
-    // Show preview on hover after a short delay
-    link.addEventListener('mouseenter', function(e) {
+    // Show preview on hover
+    link.addEventListener('mouseenter', function() {
       // Clear any existing timeout
-      if (previewTimeout) clearTimeout(previewTimeout);
+      if (previewTimeout) {
+        clearTimeout(previewTimeout);
+      }
 
-      // Set delay before showing preview (1000ms)
+      // Normalize the link URL for comparison
+      const normalizedLinkUrl = normalizeUrl(link.href);
+
+      console.log("Comparing:", normalizedLinkUrl, "with", currentPageUrl);
+
+      // Skip if link points to current page (after normalization)
+      if (normalizedLinkUrl === currentPageUrl) {
+        console.log("MATCH - Skipping preview for:", link.href);
+        return;
+      }
+
+      // Set timeout for preview (1 second delay)
       previewTimeout = setTimeout(() => {
-        // Create a new preview container for this link
-        const currentPreview = createPreviewContainer();
-        activePreviewContainers.push(currentPreview);
+        console.log("Opening preview for:", link.href);
+        currentLink = link;
 
-        // Show loading indicator
-        const currentLoadingIndicator = currentPreview.querySelector('.preview-loading');
-        currentLoadingIndicator.style.display = 'flex';
-        currentPreview.style.display = 'block';
-
-        // Set title in the title bar
-        const titleText = currentPreview.querySelector('.preview-title-text');
+        // Set title
         titleText.textContent = link.textContent || link.href;
 
-        // Set up open in new tab button
-        const openButton = currentPreview.querySelector('.preview-open-button');
-        openButton.addEventListener('click', function() {
-          window.open(link.href, '_blank');
-        });
+        // Show container and loading indicator
+        previewContainer.style.display = 'block';
+        loadingIndicator.style.display = 'flex';
 
-        // Get the iframe in this container
-        const currentFrame = currentPreview.querySelector('iframe');
-        currentFrame.classList.add('dark-mode-iframe');
-
-        // Create a dark background before loading
-        const iframeContainer = currentPreview.querySelector('.iframe-container');
-        iframeContainer.style.backgroundColor = '#1e1e1e';
-
-        // Set up a dark background page first
-        currentFrame.src = 'about:blank';
-
-        // Try to inject dark styles into the blank page
-        try {
-          const iframeDoc = currentFrame.contentDocument || currentFrame.contentWindow.document;
-          iframeDoc.documentElement.style.backgroundColor = '#1e1e1e';
-          iframeDoc.body.style.backgroundColor = '#1e1e1e';
-        } catch (e) {
-          console.log("Could not set initial iframe background");
-        }
-
-        // After a short delay, load the actual URL
+        // Load URL in iframe
+        iframe.src = 'about:blank'; // Start with blank page
         setTimeout(() => {
-          // Load the URL in the iframe
-          currentFrame.src = link.href;
-
-          // Try to inject dark mode styles
-          injectDarkModeStyles(currentFrame);
+          iframe.src = link.href; // Then load actual URL
 
           // Hide loading indicator when iframe loads
-          currentFrame.onload = function() {
-            currentLoadingIndicator.style.display = 'none';
-
-            // Try again to inject dark mode styles after load
-            try {
-              const iframeDoc = currentFrame.contentDocument || currentFrame.contentWindow.document;
-              const darkModeStyle = iframeDoc.createElement('style');
-              darkModeStyle.textContent = `
-                /* Dark mode override for iframe content */
-                body {
-                  background-color: #1e1e1e !important;
-                  color: #eee !important;
-                }
-              `;
-              iframeDoc.head.appendChild(darkModeStyle);
-            } catch (e) {
-              // Cross-origin restrictions may prevent this
-              console.log("Could not inject styles after load");
-            }
+          iframe.onload = function() {
+            loadingIndicator.style.display = 'none';
           };
         }, 100);
       }, 1000);
     });
 
-    // Clear timeout when mouse leaves, but don't hide the preview
+    // Clear timeout on mouse leave
     link.addEventListener('mouseleave', function() {
-      if (previewTimeout) clearTimeout(previewTimeout);
+      if (previewTimeout) {
+        clearTimeout(previewTimeout);
+      }
     });
   });
-
-  // Add keyboard shortcut to close all previews (Escape key)
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      activePreviewContainers.forEach(container => {
-        container.style.display = 'none';
-        container.querySelector('iframe').src = 'about:blank';
-      });
-      activePreviewContainers = [];
-    }
-  });
 });
-
 
 </script>
