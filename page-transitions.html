@@ -245,15 +245,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   iframeContainer.appendChild(loadingIndicator);
 
-  // Track current link and timeout
+  // Track current link, timeout, and popup state
   let currentLink = null;
   let previewTimeout = null;
+  let isPopupOpen = false; // Track if a popup is currently open
 
   // Close button event
   closeButton.addEventListener('click', function() {
     previewContainer.style.display = 'none';
     iframe.src = 'about:blank';
     currentLink = null;
+    isPopupOpen = false; // Update popup state
+    console.log("Popup closed");
   });
 
   // Open in new tab button event
@@ -269,6 +272,8 @@ document.addEventListener('DOMContentLoaded', function() {
       previewContainer.style.display = 'none';
       iframe.src = 'about:blank';
       currentLink = null;
+      isPopupOpen = false; // Update popup state
+      console.log("Popup closed with Escape key");
     }
   });
 
@@ -285,15 +290,39 @@ document.addEventListener('DOMContentLoaded', function() {
     return normalized.toLowerCase(); // Convert to lowercase for case-insensitive comparison
   }
 
+  // Helper function to check if an element is inside the preview container
+  function isInsidePreview(element) {
+    let current = element;
+    while (current) {
+      if (current === previewContainer) {
+        return true;
+      }
+      current = current.parentElement;
+    }
+    return false;
+  }
+
   // Find all links
   const links = document.querySelectorAll('a[href]');
 
   links.forEach(link => {
     // Show preview on hover
-    link.addEventListener('mouseenter', function() {
+    link.addEventListener('mouseenter', function(e) {
       // Clear any existing timeout
       if (previewTimeout) {
         clearTimeout(previewTimeout);
+      }
+
+      // Skip if a popup is already open
+      if (isPopupOpen) {
+        console.log("Popup already open, skipping new preview");
+        return;
+      }
+
+      // Skip if this link is inside a preview container
+      if (isInsidePreview(link)) {
+        console.log("Link is inside preview, skipping nested preview");
+        return;
       }
 
       // Skip empty links, javascript: links, or anchor-only links
@@ -313,16 +342,16 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Fix for homepage: Don't skip links that point to subpages
-      // If we're on the homepage and the link points to a subpage, show the preview
       const isHomepage = window.location.pathname === '/' || 
                          window.location.pathname === '/index.html';
       const isSubpage = normalizedLinkUrl.includes(window.location.hostname + '/') && 
                         normalizedLinkUrl !== normalizeUrl(window.location.origin + '/');
 
-      // Set timeout for preview (3 second delay)
+      // Set timeout for preview (2 second delay)
       previewTimeout = setTimeout(() => {
         console.log("Opening preview for:", link.href);
         currentLink = link;
+        isPopupOpen = true; // Update popup state
 
         // Set title
         titleText.textContent = link.textContent || link.href;
@@ -339,9 +368,26 @@ document.addEventListener('DOMContentLoaded', function() {
           // Hide loading indicator when iframe loads
           iframe.onload = function() {
             loadingIndicator.style.display = 'none';
+
+            // Disable all links inside the iframe to prevent nested popups
+            try {
+              const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+              // Add a style to disable pointer events on all links
+              const disableLinksStyle = iframeDoc.createElement('style');
+              disableLinksStyle.textContent = `
+                a { 
+                  pointer-events: none !important;
+                  cursor: default !important;
+                }
+              `;
+              iframeDoc.head.appendChild(disableLinksStyle);
+            } catch (e) {
+              console.log("Could not disable links in iframe due to cross-origin policy");
+            }
           };
         }, 100);
-      }, 2000); // Changed to 3000ms (3 seconds) delay
+      }, 2000); // Changed to 2000ms (2 seconds) delay
     });
 
     // Clear timeout on mouse leave
@@ -350,6 +396,28 @@ document.addEventListener('DOMContentLoaded', function() {
         clearTimeout(previewTimeout);
       }
     });
+  });
+
+  // When iframe is loaded, we need to prevent links inside it from opening new popups
+  iframe.addEventListener('load', function() {
+    try {
+      // Try to access iframe content (may fail due to cross-origin policy)
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+      // Find all links in the iframe
+      const iframeLinks = iframeDoc.querySelectorAll('a[href]');
+
+      // Disable click events on all links
+      iframeLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log("Link click prevented in iframe");
+          return false;
+        });
+      });
+    } catch (e) {
+      console.log("Could not access iframe content due to cross-origin policy");
+    }
   });
 });
 
