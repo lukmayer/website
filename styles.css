@@ -183,7 +183,7 @@ ol > li::marker {
 
 /* Inactive tabs hover effect */
 .nav-tabs .nav-link:hover {
-    border-color: white; /* White border on hover */
+    border-color: none; /* White border on hover */
 }
 
 
