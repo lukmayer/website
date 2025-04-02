@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggleButton = document.createElement('button');
   toggleButton.textContent = 'Toggle Blackboard';
   toggleButton.style.position = 'fixed';
-  toggleButton.style.bottom = '20%';
+  toggleButton.style.bottom = '10%';
   toggleButton.style.left = '20px';
   toggleButton.style.zIndex = '1000';
   toggleButton.style.padding = '10px';
