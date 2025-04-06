@@ -24,6 +24,9 @@ What's that good for?
 Well, suppose you are at a conference or something, and the "Oh god do I have the right adaptor for this unknown computer?!?" fear strikes you again. 
 Using multiplex, you could just access your slides by browsing to your website with the unknown computer, and use your phone or another device to control the slides. Assuming internet connectivity, no compatibility issues, guaranteed. Also, everyone will recognize you for being very cool, indeed.
 
+
+## Demo
+
 Curious? Here's an example slide deck:
 
 <iframe src="../../../presentations/multiplex.html" width="800" height="600" frameborder="0" allowfullscreen>
@@ -35,7 +38,7 @@ There is one downside to this, which is that the chalkboard plugin does not sync
 
 \
 
-## Do it yourself
+## How to set it up
 
 1. Create a revealjs presentation with a YAML header that includes:
 
