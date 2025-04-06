@@ -1,0 +1,78 @@
+---
+title: "Example"
+format: 
+  revealjs:
+    multiplex: true
+    navigation-mode: linear 
+    incremental: true
+    theme: [blood, custom.scss]
+
+    logo: logo.png
+    #footer: "Footer text"
+    #background-image: "ridges.jpg"
+    
+    
+    background-size: scale
+    background-transition: slide
+    slide-number: true
+    show-slide-number: all
+    chalkboard: true
+    chalk-width: 3
+    chalk-effect: 0.0
+    # embed-resources: true #not compatible with chalkboard
+    transition: slide
+
+    verticator:
+      themetag: 'h1'
+      color: ''
+      inversecolor: ''
+      skipuncounted: false
+      clickable: true
+      position: 'auto'
+      offset: '3vmin'
+      autogenerate: true
+      tooltip: false
+      scale: 1
+
+    excalidraw:
+      button: false
+      shortcut: "#"
+      theme: "dark"
+
+#title-slide-attributes:
+    #data-background-image: nets_bw.png
+
+revealjs-plugins:
+  - verticator
+  - excalidraw
+---
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;"}
+:::
+::::::
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+:::::: r-stack
+::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
+:::
+
+::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
+:::
+::::::
+
+# Some math
+
+$$ \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$

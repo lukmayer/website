@@ -1,0 +1,76 @@
+---
+title: "How to remote control a Quarto presentation"
+description: "An intro to RevealJS with Multiplex"
+author: "Luke"
+date: "2025-04-05"
+categories:
+  - quarto
+image: "images/quarto_logo.jpg"
+comments:
+  giscus:
+    repo: lukmayer/site_comments
+    theme: dark
+    mapping: url
+    reactions-enabled: true
+---
+
+
+The Quarto documentation for RevealJS presentations has a little section on how to set up [Multiplex](https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex). The way it works is that RevealJS automatically creates a server hosted by the RevealJS team that syncs the slide change events (they do not see the slide content). The stated premise for this feature is that other people can view your slides on their devices, with the slideshow advancing in sync with the speaker. 
+
+To be honest, I did not see why anyone would want that. Surely your audience would be better off being able to go back and forth through the slides at their own pace? 
+
+But then, a few days ago, a little lightbulb went off in my head. I basically realized that this feature could be used to remote control a presentation. 
+What's that good for? 
+Well, suppose you are at a conference or something, and the "Oh god do I have the right adaptor for this unknown computer?!?" fear strikes you again. 
+Using multiplex, you could just access your slides by browsing to your website with the unknown computer, and use your phone or another device to control the slides. Assuming internet connectivity, no compatibility issues, guaranteed. Also, everyone will recognize you for being very cool, indeed.
+
+Curious? Here's an example slide deck:
+
+<iframe src="../../../presentations/multiplex.html" width="800" height="600" frameborder="0" allowfullscreen>
+</iframe>
+
+If you click [here](../../../presentations/multiplex-speaker.html) on your phone or any other device, you will be able to control above slides. 
+
+There is one downside to this, which is that the chalkboard plugin does not sync over multiplex. So you could draw on your slides, but noone else would see it (unless you do the drawing on that unknown computer).
+
+\
+
+## Do it yourself
+
+1. Create a revealjs presentation with a YAML header that includes:
+
+```yaml
+format: 
+  revealjs:
+    multiplex: true
+```
+
+2. Render the presentation with `quarto render <your_presentation>.qmd`. You will now have a file called `<your_presentation>-speaker.html` in your source directory.
+
+
+3. Open your presentation on the computer that everyone will see.
+4. Open the `<your_presentation>-speaker.html` file on your phone or another device.
+
+For making the last two steps easy, here's what I did for the example above:
+
+```html
+<iframe
+ src="../../../presentations/multiplex.html" width="800" height="600" frameborder="0" allowfullscreen>
+</iframe>
+```
+
+and then simply linking to the speaker view on the same page:
+
+```md
+[here](../../../presentations/multiplex-speaker.html)
+```
+::: {.aside}
+Pro-tip: `../` is used to navigate up a directory, since you need to navigate from the site where you want to show the presentation to where the presentation actually lives. 
+:::
+
+
+---
+
+Hope this is helpful! Feel free to check out [my source files](https://github.com/lukmayer/website) if you're still confused.
+
+
