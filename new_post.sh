@@ -28,23 +28,30 @@ FULL_FILENAME="${FILENAME}.qmd"
 # Get the current date in ISO 8601 format (YYYY-MM-DD)
 CURRENT_DATE=$(date +%Y-%m-%d)
 
-# Create the .qmd file and insert the YAML header
-# Using printf for potentially better compatibility than heredoc in some shells
-printf -- "---\n" > "$FULL_FILENAME"
-printf "title: \"\"\n" >> "$FULL_FILENAME"
-printf "description: \"\"\n" >> "$FULL_FILENAME"
-printf "author: \"Luke\"\n" >> "$FULL_FILENAME"
-printf "date: \"%s\"\n" "$CURRENT_DATE" >> "$FULL_FILENAME"
-printf "#categories:\n" >> "$FULL_FILENAME"
-printf "# - quarto\n" >> "$FULL_FILENAME"
-printf "\n" >> "$FULL_FILENAME"
-printf "comments:\n" >> "$FULL_FILENAME"
-printf "  giscus:\n" >> "$FULL_FILENAME"
-printf "    repo: lukmayer/site_comments\n" >> "$FULL_FILENAME"
-printf "    theme: dark\n" >> "$FULL_FILENAME"
-printf "    mapping: url\n" >> "$FULL_FILENAME"
-printf "    reactions-enabled: true\n" >> "$FULL_FILENAME"
-printf "---\n" >> "$FULL_FILENAME"
+# Create the .qmd file and insert the YAML header using a heredoc
+cat << EOF > "$FULL_FILENAME"
+---
+title: ""
+description: ""
+author: "Luke"
+date: "$CURRENT_DATE"
+#categories:
+# - quarto
+
+comments:
+  giscus:
+    repo: lukmayer/site_comments
+    theme: dark
+    mapping: url
+    reactions-enabled: true
+---
+EOF
+
+# Optional: Check if the heredoc write was successful
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to write to '$FULL_FILENAME'."
+    exit 1
+fi
 
 echo "File '$FULL_FILENAME' created successfully in '$PWD'."
 
