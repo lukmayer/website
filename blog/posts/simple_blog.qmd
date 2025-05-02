@@ -1,0 +1,21 @@
+---
+title: "Simplifying my site"
+description: "K.I.S.S."
+author: "Luke"
+date: "2025-05-01"
+#categories:
+# - quarto
+
+comments:
+  giscus:
+    repo: lukmayer/site_comments
+    theme: dark
+    mapping: url
+    reactions-enabled: true
+---
+
+I noticed that I don't post as regularly as I used to. I think this is due to me turning a lot of the blog posts into mini-projects. Believe it or not, but I usually spend the better part of a day on one post. Sometimes it takes up the whole weekend. I seem to have reached a point where I have an idea but don't feel it's big enough to warrant a full post. Then there's also some of the file management stuff that I don't particularly enjoy, like collecting the images and setting up the post in my site directories. It's all just a bit too much friction. So I decided to take inspiration from many of the blogs I read, which is to just keep it dead simple. 
+
+I've cut out a lot of the "Schnick-Schnack" and just kept the old content as is. I've also created a little shell script to help me create new posts more easily. All of this so that I can move on to more casual writing, where I'll post whatever popped into my mind without worrying about its grandeur. I think I'll also create a Now page. I like how they contrast the static and more curated feel of a personal website.  
+
+Here goes the first post in this new format!

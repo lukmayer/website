@@ -35,17 +35,16 @@ website:
         menu:
           - research/research_interests/index.qmd
           - research/publications/index.qmd
-      - href: cv/index.qmd
-        text: "CV"
       - href: blog/index.qmd
         text: "Blog"
+      - href: now/index.qmd
+        text: "Now"
       - text: "About"
         menu: 
           - about/bio/index.qmd
           - about/hobbies/index.qmd
-      - text: "Misc"
-        menu:
-          - misc/blackboard/index.qmd
+          - about/cv/index.qmd
+
     right:
       - text: "Login"
         href: https://lukmayer.github.io/login_portal/

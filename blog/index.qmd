@@ -1,15 +1,13 @@
 ---
 title: "Blog"
-description: "Lukas Mayer's personal blog - tech tips, life-style recommendations, software development, research, data science"
+description: "Lukas Mayer's personal blog"
 listing:
   id: main-listing
   type: grid
-  grid-columns: 3
-  fields: [image, date, title, description, reading-time, categories]
+  grid-columns: 1
+  fields: [date, title, description]
   contents: posts
   sort: "date desc"
-  sort-ui: [title, date, reading-time]
-  filter-ui: [title, date, categories]
   categories: numbered
   feed: true
   page-size: 6
