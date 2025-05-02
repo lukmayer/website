@@ -1,6 +1,6 @@
 ---
 title: "Now"
-description: "Lukas Mayer's personal blog"
+description: "What I'm up to right now"
 format: 
   html:
     grid:
