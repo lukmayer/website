@@ -1,0 +1,55 @@
+---
+title: "Whether we have free will or not should be inconsequential"
+description: "Scientific findings should not always influence institutional practice"
+author: "Luke"
+date: "2025-05-02"
+categories:
+ - phd
+
+comments:
+  giscus:
+    repo: lukmayer/site_comments
+    theme: dark
+    mapping: url
+    reactions-enabled: true
+---
+
+I'm currently taking a class on Consciousness. Today's topic was around some of the research evidence against free will, and whether free will is possible if true randomness exists (apparently it does).
+
+The discussion was interesting and got me thinking. I noticed a lot of my peers, all PhD students, some in Bio-engineering, some in Cognitive Science, seemed to neither fully subscribe to determinism nor to free will, instead questioning or reframing how free will is defined. 
+
+To be honest, I was completely comfortable with (hard) determinism going into the class, so I was suprised that many tried to find a middle ground. 
+
+After a bit of thought, I think I have a theory for why. People doing research in biology and Cognitive Science certainly do not think of the systems they are studying as magically operating outside the constraints the material world. For example, a core belief in Cognitive Science is that the brain implements thought (among other things) through computation. And this computation can be reverse-engineered. It's just that the brain is mega ultra super complicated, so we have a hard time understanding what's going on beyond highly-controlled lab settings. So beliefs about determinism basically come with the job. 
+
+At the same time, academic circles almost universally hold views that would certainly reject the grim, reductive description of human experience that hard determinism implies. So I think the gut reaction is that we do not like dehumanizing ourselves and other people by denouncing free will. I suppose it's similar to how thinking about the unavoidability one's own death can become seriously uncomfortable, leading one to look for a resolution with which we can sleep at night. And I think it's awesome that we have this instinctive reaction to hold ourselves (collectively) to a high standard!
+
+I also don't mean to claim to be free of this bias in the slightest. If anything, I just separated professional and personal beliefs during that discussion. That being said, there were some people in the class who very adament about there being free will rather than looking for a compromise, so my theory definitely does not apply to everyone either. 
+
+Either way, all of this got me thinking about what we should do if one day, science were to say "Without any doubt, free will does not exist." or maybe the inverse of that staement. Should we re-design our societies depending on which side of the question the answer falls?
+
+In short, I think the answer ought to be "**No**".
+
+Simply put, the way we treat each other should not depend on the answer to this question at all. 
+
+I think my thinking here is influenced by my interpretation of the spirit in which the first article of the German constitution was written. 
+
+Verbatim, §1 reads: 
+
+> "Die Würde des Menschen ist unantastbar".
+
+In English (translation approximate rather than literal): 
+
+> "The dignity of the person is inviolable".
+
+To me, my interpretation of this paragraph aligns with the gut reaction I described above, that we ought to treat each other with dignity and so refrain from dehumanizing each other via a reductive interpreation of human nature. So despite what some businessmen who frequent news headlines more than I appreciate seem to think, I opine that empathy is not a weakness.  
+
+So how should we structure the systems of our societies given that we want to treat each other with dignity? Having free will implies full accountability for one's actions. Not having free will implies that we essentially have no control over our actions. This poses a problem when you want to figure out what dignified treatment implies. While the question of how to structure society is not one I am qualified to answer, I will give my two cents.
+
+My answer is inspired by the Fundamental Attribution Error, a well known effect in psychology. The Fundamental Attribution Error states that we tend to attribute the mistakes of others to their character, while we attribute our own mistakes to the circumstances we happened to find ourselves in.
+
+With a similar dualism in mind, I have come to think that we ought to treat each other as if we have free will in light of accomplishments, while treating each other as if we do not have *full* free will in light of mistakes.
+
+To me, this resolution appears maximally compliant with my interpretation of dignified treatment. It seems to align with Christian beliefs around the forgiveness of sins. It also addresses that internal conflict I described, where we want to hold ourselves to a high standard, while also recognizing that circumstance can play a significant role in how we ultimately act. 
+
+In conclusion, I'm a hobby philosopher now. I hope you enjoyed. 
