@@ -43,7 +43,7 @@ My favorite part feature is the ability to navigate links, scroll, and open new 
 
 ## Tampermonkey
 
-Like Vimium C, [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) is an extension that appeals to programmers. It simply allows you to automatically inject some JavaScript code into any website. At first regard, this seems ridicously niche. But hear me out, I'll give some examples to show why it's extremely useful. 
+Like Vimium C, [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) is an extension whose idea appeals to programmers. It simply allows you to automatically inject some JavaScript code into any website. At first regard, this seems ridicously niche. But hear me out, I'll give some examples to show why it's extremely useful. 
 
 So as you know, I use an Ad-blocker. Youtube recently has taken a lot of issue with ad-blockers. So what they recently started doing is to pause your video from playing to show a message that basically says "Adblockers are not allowed on Youtube" and this message can only be dismissed after a timer runs out. Every detail of this design is meant to be annoying, and I'm simply not going to disable my ad-blocker. 
 
