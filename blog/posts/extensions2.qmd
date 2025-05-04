@@ -23,7 +23,7 @@ In this post, I'll share some other extensions I really like that have more nich
 
 ## PDF Reader
 
-My browser of choice, Vivaldi, is based on Chromium, the open-source code component of Google's Chrome browser. As far as I am aware, all Chromium-based browsers (including Chrome itself) use a very bare-bones PDF reader with the single exception of Microsoft Edge. There was a period of time where I used Edge for the sole reason that it had a really powerful PDF reader that allowed you to highlight text and add comments.
+My browser of choice, [Vivaldi](https://vivaldi.com), is based on Chromium, the open-source code component of Google's Chrome browser. As far as I am aware, all Chromium-based browsers (including Chrome itself) use a very bare-bones PDF reader with the single exception of Microsoft Edge. There was a period of time where I used Edge for the sole reason that it had a really powerful PDF reader that allowed you to highlight text and add comments.
 
 Of course, thanks to extensions we can simply replace the rather useless PDF reader your favorite browser comes with. Adobe has an extension that serves this purpose, but like all Adobe products it heavily nudges you to pay for a subscription, and has a questionable privacy policy.
 
