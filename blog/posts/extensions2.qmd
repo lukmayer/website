@@ -1,0 +1,55 @@
+---
+title: "More awesome browser extensions"
+description: "Better pdfs, website navigation via keyboard, website code injection"
+author: "Luke"
+date: "2025-05-03"
+categories:
+ - extensions
+
+comments:
+  giscus:
+    repo: lukmayer/site_comments
+    theme: dark
+    mapping: url
+    reactions-enabled: true
+---
+
+
+I previously wrote about some extensions I use to [block ads, reduce the addictiveness of sites like Reddit and Youtube](https://lukmayer.github.io/blog/posts/essentials.html), and improve my experience on [Duolingo](https://lukmayer.github.io/blog/posts/duolingo2.html). 
+
+In this post, I'll share some other extensions I really like that have more niche applications.
+
+\
+
+## PDF Reader
+
+My browser of choice, Vivaldi, is based on Chromium, the open-source code component of Google's Chrome browser. As far as I am aware, all Chromium-based browsers (including Chrome itself) use a very bare-bones PDF reader with the single exception of Microsoft Edge. There was a period of time where I used Edge for the sole reason that it had a really powerful PDF reader that allowed you to highlight text and add comments.
+
+Of course, thanks to extensions we can simply replace the rather useless PDF reader your favorite browser comes with. Adobe has an extension that serves this purpose, but like all Adobe products it heavily nudges you to pay for a subscription, and has a questionable privacy policy.
+
+So if you're ok with trading some additional privacy and sanity for something a little bit less powerful than Adobe's offering then I have something for you. One benefit of Mozilla developing Firefox as an open-source project is that their PDF reader is also open-source. It's no shock then that someone took Mozilla's PDF.js library and turned it into a Chrome extension. The extension is simply called "PDF Reader" on the Chrome Web Store, and can be found [here](https://chromewebstore.google.com/detail/pdf-reader/ieepebpjnkhaiioojkepfniodjmjjihl).
+
+It's pretty handy. One thing to keep in mind is that viewing pdfs from websites will open them in a local url, so you can't just copy the url from the address bar. Instead, you have to click a button in the top right corner of the PDF reader to save the link to the document. 
+
+
+## Vimium C
+
+Vim is a text editor that is very popular among programmers. It's known for its steep learning curve and powerful keyboard shortcuts. Vim keybindings are so popular that many applications offer them as an option. For example, many coding IDEs have a Vim mode (sometimes called Evil mode). [Vimium C](https://chromewebstore.google.com/detail/vimium-c-all-by-keyboard/hfjbmagddngcpeloejdejnfgbamkjaeg) is simply an extension that offers Vim mode for your browser[^1]. The keybindings are sometimes as expected, sometimes a little different due to the browser not being a text editor. But overall, if you know Vim, it's a treat to use.
+
+[^1]: "Vimium" (without the C) is definitely the OG Vim browser extension, but I prefer Vimium C because it has sligtly better looks, and slightly more features that I find useful. Vimium C is open-source.
+
+My favorite part feature is the ability to navigate links, scroll, and open new tabs all via very simply Keyboard shortcuts. For example, if you press `f`, a little overlay will appear that shows you a button combination you can press to open any link on the page. If you hold `shift`while pressing the buttons for a link, it will open the link in a new tab. If you want to use the keyboard shortcuts that a website has defined, you simply press `i` to enter insert mode, and then you don't have to worry about Vimium C interfering with the website's shortcuts. For scrolling, you can use the familiar `j` and `k` keys to scroll down and up, respectively. You can also use `h` and `l` to scroll left and right. This extension also has `u`and `d` for scrolling up and down a screen worth of content, and `gg` and `G` for scrolling to the top and bottom of the page, respectively. It feels awesome, especially when paired with Vivaldi, which already has pretty powerful keyboard shortcut options.
+
+
+## Tampermonkey
+
+Like Vimium C, [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) is an extension that appeals to programmers. It simply allows you to automatically inject some JavaScript code into any website. At first regard, this seems ridicously niche. But hear me out, I'll give some examples to show why it's extremely useful. 
+
+So as you know, I use an Ad-blocker. Youtube recently has taken a lot of issue with ad-blockers. So what they recently started doing is to pause your video from playing to show a message that basically says "Adblockers are not allowed on Youtube" and this message can only be dismissed after a timer runs out. Every detail of this design is meant to be annoying, and I'm simply not going to disable my ad-blocker. 
+
+So what did I do? I open the browser console, and copy the code of the element that contains the pop-up message. I ask an LLM to write a little script that removes the element from the page for Tampermonkey. I paste the code into Tampermonkey. Boom, no more annoying pop-ups. I could have probably written a script like this myself with a little tinkering, but what you should take away from my example is that you don't even have to be a coder anymore to use Tampermonkey. It took me less than 2 minutes to completely get rid of a "feature" that some developer at Youtube probabily spent weeks on refining to maximize ad money gains. That is seriously powerful.
+
+A second, less striking example is simply removing stuff from sites that I don't want to see. Much like the extensions I use to strip addictive features from Reddit and Youtube, I can use Tampermonkey to remove elements from any website, including those that don't receive enough attention to have a dedicated extension. For example, I personally don't care for the Trending section of Mastodon (called 'Explore'), because you can't run out of content to scroll there, unlike your home feed (I don't like "doom-scrolling"). So I simply wrote a Tampermonkey script that removes the button for the Explore page on the Mastodon instance I use.
+
+So essentially, every time you see a feature on a website that you don't like, you can use Tampermonkey to remove it. Nice.
+
