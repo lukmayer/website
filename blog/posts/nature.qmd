@@ -4,7 +4,7 @@ description: "On overthinking animal documentaries and human exceptionalism"
 author: "Luke"
 date: "2025-05-04"
 categories:
- - uncategorized
+ - life
 
 comments:
   giscus:
