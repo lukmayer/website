@@ -1,6 +1,6 @@
 ---
 title: "How I find interesting blogs to follow"
-description: "My *super* secret curated lists"
+description: "My *super secret* curated lists"
 author: "Luke"
 date: "2025-05-11"
 categories:
