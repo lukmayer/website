@@ -6,7 +6,9 @@ project:
 
 website:
   twitter-card: true
-  search: false
+  search: 
+    location: navbar
+    type: overlay
   back-to-top-navigation: true
   favicon: "assets/favicons/favicon.ico" 
   page-footer:
@@ -37,13 +39,12 @@ website:
           - research/publications/index.qmd
       - href: blog/index.qmd
         text: "Blog"
-      - href: now/index.qmd
-        text: "Now"
       - text: "About"
         menu: 
           - about/bio/index.qmd
           - about/hobbies/index.qmd
           - about/cv/index.qmd
+          - about/now/index.qmd
 
     right:
       - text: "Login"

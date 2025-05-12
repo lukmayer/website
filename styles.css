@@ -660,3 +660,12 @@ body div.sourceCode {
     background-color: #4a4a4a;
     color: #4caf50;
 }
+
+
+.aa-DetachedFormContainer .aa-Form .aa-InputWrapper .aa-Input {
+    background-color: #999999 !important; /* Light gray color */
+  }
+
+.aa-Autocomplete .aa-Form, .aa-DetachedFormContainer .aa-Form {
+    background-color: #999999 !important; 
+}
