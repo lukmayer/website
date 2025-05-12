@@ -1,0 +1,41 @@
+---
+title: "How I find interesting blogs to follow"
+description: ""
+author: "Luke"
+date: "2025-05-11"
+categories:
+ - rss
+
+comments:
+  giscus:
+    repo: lukmayer/site_comments
+    theme: dark
+    mapping: url
+    reactions-enabled: true
+---
+
+
+I've been using RSS feed readers for a while now, and it's definetely become my favorite way of keeping up with things. Why? Simply because it's so effortless.
+
+::: {.aside}
+If you don't know what RSS is, I've written about it previously [here](https://lukmayer.github.io/blog/posts/rss.html)
+:::
+
+With RSS I follow Blogs, YouTubers, Scientific Journals, Newsletters, Mastodon "tooters", and BlueSky "skeeters"! I don't even have an account with Youtube or Bluesky, and thanks to RSS I don't need one. In short, RSS is the universal subscribe button for many parts of the internet.
+
+
+Since RSS is just a standardized format for publishing website updates, rather than a platform, there is no recommendation of new content built in. This can be good in the sense that I do not have to scroll through "Recommended" content where it is questionable *who* finds the post at hand recommendable, like is the case with most big social media platforms. On the flipside, it can also be a disadvantage especially when first getting started with RSS feeds since you probably won't know what to follow.
+
+::: {.aside}
+Another thing I really appreciate is the complete lack of "trending" style content, which to me sometimes feels more like the billboard for rage-bait posts. Also, no ads, and since you'll only be following real people, no AI generated stuff.  
+:::
+
+I initially used RSS exclusively to follow scientific journals that were publishing in my topic area. Then I migrated my existing Youtube subscriptions. Only when I started looking into the Fediverse a bit, did I learn about tools people use for finding other content. Today, I want to share two of these.
+
+Both tools are simple feed recommenders. First up is [indieblog.page](https://indieblog.page), which is essentially a curated list of personal blogs. They offer RSS feeds for you to follow that will pick a set number of posts from these blogs and link them to you. So for example, every day I see 10 posts from random people pop up in my RSS feed from Indieblog. A lot of it is Software Engineers talking about some coding problem or hobby project that is beyond my appreciation, but a few times a week at least one of these random posts catch my interest. So if I see something interesting, I check out the rest of their site, and if it looks interesting I'll follow their blog. 
+
+Second is the [Kagi Small Web](https://kagi.com/smallweb) another curated list of web-blogs, maintained by the Kagi search engine folk. Here the design is a bit different. The interface shows one random, new blogpost from a site in the list. The UI let's you click through these, like them, and see what other people using the service like. There are filters for smaller YouTube channels, and comics. There is an RSS feed, but it will likely spam you to death since it will show all recent posts happening from the blogs in the list. I mostly use this when I am really bored and only have my phone, like when sitting on a bus or a waiting room. I simply cycle through until I see something interesting. If something seems worth following I'll save the URL somewhere so I can follow the site later.  
+
+
+If you're getting started with RSS or looking for new stuff, be sure to give these a spin.
+
