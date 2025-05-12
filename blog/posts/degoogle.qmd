@@ -76,7 +76,7 @@ The installation of GrapheneOs feels a little scary, but is fairly straightforwa
 I've only had minor hick-ups over 3 years of use, which were all largely due to my own ignorance.
 
 There are multiple other alternatives, but I feel they are unlikely to suit the needs of non-techy people.
-[Perhaps try using your phone less in general?](https://lukmayer.github.io/blog/posts/minimal/)
+[Perhaps try using your phone less in general?](https://lukmayer.github.io/blog/posts/minimal.html)
 
 \
 
@@ -91,7 +91,7 @@ Remarkably, many developers agree to this largely out of philosophical convictio
 There are some surprisingly good apps on here that might just be good enough for your purposes.
 So my suggestion would be to try to find something that works for you from F-Droid before downloading an app from Google Play.
 
-You could also try to [reduce your dependency on apps](https://lukmayer.github.io/blog/posts/minimal/#keeping-tabs-on-yourself) altogether.
+You could also try to [reduce your dependency on apps](https://lukmayer.github.io/blog/posts/minimal.html#keeping-tabs-on-yourself) altogether.
 
 \
 
@@ -130,7 +130,7 @@ You could also try [Firefox](https://www.mozilla.org/en-US/firefox/) and set you
 #### Social media
 
 I mostly use Social media to keep up with artists/creators, not to stay in touch with friends.
-If you are using it for maintaining friendships, maybe consider incorporating some of the tips from my post about [apps](https://lukmayer.github.io/blog/posts/minimal/#keeping-tabs-on-yourself), and [browser extensions](https://lukmayer.github.io/blog/posts/essentials/).
+If you are using it for maintaining friendships, maybe consider incorporating some of the tips from my post about [apps](https://lukmayer.github.io/blog/posts/minimal.html#keeping-tabs-on-yourself), and [browser extensions](https://lukmayer.github.io/blog/posts/essentials.html).
 
 In case you use socials for similar reasons as me, I recently wrote about [Mastodon](https://joinmastodon.org), which I whole-heartedly recommend.
 See my post for details.
