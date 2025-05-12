@@ -14,6 +14,7 @@ comments:
     reactions-enabled: true
 ---
 
+
 I've never been much into social media. There was a period where I used Instagram to follow my friends and artists I liked. Facebook I only used very briefly as an undergrad. Technically, I still have a Linkedin account that receives no attention from me. However, even back in my social media days I noticed the tendency of these platforms to show you stuff that will grab your attention whether you like it or not.
 
 
@@ -23,6 +24,7 @@ Since then, I've been exploring Fediverse platforms like Mastodon and Lemmy. But
 Essentially, I don't think popularity metrics are very useful for distinguishing between quality (where engagement comes through resonance with the audience) and rage-bait (where engagement comes from tricking people into boosing the metrics).
 I have a feeling that platforms which serve to make content creation as easy as possible will never be able to solve this, as accessibility necessarily induces more low-quality content. In other words, short-form text, photos, and video clip producers will always be incentivized to click-bait[^2]. 
 
+
 [^1]: I use these terms fairly liberally to basically encapsulate anything that is tailor-made to be attention-grabbing, like using very strong wording or misleading images.  
 
 
@@ -31,7 +33,9 @@ I have a feeling that platforms which serve to make content creation as easy as 
 
 I should say though, Mastodon can be made sane. It is up to you though. This is because Mastodon allows you to hide posts that contain keywords of your choosing. So you can maintain a list of keywords you classify as rage-baity in nature and so only see the stuff that's left after that. Of course, that requires some effort, continuous vigilance, and being ok with never seeing the false positives. If you want to use Mastodon, I would generally recommend being pretty liberal in your use of filter words.
 
+
 How to stop gaming of metrics? Simple, have no metrics. The problem of course is that noone would find a "Trending" tab that really is just a "Random" tab very worthwhile. "Popular" content is used to on-board new users and popularity is also used to make decisions about what to recommend. A social media platform that does away with inadvertedly incentivizing garbage by default would never be accessible enough to become main-stream.
+
 
 Is any of this unique to social media? Of course not. We could easily think of news outlets increasingly following a similar recipe. These trends towards maximum click-bait make me a bit worried about where democracies are headed, especially now with AI making influence campaigns nigh fully automatable. Until we have found a good way to address these problems, it's probably best you make sure you control what stuff is on your feed, and help your friends do the same. 
 
