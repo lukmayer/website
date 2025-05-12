@@ -20,7 +20,7 @@ comments:
 
 Duolingo has been my preferred language learning app for over 5 years now, simply due to its impressive scale and thoughtful design.
 It is still the best app for language learning in my opinion, given you are aware of its limits and put in the work to overcome them.
-I've discussed the Pros and Cons of Duolingo, and its evolution over the years in my [previous Duolingo post](https://lukmayer.github.io/blog/posts/duolingo/) - so for more background read that post.
+I've discussed the Pros and Cons of Duolingo, and its evolution over the years in my [previous Duolingo post](https://lukmayer.github.io/blog/posts/duolingo.html) - so for more background read that post.
 One pain point I have with the app is that its creators are monetizing the app more and more in the pursuit of profitability as a publicly traded company.
 Unfortunately, as a long time user I have therefore witnessed multiple major changes that I believe have made the user experience worse (rather than better) in specific ways.
 

@@ -27,7 +27,7 @@ format:
 -   While all the code in this post still works, I consider this post "outdated".
 -   I have learned a lot more about Quarto since writing this post, and would structure this guide differently today.
 -   For example, I would reconsider the whole "hosting" section, as it's not very beginner-friendly.
--   Check out my updated guide [here](https://lukmayer.github.io/blog/posts/quarto_template/index.html)
+-   Check out my updated guide [here](https://lukmayer.github.io/blog/posts/quarto_template.html)
 :::
 
 \

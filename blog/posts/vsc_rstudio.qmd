@@ -47,4 +47,4 @@ Behold the beauty!
 
 \
 
-[For information on how to set up R or Rmarkdown for VS Code, see this post.](https://lukmayer.github.io/blog/posts/r_vscode/)
+[For information on how to set up R or Rmarkdown for VS Code, see this post.](https://lukmayer.github.io/blog/posts/r_vscode.html)

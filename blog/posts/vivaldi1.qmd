@@ -52,7 +52,7 @@ So today I want to highlight the specific features of Vivaldi that allow you to 
 To this:
 
 ::: text-center
-![Lukas Mayer has a very minimal configuration of Vivaldi that does not compromise on functionality](assets/vivaldi.png){fig-cap="My Vivaldi"}
+![My minimal configuration of Vivaldi that does not compromise on functionality](assets/vivaldi.png){fig-cap="My Vivaldi"}
 :::
 
 You're probably looking at my screenshot and thinking "How do you do ... anything?".
