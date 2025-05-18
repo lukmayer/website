@@ -1,6 +1,6 @@
 ---
-title: "My struggle with social media"
-description: "Have we reached maximum click-bait yet?"
+title: "Have we reached maximum click-bait yet?"
+description: "My struggle with social media"
 author: "Luke"
 date: "2025-05-11"
 categories:
