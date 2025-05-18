@@ -1,0 +1,1 @@
+{"rule":"THAT_THAN","sentence":"^\\QThere's probably more that one could add to the list.\\E$"}

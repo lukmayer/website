@@ -44,6 +44,8 @@ comments:
     theme: dark
     mapping: url
     reactions-enabled: true
+
+draft: true
 ---
 EOF
 
