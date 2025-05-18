@@ -30,6 +30,8 @@ Microsoft products were typically much more customizable than Google's offerings
 These days, I really only have a few things left that have proven very sticky.
 For some things, my hands are simply tied. For example, my university compels me to use Gmail and Microsoft Teams for my work. If it wasn't for that my only use of Google products would be Google Voice because I have a VoIP number that I don't want to pay monthly for, and the Google Play Store because commercial apps are not put anywhere else. As a partial remedy, I generally use F-droid wherever I can or just use services on Desktop (where there usually is much more choice) instead of my phone. Social media is also surprisingly sticky; I still don't find myself able to delete WhatsApp because it's so ubiquitous in Europe and I also technically still have a LinkedIn account[^2]. 
 
+There is also stuff that I could do without but in practice do not. 
+I use Google Scholar and GitHub pretty regularly, this very website is currently hosted on GitHub. My research data goes to a Google Firebase database. Academic search engines are few and far between, although I may want to give Semantic Scholar another shot. Hosting on GitHub and using Firebase means not having to pay for a service that would usually cost money. I would love to self-host but can't do that at the moment as I live on campus and so have no control over my network. 
 
 [^2]: I think I have a vague sense of it potentially being helpful for a future job search. Although I can't say I have ever found a job through LinkedIn. 
 
