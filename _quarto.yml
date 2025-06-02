@@ -34,9 +34,7 @@ website:
       - href: index.qmd
         text: "Home"
       - text: "Research"
-        menu:
-          - research/research_interests/index.qmd
-          - research/publications/index.qmd
+        href: /research/publications/index.qmd
       - href: blog/index.qmd
         text: "Blog"
       - text: "About"

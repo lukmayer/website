@@ -254,37 +254,65 @@ Our results strongly suggest that leveraging both subjective and objective metri
 ::::
 
 :::: column-page
-\
 
-------------------------------------------------------------------------
+
 
 ::: text-center
 <a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: #00a653; background-color: #333333; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Find more on Google Scholar </a>
 :::
-::::
 
-```{=html}
+\
+
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var myName = "Mayer, L. W.";
-    // Select all elements that contain the authors string.
-    var authorElements = document.querySelectorAll('.authors-string');
-    var regex = new RegExp(myName, 'g');
-    authorElements.forEach(function(elem) {
-      elem.innerHTML = elem.innerHTML.replace(
-        regex,
-        '<span class="highlight-author">' + myName + '</span>'
-      );
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  var myName = "Mayer, L. W.";
+  var authorElements = document.querySelectorAll('.authors-string');
+  var regex = new RegExp(myName, 'g');
+  authorElements.forEach(function(elem) {
+    elem.innerHTML = elem.innerHTML.replace(
+      regex,
+      '<span class="highlight-author">' + myName + '</span>'
+    );
   });
 
- function toggleParagraph(id) {
-    var element = document.getElementById(id);
-    if (element.style.display === "none" || element.style.display === "") {
-      element.style.display = "block";
-    } else {
-      element.style.display = "none";
-    }
-  }
 </script>
-```
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.callout-title-container').forEach(function(container) {
+    container.addEventListener('click', function() {
+      const index = this.getAttribute('data-index');
+      const element = document.getElementById('pub-' + index);
+      const arrow = this.querySelector('.toggle-arrow');
+
+      if (element.style.display === 'none') {
+        element.style.display = 'block';
+        arrow.innerHTML = '▲';
+      } else {
+        element.style.display = 'none';
+        arrow.innerHTML = '▼';
+      }
+    });
+  });
+});
+</script>
+
+::: text-center
+# Research Interests
+:::
+
+### 1) Computational Cognitive Science
+
+People possess a remarkable cognitive flexibility enabling us to solve problems in various domains that are still completely intractable to modern methods in Artificial Intelligence. Therefore, I think that by studying human behavior we may be able to reverse-engineer some of the machinery that gives rise to these amazing abilities, uncovering the structure that may pave the way for new kinds of algorithms.
+
+At the moment, I am working on a project series aiming to develop a computational account of causal reasoning for intervention on other agents. In these projects I will be using a considerable amount of simulation, computational modelling, and a series of custom-designed web experiments to develop reasoning models that exhibit human-like abilities to flexibly generalize to new contexts. My goal here is to show how this causal account can outperform sophisticated Reinforcement Learning models in dynamic environments, which includes most of the real world.
+
+
+\
+
+### 2) Inversion and Alignment problems in Cognitive Science & AI
+
+Whenever people are interacting with machine-learning based systems, human biases can propagate through the model leading to distorted predictions. Therefore, one strand of work I am interested in pursuing in this area is to derive the transformations that lead to better alignment, thus increasing the validity of predictions. I am also interested in addressing more engineering related concerns, such as how to use information we possess about cognition to improve the performance of machine learning algorithms trained on human-generated information. In this type of work, I like to mix and match methods from Cognitive Science and Machine Learning in combination with large, real-world data-sets.
+
+My recent work in this area can be broadly described with the umbrella term of "Human-AI collaboration". AI technologies are increasingly being integrated into various tools, but they oftentimes lack the ability to anticipate the needs of the human user. Using formal models of human cognition as part of these systems can help bridge this gap by describing mental processes people have in a language that AI systems can understand (math). This can lead to more efficient and effective collaboration between humans and AI systems, and can also help to identify potential pitfalls in the design of these systems.  
+::::
