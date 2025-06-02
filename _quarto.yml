@@ -33,8 +33,8 @@ website:
     left:
       - href: index.qmd
         text: "Home"
-      - text: "Research"
-        href: /research/index.qmd
+      - href: research/index.qmd
+        text: "Research"
       - href: blog/index.qmd
         text: "Blog"
       - text: "About"
