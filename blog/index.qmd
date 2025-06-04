@@ -10,7 +10,7 @@ listing:
   sort: "date desc"
   categories: numbered
   feed: true
-  page-size: 6
+  page-size: 100
 format: 
   html:
     toc: false
@@ -99,14 +99,35 @@ format:
 ```
 
 :::::: column-page-inset-left
-{{< animate zoomIn "A dedicated space for me to rant!" duration=2s >}}
 
-:::: {.animate__animated .animate__fadeIn}
-::: {#main-listing}
+::: {.columns}
+
+::: {.column style="padding-right: 20px;"}
+{{< animate zoomIn "A dedicated space for me to rant!" duration=2s >}}
 :::
-::::
+
+::: {.column style="padding-left: 40px;"}
+
+::: {.text-center}
 
 ::: rainbow-animation
 <a href="/blog/index.xml" target="_blank"> Follow my blog with RSS <i class="bi bi-rss"></i> </a>
 :::
+
+:::
+
+
+:::
+
+:::
+
+
+:::: {.animate__animated .animate__fadeIn}
+
+::: {#main-listing}
+:::
+
+::::
+
+
 ::::::
