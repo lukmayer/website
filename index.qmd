@@ -77,10 +77,6 @@ In my research, I leverage insights from Cognitive Science to enhance human-AI c
 
 
 
-
-<!-- TODO: use dark-mode and light-mdoe divs to have theme matching background image -->
-
-
 <style>
 
 body.nav-fixed.fullcontent {

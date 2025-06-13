@@ -130,49 +130,6 @@ div.callout-important.callout {
 
 # Publications
 
-## In Progress
-
-
-::::: {.callout-important collapse="true" icon="false"}
-# ***"Waste not want not: Computational methods to maximise attendance in group research"*** <br> <strong>Mayer, L. W.</strong>, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) *Behavior Research Methods*.
-
-::: text-center
-![](assets/sets.png)
-:::
-
-\
-
-**Do your studies rely on groups of people?** Recruiting participants for group sessions can be arduous, often costing a lot of time, effort, and resources.
-In this work, we demonstrate the complete lack of tools that can appropriately allocate a sample of interested participants to a set of group sessions.
-We then mathematically derive metrics that can quantify the effectiveness of any tool attempting to solve this problem.
-Finally, we develop an algorithm that outperforms any existing utility on this task using simulation and a large-scale pre-registered user study.
-Our scheduling utility is free and open-source, available to anyone through a web-applet.
-
-::: text-center
-[Link to the web-app](https://lukmayer.github.io/appointment_sets)
-:::
-:::::
-
-::::: {.callout-important collapse="true" icon="false"}
-# ***"Human-AI Collaboration: Trade-offs Between Performance and Preferences"*** <br> <strong>Mayer, L. W.</strong>, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (Submitted).
-
-::: text-center
-![](assets/collab_ai.png)
-:::
-
-\
-
-**How can we make AI collaborate well with people?** Narrowly optimizing the performance of AI agents may be convenient, but can cause frustration when people are then asked to work with this agent.
-In this paper, we show that people prefer AI agents that are considerate of their preferences, even when this comes at the cost of performance.
-We also find that certain human-centric design choices boost people's liking of the agent, without harming the performance of the human-AI team.
-Our results strongly suggest that leveraging both subjective and objective metrics is crucial when designing AI agents for human collaboration.
-
-::: text-center
-[OSF repository](https://osf.io/ybweq/?view_only=cb4d4c7ac0b848b79b6ae8c7b09278cc)
-:::
-:::::
-
-\
 
 
 ## Published
@@ -180,8 +137,6 @@ Our results strongly suggest that leveraging both subjective and objective metri
 
 ::: {#publications}
 :::
-
-
 
 
 ::: text-center
@@ -205,8 +160,56 @@ Our results strongly suggest that leveraging both subjective and objective metri
 ---
 
 :::
+<!-- end text-center -->
+
+
+## In Progress
+
+
+::::: {.callout-important collapse="true" icon="false"}
+# ***"Waste not want not: Computational methods to maximise attendance in group research"***
+**Mayer, L. W.**, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) *Behavior Research Methods*.
+
+::: text-center
+![](assets/sets.png)
+:::
 
 \
+
+**Do your studies rely on groups of people?** Recruiting participants for group sessions can be arduous, often costing a lot of time, effort, and resources.
+In this work, we demonstrate the complete lack of tools that can appropriately allocate a sample of interested participants to a set of group sessions.
+We then mathematically derive metrics that can quantify the effectiveness of any tool attempting to solve this problem.
+Finally, we develop an algorithm that outperforms any existing utility on this task using simulation and a large-scale pre-registered user study.
+Our scheduling utility is free and open-source, available to anyone through a web-applet.
+
+::: text-center
+[Link to the web-app](https://lukmayer.github.io/appointment_sets)
+:::
+:::::
+
+::::: {.callout-important collapse="true" icon="false"}
+# ***"Human-AI Collaboration: Trade-offs Between Performance and Preferences"*** 
+**Mayer, L. W.**, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (under Review) *Cognitive Research: Principles and Implications*
+
+::: text-center
+![](assets/collab_ai.png)
+:::
+
+\
+
+**How can we make AI collaborate well with people?** Narrowly optimizing the performance of AI agents may be convenient, but can cause frustration when people are then asked to work with this agent.
+In this paper, we show that people prefer AI agents that are considerate of their preferences, even when this comes at the cost of performance.
+We also find that certain human-centric design choices boost people's liking of the agent, without harming the performance of the human-AI team.
+Our results strongly suggest that leveraging both subjective and objective metrics is crucial when designing AI agents for human collaboration.
+
+::: text-center
+[OSF repository](https://osf.io/ybweq/?view_only=cb4d4c7ac0b848b79b6ae8c7b09278cc)
+:::
+:::::
+
+\
+
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -241,6 +244,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+---
 
 
 # Research Interests
