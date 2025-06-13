@@ -15,7 +15,10 @@ website:
       - text: Source code
         href: https://github.com/lukmayer/website
         aria-label: Source code
-
+    center:
+     - text: Made with Quarto
+       href: https://quarto.org
+       aria-label: Quarto
     right:
       - text: Blog RSS
         href: /blog/index.xml
