@@ -1,16 +1,15 @@
 ---
-title: "Blog"
 description: "Lukas Mayer's personal blog"
 listing:
   id: main-listing
   type: grid
   grid-columns: 1
-  fields: [date, title, description]
+  fields: [date, title, description, categories]
   contents: posts
   sort: "date desc"
   categories: numbered
   feed: true
-  page-size: 100
+  page-size: 10
 format: 
   html:
     toc: false
@@ -18,116 +17,44 @@ format:
       margin-width: 300px
 ---
 
-::: {.quarto-content .hidden}
-:::
-
-```{=html}
 <style>
 .description {
     display: none;
 }
 
-@keyframes rainbowText {
-    0% {
-        color: #FF0000;
-        border-color: #FF0000;
-    }
-    16% {
-        color: #FFA500;
-        border-color: #FFA500;
-    }
-    33% {
-        color: #FFFF00;
-        border-color: #FFFF00;
-    }
-    50% {
-        color: #00FF00;
-        border-color: #00FF00;
-    }
-    66% {
-        color: #00BFFF;
-        border-color: #00BFFF;
-    }
-    83% {
-        color: #FF00FF;
-        border-color: #FF00FF;
-    }
-    100% {
-        color: #FF0000;
-        border-color: #FF0000;
-    }
+.quarto-grid-item {
+  transition: transform 0.3s ease-in-out; 
 }
 
-.rainbow-animation a {
-    animation: rainbowText 10s infinite linear;
-    color: #FF0000; /* Initial color to match animation */
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px; /* Adjust padding for button-like appearance */
-    border: 2px solid; /* Border will take color from animation */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #000000; /* Dark grey background */
-    font-size: 16px; /* Adjust font size as needed */
-    font-weight: bold; /* Bold text for emphasis */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+.quarto-grid-item:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
-.rainbow-animation a:hover {
-    transform: scale(1.05); /* Slightly enlarge the button */
-    background-color: #222; /* Darker grey background on hover */
-}
 
-.rainbow-animation a i {
-    animation: rainbowText 10s infinite linear; /* Ensure icon animates as well */
-    margin-left: 5px; /* Add space between text and icon */
+.category:hover {
+    transform: translateY(-1px);
 }
 
 </style>
-```
-
-```{=html}
-<script>
-  window.addEventListener("load", function() {
-    var content = document.querySelector(".quarto-content");
-    if (content) {
-      content.classList.remove("hidden");  // Remove the hidden class to allow transition
-      content.classList.add("fade-in");    // Add the fade-in class for the transition effect
-    }
-  });
-</script>
-```
-
-:::::: column-page-inset-left
-
-::: {.columns}
-
-::: {.column style="padding-right: 20px;"}
-{{< animate zoomIn "A dedicated space for me to rant!" duration=2s >}}
-:::
-
-::: {.column style="padding-left: 40px;"}
-
-::: {.text-center}
-
-::: rainbow-animation
-<a href="/blog/index.xml" target="_blank"> Follow my blog with RSS <i class="bi bi-rss"></i> </a>
-:::
-
-:::
 
 
-:::
-
-:::
 
 
-:::: {.animate__animated .animate__fadeIn}
+::: {.column-page-inset-left}
+
+
+
+# Blog
+
+[Follow my blog with RSS](/blog/index.xml) 
+
+
 
 ::: {#main-listing}
 :::
 
-::::
 
+[Follow my blog with RSS](/blog/index.xml) 
 
-::::::
+:::

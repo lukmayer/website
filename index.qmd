@@ -1,6 +1,13 @@
 ---
-title: "Lukas William Mayer"
-description: "Lukas Mayer's personal website - PhD student researching Computational Cognitive Science and Human-AI collaboration. Also posts about Data Science/statistics, software development, technology, and more."
+description: "PhD student researching Computational Cognitive Science and Human-AI collaboration."
+
+image: assets/luke-23-circle_small.png
+about:
+  id: about-content
+  template: trestles
+  image-shape: round
+  image-width: 25em
+
 
 format: 
   html:
@@ -13,238 +20,28 @@ back-to-top-navigation: false
 <script data-goatcounter="https://lukmayer.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+<style> 
+div.quarto-about-trestles .about-contents {
+        border-left: none !important;
+</style>
+
 
 ::: column-page
-::: columns
-::: {.column style="padding-right: 20px;"}
-::: {.animate__animated .animate__fadeIn style="--animate-duration: 2s;"}
-\
 
-![](assets/luke-23-circle.png)
-:::
-:::
+::: {#about-content}
 
-::: {.column style="padding-left: 20px;"}
-### Welcome to my website!
+## Lukas William Mayer
 
-::: {.animate__animated .animate__fadeIn style="--animate-duration: 3s;"}
-Hi, I'm Luke!
+
+### Hi there, welcome to my site!
 I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/) at the University of California, Irvine.
-:::
 
-{{< animate fadeIn "In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration." duration=3s >}} {{< animate fadeIn "To this end, I'm exploring applications with model-based reinforcement learning and Bayesian computational models." duration=3s >}}
-
-\
-
-::: {.button-group style="display: flex; gap: 10px;"}
-<!-- Mail -->
-
-<a href="mailto:willuk@vivaldi.net" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-envelope" style="font-size: 1.5rem; margin-right: 8px;"></i>Email </a>
-
-<!-- Mastodon -->
-
-<a rel="me" href="https://social.vivaldi.net/@Willuk" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-mastodon" style="font-size: 1.5rem; margin-right: 8px;"></i>Mastodon </a>
-
-<!-- Github -->
-
-<a href="https://github.com/lukmayer" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;"> <i class="bi bi-github" style="font-size: 1.5rem; margin-right: 8px;"></i>Github </a>
-
-<!-- Google scholar -->
-
-<a href="https://scholar.google.com/citations?user=KsH37lMAAAAJ" class="button-link" target="_blank" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">{{< ai google-scholar size=Large >}}</i> Scholar </a>
-
-<!-- Signal -->
-
-<button class="button-link2" onclick="copySignalHandle()" style="text-decoration: none; color: white; background-color: #222; padding: 10px 20px; border-radius: 5px; display: inline-block; font-size: 1.2rem; text-align: center;">
-  <i class="bi bi-signal"></i>
-  <span class="signal-default">Signal</span>
-  <span class="signal-hover" style="display: none;">L11.98</span>
-</button>
-
-
-<style>
-/* Base button styles */
-.button-link, .button-link2 {
-    cursor: pointer;
-    background-color: #222;
-    color: white;
-    padding: 0 20px;  /* Remove vertical padding */
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border: none;
-    height: 48px;
-    display: inline-flex;
-    align-items: center;  /* This centers content vertically */
-    justify-content: center;
-    gap: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-    transform-origin: center;
-    position: relative;
-    z-index: 1;
-}
-
-/* Icon styles */
-.button-link i, 
-.button-link2 i,
-.button-link .ai {
-    font-size: 1.5rem !important;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-
-/* Signal button text container */
-.handle-text {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    min-width: 60px;
-    height: 100%;
-}
-
-/* Signal button text states */
-.handle-text .default,
-.handle-text .hover {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s;
-}
-
-/* Rest remains the same */
-.handle-text .default {
-    opacity: 1;
-}
-
-.handle-text .hover {
-    opacity: 0;
-}
-
-
-.button-link2:hover .signal-default {
-display: none;
-}
-.button-link2:hover .signal-hover {
-display: inline !important;
-}
-
-
-.button-link:hover,
-.button-link2:hover {
-    background-color: #444 !important;
-    transform: scale(1.2);
-    z-index: 2;
-}
-
-
-</style>
-
-
-
-<script>
-function copySignalHandle() {
-    const signalHandle = "L11.98";
-    navigator.clipboard.writeText(signalHandle).then(() => {
-        const handleText = document.querySelector('.handle-text');
-        const originalContent = handleText.innerHTML;
-        handleText.innerHTML = '<span class="default">Copied!</span><span class="hover">Copied!</span>';
-        setTimeout(() => {
-            handleText.innerHTML = originalContent;
-        }, 2000);
-    }).catch(err => {
-        console.error('Failed to copy:', err);
-    });
-}
-
-</script>
-
+In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration. I'm especially interested in applications involving model-based reinforcement learning and Bayesian computational models.
 
 :::
-:::
-:::
+
 :::
 
 
-<style>
-/* CSS for fade-in effect */
-.fade-in {
-  opacity: 0;
-  transition: opacity 2s ease-in;
-}
-
-.content.quarto-banner-title-block {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-}
-
-.columns {
-    column-gap: 20px; /* Adjust the gap between columns */
-}
-
-.column {
-    padding-right: 10px; /* Optional: Add padding to the columns if needed */
-}
 
 
-.quarto-title {
-    text-align: left; /* Center the title text */
-    padding-right: 100px; /* Add padding to the right */
-    margin-left: -5% !important; /* Reset the default margin */
-}
-
-
-
-/* Default desktop view */
-.button-group {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: stretch; /* Changed to stretch to handle different heights */
-    margin: -10px; /* Compensate for button margins */
-}
-
-@media (max-width: 768px) {
-    .columns {
-        flex-direction: column;
-    }
-
-    .column {
-        width: 100% !important;
-        padding: 0;
-    }
-
-    .button-link {
-        display: block;
-        width: calc(100% - 20px); /* Account for margins */
-        margin: 10px;
-        text-align: center;
-    }
-
-    .button-group {
-        flex-direction: column;
-        gap: 0; /* Remove gap since we're using margins */
-        width: 100%;
-        margin: 0; /* Reset margin for mobile */
-    }
-}
-
-
-</style>
-
-
-
-<script>
-
-  window.addEventListener("load", function() {
-    var aboutEntity = document.querySelector(".about-entity");
-    aboutEntity.classList.add("fade-in");
-  });
-</script>

@@ -1,0 +1,1045 @@
+/*-- scss:defaults --*/
+$theme: "morph-dark" !default;
+
+$white:    #ffffff !default;
+$gray-100: #1a1d23 !default;
+$gray-200: #242831 !default;
+$gray-300: #2d323c !default;
+$gray-400: #3a4049 !default;
+$gray-500: #4a5058 !default;
+$gray-600: #6c757d !default;
+$gray-700: #8e9297 !default;
+$gray-800: #b1b5ba !default;
+$gray-900: #e9ecef !default;
+$black:    #000000 !default;
+
+$blue:    #6c757d !default;
+$indigo:  #6c757d !default;
+$purple:  #6c757d !default;
+$pink:    #6c757d !default;
+$red:     #ff6b6b !default;
+$orange:  #ffa726 !default;
+$yellow:  #ffcc02 !default;
+$green:   #4caf50 !default;
+$teal:    #6c757d !default;
+$cyan:    #6c757d !default;
+
+$primary:       $gray-700 !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $gray-700 !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-400 !default;
+$dark:          $gray-100 !default;
+
+$min-contrast-ratio:   4.5 !default;
+$enable-shadows:              true !default;
+
+$body-bg:                   #1e2126 !default;
+$body-color:                #d1d5db !default;
+
+$link-color: #9ca3af !default;
+$link-hover-color: #e5e7eb !default;
+
+$border-width:                1px !default;
+$border-color:                rgba($gray-500, .15) !default;
+$border-radius-pill:          50rem !default;
+
+$box-shadow:                  0 4px 8px rgba($black, .25), 0 2px 4px rgba($black, .15), inset 0 1px 0 rgba($white, .05) !default;
+$box-shadow-sm:               0 2px 4px rgba($black, .2), inset 0 1px 0 rgba($white, .03) !default;
+$box-shadow-lg:               0 8px 16px rgba($black, .3), 0 4px 8px rgba($black, .2), inset 0 1px 0 rgba($white, .05) !default;
+$box-shadow-inset:            inset 0 2px 4px rgba($black, .3), inset 0 1px 2px rgba($black, .2) !default;
+
+$neuromorphic-line-shadow:    0 1px 2px rgba($black, .2), 0 -1px 1px rgba($white, .02) !default;
+$neuromorphic-line-inset:     inset 0 1px 1px rgba($black, .15), inset 0 -1px 1px rgba($white, .03) !default;
+
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+$headings-color:              #e5e7eb !default;
+$headings-font-weight:        600 !default;
+$text-muted:                  $gray-600 !default;
+
+$input-btn-padding-y:         0.75rem !default;
+$input-btn-padding-x:         1.25rem !default;
+
+$btn-font-weight:             500 !default;
+$btn-padding-y-lg:            1rem !default;
+$btn-padding-x-lg:            1.5rem !default;
+$btn-box-shadow:              $box-shadow !default;
+$btn-border-radius:           0.375rem !default;
+$btn-border-radius-sm:        0.25rem !default;
+$btn-border-radius-lg:        0.5rem !default;
+
+$form-label-font-weight:                600 !default;
+$input-bg:                              $gray-400 !default;
+$input-color:                           #e5e7eb !default;
+$input-border-color:                    rgba($gray-500, .2) !default;
+$input-focus-border-color:              rgba($primary, .4) !default;
+$input-placeholder-color:               $gray-600 !default;
+
+$form-switch-color:               $gray-400 !default;
+$form-switch-focus-color:         $form-switch-color !default;
+$form-select-indicator-color:       $body-color !default;
+$form-select-box-shadow:          $box-shadow-inset !default;
+$form-range-track-bg:             $gray-500 !default;
+$form-range-thumb-bg:                      $primary !default;
+$form-range-thumb-active-bg:               lighten($primary, 10%) !default;
+$form-range-thumb-disabled-bg:             $gray-600 !default;
+$form-file-button-bg:             $gray-500 !default;
+
+$nav-link-color:                    $body-color !default;
+$nav-link-hover-color:              #e5e7eb !default;
+$nav-link-disabled-color:           $text-muted !default;
+$nav-tabs-border-color:             transparent !default;
+$nav-tabs-border-radius:            0.375rem !default;
+$nav-tabs-link-active-color:        #e5e7eb !default;
+$nav-tabs-link-active-bg:           $gray-400 !default;
+$nav-tabs-link-active-border-color: transparent !default;
+
+$navbar-padding-y:                  1rem !default;
+$navbar-padding-x:                  1rem !default;
+$navbar-dark-color:                 #d1d5db !default;
+$navbar-dark-hover-color:           #e5e7eb !default;
+$navbar-dark-active-color:          #e5e7eb !default;
+$navbar-dark-disabled-color:        $gray-600 !default;
+$navbar-dark-toggler-border-color:  transparent !default;
+$navbar-light-color:                #d1d5db !default;
+$navbar-light-hover-color:          #e5e7eb !default;
+$navbar-light-active-color:         #e5e7eb !default;
+$navbar-light-disabled-color:       $gray-600 !default;
+$navbar-light-toggler-border-color: transparent !default;
+
+$dropdown-bg:                       $gray-400 !default;
+$dropdown-color:                    #e5e7eb !default;
+$dropdown-border-color:             rgba($gray-500, .2) !default;
+$dropdown-box-shadow:               $box-shadow-lg !default;
+$dropdown-link-color:               #e5e7eb !default;
+$dropdown-link-hover-color:         #f9fafb !default;
+$dropdown-link-hover-bg:            $gray-500 !default;
+
+$pagination-padding-y:              0.75rem !default;
+$pagination-padding-x:              0.75rem !default;
+$pagination-padding-y-sm:           0.5rem !default;
+$pagination-padding-y-lg:           1rem !default;
+$pagination-color:                  $body-color !default;
+$pagination-bg:                     $gray-400 !default;
+$pagination-border-color:           rgba($gray-500, .2) !default;
+$pagination-hover-color:            #e5e7eb !default;
+$pagination-hover-bg:               $gray-500 !default;
+$pagination-active-color:           #f9fafb !default;
+$pagination-active-bg:              $primary !default;
+$pagination-disabled-color:         $text-muted !default;
+$pagination-disabled-bg:            $gray-400 !default;
+
+$card-spacer-y:                     1.5rem !default;
+$card-spacer-x:                     1.5rem !default;
+$card-cap-bg:                       $gray-500 !default;
+$card-bg:                           $gray-400 !default;
+$card-color:                        #e5e7eb !default;
+$card-border-color:                 rgba($gray-500, .15) !default;
+
+$tooltip-color:                     #f9fafb !default;
+$tooltip-bg:                        $gray-600 !default;
+
+$popover-bg:                        $gray-400 !default;
+$popover-border-color:              rgba($gray-500, .2) !default;
+$popover-header-bg:                 $gray-500 !default;
+$popover-body-color:                #e5e7eb !default;
+
+$toast-background-color:            $gray-400 !default;
+$toast-border-color:                rgba($gray-500, .2) !default;
+$toast-color:                       #e5e7eb !default;
+$toast-header-color:                #e5e7eb !default;
+$toast-header-background-color:     $gray-500 !default;
+
+$badge-padding-y:                   0.5em !default;
+$badge-padding-x:                   0.75em !default;
+
+$modal-content-bg:                  $gray-400 !default;
+$modal-content-color:               #e5e7eb !default;
+$modal-content-border-color:        rgba($gray-500, .2) !default;
+$modal-header-border-color:         rgba($gray-500, .1) !default;
+$modal-footer-border-color:         rgba($gray-500, .1) !default;
+
+$progress-height:                   1rem !default;
+$progress-bg:                       $gray-500 !default;
+$progress-border-radius:            0.375rem !default;
+
+$list-group-bg:                     $gray-400 !default;
+$list-group-color:                  #e5e7eb !default;
+$list-group-border-color:           rgba($gray-500, .15) !default;
+$list-group-hover-bg:               $gray-500 !default;
+$list-group-active-color:           #f9fafb !default;
+$list-group-active-bg:              $primary !default;
+$list-group-disabled-color:         $text-muted !default;
+$list-group-disabled-bg:            $gray-400 !default;
+$list-group-action-active-color:    #e5e7eb !default;
+$list-group-action-active-bg:       $gray-500 !default;
+
+$breadcrumb-padding-y:              0.75rem !default;
+$breadcrumb-padding-x:              1rem !default;
+$breadcrumb-bg:                     $gray-500 !default;
+$breadcrumb-divider-color:          $text-muted !default;
+$breadcrumb-active-color:           #e5e7eb !default;
+
+// Explicitly set this is NOT a dark theme
+$enable-dark-mode: true !default;
+
+// Bootstrap close button for LIGHT theme (no filter)
+$btn-close-color: $light !default;
+$btn-close-opacity: .5 !default;
+$btn-close-hover-opacity: .75 !default;
+
+$table-bg:                          $gray-400 !default;
+$table-color:                       #e5e7eb !default;
+$table-striped-bg:                  $gray-500 !default;
+$table-hover-bg:                    $gray-500 !default;
+$table-border-color:                rgba($gray-500, .1) !default;
+
+/*-- scss:rules --*/
+
+
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+$font-family-sans-serif: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+$btn-box-shadow-inset: inset 0 2px 4px rgba($black, .25), inset 0 1px 2px rgba($black, .15) !default;
+
+@mixin shadow($shadow: $box-shadow) {
+  background-color: $gray-400;
+  color: #e5e7eb;
+  border: 1px solid rgba($gray-500, .2);
+  box-shadow: $shadow;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 12px rgba($black, .3), 0 3px 6px rgba($black, .2), inset 0 1px 0 rgba($white, .08);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    box-shadow: $box-shadow-inset;
+    transform: translateY(0);
+  }
+}
+
+@mixin shadow-outline($shadow: $box-shadow) {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  bottom: -0.25rem;
+  left: -0.25rem;
+  z-index: -1;
+  content: "";
+  background-color: $gray-300;
+  border: 1px solid rgba($gray-400, .2);
+  box-shadow: $shadow;
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin neuromorphic-line($height: 1px, $blur: 1px) {
+  height: $height;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba($gray-500, .3) 20%, 
+    rgba($gray-500, .4) 50%, 
+    rgba($gray-500, .3) 80%, 
+    transparent 100%
+  );
+  box-shadow: $neuromorphic-line-inset;
+  border: none;
+  filter: blur($blur);
+  border-radius: $height;
+}
+
+@mixin neuromorphic-surface-flat($elevated: false) {
+  background-color: $gray-400;
+  border: none;
+
+  @if $elevated {
+    box-shadow: 
+      0 4px 8px rgba($black, .2), 
+      0 2px 4px rgba($black, .1),
+      inset 0 1px 0 rgba($white, .05);
+  } @else {
+    box-shadow: 
+      inset 0 2px 4px rgba($black, .15),
+      inset 0 1px 2px rgba($black, .1);
+  }
+}
+
+@mixin neuromorphic-recessed() {
+  background-color: $gray-300;
+  border: 1px solid rgba($gray-500, .15);
+  box-shadow: 
+    inset 0 3px 6px rgba($black, .2),
+    inset 0 1px 3px rgba($black, .15);
+  border-radius: 0.5rem;
+}
+
+@mixin neuromorphic-floating() {
+  background-color: $gray-400;
+  border: 1px solid rgba($gray-500, .2);
+  box-shadow: 
+    0 6px 12px rgba($black, .25),
+    0 3px 6px rgba($black, .15),
+    inset 0 1px 0 rgba($white, .08);
+  border-radius: 0.75rem;
+}
+
+@mixin subtle-image-style() {
+  border: 1px solid rgba($gray-500, .1);
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba($black, .1);
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin subtle-toc-style() {
+  background-color: rgba($gray-300, .3);
+  // border: 1px solid rgba($gray-500, .08);
+  box-shadow: inset 0 1px 2px rgba($black, .08);
+  border-radius: 0.375rem;
+}
+
+body {
+  background: radial-gradient(ellipse at center, #1f2328 0%, #1a1d23 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: -1;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255,255,255,.1) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px;
+    pointer-events: none;
+  }
+}
+
+.btn {
+  &:not(.btn-outline-*) {
+    color: #e5e7eb;
+    background-color: $gray-400;
+    border-color: rgba($gray-500, .2);
+
+    &:hover {
+      color: #f9fafb;
+      background-color: $gray-500;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($primary, .25);
+    }
+  }
+}
+
+.navbar {
+  @include neuromorphic-surface-flat($elevated: true);
+  border-bottom: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    right: 5%;
+    @include neuromorphic-line(2px, 0.8px);
+  }
+
+  .navbar-brand {
+    color: #e5e7eb !important;
+    font-weight: 600;
+
+    &:hover {
+      color: #f9fafb !important;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: #d1d5db !important;
+      border-radius: 0.375rem;
+      margin: 0 0.25rem;
+      padding: 0.5rem 1rem;
+      transition: all 0.2s ease-in-out;
+      border: 1px solid transparent;
+
+      &:hover {
+        color: #e5e7eb !important;
+        background: rgba($gray-500, .3);
+        box-shadow: $box-shadow-sm;
+        border-color: rgba($gray-500, .2);
+      }
+
+      &.active {
+        color: #f9fafb !important;
+        background: rgba($gray-500, .4);
+        box-shadow: $box-shadow-inset;
+        border-color: rgba($gray-500, .3);
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: rgba($gray-500, .3);
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($primary, .25);
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28225, 231, 235, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+}
+
+footer, .footer {
+  @include neuromorphic-surface-flat($elevated: false);
+  border-top: none;
+  position: relative;
+  padding: 0.2rem 0;
+  font-size: 1.3rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    @include neuromorphic-line(2px, 0.8px);
+  }
+
+  color: #d1d5db;
+
+  a {
+    color: #9ca3af;
+
+    &:hover {
+      color: #e5e7eb;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #e5e7eb;
+  }
+}
+
+
+.title-block-header:not(:empty), .quarto-title-block:not(:empty) {
+  @include neuromorphic-recessed();
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  background-color: $gray-200;
+
+  .title:not(:empty), .quarto-title-heading:not(:empty) {
+    color: #f9fafb !important;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba($black, .3);
+  }
+
+  .subtitle:not(:empty) {
+    color: #d1d5db;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  .author, .date, .quarto-title-meta {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+
+    .author-name {
+      color: #d1d5db;
+      font-weight: 500;
+    }
+  }
+
+  .abstract:not(:empty) {
+    @include neuromorphic-recessed();
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    text-align: left;
+    color: #d1d5db;
+    font-style: italic;
+    background-color: $gray-100;
+
+    .abstract-title {
+      color: #e5e7eb;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      font-style: normal;
+    }
+  }
+}
+
+// Hide title block when empty
+.title-block-header:empty, .quarto-title-block:empty {
+  display: none;
+}
+
+
+.toc:not(:empty), #TOC:not(:empty), .sidebar-navigation:not(:empty) {
+  background-color: $gray-200;
+  border-radius: 0.375rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  color: #d1d5db;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin: 0.5rem 0;
+
+      a {
+        color: #d1d5db;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.375rem;
+        display: block;
+        transition: all 0.2s ease-in-out;
+        border: 1px solid transparent;
+
+        &:hover {
+          color: #e5e7eb;
+          background: rgba($gray-300, .4);
+          box-shadow: $box-shadow-sm;
+          border-color: rgba($gray-500, .15);
+        }
+
+        &.active {
+          color: #f9fafb !important;
+          background: rgba($gray-400, .6);
+          box-shadow: $box-shadow-inset;
+          border-color: rgba($gray-500, .2);
+        }
+      }
+
+      ul {
+        padding-left: 1.25rem;
+        margin-top: 0.5rem;
+
+        li a {
+          font-size: 0.9em;
+          opacity: 0.85;
+          padding: 0.375rem 0.75rem;
+
+          &.active {
+            color: #f9fafb !important;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card {
+  @include neuromorphic-recessed();
+  background-color: $gray-200; // Much darker for proper inset look
+  border: 1px solid rgba($gray-500, .1);
+  box-shadow: 
+    inset 0 4px 8px rgba($black, .3),
+    inset 0 2px 4px rgba($black, .2),
+    inset 0 -1px 2px rgba($white, .02);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 
+      inset 0 5px 10px rgba($black, .35),
+      inset 0 2px 5px rgba($black, .25),
+      inset 0 -1px 2px rgba($white, .03);
+    border-color: rgba($gray-500, .15);
+  }
+
+  .card-header {
+    background-color: $gray-100; // Even darker for header
+    border-bottom: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      right: 5%;
+      @include neuromorphic-line(1px, 0.3px);
+    }
+  }
+
+  .card-footer {
+    background-color: $gray-100; // Even darker for footer
+    border-top: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 5%;
+      right: 5%;
+      @include neuromorphic-line(1px, 0.3px);
+    }
+  }
+}
+
+
+.category, .tag, .badge {
+  @include neuromorphic-floating();
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  margin: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: #f9fafb;
+    transform: translateY(-1px);
+    box-shadow: 
+      0 8px 16px rgba($black, .3),
+      0 4px 8px rgba($black, .2),
+      inset 0 1px 0 rgba($white, .1);
+  }
+}
+
+.pagination {
+  .page-link {
+    @include neuromorphic-floating();
+    color: #d1d5db;
+    background-color: $gray-400;
+    border: 1px solid rgba($gray-500, .2);
+    margin: 0 0.125rem;
+    border-radius: 0.375rem;
+
+    &:hover {
+      color: #e5e7eb;
+      background-color: $gray-500;
+      box-shadow: 
+        0 8px 16px rgba($black, .3),
+        0 4px 8px rgba($black, .2),
+        inset 0 1px 0 rgba($white, .08);
+      transform: translateY(-1px);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($primary, .25);
+    }
+  }
+
+  .page-item.active .page-link {
+    color: #f9fafb;
+    background-color: $primary;
+    border-color: $primary;
+    box-shadow: $box-shadow-inset;
+  }
+
+  .page-item.disabled .page-link {
+    color: $gray-600;
+    background-color: $gray-400;
+    border-color: rgba($gray-500, .1);
+    box-shadow: none;
+  }
+}
+
+
+.callout {
+  @include neuromorphic-floating();
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 2px 0 0 2px;
+    filter: blur(0.5px);
+  }
+
+  &.callout-note::before {
+    background: linear-gradient(180deg, transparent 0%, rgba($gray-600, .6) 20%, rgba($gray-600, .8) 50%, rgba($gray-600, .6) 80%, transparent 100%);
+  }
+
+  &.callout-warning::before {
+    background: linear-gradient(180deg, transparent 0%, rgba($gray-700, .6) 20%, rgba($gray-700, .8) 50%, rgba($gray-700, .6) 80%, transparent 100%);
+  }
+
+  &.callout-important::before {
+    background: linear-gradient(180deg, transparent 0%, rgba($gray-800, .6) 20%, rgba($gray-800, .8) 50%, rgba($gray-800, .6) 80%, transparent 100%);
+  }
+
+  &.callout-tip::before {
+    background: linear-gradient(180deg, transparent 0%, rgba($gray-600, .6) 20%, rgba($gray-600, .8) 50%, rgba($gray-600, .6) 80%, transparent 100%);
+  }
+
+  .callout-title {
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-bottom: 0.75rem;
+  }
+
+  .callout-body {
+    color: #d1d5db;
+  }
+}
+
+iframe {
+  @include neuromorphic-recessed();
+  background-color: $gray-200;
+  border: 1px solid rgba($gray-500, .15);
+  box-shadow: 
+    inset 0 4px 8px rgba($black, .25),
+    inset 0 2px 4px rgba($black, .15),
+    inset 0 -1px 2px rgba($white, .02);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  padding: 0.5rem;
+
+  &:hover {
+    box-shadow: 
+      inset 0 5px 10px rgba($black, .3),
+      inset 0 3px 6px rgba($black, .2),
+      inset 0 -1px 2px rgba($white, .03);
+    border-color: rgba($gray-500, .2);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 
+      inset 0 4px 8px rgba($black, .25),
+      inset 0 2px 4px rgba($black, .15),
+      0 0 0 0.2rem rgba($primary, .25);
+  }
+}
+
+
+pre, code {
+  @include neuromorphic-recessed();
+  color: #e5e7eb !important;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
+
+pre {
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+
+  code {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0;
+  }
+}
+
+code {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875em;
+
+  &:not(pre code) {
+    background-color: $gray-300 !important;
+  }
+}
+
+.nav-tabs {
+  border-bottom: none;
+  background: linear-gradient(180deg, 
+    rgba($gray-300, .5) 0%, 
+    rgba($gray-400, .3) 50%, 
+    rgba($gray-500, .2) 100%
+  );
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.25rem;
+  box-shadow: $neuromorphic-line-inset;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    @include neuromorphic-line(1px, 0.5px);
+  }
+
+  .nav-link {
+    border: none;
+    background: transparent;
+    border-radius: 0.375rem;
+    margin: 0 0.125rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: rgba($gray-500, .3);
+      box-shadow: $box-shadow-sm;
+    }
+
+    &.active {
+      background: $gray-400;
+      color: #e5e7eb;
+      box-shadow: $box-shadow-inset;
+      border: 1px solid rgba($gray-500, .2);
+    }
+  }
+}
+
+.panel-tabset {
+  .nav-tabs {
+    background: none;
+    border-bottom: none;
+    padding: 0;
+    box-shadow: none;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .tab-content {
+    position: relative;
+    margin-top: 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      right: 0;
+      @include neuromorphic-line(1px, 0.5px);
+    }
+  }
+}
+
+.quarto-layout-panel .panel-tabset .nav-tabs {
+  border-bottom: none !important;
+}
+
+.quarto-layout-panel .panel-tabset .nav-tabs::after {
+  display: none !important;
+}
+
+img, .figure img, .quarto-figure img {
+  border: 1px solid rgba($gray-500, .15);
+  border-radius: 0.375rem;
+  box-shadow: 
+    inset 0 2px 4px rgba($black, .2),
+    inset 0 1px 2px rgba($black, .15);
+  max-width: 100%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 
+      inset 0 3px 6px rgba($black, .25),
+      inset 0 1px 3px rgba($black, .2);
+    border-color: rgba($gray-500, .2);
+  }
+}
+
+.figure, .quarto-figure {
+  @include neuromorphic-recessed();
+  padding: none !important;
+  margin: 1.5rem 0;
+  text-align: center;
+  background-color: $gray-200;
+
+  img {
+    background: none;
+    border: 1px solid rgba($gray-500, .1);
+    box-shadow: 
+      inset 0 1px 2px rgba($black, .1),
+      inset 0 -1px 1px rgba($white, .01);
+    max-width: 100%;
+    margin: 0;
+
+    &:hover {
+      box-shadow: 
+        inset 0 2px 4px rgba($black, .15),
+        inset 0 -1px 1px rgba($white, .02);
+    }
+  }
+
+  .figure-caption, .quarto-figure-caption, figcaption {
+    color: #d1d5db;
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+    font-style: italic;
+  }
+}
+
+
+.about-image {
+  border: 3px solid rgba($gray-600, .4);
+  box-shadow: 
+    inset 0 8px 24px rgba($black, .6),
+    inset 0 4px 12px rgba($black, .5),
+    inset 0 2px 6px rgba($black, .4),
+    inset 0 1px 3px rgba($black, .3);
+  background: radial-gradient(circle at 30% 30%, rgba($gray-200, .1), rgba($gray-500, .2));
+}
+
+
+hr {
+  @include neuromorphic-line(2px, 0.5px);
+  margin: 2rem 0;
+  opacity: 1;
+}
+
+.border-top {
+  border-top: none !important;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include neuromorphic-line(1px, 0.3px);
+  }
+}
+
+.border-bottom {
+  border-bottom: none !important;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include neuromorphic-line(1px, 0.3px);
+  }
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  th, td {
+    border: none;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 10%;
+      bottom: 10%;
+      width: 1px;
+      background: linear-gradient(180deg, 
+        transparent 0%, 
+        rgba($gray-500, .2) 20%, 
+        rgba($gray-500, .3) 50%, 
+        rgba($gray-500, .2) 80%, 
+        transparent 100%
+      );
+      filter: blur(0.3px);
+    }
+  }
+
+  tbody tr:not(:last-child) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      right: 5%;
+      @include neuromorphic-line(1px, 0.3px);
+    }
+  }
+}
+
+blockquote {
+  border-left: none;
+  position: relative;
+  background-color: $gray-400;
+  color: #e5e7eb;
+  padding-left: 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, 
+      transparent 0%, 
+      rgba($primary, .6) 20%, 
+      rgba($primary, .8) 50%, 
+      rgba($primary, .6) 80%, 
+      transparent 100%
+    );
+    border-radius: 2px;
+    filter: blur(0.5px);
+  }
+}
+
+a {
+  color: #9ca3af;
+
+  &:hover {
+    color: #e5e7eb;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #e5e7eb !important;
+}
+
+::selection {
+  background-color: rgba($primary, .3);
+  color: $body-color;
+}
+
+.container, .container-fluid {
+  color: #d1d5db;
+}
+
+.row > * {
+  color: inherit;
+}
+
+.quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgba(255, 255, 255, 1)" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>') !important;
+}
+
+.aa-SubmitIcon {
+  color: $white !important; // or #000000
+}
+
+// Alternative using your theme colors
+.aa-SubmitIcon {
+  color: $body-color !important; // #2d3748
+}

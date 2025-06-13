@@ -9,40 +9,38 @@ website:
   search: 
     location: navbar
     type: overlay
-  back-to-top-navigation: true
   favicon: "assets/favicons/favicon.ico" 
   page-footer:
-    left: #add source code icon 
+    left: 
       - text: Source code
         href: https://github.com/lukmayer/website
         aria-label: Source code
-    center: |
-      Made with <a href='https://quarto.org' target='_blank'><img src='assets/quarto.png' alt='Quarto' style='width: 100px;'></a>
+
     right:
       - text: Blog RSS
-        icon: rss
         href: /blog/index.xml
         aria-label: Blog RSS feed
 
 
   open-graph: true
   site-url: "https://lukmayer.github.io"
-  title: "Lukas W. Mayer"
+  title: "lukmayer.github.io"
   navbar:
-    logo: "assets/favicons/android-chrome-512x512.png"
     left:
       - href: index.qmd
         text: "Home"
       - href: research/index.qmd
         text: "Research"
+      - href: cv/index.qmd
+        text: "CV"
       - href: blog/index.qmd
         text: "Blog"
-      - text: "About"
-        menu: 
-          - about/bio/index.qmd
-          - about/hobbies/index.qmd
-          - about/cv/index.qmd
-          - about/now/index.qmd
+      - href: about/index.qmd
+        text: "About"
+      - href: now/index.qmd
+        text: "Now"
+      - href: contact/index.qmd
+        text: "Contact"
 
     right:
       - text: "Login"
@@ -53,9 +51,13 @@ blog:
 
 format:
   html:
+    minimal: false
+    respect-user-color-scheme: true
     code-line-numbers: true
     smooth-scroll: true
-    theme: [darkly, theme-dark.scss]
+    theme:  # TODO: better slate / better lumen / better morph
+      dark: [morph, theme_morph_dark.scss]
+      light: [morph, theme_morph_light.scss]
     css: styles.css
     toc: true
     footnotes-hover: true
@@ -66,29 +68,24 @@ format:
     toc-location: left
     toc-title: "Sections:"
     toc-depth: 4
-    toc-expand: 2
-    title-block-style: manuscript
-    title-block-banner: true
-    title-block-banner-color: "#00bf63"
+    toc-expand: 4
+    title-block-style: default # TODO: review
+    title-block-banner: true 
     title-block-categories: true
     code-fold: show
     code-copy: true
     code-tools: false
     code-overflow: scroll
     code-block-border-left: true
-    highlight-style: atom-one
+    highlight-style: atom-one 
     fig-responsive: true
     lightbox: true
-    include-after-body: page-transitions.html
-    include-before-body: mods.html
 
     
 execute:
   cache: true
   freeze: auto
 
-extensions:
-  - animate
   
   
   

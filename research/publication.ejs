@@ -4,11 +4,11 @@
   <% items.forEach(function(item, index) { %>
     <li <%= metadataAttrs(item) %>>
       <div class="callout callout-important" style="border: 1px solid #444; border-radius: 8px; overflow: hidden;">
-        <div class="callout-header" style="background-color: #222222 !important; padding: 20px; border: none;">
+        <div class="callout-header" style="padding: 20px; border: none;">
           <div class="callout-title-container" data-index="<%= index %>" style="cursor: pointer;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
               <div style="flex: 1;">
-                <strong><em style="color: #00a653; font-size: 1.5rem; line-height: 1.3;">
+                <strong><em style="font-size: 1.5rem; line-height: 1.3;">
                   "<%- item.title %>"
                 </em></strong>
               </div>
@@ -18,7 +18,7 @@
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
               <div style="flex: 1; min-width: 300px;">
                 <% if (item.authors) { %>
-                  <div style="color: #c678dd; margin-bottom: 8px; font-size: 1rem;"><%- item.authors %></div>
+                  <div style="margin-bottom: 8px; font-size: 1rem;"><%- item.authors %></div>
                 <% } %>
                 <% if (item.journal) { %>
                   <div style="color: #888; font-style: italic;"><%- item.journal %></div>
@@ -31,7 +31,7 @@
                     <a href="<%- item.osf %>" style="display: inline-block; padding: 8px 16px; font-size: 14px; color: white; background-color: #444; text-align: center; text-decoration: none; border-radius: 6px; border: 1px solid #666; transition: all 0.2s ease;" target="_blank" rel="noopener noreferrer" onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='#444'">OSF</a>
                   <% } %>
                   <% if (item.paper) { %>
-                    <a href="<%- item.paper %>" style="display: inline-block; padding: 8px 16px; font-size: 14px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 6px; border: 1px solid #00b359; transition: all 0.2s ease;" target="_blank" rel="noopener noreferrer" onmouseover="this.style.backgroundColor='#00b359'" onmouseout="this.style.backgroundColor='#00a653'">Paper</a>
+                    <a href="<%- item.paper %>" style="display: inline-block; padding: 8px 16px; font-size: 14px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 6px; border: 1px solid #00b359; transition: all 0.2s ease;" target="_blank" rel="noopener noreferrer" onmouseover="this.style.backgroundColor='#00b359'" onmouseout="this.style.backgroundColor='#00a653'">Link</a>
                   <% } %>
                   <% if (item.pdf) { %>
                     <a href="<%- item.pdf %>" style="display: inline-block; padding: 8px 16px; font-size: 14px; color: white; background-color: #d73a49; text-align: center; text-decoration: none; border-radius: 6px; border: 1px solid #e36d76; transition: all 0.2s ease;" target="_blank" rel="noopener noreferrer" onmouseover="this.style.backgroundColor='#e36d76'" onmouseout="this.style.backgroundColor='#d73a49'">PDF</a>
@@ -42,7 +42,7 @@
           </div>
         </div>
 
-        <div class="callout-body-container" id="pub-<%= index %>" style="background-color: #111111; display: none; border: none;">
+        <div class="callout-body-container" id="pub-<%= index %>" style="display: none; border: none;">
           <% if (item.image) { %>
             <div style="text-align: center; margin: 20px 0;">
               <img src="<%- item.image %>" alt="Image for <%- item.title %>" style="max-width: 400px; height: auto; border-radius: 6px; border: 1px solid #333;"/>
@@ -50,9 +50,9 @@
           <% } %>
 
           <% if (item["paragraph-header"] || item["descriptive-paragraph"]) { %>
-            <div style="margin: 20px; color: #ddd; line-height: 1.6;">
+            <div style="margin: 20px; line-height: 1.6;">
               <% if (item["paragraph-header"]) { %>
-                <h4 style="color: #00a653; margin-bottom: 15px; font-size: 1.2rem;"><%- item["paragraph-header"] %></h4>
+                <h4 style="margin-bottom: 15px; font-size: 1.2rem;"><%- item["paragraph-header"] %></h4>
               <% } %>
               <% if (item["descriptive-paragraph"]) { %>
                 <%- item["descriptive-paragraph"] %>

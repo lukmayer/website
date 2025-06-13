@@ -1,0 +1,31 @@
+---
+description: "Lukas Mayer's Resumé - His education in Data Science/Cognitive Science/Statistics, awards, experience in conducting cutting-edge research, programming and project management skills, and scientific publications."
+format:
+  html:
+    toc: false
+---
+ 
+<style>
+.description {
+    display: none;
+}
+</style>
+
+::: {.column-page-inset-left}
+
+# Curriculum Vitae
+
+::: panel-tabset
+## Academic
+
+If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf).
+
+<iframe src="cv_lwm.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1" style="width: 90%; height: 800px; border: none;"></iframe>
+
+## Industry
+
+To be added soon.
+:::
+
+
+:::
