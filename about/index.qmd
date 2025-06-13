@@ -4,6 +4,8 @@ execute:
 format:
   html:
     toc: true
+    toc-depth: 4
+    toc-expand: 4
     include-in-header:
       - text: |
           <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -590,7 +592,7 @@ I spent a very fun year working in the Applied Digital Behavior Lab at the Unive
 
 :::::
 
-
+---
 
 ## Hobbies and Interests
 
@@ -669,12 +671,10 @@ div.callout-important.callout {
 </style>
 
 
-\
+---
 
 
-\
-
-### Places I've been
+## Places I've been
 
 ```{ojs}
 // Import required libraries with unique variable names
@@ -940,7 +940,7 @@ highlightedCountriesMap
 
 ```
 
-```{=html}
+
 <style>
 
 .observablehq--collapsed,
@@ -949,7 +949,7 @@ highlightedCountriesMap
 }
 
 </style>
-```
+
 
 \
 
