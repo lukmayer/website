@@ -39,8 +39,7 @@ website:
         text: "About"
       - href: now/index.qmd
         text: "Now"
-      - href: contact/index.qmd
-        text: "Contact"
+
 
     right:
       - text: "Login"

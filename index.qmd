@@ -26,22 +26,53 @@ div.quarto-about-trestles .about-contents {
 </style>
 
 
-::: column-page
+::: {.column-page}
 
 ::: {#about-content}
 
 ## Lukas William Mayer
 
 
-### Hi there, welcome to my site!
+### Welcome to my site!
 I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/) at the University of California, Irvine.
 
 In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration. I'm especially interested in applications involving model-based reinforcement learning and Bayesian computational models.
 
+
+---
+
+::: {.text-center}
+
+::: {.columns}
+
+::: {.column width="33%"}
+<i class="bi bi-envelope"></i> [E-mail](mailto:willuk@vivaldi.net)
 :::
 
+::: {.column width="33%"}
+<i class="bi bi-github"></i> [GitHub](https://github.com/lukmayer)
 :::
 
+::: {.column width="33%"}
+{{< ai google-scholar >}} [Scholar](https://scholar.google.com/citations?user=KsH37lMAAAAJ)
+:::
+
+::: 
+<!-- end columns -->
+
+:::
+<!-- end text center -->
 
 
+::: 
+<!-- end column-page -->
+
+
+::: 
+<!-- End about -->
+
+
+
+
+<!-- TODO: use dark-mode and light-mdoe divs to have theme matching background image -->
 

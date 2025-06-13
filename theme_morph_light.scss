@@ -472,7 +472,7 @@ footer, .footer {
   }
 
   .author, .date, .quarto-title-meta {
-    color: #6c757d;
+    color: #4a5568;
     font-size: 0.95rem;
     margin: 0.5rem 0;
 
@@ -503,6 +503,13 @@ footer, .footer {
 .title-block-header:empty, .quarto-title-block:empty {
   display: none;
 }
+
+.quarto-title-banner {
+    margin-bottom: 1em;
+    color: #4a5568;
+    background: #6c757d;
+}
+
 
 .toc:not(:empty), #TOC:not(:empty), .sidebar-navigation:not(:empty) {
   background-color: $gray-200;

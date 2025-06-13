@@ -497,6 +497,14 @@ footer, .footer {
 }
 
 
+.quarto-title-banner {
+    margin-bottom: 1em;
+    color: #fefefe;
+    background: #6c757d;
+}
+
+
+
 .toc:not(:empty), #TOC:not(:empty), .sidebar-navigation:not(:empty) {
   background-color: $gray-200;
   border-radius: 0.375rem;
