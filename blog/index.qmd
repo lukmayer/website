@@ -47,7 +47,7 @@ format:
 
 # Blog
 
-[Follow my blog with RSS](/blog/index.xml) 
+[Follow my blog with RSS](/blog/index.xml) <i class="bi bi-rss-fill"></i>
 
 
 
@@ -55,6 +55,6 @@ format:
 :::
 
 
-[Follow my blog with RSS](/blog/index.xml) 
+[Follow my blog with RSS](/blog/index.xml) <i class="bi bi-rss-fill"></i>
 
 :::

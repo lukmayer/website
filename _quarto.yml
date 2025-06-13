@@ -12,7 +12,7 @@ website:
   favicon: "assets/favicons/favicon.ico" 
   page-footer:
     left: 
-      - text: Source code
+      - icon: code-slash
         href: https://github.com/lukmayer/website
         aria-label: Source code
     center:
@@ -20,7 +20,7 @@ website:
        href: https://quarto.org
        aria-label: Quarto
     right:
-      - text: Blog RSS
+      - icon: rss-fill
         href: /blog/index.xml
         aria-label: Blog RSS feed
 
