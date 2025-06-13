@@ -34,7 +34,7 @@ div.quarto-about-trestles .about-contents {
 
 
 ### Welcome to my site!
-I'm currently a PhD Student in Cognitive Science in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/) at the University of California, Irvine.
+I'm currently a PhD Student in Cognitive Science at the University of California, Irvine, working in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/). 
 
 In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration. I'm especially interested in applications involving model-based reinforcement learning and Bayesian computational models.
 
