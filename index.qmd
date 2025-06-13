@@ -80,3 +80,52 @@ In my research, I leverage insights from Cognitive Science to enhance human-AI c
 
 <!-- TODO: use dark-mode and light-mdoe divs to have theme matching background image -->
 
+
+<style>
+
+body.nav-fixed.fullcontent {
+  background: linear-gradient(90deg, 
+    #f3f4f6 0%, 
+    #e5e7eb 10%, 
+    #cbd5e1 20%, 
+    #d1d5db 30%, 
+    #e5e7eb 40%, 
+    #f8fafc 50%, 
+    #e5e7eb 60%, 
+    #d1d5db 70%, 
+    #cbd5e1 80%, 
+    #e5e7eb 90%, 
+    #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: seamlessSheen 30s linear infinite;
+}
+
+
+body.nav-fixed.fullcontent.quarto-dark {
+  background: linear-gradient(90deg, 
+    #111827 0%, 
+    #1f2937 10%, 
+    #374151 20%, 
+    #475569 30%, 
+    #4b5563 40%, 
+    #475569 50%, 
+    #374151 60%, 
+    #1f2937 70%, 
+    #111827 80%, 
+    #0f172a 90%, 
+    #111827 100%);
+  background-size: 200% 100%;
+  animation: seamlessSheen 30s linear infinite;
+}
+
+
+@keyframes seamlessSheen {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+
+</style>
+
+
+
