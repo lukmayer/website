@@ -2,6 +2,8 @@
 description: "What I'm up to right now"
 format: 
   html:
+    toc-depth: 4
+    toc-expand: 4
     grid:
       margin-width: 300px
 ---
@@ -18,6 +20,7 @@ I've booked all my travel: a weekend in London, 10 days in Germany, a month of A
 
 Not entirely sure how that last stretch of travel will play out given some of the political turbulences at the moment. Hoping for the best!
 
+---
 
 ### 2025-05-01
 
