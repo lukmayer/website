@@ -6,11 +6,6 @@ format:
 back-to-top-navigation: false
 ---
 
-\
-
-\
-
-\
 
 ::: {.text-center}
 <h2>Sorry, it seems the link you clicked was broken :(</h2>

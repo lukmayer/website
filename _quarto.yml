@@ -54,7 +54,7 @@ format:
     respect-user-color-scheme: true
     code-line-numbers: true
     smooth-scroll: true
-    theme:  # TODO: better slate / better lumen / better morph
+    theme:  
       dark: [morph, theme_morph_dark.scss]
       light: [morph, theme_morph_light.scss]
     css: styles.css
