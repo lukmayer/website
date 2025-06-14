@@ -16,9 +16,10 @@ website:
         href: https://github.com/lukmayer/website
         aria-label: Source code
     center:
-     - text: Made with Quarto
-       href: https://quarto.org
-       aria-label: Quarto
+      - text: |
+          Made with <svg width="16" height="16" viewBox="0 0 32 32" style="vertical-align: -2px; margin-right: 4px;"><path d="M16,3 A13,13 0 1,1 16,29 A13,13 0 1,1 16,3 Z M15,3 L15,15 L3,15 L3,17 L15,17 L15,29 L17,29 L17,17 L29,17 L29,15 L17,15 L17,3 Z" fill="currentColor" fill-rule="evenodd"/></svg>
+        href: https://quarto.org
+        aria-label: Quarto
     right:
       - icon: rss-fill
         href: /blog/index.xml
@@ -87,6 +88,7 @@ format:
 execute:
   cache: true
   freeze: auto
+
 
   
   

@@ -45,21 +45,18 @@ In my research, I leverage insights from Cognitive Science to enhance human-AI c
 
 ::: {.columns}
 
-::: {.column width="25%"}
+::: {.column width="33%"}
 <i class="bi bi-envelope"></i> [E-mail](mailto:willuk@vivaldi.net)
 :::
 
-::: {.column width="25%"}
+::: {.column width="33%"}
 <i class="bi bi-github"></i> [GitHub](https://github.com/lukmayer)
 :::
 
-::: {.column width="25%"}
+::: {.column width="33%"}
 {{< ai google-scholar >}} [Scholar](https://scholar.google.com/citations?user=KsH37lMAAAAJ)
 :::
 
-::: {.column width="25%"}
-{{< ai semantic-scholar >}} [Semantic](https://www.semanticscholar.org/author/Lukas-William-Mayer/2281033339)
-:::
 
 ::: 
 <!-- end columns -->
