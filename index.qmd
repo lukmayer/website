@@ -1,7 +1,7 @@
 ---
 description: "PhD student researching Computational Cognitive Science and Human-AI collaboration."
 
-image: assets/luke-23-circle_small.png
+image: assets/luke-23-circle_small_traced.png
 about:
   id: about-content
   template: trestles
