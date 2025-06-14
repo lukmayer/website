@@ -38,7 +38,6 @@ I'm currently a PhD Student in Cognitive Science at the University of California
 
 In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration. I'm especially interested in applications involving model-based reinforcement learning and Bayesian computational models.
 
-
 ---
 
 ::: {.text-center}
