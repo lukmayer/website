@@ -7,12 +7,9 @@ categories:
   - statistics
   - math
 image: "images/grid.jpg"
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 Ever since learning about research methods as an undergrad, I was curious about how the statistics we do in our research actually worked.

@@ -7,12 +7,9 @@ categories:
   - software
   - duolingo
 image: "images/duo.png"
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 I started using Duolingo as an undergraduate student wanting to learn a bit of Swedish all the way back in 2019.

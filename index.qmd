@@ -24,8 +24,6 @@ back-to-top-navigation: false
 div.quarto-about-trestles .about-contents {
         border-left: none !important;
 
-
-
 .icon-align {
   vertical-align: middle;
   display: inline-block;

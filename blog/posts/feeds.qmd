@@ -3,15 +3,13 @@ title: "How I find interesting blogs to follow"
 description: "My *super secret* curated lists"
 author: "Luke"
 date: "2025-05-11"
+image: images/reading.jpg
 categories:
  - rss
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 

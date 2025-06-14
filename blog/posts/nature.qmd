@@ -3,15 +3,13 @@ title: "Why is nature so disturbing?"
 description: "On overthinking animal documentaries and human exceptionalism"
 author: "Luke"
 date: "2025-05-04"
+image: images/zebra.jpg
 categories:
  - life
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 Why is it that I find the more gruesome scenes in nature documentaries so hard to watch, when I myself am an animal? A meat-eating animal at that. Why do I notice a reaction that seems to implicitly reject the axioms of natural selection, a system I cannot opt out of? This internal hypocrisy has been puzzling me a bit recently, and in this post, I want to dissect my intuitions a bit.

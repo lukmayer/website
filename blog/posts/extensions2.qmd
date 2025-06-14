@@ -3,15 +3,13 @@ title: "More awesome browser extensions"
 description: "Better PDFs, website navigation via keyboard, website code injection"
 author: "Luke"
 date: "2025-05-03"
+image: images/puzzle.jpg
 categories:
  - extensions
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 

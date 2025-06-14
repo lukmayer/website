@@ -7,12 +7,9 @@ categories:
   - search engines
   - software
 image: "images/kagi.png"
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 

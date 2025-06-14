@@ -7,14 +7,9 @@ categories:
   - webdev
   - quarto
 image: "images/login.png"
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
 format:
   html:
+    include-after-body: ../../_includes/utterances.html
     code-fold: show
 ---
 

@@ -6,15 +6,10 @@ date: "12/01/2024"
 categories:
   - linux
 image: "images/linux_wifi.png"
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
-
 format:
   html:
+    include-after-body: ../../_includes/utterances.html
+
     code-overflow: scroll
 ---
 

@@ -8,12 +8,9 @@ categories:
   - software
   - code
 image: "images/quarto.png" 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 Today a quick hack for pushing website updates.\

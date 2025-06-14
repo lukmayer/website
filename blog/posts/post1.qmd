@@ -6,12 +6,9 @@ date: "07/21/2024"
 categories:
   - webdev
 image: "images/js.png"
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 Hello world!

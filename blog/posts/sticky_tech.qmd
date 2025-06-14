@@ -3,15 +3,13 @@ title: "Is it even possible to avoid big-tech?"
 description: "A status update on my self-experiment"
 author: "Luke"
 date: "2025-05-18"
+image: images/big_tech.png
 categories:
  - software
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 Have you ever had a thought that goes something like "Do I really need \<something\>"? I definitely have. Over the years, I have done some silly multi-week experiments to assess things like: what would it be like to sleep without a pillow, live without a mirror, work without a chair. Why? Just to challenge my habits, I think.

@@ -3,15 +3,13 @@ title: "Have we reached maximum click-bait yet?"
 description: "My struggle with social media"
 author: "Luke"
 date: "2025-05-11"
+image: images/fishing.jpg
 categories:
  - social media
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 

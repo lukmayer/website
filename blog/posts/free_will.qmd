@@ -3,15 +3,13 @@ title: "Whether we have free will or not should be inconsequential"
 description: "Scientific findings should not always influence institutional practice"
 author: "Luke"
 date: "2025-05-02"
+image: images/will.jpeg
 categories:
  - phd
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 I'm currently taking a class on Consciousness. Today's topic was around some of the research evidence against free will, and whether free will is possible if true randomness exists (apparently it does).

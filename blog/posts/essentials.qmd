@@ -7,12 +7,9 @@ categories:
   - extensions
   - rss
 image: "images/puzzle.jpg" 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 If you somehow found this page, you probably use the internet quite a bit in your daily life.

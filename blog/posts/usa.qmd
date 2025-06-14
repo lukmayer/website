@@ -3,16 +3,14 @@ title: "Bread in the USA"
 description: "Andere Länder, andere Sitten"
 author: "Luke"
 date: "2025-05-02"
+image: images/bread.jpg
 categories:
  - phd
  - life
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 I don't mean to complain too much about what my life is like in the USA.

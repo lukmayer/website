@@ -8,12 +8,9 @@ categories:
   - julia
   - code
 image: "images/371907020.png"
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 Creative coding, where one leverages computer programming to make art, comes in many names and forms.

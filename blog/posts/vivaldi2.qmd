@@ -7,12 +7,9 @@ categories:
   - software
   - vivaldi
 image: "images/vivaldi_logo.png"
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 Vivaldi is by-far my favorite browser thanks to its unique and extensive feature set, which I touched on in my first Vivaldi post.

@@ -3,13 +3,13 @@ description: "Lukas Mayer's personal blog"
 listing:
   id: main-listing
   type: grid
-  grid-columns: 1
-  fields: [date, title, description, categories]
+  grid-columns: 3
+  fields: [image, date, title, description, categories]
   contents: posts
   sort: "date desc"
   categories: numbered
   feed: true
-  page-size: 10
+  page-size: 12
 format: 
   html:
     toc: false

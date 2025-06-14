@@ -7,12 +7,9 @@ categories:
   - mastodon
   - social media
 image: "images/mastodon.png" 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 A lot of the online platforms we have come accustomed to over the last decade or so are changing in ways we might not always appreciate.

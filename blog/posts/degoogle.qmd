@@ -10,12 +10,9 @@ categories:
   - search engines
 image: "images/debian.png"
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 ---
 
 #### My journey
