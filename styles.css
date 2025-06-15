@@ -4,22 +4,10 @@
     border-radius: 20px; 
 }
 
-.navbar-logo {
-    height: 2em !important; /* Set the logo height */
-    margin-top: 0px; /* Align the logo properly */
-    max-width: unset !important;
-    max-height: unset !important;
-    display: inline-block;
-    transition: transform 0.3s ease; /* Smooth transition */
-}
-
-
-
 .navbar-title {
   font-size: 0.01em;
   opacity: 0 !important;
 }
-
 
 .quarto-title-banner {
     padding: 20px; 
@@ -30,32 +18,77 @@
     margin-left: 20px;
 }
 
-
 #quarto-header {
     padding: 20px; 
 }
 
+.nav-footer-center p {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-footer-center svg {
+    vertical-align: middle;
+}
 
 .nav-footer {
     background-color: #00000000; 
-    align-items: center; 
+    align-items: center;
+    display: flex;
 }
+
+.nav-footer-left,
+.nav-footer-center,
+.nav-footer-right {
+    display: flex;
+    align-items: center;
+    flex: 1; 
+}
+
+.nav-footer-left {
+    justify-content: flex-start; 
+}
+
+.nav-footer-center {
+    justify-content: center; 
+}
+
+.nav-footer-right {
+    justify-content: flex-end; 
+}
+
+.footer-items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
 
 .nav-footer a:hover {
     transform: translateY(-1px);
 }
 
-/* 1. Add !important (most reliable) */
 div.callout-important.callout-style-default>.callout-header {
     background-color: transparent !important;
 }
 
-/* 2. Increase specificity by adding more selectors */
 body div.callout-important.callout-style-default>.callout-header {
     background-color: transparent;
 }
 
-/* 3. Use more specific attribute selectors */
 div.callout-important.callout-style-default[class*="callout"]>.callout-header {
     background-color: transparent;
 }

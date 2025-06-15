@@ -101,7 +101,6 @@ body.nav-fixed.fullcontent {
   animation: seamlessSheen 30s linear infinite;
 }
 
-
 body.nav-fixed.fullcontent.quarto-dark {
   background: linear-gradient(90deg, 
     #111827 0%, 
@@ -119,12 +118,10 @@ body.nav-fixed.fullcontent.quarto-dark {
   animation: seamlessSheen 30s linear infinite;
 }
 
-
 @keyframes seamlessSheen {
   0% { background-position: 0% 0%; }
   100% { background-position: 200% 0%; }
 }
-
 
 </style>
 

@@ -38,12 +38,9 @@ date: "$CURRENT_DATE"
 #categories:
 # - quarto
 
-comments:
-  giscus:
-    repo: lukmayer/site_comments
-    theme: dark
-    mapping: url
-    reactions-enabled: true
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
 
 draft: true
 ---

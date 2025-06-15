@@ -1,7 +1,6 @@
 <div id="utterances-container"></div>
 
 <script>
-// Quarto theme detection
 function getQuartoTheme() {
   return document.body.classList.contains('quarto-dark') ? 'dark' : 'light';
 }
@@ -12,7 +11,7 @@ function getUtterancesTheme(theme) {
 
 function loadUtterances() {
   const container = document.getElementById('utterances-container');
-  container.innerHTML = ''; // Clear existing
+  container.innerHTML = ''; 
 
   const script = document.createElement('script');
   script.src = 'https://utteranc.es/client.js';
@@ -36,7 +35,6 @@ function updateUtterancesTheme() {
   }
 }
 
-// Watch for Quarto theme changes
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.type === 'attributes' && 
@@ -51,12 +49,10 @@ observer.observe(document.body, {
   attributeFilter: ['class', 'data-bs-theme']
 });
 
-// Also watch document element for theme changes
 observer.observe(document.documentElement, {
   attributes: true,
   attributeFilter: ['class', 'data-bs-theme']
 });
 
-// Initialize
 document.addEventListener('DOMContentLoaded', loadUtterances);
 </script>
