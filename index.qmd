@@ -123,4 +123,3 @@ body.nav-fixed.fullcontent.quarto-dark {
 
 </style>
 
-
