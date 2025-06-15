@@ -84,10 +84,7 @@ format:
     fig-responsive: true
     lightbox: true
 
-    
-execute:
-  cache: true
-  freeze: auto
+
 
 
   

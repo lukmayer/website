@@ -1,0 +1,41 @@
+---
+format: 
+  pdf: 
+    documentclass: article
+    self-contained: false
+    geometry:
+      - top=10mm
+      - left=15mm
+      - right=15mm
+      - bottom=5mm
+      - heightrounded
+    fontfamily: libertine
+    colorlinks: true
+    linkcolor: linkblue
+    urlcolor: linkblue
+    citecolor: linkblue
+    fontsize: '16'
+    include-in-header: 
+      text: |
+        \usepackage{multicol}
+        \usepackage{tabularx}
+        \usepackage{lipsum}
+        \usepackage{graphicx}
+        \usepackage{hyperref}
+        \usepackage{libertine}
+        \usepackage{xcolor}
+        \usepackage{sectsty}
+        \pagestyle{empty}
+        \setlength{\multicolsep}{2pt plus 1.0pt minus 0.75pt}
+        \setlength{\columnsep}{3em}
+        % Dark mode colors
+        \definecolor{bgcolor}{RGB}{30,33,38}
+        \definecolor{textcolor}{RGB}{209,213,219}
+        \definecolor{headingcolor}{RGB}{229,231,235}
+        \definecolor{linkblue}{RGB}{96,165,250}
+        \pagecolor{bgcolor}
+        \color{textcolor}
+        \allsectionsfont{\color{headingcolor}}
+---
+
+{{< include cv_content.qmd >}}

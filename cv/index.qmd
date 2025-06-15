@@ -6,9 +6,52 @@ format:
 ---
  
 <style>
+
 .description {
     display: none;
 }
+
+body:not(.quarto-dark) .dark-content {
+  display: none !important;
+}
+
+body.quarto-dark .light-content {
+  display: none !important;
+}
+
+.light-content iframe,
+.dark-content iframe {
+  width: 90%;
+  height: 800px;
+  border: none;
+}
+
+/* Hiding the white scroll bar in dark mode */
+
+.dark-content {
+  position: relative;
+}
+
+.dark-content iframe {
+  width: 90%;
+  height: 800px;
+  border: none;
+}
+
+/* Cover scrollbar in dark mode */
+body.quarto-dark .dark-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: calc(10% + 0px); 
+  width: 22px; 
+  height: 800px;
+  background-color: var(--bs-body-bg, #1e2126); 
+  pointer-events: none;
+  z-index: 1;
+}
+
+
 </style>
 
 ::: {.column-page-inset-left}
@@ -20,7 +63,13 @@ format:
 
 If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf).
 
+::: {.light-content}
 <iframe src="cv_lwm.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1" style="width: 90%; height: 800px; border: none;"></iframe>
+:::
+
+::: {.dark-content}
+<iframe src="cv_lwm_dark.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1" style="width: 90%; height: 800px; border: none;"></iframe>
+:::
 
 ## Industry
 
