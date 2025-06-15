@@ -37,7 +37,6 @@ div.quarto-about-trestles .about-contents {
 
 ## Lukas William Mayer
 
-
 ### Welcome to my site!
 I'm currently a PhD Student in Cognitive Science at the University of California, Irvine, working in [Mark Steyvers' lab](https://steyvers.socsci.uci.edu/madlab/). 
 
@@ -103,17 +102,17 @@ body.nav-fixed.fullcontent {
 
 body.nav-fixed.fullcontent.quarto-dark {
   background: linear-gradient(90deg, 
-    #111827 0%, 
-    #1f2937 10%, 
-    #374151 20%, 
-    #475569 30%, 
-    #4b5563 40%, 
-    #475569 50%, 
-    #374151 60%, 
-    #1f2937 70%, 
-    #111827 80%, 
-    #0f172a 90%, 
-    #111827 100%);
+    #1a1d23 0%, 
+    #242831 10%, 
+    #2d323c 20%, 
+    #3a4049 30%, 
+    #4a5058 40%, 
+    #3a4049 50%, 
+    #2d323c 60%, 
+    #242831 70%, 
+    #1a1d23 80%, 
+    #1e2126 90%, 
+    #1a1d23 100%);
   background-size: 200% 100%;
   animation: seamlessSheen 30s linear infinite;
 }
