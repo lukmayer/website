@@ -70,18 +70,69 @@ world = {
   return topojson.feature(await response.json(), "countries");
 }
 
-// Simple year selector with buttons
+// Function to get current theme colors for timeline map
+getTimelineThemeColors = () => {
+  const isDark = document.body.classList.contains('quarto-dark');
+
+  if (isDark) {
+    return {
+      landColor: "#374151", // gray-700
+      countryStroke: "#6b7280", // gray-500
+      futurePath: "#60a5fa", // blue-400
+      traveledPath: "#f87171", // red-400
+      currentMarker: "#f87171", // red-400
+      otherMarkers: "#60a5fa", // blue-400
+      markerStroke: "#e5e7eb", // gray-200
+      labelText: "#f3f4f6", // gray-100
+      labelBg: "rgba(17, 24, 39, 0.8)", // gray-900 with opacity
+      tooltipBg: "rgba(17, 24, 39, 0.95)", // gray-900 with opacity
+      tooltipText: "#f3f4f6", // gray-100
+      tooltipAccent: "#fbbf24", // amber-400
+      controlsBg: "rgba(17, 24, 39, 0.8)", // gray-900 with opacity
+      controlsText: "#f3f4f6", // gray-100
+      controlsButtonBg: "rgba(75, 85, 99, 0.8)", // gray-600 with opacity
+      sliderBg: "rgba(17, 24, 39, 0.8)", // gray-900 with opacity
+      sliderText: "#f3f4f6", // gray-100
+      sliderButtonBg: "rgba(75, 85, 99, 0.8)" // gray-600 with opacity
+    };
+  } else {
+    return {
+      landColor: "#e5e7eb", // gray-200
+      countryStroke: "#9ca3af", // gray-400
+      futurePath: "#3b82f6", // blue-500
+      traveledPath: "#ef4444", // red-500
+      currentMarker: "#ef4444", // red-500
+      otherMarkers: "#3b82f6", // blue-500
+      markerStroke: "#374151", // gray-700
+      labelText: "#374151", // gray-700
+      labelBg: "rgba(255, 255, 255, 0.9)", // white with opacity
+      tooltipBg: "rgba(255, 255, 255, 0.95)", // white with opacity
+      tooltipText: "#374151", // gray-700
+      tooltipAccent: "#f59e0b", // amber-500
+      controlsBg: "rgba(255, 255, 255, 0.9)", // white with opacity
+      controlsText: "#374151", // gray-700
+      controlsButtonBg: "rgba(243, 244, 246, 0.8)", // gray-100 with opacity
+      sliderBg: "rgba(255, 255, 255, 0.9)", // white with opacity
+      sliderText: "#374151", // gray-700
+      sliderButtonBg: "rgba(243, 244, 246, 0.8)" // gray-100 with opacity
+    };
+  }
+}
+
+// Theme-adaptive year selector with buttons
 viewof selectedYear = {
   const MIN_YEAR = 1998;
   const MAX_YEAR = 2025;
   const DEFAULT_YEAR = 2025;
 
+  const colors = getTimelineThemeColors();
+
   const container = html`<div style="display: flex; flex-direction: column; width: 100%;">
     <div style="display: flex; align-items: center; margin-bottom: 8px;">
       <button id="prev-year" style="
-        background: rgba(60, 60, 60, 0.7); 
-        color: #e0e0e0; 
-        border: none; 
+        background: ${colors.sliderButtonBg}; 
+        color: ${colors.sliderText}; 
+        border: 1px solid ${colors.countryStroke}; 
         border-radius: 4px; 
         padding: 4px 8px; 
         margin-right: 10px;
@@ -89,13 +140,13 @@ viewof selectedYear = {
         font-size: 16px;
         width: 36px;
       ">◀</button>
-      <div style="flex-grow: 1; text-align: center; color: #e0e0e0; font-size: 16px;">
+      <div style="flex-grow: 1; text-align: center; color: ${colors.sliderText}; font-size: 16px;">
         Year: <span id="year-display">${DEFAULT_YEAR}</span>
       </div>
       <button id="next-year" style="
-        background: rgba(60, 60, 60, 0.7); 
-        color: #e0e0e0; 
-        border: none; 
+        background: ${colors.sliderButtonBg}; 
+        color: ${colors.sliderText}; 
+        border: 1px solid ${colors.countryStroke}; 
         border-radius: 4px; 
         padding: 4px 8px; 
         margin-left: 10px;
@@ -104,7 +155,7 @@ viewof selectedYear = {
         width: 36px;
       ">▶</button>
     </div>
-    <input type="range" id="year-slider" min="${MIN_YEAR}" max="${MAX_YEAR}" step="1" value="${DEFAULT_YEAR}" style="width: 100%; accent-color: #4CAF50;">
+    <input type="range" id="year-slider" min="${MIN_YEAR}" max="${MAX_YEAR}" step="1" value="${DEFAULT_YEAR}" style="width: 100%; accent-color: ${colors.traveledPath};">
   </div>`;
 
   const slider = container.querySelector("#year-slider");
@@ -113,6 +164,19 @@ viewof selectedYear = {
   const nextBtn = container.querySelector("#next-year");
 
   let value = DEFAULT_YEAR;
+
+  // Function to update colors based on theme
+  const updateColors = () => {
+    const currentColors = getTimelineThemeColors();
+    prevBtn.style.background = currentColors.sliderButtonBg;
+    prevBtn.style.color = currentColors.sliderText;
+    prevBtn.style.borderColor = currentColors.countryStroke;
+    nextBtn.style.background = currentColors.sliderButtonBg;
+    nextBtn.style.color = currentColors.sliderText;
+    nextBtn.style.borderColor = currentColors.countryStroke;
+    display.parentElement.style.color = currentColors.sliderText;
+    slider.style.accentColor = currentColors.traveledPath;
+  };
 
   // Function to update everything
   const updateYear = (year) => {
@@ -158,8 +222,19 @@ viewof selectedYear = {
     }
   });
 
+  // Listen for theme changes
+  const observer = new MutationObserver(() => {
+    updateColors();
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
+
   // Initialize
   updateYear(DEFAULT_YEAR);
+  updateColors();
 
   // Define getter for Observable
   Object.defineProperty(container, "value", {
@@ -172,12 +247,14 @@ viewof selectedYear = {
 // Current location based on selected year
 currentLocation = locationData.find(d => d.year === selectedYear)
 
-// Create a tooltip element that will be reused
+// Create a theme-adaptive tooltip element
 tooltip = {
+  const colors = getTimelineThemeColors();
+
   const div = html`<div style="
     position: absolute;
-    background: rgba(40, 40, 40, 0.9);
-    border: 1px solid #555;
+    background: ${colors.tooltipBg};
+    border: 1px solid ${colors.countryStroke};
     border-radius: 5px;
     padding: 10px;
     pointer-events: none;
@@ -187,25 +264,45 @@ tooltip = {
     font-family: sans-serif;
     font-size: 14px;
     max-width: 200px;
-    color: #e0e0e0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    color: ${colors.tooltipText};
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   "></div>`;
 
   document.body.appendChild(div);
 
+  // Function to update tooltip colors
+  const updateTooltipColors = () => {
+    const currentColors = getTimelineThemeColors();
+    div.style.background = currentColors.tooltipBg;
+    div.style.borderColor = currentColors.countryStroke;
+    div.style.color = currentColors.tooltipText;
+  };
+
+  // Listen for theme changes
+  const observer = new MutationObserver(() => {
+    updateTooltipColors();
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
+
   return div;
 }
 
-// Map visualization with tooltips integrated directly and interactive pan/zoom
+// Theme-adaptive map visualization
 mapVisualization = {
+  const colors = getTimelineThemeColors();
+
   // Set up dimensions and projection
   const width = 900;
   const height = 500;
 
   // Create a projection focused on US and Europe
   const projection = d3.geoMercator()
-    .center([-20, 45])
-    .scale(350)
+    .center([-40, 45])
+    .scale(250)
     .translate([width / 2, height / 2]);
 
   // Create path generator
@@ -224,16 +321,16 @@ mapVisualization = {
     .attr("height", height)
     .attr("fill", "none");
 
-  // Create a group for all map elements that will be transformed during zoom/pan
+  // Create a group for all map elements
   const g = svg.append("g");
 
   // Draw countries
-  g.append("g")
+  const countries = g.append("g")
     .selectAll("path")
     .data(world.features)
     .join("path")
-    .attr("fill", "#555555") // Dark gray for land
-    .attr("stroke", "#444")  // Darker border for countries
+    .attr("fill", colors.landColor)
+    .attr("stroke", colors.countryStroke)
     .attr("stroke-width", 0.5)
     .attr("d", path);
 
@@ -246,51 +343,44 @@ mapVisualization = {
   const lineGenerator = d3.line()
     .x(d => projection([d.lon, d.lat])[0])
     .y(d => projection([d.lon, d.lat])[1])
-    .curve(d3.curveCardinal.tension(0.5)); // Reduce tension to prevent overshooting
+    .curve(d3.curveCardinal.tension(0.5));
 
   // Draw the complete path 
-  g.append("path")
+  const futurePath = g.append("path")
     .attr("d", lineGenerator(uniqueLocations))
     .attr("fill", "none")
-    .attr("stroke", "#6ab7ff") // Lighter blue for better visibility
+    .attr("stroke", colors.futurePath)
     .attr("stroke-width", 2)
     .attr("stroke-dasharray", "5,5")
     .attr("opacity", 0.7);
 
   // Highlight the path traveled up to the current year
-  // Find the index of the last location that should be included in the path for the selected year
   const currentYearIndex = uniqueLocations.findIndex(d => {
     const locationsAtThisPoint = locationData.filter(loc => 
       loc.lat === d.lat && loc.lon === d.lon
     );
     const years = locationsAtThisPoint.map(loc => loc.year);
     const minYear = Math.min(...years);
-
-    // Check if this is the first location where selectedYear is less than minYear
     return selectedYear < minYear;
   });
 
-  // Determine how much of the path to draw
   let traveledPathIndex;
   if (currentYearIndex === -1) {
-    // If no location is found (we're at or beyond the last year), include all locations
     traveledPathIndex = uniqueLocations.length;
   } else if (currentYearIndex === 0) {
-    // If even the first location is in the future, don't draw any path
     traveledPathIndex = 0;
   } else {
-    // Otherwise, include all locations up to but not including the future location
     traveledPathIndex = currentYearIndex;
   }
 
-  // Only draw the path if there are locations to include
+  // Draw traveled path
+  let traveledPath = null;
   if (traveledPathIndex > 0) {
-    const traveledPath = uniqueLocations.slice(0, traveledPathIndex);
-
-    g.append("path")
-      .attr("d", lineGenerator(traveledPath))
+    const traveledPathData = uniqueLocations.slice(0, traveledPathIndex);
+    traveledPath = g.append("path")
+      .attr("d", lineGenerator(traveledPathData))
       .attr("fill", "none")
-      .attr("stroke", "#ff7675") // Softer red for dark mode
+      .attr("stroke", colors.traveledPath)
       .attr("stroke-width", 3)
       .attr("opacity", 0.9);
   }
@@ -303,14 +393,13 @@ mapVisualization = {
     new Map(locationData.map(d => [`${d.lat},${d.lon}`, d])).values()
   );
 
-  // Draw all locations as small markers with integrated tooltips
-  markersGroup.selectAll("circle")
+  // Draw all locations as markers
+  const markers = markersGroup.selectAll("circle")
     .data(markerLocations)
     .join("circle")
     .attr("cx", d => projection([d.lon, d.lat])[0])
     .attr("cy", d => projection([d.lon, d.lat])[1])
     .attr("r", d => {
-      // Check if this location includes the selected year
       const isCurrentLocation = locationData.some(loc => 
         loc.year === selectedYear && 
         loc.lat === d.lat && 
@@ -319,15 +408,14 @@ mapVisualization = {
       return isCurrentLocation ? 8 : 4;
     })
     .attr("fill", d => {
-      // Check if this location includes the selected year
       const isCurrentLocation = locationData.some(loc => 
         loc.year === selectedYear && 
         loc.lat === d.lat && 
         loc.lon === d.lon
       );
-      return isCurrentLocation ? "#ff7675" : "#6ab7ff";
+      return isCurrentLocation ? colors.currentMarker : colors.otherMarkers;
     })
-    .attr("stroke", "#ddd") // Light border for contrast
+    .attr("stroke", colors.markerStroke)
     .attr("stroke-width", d => {
       const isCurrentLocation = locationData.some(loc => 
         loc.year === selectedYear && 
@@ -345,12 +433,10 @@ mapVisualization = {
       return isCurrentLocation ? 1 : 0.7;
     })
     .on("mouseover", function(event, d) {
-      // Find all years at this location
       const locYears = locationData
         .filter(loc => loc.lat === d.lat && loc.lon === d.lon)
         .map(loc => loc.year);
 
-      // Create year ranges for display
       const yearRanges = [];
       let start = locYears[0];
       let end = locYears[0];
@@ -369,9 +455,10 @@ mapVisualization = {
         .attr("r", 12)
         .attr("stroke-width", 3);
 
+      const currentColors = getTimelineThemeColors();
       tooltip.innerHTML = `
-        <strong style="color: #ff9f43;">${d.location}, ${d.country}</strong>
-        Years: ${yearRanges.join(", ")}
+        <strong style="color: ${currentColors.tooltipAccent};">${d.location}, ${d.country}</strong><br/>
+        Years: ${yearRanges.join(", ")}<br/>
         Coordinates: ${d.lat.toFixed(2)}, ${d.lon.toFixed(2)}
       `;
 
@@ -398,27 +485,29 @@ mapVisualization = {
     });
 
   // Add label for current location
+  let currentLocationLabel = null;
+  let currentLocationBg = null;
+
   if (currentLocation) {
     const [x, y] = projection([currentLocation.lon, currentLocation.lat]);
 
-    // Add a background for the text to improve readability
-    markersGroup.append("rect")
+    currentLocationBg = markersGroup.append("rect")
       .attr("x", x + 10)
       .attr("y", y - 15)
       .attr("width", `${currentLocation.location.length * 8 + 30}px`)
       .attr("height", "22px")
-      .attr("fill", "rgba(40, 40, 40, 0.7)")
+      .attr("fill", colors.labelBg)
       .attr("rx", 3)
       .attr("ry", 3);
 
-    markersGroup.append("text")
+    currentLocationLabel = markersGroup.append("text")
       .attr("x", x + 12)
       .attr("y", y)
       .text(`${currentLocation.location} (${currentLocation.year})`)
       .attr("font-family", "sans-serif")
       .attr("font-size", "14px")
       .attr("font-weight", "bold")
-      .attr("fill", "#e0e0e0"); // Light text for dark mode
+      .attr("fill", colors.labelText);
   }
 
   // Add zoom controls
@@ -426,70 +515,117 @@ mapVisualization = {
     .attr("transform", `translate(${width - 70}, 20)`);
 
   // Zoom in button
-  zoomControls.append("rect")
+  const zoomInButton = zoomControls.append("rect")
     .attr("x", 0)
     .attr("y", 0)
     .attr("width", 30)
     .attr("height", 30)
-    .attr("fill", "rgba(60, 60, 60, 0.7)")
+    .attr("fill", colors.controlsButtonBg)
+    .attr("stroke", colors.countryStroke)
     .attr("rx", 5)
     .attr("ry", 5)
     .attr("cursor", "pointer")
     .on("click", () => zoom.scaleBy(svg.transition().duration(300), 1.5));
 
-  zoomControls.append("text")
+  const zoomInText = zoomControls.append("text")
     .attr("x", 15)
     .attr("y", 20)
     .attr("text-anchor", "middle")
-    .attr("fill", "#e0e0e0")
+    .attr("fill", colors.controlsText)
     .attr("font-size", "18px")
     .attr("font-weight", "bold")
     .attr("pointer-events", "none")
     .text("+");
 
   // Zoom out button
-  zoomControls.append("rect")
+  const zoomOutButton = zoomControls.append("rect")
     .attr("x", 0)
     .attr("y", 40)
     .attr("width", 30)
     .attr("height", 30)
-    .attr("fill", "rgba(60, 60, 60, 0.7)")
+    .attr("fill", colors.controlsButtonBg)
+    .attr("stroke", colors.countryStroke)
     .attr("rx", 5)
     .attr("ry", 5)
     .attr("cursor", "pointer")
     .on("click", () => zoom.scaleBy(svg.transition().duration(300), 0.75));
 
-  zoomControls.append("text")
+  const zoomOutText = zoomControls.append("text")
     .attr("x", 15)
     .attr("y", 60)
     .attr("text-anchor", "middle")
-    .attr("fill", "#e0e0e0")
+    .attr("fill", colors.controlsText)
     .attr("font-size", "18px")
     .attr("font-weight", "bold")
     .attr("pointer-events", "none")
     .text("−");
 
   // Reset button
-  zoomControls.append("rect")
+  const resetButton = zoomControls.append("rect")
     .attr("x", 0)
     .attr("y", 80)
     .attr("width", 30)
     .attr("height", 30)
-    .attr("fill", "rgba(60, 60, 60, 0.7)")
+    .attr("fill", colors.controlsButtonBg)
+    .attr("stroke", colors.countryStroke)
     .attr("rx", 5)
     .attr("ry", 5)
     .attr("cursor", "pointer")
     .on("click", resetZoom);
 
-  zoomControls.append("text")
+  const resetText = zoomControls.append("text")
     .attr("x", 15)
     .attr("y", 100)
     .attr("text-anchor", "middle")
-    .attr("fill", "#e0e0e0")
+    .attr("fill", colors.controlsText)
     .attr("font-size", "14px")
     .attr("font-weight", "bold")
     .attr("pointer-events", "none")
     .text("R");
+
+  // Function to update all colors based on current theme
+  function updateMapColors() {
+    const currentColors = getTimelineThemeColors();
+
+    // Update countries
+    countries
+      .attr("fill", currentColors.landColor)
+      .attr("stroke", currentColors.countryStroke);
+
+    // Update paths
+    futurePath.attr("stroke", currentColors.futurePath);
+    if (traveledPath) {
+      traveledPath.attr("stroke", currentColors.traveledPath);
+    }
+
+    // Update markers
+    markers
+      .attr("fill", d => {
+        const isCurrentLocation = locationData.some(loc => 
+          loc.year === selectedYear && 
+          loc.lat === d.lat && 
+          loc.lon === d.lon
+        );
+        return isCurrentLocation ? currentColors.currentMarker : currentColors.otherMarkers;
+      })
+      .attr("stroke", currentColors.markerStroke);
+
+    // Update labels
+    if (currentLocationBg) {
+      currentLocationBg.attr("fill", currentColors.labelBg);
+    }
+    if (currentLocationLabel) {
+      currentLocationLabel.attr("fill", currentColors.labelText);
+    }
+
+    // Update controls
+    zoomInButton.attr("fill", currentColors.controlsButtonBg).attr("stroke", currentColors.countryStroke);
+    zoomOutButton.attr("fill", currentColors.controlsButtonBg).attr("stroke", currentColors.countryStroke);
+    resetButton.attr("fill", currentColors.controlsButtonBg).attr("stroke", currentColors.countryStroke);
+    zoomInText.attr("fill", currentColors.controlsText);
+    zoomOutText.attr("fill", currentColors.controlsText);
+    resetText.attr("fill", currentColors.controlsText);
+  }
 
   // Define zoom behavior
   const zoom = d3.zoom()
@@ -498,12 +634,9 @@ mapVisualization = {
 
   function zoomed(event) {
     g.attr("transform", event.transform);
-
-    // Adjust stroke widths based on zoom level to keep them visually consistent
     const strokeScale = 1 / Math.sqrt(event.transform.k);
     g.selectAll("path").attr("stroke-width", 0.5 * strokeScale);
 
-    // Update marker sizes based on zoom level
     markersGroup.selectAll("circle").each(function(d) {
       const isCurrentLocation = locationData.some(loc => 
         loc.year === selectedYear && 
@@ -527,6 +660,15 @@ mapVisualization = {
   // Enable zoom and pan on the SVG
   svg.call(zoom);
 
+  // Listen for theme changes and update colors accordingly
+  const observer = new MutationObserver(() => {
+    updateMapColors();
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
 
   return svg.node();
 }
@@ -694,15 +836,52 @@ worldGeoData = {
   return topoHighlight.feature(await response.json(), "countries");
 }
 
-// Map visualization with highlighted countries
+// Function to get current theme colors
+getThemeColors = () => {
+  const isDark = document.body.classList.contains('quarto-dark');
+
+  if (isDark) {
+    return {
+      visitedColor: "#00a653",
+      notVisitedColor: "#374151", // gray-700 equivalent
+      strokeColor: "#6b7280", // gray-500 equivalent
+      strokeHoverColor: "#ffffff",
+      tooltipBg: "rgba(17, 24, 39, 0.95)", // gray-900 with opacity
+      tooltipText: "#ffffff",
+      legendBg: "rgba(17, 24, 39, 0.8)",
+      legendText: "#ffffff",
+      controlsBg: "rgba(17, 24, 39, 0.8)",
+      controlsButtonBg: "rgba(75, 85, 99, 0.8)", // gray-600 with opacity
+      controlsButtonStroke: "#9ca3af" // gray-400
+    };
+  } else {
+    return {
+      visitedColor: "#00a653",
+      notVisitedColor: "#e5e7eb", // gray-200 equivalent
+      strokeColor: "#9ca3af", // gray-400 equivalent
+      strokeHoverColor: "#374151",
+      tooltipBg: "rgba(255, 255, 255, 0.95)",
+      tooltipText: "#374151",
+      legendBg: "rgba(255, 255, 255, 0.9)",
+      legendText: "#374151",
+      controlsBg: "rgba(255, 255, 255, 0.9)",
+      controlsButtonBg: "rgba(243, 244, 246, 0.8)", // gray-100 with opacity
+      controlsButtonStroke: "#d1d5db" // gray-300
+    };
+  }
+}
+
+// Map visualization with theme-adaptive colors
 highlightedCountriesMap = {
+  const colors = getThemeColors();
+
   // Set up dimensions and projection
   const mapWidth = 900;
   const mapHeight = 500;
 
   // Create a projection focused on the world
   const mapProjection = d3Highlight.geoMercator()
-    .center([10, 45])  // Centered more on Europe
+    .center([10, 45])
     .scale(150)
     .translate([mapWidth / 2, mapHeight / 2]);
 
@@ -716,20 +895,22 @@ highlightedCountriesMap = {
     .attr("viewBox", [0, 0, mapWidth, mapHeight])
     .attr("style", "max-width: 100%; height: auto; background: none;");
 
-  // Create a group for all map elements that will be transformed during zoom/pan
+  // Create a group for all map elements
   const mapGroup = mapSvg.append("g");
 
   // Create a tooltip
   const mapTooltip = d3Highlight.select(document.createElement("div"))
     .attr("class", "highlight-map-tooltip")
     .style("position", "absolute")
-    .style("background", "rgba(40, 40, 40, 0.9)")
-    .style("color", "#fff")
+    .style("background", colors.tooltipBg)
+    .style("color", colors.tooltipText)
     .style("border-radius", "5px")
     .style("padding", "8px")
     .style("pointer-events", "none")
     .style("opacity", 0)
-    .style("z-index", 1000);
+    .style("z-index", 1000)
+    .style("font-family", "sans-serif")
+    .style("font-size", "14px");
 
   document.body.appendChild(mapTooltip.node());
 
@@ -743,38 +924,69 @@ highlightedCountriesMap = {
     "San Marino": "San Marino"
   };
 
+  // Function to update map colors based on current theme
+  function updateMapColors() {
+    const currentColors = getThemeColors();
+
+    // Update country colors
+    mapGroup.selectAll("path")
+      .attr("fill", d => {
+        const countryName = d.properties.name;
+        const normalizedName = countryNameMap[countryName] || countryName;
+        return countriesVisited.includes(normalizedName) ? currentColors.visitedColor : currentColors.notVisitedColor;
+      })
+      .attr("stroke", currentColors.strokeColor);
+
+    // Update tooltip colors
+    mapTooltip
+      .style("background", currentColors.tooltipBg)
+      .style("color", currentColors.tooltipText);
+
+    // Update legend colors
+    mapLegend.select(".legend-bg")
+      .attr("fill", currentColors.legendBg);
+
+    mapLegend.selectAll(".legend-text")
+      .style("fill", currentColors.legendText);
+
+    // Update control colors
+    mapZoomControls.select(".controls-bg")
+      .attr("fill", currentColors.controlsBg);
+
+    mapZoomControls.selectAll(".control-button")
+      .attr("fill", currentColors.controlsButtonBg)
+      .attr("stroke", currentColors.controlsButtonStroke);
+  }
+
   // Draw countries
-  mapGroup.selectAll("path")
+  const countries = mapGroup.selectAll("path")
     .data(worldGeoData.features)
     .join("path")
     .attr("fill", d => {
-      // Check if this country is in your visited list
       const countryName = d.properties.name;
       const normalizedName = countryNameMap[countryName] || countryName;
-
-      // Check if the country is in the visited list
-      return countriesVisited.includes(normalizedName) ? "#00a653" : "#333333";
+      return countriesVisited.includes(normalizedName) ? colors.visitedColor : colors.notVisitedColor;
     })
-    .attr("stroke", "#555")
+    .attr("stroke", colors.strokeColor)
     .attr("stroke-width", 0.5)
     .attr("d", mapPath)
     .on("mouseover", function(event, d) {
-      d3Highlight.select(this).attr("stroke-width", 1.5).attr("stroke", "#fff");
+      const currentColors = getThemeColors();
+      d3Highlight.select(this).attr("stroke-width", 1.5).attr("stroke", currentColors.strokeHoverColor);
 
-      // Check if this is a visited country
       const countryName = d.properties.name;
       const normalizedName = countryNameMap[countryName] || countryName;
       const isVisited = countriesVisited.includes(normalizedName);
 
-      // Show tooltip
       mapTooltip
         .style("opacity", 1)
-        .html(`<strong>${countryName} </strong>${isVisited ? "Visited" : "Not visited"}`)
+        .html(`<strong>${countryName}</strong><br/>${isVisited ? "✓ Visited" : "Not visited"}`)
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 28) + "px");
     })
     .on("mouseout", function() {
-      d3Highlight.select(this).attr("stroke-width", 0.5).attr("stroke", "#555");
+      const currentColors = getThemeColors();
+      d3Highlight.select(this).attr("stroke-width", 0.5).attr("stroke", currentColors.strokeColor);
       mapTooltip.style("opacity", 0);
     })
     .on("mousemove", function(event) {
@@ -789,42 +1001,45 @@ highlightedCountriesMap = {
 
   // Background for legend
   mapLegend.append("rect")
+    .attr("class", "legend-bg")
     .attr("x", -5)
     .attr("y", -15)
     .attr("width", 120)
     .attr("height", 70)
-    .attr("fill", "rgba(0, 0, 0, 0.5)")
+    .attr("fill", colors.legendBg)
     .attr("rx", 5)
     .attr("ry", 5);
 
-  // Visited countries
+  // Visited countries legend
   mapLegend.append("rect")
     .attr("width", 20)
     .attr("height", 20)
-    .attr("fill", "#00a653");
+    .attr("fill", colors.visitedColor);
 
   mapLegend.append("text")
+    .attr("class", "legend-text")
     .attr("x", 30)
     .attr("y", 15)
     .text("Visited")
     .style("font-family", "sans-serif")
     .style("font-size", "14px")
-    .style("fill", "#ffffff");
+    .style("fill", colors.legendText);
 
-  // Not visited countries
+  // Not visited countries legend
   mapLegend.append("rect")
     .attr("width", 20)
     .attr("height", 20)
     .attr("y", 30)
-    .attr("fill", "#333333");
+    .attr("fill", colors.notVisitedColor);
 
   mapLegend.append("text")
+    .attr("class", "legend-text")
     .attr("x", 30)
     .attr("y", 45)
     .text("Not Visited")
     .style("font-family", "sans-serif")
     .style("font-size", "14px")
-    .style("fill", "#ffffff");
+    .style("fill", colors.legendText);
 
   // Add zoom controls
   const mapZoomControls = mapSvg.append("g")
@@ -832,22 +1047,24 @@ highlightedCountriesMap = {
 
   // Background for zoom controls
   mapZoomControls.append("rect")
+    .attr("class", "controls-bg")
     .attr("x", -5)
     .attr("y", -5)
     .attr("width", 40)
     .attr("height", 120)
-    .attr("fill", "rgba(0, 0, 0, 0.5)")
+    .attr("fill", colors.controlsBg)
     .attr("rx", 5)
     .attr("ry", 5);
 
   // Zoom in button
   mapZoomControls.append("rect")
+    .attr("class", "control-button")
     .attr("x", 0)
     .attr("y", 0)
     .attr("width", 30)
     .attr("height", 30)
-    .attr("fill", "rgba(60, 60, 60, 0.7)")
-    .attr("stroke", "#777")
+    .attr("fill", colors.controlsButtonBg)
+    .attr("stroke", colors.controlsButtonStroke)
     .attr("rx", 5)
     .attr("ry", 5)
     .attr("cursor", "pointer")
@@ -857,7 +1074,7 @@ highlightedCountriesMap = {
     .attr("x", 15)
     .attr("y", 20)
     .attr("text-anchor", "middle")
-    .attr("fill", "#ffffff")
+    .attr("fill", colors.legendText)
     .attr("font-size", "18px")
     .attr("font-weight", "bold")
     .attr("pointer-events", "none")
@@ -865,12 +1082,13 @@ highlightedCountriesMap = {
 
   // Zoom out button
   mapZoomControls.append("rect")
+    .attr("class", "control-button")
     .attr("x", 0)
     .attr("y", 40)
     .attr("width", 30)
     .attr("height", 30)
-    .attr("fill", "rgba(60, 60, 60, 0.7)")
-    .attr("stroke", "#777")
+    .attr("fill", colors.controlsButtonBg)
+    .attr("stroke", colors.controlsButtonStroke)
     .attr("rx", 5)
     .attr("ry", 5)
     .attr("cursor", "pointer")
@@ -880,7 +1098,7 @@ highlightedCountriesMap = {
     .attr("x", 15)
     .attr("y", 60)
     .attr("text-anchor", "middle")
-    .attr("fill", "#ffffff")
+    .attr("fill", colors.legendText)
     .attr("font-size", "18px")
     .attr("font-weight", "bold")
     .attr("pointer-events", "none")
@@ -888,12 +1106,13 @@ highlightedCountriesMap = {
 
   // Reset button
   mapZoomControls.append("rect")
+    .attr("class", "control-button")
     .attr("x", 0)
     .attr("y", 80)
     .attr("width", 30)
     .attr("height", 30)
-    .attr("fill", "rgba(60, 60, 60, 0.7)")
-    .attr("stroke", "#777")
+    .attr("fill", colors.controlsButtonBg)
+    .attr("stroke", colors.controlsButtonStroke)
     .attr("rx", 5)
     .attr("ry", 5)
     .attr("cursor", "pointer")
@@ -903,7 +1122,7 @@ highlightedCountriesMap = {
     .attr("x", 15)
     .attr("y", 100)
     .attr("text-anchor", "middle")
-    .attr("fill", "#ffffff")
+    .attr("fill", colors.legendText)
     .attr("font-size", "14px")
     .attr("font-weight", "bold")
     .attr("pointer-events", "none")
@@ -916,8 +1135,6 @@ highlightedCountriesMap = {
 
   function mapZoomed(event) {
     mapGroup.attr("transform", event.transform);
-
-    // Adjust stroke widths based on zoom level
     const mapStrokeScale = 1 / Math.sqrt(event.transform.k);
     mapGroup.selectAll("path").attr("stroke-width", 0.5 * mapStrokeScale);
   }
@@ -931,6 +1148,16 @@ highlightedCountriesMap = {
 
   // Enable zoom and pan on the SVG
   mapSvg.call(mapZoomBehavior);
+
+  // Listen for theme changes and update colors accordingly
+  const observer = new MutationObserver(() => {
+    updateMapColors();
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
 
   return mapSvg.node();
 }

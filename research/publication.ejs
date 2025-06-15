@@ -28,13 +28,13 @@
               <% if (item.osf || item.paper || item.pdf) { %>
                 <div style="display: flex; gap: 10px; flex-shrink: 0;">
                   <% if (item.osf) { %>
-                    <a href="<%- item.osf %>" style="display: inline-block; padding: 8px 16px; font-size: 14px; color: white; background-color: #444; text-align: center; text-decoration: none; border-radius: 6px; border: 1px solid #666; transition: all 0.2s ease;" target="_blank" rel="noopener noreferrer" onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='#444'">OSF</a>
+                    <a href="<%- item.osf %>" class="research-btn research-btn-osf" target="_blank" rel="noopener noreferrer">OSF</a>
                   <% } %>
                   <% if (item.paper) { %>
-                    <a href="<%- item.paper %>" style="display: inline-block; padding: 8px 16px; font-size: 14px; color: white; background-color: #00a653; text-align: center; text-decoration: none; border-radius: 6px; border: 1px solid #00b359; transition: all 0.2s ease;" target="_blank" rel="noopener noreferrer" onmouseover="this.style.backgroundColor='#00b359'" onmouseout="this.style.backgroundColor='#00a653'">Link</a>
+                    <a href="<%- item.paper %>" class="research-btn research-btn-paper" target="_blank" rel="noopener noreferrer">Link</a>
                   <% } %>
                   <% if (item.pdf) { %>
-                    <a href="<%- item.pdf %>" style="display: inline-block; padding: 8px 16px; font-size: 14px; color: white; background-color: #d73a49; text-align: center; text-decoration: none; border-radius: 6px; border: 1px solid #e36d76; transition: all 0.2s ease;" target="_blank" rel="noopener noreferrer" onmouseover="this.style.backgroundColor='#e36d76'" onmouseout="this.style.backgroundColor='#d73a49'">PDF</a>
+                    <a href="<%- item.pdf %>" class="research-btn research-btn-pdf" target="_blank" rel="noopener noreferrer">PDF</a>
                   <% } %>
                 </div>
               <% } %>
@@ -65,7 +65,96 @@
   <% }); %>
 </ul>
 
+<style>
 
+.research-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+
+/* Light theme - brighter buttons */
+.research-btn-osf {
+  background-color: #adb5bd;
+  border-color: #adb5bd;
+  color: #000;
+}
+
+.research-btn-osf:hover {
+  background-color: #98a2ac;
+  border-color: #98a2ac;
+  color: #000;
+}
+
+.research-btn-paper {
+  background-color: #40e070;
+  border-color: #40e070;
+  color: #000;
+}
+
+.research-btn-paper:hover {
+  background-color: #2dd863;
+  border-color: #2dd863;
+  color: #000;
+}
+
+.research-btn-pdf {
+  background-color: #ff6b7a;
+  border-color: #ff6b7a;
+  color: #000;
+}
+
+.research-btn-pdf:hover {
+  background-color: #ff5167;
+  border-color: #ff5167;
+  color: #000;
+}
+
+/* Dark theme - darker buttons */
+.quarto-dark .research-btn-osf {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+.quarto-dark .research-btn-osf:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+  color: white;
+}
+
+.quarto-dark .research-btn-paper {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.quarto-dark .research-btn-paper:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  color: white;
+}
+
+.quarto-dark .research-btn-pdf {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.quarto-dark .research-btn-pdf:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+  color: white;
+}
+
+
+</style>
 
 
 ```
