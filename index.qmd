@@ -80,7 +80,6 @@ In my research, I leverage insights from Cognitive Science to enhance human-AI c
 <!-- End about -->
 
 
-
 <style>
 
 body.nav-fixed.fullcontent {
@@ -123,7 +122,5 @@ body.nav-fixed.fullcontent.quarto-dark {
 }
 
 </style>
-
-
 
 

@@ -1,58 +1,147 @@
 <div id="utterances-container"></div>
 
+<div id="utterances-container"></div>
+
 <script>
-function getQuartoTheme() {
-  return document.body.classList.contains('quarto-dark') ? 'dark' : 'light';
-}
+class UtterancesThemeManager {
+  constructor() {
+    this.container = document.getElementById('utterances-container');
+    this.loaded = false;
+    this.init();
+  }
 
-function getUtterancesTheme(theme) {
-  return theme === 'dark' ? 'github-dark' : 'github-light';
-}
+  getTheme() {
+    // More comprehensive theme detection
+    const checks = [
+      () => document.body.classList.contains('quarto-dark'),
+      () => document.documentElement.classList.contains('quarto-dark'),
+      () => document.body.getAttribute('data-bs-theme') === 'dark',
+      () => document.documentElement.getAttribute('data-bs-theme') === 'dark',
+      () => document.body.classList.contains('dark'),
+      () => document.documentElement.classList.contains('dark')
+    ];
 
-function loadUtterances() {
-  const container = document.getElementById('utterances-container');
-  container.innerHTML = ''; 
+    return checks.some(check => {
+      try { return check(); } catch { return false; }
+    }) ? 'dark' : 'light';
+  }
 
-  const script = document.createElement('script');
-  script.src = 'https://utteranc.es/client.js';
-  script.setAttribute('repo', 'lukmayer/site_comments');
-  script.setAttribute('issue-term', 'pathname');
-  script.setAttribute('theme', getUtterancesTheme(getQuartoTheme()));
-  script.setAttribute('crossorigin', 'anonymous');
-  script.setAttribute('async', '');
+  async waitForPageReady() {
+    return new Promise((resolve) => {
+      // Wait for multiple conditions to ensure page is fully loaded and themed
+      const checkReady = () => {
+        const conditions = [
+          document.readyState === 'complete',
+          document.body.offsetHeight > 0, // Page has rendered
+          window.getComputedStyle(document.body).backgroundColor !== '', // Styles applied
+          !document.querySelector('link[rel="stylesheet"]:not([media="print"])') || 
+          Array.from(document.querySelectorAll('link[rel="stylesheet"]:not([media="print"])')).every(link => link.sheet)
+        ];
 
-  container.appendChild(script);
-}
+        if (conditions.every(Boolean)) {
+          // Additional delay to ensure theme classes are applied
+          setTimeout(resolve, 200);
+        } else {
+          setTimeout(checkReady, 50);
+        }
+      };
 
-function updateUtterancesTheme() {
-  const iframe = document.querySelector('.utterances-frame');
-  if (iframe) {
-    const theme = getUtterancesTheme(getQuartoTheme());
-    iframe.contentWindow.postMessage(
-      { type: 'set-theme', theme: theme },
-      'https://utteranc.es'
-    );
+      checkReady();
+    });
+  }
+
+  async loadUtterances() {
+    if (this.loaded) return;
+
+    try {
+      // Wait for page to be completely ready
+      await this.waitForPageReady();
+
+      // Additional theme stability check
+      let theme = this.getTheme();
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      // Verify theme is stable
+      const stableTheme = this.getTheme();
+      if (theme !== stableTheme) {
+        theme = stableTheme;
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+
+      console.log('Loading Utterances with theme:', theme);
+
+      this.container.innerHTML = '';
+
+      const script = document.createElement('script');
+      script.src = 'https://utteranc.es/client.js';
+      script.setAttribute('repo', 'lukmayer/site_comments');
+      script.setAttribute('issue-term', 'pathname');
+      script.setAttribute('theme', theme === 'dark' ? 'github-dark' : 'github-light');
+      script.setAttribute('crossorigin', 'anonymous');
+      script.setAttribute('async', '');
+
+      script.onload = () => {
+        this.loaded = true;
+        console.log('Utterances successfully loaded');
+      };
+
+      this.container.appendChild(script);
+
+    } catch (error) {
+      console.error('Error loading Utterances:', error);
+    }
+  }
+
+  updateTheme() {
+    const iframe = document.querySelector('.utterances-frame');
+    if (iframe) {
+      const theme = this.getTheme();
+      const utterancesTheme = theme === 'dark' ? 'github-dark' : 'github-light';
+
+      try {
+        iframe.contentWindow.postMessage(
+          { type: 'set-theme', theme: utterancesTheme },
+          'https://utteranc.es'
+        );
+        console.log('Updated Utterances theme to:', theme);
+      } catch (e) {
+        console.warn('Failed to update Utterances theme:', e);
+      }
+    }
+  }
+
+  setupObservers() {
+    let updateTimeout;
+    const debouncedUpdate = () => {
+      clearTimeout(updateTimeout);
+      updateTimeout = setTimeout(() => this.updateTheme(), 150);
+    };
+
+    const observerConfig = {
+      attributes: true,
+      attributeFilter: ['class', 'data-bs-theme']
+    };
+
+    [document.body, document.documentElement].forEach(element => {
+      const observer = new MutationObserver(debouncedUpdate);
+      observer.observe(element, observerConfig);
+    });
+  }
+
+  init() {
+    this.setupObservers();
+
+    // Single, delayed initialization after everything is ready
+    if (document.readyState === 'loading') {
+      window.addEventListener('load', () => {
+        setTimeout(() => this.loadUtterances(), 300);
+      });
+    } else {
+      // Page already loaded, wait a bit more to ensure theme is applied
+      setTimeout(() => this.loadUtterances(), 500);
+    }
   }
 }
 
-const observer = new MutationObserver((mutations) => {
-  mutations.forEach((mutation) => {
-    if (mutation.type === 'attributes' && 
-        (mutation.attributeName === 'class' || mutation.attributeName === 'data-bs-theme')) {
-      updateUtterancesTheme();
-    }
-  });
-});
-
-observer.observe(document.body, {
-  attributes: true,
-  attributeFilter: ['class', 'data-bs-theme']
-});
-
-observer.observe(document.documentElement, {
-  attributes: true,
-  attributeFilter: ['class', 'data-bs-theme']
-});
-
-document.addEventListener('DOMContentLoaded', loadUtterances);
+new UtterancesThemeManager();
 </script>
