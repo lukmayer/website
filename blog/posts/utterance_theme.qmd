@@ -1,3 +1,40 @@
+---
+title: "How to have theme-adaptive comment sections in Quarto websites"
+description: "Making the theme of Utterances change with the site theme"
+author: "Luke"
+date: "2025-06-15"
+image: "images/light_and_dark.png"
+categories:
+ - quarto
+ - webdev
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+---
+
+Quarto sites can very easily have comment sections thanks to some pretty creative uses of GitHub Issues.
+
+If you wanted to add a comment section to a page on your Quarto website usually you'd use something like this in your YAML front-matter: 
+
+```yaml
+comments:
+  utterances:
+    repo: username/reponame
+    theme: github-dark
+```
+
+The problem with this is that you are locked into one theme. So if someone is browsing your site in light mode they might have to stare at an uncomfortably dark comment section. Or alternatively, some basement dweller's eyes are burnt to a crisp by your glaringly white comment section. 
+
+Utterances itself has an option where you can set the theme to adapt to the user's system theme, but this option does not appear to be implemented in Quarto.
+
+Given that Utterances clearly already has the capability to change theme, I figured it could not be all too difficult to work around the fact that this particular setting is not currently functional in Quarto.
+
+Indeed, I managed to get it working fairly quickly with simple HTML includes. 
+What made this tricky is that in my initial solution, the theme would be set on page load. This meant that you could still experience a mismatch if you switched the theme while on the current page. Resolving this took a bit of JavaScript to ensure that theme changes are detected at the right times:
+
+
+```html
 <div id="utterances-container"></div>
 
 <div id="utterances-container"></div>
@@ -137,3 +174,20 @@ class UtterancesThemeManager {
 
 new UtterancesThemeManager();
 </script>
+
+
+```
+
+Using this more complicated include requires the following setup for the page meant to include the comment section:
+
+
+```yaml
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+```
+
+Which means that the big chunk above should be saved to a file that's accessed in the include-after-body setting. In case you don't know, this uses relative paths, where `./` would be your project's root directory and `../` simply means navigating up one directory from the source file location.
+
+Hope this helps! If something is unclear, leave a comment in the theme-adaptive comment section below and I'll try to clarify.
+

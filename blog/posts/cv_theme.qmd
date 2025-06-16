@@ -1,0 +1,152 @@
+---
+title: "Light and Dark mode PDFs for your Quarto website"
+description: "How I made my CV adapt to the theme of my site"
+author: "Luke"
+date: "2025-06-15"
+image: "images/light_and_dark.png"
+categories:
+ - quarto
+ - webdev
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+---
+
+As you may be able to tell from the fact that I am writing three posts about theming different aspects of a Quarto website on the same day, I have been re-designing my site.
+
+At some point yesterday I thought I was finally done making all page content adapt to the current website theme, until my glaring white CV nearly blinded me on my otherwise perfectly dark website.
+
+So I set out to find a solution for this. How can I render a PDF in dark mode, and then selectively show the PDF that fits the theme the user has active?
+
+## Part 1: Creating a dark mode CV
+
+I didn't want to have two separate files for my CV since I could potentially forget to update one of them, so my first challenge was to figure out how I can have one "Content" file inform two themed output files. Luckily this is very easy with includes.
+
+I simply have a `cv_content.qmd` file that contains all the Markdown and LaTeX I use for my CV. Then, I have two further `.qmd` files which use the content file as a basis and define the theme for that version in the YAML front-matter. For example, `cv_lwm_dark.qmd` looks like this:
+
+```yaml
+---
+format: 
+  pdf: 
+    documentclass: article
+    self-contained: false
+    geometry:
+      - top=10mm
+      - left=15mm
+      - right=15mm
+      - bottom=5mm
+      - heightrounded
+    fontfamily: libertine
+    colorlinks: true
+    linkcolor: linkblue
+    urlcolor: linkblue
+    citecolor: linkblue
+    fontsize: '16'
+    include-in-header: 
+      text: |
+        \usepackage{multicol}
+        \usepackage{tabularx}
+        \usepackage{lipsum}
+        \usepackage{graphicx}
+        \usepackage{hyperref}
+        \usepackage{libertine}
+        \usepackage{xcolor}
+        \usepackage{sectsty}
+        \pagestyle{empty}
+        \setlength{\multicolsep}{2pt plus 1.0pt minus 0.75pt}
+        \setlength{\columnsep}{3em}
+        % Dark mode colors
+        \definecolor{bgcolor}{RGB}{30,33,38}
+        \definecolor{textcolor}{RGB}{209,213,219}
+        \definecolor{headingcolor}{RGB}{229,231,235}
+        \definecolor{linkblue}{RGB}{96,165,250}
+        \pagecolor{bgcolor}
+        \color{textcolor}
+        \allsectionsfont{\color{headingcolor}}
+---
+
+# {{< include cv_content.qmd >}} 
+```
+
+As you can see, I simply define the colors via LaTeX commands, and then use HTML includes to have this file use the content file as input. **Note that you have to remove the '#' from the code block above for this to work**. So now, one content file can be used to render two different CVs, pretty neat!
+
+
+## Part 2: Selectively showing the fitting CV
+
+Now we want to show only one of the CV's at a time, depending on the current site theme.
+According to the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#mode-specific-content), we should be able to simply wrap some iframes in the pre-defined divs like so: 
+
+
+```yaml
+## Academic
+
+If you can't see the embedded PDF below, you can download it [here](cv_lwm.pdf).
+
+::: {.light-content}
+<iframe src="cv_lwm.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1" style="width: 90%; height: 800px; border: none;"></iframe>
+:::
+
+::: {.dark-content}
+<iframe src="cv_lwm_dark.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1" style="width: 90%; height: 800px; border: none;"></iframe>
+:::
+
+```
+
+However, for some reason this is not currently enough. I suspect it doesn't work because of the iframes. 
+
+For it to work properly, you actually do need to also add a bit of CSS to selectively hide one of the CVs. I just did it by embedding the following on my CV page:
+
+
+```html
+
+<style>
+
+body:not(.quarto-dark) .dark-content {
+  display: none !important;
+}
+
+body.quarto-dark .light-content {
+  display: none !important;
+}
+
+.light-content iframe,
+.dark-content iframe {
+  width: 90%;
+  height: 800px;
+  border: none;
+}
+
+/* hiding the white scroll bar in dark mode */
+
+.dark-content {
+  position: relative;
+}
+
+.dark-content iframe {
+  width: 90%;
+  height: 800px;
+  border: none;
+}
+
+body.quarto-dark .dark-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: calc(10% + 0px); 
+  width: 22px; 
+  height: 800px;
+  background-color: var(--bs-body-bg, #1e2126); 
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+</style>
+
+```
+
+As you can see, I added a little bit of CSS just to hide the scroll bar of the embedded PDF when on the dark mode version of the site. That is because the default PDF reader of Chromium-based browsers cannot be styled, meaning I cannot override the light mode colors of the default PDF reader. Therefore, I felt simply covering the scroll bar is the simplest solution to address this limitation.
+
+And that's it! Enjoy :)
+

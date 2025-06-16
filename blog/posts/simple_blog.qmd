@@ -4,8 +4,8 @@ description: "K.I.S.S."
 author: "Luke"
 date: "2025-05-01"
 image: images/dots.jpg
-#categories:
-# - quarto
+categories:
+ - webdev
 
 format:
   html:

@@ -26,7 +26,7 @@ body.quarto-dark .light-content {
   border: none;
 }
 
-/* Hiding the white scroll bar in dark mode */
+/* hiding the white scroll bar in dark mode */
 
 .dark-content {
   position: relative;
@@ -38,7 +38,6 @@ body.quarto-dark .light-content {
   border: none;
 }
 
-/* Cover scrollbar in dark mode */
 body.quarto-dark .dark-content::after {
   content: '';
   position: absolute;
