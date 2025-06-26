@@ -240,8 +240,8 @@ df_z <- merged_df %>%
 df_z <- df_z %>% select(c, ends_with("_bc"))
 
 #lower gini = better, lower debt = better
-df_z$gini <- df_z$gini_bc * (-1)
-df_z$debt <- df_z$debt_bc * (-1)
+df_z$gini_bc <- df_z$gini_bc * (-1)
+df_z$debt_bc <- df_z$debt_bc * (-1)
 
 df_z$score <- rowSums(df_z[, -1])
 df_z$rank <- rank(-df_z$score)
@@ -258,8 +258,8 @@ df_z2 <- df_z2 %>% select(c, ends_with("_bc"))
 df_z2 <- df_z2 %>% select(-gdp_bc)
 
 #lower gini = better, lower debt = better
-df_z2$gini <- df_z2$gini_bc * (-1)
-df_z2$debt <- df_z2$debt_bc * (-1)
+df_z2$gini_bc <- df_z2$gini_bc * (-2)
+df_z2$debt_bc <- df_z2$debt_bc * (-1)
 
 df_z2$score <- rowSums(df_z2[, -1])
 df_z2$rank <- rank(-df_z2$score)
@@ -356,7 +356,9 @@ My results are obviously biased in the sense that they critically depend on what
 What's interesting about my results is of course that I've taken care of outliers ruining the party by transforming variables before Z-scoring. Ireland is often a bit painful (especially with economic data) since their figures are extremely distorted due to huge multinational companies using tax loopholes there. Here, Ireland still ranks pretty high despite my transformations, so I'd wager you should still be a bit cautious with interpreting its rank. However, you don't quite get all the usual chart toppers. For example, usually the Nordic countries all but dominate these kinds of rankings. Here, some of them seem to have been punished by having pretty simple economic structures. 
 
 The big winner of my ranking is Switzerland, which is actually not surprising at all. The Swiss do pretty well in any metric you throw at them, and they don't even seem to be experiencing large changes in inequality like some of their neighbors.
-Ranks 2-5 are all occupied by countries that have experienced steeply rising inequality in recent decades. Especially Germany gets a lot of flak for this, with my impression of the domestic sentiment being that politics in Germany has not been this tense in a long time. Perhaps the resilience of the German economy and it's relatively strong public institutions ought to inspire more hope for a good future than what the vibes suggest? Ranks 14, 16 and 17, which are the Czech Republic, Slovenia, and Estonia, seem pretty interesting to me, since these are countries that most people sleep on. They seem to be doing pretty well, at least judging by the scores.
+Ranks 2 and 3 (Sweden and Denmark) have experienced steeply rising inequality in recent decades. Especially Germany (Rank 7) gets a lot of flak for this, with my impression of the domestic sentiment being that politics in Germany has not been this tense in a long time. Perhaps the resilience of the German economy and it's relatively strong public institutions ought to inspire more hope for a good future than what the vibes suggest? Ranks 4, 11 and 15 (Estonia, Czech Republic, and Slovenia) seem pretty interesting to me, given that these are countries most people sleep on. They seem to be doing pretty well, at least according to the metrics.
+
+Since Z-scores are always calculated based on the distribution of data points in the sample, it's worth noting that the expected value in my composite score is 0. Cyprus appears to be the most average country in this regard. Therefore, any country with a positive score can be said to be doing above average, with a score below zero indicating the inverse.
 
 \
 
@@ -508,8 +510,8 @@ for(var in vars) {
 df_z <- merged_df %>%
   mutate(across(ends_with("_bc"), ~ scale(.)[,1]))
 df_z <- df_z %>% select(c, ends_with("_bc"))
-df_z$gini <- df_z$gini_bc * (-1) # lower gini = better
-df_z$debt <- df_z$debt_bc * (-1) # lower debt = better
+df_z$gini_bc <- df_z$gini_bc * (-1) # lower gini = better
+df_z$debt_bc <- df_z$debt_bc * (-1) # lower debt = better
 df_z$score <- rowSums(df_z[, -1])
 df_z$rank <- rank(-df_z$score)
 
