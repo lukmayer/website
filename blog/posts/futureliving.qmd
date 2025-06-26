@@ -1,0 +1,480 @@
+---
+title: "Which countries are equipped to handle a storm?"
+description: "Letting my inner hobby economist run loose"
+author: "Luke"
+date: "2025-06-25"
+image: "images/countries.jpg"
+categories:
+ - r
+ - life
+execute: 
+  include: false
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+---
+
+
+```{r}
+library(tidyverse)
+library(DT) # for table
+library(forecast) # for box-cox
+
+if (!endsWith(getwd(), "/blog/posts")) {
+  setwd("./blog/posts")
+}
+
+```
+
+<!-- Debt -->
+```{r}
+debt <- read_csv("./assets/data/debt_gdp.csv")
+colnames(debt) <- c("Country", "Gross_2024", "Gross_2022", "Net_2021")
+debt <- debt %>% select(c(Country, Gross_2024))
+debt$Gross_2024 <- as.numeric(debt$Gross_2024)
+
+debt <- debt %>% filter(!is.na(Gross_2024))
+```
+
+<!-- EC -->
+```{r}
+ec <- read_csv("./assets/data/economic_complexity.csv")
+colnames(ec) <- c("Rank", "Country", "EC_2018", "Change_13to18", "Change_08to18")
+ec <- ec %>% select(c(Country, EC_2018))
+ec$EC_2018 <- as.numeric(ec$EC_2018)
+
+ec <- ec %>% filter(!is.na(EC_2018))
+```
+
+<!-- GDP -->
+```{r}
+gdp <- read_csv("./assets/data/gdp_pc_ppp.csv")
+colnames(gdp) <- c("Country", "IMF", "IMF_year", "WB", "WB_year", "CIA", "CIA_year")
+gdp <- gdp %>% select(c(Country, WB))
+
+# drop first row (not a country)
+gdp <- gdp[2:nrow(gdp),]
+
+#strip * from Country
+gdp$Country <- gsub("*", "", gdp$Country, fixed=T)
+
+#strip , from WB
+gdp$WB <- gsub(",", "", gdp$WB, fixed=T)
+
+gdp$WB <- as.numeric(gdp$WB)
+
+gdp <- gdp %>% filter(!is.na(WB))
+gdp$Country <- gsub("\u202F", "", gdp$Country)
+```
+
+<!-- Innovation -->
+```{r}
+innov <- read_csv("./assets/data/innovation.csv")
+colnames(innov) <- c("Rank", "Country", "Score", "Group")
+innov <- innov %>% select(Country, Score)
+innov$Score <- as.numeric(innov$Score)
+
+innov <- innov %>% filter(!is.na(Score))
+```
+
+<!-- Social mobility -->
+```{r}
+mob <- read_csv("./assets/data/social_mobility.csv")
+colnames(mob) <- c("Rank", "Country", "Score")
+mob <- mob %>% select(Country, Score)
+mob$Score <- as.numeric(mob$Score)
+
+mob <- mob %>% filter(!is.na(Score))
+```
+
+<!-- Social progress -->
+```{r}
+prog <- read_csv("./assets/data/social_progress.csv")
+prog <- prog %>% select(c(Country, `Social Progress Score`))
+colnames(prog) <- c("Country", "Score")
+prog$Score <- as.numeric(prog$Score)
+
+prog <- prog %>% filter(!is.na(Score))
+```
+
+<!-- GINI -->
+```{r}
+gini <- read_csv("./assets/data/gini.csv")
+
+year_cols <- names(gini)[names(gini) %in% as.character(1980:2024)]
+
+gini <- gini %>%
+  select(`Country Name`, all_of(year_cols)) %>%
+  pivot_longer(
+    cols = all_of(year_cols),
+    names_to = "Year",
+    values_to = "Gini"
+  ) %>%
+  rename(Country = `Country Name`) %>%
+  mutate(Year = as.numeric(Year))
+
+gini <- gini %>%
+  group_by(Country) %>%
+  filter(sum(!is.na(Gini)) >= 10) %>%
+  ungroup()
+
+```
+
+
+<!-- Gini trend -->
+```{r}
+gini_trend <- gini %>%
+  group_by(Country) %>%
+  summarise(
+    gini_trend = coef(lm(Gini ~ Year))[2],
+    .groups = "drop"
+  )
+```
+
+<!-- Country name check -->
+
+```{r}
+
+df_list <- list(debt, ec, gdp, gini_trend, innov, mob, prog)
+
+countries_by_df <- lapply(df_list, function(df) unique(df$Country))
+
+common_countries <- Reduce(intersect, countries_by_df)
+
+all_countries <- unique(unlist(countries_by_df))
+
+not_shared <- setdiff(all_countries, common_countries)
+
+country_presence <- sapply(all_countries, function(country) {
+  sapply(countries_by_df, function(df_countries) country %in% df_countries)
+})
+
+non_shared_matrix <- country_presence[, not_shared, drop = FALSE]
+print(non_shared_matrix)
+
+
+
+```
+
+<!-- 
+NO EC: Iceland, Luxembourg
+Not enough GINI: New Zealand, Singapore, Slovakia 
+-->
+
+
+```{r filtering}
+colnames(debt) <- c("c", "debt")
+colnames(ec) <- c("c", "ec")
+colnames(gdp) <- c("c", "gdp")
+colnames(gini_trend) <- c("c", "gini")
+colnames(innov) <- c("c", "innov")
+colnames(mob) <- c("c", "mob")
+colnames(prog) <- c("c", "prog")
+
+merged_df <- debt %>%
+  inner_join(ec, by = "c") %>%
+  inner_join(gdp, by = "c") %>%
+  inner_join(gini_trend, by = "c") %>%
+  inner_join(innov, by = "c") %>%
+  inner_join(mob, by = "c") %>%
+  inner_join(prog, by = "c")
+
+```
+
+
+
+
+```{r boxcox}
+
+vars <- c("debt", "ec", "gdp", "gini", "innov", "mob", "prog")
+
+for(var in vars) {
+  min_val <- min(merged_df[[var]], na.rm = TRUE)
+
+  if(min_val <= 0) {
+    constant <- abs(min_val) + 1  # Add 1 extra for safety
+    merged_df[[paste0(var, "_pos")]] <- merged_df[[var]] + constant
+    cat(var, "shifted by", constant, "\n")
+  } else {
+    merged_df[[paste0(var, "_pos")]] <- merged_df[[var]]
+  }
+
+  lambda <- BoxCox.lambda(merged_df[[paste0(var, "_pos")]])
+  merged_df[[paste0(var, "_bc")]] <- BoxCox(merged_df[[paste0(var, "_pos")]], lambda)
+  cat(var, "optimal lambda:", round(lambda, 3), "\n")
+}
+
+
+```
+
+
+```{r zscore}
+df_z <- merged_df %>%
+  mutate(across(ends_with("_bc"), ~ scale(.)[,1]))
+
+df_z <- df_z %>% select(c, ends_with("_bc"))
+
+#lower gini = better, lower debt = better
+df_z$gini <- df_z$gini_bc * (-1)
+df_z$debt <- df_z$debt_bc * (-1)
+
+df_z$score <- rowSums(df_z[, -1])
+df_z$rank <- rank(-df_z$score)
+```
+
+
+```{r final}
+final <- merge(merged_df, df_z[, c("c", "score", "rank")], by = "c", all.x = TRUE)
+
+final <- final %>% select(c("c", "debt", "ec", "gdp", "gini", "innov", "mob", "prog", "score", "rank"))
+
+final$score <- round(final$score, 2)
+
+colnames(final) <- c("Country", "Debt.Percent.GDP", "Economic.Complexity.Index", "GDP.perCapita.PPP", "GINI.Trend.1980.onwards", "Global.Innovation.Index", "Global.Social.Mobility.Index", "Social.Progress.Index", "Composite.Score", "Rank")
+
+final <- final[, c("Rank", "Country", "Composite.Score", "Economic.Complexity.Index", "GINI.Trend.1980.onwards", "Global.Innovation.Index", "Global.Social.Mobility.Index", "Social.Progress.Index", "Debt.Percent.GDP", "GDP.perCapita.PPP")]
+
+
+
+```
+
+
+
+So far, I have never felt all that attached to where I live. I think that's a big part in why I left Germany when I was 19, having since then lived in Scotland, different places in England, and now the USA. However, I do feel like I should settle down once my studies are over, so it's been a bit of a personal hobby of mine to think about what my location priorities would be.
+
+There are a lot of factors one could possibly consider, many of which are deeply personal. For example, would you prefer to speak a certain language, live in a place that has good opportunities in your industry, do you like the nature there, the culture, the people, the food, the politics? Once you have answered all these questions, you could, at least in principle, evaluate different cities within that country according to your priorities for the local situation. Of course, life never actually works out according to these kinds of master plans, and yet it is kind of fun to think about the possibilities. 
+
+\
+
+## The problem
+
+Not to be a debbie downer or anything, but I am in some ways kind of pessimistic about the future of humanity as a whole. Not in the nuclear fallout, skynet killer AI kind of way, but more so the "Can I reasonably expect to ever be more financially secure than my parents?" kind of way. 
+
+Without wanting to put my doomer hat on, I think it's fair to say that:
+
+- We are probably past peak globalism for a good little while, meaning less economic growth, more uncertainty etc.
+- Inequality is rising fast, increasingly eradicating the concept of there existing a "middle class"
+- Populations are declining across the board, which poses existential risks for government financed services like public healthcare systems. 
+- Lots of other stuff that's out of the scope for this post
+
+So the question is, is there anywhere that's bucking these trends? When you start searching around a bit rather than just judging places by the vibes, you'll quickly learn that economists come up with all sorts of whimsical indexes to compare countries to each other with.
+
+So I've decided I'd see whether I can make somewhat sensible relative judgments of the future readiness of different countries by using these indexes other people have thought long and hard about. Given my bullet list of challenges above, I've picked out a few that seem relevant:
+
+- [Economic Complexity Index](https://en.wikipedia.org/wiki/List_of_countries_by_economic_complexity): Because the more diverse your economy the better you can handle some recessions here and there while the rest of the world is on fire.
+- [Social Mobility Index](https://en.wikipedia.org/wiki/Global_Social_Mobility_Index#Global_Social_Mobility_Index_(2020)_results): As an indicator of relatively low inequality
+- [Gini index](https://data.worldbank.org/indicator/SI.POV.GINI): Specifically the trend in Gini over time, since that would be indicative of the change in inequality during recent years.
+- [Government debt as percent of GDP](https://en.wikipedia.org/wiki/List_of_countries_by_government_debt): Because if you're going through a bit of a rough patch, like a demographic crisis, you need to be able to have the cash at hand to be able to push through those hard times.
+ 
+I've also picked out a few ones that just feel like they'd be somewhat indicative of living a nicer life:
+
+- [GDP per capita (Purchasing Power Parity)](https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP)_per_capita): Cuz money makes the world go round.
+- [Social Progress Index](https://en.wikipedia.org/wiki/Social_Progress_Index): As it seems to reflect provision of and access to high quality public services.
+- [Global innovation Index](https://en.wikipedia.org/wiki/Global_Innovation_Index): Probably useful as a very high-level indicator of future economic opportunities.
+
+\
+
+## Method
+
+I grabbed most of the data from Wikipedia by using the [Wikitable2csv website](https://wikitable2csv.ggor.de). Only the Gini by year data I had to grab from the website of the WorldBank.
+
+I basically cleaned up each dataset separately, with the intention of eventually doing a complete-cases analysis. For the Gini time-series data, I decided I would fit linear regression models to each country that had at least 10 data points between 1980 and 2025. So the slope estimate is indicative of the trend. This is definitely not statistically sound, but it is decidedly convenient. I decided 1980 should be the cut-off point for the time trends based on my impression that this is around where many developed countries started to take a turn for the worse in terms of inequality. For the GDP estimates, I used the ones provided by the WorldBank.
+
+Many countries did not meet all my data requirements. Of course, most of these are developing countries where accurate information is hard to find. That being said, these countries are pretty unlikely to have topped the charts of my analysis anyway. Some smaller, developed countries lacked at least one of my metrics. For example, Iceland and Luxembourg are not included in the Economic Complexity Index, and New Zealand, Singapore, and Slovakia did not have enough Gini data for my time trend estimations. Dropping these from the data is a real shame, since I would expect them to rank fairly highly if the information had been available. So when you look at my results later, keep in mind that some noteworthy contenders are not included.
+
+With all of this out the way, I merged all the data together and only retained countries that have all the records I wanted. 57 countries pass all the checks. 
+I decided to rank countries by a composite score derived from the variables I've prepared. Ultimately, I used the Z-score of each variable and simply calculate the row sum for each country. Z-scores are pretty neat as they standardize all variables to the scale of standard deviations from the mean, meaning that not only are all variables now in the same unit, differences between countries are still accurately retained (unlike rank-scoring). For the row sum of my Z-scored variables to be valid, I needed to ensure that all variables follow a similar distribution, so I used the Box-Cox method to automatically find the optimal transformation that makes my values normally distributed. The Box-Cox transform is only valid for positive values, meaning I additionally had to add the minimum of a variable to its values, if that variable featured negative values. Of course, I inverted the Z-scores for debt as percent of GDP and Gini time trend, since less debt is better, and decreasing Gini is better. Note that my composite score thus implicitly applies equal weights to all variables included.
+
+\
+
+## Results
+
+So that's how I arrived at this table:
+
+```{r, include=T, echo=F}
+DT::datatable(final, extensions = 'Buttons',
+options = list(
+  pageLength = 20, 
+  scrollX = TRUE,
+  order = list(list(1, 'asc')),
+  dom = 'Bfrtip',
+    buttons = list(
+      list(extend = 'csv', filename = 'data')
+    )
+))
+```
+
+\
+
+My results are obviously biased in the sense that they critically depend on what metrics are included in the analysis. If you do not care about GDP for example, then your ranking will probably end up looking very different from this one. I hope my reasoning for what is included was somewhat convincing though.
+
+What's interesting about my results is of course that I've taken care of outliers ruining the party by transforming variables before Z-scoring. Ireland is often a bit painful (especially with economic data) since their figures are extremely distorted due to huge multinational companies using tax loopholes there. Here, Ireland still ranks pretty high despite my transformations, so I'd wager you should still be a bit cautious with interpreting its rank. However, you don't quite get all the usual chart toppers. For example, usually the Nordic countries all but dominate these kinds of rankings. Here, some of them seem to have been punished by having pretty simple economic structures. 
+
+The big winner of my ranking is Switzerland, which is actually not surprising at all. The Swiss do pretty well in any metric you throw at them, and they don't even seem to be experiencing large changes in inequality like some of their neighbors.
+Ranks 2-5 are all occupied by countries that have experienced steeply rising inequality in recent decades. Especially Germany gets a lot of flak for this, with my impression of the domestic sentiment being that politics in Germany has not been this tense in a long time. Perhaps the resilience of the German economy and it's relatively strong public institutions ought to inspire more hope for a good future than what the vibes suggest? Ranks 16 and 17, Slovenia and Estonia, seem pretty interesting to me, since these are countries that most people sleep on. They seem to be doing pretty well, at least judging by the scores.
+
+\
+
+## Conclusion
+
+Please do not take my results too seriously. Despite the fact that I am basing my analyses on some metrics, it should not be forgotten that many of my analysis decisions were done on the basis of impressions. My approach is not exactly rigorous, and you may very well arrive at quite different results. Furthermore, a famous quote that is apparently [traceable to the Danes](https://quoteinvestigator.com/2013/10/20/no-predict/) tells us: "Making predictions is hard, especially about the future". 
+
+Nevertheless, I thought it was pretty fun to just throw something together that appears to be a useful description of some of the preferences I hold for what a good place to life constitutes. You can download the table above as CSV, though the variables in that table are still in the original scale for better interpretability, meaning that to replicate my results, you'd have to calculate the Z-Scores yourself. My code is below.
+
+So will I be moving to Switzerland? Well, maybe, though I can trace that interest to at least 2019, meaning this ranking had little to do with it. It's close to home, (partly) German-speaking, has excellent infrastructure and beautiful nature, what's not to like? At the end of the day, we make these kinds of decisions based on our subjective values rather than some score. And with that, I hope this was interesting to you!
+
+
+## Appendix
+
+### Code
+
+```r
+library(tidyverse)
+library(DT) # for table
+library(forecast) # for box-cox
+
+debt <- read_csv("./assets/data/debt_gdp.csv")
+colnames(debt) <- c("Country", "Gross_2024", "Gross_2022", "Net_2021")
+debt <- debt %>% select(c(Country, Gross_2024))
+debt$Gross_2024 <- as.numeric(debt$Gross_2024)
+debt <- debt %>% filter(!is.na(Gross_2024))
+
+ec <- read_csv("./assets/data/economic_complexity.csv")
+colnames(ec) <- c("Rank", "Country", "EC_2018", "Change_13to18", "Change_08to18")
+ec <- ec %>% select(c(Country, EC_2018))
+ec$EC_2018 <- as.numeric(ec$EC_2018)
+ec <- ec %>% filter(!is.na(EC_2018))
+
+gdp <- read_csv("./assets/data/gdp_pc_ppp.csv")
+colnames(gdp) <- c("Country", "IMF", "IMF_year", "WB", "WB_year", "CIA", "CIA_year")
+gdp <- gdp %>% select(c(Country, WB))
+gdp <- gdp[2:nrow(gdp),] # drop first row (not a country)
+gdp$Country <- gsub("*", "", gdp$Country, fixed=T) #strip * from Country
+gdp$WB <- gsub(",", "", gdp$WB, fixed=T) #strip , from WB
+gdp$WB <- as.numeric(gdp$WB)
+gdp <- gdp %>% filter(!is.na(WB))
+gdp$Country <- gsub("\u202F", "", gdp$Country) #annoying special white space 
+
+innov <- read_csv("./assets/data/innovation.csv")
+colnames(innov) <- c("Rank", "Country", "Score", "Group")
+innov <- innov %>% select(Country, Score)
+innov$Score <- as.numeric(innov$Score)
+innov <- innov %>% filter(!is.na(Score))
+
+mob <- read_csv("./assets/data/social_mobility.csv")
+colnames(mob) <- c("Rank", "Country", "Score")
+mob <- mob %>% select(Country, Score)
+mob$Score <- as.numeric(mob$Score)
+mob <- mob %>% filter(!is.na(Score))
+
+prog <- read_csv("./assets/data/social_progress.csv")
+prog <- prog %>% select(c(Country, `Social Progress Score`))
+colnames(prog) <- c("Country", "Score")
+prog$Score <- as.numeric(prog$Score)
+prog <- prog %>% filter(!is.na(Score))
+
+gini <- read_csv("./assets/data/gini.csv")
+year_cols <- names(gini)[names(gini) %in% as.character(1980:2024)]
+gini <- gini %>%
+  select(`Country Name`, all_of(year_cols)) %>%
+  pivot_longer(
+    cols = all_of(year_cols),
+    names_to = "Year",
+    values_to = "Gini"
+  ) %>%
+  rename(Country = `Country Name`) %>%
+  mutate(Year = as.numeric(Year))
+gini <- gini %>%
+  group_by(Country) %>%
+  filter(sum(!is.na(Gini)) >= 10) %>%
+  ungroup()
+gini_trend <- gini %>%
+  group_by(Country) %>%
+  summarise(
+    gini_trend = coef(lm(Gini ~ Year))[2],
+    .groups = "drop"
+  )
+
+# country name check
+df_list <- list(debt, ec, gdp, gini_trend, innov, mob, prog)
+countries_by_df <- lapply(df_list, function(df) unique(df$Country))
+common_countries <- Reduce(intersect, countries_by_df)
+all_countries <- unique(unlist(countries_by_df))
+not_shared <- setdiff(all_countries, common_countries)
+country_presence <- sapply(all_countries, function(country) {
+  sapply(countries_by_df, function(df_countries) country %in% df_countries)
+})
+non_shared_matrix <- country_presence[, not_shared, drop = FALSE]
+
+# prepare for merging
+colnames(debt) <- c("c", "debt")
+colnames(ec) <- c("c", "ec")
+colnames(gdp) <- c("c", "gdp")
+colnames(gini_trend) <- c("c", "gini")
+colnames(innov) <- c("c", "innov")
+colnames(mob) <- c("c", "mob")
+colnames(prog) <- c("c", "prog")
+merged_df <- debt %>%
+  inner_join(ec, by = "c") %>%
+  inner_join(gdp, by = "c") %>%
+  inner_join(gini_trend, by = "c") %>%
+  inner_join(innov, by = "c") %>%
+  inner_join(mob, by = "c") %>%
+  inner_join(prog, by = "c")
+
+# box-cox
+vars <- c("debt", "ec", "gdp", "gini", "innov", "mob", "prog")
+for(var in vars) {
+  min_val <- min(merged_df[[var]], na.rm = TRUE)
+  if(min_val <= 0) {
+    constant <- abs(min_val) + 1  # Add 1 extra for safety
+    merged_df[[paste0(var, "_pos")]] <- merged_df[[var]] + constant
+    cat(var, "shifted by", constant, "\n")
+  } else {
+    merged_df[[paste0(var, "_pos")]] <- merged_df[[var]]
+  }
+  lambda <- BoxCox.lambda(merged_df[[paste0(var, "_pos")]])
+  merged_df[[paste0(var, "_bc")]] <- BoxCox(merged_df[[paste0(var, "_pos")]], lambda)
+  cat(var, "optimal lambda:", round(lambda, 3), "\n")
+}
+
+# Z-scoring
+df_z <- merged_df %>%
+  mutate(across(ends_with("_bc"), ~ scale(.)[,1]))
+df_z <- df_z %>% select(c, ends_with("_bc"))
+df_z$gini <- df_z$gini_bc * (-1) #lower gini = better
+df_z$debt <- df_z$debt_bc * (-1) # lower debt = better
+df_z$score <- rowSums(df_z[, -1])
+df_z$rank <- rank(-df_z$score)
+
+# final table
+final <- merge(merged_df, df_z[, c("c", "score", "rank")], by = "c", all.x = TRUE)
+final <- final %>% select(c("c", "debt", "ec", "gdp", "gini", "innov", "mob", "prog", "score", "rank"))
+final$score <- round(final$score, 2)
+colnames(final) <- c("Country", "Debt.Percent.GDP", "Economic.Complexity.Index", "GDP.perCapita.PPP", "GINI.Trend.1980.onwards", "Global.Innovation.Index", "Global.Social.Mobility.Index", "Social.Progress.Index", "Composite.Score", "Rank")
+final <- final[, c("Rank", "Country", "Composite.Score", "Economic.Complexity.Index", "GINI.Trend.1980.onwards", "Global.Innovation.Index", "Global.Social.Mobility.Index", "Social.Progress.Index", "Debt.Percent.GDP", "GDP.perCapita.PPP")]
+
+```
+
+\
+
+### Data
+
+- [Debt as share of GDP](./assets/data/debt_gdp.csv)
+- [Economic Complexity Index](./assets/data/economic_complexity.csv)
+- [GDP per Capita (PPP)](./assets/data/gdp_pc_ppp.csv)
+- [Innovation Index](./assets/data/innovation.csv)
+- [Social Mobility Index](./assets/data/social_mobility.csv)
+- [Social Progress Index](./assets/data/social_progress.csv)
+- [Gini index by country and year](./assets/data/gini.csv)
+
+\
+
+### SessionInfo
+
+Other information that will be helpful for reproducibility
+
+```{r, include=T, echo=F}
+sessionInfo()
+```

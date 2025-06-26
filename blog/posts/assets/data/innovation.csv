@@ -1,0 +1,134 @@
+Rank,Country and region,Score,Income group
+1,Switzerland,67.5,High-income
+2,Sweden,64.5,High-income
+3,United States,62.4,High-income
+4,Singapore,61.2,High-income
+5,United Kingdom,61.0,High-income
+6,South Korea,60.9,High-income
+7,Finland,59.4,High-income
+8,Netherlands,58.8,High-income
+9,Germany,58.1,High-income
+10,Denmark,57.1,High-income
+11,China,56.3,Upper middle-income
+12,France,55.4,High-income
+13,Japan,54.1,High-income
+14,Canada,52.9,High-income
+15,Israel,52.7,High-income
+16,Estonia,52.3,High-income
+17,Austria,50.3,High-income
+18,Hong Kong,50.1,High-income
+19,Ireland,50.0,High-income
+20,Luxembourg,49.1,High-income
+21,Norway,49.1,High-income
+22,Iceland,48.5,High-income
+23,Australia,48.1,High-income
+24,Belgium,47.7,High-income
+25,New Zealand,45.9,High-income
+26,Italy,45.3,High-income
+27,Cyprus,45.1,High-income
+28,Spain,44.9,High-income
+29,Malta,44.8,High-income
+30,Czech Republic,44.0,High-income
+31,Portugal,43.7,High-income
+32,United Arab Emirates,42.8,High-income
+33,Malaysia,40.5,Upper middle-income
+34,Slovenia,40.2,High-income
+35,Lithuania,40.1,High-income
+36,Hungary,39.6,High-income
+37,Turkey,39.0,Upper middle-income
+38,Bulgaria,38.5,High-income
+39,India,38.3,Lower middle-income
+40,Poland,37.0,High-income
+41,Thailand,36.9,Upper middle-income
+42,Latvia,36.4,High-income
+43,Croatia,36.3,High-income
+44,Vietnam,36.2,Lower middle-income
+45,Greece,36.2,High-income
+46,Slovakia,34.3,High-income
+47,Saudi Arabia,33.9,High-income
+48,Romania,33.4,High-income
+49,Qatar,32.9,High-income
+50,Brazil,32.7,Upper middle-income
+51,Chile,32.6,High-income
+52,Serbia,32.3,Upper middle-income
+53,Philippines,31.1,Lower middle-income
+54,Indonesia,30.6,Upper middle-income
+55,Mauritius,30.6,Upper middle-income
+56,Mexico,30.4,Upper middle-income
+57,Georgia,30.4,Upper middle-income
+58,North Macedonia,29.9,Upper middle-income
+59,Russia,29.7,High-income
+60,Ukraine,29.5,Lower middle-income
+61,Colombia,29.2,Upper middle-income
+62,Uruguay,29.1,High-income
+63,Armenia,29.0,Upper middle-income
+64,Iran,28.9,Lower middle-income
+65,Montenegro,28.9,Upper middle-income
+66,Morocco,28.8,Lower middle-income
+67,Mongolia,28.7,Lower middle-income
+68,Moldova,28.7,Upper middle-income
+69,South Africa,28.3,Upper middle-income
+70,Costa Rica,28.3,Upper middle-income
+71,Kuwait,28.1,High-income
+72,Bahrain,27.6,High-income
+73,Jordan,27.5,Lower middle-income
+74,Oman,27.1,High-income
+75,Peru,26.7,Upper middle-income
+76,Argentina,26.4,Upper middle-income
+77,Barbados,26.1,High-income
+78,Kazakhstan,25.7,Upper middle-income
+79,Jamaica,25.7,Upper middle-income
+80,Bosnia and Herzegovina,25.5,Upper middle-income
+81,Tunisia,25.4,Lower middle-income
+82,Panama,24.7,High-income
+83,Uzbekistan,24.7,Lower middle-income
+84,Albania,24.5,Upper middle-income
+85,Belarus,24.2,Upper middle-income
+86,Egypt,23.7,Lower middle-income
+87,Botswana,23.1,Upper middle-income
+88,Brunei,22.8,High-income
+89,Sri Lanka,22.6,Lower middle-income
+90,Cape Verde,22.3,Lower middle-income
+91,Pakistan,22.0,Lower middle-income
+92,Senegal,22.0,Lower middle-income
+93,Paraguay,21.9,Upper middle-income
+94,Lebanon,21.5,Lower middle-income
+95,Azerbaijan,21.3,Upper middle-income
+96,Kenya,21.0,Lower middle-income
+97,Dominican Republic,20.8,Upper middle-income
+98,El Salvador,20.6,Upper middle-income
+99,Kyrgyzstan,20.4,Lower middle-income
+100,Bolivia,20.2,Lower middle-income
+101,Ghana,20.0,Lower middle-income
+102,Namibia,20.0,Upper middle-income
+103,Cambodia,19.9,Lower middle-income
+104,Rwanda,19.7,Low-income
+105,Ecuador,19.3,Upper middle-income
+106,Bangladesh,19.1,Lower middle-income
+107,Tajikistan,18.6,Lower middle-income
+108,Trinidad and Tobago,18.4,High-income
+109,Nepal,18.1,Lower middle-income
+110,Madagascar,17.9,Low-income
+111,Laos,17.8,Lower middle-income
+112,Ivory Coast,17.5,Lower middle-income
+113,Nigeria,17.1,Lower middle-income
+114,Honduras,16.7,Lower middle-income
+115,Algeria,16.2,Lower middle-income
+116,Zambia,15.7,Lower middle-income
+117,Togo,15.6,Low-income
+118,Zimbabwe,15.6,Lower middle-income
+119,Benin,15.4,Lower middle-income
+120,Tanzania,15.3,Lower middle-income
+121,Uganda,14.9,Low-income
+122,Guatemala,14.6,Upper middle-income
+123,Cameroon,14.4,Lower middle-income
+124,Nicaragua,14.0,Lower middle-income
+125,Myanmar,13.8,Lower middle-income
+126,Mauritania,13.2,Lower middle-income
+127,Burundi,13.2,Low-income
+128,Mozambique,13.1,Low-income
+129,Burkina Faso,12.8,Low-income
+130,Ethiopia,12.3,Low-income
+131,Mali,11.8,Low-income
+132,Niger,11.2,Low-income
+133,Angola,10.2,Lower middle-income

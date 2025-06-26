@@ -1079,3 +1079,138 @@ h1, h2, h3, h4, h5, h6 {
   scrollbar-width: thin;
   scrollbar-color: $gray-500 $gray-200;
 }
+
+// DataTables light mode styling
+body:not(.quarto-dark) {
+  // Main table container
+  .datatables.html-widget {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  // DataTables wrapper
+  .dataTables_wrapper {
+    background-color: #f8fafc;
+    color: #374151;
+
+    // Length and filter controls
+    .dataTables_length,
+    .dataTables_filter {
+      color: #374151;
+
+      label {
+        color: #374151;
+      }
+
+      select,
+      input[type="search"] {
+        background-color: #ffffff;
+        border: 1px solid #d1d5db;
+        color: #374151;
+        border-radius: 4px;
+        padding: 4px 8px;
+
+        &:focus {
+          border-color: #9ca3af;
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.3);
+        }
+      }
+    }
+
+    // Main table
+    table.dataTable {
+      background-color: #f8fafc;
+      color: #374151;
+      border-collapse: separate;
+      border-spacing: 0;
+
+      // Header
+      thead {
+        background-color: #e5e7eb;
+
+        th {
+          background-color: #e5e7eb;
+          color: #1f2937;
+          border-bottom: 2px solid #d1d5db;
+          padding: 12px 8px;
+          font-weight: 600;
+
+          &.sorting,
+          &.sorting_asc,
+          &.sorting_desc {
+            cursor: pointer;
+
+            &:hover {
+              background-color: #cbd5e1;
+            }
+          }
+        }
+      }
+
+      // Body rows
+      tbody {
+        tr {
+          &.odd {
+            background-color: #f8fafc;
+          }
+
+          &.even {
+            background-color: #f3f4f6;
+          }
+
+          &:hover {
+            background-color: #e5e7eb !important;
+          }
+
+          td {
+            border-bottom: 1px solid #d1d5db;
+            padding: 10px 8px;
+            color: #374151;
+          }
+        }
+      }
+    }
+
+    // Pagination
+    .dataTables_paginate {
+      .paginate_button {
+        background-color: #ffffff;
+        border: 1px solid #d1d5db;
+        color: #374151 !important;
+        padding: 6px 12px;
+        margin: 0 2px;
+        border-radius: 4px;
+        text-decoration: none;
+
+        &:hover:not(.disabled) {
+          background-color: #f3f4f6;
+          border-color: #9ca3af;
+        }
+
+        &.current {
+          background-color: #6b7280;
+          border-color: #6b7280;
+          color: #ffffff !important;
+        }
+
+        &.disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    // Info text
+    .dataTables_info {
+      color: #6b7280;
+    }
+
+    // Scrollable areas
+    .dataTables_scrollHead,
+    .dataTables_scrollBody {
+      background-color: #f8fafc;
+    }
+  }
+}
