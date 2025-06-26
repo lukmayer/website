@@ -1216,30 +1216,37 @@ body:not(.quarto-dark) {
 }
 
 
-// Light mode code output styles
+// R code output styling for light theme
 .cell-output {
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 6px;
-  margin: 1rem 0;
+  @include neuromorphic-recessed();
+  background-color: $gray-200;
+  border: 1px solid rgba($gray-400, .2);
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  overflow: hidden;
 
   &.cell-output-stdout {
     pre {
-      background-color: #ffffff;
-      color: #212529;
-      padding: 1rem;
+      background-color: $white;
+      color: #374151;
+      padding: 1.5rem;
       margin: 0;
-      border-radius: 5px;
-      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      border-radius: 0;
+      font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
       font-size: 0.875rem;
       line-height: 1.4;
       overflow-x: auto;
+      box-shadow: 
+        inset 0 2px 4px rgba($black, .08),
+        inset 0 1px 2px rgba($black, .05);
 
       code {
-        background-color: transparent;
-        color: inherit;
-        padding: 0;
-        font-size: inherit;
+        background-color: transparent !important;
+        color: inherit !important;
+        padding: 0 !important;
+        font-size: inherit !important;
+        border: none !important;
+        box-shadow: none !important;
       }
     }
   }

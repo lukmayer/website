@@ -371,7 +371,6 @@ So will I be moving to Switzerland? Well, maybe, though I can trace that interes
 \
 
 ## Appendix
-
 ### Code
 
 ```r

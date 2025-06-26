@@ -1236,4 +1236,39 @@ body.quarto-dark {
   }
 }
 
+// R code output styling for dark theme
+.cell-output {
+  @include neuromorphic-recessed();
+  background-color: $gray-200;
+  border: 1px solid rgba($gray-500, .15);
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  overflow: hidden;
+
+  &.cell-output-stdout {
+    pre {
+      background-color: $gray-100;
+      color: #e5e7eb;
+      padding: 1.5rem;
+      margin: 0;
+      border-radius: 0;
+      font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      overflow-x: auto;
+      box-shadow: 
+        inset 0 3px 6px rgba($black, .25),
+        inset 0 1px 3px rgba($black, .2);
+
+      code {
+        background-color: transparent !important;
+        color: inherit !important;
+        padding: 0 !important;
+        font-size: inherit !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
 
