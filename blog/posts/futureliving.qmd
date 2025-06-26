@@ -327,7 +327,7 @@ I basically cleaned up each dataset separately, with the intention of eventually
 
 Many countries did not meet all my data requirements. Of course, most of these are developing countries where accurate information is hard to find. That being said, these countries are pretty unlikely to have topped the charts of my analysis anyway. Some smaller, developed countries lacked at least one of my metrics. For example, Iceland and Luxembourg are not included in the Economic Complexity Index, and New Zealand and Singapore did not have enough Gini data for my time trend estimations. Dropping these from the data is a real shame, since I would expect them to rank fairly highly if the information had been available. So when you look at my results later, keep in mind that some noteworthy contenders are not included.
 
-With all of this out the way, I merged all the data together and only retained countries that have all the records I wanted. 57 countries pass all the checks. 
+With all of this out the way, I merged all the data together and only retained countries that have all the records I wanted. 62 countries pass all the checks. 
 I decided to rank countries by a composite score derived from the variables I've prepared. Ultimately, I used the Z-score of each variable and simply calculate the row sum for each country. Z-scores are pretty neat as they standardize all variables to the scale of standard deviations from the mean, meaning that not only are all variables now in the same unit, differences between countries are still accurately retained (unlike rank-scoring). For the row sum of my Z-scored variables to be valid, I needed to ensure that all variables follow a similar distribution, so I used the Box-Cox method to automatically find the optimal transformation that makes my values normally distributed. The Box-Cox transform is only valid for positive values, meaning I additionally had to add the minimum of a variable to its values, if that variable featured negative values. Of course, I inverted the Z-scores for debt as percent of GDP and Gini time trend, since less debt is better, and decreasing Gini is better. Note that my composite score thus implicitly applies equal weights to all variables included.
 
 \
@@ -368,6 +368,7 @@ Nevertheless, I thought it was pretty fun to just throw something together that 
 
 So will I be moving to Switzerland? Well, maybe, though I can trace that interest to at least 2019, meaning this ranking had little to do with it. It's close to home, (partly) German-speaking, has excellent infrastructure and beautiful nature, what's not to like? At the end of the day, we make these kinds of decisions based on our subjective values rather than some score. And with that, I hope this was interesting to you!
 
+\
 
 ## Appendix
 
