@@ -1215,3 +1215,25 @@ body.quarto-dark {
     }
   }
 }
+
+
+// Dark mode code output styles
+@media (prefers-color-scheme: dark) {
+  .cell-output {
+    background-color: #1e1e1e;
+    border: 1px solid #404040;
+
+    &.cell-output-stdout {
+      pre {
+        background-color: #0d1117;
+        color: #c9d1d9;
+
+        code {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+

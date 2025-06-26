@@ -1214,3 +1214,33 @@ body:not(.quarto-dark) {
     }
   }
 }
+
+
+// Light mode code output styles
+.cell-output {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  margin: 1rem 0;
+
+  &.cell-output-stdout {
+    pre {
+      background-color: #ffffff;
+      color: #212529;
+      padding: 1rem;
+      margin: 0;
+      border-radius: 5px;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      overflow-x: auto;
+
+      code {
+        background-color: transparent;
+        color: inherit;
+        padding: 0;
+        font-size: inherit;
+      }
+    }
+  }
+}
