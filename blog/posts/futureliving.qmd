@@ -35,6 +35,16 @@ debt <- debt %>% select(c(Country, Gross_2024))
 debt$Gross_2024 <- as.numeric(debt$Gross_2024)
 
 debt <- debt %>% filter(!is.na(Gross_2024))
+
+debt$Country <- recode(debt$Country,
+  "Brunei Darussalam" = "Brunei",
+  "Democratic Republic of the Congo" = "DR Congo",
+  "Republic of the Congo" = "Congo",
+  "Côte d'Ivoire" = "Ivory Coast",
+  "Georgia (country)" = "Georgia",
+  "Hong Kong SAR" = "Hong Kong",
+  "Kyrgyz Republic" = "Kyrgyzstan"
+)
 ```
 
 <!-- EC -->
@@ -96,31 +106,35 @@ colnames(prog) <- c("Country", "Score")
 prog$Score <- as.numeric(prog$Score)
 
 prog <- prog %>% filter(!is.na(Score))
+
+
+prog$Country <- recode(prog$Country,
+  "Korea, Republic of" = "South Korea",
+  "Czechia" = "Czech Republic",
+  "Republic of North Macedonia" = "North Macedonia",
+  "Cabo Verde" = "Cape Verde",
+  "West Bank and Gaza" = "Palestine",
+  "Gambia, The" = "Gambia",
+  "Côte d'Ivoire" = "Ivory Coast",
+  "Congo, Republic of" = "Congo",
+  "Congo, Democratic Republic of" = "DR Congo"
+)
 ```
 
+
 <!-- GINI -->
+
 ```{r}
 gini <- read_csv("./assets/data/gini.csv")
+colnames(gini) <- c("Country", "Year", "Gini", "Footnote")
 
-year_cols <- names(gini)[names(gini) %in% as.character(1980:2024)]
-
-gini <- gini %>%
-  select(`Country Name`, all_of(year_cols)) %>%
-  pivot_longer(
-    cols = all_of(year_cols),
-    names_to = "Year",
-    values_to = "Gini"
-  ) %>%
-  rename(Country = `Country Name`) %>%
-  mutate(Year = as.numeric(Year))
+gini <- gini %>% filter(Year >= 1980)
 
 gini <- gini %>%
   group_by(Country) %>%
   filter(sum(!is.na(Gini)) >= 10) %>%
   ungroup()
-
 ```
-
 
 <!-- Gini trend -->
 ```{r}
@@ -130,6 +144,16 @@ gini_trend <- gini %>%
     gini_trend = coef(lm(Gini ~ Year))[2],
     .groups = "drop"
   )
+
+#fixing some of the country values
+gini_trend$Country <- recode(gini_trend$Country,
+  "Czechia" = "Czech Republic",
+  "CÃ´te d'Ivoire" = "Ivory Coast",
+  "Korea" = "South Korea",
+  "Kyrgyz Republic" = "Kyrgyzstan",
+  "Slovak Republic" = "Slovakia",
+  "Viet Nam" = "Vietnam"
+)
 ```
 
 <!-- Country name check -->
@@ -158,8 +182,8 @@ print(non_shared_matrix)
 ```
 
 <!-- 
-NO EC: Iceland, Luxembourg
-Not enough GINI: New Zealand, Singapore, Slovakia 
+NO EC: Iceland, Luxembourg, Malta
+Not enough GINI: New Zealand, Singapore 
 -->
 
 
@@ -224,12 +248,32 @@ df_z$rank <- rank(-df_z$score)
 ```
 
 
+```{r}
+df_z2 <- merged_df %>%
+  mutate(across(ends_with("_bc"), ~ scale(.)[,1]))
+
+df_z2 <- df_z2 %>% select(c, ends_with("_bc"))
+
+#drop gdp pc
+df_z2 <- df_z2 %>% select(-gdp_bc)
+
+#lower gini = better, lower debt = better
+df_z2$gini <- df_z2$gini_bc * (-1)
+df_z2$debt <- df_z2$debt_bc * (-1)
+
+df_z2$score <- rowSums(df_z2[, -1])
+df_z2$rank <- rank(-df_z2$score)
+```
+
+
+
 ```{r final}
 final <- merge(merged_df, df_z[, c("c", "score", "rank")], by = "c", all.x = TRUE)
 
 final <- final %>% select(c("c", "debt", "ec", "gdp", "gini", "innov", "mob", "prog", "score", "rank"))
 
 final$score <- round(final$score, 2)
+final$gini <- round(final$gini, 2)
 
 colnames(final) <- c("Country", "Debt.Percent.GDP", "Economic.Complexity.Index", "GDP.perCapita.PPP", "GINI.Trend.1980.onwards", "Global.Innovation.Index", "Global.Social.Mobility.Index", "Social.Progress.Index", "Composite.Score", "Rank")
 
@@ -264,7 +308,7 @@ So I've decided I'd see whether I can make somewhat sensible relative judgments 
 
 - [Economic Complexity Index](https://en.wikipedia.org/wiki/List_of_countries_by_economic_complexity): Because the more diverse your economy the better you can handle some recessions here and there while the rest of the world is on fire.
 - [Social Mobility Index](https://en.wikipedia.org/wiki/Global_Social_Mobility_Index#Global_Social_Mobility_Index_(2020)_results): As an indicator of relatively low inequality
-- [Gini index](https://data.worldbank.org/indicator/SI.POV.GINI): Specifically the trend in Gini over time, since that would be indicative of the change in inequality during recent years.
+- [Gini index](https://data.un.org/Data.aspx?d=WDI&f=Indicator_Code%3ASI.POV.GINI): Specifically the trend in Gini over time, since that would be indicative of the change in inequality during recent years.
 - [Government debt as percent of GDP](https://en.wikipedia.org/wiki/List_of_countries_by_government_debt): Because if you're going through a bit of a rough patch, like a demographic crisis, you need to be able to have the cash at hand to be able to push through those hard times.
  
 I've also picked out a few ones that just feel like they'd be somewhat indicative of living a nicer life:
@@ -277,11 +321,11 @@ I've also picked out a few ones that just feel like they'd be somewhat indicativ
 
 ## Method
 
-I grabbed most of the data from Wikipedia by using the [Wikitable2csv website](https://wikitable2csv.ggor.de). Only the Gini by year data I had to grab from the website of the WorldBank.
+I grabbed most of the data from Wikipedia by using the [Wikitable2csv website](https://wikitable2csv.ggor.de). Only the Gini by year data I had to grab from the website of the United Nations.
 
 I basically cleaned up each dataset separately, with the intention of eventually doing a complete-cases analysis. For the Gini time-series data, I decided I would fit linear regression models to each country that had at least 10 data points between 1980 and 2025. So the slope estimate is indicative of the trend. This is definitely not statistically sound, but it is decidedly convenient. I decided 1980 should be the cut-off point for the time trends based on my impression that this is around where many developed countries started to take a turn for the worse in terms of inequality. For the GDP estimates, I used the ones provided by the WorldBank.
 
-Many countries did not meet all my data requirements. Of course, most of these are developing countries where accurate information is hard to find. That being said, these countries are pretty unlikely to have topped the charts of my analysis anyway. Some smaller, developed countries lacked at least one of my metrics. For example, Iceland and Luxembourg are not included in the Economic Complexity Index, and New Zealand, Singapore, and Slovakia did not have enough Gini data for my time trend estimations. Dropping these from the data is a real shame, since I would expect them to rank fairly highly if the information had been available. So when you look at my results later, keep in mind that some noteworthy contenders are not included.
+Many countries did not meet all my data requirements. Of course, most of these are developing countries where accurate information is hard to find. That being said, these countries are pretty unlikely to have topped the charts of my analysis anyway. Some smaller, developed countries lacked at least one of my metrics. For example, Iceland and Luxembourg are not included in the Economic Complexity Index, and New Zealand and Singapore did not have enough Gini data for my time trend estimations. Dropping these from the data is a real shame, since I would expect them to rank fairly highly if the information had been available. So when you look at my results later, keep in mind that some noteworthy contenders are not included.
 
 With all of this out the way, I merged all the data together and only retained countries that have all the records I wanted. 57 countries pass all the checks. 
 I decided to rank countries by a composite score derived from the variables I've prepared. Ultimately, I used the Z-score of each variable and simply calculate the row sum for each country. Z-scores are pretty neat as they standardize all variables to the scale of standard deviations from the mean, meaning that not only are all variables now in the same unit, differences between countries are still accurately retained (unlike rank-scoring). For the row sum of my Z-scored variables to be valid, I needed to ensure that all variables follow a similar distribution, so I used the Box-Cox method to automatically find the optimal transformation that makes my values normally distributed. The Box-Cox transform is only valid for positive values, meaning I additionally had to add the minimum of a variable to its values, if that variable featured negative values. Of course, I inverted the Z-scores for debt as percent of GDP and Gini time trend, since less debt is better, and decreasing Gini is better. Note that my composite score thus implicitly applies equal weights to all variables included.
@@ -312,7 +356,7 @@ My results are obviously biased in the sense that they critically depend on what
 What's interesting about my results is of course that I've taken care of outliers ruining the party by transforming variables before Z-scoring. Ireland is often a bit painful (especially with economic data) since their figures are extremely distorted due to huge multinational companies using tax loopholes there. Here, Ireland still ranks pretty high despite my transformations, so I'd wager you should still be a bit cautious with interpreting its rank. However, you don't quite get all the usual chart toppers. For example, usually the Nordic countries all but dominate these kinds of rankings. Here, some of them seem to have been punished by having pretty simple economic structures. 
 
 The big winner of my ranking is Switzerland, which is actually not surprising at all. The Swiss do pretty well in any metric you throw at them, and they don't even seem to be experiencing large changes in inequality like some of their neighbors.
-Ranks 2-5 are all occupied by countries that have experienced steeply rising inequality in recent decades. Especially Germany gets a lot of flak for this, with my impression of the domestic sentiment being that politics in Germany has not been this tense in a long time. Perhaps the resilience of the German economy and it's relatively strong public institutions ought to inspire more hope for a good future than what the vibes suggest? Ranks 16 and 17, Slovenia and Estonia, seem pretty interesting to me, since these are countries that most people sleep on. They seem to be doing pretty well, at least judging by the scores.
+Ranks 2-5 are all occupied by countries that have experienced steeply rising inequality in recent decades. Especially Germany gets a lot of flak for this, with my impression of the domestic sentiment being that politics in Germany has not been this tense in a long time. Perhaps the resilience of the German economy and it's relatively strong public institutions ought to inspire more hope for a good future than what the vibes suggest? Ranks 14, 16 and 17, which are the Czech Republic, Slovenia, and Estonia, seem pretty interesting to me, since these are countries that most people sleep on. They seem to be doing pretty well, at least judging by the scores.
 
 \
 
