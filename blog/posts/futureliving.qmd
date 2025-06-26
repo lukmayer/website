@@ -383,6 +383,15 @@ colnames(debt) <- c("Country", "Gross_2024", "Gross_2022", "Net_2021")
 debt <- debt %>% select(c(Country, Gross_2024))
 debt$Gross_2024 <- as.numeric(debt$Gross_2024)
 debt <- debt %>% filter(!is.na(Gross_2024))
+debt$Country <- recode(debt$Country,
+  "Brunei Darussalam" = "Brunei",
+  "Democratic Republic of the Congo" = "DR Congo",
+  "Republic of the Congo" = "Congo",
+  "Côte d'Ivoire" = "Ivory Coast",
+  "Georgia (country)" = "Georgia",
+  "Hong Kong SAR" = "Hong Kong",
+  "Kyrgyz Republic" = "Kyrgyzstan"
+)
 
 ec <- read_csv("./assets/data/economic_complexity.csv")
 colnames(ec) <- c("Rank", "Country", "EC_2018", "Change_13to18", "Change_08to18")
@@ -398,7 +407,7 @@ gdp$Country <- gsub("*", "", gdp$Country, fixed=T) #strip * from Country
 gdp$WB <- gsub(",", "", gdp$WB, fixed=T) #strip , from WB
 gdp$WB <- as.numeric(gdp$WB)
 gdp <- gdp %>% filter(!is.na(WB))
-gdp$Country <- gsub("\u202F", "", gdp$Country) #annoying special white space 
+gdp$Country <- gsub("\u202F", "", gdp$Country)
 
 innov <- read_csv("./assets/data/innovation.csv")
 colnames(innov) <- c("Rank", "Country", "Score", "Group")
@@ -417,18 +426,21 @@ prog <- prog %>% select(c(Country, `Social Progress Score`))
 colnames(prog) <- c("Country", "Score")
 prog$Score <- as.numeric(prog$Score)
 prog <- prog %>% filter(!is.na(Score))
+prog$Country <- recode(prog$Country,
+  "Korea, Republic of" = "South Korea",
+  "Czechia" = "Czech Republic",
+  "Republic of North Macedonia" = "North Macedonia",
+  "Cabo Verde" = "Cape Verde",
+  "West Bank and Gaza" = "Palestine",
+  "Gambia, The" = "Gambia",
+  "Côte d'Ivoire" = "Ivory Coast",
+  "Congo, Republic of" = "Congo",
+  "Congo, Democratic Republic of" = "DR Congo"
+)
 
 gini <- read_csv("./assets/data/gini.csv")
-year_cols <- names(gini)[names(gini) %in% as.character(1980:2024)]
-gini <- gini %>%
-  select(`Country Name`, all_of(year_cols)) %>%
-  pivot_longer(
-    cols = all_of(year_cols),
-    names_to = "Year",
-    values_to = "Gini"
-  ) %>%
-  rename(Country = `Country Name`) %>%
-  mutate(Year = as.numeric(Year))
+colnames(gini) <- c("Country", "Year", "Gini", "Footnote")
+gini <- gini %>% filter(Year >= 1980)
 gini <- gini %>%
   group_by(Country) %>%
   filter(sum(!is.na(Gini)) >= 10) %>%
@@ -439,6 +451,14 @@ gini_trend <- gini %>%
     gini_trend = coef(lm(Gini ~ Year))[2],
     .groups = "drop"
   )
+gini_trend$Country <- recode(gini_trend$Country,
+  "Czechia" = "Czech Republic",
+  "CÃ´te d'Ivoire" = "Ivory Coast",
+  "Korea" = "South Korea",
+  "Kyrgyz Republic" = "Kyrgyzstan",
+  "Slovak Republic" = "Slovakia",
+  "Viet Nam" = "Vietnam"
+)
 
 # country name check
 df_list <- list(debt, ec, gdp, gini_trend, innov, mob, prog)
@@ -450,8 +470,9 @@ country_presence <- sapply(all_countries, function(country) {
   sapply(countries_by_df, function(df_countries) country %in% df_countries)
 })
 non_shared_matrix <- country_presence[, not_shared, drop = FALSE]
+print(non_shared_matrix)
 
-# prepare for merging
+# merging data
 colnames(debt) <- c("c", "debt")
 colnames(ec) <- c("c", "ec")
 colnames(gdp) <- c("c", "gdp")
@@ -483,11 +504,11 @@ for(var in vars) {
   cat(var, "optimal lambda:", round(lambda, 3), "\n")
 }
 
-# Z-scoring
+# z-scoring
 df_z <- merged_df %>%
   mutate(across(ends_with("_bc"), ~ scale(.)[,1]))
 df_z <- df_z %>% select(c, ends_with("_bc"))
-df_z$gini <- df_z$gini_bc * (-1) #lower gini = better
+df_z$gini <- df_z$gini_bc * (-1) # lower gini = better
 df_z$debt <- df_z$debt_bc * (-1) # lower debt = better
 df_z$score <- rowSums(df_z[, -1])
 df_z$rank <- rank(-df_z$score)
@@ -496,6 +517,7 @@ df_z$rank <- rank(-df_z$score)
 final <- merge(merged_df, df_z[, c("c", "score", "rank")], by = "c", all.x = TRUE)
 final <- final %>% select(c("c", "debt", "ec", "gdp", "gini", "innov", "mob", "prog", "score", "rank"))
 final$score <- round(final$score, 2)
+final$gini <- round(final$gini, 2)
 colnames(final) <- c("Country", "Debt.Percent.GDP", "Economic.Complexity.Index", "GDP.perCapita.PPP", "GINI.Trend.1980.onwards", "Global.Innovation.Index", "Global.Social.Mobility.Index", "Social.Progress.Index", "Composite.Score", "Rank")
 final <- final[, c("Rank", "Country", "Composite.Score", "Economic.Complexity.Index", "GINI.Trend.1980.onwards", "Global.Innovation.Index", "Global.Social.Mobility.Index", "Social.Progress.Index", "Debt.Percent.GDP", "GDP.perCapita.PPP")]
 
