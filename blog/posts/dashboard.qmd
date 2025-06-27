@@ -16,6 +16,8 @@ format:
 
 I decided I'd make the ranking table I created in my last post into an interactive display so that you can play around with what's included and how it's weighted yourself.
 
+The dashboard (below) can be pretty slow to load. If it doesn't load after 30s your browser is probably blocking it, so you may want to check the browser console.
+
 I made this using the Shinylive package and extension for Quarto. It's far from optimal to be honest, but I'm happy I eventually got this to work.
 
 :::{.column-screen-inset}
