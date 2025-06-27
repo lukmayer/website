@@ -1,0 +1,443 @@
+---
+title: "Country dashboard"
+description: "A shiny live experiment"
+author: "Luke"
+date: "2025-06-26"
+image: "images/countries.jpg"
+categories:
+ - r
+filters:
+  - shinylive
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+---
+
+I decided I'd make the ranking table I created in my last post into an interactive display so that you can play around with what's included and how it's weighted yourself.
+
+I made this using the Shinylive package and extension for Quarto. It's far from optimal to be honest, but I'm happy I eventually got this to work.
+
+:::{.column-screen-inset}
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 1200
+
+library(shiny)
+library(DT)
+
+df_z <- structure(list(Country = c("Albania", "Argentina", "Armenia", 
+"Australia", "Austria", "Bangladesh", "Belgium", "Brazil", "Bulgaria", 
+"Canada", "Chile", "China", "Colombia", "Costa Rica", "Ivory Coast", 
+"Croatia", "Cyprus", "Czech Republic", "Denmark", "Ecuador", 
+"Egypt", "El Salvador", "Estonia", "Finland", "France", "Georgia", 
+"Germany", "Greece", "Honduras", "Hungary", "India", "Indonesia", 
+"Ireland", "Israel", "Italy", "Kazakhstan", "Latvia", "Lithuania", 
+"Malaysia", "Mexico", "Moldova", "Netherlands", "Norway", "Pakistan", 
+"Panama", "Paraguay", "Peru", "Poland", "Portugal", "Romania", 
+"Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", 
+"Thailand", "Ukraine", "United Kingdom", "United States", "Uruguay", 
+"Vietnam"), Debt.percent.GDP.Z = c(-0.124629294124465, -0.881652686284333, 
+0.0732425727324507, 0.234333820614628, -0.648071817139399, 0.698717587016083, 
+-1.189808193211, -0.891279357075537, 2.59589451107479, -1.18562458139787, 
+0.759139114985335, -0.927030348729619, 0.0178488559365616, -0.218659431299363, 
+-0.113325293231668, -0.1797159471746, -0.528068192422933, 0.471712089085369, 
+1.77230728199557, -0.0671086636699418, -1.06132881976772, -0.846209476478951, 
+2.66530947703202, -0.784241325720259, -1.27705968940722, 0.87962217146127, 
+-0.322322976182618, -1.71882947547772, 0.500542665863607, -0.601105362317265, 
+-0.807400085518897, 0.843282550619476, 0.711953810760354, -0.432603905999444, 
+-1.54478159249432, 2.46284427702149, 0.584223230705835, 1.08199849496694, 
+-0.405972040242114, -0.0313552549403581, 0.993501598495438, 0.329990120902357, 
+0.939422947318687, -0.557328887549805, 0.0304344065041883, 0.590373916494153, 
+1.3671434214963, -0.0110712590395305, -1.03363857344817, 0.0775975502594567, 
+0.258906061457534, -0.172505766040318, -0.43844141127366, -1.20770878775751, 
+1.09857333974231, 1.04122309403835, -0.347717499373564, -1.04840064431428, 
+-1.14412403298648, -1.38742970756526, -0.263187286942041, 1.31959869801759
+), Economic.Complexity.Index.Z = c(-1.04740010189708, -0.959787575953646, 
+-1.10021074875286, -1.19896552417594, 1.65395957971693, -1.40579737753144, 
+0.634266312200659, -0.573278372048231, -0.200040818680771, -0.0799889953555568, 
+-0.934912327518399, 0.875673735720604, -0.682471048237961, -0.447713134997391, 
+-1.44503876598365, 0.200566623626427, -0.603618711537085, 1.63632602191341, 
+0.503729341336268, -1.44973373347937, -0.83120739283612, -0.653251746501829, 
+0.321855273316014, 1.21066716186829, 0.922268816601674, -0.813269292206998, 
+2.16666255913533, -0.672777990968793, -1.28856488757909, 1.39436054412452, 
+-0.211789100076818, -0.758333944980252, 0.906690414654383, 0.663788321885541, 
+1.03262546221369, -1.23848632618539, -0.0182114891420542, 0.18732365122894, 
+0.418806581297545, 0.798949434489707, -0.934912327518399, 0.34932210335748, 
+-0.326702899255083, -1.29461450563253, -0.984242429231461, -1.21232597024296, 
+-1.36900876790313, 0.518046614899514, 0.108846704023971, 0.875673735720604, 
+-0.0554181202716872, 0.985049507346337, 1.32690903772762, 0.147874987440912, 
+1.46255937870615, 2.31987502983337, 0.619575370122622, -0.404363346611779, 
+1.14527081123511, 1.21066716186829, -0.758333944980252, -0.643418559337893
+), GDP.PC.PPP.Z = c(-0.578667969479209, -0.118697105136812, -0.466045655225293, 
+0.923409660963611, 0.991864131045693, -2.07560611746282, 0.943813486068404, 
+-0.637926841076349, 0.247334432561972, 0.798322240846842, 0.0514972081511996, 
+-0.372848777319968, -0.567817002128468, -0.187306357268071, -2.38313828212365, 
+0.459334215083589, 0.714009137923153, 0.646528321491845, 1.03238900277504, 
+-1.0555174676038, -0.778296145048397, -1.46312260085509, 0.536975954072058, 
+0.858441053205361, 0.790674347012461, -0.365552753858487, 0.926838361173849, 
+0.326114834872618, -2.54569504297012, 0.46017504777571, -1.8506345887589, 
+-1.08285649973564, 1.51891118971596, 0.638308637641741, 0.746105976041282, 
+0.268243356529517, 0.36510918213971, 0.604083691891451, 0.198748322887712, 
+-0.312389335256651, -0.905419626845786, 1.05266630879902, 1.33659487452438, 
+-2.87011160848619, 0.279819401728855, -0.897780846910471, -0.969354902742662, 
+0.548303295805111, 0.531331603917783, 0.510288898105396, -0.215357416726921, 
+0.425604963572419, 0.670361910662876, 0.624071621015143, 0.940063388699492, 
+1.22536621020093, -0.442507615305548, -0.848441456160931, 0.748977361996666, 
+1.09700572898117, 0.082117610439579, -1.12871295583376), Gini.Trend.Since.1980.Z = c(-0.972728762307106, 
+0.235661284719612, 0.807289419806078, -0.751795055249311, -0.541952384841444, 
+-1.28590248700461, -0.47757320406769, 0.519460378035315, -2.90579061741576, 
+-0.580839236047094, 1.32391656291119, -0.943517953562895, -0.113396990343457, 
+-0.977579788120396, -0.110513365069525, 1.07555192684504, -0.837591225467581, 
+-0.547633532490872, -1.10444688370133, 0.958189630444226, -0.399329079090007, 
+1.73208135283011, 0.424333933034159, -1.02755175406314, -0.338475925232408, 
+0.349294378348429, -1.01522269898644, -0.192613797020086, 0.428382484535192, 
+-0.479488366985406, -0.722332669474446, -1.3884974770747, 0.409714046813524, 
+-0.574157893236359, -0.882378704686931, 1.24091761183821, 0.327316356336889, 
+-0.823345895266208, 0.56832979485888, 0.71099636327897, 2.18026196918706, 
+-0.181951170444919, -0.62783056629162, 0.0673943434219194, 1.02128358818071, 
+0.87967773182586, 1.89885833159475, 1.49785597280742, 0.804996869073585, 
+0.546806173102294, 2.68562715882983, 0.515724944437757, -0.377236741009073, 
+-0.497430774529734, -1.29008018012335, -0.158135188867061, 0.937139266747765, 
+0.962410936735222, -0.625900533822269, -0.962683524356137, 0.010890770045687, 
+-0.404459154376347), Innovation.Index.Z = c(-1.10322330882057, 
+-0.935968336173481, -0.713955610326503, 0.741138019360247, 0.893866965234242, 
+-1.60640884664837, 0.713101142066744, -0.40999951704838, 0.042634817811248, 
+1.07129727204808, -0.418046117493808, 1.2986534534547, -0.69718127228074, 
+-0.772996888586645, -1.76502471536097, -0.125951616056125, 0.528749831459027, 
+0.449607907205552, 1.35142291375694, -1.58692470886517, -1.17503582566858, 
+-1.46200292206743, 1.0306358699988, 1.50167291443738, 1.23896393479529, 
+-0.59738991083039, 1.41701184255429, -0.133700762958127, -1.84628449835865, 
+0.125623119839705, 0.0274547879346658, -0.580897035510583, 0.873184066889493, 
+1.05776201457149, 0.543064234784961, -0.997067607196436, -0.118210153084921, 
+0.16307010447158, 0.192906757080406, -0.59738991083039, -0.739195452365693, 
+1.46268237378246, 0.810865461937928, -1.33060671956614, -1.08540282979067, 
+-1.3398902951567, -0.909961919811973, -0.071921143623544, 0.427900540036248, 
+-0.353919267294999, -0.442239430757734, -0.282434085697966, 0.170539277259389, 
+0.514412549706624, 1.82756324902192, 2.01492305972094, -0.0796170992285524, 
+-0.672097129845375, 1.60496073368948, 1.6945397369331, -0.705563251579159, 
+-0.133700762958127), Social.Mobility.Index.Z = c(-0.706105386379428, 
+-0.585641243282725, -0.822942004812496, 0.893527020218731, 1.38056875813782, 
+-1.63209565951418, 1.38056875813782, -0.942697479653827, -0.0915921450259129, 
+0.988425032276404, -0.364208334683061, -0.272472087192733, -1.05838609019865, 
+-0.264745812563682, -1.89934949521022, 0.145937967477542, 0.376575866110667, 
+0.855919262995838, 1.90967808262855, -0.822942004812496, -1.38668071061443, 
+-1.23621904621619, 0.744300955584676, 1.74016855022671, 1.04596632070911, 
+-0.706105386379428, 1.25091923046369, -0.401898315065783, -1.45872956398218, 
+0.0710920606438463, -1.50201293357616, -1.12090024948761, 0.884106253356048, 
+0.264385775549944, 0.204854352281649, -0.0108776343313731, 0.341829906108948, 
+0.473162777503202, -0.233715195153473, -0.909840011156656, -0.416886443795997, 
+1.6151450695718, 1.74016855022671, -1.80103155544201, -0.988170749389749, 
+-1.27169409847818, -1.0835423790243, 0.350497568438204, 0.60731979549657, 
+-0.147345467074108, -0.0915921450259129, 0.298679871236411, 1.01713919390481, 
+0.42907135941336, 1.72968089300841, 1.58417161065282, -0.720039150890423, 
+-0.295575599718776, 0.827845238004091, 0.464319390354575, 0.179529162219292, 
+-0.549520254806064), Social.Progress.Index.Z = c(-0.428475360063824, 
+0.0414886876042136, -0.361586155556238, 1.08276311464403, 1.10909919005662, 
+-2.02871021453541, 1.01008493768704, -0.711476953266137, -0.152134692312932, 
+1.12349208975159, 0.273693774269224, -1.22620730070184, -0.84880253287263, 
+0.259410021031203, -2.18229569620937, 0.444651638107071, 0.541526337932193, 
+0.771868863086631, 1.41176816060903, -0.663781035239767, -1.82009726121552, 
+-1.34315004834607, 0.884996475327265, 1.4019126407544, 0.874446196917741, 
+-0.397131547235487, 1.18971034024235, 0.458108602317123, -1.6209687111755, 
+-0.00441722919450905, -1.70192037310337, -1.14239167468768, 1.06603809514852, 
+0.540394102980479, 0.776508601641629, -0.716325507733983, 0.460353335318132, 
+0.601729573086324, -0.432510194770465, -0.752099047001046, -0.421409158795353, 
+1.2199456608804, 1.4364450726259, -2.37515169280453, -0.438558363298878, 
+-0.930988399538346, -0.765586386592023, 0.206869284152824, 0.720975477786726, 
+-0.143765564343391, -0.257045674777279, 0.329952179603639, 0.656583204051582, 
+0.790440884468391, 1.2745836204472, 1.37731195350324, -0.851653679189645, 
+-0.423428754032018, 0.881478490811943, 0.709445550714834, 0.217789408795679, 
+-1.00379635776192)), row.names = c(NA, -62L), class = "data.frame")
+
+score_cols <- names(df_z)[grepl("\\.Z$", names(df_z))]
+
+ui <- fluidPage(
+  # Add custom CSS for theming
+  tags$head(
+    tags$style(HTML("
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --sidebar-bg: #f5f5f5;
+        --sidebar-border: #e3e3e3;
+        --btn-primary-bg: #337ab7;
+        --btn-primary-border: #2e6da4;
+        --form-bg: #ffffff;
+        --form-border: #cccccc;
+        --table-bg: #ffffff;
+        --table-header-bg: #f5f5f5;
+      }
+
+      body.dark-theme {
+        --bg-color: #2b2b2b;
+        --text-color: #ffffff;
+        --sidebar-bg: #3c3c3c;
+        --sidebar-border: #555555;
+        --btn-primary-bg: #5bc0de;
+        --btn-primary-border: #46b8da;
+        --form-bg: #4a4a4a;
+        --form-border: #666666;
+        --table-bg: #2b2b2b;
+        --table-header-bg: #3c3c3c;
+      }
+
+      body {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+        transition: all 0.3s ease;
+      }
+
+      .well {
+        background-color: var(--sidebar-bg) !important;
+        border: 1px solid var(--sidebar-border) !important;
+        color: var(--text-color) !important;
+      }
+
+      .btn-primary {
+        background-color: var(--btn-primary-bg) !important;
+        border-color: var(--btn-primary-border) !important;
+      }
+
+      .form-control {
+        background-color: var(--form-bg) !important;
+        border-color: var(--form-border) !important;
+        color: var(--text-color) !important;
+      }
+
+      .checkbox label, h4, h3, h2, h1 {
+        color: var(--text-color) !important;
+      }
+
+      .theme-toggle {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 1000;
+      }
+
+      /* DataTable theming */
+      .dataTables_wrapper {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+      }
+
+      .dataTables_wrapper table.dataTable thead th {
+        background-color: var(--table-header-bg) !important;
+        color: var(--text-color) !important;
+        border-bottom: 1px solid var(--sidebar-border) !important;
+      }
+
+      .dataTables_wrapper table.dataTable tbody td {
+        background-color: var(--table-bg) !important;
+        color: var(--text-color) !important;
+        border-top: 1px solid var(--sidebar-border) !important;
+      }
+
+      .dataTables_info, .dataTables_paginate {
+        color: var(--text-color) !important;
+      }
+
+      .paginate_button {
+        background-color: var(--form-bg) !important;
+        color: var(--text-color) !important;
+        border: 1px solid var(--form-border) !important;
+      }
+    ")),
+
+    tags$script(HTML("
+      function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+
+        var btn = document.getElementById('theme_toggle');
+        if (document.body.classList.contains('dark-theme')) {
+          btn.innerHTML = '☀️ Light Mode';
+          btn.className = 'btn btn-sm btn-outline-light action-button';
+        } else {
+          btn.innerHTML = '🌙 Dark Mode';
+          btn.className = 'btn btn-sm btn-outline-secondary action-button';
+        }
+      }
+    "))
+  ),
+
+  # Theme toggle button with onclick
+  div(class = "theme-toggle",
+      tags$button(id = "theme_toggle", 
+                 class = "btn btn-sm btn-outline-secondary",
+                 onclick = "toggleTheme()",
+                 "🌙 Dark Mode")),
+
+  titlePanel("Country Dashboard"),
+
+  sidebarLayout(
+    sidebarPanel(
+      width = 3,
+      h4("Select Indicators:"),
+      checkboxGroupInput("selected_cols", 
+                         "",
+                         choices = setNames(score_cols, c(
+                           "Debt % of GDP",
+                           "Economic Complexity Index", 
+                           "GDP per Capita (PPP)",
+                           "Gini Trend Since 1980",
+                           "Innovation Index",
+                           "Social Mobility Index",
+                           "Social Progress Index"
+                         )),
+                         selected = score_cols),
+
+      hr(),
+
+      conditionalPanel(
+        condition = "input.selected_cols.length > 0",
+        h4("Indicator Weights:"),
+        uiOutput("weight_inputs")
+      ),
+
+      br(),
+      actionButton("calculate", "Update Rankings", 
+                   class = "btn-primary btn-block"),
+
+      br(),
+      div(
+        style = "font-size: 12px; color: #666;",
+      )
+    ),
+
+    mainPanel(
+      width = 9,
+      h4("Country Rankings"),
+      DT::dataTableOutput("result_table")
+    )
+  )
+)
+
+server <- function(input, output, session) {
+
+  output$weight_inputs <- renderUI({
+    req(input$selected_cols)
+
+    indicator_names <- c(
+      "Debt.percent.GDP.Z" = "Debt % of GDP",
+      "Economic.Complexity.Index.Z" = "Economic Complexity", 
+      "GDP.PC.PPP.Z" = "GDP per Capita",
+      "Gini.Trend.Since.1980.Z" = "Gini Trend",
+      "Innovation.Index.Z" = "Innovation Index",
+      "Social.Mobility.Index.Z" = "Social Mobility",
+      "Social.Progress.Index.Z" = "Social Progress"
+    )
+
+    weight_inputs <- lapply(input$selected_cols, function(col) {
+      display_name <- indicator_names[col]
+
+      div(
+        style = "margin-bottom: 15px;",
+        strong(display_name),
+        br(),
+        selectInput(paste0("weight_", col),
+                   label = NULL,
+                   choices = c("1.0" = 1.0, "1.25" = 1.25, "1.5" = 1.5, "2.0" = 2.0),
+                   selected = "1.0",
+                   width = "100%")
+      )
+    })
+
+    do.call(tagList, weight_inputs)
+  })
+
+  scored_data <- eventReactive(input$calculate, {
+    req(input$selected_cols)
+
+    weights <- sapply(input$selected_cols, function(col) {
+      weight_input <- input[[paste0("weight_", col)]]
+      if(is.null(weight_input)) 1.0 else as.numeric(weight_input)
+    })
+
+    result_df <- data.frame(Country = df_z$Country)
+
+    if(length(input$selected_cols) > 0) {
+      weighted_scores <- mapply(function(col, weight) {
+        df_z[[col]] * weight
+      }, input$selected_cols, weights, SIMPLIFY = FALSE)
+
+      result_df$Score <- Reduce(`+`, weighted_scores)
+      result_df$Rank <- rank(-result_df$Score, ties.method = "min")
+      result_df <- cbind(result_df, df_z[input$selected_cols])
+    } else {
+      result_df$Score <- 0
+      result_df$Rank <- nrow(df_z)
+    }
+
+    col_order <- c("Rank", "Country", "Score", input$selected_cols)
+    result_df <- result_df[col_order[col_order %in% names(result_df)]]
+    result_df[order(result_df$Rank), ]
+  })
+
+  observe({
+    if(input$calculate == 0) {
+      weights <- rep(1.0, length(score_cols))
+      names(weights) <- score_cols
+
+      weighted_scores <- mapply(function(col, weight) {
+        df_z[[col]] * weight
+      }, score_cols, weights, SIMPLIFY = FALSE)
+
+      initial_score <- Reduce(`+`, weighted_scores)
+      initial_rank <- rank(-initial_score, ties.method = "min")
+
+      initial_data <- data.frame(
+        Rank = initial_rank,
+        Country = df_z$Country,
+        Score = initial_score,
+        df_z[score_cols]
+      )
+
+      initial_data <- initial_data[order(initial_data$Rank), ]
+
+      output$result_table <- DT::renderDataTable({
+        DT::datatable(
+          initial_data,
+          options = list(
+            pageLength = 20,
+            scrollX = TRUE,
+            columnDefs = list(
+              list(className = 'dt-center', targets = c(0, 2))
+            )
+          ),
+          rownames = FALSE
+        ) %>%
+        DT::formatRound(columns = "Score", digits = 2) %>%
+        DT::formatRound(columns = score_cols, digits = 3)
+      })
+    }
+  })
+
+  observeEvent(input$calculate, {
+    output$result_table <- DT::renderDataTable({
+      data <- scored_data()
+
+      DT::datatable(
+        data,
+        options = list(
+          pageLength = 20,
+          scrollX = TRUE,
+          columnDefs = list(
+            list(className = 'dt-center', targets = c(0, 2))
+          )
+        ),
+        rownames = FALSE
+      ) %>%
+      DT::formatRound(columns = "Score", digits = 2) %>%
+      DT::formatRound(columns = score_cols[score_cols %in% names(data)], digits = 3)
+    })
+  })
+}
+
+shinyApp(ui = ui, server = server)
+
+
+```
+
+:::
