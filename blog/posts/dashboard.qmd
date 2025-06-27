@@ -1,6 +1,6 @@
 ---
 title: "Country dashboard"
-description: "A shiny live experiment"
+description: "A shinylive experiment"
 author: "Luke"
 date: "2025-06-26"
 image: "images/countries.jpg"
