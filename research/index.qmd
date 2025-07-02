@@ -19,6 +19,7 @@ listing:
     paragraph-header: "Header"
     descriptive-paragraph: "Description"
 
+resources: assets/cogsci25_poster.pdf
 
 format: 
   html:
@@ -161,6 +162,22 @@ div.callout-important.callout {
 
 :::
 <!-- end text-center -->
+
+## Posters and Talks
+
+
+::::: {.callout-important collapse="true" icon="false"}
+# ***"A Cognitive Framework for Strategic AI Communication"***
+**Mayer, L. W.**, Steyvers, M. *CogSci 2025*
+
+::: text-center
+<iframe src="assets/cogsci25_poster.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1" style="width: 90%; height: 1000px; border: none;"></iframe>
+:::
+
+:::::
+
+
+---
 
 
 ## In Progress
