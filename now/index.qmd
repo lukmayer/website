@@ -12,6 +12,11 @@ format:
 
 ## 2025
 
+### 2025-07-18
+
+Back from Europe! Pretty excited to keep plugging away at my 'Annoying AI' project, for which I will be presenting a poster at this year's CogSci conference! I will also be attending ACM's Collective Intelligence conference since San Diego is close-by :)
+
+
 ### 2025-06-11
 
 I'm currently in the midst of re-designing my site. Until very recently, I was using dark mode very religiously, but I have now seen the light. Therefore, a redesign. Also, to simplify my CSS a bunch.
