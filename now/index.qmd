@@ -16,6 +16,7 @@ format:
 
 Back from Europe! Pretty excited to keep plugging away at my 'Annoying AI' project, for which I will be presenting a poster at this year's CogSci conference! I will also be attending ACM's Collective Intelligence conference since San Diego is close-by :)
 
+---
 
 ### 2025-06-11
 

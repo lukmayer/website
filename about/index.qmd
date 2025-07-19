@@ -827,7 +827,7 @@ topoHighlight = require("topojson-client@3")
 countriesVisited = [
   "Germany", "France", "USA", "Spain", "Italy", "Austria", 
   "Switzerland", "Netherlands", "Belgium", "San Marino", 
-  "Vatican", "Malta", "Monaco", "United Kingdom", "Hungary"
+  "Vatican", "Malta", "Monaco", "United Kingdom", "Hungary",
 ]
 
 // Load world map data with a unique variable name
