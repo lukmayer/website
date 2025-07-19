@@ -217,7 +217,7 @@ for(var in vars) {
   min_val <- min(merged_df[[var]], na.rm = TRUE)
 
   if(min_val <= 0) {
-    constant <- abs(min_val) + 1  # Add 1 extra for safety
+    constant <- abs(min_val) 
     merged_df[[paste0(var, "_pos")]] <- merged_df[[var]] + constant
     cat(var, "shifted by", constant, "\n")
   } else {
@@ -353,7 +353,7 @@ options = list(
 
 My results are obviously biased in the sense that they critically depend on what metrics are included in the analysis. If you do not care about GDP for example, then your ranking will probably end up looking very different from this one. I hope my reasoning for what is included was somewhat convincing though.
 
-What's interesting about my results is of course that I've taken care of outliers ruining the party by transforming variables before Z-scoring. Ireland is often a bit painful (especially with economic data) since their figures are extremely distorted due to huge multinational companies using tax loopholes there. Here, Ireland still ranks pretty high despite my transformations, so I'd wager you should still be a bit cautious with interpreting its rank. However, you don't quite get all the usual chart toppers. For example, usually the Nordic countries all but dominate these kinds of rankings. Here, some of them seem to have been punished by having pretty simple economic structures. 
+Ireland is often a bit painful (especially with economic data) since their figures are extremely distorted due to huge multinational companies using tax loopholes there. Here, Ireland still ranks pretty high despite my transformations, so I'd wager you should still be a bit cautious with interpreting its rank. However, you don't quite get all the usual chart toppers. 
 
 The big winner of my ranking is Switzerland, which is actually not surprising at all. The Swiss do pretty well in any metric you throw at them, and they don't even seem to be experiencing large changes in inequality like some of their neighbors.
 Ranks 2 and 3 (Sweden and Denmark) have experienced steeply rising inequality in recent decades. Especially Germany (Rank 7) gets a lot of flak for this, with my impression of the domestic sentiment being that politics in Germany has not been this tense in a long time. Perhaps the resilience of the German economy and it's relatively strong public institutions ought to inspire more hope for a good future than what the vibes suggest? Ranks 4, 11 and 15 (Estonia, Czech Republic, and Slovenia) seem pretty interesting to me, given that these are countries most people sleep on. They seem to be doing pretty well, at least according to the metrics.
@@ -495,7 +495,7 @@ vars <- c("debt", "ec", "gdp", "gini", "innov", "mob", "prog")
 for(var in vars) {
   min_val <- min(merged_df[[var]], na.rm = TRUE)
   if(min_val <= 0) {
-    constant <- abs(min_val) + 1  # Add 1 extra for safety
+    constant <- abs(min_val) 
     merged_df[[paste0(var, "_pos")]] <- merged_df[[var]] + constant
     cat(var, "shifted by", constant, "\n")
   } else {
