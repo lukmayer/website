@@ -34,6 +34,7 @@ cat << EOF > "$FULL_FILENAME"
 title: ""
 description: ""
 author: "Luke"
+# image:
 date: "$CURRENT_DATE"
 #categories:
 # - quarto
