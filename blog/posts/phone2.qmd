@@ -6,6 +6,7 @@ image: images/kvae_logo.jpeg
 date: "2025-07-27"
 categories:
  - phone
+ - software
 
 format:
   html:
@@ -13,7 +14,7 @@ format:
 
 ---
 
-I don't use the phone much, as I prefer to use my laptop for most things [^1]. Of course, I do need it for some things like navigation, checking email, searching things on the go. This is all fine and dandy, for a minimal setup, as you could just have your five apps, use bookmarks in the browser instead of apps where feasible and call it a day, right? Well, yes, you could, but I would not be quite satisfied with that personally. That is because I want it to be configured in a way that maximizes my productivity (and thus, minimizes my screen time), which requires a certain design philosophy I've come up with over the years. Basically, I want important things to be easy to reach, and everything else to be hidden away in multiple layers. I've written about this in my [original phone post](https://lukmayer.github.io/blog/posts/minimal.html), but wanted to provide an updated overview with all my essentials here. Hopefully, you'll like what you see!
+I don't use the phone much, as I prefer to use my laptop for most things [^1]. Of course, I do need it for some things like navigation, checking email, searching things on the go. This is all fine and dandy for a minimal setup, as you could just have your five apps, use bookmarks in the browser instead of apps where feasible and call it a day, right? Well, yes, you could, but it's a bit bare-bones for my taste. I like to configure things in a way that maximizes my productivity (and thus, inevitably minimizes my screen time), which requires a certain design philosophy I've come to appreciate over the years. Basically, important things should be easy to reach, and everything else ought to be hidden away in multiple layers. I've written about this in my [original phone post](https://lukmayer.github.io/blog/posts/minimal.html), but wanted to provide an updated overview with all my essentials here. Hopefully, you'll like what you see!
 
 [^1]: I actually really wish there would exist some kind of phone sized device that somehow folds out a screen and a keyboard... Imagine a modern folding phone but better and with a physical keyboard
 
@@ -35,19 +36,19 @@ As I mentioned, I don't want unnecessary apps and visual clutter, and like to or
 
 My set-up revolves around a non-standard version of Android, a custom launcher, and a specific calendar app
 
-- I use [GrapheneOS](https://grapheneos.org) as my operating system. This is a specialized, security-focused, version of Android that does not feature Google apps that usually come pre-installed. So for example, there is no Youtube app on my phone. There are other options available if you want a "de-googled" experience. If disabling the Youtube app is good enough for you, and you're not concerned with the privacy and security of your phone you can safely ignore this.
+- I use [GrapheneOS](https://grapheneos.org) as my operating system. This is a specialized, security-focused, version of Android that does not feature Google apps that usually come pre-installed. So for example, there is no Youtube app on my phone. There are other options available if you want a "de-googled" experience. **If disabling the Youtube app is good enough for you, and you're not concerned with the privacy and security of your phone you can safely ignore this.**
 
 - [Kvaesitso](https://github.com/MM2-0/Kvaesitso) is hands-down the best launcher for my purposes. It's completely free and open-source, and available on [F-droid](https://f-droid.org/en/)[^2]. This has become the cornerstone of my phone, and so will get its own section (see below).
 
-[^2]: Never heard of [F-droid](https://en.wikipedia.org/wiki/F-Droid)? Basically, a non-commercial app store where everything is free and open-source. Great for utility apps, from indie devs. Do not expect big brand apps here though!
+- [Business Calendar 2](https://www.appgenix-software.com) has been my calendar app of choice for something like 5 years now. The only real reason for that is that they provide a customizable week-view widget with a time-line showing where you are in the day. I genuinely cannot understand how no other calendar app, which all have a week view with a time-line, do not offer this same week view as a widget. Once you come to expect being able to see your schedule at a glance, there is no going back to having to open an app for it. Agenda view, the one widget all calendar apps seem to have, does not come even remotely close to a graphical representation of your week for visual clarity. BC2's to-do widget is excellent too. 
 
-- [Business Calendar 2](https://www.appgenix-software.com) has been my calendar app of choice for something like 5 years now. The only real reason for that is that they provide a customizable week-view widget with a time-line showing where you are in the day. I genuinely cannot understand how no other calendar app, which all have a week view with a time-line, do not offer this as a widget. Once you come to expect being able to see your schedule at a glance, there is no going back to having to open an app for it. Agenda view, the one widget all calendar apps seem to have, does not come even remotely close to a graphical representation of your week for visual clarity. BC2's to-do widget is excellent too. 
+[^2]: Never heard of [F-droid](https://en.wikipedia.org/wiki/F-Droid)? Basically, a non-commercial app store where everything is free and open-source. Great for utility apps, from indie devs. Do not expect big brand apps here though!
 
 \
 
 # Kvaesitso
 
-It's a recurring theme in my life to realize that the most powerful software is often the most minimal. Kvaesitso serves this description really well as a pretty customizable launcher. It might not have the most features out of any launcher I have seen, but I've found Kvaesitso's features are extremely thoughtfully designed. With the right settings, my home screen is just my Calendar and to do widget and a search bar. You access the search bar either by tapping on it or swiping down (my preferred method). Once your focus is on the search bar, your app drawer is shown, meaning a swipe and a tap is all you need to access a specific app. The search itself is really powerful, you can search for apps, contacts, do web-searches, calculations, set timers, convert units, etc. all in this one tiny text field. You can also customize which apps show up in the grid. In my case, I set every lesser used app to show "Search only" so that it will only appear in search results when I start typing its name, not in the app drawer that shows before you have typed anything. This is far more convenient than having to open a "hidden apps" folder as you would in other good Android launchers.
+It's a recurring theme in my life to realize that the most powerful software can often be the most minimal. Kvaesitso serves this description really well as a pretty customizable launcher. It might not have the most features out of any launcher I have ever seen, but I've found Kvaesitso's features to be extremely thoughtfully designed. With the right settings, my home screen is just my Calendar and to do widgets, plus a search bar. You access the search bar either by tapping on it or swiping down (my preferred method). Once your focus is on the search bar, your app drawer is shown, meaning a swipe and a tap is all you need to access a specific app. The search itself is really powerful, you can search for apps, contacts, do web-searches, calculations, set timers, convert units, etc. all in this one tiny text field. You can also customize which apps show up in the grid. In my case, I set every lesser used app to show "Search only" so that it will only appear in search results when I start typing its name, not in the app drawer that shows before you have typed anything. This is far more convenient than having to open a "hidden apps" folder as you would in other good Android launchers.
 
 With Kvaesitso, I can achieve almost unparalleled levels of minimal. There is only the home screen, the search interface and the android notification center. These are the only three views you have outside of apps. There are no pages, and no scrolling is ever required. There is only one gesture: swiping down - either from anywhere in the main screen to open search or from the very top to open the notification center. It can even automatically theme your icons to be grayscale, which is nice since bright logos can be distracting. 
 
@@ -56,7 +57,7 @@ With Kvaesitso, I can achieve almost unparalleled levels of minimal. There is on
 
 ::: {.text-center}
 
-![BC2's week widget and To-do widgets. Not neccessarily the most modern deisgn, but still the most functional](images/kvae_homescreen.png)
+![BC2's week widget and To-do widgets. Not necessarily the most modern design, but still the most functionality](images/kvae_homescreen.png)
 
 
 ![Combined app drawer and universal search in Kvaesitso](images/kvae_search.png)
