@@ -55,10 +55,9 @@ With Kvaesitso, I can achieve almost unparalleled levels of minimal. There is on
 
 # Screenshots
 
-::: {.text-center}
+::: {.text-center layout-ncol="2" out-width="45%"}
 
 ![BC2's week widget and To-do widgets. Not necessarily the most modern design, but still the most functionality](images/kvae_homescreen.png)
-
 
 ![Combined app drawer and universal search in Kvaesitso](images/kvae_search.png)
 

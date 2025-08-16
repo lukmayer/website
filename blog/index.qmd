@@ -22,20 +22,6 @@ format:
     display: none;
 }
 
-.quarto-grid-item {
-  transition: transform 0.3s ease-in-out; 
-}
-
-.quarto-grid-item:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
-}
-
-
-.category:hover {
-    transform: translateY(-1px);
-}
-
 </style>
 
 

@@ -3,7 +3,7 @@
 <ul class="pub-list list">
   <% items.forEach(function(item, index) { %>
     <li <%= metadataAttrs(item) %>>
-      <div class="callout callout-important" style="border: 1px solid #444; border-radius: 8px; overflow: hidden;">
+      <div class="callout callout-important" style="border: 1px solid #444; border-radius: 0px; overflow: hidden;">
         <div class="callout-header" style="padding: 20px; border: none;">
           <div class="callout-title-container" data-index="<%= index %>" style="cursor: pointer;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
@@ -45,7 +45,7 @@
         <div class="callout-body-container" id="pub-<%= index %>" style="display: none; border: none;">
           <% if (item.image) { %>
             <div style="text-align: center; margin: 20px 0;">
-              <img src="<%- item.image %>" alt="Image for <%- item.title %>" style="max-width: 400px; height: auto; border-radius: 6px; border: 1px solid #333;"/>
+              <img src="<%- item.image %>" alt="Image for <%- item.title %>" style="max-width: 400px; height: auto; border-radius: 0px; border: 1px solid #333;"/>
             </div>
           <% } %>
 
@@ -74,7 +74,6 @@
   color: white;
   text-align: center;
   text-decoration: none;
-  border-radius: 6px;
   border: 1px solid;
   transition: all 0.2s ease;
 }

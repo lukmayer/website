@@ -76,48 +76,49 @@ getTimelineThemeColors = () => {
 
   if (isDark) {
     return {
-      landColor: "#374151", // gray-700
-      countryStroke: "#6b7280", // gray-500
-      futurePath: "#60a5fa", // blue-400
-      traveledPath: "#f87171", // red-400
-      currentMarker: "#f87171", // red-400
-      otherMarkers: "#60a5fa", // blue-400
-      markerStroke: "#e5e7eb", // gray-200
-      labelText: "#f3f4f6", // gray-100
-      labelBg: "rgba(17, 24, 39, 0.8)", // gray-900 with opacity
-      tooltipBg: "rgba(17, 24, 39, 0.95)", // gray-900 with opacity
-      tooltipText: "#f3f4f6", // gray-100
-      tooltipAccent: "#fbbf24", // amber-400
-      controlsBg: "rgba(17, 24, 39, 0.8)", // gray-900 with opacity
-      controlsText: "#f3f4f6", // gray-100
-      controlsButtonBg: "rgba(75, 85, 99, 0.8)", // gray-600 with opacity
-      sliderBg: "rgba(17, 24, 39, 0.8)", // gray-900 with opacity
-      sliderText: "#f3f4f6", // gray-100
-      sliderButtonBg: "rgba(75, 85, 99, 0.8)" // gray-600 with opacity
+      landColor: "rgb(70, 70, 70)",           // gray-700
+      countryStroke: "rgb(190, 190, 190)",  // gray-500
+      futurePath: "rgb(96, 165, 250)",       // blue-400
+      traveledPath: "#00a653",    // red-400
+      currentMarker: "rgb(248, 113, 113)",   // red-400
+      otherMarkers: "rgb(178, 178, 178)",   // blue-400
+      markerStroke: "rgb(245, 245, 245)",    // gray-100
+      labelText: "rgb(245, 245, 245)",      // gray-100
+      labelBg: "rgba(40, 40, 40, 0.8)",      // gray-900 with opacity
+      tooltipBg: "rgba(40, 40, 40, 0.95)",   // gray-900 with opacity
+      tooltipText: "rgb(245, 245, 245)",     // gray-100
+      tooltipAccent: "rgb(251, 191, 36)",    // amber-400
+      controlsBg: "rgba(40, 40, 40, 0.8)",   // gray-900 with opacity
+      controlsText: "rgb(245, 245, 245)",    // gray-100
+      controlsButtonBg: "rgba(150, 150, 150, 0.8)", // gray-600 with opacity
+      sliderBg: "rgba(40, 40, 40, 0.8)",    // gray-900 with opacity
+      sliderText: "rgb(245, 245, 245)",      // gray-100
+      sliderButtonBg: "rgba(150, 150, 150, 0.8)"  // gray-600 with opacity
     };
   } else {
     return {
-      landColor: "#e5e7eb", // gray-200
-      countryStroke: "#9ca3af", // gray-400
-      futurePath: "#3b82f6", // blue-500
-      traveledPath: "#ef4444", // red-500
-      currentMarker: "#ef4444", // red-500
-      otherMarkers: "#3b82f6", // blue-500
-      markerStroke: "#374151", // gray-700
-      labelText: "#374151", // gray-700
-      labelBg: "rgba(255, 255, 255, 0.9)", // white with opacity
+      landColor: "rgb(220, 220, 220)",       // gray-200
+      countryStroke: "rgb(190, 190, 190)",   // gray-400
+      futurePath: "rgb(59, 130, 246)",       // blue-500
+      traveledPath: "rgb(239, 68, 68)",    // red-500
+      currentMarker: "rgb(239, 68, 68)",     // red-500
+      otherMarkers: "rgb(178, 178, 178)",     // blue-500
+      markerStroke: "rgb(90, 90, 90)",       // gray-700
+      labelText: "rgb(90, 90, 90)",          // gray-700
+      labelBg: "rgba(255, 255, 255, 0.9)",    // white with opacity
       tooltipBg: "rgba(255, 255, 255, 0.95)", // white with opacity
-      tooltipText: "#374151", // gray-700
-      tooltipAccent: "#f59e0b", // amber-500
+      tooltipText: "rgb(90, 90, 90)",        // gray-700
+      tooltipAccent: "rgb(245, 158, 11)",    // amber-500
       controlsBg: "rgba(255, 255, 255, 0.9)", // white with opacity
-      controlsText: "#374151", // gray-700
-      controlsButtonBg: "rgba(243, 244, 246, 0.8)", // gray-100 with opacity
-      sliderBg: "rgba(255, 255, 255, 0.9)", // white with opacity
-      sliderText: "#374151", // gray-700
-      sliderButtonBg: "rgba(243, 244, 246, 0.8)" // gray-100 with opacity
+      controlsText: "rgb(90, 90, 90)",       // gray-700
+      controlsButtonBg: "rgba(245, 245, 245, 0.8)", // gray-100 with opacity
+      sliderBg: "rgba(255, 255, 255, 0.9)",   // white with opacity
+      sliderText: "rgb(90, 90, 90)",        // gray-700
+      sliderButtonBg: "rgba(245, 245, 245, 0.8)"  // gray-100 with opacity
     };
   }
 }
+
 
 // Theme-adaptive year selector with buttons
 viewof selectedYear = {
@@ -139,7 +140,7 @@ viewof selectedYear = {
         cursor: pointer;
         font-size: 16px;
         width: 36px;
-      ">◀</button>
+      "><</button>
       <div style="flex-grow: 1; text-align: center; color: ${colors.sliderText}; font-size: 16px;">
         Year: <span id="year-display">${DEFAULT_YEAR}</span>
       </div>
@@ -153,7 +154,7 @@ viewof selectedYear = {
         cursor: pointer;
         font-size: 16px;
         width: 36px;
-      ">▶</button>
+      ">></button>
     </div>
     <input type="range" id="year-slider" min="${MIN_YEAR}" max="${MAX_YEAR}" step="1" value="${DEFAULT_YEAR}" style="width: 100%; accent-color: ${colors.traveledPath};">
   </div>`;
@@ -734,7 +735,7 @@ I spent a very fun year working in the Applied Digital Behavior Lab at the Unive
 
 :::::
 
----
+\
 
 ## Hobbies and Interests
 
@@ -813,7 +814,7 @@ div.callout-important.callout {
 </style>
 
 
----
+\
 
 
 ## Places I've been
@@ -843,33 +844,34 @@ getThemeColors = () => {
   if (isDark) {
     return {
       visitedColor: "#00a653",
-      notVisitedColor: "#374151", // gray-700 equivalent
-      strokeColor: "#6b7280", // gray-500 equivalent
+      notVisitedColor: "rgb(70, 70, 70)",           // gray-700
+      strokeColor: "rgb(190, 190, 190)",            // gray-500
       strokeHoverColor: "#ffffff",
-      tooltipBg: "rgba(17, 24, 39, 0.95)", // gray-900 with opacity
+      tooltipBg: "rgba(40, 40, 40, 0.95)",           // gray-900
       tooltipText: "#ffffff",
-      legendBg: "rgba(17, 24, 39, 0.8)",
+      legendBg: "rgba(40, 40, 40, 0.8)",             // gray-900
       legendText: "#ffffff",
-      controlsBg: "rgba(17, 24, 39, 0.8)",
-      controlsButtonBg: "rgba(75, 85, 99, 0.8)", // gray-600 with opacity
-      controlsButtonStroke: "#9ca3af" // gray-400
+      controlsBg: "rgba(40, 40, 40, 0.8)",          // gray-900
+      controlsButtonBg: "rgba(150, 150, 150, 0.8)", // gray-600
+      controlsButtonStroke: "rgb(220, 220, 220)"    // gray-400
     };
   } else {
     return {
       visitedColor: "#00a653",
-      notVisitedColor: "#e5e7eb", // gray-200 equivalent
-      strokeColor: "#9ca3af", // gray-400 equivalent
-      strokeHoverColor: "#374151",
+      notVisitedColor: "rgb(220, 220, 220)",         // gray-200
+      strokeColor: "rgb(190, 190, 190)",            // gray-400
+      strokeHoverColor: "rgb(70, 70, 70)",            // gray-700
       tooltipBg: "rgba(255, 255, 255, 0.95)",
-      tooltipText: "#374151",
+      tooltipText: "rgb(70, 70, 70)",                 // gray-700
       legendBg: "rgba(255, 255, 255, 0.9)",
-      legendText: "#374151",
+      legendText: "rgb(70, 70, 70)",                // gray-700
       controlsBg: "rgba(255, 255, 255, 0.9)",
-      controlsButtonBg: "rgba(243, 244, 246, 0.8)", // gray-100 with opacity
-      controlsButtonStroke: "#d1d5db" // gray-300
+      controlsButtonBg: "rgba(245, 245, 245, 0.8)",  // gray-100
+      controlsButtonStroke: "rgb(230, 230, 230)"     // gray-300
     };
   }
 }
+
 
 // Map visualization with theme-adaptive colors
 highlightedCountriesMap = {
@@ -1182,9 +1184,7 @@ highlightedCountriesMap
 
 I have also visited a few micro-states including: Malta, Monaco, San Marino, and the Vatican.
 
-------------------------------------------------------------------------
 
-\
 
 
 :::::::::

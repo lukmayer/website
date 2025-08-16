@@ -1,11 +1,11 @@
 ---
 description: "PhD student researching Computational Cognitive Science and Human-AI collaboration."
 
-image: assets/luke-23-circle_small_traced.png
+image: assets/luke-23_small.jpg 
 about:
   id: about-content
   template: trestles
-  image-shape: round
+  image-shape: rectangle
   image-width: 25em
 
 
@@ -28,6 +28,13 @@ div.quarto-about-trestles .about-contents {
   vertical-align: middle;
   display: inline-block;
 }
+
+
+h2 {
+  font-size: 2.2rem;   /* adjust this value (e.g., 1.8rem–3rem) to taste */
+  line-height: 1.2;   /* optional: keeps it readable */
+}
+
 </style>
 
 
@@ -42,84 +49,41 @@ I'm currently a PhD Student in Cognitive Science at the University of California
 
 In my research, I leverage insights from Cognitive Science to enhance human-AI collaboration. I'm especially interested in applications involving model-based reinforcement learning and Bayesian computational models.
 
----
+\
 
 
-::: {.text-center}
+
+::: 
+<!-- end about -->
+
 
 ::: {.columns}
 
-::: {.column width="25%" .icon-align}
+::: {.column width="20%" .icon-align}
+:::
+
+::: {.column width="20%" .icon-align }
 [{{< bi envelope size=2em >}}](mailto:willuk@vivaldi.net)
 :::
 
-::: {.column width="25%" .icon-align}
+::: {.column width="20%" .icon-align}
 [{{< bi github size=2em >}}](https://github.com/lukmayer)
 :::
 
-::: {.column width="25%" .icon-align}
+::: {.column width="20%" .icon-align}
 [{{< ai google-scholar size=huge >}}](https://scholar.google.com/citations?user=KsH37lMAAAAJ)
 :::
 
-::: {.column width="25%" .icon-align}
+::: {.column width="20%" .icon-align}
 [{{< ai semantic-scholar size=huge >}}](https://www.semanticscholar.org/author/Lukas-William-Mayer/2281033339)
 :::
 
 :::
 <!-- end columns -->
 
-:::
-<!-- end text center -->
 
-
-::: 
-<!-- end column-page -->
 
 
 ::: 
-<!-- End about -->
-
-
-<style>
-
-body.nav-fixed.fullcontent {
-  background: linear-gradient(90deg, 
-    #f3f4f6 0%, 
-    #e5e7eb 10%, 
-    #cbd5e1 20%, 
-    #d1d5db 30%, 
-    #e5e7eb 40%, 
-    #f8fafc 50%, 
-    #e5e7eb 60%, 
-    #d1d5db 70%, 
-    #cbd5e1 80%, 
-    #e5e7eb 90%, 
-    #f3f4f6 100%);
-  background-size: 200% 100%;
-  animation: seamlessSheen 30s linear infinite;
-}
-
-body.nav-fixed.fullcontent.quarto-dark {
-  background: linear-gradient(90deg, 
-    #1a1d23 0%, 
-    #242831 10%, 
-    #2d323c 20%, 
-    #3a4049 30%, 
-    #4a5058 40%, 
-    #3a4049 50%, 
-    #2d323c 60%, 
-    #242831 70%, 
-    #1a1d23 80%, 
-    #1e2126 90%, 
-    #1a1d23 100%);
-  background-size: 200% 100%;
-  animation: seamlessSheen 30s linear infinite;
-}
-
-@keyframes seamlessSheen {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 200% 0%; }
-}
-
-</style>
+<!-- End column-page -->
 

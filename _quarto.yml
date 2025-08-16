@@ -43,11 +43,12 @@ website:
         text: "About"
       - href: now/index.qmd
         text: "Now"
-
-
-    right:
       - text: "Login"
         href: https://lukmayer.github.io/login_portal/
+
+
+
+      
 
 blog:
   title: "Luke's Blog"
@@ -58,9 +59,10 @@ format:
     respect-user-color-scheme: true
     code-line-numbers: true
     smooth-scroll: true
-    theme:  
-      dark: [morph, theme_morph_dark.scss]
-      light: [morph, theme_morph_light.scss]
+    theme:
+      dark: styles/brite_dark.scss
+      light: styles/brite_light.scss
+
     css: styles.css
     toc: true
     footnotes-hover: true
@@ -72,7 +74,7 @@ format:
     toc-title: "Sections:"
     toc-depth: 4
     toc-expand: 4
-    title-block-style: default # TODO: review
+    title-block-style: default 
     title-block-banner: true 
     title-block-categories: true
     code-fold: show
@@ -85,7 +87,7 @@ format:
     lightbox: true
 
 
-
+# TODO: font, font-size
 
   
   

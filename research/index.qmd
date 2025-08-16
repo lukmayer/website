@@ -6,8 +6,8 @@ listing:
   template: publication.ejs
   contents:
     - publications.yml
-  sort-ui: true
-  filter-ui: true
+  sort-ui: false
+  filter-ui: false
   page-size: 100
   field-display-names:
     title: "Title"
@@ -104,7 +104,7 @@ format:
 .py-1 {
     padding-top: .25rem !important;
     padding-bottom: .25rem !important;
-    scale: 2;
+    scale: 0;
 }
 
 div.callout-important.callout {
@@ -142,23 +142,23 @@ div.callout-important.callout {
 
 ::: text-center
 
----
+\
 
 ::: {.columns}
 
 ::: {.column width=50%}
-{{< ai google-scholar >}} [More on Google Scholar](https://scholar.google.com/citations?user=KsH37lMAAAAJ)
+{{< ai google-scholar size=huge >}} [More on Google Scholar](https://scholar.google.com/citations?user=KsH37lMAAAAJ)
 :::
 
 ::: {.column width=50%}
-{{< ai semantic-scholar >}} [More on Semantic Scholar](https://www.semanticscholar.org/author/Lukas-William-Mayer/2281033339)
+{{< ai semantic-scholar size=huge >}} [More on Semantic Scholar](https://www.semanticscholar.org/author/Lukas-William-Mayer/2281033339)
 :::
 
 ::: 
 <!-- end columns -->
 
 
----
+\
 
 :::
 <!-- end text-center -->
@@ -177,7 +177,7 @@ div.callout-important.callout {
 :::::
 
 
----
+\
 
 
 ## In Progress
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
----
+\
 
 
 # Research Interests
