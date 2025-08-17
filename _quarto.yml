@@ -47,9 +47,6 @@ website:
         href: https://lukmayer.github.io/login_portal/
 
 
-
-      
-
 blog:
   title: "Luke's Blog"
 
@@ -87,7 +84,17 @@ format:
     lightbox: true
 
 
-# TODO: font, font-size
+# TODO: dark mode tabset still has black font, pagination dark mode black font
+# TODO: about page dark mode countries need to be darker
+# TODO: dark mode cv has wrong background color
+# TODO: active buttons should never stay pressed down
+# TODO: some images (home, research) need to be in flexbox
+# TODO: add emphasis to headers via bold and underline
+# TODO: --- as dashed line
+# TODO: dark mode active blog post hover is wrong color
+# TODO: make callouts slightly lighter/darker than body
+# TODO: add shading to title block
+
 
   
   
