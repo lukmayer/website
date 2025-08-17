@@ -6,6 +6,12 @@ format:
 back-to-top-navigation: false
 ---
 
+<style>
+.quarto-title-banner {
+    text-align: center;
+}
+</style>
+
 
 ::: {.text-center}
 <h2>Sorry, it seems the link you clicked was broken :(</h2>
