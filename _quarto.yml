@@ -28,8 +28,11 @@ website:
 
   open-graph: true
   site-url: "https://lukmayer.github.io"
-  title: "lukmayer.github.io"
+
+
   navbar:
+    title: "lukmayer.github.io"
+    logo: "assets/favicons/android-chrome-192x192.png"
     left:
       - href: index.qmd
         text: "Home"
@@ -84,18 +87,8 @@ format:
     lightbox: true
 
 
-# TODO: dark mode tabset still has black font, pagination dark mode black font
-# TODO: about page dark mode countries need to be darker
-# TODO: dark mode cv has wrong background color
-# TODO: active buttons should never stay pressed down
-# TODO: some images (home, research) need to be in flexbox
-# TODO: add emphasis to headers via bold and underline
-# TODO: --- as dashed line
-# TODO: dark mode active blog post hover is wrong color
-# TODO: make callouts slightly lighter/darker than body
-# TODO: add shading to title block
+# TODO: update research text
 
 
-  
-  
+
   

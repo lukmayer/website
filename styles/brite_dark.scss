@@ -33,11 +33,11 @@
     transition: all .3s;
     transform: translate(-3px, -3px);
 
-    &:hover,
-    &:focus {
+    &:hover {
       box-shadow: none;
       transform: translate(0, 0);
-      text-decoration: none;      // optional
+      font-weight: 700;           // bold text
+      text-decoration: underline;     // optional
     }
   }
 
@@ -54,6 +54,13 @@
     @include btn-shadow();      // the 3 px drop shadow【1】【2】
     transform: translate(-3px, -3px);
 
+    &:hover {
+      box-shadow: none;
+      transform: translate(0, 0);
+      font-weight: 700;           // bold text
+      text-decoration: underline;     // optional
+    }
+
     // 3. extra visual cue
     font-weight: 700;           // bold text
     text-decoration: underline; // underline text
@@ -69,17 +76,21 @@
   display: inline-block;
   margin: 3px 3px 0 3px;  
   text-decoration: none;
-  color: inherit;
+  color: $white !important;
+  border-radius: 0px !important; 
 }
 
 .quarto-grid-item {
   @extend .btn;
-  @extend .btn-secondary;      
   display: inline-block;       
   width: 100%;                 
   text-align: left;
   border-radius: 0px;             
   @include brite-button-look;
+}
+
+.card-body {
+  background-color: $emph-bg; 
 }
 
 
@@ -278,6 +289,7 @@ figure > img,
 /* -------- Callout container ---------------------------------*/
 .callout {
   @include brite-lift;      /* 3-px lift, crisp shadow               */
+  background-color: $emph-bg;
   border-radius: 0px;    /* match navbar & buttons                */
   overflow: visible;        /* let the shadow show                   */
   margin: 1rem 0;           /* gap between stacked callouts          */
@@ -308,6 +320,7 @@ figure > img,
 .callout-warning   > .callout-header,
 .callout-caution   > .callout-header {
   border-left: none;
+  background-color: $emph-bg;
 }
 
 /* -------- Body ----------------------------------------------*/
@@ -320,6 +333,10 @@ figure > img,
   transform-origin: top left;
 }
 
+.callout-important{
+    font-size: 1.2rem;
+    background-color: $emph-bg;
+}
 
 /*--------------------------------------------------------------
   11. Icon-only social / contact links  →  Brite buttons
@@ -462,29 +479,30 @@ figure > img,
 // Pagination → adopt the .btn 3 px lift / shadow animation
 // -----------------------------------------------------------------------------
 #main-listing-pagination,
-.listing-pagination {      // limit the scope to your component if you like
+.listing-pagination {
   .pagination {
+    --bs-pagination-disabled-bg: transparent;
     .page-link,
-    .page {                // keeps compatibility with <a class="page page-link">
-      margin: 3px 0 0 3px;               // same offset used on .btn
-      border: 1px solid $black;          // Bootswatch uses $black for the rim
-      @include btn-shadow();             // Bootswatch shadow mixin
-      transition: all .3s;               // smooth “drop” animation
-      transform: translate(-3px, -3px);  // initial “lift”
+    .page {
+      margin: 3px 0 0 3px;
+      border: 1px solid $black;
+      @include btn-shadow();
+      transition: all .3s;
+      transform: translate(-3px, -3px);
+      color: $white;
+      border-radius: 0px;
 
       // Hover / focus → drop flat
-      &:hover,
-      &:focus {
+      &:hover {
         border-color: $black;
         box-shadow: none;
         transform: translate(0, 0);
-        text-decoration: none;           // optional: remove underline
+        text-decoration: underline;
       }
 
       // Disabled state – keep flat and greyed out
       &.disabled,
       .page-item.disabled & {
-        color: $gray-600;
         border-color: $black;
         box-shadow: none;
         transform: translate(0, 0);
@@ -493,24 +511,27 @@ figure > img,
       }
     }
 
+    .page-item.disabled {
+      background-color: transparent !important;
+    }
+
     // Active (current) page – looks pressed
     .page-item.active .page-link,
     .page-item.active .page {
       color: $white;
       background-color: $primary;
       border-color: $black;
-      box-shadow: none;
-      transform: translate(0, 0);
+      text-decoration: underline;
     }
   }
 }
+
 // -----------------------------------------------------------------------------
 // Quarto / Bootstrap tabsets → replicate button lift-and-drop
 // -----------------------------------------------------------------------------
 
-// 1️⃣  Remove the rounded frame that Bootswatch puts on the tab *row*
 .panel-tabset .nav-tabs {
-  border: none !important;          // kill the 2 px frame   【1】
+  border: none !important;          // kill the 2 px frame   
   border-radius: 0 !important;
   padding: 0;                       // no extra padding
   background: transparent;
@@ -521,6 +542,7 @@ figure > img,
        (extra selector depth so it outranks Bootswatch)          */
 .panel-tabset .nav-tabs > .nav-item > .nav-link {
   // lifted state -------------------------------------------------------------
+  color: $white;                    // black font for inactive tabs (light theme)
   margin: 3px 3px 0 0;              // room for shadow at top & right
   border: 1px solid $black;
   border-radius: 0px;
@@ -537,28 +559,34 @@ figure > img,
   }
 }
 
+.tab-content {
+  @include brite-lift();
+  background: $emph-bg;             // base fill (light or dark)
+}
+
 /* pressed / current tab ---------------------------------------------------- */
 .panel-tabset .nav-tabs > .nav-item > .nav-link.active {
-  color: $white;
+  color: $white;                    // white font for active tab
   background: $primary;
-  box-shadow: none;
-  transform: translate(0, 0);
+  // transform: translate(0, 0);
 }
 
 /* disabled tab ------------------------------------------------------------- */
 .panel-tabset .nav-tabs > .nav-item > .nav-link.disabled {
   color: $gray-600;
   box-shadow: none;
-  transform: translate(0, 0);
+  // transform: translate(0, 0);
   pointer-events: none;
   opacity: .65;
 }
 
 
+
+///////////// NAVBAR ////////////////
+
 .navbar .nav-link {
   color: #fff !important;
 }
-
 
 /* Apply the Brite button look to the theme toggle in the navbar */
 .navbar .quarto-color-scheme-toggle {
@@ -568,10 +596,10 @@ figure > img,
   box-shadow: 3px 3px 0 0 #000;
   transition: all 0.3s;
   transform: translate(-3px, -3px);
+  @include brite-button-look; 
 }
 
-.navbar .quarto-color-scheme-toggle:hover,
-.navbar .quarto-color-scheme-toggle:focus {
+.navbar .quarto-color-scheme-toggle:hover {
   box-shadow: none;
   transform: translate(0, 0);
 }
@@ -589,7 +617,7 @@ figure > img,
 
 .navbar .quarto-color-scheme-toggle svg,
 .navbar .quarto-color-scheme-toggle i {
-  margin-top: -3px;   /* tweak as needed */
+  margin-top: px;   /* tweak as needed */
 }
 
 .aa-DetachedOverlay {
@@ -623,6 +651,133 @@ figure > img,
   box-shadow: 3px 3px 0 0 #000;
   transition: all .3s;
   transform: translate(-3px, -3px);
-  margin: 10px;          /* margin needs units */
+  margin: 10px;
+  @include brite-button-look; 
+
+  /* Remove white box on focus/active states */
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none !important;
+    box-shadow: 3px 3px 0 0 #000 !important; /* Keep your custom shadow */
+    border: 2px solid #000 !important;       /* Keep your custom border */
+  }
+}
+
+img:not(.btn):not(.navbar-logo),
+figure > img:not(.navbar-logo),
+.card-img,
+.img-thumbnail {
+  @include brite-img-shadow;
+}
+
+.quarto-title-banner {
+    padding: 20px; 
+    border-radius: 0px;
+    margin-top: 0px; 
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    background: rgb(90, 90, 90) !important;
+    @include brite-lift();
+}
+
+/*--------------------------------------------------------------
+  DataTables styling for dark mode
+--------------------------------------------------------------*/
+.dataTables_wrapper,
+.dataTable,
+.dataTables_wrapper .dataTable,
+.dataTables_info,
+.dataTables_paginate,
+.dataTables_filter {
+  color: $white !important;
+
+  // Ensure all child elements inherit the white color
+  * {
+    color: inherit;
+  }
+}
+
+// Specifically target table cells and headers
+.dataTables_wrapper table.dataTable thead th,
+.dataTables_wrapper table.dataTable tbody td {
+  color: $white !important;
+}
+
+/*--------------------------------------------------------------
+  Code styling for dark mode
+--------------------------------------------------------------*/
+
+// Inline code
+code {
+  color: $white !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+// Code blocks
+pre {
+  color: $white !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  code {
+    color: inherit !important;
+    background-color: transparent !important;
+    border: none;
+  }
+}
+
+
+.sourceCode {
+  color: $white !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 0px;
+  overflow-x: auto; // Enable horizontal scrolling
+  display: flex; // Use flexbox to handle line numbers + code
+}
+
+.sourceCode pre {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  margin: 0;
+  flex: 1; // Allow the pre to expand
+}
+
+// Target the actual code content, not the line numbers
+.sourceCode code {
+  display: block;
+  width: max-content; // Expand to content width
+  min-width: 100%; // Maintain minimum width
+}
+
+// Ensure line numbers stay visible and positioned correctly
+.sourceCode .line-numbers {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  flex-shrink: 0; // Prevent line numbers from shrinking
+  width: auto; // Let line numbers maintain their natural width
+}
+
+
+// Specific syntax highlighting classes (adjust colors as needed)
+.sourceCode .co { color: #75715e !important; } // Comments
+.sourceCode .kw { color: #66d9ef !important; } // Keywords
+.sourceCode .st { color: #a6e22e !important; } // Strings
+.sourceCode .dv { color: #ae81ff !important; } // Numbers
+.sourceCode .fu { color: #a6e22e !important; } // Functions
+
+// R console output
+.cell-output-stdout,
+.cell-output pre,
+.output pre {
+  color: $white !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+// Code cells in Quarto
+.code-with-filename .code-with-filename-file,
+.code-annotation-gutter-bg {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: $white !important;
 }
 

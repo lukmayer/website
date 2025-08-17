@@ -45,7 +45,9 @@
         <div class="callout-body-container" id="pub-<%= index %>" style="display: none; border: none;">
           <% if (item.image) { %>
             <div style="text-align: center; margin: 20px 0;">
-              <img src="<%- item.image %>" alt="Image for <%- item.title %>" style="max-width: 400px; height: auto; border-radius: 0px; border: 1px solid #333;"/>
+              <img src="<%- item.image %>" 
+                  alt="Image for <%- item.title %>" 
+                  class="responsive-pub-image"/>
             </div>
           <% } %>
 

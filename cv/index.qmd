@@ -45,7 +45,7 @@ body.quarto-dark .dark-content::after {
   right: calc(10% + 0px); 
   width: 22px; 
   height: 800px;
-  background-color: var(--bs-body-bg, #1e2126); 
+  background-color: rgb(40,40,40); 
   pointer-events: none;
   z-index: 1;
 }

@@ -108,16 +108,16 @@ $prefix: "bs" !default;
     margin-left: 0;
   }
 
-  > .btn.active {
-    z-index: 0;
-  }
+  // > .btn.active {
+  //   z-index: 0;
+  // }
 }
 
 .btn-group,
 .btn-group-vertical {
   .btn {
     &:hover,
-    &:active,
+    // &:active,
     &:focus {
       z-index: 0;
     }
@@ -141,15 +141,15 @@ $prefix: "bs" !default;
   border-color: $black;
 }
 
-.btn-check:checked + .btn,
-:not(.btn-check) + .btn:active,
-.btn:first-child:active,
-.btn.active,
-.btn.show {
-  border-color: $black;
-  box-shadow: none;
-  transform: translate(0, 0);
-}
+// .btn-check:checked + .btn,
+// :not(.btn-check) + .btn:active,
+// .btn:first-child:active,
+// .btn.active,
+// .btn.show {
+//   border-color: $black;
+//   box-shadow: none;
+//   transform: translate(0, 0);
+// }
 
 [data-bs-theme="dark"] .btn-link,
 [data-bs-theme="dark"] .btn-link:hover {

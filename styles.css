@@ -17,15 +17,7 @@ body * {
   opacity: 0 !important;
 }
 
-.quarto-title-banner {
-    padding: 20px; 
-    border-radius: 0px;
-    margin-top: 0px; 
-    margin-right: 20px;
-    margin-bottom: 0px;
-    margin-left: 20px;
-    background: rgb(90, 90, 90) !important;
-}
+
 
 #quarto-header {
     padding: 20px; 
@@ -146,11 +138,161 @@ nav.sidebar.sidebar-navigation:not(.rollup) {
 }
 
 .quarto-color-scheme-toggle:not(.alternate) .bi::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="%23ffffff" class="bi bi-moon-stars-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/></svg>') !important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="%23ffffff" class="bi bi-moon-stars-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/></svg>') !important;
+  display: inline-block;
+  width: 1.2rem;        /* ← change these two numbers to taste        */
+  height: 1.2rem;
+  background-size: 100% 100%;   /* stretch image to the new box size   */
 }
+
 
 body.quarto-dark .quarto-color-scheme-toggle > .bi::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="%23ffffff" class="bi bi-sun-fill" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707z"/></svg>') !important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="%23ffffff" class="bi bi-sun-fill" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707z"/></svg>') !important;
+  display: inline-block;
+  width: 1.2rem;        /* ← change these two numbers to taste        */
+  height: 1.2rem;
+  background-size: 100% 100%;   /* stretch image to the new box size   */
+}
+
+.quarto-color-scheme-toggle:hover {
+  box-shadow: none !important;
+  transform: translate(0px, 0px) !important;
+}
+
+.navbar-brand {
+  /* Reset all button-like properties */
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: none !important;
+  transform: none !important;
+  padding: 0 !important;
+
+  /* Remove background and outline - these create the "box" */
+  background-color: transparent !important;
+  background: none !important;
+  outline: none !important;
+
+  margin-right: 1rem !important; 
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:active {
+  box-shadow: none !important;
+  transform: none !important;
+  border: none !important;
+  background-color: transparent !important;
+  background: none !important;
+  outline: none !important;
+}
+
+.navbar-logo,
+.navbar-logo::after {
+  border: none !important;            
+  box-shadow: none !important;  /* in case future mixins add one  */
+  content: none !important;     /* hide the ::after pseudo-element*/
+  background: black !important;
+  padding-left: 2px;
 }
 
 
+.navbar-logo {
+  /* Size the logo */
+  width: 3.4rem !important;           /* Set fixed width */
+  height: 3.4rem !important;          /* Set fixed height */
+  max-width: none !important;       /* Override any max-width constraints */
+  max-height: none !important;      /* Override any max-height constraints */
+
+  /* Maintain aspect ratio and quality */
+  object-fit: contain;              /* Keeps logo proportions */
+  object-position: center;          /* Centers the image */
+}
+
+/* Cross-browser dark scrollbars */
+* {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2b2b2b;
+}
+
+/* Webkit browsers */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2b2b2b;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 6px;
+  border: 2px solid #2b2b2b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+::-webkit-scrollbar-corner {
+  background: #2b2b2b;
+}
+
+
+
+.callout-title-container strong em {
+    font-size: 1.5rem;
+}
+
+/* change the drop-down arrow */
+.py-1 {
+    padding-top: .25rem !important;
+    padding-bottom: .25rem !important;
+    scale: 2;
+}
+
+div.callout-important.callout {
+    border-left-color:rgba(0, 0, 0, 0.3);
+}
+
+.callout-title-container {
+  font-size: 1.5rem;  /* Adjust this value to your preference */
+}
+
+
+.about-image.rectangle {
+    height: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .about-image.rectangle {
+        width: 90vw;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-image.rectangle {
+        width: 20em;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .about-image.rectangle {
+        width: 25em;
+    }
+}
+
+
+hr {
+  border: none;
+  border-top: 2px dashed currentColor;
+  height: 0;
+  margin: 1rem 0;
+}

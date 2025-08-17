@@ -76,7 +76,7 @@ getTimelineThemeColors = () => {
 
   if (isDark) {
     return {
-      landColor: "rgb(70, 70, 70)",           // gray-700
+      landColor: "rgb(40, 40, 40)",           // gray-700
       countryStroke: "rgb(190, 190, 190)",  // gray-500
       futurePath: "rgb(96, 165, 250)",       // blue-400
       traveledPath: "#00a653",    // red-400
@@ -745,22 +745,21 @@ I spent a very fun year working in the Applied Digital Behavior Lab at the Unive
 ### 1. Exercise
 
 I've always been pretty active, but when I was younger I somehow never really stuck with any particular sport for too long.
-To give you an idea, I've had a phase for: archery, badminton, Crossfit, golf, parkour, powerlifting, and skateboarding.
+To give you an idea, I've had a phase for: archery, badminton, CrossFit, golf, parkour, powerlifting, and skateboarding.
 I'm still interested in strength training, which I have been doing in some form for 10+ years, and badminton.
-I have limited means to engage with these in an organized format at the moment, so to fill the hole in my heart, I've been investing some time to figure out the perfect home gym setup that still fits inside my bedroom.
-I think I've been pretty successful with this, so maybe I'll show it off in a post sometime.
+In my dream life I'd pick CrossFit and Badminton back up again, learn Judo and do maybe just a little Olympic Lifting! Wish me luck on ever having that much free time :)
 :::
 
 ::: {.callout-important collapse="false" icon="false"}
 ### 2. Technology
 
 I like GNU/Linux, and use it as my everyday operating system.
-At the moment, my laptop runs Debian with KDE.
+At the moment, my laptop runs Fedora Kinoite.
 I've also played around with operating systems on mobile devices, currently using GrapheneOS.
 I enjoy coding, and wish I could do it more!
 My favorite languages at the moment are Julia, R, and Python.
-As you can see, I've also taken an interest in web development.
-While [Quarto](https://www.quarto.org) admittedly makes this website pretty easy to create, I also use web development in my research to create experiments that run in a browser.
+As I hope you can see, I've also taken an interest in some basic web development.
+While [Quarto](https://www.quarto.org) admittedly makes this website pretty easy to create, I also use web development skills in my research to create experiments that run in a browser.
 I'm super interested in picking up [creative coding](https://openprocessing.org/discover/#/trending) and I am hoping to eventually generate some art that I can post on here!
 :)
 :::
@@ -771,10 +770,7 @@ I'm super interested in picking up [creative coding](https://openprocessing.org/
 English used to be my first language as I only started learning German after relocating to [the Länd](https://www.thelaend.de/en/kampagne/) at age six.
 Fast-forward to now, English has become my second language.
 Maybe because of this strange experience, I've had a bit of an interest in language-learning.
-I have a habit of doing language lessons for fun on [Duolingo](https://www.duolingo.com/profile/luwmayer), where I have a streak of over 2000 days.
-I'm mostly learning French and Dutch at the moment.
-My Dutch is definitely better than my French, probably just by virtue of being so similar to German, but both are good enough to follow a YouTube video.
-I hope to eventually move away from Duolingo and bring my skills to the next level, but don't feel I have the bandwidth for it just now.
+I've been mostly focussing on French. I was known for having a modest streak on Duolingo (2300+ days), but recently decided to start experimenting with other resources to up my game ;)  
 If you know a good free resource, [be sure to let me know](mailto:willuk@vivaldi.net)!
 :::
 
@@ -782,36 +778,10 @@ If you know a good free resource, [be sure to let me know](mailto:willuk@vivaldi
 ### 4. Gaming
 
 I was quite the avid gamer as a teen, spending countless hours on the likes of Team Fortress 2, Minecraft and Guild Wars 2.
-I don't actively play much these days, but I still like to keep up with the industry.
-Perhaps I'm just waiting for the next big thing to come along.
-I also really enjoy going to board game cafés and completing escape rooms with friends!
+While I'm much more casual these days, I've been picking up Guild Wars again ever since getting a Steam Deck!
+I also really enjoy going to board game cafés and completing escape rooms with friends.
 :::
 
-
-<style>
-.callout-title-container {
-    font-size: 1.2rem;
-}
-
-.callout-title-container strong em {
-    font-size: 1.5rem;
-}
-
-
-
-/* change the drop-down arrow */
-.py-1 {
-    padding-top: .25rem !important;
-    padding-bottom: .25rem !important;
-    scale: 2;
-}
-
-div.callout-important.callout {
-    border-left-color:rgba(0, 0, 0, 0.3);
-}
-
-
-</style>
 
 
 \
@@ -844,7 +814,7 @@ getThemeColors = () => {
   if (isDark) {
     return {
       visitedColor: "#00a653",
-      notVisitedColor: "rgb(70, 70, 70)",           // gray-700
+      notVisitedColor: "rgb(40, 40, 40)",           // gray-700
       strokeColor: "rgb(190, 190, 190)",            // gray-500
       strokeHoverColor: "#ffffff",
       tooltipBg: "rgba(40, 40, 40, 0.95)",           // gray-900

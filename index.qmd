@@ -33,6 +33,7 @@ div.quarto-about-trestles .about-contents {
 h2 {
   font-size: 2.2rem;   /* adjust this value (e.g., 1.8rem–3rem) to taste */
   line-height: 1.2;   /* optional: keeps it readable */
+  text-decoration: underline
 }
 
 </style>
