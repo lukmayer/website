@@ -86,6 +86,11 @@ format:
     fig-responsive: true
     lightbox: true
 
+# TODO: active mobile hamburger menu moves down instead of button being "pressed"
+# TODO: Make navbar buttons darker on hover 
+# TODO: dark cv needs emph-bg color as background
+# TODO: search active item should have white text color
+# TODO: my blog RSS is broken?
 
 # TODO: update research text
 
