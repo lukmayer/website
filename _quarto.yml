@@ -5,6 +5,7 @@ project:
     - "*.qmd"
 
 website:
+  title: "lukmayer.github.io"
   twitter-card: true
   search: 
     location: navbar
@@ -31,7 +32,6 @@ website:
 
 
   navbar:
-    title: "lukmayer.github.io"
     logo: "assets/favicons/android-chrome-192x192.png"
     left:
       - href: index.qmd
@@ -86,11 +86,6 @@ format:
     fig-responsive: true
     lightbox: true
 
-# TODO: active mobile hamburger menu moves down instead of button being "pressed"
-# TODO: Make navbar buttons darker on hover 
-# TODO: dark cv needs emph-bg color as background
-# TODO: search active item should have white text color
-# TODO: my blog RSS is broken?
 
 # TODO: update research text
 

@@ -35,6 +35,7 @@
     transform: translate(-3px, -3px);
 
     &:hover {
+      background-color: darken($primary, 5%);
       box-shadow: none;
       transform: translate(0, 0);
       font-weight: 700;           // bold text
@@ -55,6 +56,7 @@
     transform: translate(-3px, -3px);
 
     &:hover {
+      background-color: darken($primary, 10%);
       box-shadow: none;
       transform: translate(0, 0);
       font-weight: 700;           // bold text
@@ -599,6 +601,7 @@ figure > img,
 }
 
 .navbar .quarto-color-scheme-toggle:hover {
+  background-color: darken($primary, 5%);
   box-shadow: none;
   transform: translate(0px, 0px);
 }
@@ -661,15 +664,27 @@ figure > img,
   margin: 10px;
   @include brite-button-look; 
 
-  /* Remove white box on focus/active states */
-  &:focus,
-  &:active,
-  &:focus-visible {
+  /* Ensure focus/active states maintain unpressed appearance, BUT allow hover to override */
+  &:focus:not(:hover),
+  &:active:not(:hover),
+  &:focus-visible:not(:hover) {
     outline: none !important;
-    box-shadow: 3px 3px 0 0 #000 !important; /* Keep your custom shadow */
-    border: 2px solid #000 !important;       /* Keep your custom border */
+    box-shadow: 3px 3px 0 0 #000 !important;
+    transform: translate(-3px, -3px) !important;
+    border: 2px solid #000 !important;
+  }
+
+  /* Ensure hover works even when focused */
+  &:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    transform: translate(0, 0) !important;
+    border: 2px solid #000 !important;
   }
 }
+
+
+
 
 img:not(.btn):not(.navbar-logo),
 figure > img:not(.navbar-logo),
@@ -788,3 +803,6 @@ pre {
   color: $black !important;
 }
 
+h1, h2, h3, h4 {
+  text-shadow: 3px 3px 0 white;
+}
