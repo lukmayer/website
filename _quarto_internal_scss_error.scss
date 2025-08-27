@@ -1106,9 +1106,10 @@ $btn-code-copy-color-active: #61afef !default;
 // quarto-scss-analysis-annotation { "origin": "Defaults from Quarto's SCSS" }
 
 $code-copy-selector: "" !default;
-$code-white-space: pre-wrap !default;
+$code-white-space: pre !default;
 $tbl-cap-location: top !default;
-$code-block-border-left: false !default;
+$code-block-bg: false !default;
+$code-block-border-left: true !default;
 $sidebar-bg: if(variable-exists(body-bg), $body-bg, #fff) !default;
 // Default the theme name
 $theme-name: if(variable-exists(theme), $theme, "");
