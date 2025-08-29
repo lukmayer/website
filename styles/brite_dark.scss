@@ -1,17 +1,14 @@
 /*-- scss:defaults --*/
 @import "brite_dark/variables";
-@import url('https://api.fontshare.com/v2/css?f[]=array@400,700&display=swap');
-
+@import url("https://api.fontshare.com/v2/css?f[]=array@400,700&display=swap");
 
 /*-- scss:rules --*/
 @import "brite_dark/bootswatch";
 
-
-
 @mixin brite-button-look {
-  border: 2px solid $black;     
-  @include btn-shadow();        
-  transition: all .3s;
+  border: 2px solid $black;
+  @include btn-shadow();
+  transition: all 0.3s;
   transform: translate(-3px, -3px);
 
   &:hover {
@@ -26,22 +23,21 @@
 .navbar {
   // Regular links
   .nav-link {
-    margin: 3px 0 0 3px;          // identical spacing to .btn
-    border: 2px solid $black;     // keep the slab-serif look
+    margin: 3px 0 0 3px; // identical spacing to .btn
+    border: 2px solid $black; // keep the slab-serif look
     border-radius: 0px;
-    @include btn-shadow();        // Bootswatch mixin
-    transition: all .3s;
+    @include btn-shadow(); // Bootswatch mixin
+    transition: all 0.3s;
     transform: translate(-3px, -3px);
 
     &:hover {
       background-color: darken($primary, 5%);
       box-shadow: none;
       transform: translate(0, 0);
-      font-weight: 700;           // bold text
-      text-decoration: underline;     // optional
+      font-weight: 700; // bold text
+      text-decoration: underline; // optional
     }
   }
-
 
   // Raised & highlighted current-page tab
   // ─────────────────────────────────────
@@ -52,66 +48,64 @@
     background-color: $primary;
 
     // 2. make it look like every other raised button
-    @include btn-shadow();      // the 3 px drop shadow【1】【2】
+    @include btn-shadow(); // the 3 px drop shadow【1】【2】
     transform: translate(-3px, -3px);
 
     &:hover {
       background-color: darken($primary, 10%);
       box-shadow: none;
       transform: translate(0, 0);
-      font-weight: 700;           // bold text
-      text-decoration: underline;     // optional
+      font-weight: 700; // bold text
+      text-decoration: underline; // optional
     }
 
     // 3. extra visual cue
-    font-weight: 700;           // bold text
+    font-weight: 700; // bold text
     text-decoration: underline; // underline text
   }
 }
 
-
 /*  Category chips in a listing page -------------------------------- */
-.category,             
-.listing-category {   
+.category,
+.listing-category {
   @include brite-button-look;
-  padding: .25rem .75rem;
+  padding: 0.25rem 0.75rem;
   display: inline-block;
-  margin: 3px 3px 0 3px;  
+  margin: 3px 3px 0 3px;
   text-decoration: none;
   color: $white !important;
-  border-radius: 0px !important; 
+  border-radius: 0px !important;
 }
 
 .quarto-grid-item {
   @extend .btn;
-  display: inline-block;       
-  width: 100%;                 
+  display: inline-block;
+  width: 100%;
   text-align: left;
-  border-radius: 0px;             
+  border-radius: 0px;
   @include brite-button-look;
 }
 
 .card-body {
-  background-color: $emph-bg; 
+  background-color: $emph-bg;
 }
-
 
 /*--------------------------------------------------------------
   5. Raised navbar with SOLID black shadow (no hover)
 --------------------------------------------------------------*/
 
 /* Exact look the buttons use --------------------------------*/
-@mixin brite-static-surface($lift: 3px, $radius: .5rem, $color: $primary) {
-  background-color: $color;              // flat colour (no gradient)
-  border: 2px solid $black;              // same border as buttons
-  box-shadow: 0 $lift $lift 0 $black;        // solid, non-blurred shadow
-  transform: translate(-$lift, -$lift);  // “lift” visual
+@mixin brite-static-surface($lift: 3px, $radius: 0.5rem, $color: $primary) {
+  background-color: $color; // flat colour (no gradient)
+  border: 2px solid $black; // same border as buttons
+  box-shadow: 0 $lift $lift 0 $black; // solid, non-blurred shadow
+  transform: translate(-$lift, -$lift); // “lift” visual
   border-radius: 0px;
 }
 
 /* Apply it to the navbar ------------------------------------*/
 .navbar {
-  @include brite-static-surface();   // default = 3 px lift, primary colour
+  @include brite-static-surface(); // default = 3 px lift, primary colour
 
   /* Keep it static */
   transition: none;
@@ -124,19 +118,18 @@
   padding-bottom: 0.5rem;
 }
 
-
 /*--------------------------------------------------------------
   6. Make the “search” trigger look like a Brite button
 --------------------------------------------------------------*/
 .aa-DetachedSearchButton {
   // 1. Inherit everything from .btn.btn-primary ---------------------------
   @extend .btn, .btn-primary;
-  @include brite-button-look;          // translate + shadow animation
+  @include brite-button-look; // translate + shadow animation
 
   // 2. Force the canonical navbar size & centre the content ---------------
-  width: 2.8rem !important;            // square button
+  width: 2.8rem !important; // square button
   height: 2.8rem !important;
-  padding: 0 !important;              // remove Algolia paddings
+  padding: 0 !important; // remove Algolia paddings
 
   display: flex !important;
   align-items: center !important;
@@ -145,7 +138,7 @@
   // 3. Override Algolia’s focus outline and replace with our own ----------
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 .25rem rgba($primary, .4);
+    box-shadow: 0 0 0 0.25rem rgba($primary, 0.4);
   }
 
   // 4. Ensure icons / placeholder inherit button colour -------------------
@@ -161,14 +154,13 @@
 --------------------------------------------------------------*/
 .navbar .btn,
 .navbar .nav-link.btn,
-.aa-DetachedSearchButton {             /* now included in the same rule-set */
-  font-size: .925rem !important;
+.aa-DetachedSearchButton {
+  /* now included in the same rule-set */
+  font-size: 0.925rem !important;
   line-height: 1.25 !important;
-  min-height: 0 !important;           /* kills the 44 px Algolia rule      */
+  min-height: 0 !important; /* kills the 44 px Algolia rule      */
   border-radius: 0;
 }
-
-
 
 /*--------------------------------------------------------------
   7 (revised). Global “brite-lift” shadow for images
@@ -184,24 +176,24 @@
 --------------------------------------------------------------*/
 @mixin brite-img-shadow($lift: 3px) {
   position: relative;
-  border: 2px solid $black;        /* ‘real’ border (top & left show) */
+  border: 2px solid $black; /* ‘real’ border (top & left show) */
   box-shadow: $lift $lift 0 0 $black !important;
 
-  &::after {                       /* draw the drop shadow */
-    content: '';
+  &::after {
+    /* draw the drop shadow */
+    content: "";
     position: absolute;
-    inset: 0;                      /* same size as the image */
+    inset: 0; /* same size as the image */
     transform: translate($lift, $lift);
-    z-index: -1;                   /* sit underneath img    */
+    z-index: -1; /* sit underneath img    */
 
     /* show the 2 black lines we need, hide the others */
     border: 2px solid transparent;
     border-bottom-color: $black;
-    border-right-color:  $black;
+    border-right-color: $black;
     pointer-events: none;
   }
 }
-
 
 img:not(.btn),
 figure > img,
@@ -211,7 +203,7 @@ figure > img,
 .card-img-top,
 .card-img-bottom,
 .img-thumbnail {
-  @include brite-img-shadow;       /* now only two sides show */
+  @include brite-img-shadow; /* now only two sides show */
 }
 
 /*--------------------------------------------------------------
@@ -226,10 +218,10 @@ figure > img,
 
 /* target every callout inside a listing ----------------------*/
 .quarto-listing-container-custom .callout {
-  @include brite-lift;          // 3-px lift, crisp shadow
+  @include brite-lift; // 3-px lift, crisp shadow
   overflow: visible !important; // allow the shadow to be seen
-  margin: 1rem 0;               // vertical gap between cards
-  border-radius: 0px;         // matches buttons / navbar
+  margin: 1rem 0; // vertical gap between cards
+  border-radius: 0px; // matches buttons / navbar
 }
 
 /* optional: make hover raise the card a little more ----------*/
@@ -244,18 +236,18 @@ figure > img,
 
 /* helper ─ same lift you use elsewhere */
 @mixin brite-lift($lift: 3px) {
-  border: 2px solid $black !important;      // override inline <style>
+  border: 2px solid $black !important; // override inline <style>
   box-shadow: $lift $lift 0 0 $black !important;
   transform: translate(-$lift, -$lift) !important;
-  transition: transform .15s, box-shadow .15s;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 /* base style applied to every variant ------------------------*/
 .research-btn {
-  @extend .btn;               // inherit Bootswatch button fonts, padding
+  @extend .btn; // inherit Bootswatch button fonts, padding
   font-weight: 600;
   border-radius: 0px;
-  @include brite-lift;        // 3-px lift
+  @include brite-lift; // 3-px lift
 
   /* press-down on hover / focus */
   &:hover,
@@ -267,14 +259,38 @@ figure > img,
 
 /* keep the custom colours you already defined ----------------*/
 /* light mode */
-.research-btn-osf   { background:#adb5bd; border-color:#adb5bd; color:#000; }
-.research-btn-paper { background:#40e070; border-color:#40e070; color:#000; }
-.research-btn-pdf   { background:#ff6b7a; border-color:#ff6b7a; color:#000; }
+.research-btn-osf {
+  background: #adb5bd;
+  border-color: #adb5bd;
+  color: #000;
+}
+.research-btn-paper {
+  background: #40e070;
+  border-color: #40e070;
+  color: #000;
+}
+.research-btn-pdf {
+  background: #ff6b7a;
+  border-color: #ff6b7a;
+  color: #000;
+}
 
 /* dark mode */
-.quarto-dark .research-btn-osf   { background:#6c757d;  border-color:#6c757d;  color:#fff; }
-.quarto-dark .research-btn-paper { background:#28a745;  border-color:#28a745;  color:#fff; }
-.quarto-dark .research-btn-pdf   { background:#dc3545;  border-color:#dc3545;  color:#fff; }
+.quarto-dark .research-btn-osf {
+  background: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+.quarto-dark .research-btn-paper {
+  background: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+.quarto-dark .research-btn-pdf {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
 
 /*--------------------------------------------------------------
   10. Brite-style shadow & animation for callouts
@@ -285,18 +301,18 @@ figure > img,
   border: 2px solid $black !important;
   box-shadow: $lift $lift 0 0 $black !important;
   transform: translate(-$lift, -$lift) !important;
-  transition: transform .15s, box-shadow .15s;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 /* -------- Callout container ---------------------------------*/
 .callout {
-  @include brite-lift;      /* 3-px lift, crisp shadow               */
+  @include brite-lift; /* 3-px lift, crisp shadow               */
   background-color: $emph-bg;
-  border-radius: 0px;    /* match navbar & buttons                */
-  overflow: visible;        /* let the shadow show                   */
-  margin: 1rem 0;           /* gap between stacked callouts          */
+  border-radius: 0px; /* match navbar & buttons                */
+  overflow: visible; /* let the shadow show                   */
+  margin: 1rem 0; /* gap between stacked callouts          */
   background-color: var(--bs-body-bg); /* keep theme’s body colour   */
-  position: relative;       /* be sure the shadow isn’t cropped      */
+  position: relative; /* be sure the shadow isn’t cropped      */
 
   /* press-down effect on hover/focus --------------------------*/
   &:hover,
@@ -308,19 +324,19 @@ figure > img,
 
 /* -------- Callout header (click-to-collapse bar) ------------*/
 .callout-header {
-  cursor: pointer;               /* make it feel clickable            */
+  cursor: pointer; /* make it feel clickable            */
   user-select: none;
-  padding: 1rem 1.25rem;         /* larger target, matches cards      */
-  background-color: inherit;     /* remove coloured stripes           */
-  border-bottom: 1px solid rgba(#000, .125);
+  padding: 1rem 1.25rem; /* larger target, matches cards      */
+  background-color: inherit; /* remove coloured stripes           */
+  border-bottom: 1px solid rgba(#000, 0.125);
 }
 
 /* Remove Quarto’s coloured “important/tip/…” stripes ----------*/
 .callout-important > .callout-header,
-.callout-tip       > .callout-header,
-.callout-note      > .callout-header,
-.callout-warning   > .callout-header,
-.callout-caution   > .callout-header {
+.callout-tip > .callout-header,
+.callout-note > .callout-header,
+.callout-warning > .callout-header,
+.callout-caution > .callout-header {
   border-left: none;
   background-color: $emph-bg;
 }
@@ -335,9 +351,9 @@ figure > img,
   transform-origin: top left;
 }
 
-.callout-important{
-    font-size: 1.2rem;
-    background-color: $emph-bg;
+.callout-important {
+  font-size: 1.2rem;
+  background-color: $emph-bg;
 }
 
 /*--------------------------------------------------------------
@@ -347,17 +363,17 @@ figure > img,
 /* reuse the project-wide lift / press mixin */
 @mixin brite-lift($lift: 3px) {
   border: 2px solid $black !important;
-  box-shadow: $lift $lift 0 0 $black !important;   // ← 3 px right + 3 px down
+  box-shadow: $lift $lift 0 0 $black !important; // ← 3 px right + 3 px down
   transform: translate(-$lift, -$lift) !important;
-  transition: transform .15s, box-shadow .15s;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 /* anchor inside any .icon-align container --------------------*/
 .icon-align > a,
 .icon-align a {
   /* make it a Bootstrap button first */
-  @extend .btn;                     /* paddings, font, border-radius   */
-  @extend .btn-primary;             /* blue background – change to
+  @extend .btn; /* paddings, font, border-radius   */
+  @extend .btn-primary; /* blue background – change to
                                        .btn-secondary etc. if desired  */
 
   /* same lifted look as other buttons */
@@ -367,7 +383,7 @@ figure > img,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: .6rem 1rem;              /* tweak size to taste             */
+  padding: 0.6rem 1rem; /* tweak size to taste             */
 
   /* press-down animation */
   &:hover,
@@ -381,7 +397,7 @@ figure > img,
 .icon-align a svg,
 .icon-align a i {
   color: inherit;
-  font-size: 1.5rem;                /* adjust if you need bigger icons */
+  font-size: 1.5rem; /* adjust if you need bigger icons */
 }
 
 /*--------------------------------------------------------------
@@ -390,25 +406,25 @@ figure > img,
 
 /* 1. A single custom property controls sizing everywhere */
 :root {
-  --brite-icon-btn: 3.25rem;   /* ← outer square size  (change once) */
-  --brite-icon-size: 2.1rem;   /* ← icon (SVG / <i>) size            */
+  --brite-icon-btn: 3.25rem; /* ← outer square size  (change once) */
+  --brite-icon-size: 2.1rem; /* ← icon (SVG / <i>) size            */
 }
 
 /* 2. Square frame ------------------------------------------------*/
 .icon-align > a,
 .icon-align a {
-  width:  var(--brite-icon-btn);
+  width: var(--brite-icon-btn);
   height: var(--brite-icon-btn);
-  padding: 0 !important;           /* remove left/right padding set by .btn */
+  padding: 0 !important; /* remove left/right padding set by .btn */
 }
 
 /* 3. Centre the glyph and override shortcode dimensions ----------*/
 .icon-align a svg,
 .icon-align a i {
-  width:  var(--brite-icon-size) !important;
+  width: var(--brite-icon-size) !important;
   height: var(--brite-icon-size) !important;
   font-size: var(--brite-icon-size) !important; /* catches <i> fonts */
-  flex-shrink: 0;                                /* stop collapsing  */
+  flex-shrink: 0; /* stop collapsing  */
 }
 
 /*--------------------------------------------------------------
@@ -418,10 +434,10 @@ figure > img,
 .icon-align a {
   /* make the anchor a FLEX box so centring actually works  */
   display: flex !important;
-  align-items: center !important;     /* vertical centre    */
+  align-items: center !important; /* vertical centre    */
   justify-content: center !important; /* horizontal centre  */
-  line-height: 1 !important;          /* remove extra slack */
-  box-sizing: border-box;             /* include 2 px border */
+  line-height: 1 !important; /* remove extra slack */
+  box-sizing: border-box; /* include 2 px border */
 }
 
 /* remove any residual auto-margins that short-codes inject */
@@ -434,18 +450,18 @@ figure > img,
   11-quater. Fine-tune vertical alignment of Academicons only
 --------------------------------------------------------------*/
 .icon-align a svg.ai,   /* SVG-flavoured Academicons */
-.icon-align a i.ai {    /* <i> font-based Academicons, if used */
-  transform: translateY(50%) !important;  /* push glyph downward */
+.icon-align a i.ai {
+  /* <i> font-based Academicons, if used */
+  transform: translateY(50%) !important; /* push glyph downward */
 }
-
 
 /*--------------------------------------------------------------
   12. Restore flex layout so the date stays inside each card
 --------------------------------------------------------------*/
 .quarto-grid-item {
-  display: flex !important;          /* undo .btn’s inline-block        */
+  display: flex !important; /* undo .btn’s inline-block        */
   flex-direction: column !important; /* keep elements stacked vertically */
-  padding: 0;                        /* drop the button’s inner padding */
+  padding: 0; /* drop the button’s inner padding */
 }
 
 /*--------------------------------------------------------------
@@ -453,13 +469,13 @@ figure > img,
 --------------------------------------------------------------*/
 .cell {
   /* ❶ Re-use your diagonal shadow + border + lift */
-  @include brite-lift;                 // 3 px right & down, 2 px border
+  @include brite-lift; // 3 px right & down, 2 px border
 
   /* ❷ General layout niceties */
-  margin: 1.25rem 0;                   // gap between stacked cells
-  overflow: visible;                   // show the shadow
+  margin: 1.25rem 0; // gap between stacked cells
+  overflow: visible; // show the shadow
   background-color: var(--bs-body-bg); // auto-switches light / dark
-  border-radius: 0px;                // match other cards; set to 0 if you prefer
+  border-radius: 0px; // match other cards; set to 0 if you prefer
 
   /* ❸ Optional “press” animation on hover / focus */
   &:hover,
@@ -476,7 +492,6 @@ figure > img,
   overflow: visible;
 }
 
-
 // -----------------------------------------------------------------------------
 // Pagination → adopt the .btn 3 px lift / shadow animation
 // -----------------------------------------------------------------------------
@@ -489,7 +504,7 @@ figure > img,
       margin: 3px 0 0 3px;
       border: 1px solid $black;
       @include btn-shadow();
-      transition: all .3s;
+      transition: all 0.3s;
       transform: translate(-3px, -3px);
       color: $white;
       border-radius: 0px;
@@ -509,7 +524,7 @@ figure > img,
         box-shadow: none;
         transform: translate(0, 0);
         pointer-events: none;
-        opacity: .65;
+        opacity: 0.65;
       }
     }
 
@@ -533,25 +548,25 @@ figure > img,
 // -----------------------------------------------------------------------------
 
 .panel-tabset .nav-tabs {
-  border: none !important;          // kill the 2 px frame   
+  border: none !important; // kill the 2 px frame
   border-radius: 0 !important;
-  padding: 0;                       // no extra padding
+  padding: 0; // no extra padding
   background: transparent;
-  gap: 0;                           // the buttons already have their own gap
+  gap: 0; // the buttons already have their own gap
 }
 
 /* 2️⃣  Turn every tab into a raised button
        (extra selector depth so it outranks Bootswatch)          */
 .panel-tabset .nav-tabs > .nav-item > .nav-link {
   // lifted state -------------------------------------------------------------
-  color: $white;                    // black font for inactive tabs (light theme)
-  margin: 3px 3px 0 0;              // room for shadow at top & right
+  color: $white; // black font for inactive tabs (light theme)
+  margin: 3px 3px 0 0; // room for shadow at top & right
   border: 1px solid $black;
   border-radius: 0px;
-  background: $body-bg;             // base fill (light or dark)
-  @include btn-shadow();            // the 3 px drop shadow
+  background: $body-bg; // base fill (light or dark)
+  @include btn-shadow(); // the 3 px drop shadow
   transform: translate(-3px, -3px);
-  transition: box-shadow .25s ease, transform .25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 
   &:hover,
   &:focus {
@@ -563,12 +578,12 @@ figure > img,
 
 .tab-content {
   @include brite-lift();
-  background: $emph-bg;             // base fill (light or dark)
+  background: $emph-bg; // base fill (light or dark)
 }
 
 /* pressed / current tab ---------------------------------------------------- */
 .panel-tabset .nav-tabs > .nav-item > .nav-link.active {
-  color: $white;                    // white font for active tab
+  color: $white; // white font for active tab
   background: $primary;
   // transform: translate(0, 0);
 }
@@ -579,10 +594,8 @@ figure > img,
   box-shadow: none;
   // transform: translate(0, 0);
   pointer-events: none;
-  opacity: .65;
+  opacity: 0.65;
 }
-
-
 
 ///////////// NAVBAR ////////////////
 
@@ -598,7 +611,7 @@ figure > img,
   box-shadow: 3px 3px 0 0 #000;
   transition: all 0.3s;
   transform: translate(-3px, -3px);
-  @include brite-button-look; 
+  @include brite-button-look;
 }
 
 .navbar .quarto-color-scheme-toggle:hover {
@@ -615,47 +628,44 @@ figure > img,
 
   width: 2.8rem !important;
   height: 2.8rem !important;
-
 }
 
 .navbar .quarto-color-scheme-toggle svg,
 .navbar .quarto-color-scheme-toggle i {
-  margin-top: px;   /* tweak as needed */
+  margin-top: px; /* tweak as needed */
 }
 
 .aa-DetachedOverlay {
-    background-color: rgb(41 40 40 / 40%);
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    z-index: 1100;
+  background-color: rgb(41 40 40 / 40%);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  z-index: 1100;
 }
-
 
 /* Apply the brite button look to the inner containers */
 .aa-DetachedFormContainer,
 .aa-Panel {
-    /* Match the brite button border and shadow */
-    border: 2px solid #000;
-    box-shadow: 3px 3px 0 0 #000;
-    transition: all .3s;
-    transform: translate(-3px, -3px);
-    margin: 10;
-
+  /* Match the brite button border and shadow */
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0 0 #000;
+  transition: all 0.3s;
+  transform: translate(-3px, -3px);
+  margin: 10;
 }
 
 /* Override the Bootstrap toggler to match the “brite” look */
 .navbar-toggler {
   border: 2px solid #000;
   box-shadow: 3px 3px 0 0 #000;
-  transition: all .3s;
+  transition: all 0.3s;
   transform: translate(-3px, -3px);
   margin: 10px;
-  @include brite-button-look; 
+  @include brite-button-look;
 
   /* Ensure focus/active states maintain unpressed appearance, BUT allow hover to override */
   &:focus:not(:hover),
@@ -676,8 +686,6 @@ figure > img,
   }
 }
 
-
-
 img:not(.btn):not(.navbar-logo),
 figure > img:not(.navbar-logo),
 .card-img,
@@ -686,14 +694,14 @@ figure > img:not(.navbar-logo),
 }
 
 .quarto-title-banner {
-    padding: 20px; 
-    border-radius: 0px;
-    margin-top: 0px; 
-    margin-right: 20px;
-    margin-bottom: 0px;
-    margin-left: 20px;
-    background: rgb(90, 90, 90) !important;
-    @include brite-lift();
+  padding: 20px;
+  border-radius: 0px;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  background: rgb(90, 90, 90) !important;
+  @include brite-lift();
 }
 
 /*--------------------------------------------------------------
@@ -743,7 +751,6 @@ pre {
   }
 }
 
-
 .sourceCode {
   color: $white !important;
   background-color: rgba(0, 0, 0, 0.3) !important;
@@ -772,13 +779,22 @@ pre {
   width: auto; // Let line numbers maintain their natural width
 }
 
-
 // Specific syntax highlighting classes (adjust colors as needed)
-.sourceCode .co { color: #75715e !important; } // Comments
-.sourceCode .kw { color: #66d9ef !important; } // Keywords
-.sourceCode .st { color: #a6e22e !important; } // Strings
-.sourceCode .dv { color: #ae81ff !important; } // Numbers
-.sourceCode .fu { color: #a6e22e !important; } // Functions
+.sourceCode .co {
+  color: #75715e !important;
+} // Comments
+.sourceCode .kw {
+  color: #66d9ef !important;
+} // Keywords
+.sourceCode .st {
+  color: #a6e22e !important;
+} // Strings
+.sourceCode .dv {
+  color: #ae81ff !important;
+} // Numbers
+.sourceCode .fu {
+  color: #a6e22e !important;
+} // Functions
 
 // R console output
 .cell-output-stdout,
@@ -795,6 +811,9 @@ pre {
   color: $white !important;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-shadow: 3px 3px 0 black;
 }

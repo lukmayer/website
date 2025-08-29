@@ -17,7 +17,7 @@ $prefix: "bs" !default;
 
 // Mixins
 
-@mixin btn-shadow(){
+@mixin btn-shadow() {
   box-shadow: 3px 3px 0 0 var(--#{$prefix}border-color);
 }
 
@@ -43,8 +43,8 @@ $prefix: "bs" !default;
   }
 
   .dropdown-toggle::after {
-    margin-left: .15em;
-    vertical-align: .15em;
+    margin-left: 0.15em;
+    vertical-align: 0.15em;
   }
 
   &-toggler {
@@ -58,7 +58,7 @@ $prefix: "bs" !default;
   margin: 3px 0 0 3px;
   border-color: $black;
   @include btn-shadow();
-  transition: all .3s;
+  transition: all 0.3s;
   transform: translate(-3px, -3px);
 
   &:hover {
@@ -120,7 +120,6 @@ $prefix: "bs" !default;
     &:focus {
       z-index: 0;
     }
-
   }
 
   > .btn-check:focus + .btn,
@@ -164,15 +163,14 @@ a {
 // Forms
 
 .form-range {
-
   &:not([disabled])::-moz-range-progress {
-    height: .6rem;
+    height: 0.6rem;
     background-color: $primary;
     border-radius: 6px 0 0 6px;
   }
 
   &:not([disabled])::-ms-fill-lower {
-    height: .6rem;
+    height: 0.6rem;
     background-color: $primary;
     border-radius: 6px 0 0 6px;
   }
@@ -186,11 +184,11 @@ a {
   }
 
   &::-webkit-slider-thumb {
-    margin-top: -.4rem;
+    margin-top: -0.4rem;
   }
 
   &::-moz-range-thumb {
-    margin-top: -.4rem;
+    margin-top: -0.4rem;
   }
 
   &:focus::-webkit-slider-thumb {
@@ -216,7 +214,7 @@ a {
 
 .nav-tabs {
   gap: 4px;
-  padding: .4rem .4rem calc(.4rem + 2px);
+  padding: 0.4rem 0.4rem calc(0.4rem + 2px);
   font-weight: $headings-font-weight;
   border: 2px solid $black;
   border-radius: $border-radius-lg;
