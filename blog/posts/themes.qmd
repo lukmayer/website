@@ -1,0 +1,40 @@
+---
+title: "New theme, who dis?"
+description: "Quarto theming with SCSS"
+author: "Luke"
+image: images/quarto_logo.jpg
+date: "2025-08-29"
+categories:
+- quarto
+- webdev
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+---
+
+I was clicking some of the links in the Quarto documentation, including the one to the Bootswatch project. Quarto's built-in themes all come from this project, so I was surprised to see that Quarto does not come with all of the Bootswatch themes. The [Brite theme](https://bootswatch.com/brite/) in particular caught my eye with its flat, yet 3-D looking button styles. The description simply reads "Neobrutalist form", but I figured if you take the corner-radius out it would start to look pretty retro. Intrigued, I set out to figure out whether I can make a customized version of the Brite theme work for my site. Initially I wasn't super sure if this was possible without a deep understanding of the internals, after all maybe there was a good reason for why Quarto does not come with this theme? 
+
+Nonetheless, I set out to attempt porting it over. It took some digging through the Bootswatch Github repos before I identified the SCSS files that give rise to the theme. Somewhat to my surprise, copying these over and rendering a site actually works no problemo. The real work was adding styles for all the little things that my Quarto site has on it and making it work with my theme switcher. After a few days of tons of edits, I have a semi-final version going!  
+
+In case my site's theme has changed yet again whenever you are reading this, here a screenshot:
+
+\
+
+![A screenshot of my newly themed homepage](images/new_theme.png)
+
+\
+
+If you like my remix of the theme, like everything on this site, you can just snatch my SCSS files from my public repo and use it yourself (Check the version history of my repo in case needed).
+
+I also made a pretty similar theme for my RevealJS presentations! [The Reveal theme has its own repo](https://github.com/lukmayer/revealjs_theme).
+
+\
+
+![A screenshot of my RevealJS theme](images/reveal_theme.png)
+
+\
+
+In conclusion, Mission successful! 
+
+P.S.: make sure to format SCSS files with Prettier to avoid [nasty-looking Quarto bugs](https://github.com/quarto-dev/quarto-cli/discussions/11802)
