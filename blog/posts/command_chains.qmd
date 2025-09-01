@@ -11,7 +11,6 @@ format:
   html:
     include-after-body: ../../_includes/utterances.html
 
-draft: true
 ---
 
 Despite having used Vivaldi for something like 3 years now, every now and then I discover something useful that I had previously discounted. Just yesterday was such a day, when I was looking up what Vivaldi was planning with their dark mode settings on the forums. Basically, right now you can have Vivaldi render all webpages in dark mode by default, but like all such dark mode features, sometimes this makes specific sites unreadable. However, turning the dark by default setting off requires a browser restart to take effect, which was completely impractical to me, leading me to just stick with a dark mode extension rather than using Vivaldi's version.
