@@ -1,0 +1,21 @@
+---
+title: "Vivaldi without dark mode extensions"
+description: "Using Vivaldi's command chains to make custom features"
+author: "Luke"
+image: images/vivaldi_logo.png
+date: "2025-08-31"
+categories:
+ - vivaldi
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+draft: true
+---
+
+Despite having used Vivaldi for something like 3 years now, every now and then I discover something useful that I had previously discounted. Just yesterday was such a day, when I was looking up what Vivaldi was planning with their dark mode settings on the forums. Basically, right now you can have Vivaldi render all webpages in dark mode by default, but like all such dark mode features, sometimes this makes specific sites unreadable. However, turning the dark by default setting off requires a browser restart to take effect, which was completely impractical to me, leading me to just stick with a dark mode extension rather than using Vivaldi's version.
+
+Then, a few months ago, the devs added a dark mode toggle to the quick commands. This changes everything, since you can now switch on the fly by opening the Vivaldi command prompt and beginning to type "Toggle Force a dark theme on all websites". As it turns out, we can make this even more convenient. As someone on the forums pointed out, you can use Vivaldi's Command Chains feature to create your own button in the UI that triggers this command. It's quite trivial to make, really. Simply go to `Settings > Quick Commands > Command Chains`, hit the `+` and create a command chain that only includes the 'Toggle Force a dark theme on all websites' command. You can now create a key-binding for this chain or edit a toolbar and add a button for it in the Command chains section of the toolbar editor. In `Settings > Appearance > Menu > Page` you can even add your custom command chain as an option in the right-click menu, for example. Handy! 
+
+Pretty happy with this solution as I don't have very particular dark theme needs, meaning I can now remove the dark mode extension I was using and just roll with Vivaldi's implementation. Command chains are clearly under-rated; if you haven't bothered with them yet, I'd suggest you try them out! And if you are already using Command Chains, I'd be curious to hear what your use case is! :)
