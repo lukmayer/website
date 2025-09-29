@@ -12,6 +12,12 @@ format:
 
 ## 2025
 
+### 2025-09-28
+
+Just returned from Japan + Taiwan last week (it was amazing), which I immediately followed up with 3 days in Pittsburgh for a poster presentation at Carnegie Mellon. Pittsburgh is pretty! Now that I'm back in Cali, here goes another 9 months of classes... :,)
+
+\
+
 ### 2025-08-16
 
 Yet another re-theme for my website - I "hacked" the Bootstrap Brite theme to make it compatible with my Quarto site. It was a lot of tinkering and there are still some fixes I need to add but overall I'm pretty pleased with the minimal yet opinionated look! Other news include me intentionally killing my 2300+ day Duolingo streak and my imminent Japan + Taiwan trip - I'm stoked! 
