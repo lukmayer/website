@@ -67,6 +67,7 @@ I've also subscribed to some French learning Youtube channels and podcasts with 
 
 \
 
+
 ::: {.text-center layout-ncol="1" out-width="45%"}
 
 ![My Duo streak on its final day, counting 2328.](images/duo_streak.png)
