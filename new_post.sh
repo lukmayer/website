@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Define the target directory relative to the script's execution location
 TARGET_DIR="blog/posts"

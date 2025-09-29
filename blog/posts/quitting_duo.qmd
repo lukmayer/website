@@ -1,0 +1,76 @@
+---
+title: "Bye-Bye Duo"
+description: "I intentionally killed my 2328 day streak"
+author: "Luke"
+image: images/duo.png
+date: "2025-09-28"
+categories:
+ - duolingo
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+
+A few weeks ago, I decided to intentionally break off my 2300+ day streak on Duolingo. 
+Why would I do that, did I decide to quit learning French? Not at all!
+
+I've talked in previous posts about my experience as a long-time Duolingo user.
+Duolingo is an impressive app all things considered, both in terms of scale and variety of activities.
+But, as noted previously, in some aspects the app has been getting worse, most notably in user experience as a free-tier account.
+It got so bad that I was relying on the web-version + browser extensions to make using Duolingo without paying bearable.
+
+But now I've reached my last straw.
+In an effort to become more profitable as a publicly traded company, Duolingo has sought to cut costs by trying to automate much more. 
+Not great but also not the worst thing ever per se. However, their idea of cutting costs seems to have been to fire the people creating the language courses and replacing them with LLMs. 
+The results are not pretty.
+I'm actually not sure if this is a universal experience but my guess is that I, as someone who has progressed very far in one of their largest courses, was seeing content that was not subject to much quality control.
+Basically, I started noticing errors in the practice tasks. Quite frequent too, at least once every couple days I would notice an activity that had wrong translations, hints that are totally off the rails or sentences that just don't make any sense. 
+Clearly, story content was also being written by LLMs, as they were becoming noticeably bland, sometimes non-sensical, and often wouldn't use vocabulary that the app teaches. 
+I imagine their line of thinking must have been something like: "Well, LLMs are impressive at translation and they can generate stories quite easily, so maybe we can get rid of those expensive course creators?".
+In my opinion, the problem with this approach is that 1) it misses a large part of the value that comes from human curation 2) it mis-understands how LLMs work.
+
+Allow me to explain. Fundamentally, LLMs are statistical models. It takes some fancy math to make them, but at the end of the day LLMs are probabilistic generative models that aim to predict what comes next in a sequence. What does this mean? "The cat sat on the ___", what comes next? After having read a lot of English, you might get the sense that "mat" is more likely than "particle accelerator".
+In technical lingo, we would say that there is a probability distribution over tokens, and as an LLM you should choose the token that is most likely, given the sequence you've been asked to fill in.
+Now, I'm leaving out a lot of what makes LLMs more interesting than standard language models, but this is the foundation of how LLMs generate text. Fancy neural network architectures and reinforcement-learning based post-training procedures can't change that deep down, you are still a sequence completer. This is why many experts say that LLMs don't actually "know" anything. To an LLM words are just numbers
+in an embedding space that need to be arranged according to probabilities. It's impressive how much you can achieve with an extremely well-made version of this general procedure, but once you stop thinking about it's inner workings as being magical, it should be evident that replacing employees with what could be boiled down to fancy auto-complete will have some noteworthy drawbacks.
+
+I don't hate AI or LLMs or anything like that, but man, I *wish* companies weren't rushing head over heels into "embracing AI" without understanding whether it adds any actual value.
+Now, I don't at all doubt that Duolingo will overcome some of these quality control problems, or at the very least make them less painfully obvious. My issue is more fundamental, I think they're on a bad track as a company and I've had enough.
+Essentially, Duolingo is gradually becoming the McDonalds of language learning. Questionable quality product, big marketing budget. A tale as old as the word "consumer". It's a real shame because Duoliingo employs a lot of language learning scientists, who I have no doubt care about crafting a good learning experience. However, I get the impression that the business side of the company gets more and more in the way of this pursuit. To give just one tiny example as evidence for this claim, isn't it a bit hard to square why Duolingo would give up on teaching you grammar rules, now fully relying on you learning grammar through trial and error, or why they would remove the comment sections on exercises in which users would offer explanations if you couldn't make sense of the exercise? You don't need to be a language learning scientist to conclude that the removal of these features make the learning experience objectively worse. My guess is that they got rid of them because they didn't "drive engagement".
+While this is certainly not an original take, and it definitely has a strong neo-luddite flavor, I've come to think of this ubiquitous trend in technology as "Shittier but faster/cheaper". 
+The basic idea is that automation has a cost. If you replace an artisan chef with a professional McDonalds burger flipper, yes you can make food faster and cheaper, but now the food is also of lower quality and the food-generating worker can be thought of as having been "de-skilled", since operating a few machines does not require as much training as becoming a proper chef. When operating in the physical world, clearly there are some pros and cons, and we as a society seem to think the pros outweigh the cons in this case. Duolingo is following this trend of quantity over quality. 
+
+But here's why you don't want to be the McDonalds of language learning: no one wants crappy content. We don't bother watching shitty movies or listening to shitty music. Why would you when there are better alternatives? Cycling this observation back to a bit of economic thought, its worth noting that intellectual property is not subject to the same physical constraint as the economics of BigMac production. 
+When you want to make BigMacs, you have to invest in your equipment, and then you still deal with the marginal costs of production, like materials and labor.
+But when you deal with an online language course, the marginal cost of an additional unit of production is essentially zero. Duolingo does not have to invest much into physical equipment like offices, and once you have crafted the online language course, your costs are essentially the same whether you have 10 paying students or 10,000. Yes, there are operating costs for servers and software maintenance, but the point is that one additional user generates almost zero additional cost for the company. 
+If your marginal costs of production are so low, I'd wager you're not thinking straight if you're not investing in your intellectual property. After all, you will get more people paying for your course if your course is just better than everyone elses. With the right setup, this can mean big profits! Thanks to their large user base, Duolingo could use all its user data to innovate on language-learning and craft something that is truly best-in-category. But this seems to be the very area they are automating away?!
+
+Why does Duolingo do this, if I don't think it makes sense? I think the people making the decisions at Duolingo HQ envision Duolingo as a tech-company. It's not wrong per se, Duolingo is an educational technology company. Like most big tech companies, they make data-driven decisions, they have a large user-base, they provide a freemium service, they even have lock-in with streaks and the fact that language-learning is not a one-and-done type of activity. 
+The problem is that banking on lock-in and your ability to squeeze money out of users via price discrimination will stop working once a competitor that focuses on quality over quantity achieves enough quantity to satisfy most of your user-base. 
+After all, a few hundred high-quality lessons are probably better than thousands of crap ones, ceteris paribus. 
+And this is probably why Duolingo is investing so much into gamification. I saw that nowadays some of the beginner courses include video-game level-like lessons! This is certainly impressive, though I can't help but feel that this is primarily about investing into the addictiveness of the app than it is about improving your learning.
+The trend seems to point towards eventually just having people play games, with learning being more of a side-effect. Gamification is all fine by me, but I struggle to see the point if the learning aspect is sacrificed in the process. And that's why I decided I should move on from Duolingo - the garbled, clearly  AI generated content I experienced was just the last signal I needed to be convinced that fundamentally this company just doesn't care about my learning anymore. It feels a bit like they're just trying to keep feeding me more stuff, whatever the quality, so I'll watch more ads or pay to remove user-hostile annoyances. For one, I am not convinced this business strategy will work out because I doubt that users would knowingly choose gamification over more effective learning - it would only work if they started buying up their competitors, which would be very much in the style of big-tech companies. It's really disappointing if you consider the counterfactual of what Duolingo could have been. 
+
+When I started using Duolingo in 2019, it was a pretty different app. While the app was much more basic back then, there were comment sections below exercises in which other learners offered explanations, there were grammar rule explanations, there was an official forum to discuss all things Duolingo, buying the membership allowed you to download lessons, and community-members could contribute to language courses. None of these features exist anymore, but let's imagine Duolingo had scaled this model instead of what we have today. How awesome would it be if Duolingo had used all their Data-science power to make community contributions easier and better? Or the grammar lessons, or improved the UI so that more people realize that the comment sections actually exist (it used to be a tiny, pretty innocuous button on the exercise feedback modal). What if they had added features for users to chat to each other or learn about the history and culture surrounding their target language? With their large user-base, leaning more heavily on the community by making contribution and moderation easy would have been pretty efficient too, since community members were essentially providing free labour out of the goodness of their hearts. Sadly, I don't think we'll ever see what this more Wikipedia-style version of Duolingo would have been like. Given that Duolingo used to have a more community-driven approach, we can probably conclude that this implementation was not deemed the profit-maximizing one. However, seeing Wikipedia's success, it does appear like it can be made a sustainable model. 
+
+So what have I been doing then, since Duolingo is no longer my go-to for practicing French? I've researched a bit on what other people recommended online: [Anki](https://ankiweb.net/account/login), [Clozemaster](https://www.clozemaster.com/), [Language transfer](https://www.languagetransfer.org/app) and [Mango languages](https://mangolanguages.com). 
+
+- Anki is a pretty simple app for learning vocabulary. You download a deck of words, and each day you either learn a few words, or review words that you've seen before. Each card shows you the word in either the language you are learning or the language you already speak, with the inverse only being revealed upon click. Once you revealed the answer, you essentially rate whether you knew the correct answer or not. Anki uses this feedback and your learning history to judge when it's best for you to repeat studying this word again via a simple algorithm. Decks are community-made, can be downloaded and often include explanations and audio. 
+- Clozemaster is a web-site that makes you fill in blank words in sentences. It's similar in style to Duolingo in the sense that you either tap the right answer from a few options, or type it in directly. There's also a transcription mode where the sentence is read out loud and you are typing the entire thing in. It's very pleasant to use, although there are usage-limits for free-tier users. 
+- Language transfer is an F-droid app that has a more traditional audio-lesson approach. You basically are listening to a recording in which a speaker is teaching a language learner the language from scratch. The speaker teaches words, explains concepts, grammar and memorization tricks to the learner and regularly asks them to recall words, form sentences or generalize what they learned so far to a new setting. You as the third-wheel in this conversation are meant to answer out-loud in your head whenever the learner is asked a question, so that you can go through the same thinking processes as the learner as though it was actually you in the learners' seat and then immediately hear feedback when the learner offers there answer getting it either correct, or being corrected by the speaker. Since this is an F-droid app, everything is free and lessons can be downloaded for offline listening. 
+- Mango languages is a language learning app with a lot of content and a pretty unique approach. Lessons offer audio and text-guides and the strategy seems to be to teach you words that go into a sentence, then form the sentence yourself, and finally form sentences with other words you have learned that fit the context of the lesson. I say this is unique because you are actually generating the sentences yourself rather than reading them out. The app doesn't attempt to give you feedback on your answers at all, simply offering you tools with which you can assess yourself. You can listen to pronunciations and record yourself, jump forwards and backwards in the lesson, and access additional explanations if needed. The app also uses an Anki style review process, where you are studying cards of words and sentences you've come across. All lessons can be downloaded. Now, I'm using the premium version of this app. But there's a catch: if you have the right library card, you get premium for free, which is how I am getting it. Mango helps you find the libraries that they have partnered with, and luckily one of my local libraries that meet this criterion had an online library card form, meaning getting access to premium for free was trivial to achieve.
+
+I've also subscribed to some French learning Youtube channels and podcasts with my RSS-feed reader to get some more natural language input into my life. Finally, I intend take actual French courses once I finished my Stats MS since I can access these through my university. I hope that's comprehensive enough to make some more progress!
+
+\
+
+::: {.text-center layout-ncol="1" out-width="45%"}
+
+![My Duo streak on its final day, counting 2328.](images/duo_streak.png)
+
+:::
+
+
