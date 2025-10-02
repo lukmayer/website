@@ -1,6 +1,6 @@
 ---
-title: "How to connect Proton Mail to Vivaldi"
-description: "A super quick guide for utilization in Vivaldi Mail"
+title: "How to use Proton Mail in Vivaldi"
+description: "A super quick guide for setting up Proton Mail accounts for use in Vivaldi Mail"
 author: "Luke"
 image: "images/proton_mail.png"
 date: "2025-10-01"
