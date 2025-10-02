@@ -1,0 +1,30 @@
+---
+title: "How to connect Proton Mail to Vivaldi"
+description: "A super quick guide for utilization in Vivaldi Mail"
+author: "Luke"
+image: "images/proton_mail.png"
+date: "2025-10-01"
+categories:
+ - vivaldi
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+---
+
+As you probably know if you clicked on this post, you can't just connect a Proton Mail account to Vivaldi mail the normal way because Proton implements various things to make their email more secure than the average web-mail. At the same time, when you go to add a new Mail account in Vivaldi, Proton is one of the logos that appears in the listing. I've seen multiple forum posts saying that the Proton logo should be removed from this page, since it's not possible to add a Proton Mail account to Vivaldi. This turns out not to be true! For some reason, very few people seem to know how to do it seeing as there are no guides for this, despite it not being particularly difficult. I had to piece together the steps from a couple poorly worded Reddit posts, but happy to say that I figured it out.  
+
+So let's get into it.
+
+1. Install Proton Mail Bridge. This program needs to be installed AND running for your Proton Mail account to be accessible to Vivaldi
+
+2. In Proton Mail Bridge settings go to "Connection Mode" and then switch both fields reading "STARTTLS" to "SSL". This is needed because Vivaldi cannot currently handle STARTTLS for incoming messages.
+
+3. Back in Proton Mail Bridge settings, look for the button reading "Export TLS Certificates" and click it. If this generates just one file, you're good to go for the next step, but if it generates a `cert.pem` and a `key.pem`, you will first need to concatenate these two files into one. Open a terminal, navigate to the directory where the `.pem` files are and run this: `cat cert.pem key.pem > combined.pem`  
+
+4. Switching to Vivaldi, navigate to `chrome://settings/certificates`. In the "Local certificates" tab, there should be a "Custom" section. If you click on it, you can import a trusted certificate. Import the *ONE* file you got from Step 3.  
+
+5. Now go to the Settings page for Mail in Vivaldi and add a new mail account. Click "Manual Setup" and then enter the information from Proton Mail Bridge under the "Mailbox details section". In case you're confused, what Proton calls "IMAP Hostname" is called "Incoming Server" in Vivaldi, and "SMTP Hostname" is "Outgoing Server".
+
+
+If you followed all of these steps successfully, and Proton Mail Bridge is connected to the internet, you should now have your Proton Mail account useable in Vivaldi! Enjoy :)
