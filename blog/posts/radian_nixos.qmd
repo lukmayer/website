@@ -16,36 +16,36 @@ format:
 
 I've been playing around with NixOS.
 It's nice! It's the first time I've not encountered a single case of [dependency hell](https://en.wikipedia.org/wiki/Dependency_hell) when setting up my coding tools.
-I like it better than the other 'atomic' distros I've tried.
+I like it better than the other 'atomic' distros I've tried because you're not forced to use containers everywhere.
 That's not to say that it's easy though.
 In fact, the learning curve is pretty steep, and the documentation is pretty poor.
 
 That's actually why I'm writing this.
 I wanted to set up Radian and have my R packages in the configuration as well, since Nixpkgs already has almost any package I could ever need available as a pre-compiled binary. It's technically very easy to do, but it required me to pick up some background knowledge.
 
-To give a very high-level run-down, in NixOS packages are not installed in their typical system folders. Typically you'd have a single python folder, often in the `/bin` directory, but this has the disadvantage of possibly inducing dependency hell. For example, your system, by default, won't know what to do if you were to install a second, different version of python since the folder is already taken. The nix package manager solves this by giving each package its own folder with a cryptographic hash name, meaning you can have as many python versions installed as you please. This also means each R package will get its own folder, which in principle should cause a lot of problems because R looks for packages in one specific folder. However, with a wrapper script I can ensure that R will be able to see all these folders despite the typical R library folder not existing. This wrapper script is where all the magic lies.
+To give a very high-level run-down, in NixOS packages are not installed in their typical system folders. Typically you'd have a single R folder, often in the `/bin` directory, but this has the disadvantage of possibly inducing dependency hell. For example, your system, by default, won't know what to do if you were to install a second, different version of R since the folder is already taken. The nix package manager solves this by giving each package its own folder with a cryptographic hash name, meaning you can have as many R versions installed as you please. This also means each R package will get its own folder, which in principle should cause a lot of problems because R looks for packages in one specific folder. However, with a wrapper script one  can ensure that R will be able to see all these folders despite the typical R library folder not existing. This wrapper script is where all the magic lies.
 
-Wrapping R with R packages and python with python packages is easy enough, there are plenty of examples online.
+Wrapping R with R packages is easy enough, there are plenty of examples online.
 But the default R terminal is ugly! It doesn't have many colors and it's kind of hard to tell whether when its busy.
-So naturally, I wanted to use the Radian R terminal, which is much better. However, Radian is a python package, so how can I make a python package see my R packages? I was despairing a bit trying to figure out if anyone has set up Radian on NixOS, before I noticed that there already exists a wrapper script for bundling radian with packages. So the whole point of this post really is just to tell you that this script exists...
+So naturally, I wanted to use the Radian R terminal, which is much better. However, Radian is a Python package, so how can I make a Python package see my R packages? I was despairing a bit trying to figure out if anyone has set up Radian on NixOS, before I noticed that there already exists a wrapper script for bundling Radian with packages. So the whole point of this post really is just to tell you that this script exists...
 
 Here's how I configured radian in my configuration.nix:
 
 ```nix
 (radianWrapper.override {
-      packages = with rPackages; [
-        tidyverse
-        BayesFactor
-        brms
-        lme4
-        zoo
-        readxl
-        languageserver
-        stringr
-        DT
-        this_path
-      ];
-    })
+  packages = with rPackages; [
+    tidyverse
+    BayesFactor
+    brms
+    lme4
+    zoo
+    readxl
+    languageserver
+    stringr
+    DT
+    this_path
+  ];
+})
 ```
 
 \
@@ -59,4 +59,4 @@ environment.systemPackages = with pkgs; [
 ```
 
 
-So yes, as long as you know this exists, it's actually super easy to set up radian on NixOS!
+So yes, as long as you know this exists, it's actually super easy to set up Radian on NixOS!
