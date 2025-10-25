@@ -1,0 +1,89 @@
+---
+title: "Emacs' Vterm in NixOS"
+description: "Avoiding C compiler troubles with nixpkgs"
+author: "Luke"
+image: images/nixos.png
+date: "2025-10-25"
+categories:
+  - emacs
+  - linux
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+
+Yes, I have been playing around with Emacs again.
+It's become my favorite "simple" text editor since figuring out how to use `emacsclient`.
+
+One thing that's a pain with Emacs is setting up Vterm, the popular terminal emulator for Emacs.
+While on normal systems you may run into troubles with C compilers causing weird dependency errors, on NixOS the main hurdle is the extremely lacking (and often outdated) documentation.
+
+That is why I am writing this post after some sweaty debugging.
+
+I'm not some kind of NixOS wizard, as I haven't ascended to doing everything with flakes and home-manager and what have you not (yet?). I just chuck everything in `configuration.nix`. So take that as your disclaimer.
+
+So let's get into the easiest way I found to install vterm on NixOS.
+
+First things first, in case you're not aware, you can have a let block in your configuration. The basic structure is this:
+
+```nix
+{ config, pkgs, ... }:
+
+let
+    <stuff>
+in
+
+{
+    <normal config stuff>
+}
+```
+
+In our case, we want to use the fact that nixpkgs provides a pre-compiled binary for vterm. 
+To make this work, Emacs will need to be able to "see" this package from nixpkgs, meaning we need to wrap them together.
+Here's how to do it:
+
+```nix
+let
+  myEmacs =
+    (pkgs.emacsPackagesFor pkgs.emacs).emacsWithPackages (epkgs: [
+      epkgs.vterm
+    ]);
+in
+```
+
+and then in your systemPackages just put:
+
+```nix
+environment.systemPackages = with pkgs; [
+    myEmacs
+];
+```
+
+
+If you want to be able to have Emacs load up in the background so that its instantly ready to use (rather than waiting for all packages to load), then you will want to use the fact that NixOS provides a systemd service for setting this up.
+
+The way to do this with our wrapped package is this:
+
+```nix
+services.emacs = {
+    enable = true;
+    package = myEmacs;
+};
+```
+
+If you use this, you will open emacs via the `emacsclient` command rather than with the `emacs` command.
+
+Now you should be ready to `sudo nixos-rebuild switch`.
+
+The final step is to include the following in your `config.el`
+
+```elisp
+(require 'vterm)
+```
+
+After adding, `M-x eval-buffer`. You should be ready to go now! If in doubt, try a reboot.
+
+So yes, this post is another strong case of "if only this was documented, NixOS would be a piece of cake".
