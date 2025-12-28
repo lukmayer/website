@@ -15,15 +15,14 @@ format:
 
 
 I have an institutional Gmail address that I wanted to be able to use inside Emacs.
-Setting up email in Emacs is definitely one of the more laborious things one can do.
-
+If you'd be interested in this too, do note that setting up email in Emacs is definitely one of the more laborious things one can do.
 Setting up a Gmail is even more annoying in Mu4e, because Google now only accepts special tokens (oauth2 tokens), not passwords.
 
-I had various stabs at cracking this over the course of multiple weeks, and while I have something that works, it's a bit of a mess in my opinion, as I had to piece things together from different packages, blog posts, and forum discussions that I came across over those harsh days.
+I had various stabs at cracking this over the course of multiple weeks, and while I have something that works, it's a bit of a mess in my opinion, as I had to piece things together from different packages, blog posts, and forum discussions that I came across over those frustrating days.
 
 Unfortunately for you, I don't think I can provide a full guide, merely an overview and what worked for me.
 This post is more of a "I wish I knew about this", than an actual guide. 
-Why? First of all, this is pretty involved in my opinion, so this would probably be a massive blog post. Second, if I learned one thing from pushing through with this, it's that email in emacs is a constantly evolving process. I could not make many of the things other people were suggesting work for me, often because some requirement had changed since their posts had been published.
+Why? First of all, this is pretty involved in my opinion, so this would probably be a massive blog post. Second, if I learned one thing from pushing through with this, it's that email in Emacs is a constantly evolving process. I could not make many of the things other people were suggesting work for me, often because some requirement had changed since their posts had been published.
 
 
 First things first, there are a few components one needs to grasp:
@@ -50,13 +49,13 @@ I saw a few mentions of using the python script of the mutt CLI email client onl
 
 First, you download the python script
 
-https://gitlab.com/muttmua/mutt/-/blob/master/contrib/mutt_oauth2.py
+[https://gitlab.com/muttmua/mutt/-/blob/master/contrib/mutt_oauth2.py](https://gitlab.com/muttmua/mutt/-/blob/master/contrib/mutt_oauth2.py)
 
 Then you need access tokens. Some guides recommend you generate these yourself with the Google Cloud API. I found this part kind of confusing because there's conflicting information online on what the exact settings need to be and very little in the way of feedback when it's not working. I had to turn to another hack that I found buried in some forum posts, which is to use the clientId and ClientSecret from Thunderbird.
 This is pretty hacky as you're basically abusing the fact that Thunderbird has these tokens available in their public github repository. There's a comment in the source, recommending you not to use these though as they may not have these keys publicly displayed in the future. So if they are no longer available when you read this, I'm sorry. Let's hope there are better guides in the future.
 
 Grab the clientId and clientSecret for accounts.google.com here:
-https://github.com/mozilla/releases-comm-central/blob/master/mailnews/base/src/OAuth2Providers.sys.mjs#L180
+[https://github.com/mozilla/releases-comm-central/blob/master/mailnews/base/src/OAuth2Providers.sys.mjs#L180](https://github.com/mozilla/releases-comm-central/blob/master/mailnews/base/src/OAuth2Providers.sys.mjs#L180)
 
 Then, we need to edit the oauth python script.
 
@@ -77,9 +76,10 @@ You can change this by setting a really high time limit in the gpg-agent.conf an
 
 Example:
 
+```
 default-cache-ttl 34560000
 max-cache-ttl 34560000
-
+```
 
 # Setting up IMAP
 
