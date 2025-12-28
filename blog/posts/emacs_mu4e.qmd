@@ -26,6 +26,7 @@ Why? First of all, this is pretty involved in my opinion, so this would probably
 
 
 First things first, there are a few components one needs to grasp:
+
 - Emacs email client: gnus, mu4e, notmuch, etc. 
   - These are the emacs packages that interface with your mailing programs
 - IMAP program: offlineimap, mbsync 
