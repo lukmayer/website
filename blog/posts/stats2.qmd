@@ -10,6 +10,7 @@ image: "images/grid.jpg"
 format:
   html:
     include-after-body: ../../_includes/utterances.html
+draft: true	
 ---
 
 

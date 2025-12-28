@@ -1,0 +1,73 @@
+---
+title: "Online Calendar management in Emacs"
+description: "Emacs + CalDAV"
+author: "Luke"
+image: "images/emacs.png"
+date: "2025-12-28"
+categories:
+ - emacs
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+These last few months, like most people who get into Emacs, I have been moving more and more of my computing life into Emacs. While some things are relatively effortful (looking at you, E-mail), other things like managing your calendar in a way that synchronizes with your phone are remarkably simple. 
+
+I say remarkable, because I was expecting this to be a bit burdensome. It is not, it is arguably more efficient than I could have ever imagined. The expectation of difficulty probably comes from the fact that calendar apps are usually graphical, while everything in Emacs is text. Indeed, my calendar is now a mere Org file on my computer. What is remarkable then, is that if i edit this text file on my computer, it is relatively simple for an event created in this text file to trigger a notification on my phone.
+
+This might seem trivial, since this is default functionality of any calendaring application, until you consider that the programs involved in making this happen were never specifically developed for this purpose. Essentially, my calendar is being managed by some Elisp gluing together a bunch of other programs.
+
+To give you an overview, when I go to edit my calendar, the Elisp underlying org-mode generates the plain text that sets times and dates via keyboard shortcuts, this plain text is then transformed into the CalDAV format by org-caldav, sent to the server where my web-calendar lives, which then forwards these changes to my phone thanks to the DAVx⁵ app where this event then becomes available in the graphical calendar app on my phone, enabling notifications etc.
+
+Of course the reverse also works, I can add an event on my phone, it's sent to the server, Emacs translates the CalDAV event to plain text and adds it to my calendar file. 
+
+
+# Do it yourself
+
+First, you need to find out the CalDAV credentials for your web-calendar, then you need to set up your credentials in an .authinfo file so that Emacs can use the necessary passwords, etc. 
+
+
+The authinfo entry will look something like this:
+
+```
+machine <server-url> login <username/email> password <password>
+```
+
+Then you need to install org-caldav and do a tiny bit of configuration. Here's what I have:
+
+
+```elisp
+(use-package org-caldav
+  :straight t
+  :config
+  (setq org-caldav-url "<your-caldav-calendar-url>"
+        org-caldav-calendar-id "default"
+        org-caldav-inbox "~/org/calendar.org"
+        org-caldav-files nil
+  		org-caldav-days-in-past 365
+        org-icalendar-timezone "America/Los_Angeles"))
+
+```
+
+Note that I use straight.el with use-package so adapt accordingly. You may have to set the calendar-id to something else, it should roughly correspond to the name of the calendar.
+
+After that, you do M-x org-caldav-sync. It should start downloading the calendar and populating your text file. 
+
+If you make changes to your calendar text file, simply run this command again to send them to the server.
+
+This is all it took for me. If in doubt, I've found the [manual](https://jackkamm.neocities.org/org-caldav-manual/) to be pretty well-written.
+
+On your phone, you may need to use the [DAVx⁵](https://www.davx5.com/download) app should your web-calendar not have its own dedicated app. 
+
+
+# Final thoughts
+
+Because my calendar is just a human-readable text file now, I have started actually managing events instead of treating my calendar like a dump. What I mean by that is that the text file makes it easy to see just how many things one puts into their calendar. It's like seeing everything you have ever entered. And so I've noticed that this difference has incentivized me to actually re-file events so that this file can stay lean. In essence, I have a shortcut for moving an entry in my calendar file to another file for "completed" tasks/events (see org-archive-subtree-default). The effect of this behavioral change is I now no longer have a massive data-trail on some remote server, instead only retaining this information locally on my computer. Whether data-sovereignity is important to you I do not know, but it is a neat side-effect of this undertaking.
+
+
+
+
+
+

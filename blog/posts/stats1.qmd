@@ -10,6 +10,7 @@ image: "images/grid.jpg"
 format:
   html:
     include-after-body: ../../_includes/utterances.html
+draft: true	
 ---
 
 Ever since learning about research methods as an undergrad, I was curious about how the statistics we do in our research actually worked.

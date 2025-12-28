@@ -10,6 +10,7 @@ image: "images/grid.jpg"
 format:
   html:
     include-after-body: ../../_includes/utterances.html
+draft: true
 ---
 
 <iframe src="../../../presentations/s210_midterm3.html" width="800" height="600" frameborder="0" allowfullscreen>
