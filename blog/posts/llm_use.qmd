@@ -1,0 +1,123 @@
+---
+title: "Does it make sense to use LLMs for learning?"
+description: "An attempt at wrangling with the implications"
+author: "Luke"
+image: "images/skynet.jpg"
+date: "2025-12-29"
+categories:
+ - random
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+In this post, I want to take a critical look at LLMs.
+While my research focus is more around how people's decision-making is influenced by the presence of AI-style tools, I do have an interest in how LLM-use affects learning. After all, the two are at least vaguely related. Before we continue, I'd like to remind everyone that this blog is mostly my opinion/conjecture, and should not be confused with a rigorous academic take.
+
+I will work along the assumption that using LLMs for learning is genuinely a good use of one's time in some settings, but not in others - meaning my goal with this post is to identify those settings and explore the possible implications. Since I want to take a learning-focused lens, I won't talk about how LLMs can be used for boilerplate or any situation where one does not have to care about the quality of the work and thus learning. My running example will be learning to code.
+
+
+# Why a critical angle is required
+
+I've noticed that over the last 3 years, I, like many others, learned to be wary of trusting LLM output too much.
+I remember finding those first interactions when the technology was still hot off the press quite fascinating - it was startling to receive such tailored responses to queries almost instantly.
+But then came the first hurdle. These initial public-facing models were not that good and disillusionment soon followed. Still, there was this hope that these limitations were just a problem of time. Progress was notable in the 2 years that followed, and so I had a phase where I was vibe-coding quite a bit, simply following the path of least resistance.
+Since then, the improvements LLMs have made seem like they have slowed down, and even the biggest AI boosters probably have to acknowledge that human learning still has a role in tomorrow's society since you will inevitably run into issues that an LLM can't solve. If you do not regularly hit these walls, I'm sorry to say that that probably means that you deal with common problems - for example, good luck trying to get ChatGPT to actually help you with a problem for some esoteric Linux distribution.
+So after a year of relatively high vibe coding for my liking over time I have regressed more and more back to 'artisanal' coding. 
+
+These days, I only ever interact with a chat bot in the chat window, never directly connecting it to what I am working with. I want to be in control of what it is and isn't seeing, so that it doesn't get stuck on irrelevant details. In fact, sometimes I write an intentionally abstract prompt because it will otherwise latch onto keywords. My queries rarely involve more than something along the lines of "how do you do {something} in {language}?", or some help with a bug I'm failing to identify.
+
+The decision-sequence I seem to follow after 3 years of chatbots being widely available looks something like:
+
+- Can I do it on my own? 
+- If not, can I few-shot it with an LLM?
+- If not, can I do it myself with the documentation?
+- If not, can I do it with the LLM and with the documentation?
+
+Where you only progress down to the next level if the current level was not able to solve the problem.
+
+Not everyone seems to have such a clear idea of this kind of hierarchical strategy for LLM use, but I notice many think about the problem in this style - that using LLMs too much has a cognitive cost that one has to deliberately seek to avoid.
+
+Landing on this hierarchy after enough experience seems logical since it represents a intentional trade-off between effort minimization while having a handle on reliability. If I go straight to vibe-coding everything top to bottom, chances are I won't be able to debug anything about this code myself. After all, it was hardly me who wrote it. This is clearly a liability if the code is even of fleeting importance. So to balance it out then, is basically writing it by myself as much as possible, using the LLM only to the extent required not to break my flow.
+
+The problem with this hierarchy of only gradually integrating LLM use as the problem requires that I see is that this hierarchy still minimizes invested effort. It's still defaulting to some degree of vibe-coding at the slightest hurdle - thus removing the productive struggle that could yield a learning breakthrough from having to actually understand why X solves problem Y. Effectively, it's still too easy to outsource insight.
+
+And so if I can already recognize that following the gradual-use strategy has drawbacks, I wonder whether it's possible to anticipate what would be a better approach, like how we maybe will use chatbots in another few years as we come to learn the right balance between  short-term goals  (like solving a specific instance of a problem, quickly) and long-term goals (like learning how to solve problems of that class yourself) better and better. It's clear that if I don't expect LLMs to replace code-writing that I should invest in my ability to code. What's less clear then is how to best invest in my ability to code, given that LLMs present an attractive opportunity to outsource much of the actual hard work of learning? I don't think the answer is to simply abstain from using LLMs completely, and perhaps by the end of this post you'll see why.
+
+
+# The problem with going AI-first
+
+One worry that I have is that many people will become very reliant on LLMs for their work due to the speed and convenience, de-skill themselves in the process, until they are inevitably automated away since their work is largely copy-pasting LLM output. Even if your work is a bit more technical, the presence of fairly competent LLMs could present a significant risk to your career. Why keep paying you, when an intern with a fancy AI subscription can figure out the work? Now that's an extreme example, but I think it generally holds that performance metrics being equal, someone slightly less skilled + AI is cheaper than someone slightly more skilled without AI, which should be concerning to you if you're not the CEO. It's really only the mega-nerds that have some protection because their work is too niche and technical to face significant threat from this kind of automation. Personally, I don't think I'm nearly nerdy enough to fall into that latter group.
+
+Now, companies have already tried going AI-first and firing indiscriminately, and for many, it has not worked out. Turns out, replacing people with an LLM is not that easy. However, I think the de-skilling threat still largely holds. Meaning the worry is now that by stunting my growth as a programmer, I am slopping myself into becoming an extremely replaceable, deskilled human-in-the-loop worker that's not worth a decent salary.
+
+The tension I feel then is that I want to reduce how much I use LLMs as much as possible because of the risk of de-skilling myself (or the lack of skill progression) but at the same time, LLMs definitely have their good moments. There clearly are situations where the chatbot gave you a critical piece of information or insight that maybe you would not have found or arrived at otherwise. 
+
+Dwelling on the observation that the chatbot actually does help rather than hinder learning sometimes just a little longer, I notice using LLMs feels especially tempting when you are engaged in something outside of your comfort zone. This type of activity is what some might call "green-field development". But is using LLMs for green-field development appropriate? I'm actually not so sure - there is something of genuine utility in getting an insight that would have been hard to have otherwise, but at the same time there still is that risk of outsourcing more learning than that potential novel insight would have been worth. The counterfactual of what would have happened if you had/had not used the chatbot for the specific problem at hand is actually key. And so if the crux to genuinely productive LLM use is having the foresight and metacognition to recognize when the use of a chatbot is appropriate, a coarse-grained study comparing developers without access to AI to those with access to AI is not going to be all that informative when not controlling for this metacognitive ability. In other words, I don't think we have very good information at this moment for telling when chatbots are a good use of one's time. 
+
+
+# Where we seem to be heading and why it won't work
+
+I think because many of us now realize that 1) LLM's can be unreliable, 2) LLM's are very tempting to use to outsource cognitive effort and  3) Out-sourcing cognitive effort can undermine your own learning, different companies have implemented "Learning modes" that aim to address this imbalance.
+With these Socrates-style tutoring LLMs the idea is that you instruct the LLM to not offer answers, only hints and probing questions - like a teacher would. This is nice and good in that it clearly acknowledges the problem and offers a solution. The issue is the solution is inspired by what humans do, not recognizing that LLMs are not people. To elucidate, if you have ever interacted with these learning mode versions you'll quickly realize how to work around the model's instructions. Framed right, even the most rigorous learning mode LLM will not push-back if you are being lazy. Of course you can still jailbreak prompt SocratesGPT, but what I am saying is actually more subtle, like asking for additional help that you would not have needed because you are feeling lazy. And so the uncritical use of a learning mode I still think will yield minimal productive struggle making the learning more vacuous as a result. At the same time, we can again recognize that the ability of the SocratesGPT to explain things in simpler terms, whether perfectly accurate or not, can be immensely useful - something the designers of these learning modes must have recognized when they developed these special system prompts.
+
+So why is it that I think LLMs make for bad teachers but decent explainers, when both teachers and LLMs explain things? While me putting the comparison this way reveals how ridiculously reductive it actually is, it's important to recognize that that reductive thought is likely what gave rise to "learning mode" in the first place. The key difference is that LLMs are statistical models, while teachers are not. For one, human teachers can flexibly reason about the intentionality of the student and decide to push back on the basis of what they know the student is capable of.
+
+
+# Let's start acknowledging that models are models, not people
+
+Recognizing the differences between humans and LLMs is important for thinking about the appropriateness of a tool like an LLM, that seems to do a bit of everything, but no-one can seem to square exactly what it should be used for and what not. Knowing that LLMs are fundamentally statistical, it's easy to see why LLMs shine in helping to re-express things like is the case for tailored explanations.
+And so I will be a bit bold here and claim that LLMs can be genuinely helpful for learning new things. However, not really in the way that they would actually teach you the topic directly, like those learning modes, but rather in introducing you to jargon, and helping you rephrase your naive question in that jargon. By giving you the linguistic tools, the benefit is helping you overcome not knowing where to start your research. The generic suggestions of an LLM are definitely good enough for this purpose for getting started with a deep dive where you otherwise would not have known what to put in the search bar. I think this is the real power of LLMs, recognizing they are incredibly large statistical models, meaning they have something to say on anything you throw at them, and that something they say hails from vast troves of real-world data. Recognizing that statistical knowledge is not the same as causal knowledge then is important to understand why an output from an LLM is a mere suggestion, not actually an answer. Just because the suggestions are often correct does not mean they come from a place of knowledge. If you understand this last statement, it should be clear that LLM outputs are best used as vague signals, not authoritative truths. That is why I think they are best used as what I would call a "deliberately generic suggestion engine". A more cynical take would probably be to be more reductive, simply arguing that chatbots are for chatting, but I think this in effect denies that there is some utility in seeing a sample from a distribution of most likely outputs given the input. 
+
+As such, using an LLM for deliberately generic suggestion might look something like this:
+
+1) New topic I want to learn -> consult LLM for jargon/technical term/first leads (unless I already have some leads)
+2) Jargon/leads -> search engine for finding resources made by other humans
+3) Human-resources -> LLM for additional explanation (if human explanation not sufficient)
+
+I use the term "deliberately generic suggestion" to make it less confusable to how many people use LLMs: as a tailored recommendation system. For example, if you take the idea of deliberately generic suggestion seriously, you wouldn't ask an LLM for music suggestions or gift ideas. That is because the LLM is most useful when the suggestion you are looking for is specifically a generic one, like asking what technologies could be used to solve an engineering problem with x,y,z characteristics. It's just giving you a starting point for when you don't know where to start. Again, what's key to understand is that we're not actually taking the suggestions themselves at face value e.g. the specific technology suggested for our engineering problem. It really is just the starting point for the research we'll do to figure out how we can solve the problem.
+
+Being a deliberately generic suggestion engine essentially means taking your input and re-expressing it in generic language for that setting. Tailored explanations in the teaching example are thus another version of deliberately generic suggestion - it's rephrasing inputs to match a different setting. This makes LLMs useful as a kind of very flexible and fuzzy kind of auto-complete - a task well suited to a model of its nature. Viewing LLMs as some kind of fuzzy auto-complete probably appears less abstract than the idea of a deliberately generic suggestion, but I think it invites misunderstanding because I am not suggesting auto-complete like use, which is more about saving key-strokes than research leads.
+
+
+# Maybe a better way?
+
+So is complete abstention desirable because of the risk that I jeopardize my learning? I don't think so. For one, getting any feedback on your learning is going to be usually better than no feedback.
+The critical question is when this LLM feedback is actually worth it. I think the convenience of LLMs largely gets in the way of rationally answering this question, since from my previous argumentation it should be obvious that I think LLM use is most clearly a net-gain in the absence of better alternatives. This implies use as a last resort - completely counter to how many people use LLMs.
+
+If you buy my point that LLMs are best used for deliberately generic suggestion in the absence of better alternatives, and that the convenience of LLMs gets in the way of us actually using them this way, then it seems logical to me as a first remedy to really only use a model you can run on your device. Here's why:
+
+- Models that you can run on-device are naturally smaller, and thus "dumber", meaning they will serve still serve their purpose as a last resort and a generic suggestion engine, while reducing how tempting they are as cognitive outsourcers.
+- Using a model that you can run on your device means choosing a model that is publicly available, meaning it cannot be remotely enshittified with ads, usage limits, aggressive telemetry etc.; better enabling you to use and tailor the model in a genuinely productive way.
+
+The problem with this remedy is that sometimes you'll hit a wall, and even your last-resort LLM is not giving you anything that's helpful. When that happens, one of course begins to wonder whether a more capable LLM would have been able to offer something to break through that wall.
+Of course, if the problem is that hard for you - should you be trying to solve it with an LLM in the first place? Probably it would be wiser to do some studying. But for now, let's just recognize that  if you're in a rush to solve this difficult problem quickly, the temptation to go back to a commercial model advertised as being "PhD-level" is now greater than ever.
+
+Taking this inevitability into account, the new decision process for learning in the age of chatbots might look something like this:
+
+1) (If needed) use LLM to get a generic overview of key terms and problems
+2) Use human content to to deep dive and get as far as you can
+3) Use self-hosted LLM for explanations if human explanations aren't helping anymore
+4) Use a commercial LLM if you're extremely stuck and out of options
+
+I believe this re-balances the incentive structure quite a bit towards learning over convenience. Key to this is recognizing that the LLM is only providing a suggestion, not and answer; internalizing that the output will be associated with the input rather than be causally linked, which is why the output can only be understood to be a generic suggestion.
+
+One might still flag the following:
+
+- Addressing the tension between our self-hosted LLM and the commercial LLM incentivizes using the "best" model you can self-host to maximize 3) in favor of 4), and means ensuring that doing 4) is fairly inconvenient to do.
+- Going through steps 1) and 2) still largely relies on you having the experience to recognize that this is the right procedure. When under time pressure, it's still tempting to ignore 2)
+- How do you know it's time to move to the next rung down, versus keep trying at the current rung? Especially given that the next rung could solve the problem (though also potentially prevent you from forming your own original solution).
+- The models are still general-purpose, meaning there is constant temptation to  use them in ways that fall outside of deliberately generic suggestions
+
+But are these truly problematic? Since I am thinking about what the long-run effect could be I would say it depends, because those who want to thrive in a future where LLMs continue to exist would probably be wise to learn deeply rather than becoming a fleshy front-end to an LLM, and that means recognizing that sometimes good things take time. And so those who can recognize when an LLM is a distraction versus a genuine help will do better than those who do not.
+
+That being said, using LLMs only for deliberately generic suggestion will take some practice. Especially initially, using LLMs the way I have laid out will require significant self-awareness.
+I think this is probably a critical skill to foster in an age of automated convenience, where those in power (here, model developers) would like people to fall in line with the powerful's interests (here, being LLM dependent and willing to pay any price). If you can recognize that using a LLM widely is largely inappropriate, you will most likely be able to accomplish this behavioral change. The current time is unique in that we are yet to fully grasp the costs and benefits, and that will surely change.
+
+
+# Parting thoughts
+
+In conclusion, I don't think it makes sense to completely deny yourself of LLMs, at least when your decision is driven by wanting to improve learning outcomes. This is because LLMs offer learning modalities that simply did not exist in that form beforehand, like being able to receive feedback in the absence of a teacher. At the same time, I have argued that LLMs are extremely two-sided, so that using them in a constructive, non-self jeopardizing way actually requires significant critical thinking. It is tempting to argue that one should simply abstain completely if there is such a significant accountability effort involved but I do believe this essentially amounts to denying oneself a set of learning opportunities that could have been if one was only able to overcome that initial or later hurdle. Key to what I estimate would amount to genuinely beneficial use of LLMs is an attitude that prioritizes human-generated information wherever possible, with a keen awareness for why these sources are preferable; automated feedback is only sought in the absence of better alternatives. In the future, I would like to see models that are deliberately designed to fill a role as deliberately generic suggestion engines rather than answer-givers, are more specialized towards certain topic areas, and deliberately avoid anthropomorphization. I believe in the future, this will be given by smaller, specialized LLMs, fine-tuned by academics rather than private corporations. I look forward to evaluating whether what I laid out will come to be in the next few years, or alternatively see what I got wrong. 
+

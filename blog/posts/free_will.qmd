@@ -5,7 +5,7 @@ author: "Luke"
 date: "2025-05-02"
 image: images/will.jpeg
 categories:
- - phd
+ - random 
 
 format:
   html:

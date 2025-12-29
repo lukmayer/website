@@ -6,7 +6,7 @@ date: "2025-06-25"
 image: "images/countries.jpg"
 categories:
  - r
- - life
+ - random
 execute: 
   include: false
 
