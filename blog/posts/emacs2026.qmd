@@ -1,0 +1,33 @@
+---
+title: "Learning Emacs in 2026"
+description: "Learning old software as an investment into the future"
+author: "Luke"
+image: "images/emacs.png"
+date: "2026-01-11"
+categories:
+ - emacs
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+Why is Emacs, a text editor created some 45 years ago, still under active development and has a vibrant, cult-like user-base?
+Well, clearly one of the major attractions is that Emacs is so unique in how modifiable it is -  generations of hackers have created new features, and some are later picked up an improved upon by others until they mature into extremely useful software.
+
+At the same time, Emacs remains pretty niche software; it's nowhere near as popular as other editors, say VSCode for example. This is likely because its learning curve is so steep. It comes with basically nothing pre-installed, requires using archaic keybindings for basically everything and expects you to learn a highly specialized coding language to customize it. I have been pretty curious about Emacs since learning about it roughly 2 years ago but only really managed to break through that initial hurdle a few months ago, on my third attempt to stick with it.
+
+This post isn't going to be a starter guide or a tour-de-force for showing off my config in the hopes of inspiring you to pick it up yourself.
+Instead, I think all I want to do is point out to you that Emacs requires serious patience, something software usually tries to do away with, and pursuing that might just be worth it.
+
+In essence, most modern coding IDEs come with a whole pre-configured weapon arsenal, whereas Emacs basically doesn't do anything other than edit text unless you make it so.
+Overcoming that hurdle to get accustomed to Emacs is hard in the beginning, because you have to 1) mentalize that there is something you would like Emacs to do. 2) research what package are out there for addressing your problem, 3) Choose and configure a solution or see if you can write your own hack.
+It takes weeks, if not months of research to get to a point where you are comfortable relying on Emacs for more tasks than just casual editing.
+
+The obvious question then is why would anyone bother to do this? Well, besides being able to use all the flashy toys that are unique to Emacs, I think it's a unique gateway into learning more deeply about computing. Fact is, when you are grappling with how you can set up Emacs to become your perfect IDE (or whatever use case you have), you actually have to learn quite a bit about how IDEs work to be able to pull it off. What's beautiful then, is that Emacs grows with you: As you become more comfortable, you're able to use it for new tasks or in a new way. And so because it quite naturally promotes continual learning of technical topics, I think it still remains software worth investing into in 2026 and beyond. Emacs is very likely to be around longer than it's creator, despite the fact that "technology moves fast". That's remarkable! And so maybe, just maybe, Emacs is a rare island of stability in a sea of constant change.
+
+In the end, pushing through the initial hurdle for me meant starting really simple, like using Emacs for editing my website (mostly writing Quarto markdown, and a bit of terminal use), and only pushing myself to improve/expand my setup once I felt comfortable and ready. And so I think I was only able to do this on my third attempt because that time I went for Vanilla Emacs instead of a "Starter Distribution" (Doom, Spacemacs). At least for me, going into a starter distribution with everything already installed was simply too overwhelming. Every package has commands and keybindings you have to learn, nevermind the additional complexity that Starter distributions add for being their own whole system. The only way I could grapple with this complexity was learning it bit by bit rather than all at once and so I went with tabula rasa. 
+
+The moral of the story is to start small, take your time, and (try to)  enjoy the journey. If you stick it out, I believe your efforts will pay dividends. It'll make you think about what you actually want or need in your computing life and help you learn about the technologies involved in achieving that vision.
+Maybe, deep down, it was always less about ricing your IDE, and more about the character building you did along the way.
