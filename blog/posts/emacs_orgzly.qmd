@@ -1,0 +1,66 @@
+---
+title: "Emacs on your phone?"
+description: "Accessing and editing Org files on mobile"
+author: "Luke"
+image: "images/emacs.png"
+date: "2026-01-11"
+categories:
+ - emacs
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+
+One of the biggest draws to Emacs is the very famous Org-mode, which on the surface is a way to markup plain text similar to Markdown.
+However, Org-mode actually goes way beyond just note-taking - for example, I manage my calendar, habit-tracking, and do my  code-writing in Org files.
+It's quite the rabbit hole, and one I am still actively exploring.
+Emacs users have a tendency to move more and more of their computing life into Emacs, and I am definitely also going down that route.
+So now that I use Org for a lot of things, naturally I have wondered whether I could integrate the stuff I schedule on Org into my phone.
+The answer is yes, and it's surprisingly easy too.
+
+With Org, everything is just plain text files on your computer. Therefore, to be able to do anything on your phone with these files you must first be able to access them on that device.
+Thankfully, Syncthing is an amazing piece of software which simply shares files (or whole directories) between computer's over Wi-Fi.
+Thus, the first step is simply using Syncthing to do 2-way-sync with your Org files.
+
+After that, you really just need an app that has some capability to interpret Org syntax.
+I have found the Orgzly app immensely useful for this. It doesn't do everything ever but I've definitely found a good way to use it in my workflow.
+Essentially, I use it for just two things: accessing and editing a note (in my case, this is especially useful for my workout-tracking), and as an alternative way to quickly capture an idea.
+The former use-case is pretty easy to grasp, so I'll just explain how I use Orgzly for the latter. The app allows you to specify an inbox file to capture new notes too and so I simply have the Orgzly widget on my homescreen so that I can instantly jot down a quick thought that then will be added as a header to my inbox file.
+Not only is this super convenient, you can also make Orgzly automatically schedule new notes for the current day, meaning they will show in your agenda.
+And so the whole idea really is just to have this super convenient widget that lets you instantly jot down something and then be reminded to process it later.
+In my case, I'll regularly peruse the inbox.org file since its contents show up on my agenda, and then decide what to do about these items, like moving them to another file. By the way, Actual appointments are managed via org-caldav (see [this post](https://lukmayer.github.io/blog/posts/emacs_calendar.html)).
+
+\
+
+## NixOS specific tips
+
+I had some trouble getting Syncthing to work reliably on my distro.
+
+The fix was to specifically open ports in my config:
+
+```nix
+  services = {
+    syncthing = {
+      enable = true;
+      user = "lm";
+      group = "users"; 
+      dataDir = "/home/lm"; 
+      configDir = "/home/lm/.config/syncthing";
+      openDefaultPorts = true;
+    };
+  };
+
+```
+
+Also, Syncthing obviously only works when both computers are connected to the internet. In other words, if the laptop is sleeping (rather than the screen being off) nothing will be happening.
+
+\
+
+---
+
+\
+
+If you haven't tried peer-to-peer file-sync or Orgzly for yourself, I'd highly recommend checking it out!
