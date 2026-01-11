@@ -1,0 +1,89 @@
+---
+title: "Making Emacs' EWW browser slightly more user-friendly"
+description: "Tabs, site redirects, navigation"
+author: "Luke"
+image: "images/emacs.png"
+date: "2026-01-11"
+categories:
+ - emacs
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+The Emacs Web Wowser (eww) is one of the more well-known browsers available for Emacs.
+Full disclaimer, it only renders HTML, no CSS and JS. Still, it can be pretty useful, especially for conveniently looking up documentation or advice online without having to leave Emacs.
+
+I, for one, also quite often find myself reading articles from my RSS feed reader in it, if the full text isn't included in the RSS entry.
+
+To serve these purposes well, I have invested a bit into making EWW a bit more like a normal browser.
+
+For example, I have EWW set up so that it is the only mode that actually uses a tabs UI, which is nice to retain an overview of what you are researching in a way separate from the buffer list that is likely to include all sorts of other stuff.
+
+```elisp
+ (straight-use-package 'centaur-tabs)
+  (centaur-tabs-mode 1)
+
+  (setq centaur-tabs-buffer-list-function
+        (lambda ()
+          (seq-filter (lambda (buffer)
+                        (with-current-buffer buffer
+                          (eq major-mode 'eww-mode)))
+                      (buffer-list))))
+
+  (with-eval-after-load 'centaur-tabs
+    (global-set-key (kbd "C-c .") #'centaur-tabs-ace-jump))
+```
+
+I also created some keybindings to make certain types of use easier
+
+```elisp
+  (defun my/eww-new-buffer ()
+    "Open EWW in a new buffer by simulating the prefix argument."
+    (interactive)
+    ;; '(4) corresponds to C-u -> use a new buffer
+    (let ((current-prefix-arg '(4)))
+      (call-interactively 'eww)))
+
+  (global-set-key (kbd "C-c e") 'my/eww-new-buffer)
+
+  ;; making sure M-Ret works
+  (with-eval-after-load 'eww
+    (setq eww-suggest-uris
+    	'(eww-links-at-point url-get-url-at-point eww-current-url)))
+```
+
+
+Then, there is the immensely useful ace-link for jumping to links Vimium style
+
+```elisp
+  (use-package ace-link
+    :straight t
+    :init
+    (with-eval-after-load 'eww
+      (define-key eww-mode-map (kbd "f") 'ace-link-eww)))
+```
+
+      
+Finally, I made a function to re-direct Reddit links to the "Old Reddit" version (HTML-only), since modern Reddit requires JS to populate thread responses.
+
+```elisp
+  (defun eww-redirects (url)
+    "Rewrite URLs to use JS-free frontends."
+    (cond
+     ;; Reddit -> old.reddit.com
+     ((string-match-p "reddit\\.com" url)
+      (replace-regexp-in-string "https?://\\(www\\.\\)?reddit\\.com" "https://old.reddit.com" url))
+
+     ;; return original URL if no match found
+     (t url)))
+
+  (add-to-list 'eww-url-transformers 'eww-redirects)
+```
+
+For me, this is good enough at the moment. It's nice to be able to do much of my web-surfing in Emacs in a way that I can completely make my own.
+
+If you haven't tried these packages before, definitely check them out!
+
