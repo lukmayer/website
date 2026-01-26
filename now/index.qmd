@@ -10,13 +10,27 @@ format:
 
 # Now
 
+::: {.callout-important collapse="false" icon="false"}
+
+## 2026
+
+### 2026-01-25
+
+First post of the year!
+Got to stay a couple days longer in Germany thanks to some snow-storms in the Netherlands.
+Conference submission deadlines are around the corner, let's see if I can get something ready; aiming for MathPsych.
+
+:::
+
+::: {.callout-important collapse="true" icon="false"}
+
 ## 2025
 
 ### 2025-12-28
 
-In Germany over christmas. Doing some city-hopping in Switzerland next week, and then it's already time to go back to Cali. I cut classes short, so it's all research from now, which will be so much nicer!
+In Germany over Christmas. Doing some city-hopping in Switzerland next week, and then it's already time to go back to Cali. I cut classes short, so it's all research from now, which will be so much nicer!
 
-
+\
 
 ### 2025-09-28
 
@@ -59,4 +73,6 @@ The other thing maybe worth mentioning is that I'm taking a Stats course on Long
 In a few weeks time, I'll take a Data analysis exam, which forms part of the Stats MS I want to do alongside this PhD... 
 
 Finally, currently trying to figure out what to do with my summer! I'll be heading to Japan (and Taiwan) towards the end of the break but should also really show my face in UK again and see my family in Germany.
+
+:::
 
