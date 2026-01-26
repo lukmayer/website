@@ -17,4 +17,17 @@
   paragraph-header: "Is receiving AI assistance on tasks degrading our skills, or improving them?"
   descriptive-paragraph: "To answer this question, we developed a gamified task in which participants needed to intercept moving, point-valued targets before they escape. During the game, an AI assistant suggests optimal actions to take to maximize player score. We manipulated when people were given this assistance to see whether its presence harmed or boosted their learning during the task. Despite many media fears of skill degradation and/or hopes of AI-boosted learning, we find that in our task, AI assistance neither harms nor enhances learning. This finding highlights the possibility that there exist a subset of tasks in which AI assistance can be provided risk-free, which we hypothesize may include many tasks that do not require higher-level reasoning."
 
+- title: "Optimeet: A computational tool to enhance participant attendance in group research (2025)"
+  journal: "Behavior Research Methods"
+  authors: "Mayer, L. W., Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. A."
+  date: "2025-09-17"
+  image: "assets/sets.png"
+  osf: "https://osf.io/q9jy8"
+  paper: "https://link.springer.com/article/10.3758/s13428-025-02745-9"
+  paragraph-header: "Do your studies rely on groups of people?"
+  descriptive-paragraph: "Recruiting participants for group sessions can be arduous, often costing a lot of time, effort, and resources.
+In this work, we demonstrate the complete lack of tools that can appropriately allocate a sample of interested participants to a set of group sessions.
+We then mathematically derive metrics that can quantify the effectiveness of any tool attempting to solve this problem.
+Finally, we develop an algorithm that outperforms any existing utility on this task using simulation and a large-scale pre-registered user study.
+Our scheduling utility is free and open-source, available to anyone through a web-applet."
 

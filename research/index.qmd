@@ -189,27 +189,6 @@ format:
 
 
 ::::: {.callout-important collapse="true" icon="false"}
-# ***"Waste not want not: Computational methods to maximise attendance in group research"***
-**Mayer, L. W.**, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D. (under Review) *Behavior Research Methods*.
-
-::: text-center
-![](assets/sets.png)
-:::
-
-\
-
-**Do your studies rely on groups of people?** Recruiting participants for group sessions can be arduous, often costing a lot of time, effort, and resources.
-In this work, we demonstrate the complete lack of tools that can appropriately allocate a sample of interested participants to a set of group sessions.
-We then mathematically derive metrics that can quantify the effectiveness of any tool attempting to solve this problem.
-Finally, we develop an algorithm that outperforms any existing utility on this task using simulation and a large-scale pre-registered user study.
-Our scheduling utility is free and open-source, available to anyone through a web-applet.
-
-::: text-center
-[Link to the web-app](https://lukmayer.github.io/appointment_sets)
-:::
-:::::
-
-::::: {.callout-important collapse="true" icon="false"}
 # ***"Human-AI Collaboration: Trade-offs Between Performance and Preferences"*** 
 **Mayer, L. W.**, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (under Review) *Cognitive Research: Principles and Implications*
 
@@ -272,25 +251,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 # Research Interests
 
+At heart, I study human decision-making. I have a particular interest in using Cognitive Models as a means of specifying the causal processes that give rise to people's choices. Human-AI collaboration has become an extremely convenient outlet for me in this regard. For one, contemporary AI technologies' applications in the real world offer plenty inspiration for my research. For example, I'm interested in how people trade-off the costs of outsourcing effortful cognitive labor to a computational agent, and how far you can push the attributes of this agent before eliciting a behavioral shift in the participant. Moreover, because Cognitive Models are mathematical in nature, casting my research through a lens of human-AI collaboration has immediate practical implications as solutions to "misaligned" behaviors are more readily generated from formal explanations of human behavior. In my research, the "AI" primarily serves as a theoretical tool to ask questions like: «How would people behave if they had access to an agent with X, Y properties?». That being said, I have a definitive interest in demonstrating the applied value of my work, meaning that some of my projects go the extra length of combining psychological models with algorithms from AI research. 
 
-::: {.callout-important collapse="false" icon="false"}
-## Inversion and Alignment problems in Cognitive Science & AI
+The project that currently enjoys most of my attention intentionally pairs participants with an incredibly annoying to use "AI" assistant to understand how the timing of AI-induced interruptions influences the participant's motivation to permanently disable this agent. With a causal model of people's annoyance decisions integrated, our simulations show it should be possible to estimate policies for the AI assistant that avoid interrupting the participant at times where advice is unlikely to be appreciated. Such policies could lead to much more sustainable and productive collaboration. 
 
-Whenever people are interacting with machine-learning based systems, human biases can propagate through the model leading to distorted predictions. Therefore, one strand of work I am interested in pursuing in this area is to derive the transformations that lead to better alignment, thus increasing the validity of predictions. I am also interested in addressing more engineering related concerns, such as how to use information we possess about cognition to improve the performance of machine learning algorithms trained on human-generated information. In this type of work, I like to mix and match methods from Cognitive Science and Machine Learning in combination with large, real-world data-sets.
 
-My recent work in this area can be broadly described with the umbrella term of "Human-AI collaboration". AI technologies are increasingly being integrated into various tools, but they oftentimes lack the ability to anticipate the needs of the human user. Using formal models of human cognition as part of these systems can help bridge this gap by describing mental processes people have in a language that AI systems can understand (math). This can lead to more efficient and effective collaboration between humans and AI systems, and can also help to identify potential pitfalls in the design of these systems.  
-:::
+
+
 
 \
 
 
-::: {.callout-important collapse="false" icon="false"}
-## Computational Cognitive Science
-
-People possess a remarkable cognitive flexibility enabling us to solve problems in various domains that are still completely intractable to modern methods in Artificial Intelligence. Therefore, I think that by studying human behavior we may be able to reverse-engineer some of the machinery that gives rise to these amazing abilities, uncovering the structure that may pave the way for new kinds of algorithms.
-
-At the moment, I am working on a project series aiming to develop a computational account of causal reasoning for intervention on other agents. In these projects I will be using a considerable amount of simulation, computational modelling, and a series of custom-designed web experiments to develop reasoning models that exhibit human-like abilities to flexibly generalize to new contexts. My goal here is to show how this causal account can outperform sophisticated Reinforcement Learning models in dynamic environments, which includes most of the real world.
-:::
 
 
 :::
