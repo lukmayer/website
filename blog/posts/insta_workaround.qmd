@@ -1,0 +1,81 @@
+---
+title: "My Instagram Work-around"
+description: "How I stay up to date with Instagram pages without having an account"
+author: "Luke"
+image: "images/insta.svg"
+date: "2026-02-01"
+categories:
+ - social media
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+
+Instagram is one of those platforms that's really hard to avoid if you want to stay in touch with a group or a small business. At the same time, Instagram is quite aggressive in it's use of dark patterns. For example, you can only sometimes view public profiles without logging in, and are usually limited to viewing one or two posts before being compelled to log in.
+
+This is obviously pretty user-hostile. Why would logging in be required to view a profile that is supposedly public? For a long time, my gut reaction to these kind of lock-in attempts has been to immediately discard whatever the page was that caught my interest. Kind of along the lines of "If [page] doesn't have RSS feeds, it's probably not something I want to support anyway". Indeed, Instagram does not have RSS feeds, although it apparently used to. 
+
+My attitude to resisting surveillance capitalism hasn't changed. What has changed, is that I have become a lot more technically capable. There are some student groups I am interested in, and most of them seem to use Instagram as their main platform. I figured there must be some way I can stay up to date without signing up for an account. 
+
+I began my journey by checking if there is a "privacy-frontend" for Instagram. The idea of a privacy front-end is to give users some way of accessing the content on aggressively user-hostile platforms without giving away your personal information. Some popular examples include Invidious for Youtube, and xcancel for X (Twitter).
+I learned that there is such a platform for Instagram as well, called [Imginn](https://imginn.com). It let's you view the posts of any account by typing in the username. Apparently it uses existing public APIs, which I assume means that it complies with Instagram's TOS. I mention this because Google actively fights projects like Invidious (which I belive to be futile, but whatever). There's only two problems: 1) Imginn is proprietary, implying that it's not designed to be extended for my use-case; 2) Imginn pages do not have RSS feeds, otherwise my journey would have ended here as I could have just added those feeds to my feed reader.
+
+At this point, it was clear that there remain some roadblocks. I looked into open-source projects for turning arbitrary websites into feeds, like RSShub. Unfortunately, at least at the time of writing, there exists no functional bridge to turn Instagram pages or Imginn pages into RSS feeds directly. All other offerings were proprietary and involved some kind of subscription, which is a hard no from me. Nevertheless, I figured that my discovery of Imginn would be key to any workaround, as I would be less likely to have to fight the Billion-dollar company if my workaround involves this tiny, independent site that does not have an army of developers actively working against me.
+
+I was lucky to eventually stumble upon website change detection software, like [changedetection-io](https://changedetection.io). The idea here is to basically automatically check a website at a scheduled interval and notify you of any changes since the last visit.
+Changedetection-Io is actually open-source and self-hostable. The cherry on top is that it let's you generate and RSS feed for detected changes. Some angel had already created a Nix systemd service for this software, meaning it was just a matter of figuring out what to put in my config.
+
+
+It was actually really simple.
+
+Here's what I put in my configuarion.nix:
+
+```nix
+services.changedetection-io = {
+    enable = true;
+    listenAddress = "127.0.0.1";
+    port = 5000;
+    playwrightSupport = true;
+};
+
+```
+
+I also had to add the following to actually open port 5000 on localhost:
+
+
+```nix
+networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 5000 ];     
+};
+
+```
+
+After a `sudo nixos-rebuild switch`, I can now access my self-hosted changedetection-io instance on localhost:5000 in my browser.
+
+I added the handful of accounts I wanted to follow and set the check interval to 8 hours, all in the WebUI.
+Finally, I added the RSS feed link from the button immediately below the page list to my feed reader.
+
+Awesome! Unfortunately, on the next day I realized that my setup still had one last wrinkle: the change detection detects ANY change on the website your monitoring. This means, for example, that a 1 day old post elicits a change on the next day, as now the post is "2 days ago". So to avoid spamming myself with RSS entries that are most likely false alarms, I had to figure out what to filter out. Luckily, changedetection-io allows you to add custom filters so that you can monitor only specific elements of the site you're monitoring. After some website source inspection and a bit of trial and error, i arrived at the following xpath filter which seems to work:
+
+```xpath
+//div[contains(@class, "items")]/div[contains(@class, "item")][1]//a/@aria-label
+
+```
+
+I simply added the above snippet to the filter section for each of the pages I am monitoring in the WebUI.
+Et voilá, now I only seem to get things popping up in my feed reader when a new post has been added to the account.
+
+Unfortunately, with my filter, the RSS posts do not include the image, just the description. However, the RSS posts do include a link to the source, meaning it is now trivially easy to check the website only when something has been added, thus acting kind of like a notification with preview text. Definitely good enough for my use-case, though probably improvable.
+
+Hope this was useful to you!
+
+
+
+
+
+
+
