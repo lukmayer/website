@@ -4,6 +4,7 @@ format:
   html:
     toc-depth: 4
     toc-expand: 4
+    toc: false
     grid:
       margin-width: 300px
 ---
