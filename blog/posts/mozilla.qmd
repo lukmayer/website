@@ -64,3 +64,5 @@ I can now use really powerful adblock like uBlockOrigin and the beloved DarkRead
 Another pleasant surprise was realizing that because all of these browsers are based on the same technology, you can mix and match them quite seamlessly via a Firefox Sync account that will send tabs and bookmarks between devices. It's really quite nice to have some interoperability where you do not have to feel like you're giving up something useful if you don't want to use the same browser on mobile as on desktop.
 
 All in all, I think this experiment was a success!
+
+
