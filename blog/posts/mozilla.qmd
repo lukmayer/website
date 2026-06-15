@@ -1,0 +1,66 @@
+---
+title: "Entering the Mozillaverse"
+description: "Leaving Chromium behind"
+author: "Luke"
+image: images/mozilla.svg
+date: "2026-06-15"
+categories:
+ - software
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+Google is now [completely phasing out Manifest V2 extensions](https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline), effectively making extensions less powerful.
+For people using Chrome, the main impact of this change is less ability to block ads, while for people who use a Chrome-derived browser that has built-in ad-block the consequences of this change are slightly more subtle.
+
+Of course, Mozilla has vowed to stick with the Manifest V2 standard instead of just following Google, meaning Firefox-related browsers get to keep using quite powerful extensions.
+
+Google seems to be becoming more like Apple (not in a good way). The extension change is not the only anti-consumer change Google has been pushing recently in the name of security.
+For example, there are also the quite [ridiculous proposed restrictions](https://keepandroidopen.org/) to prevent people from using alternative app stores on Android (the mobile operating system Google develops).
+
+While for most people these changes are irrelevant because they weren't using ad-block or alternative app stores anyway, it's really made me question whether I can reasonably keep using a chrome-derived browser that heavily depends on Google-authored changes. I think I can't quite switch away from an Android-derived mobile OS quite yet, but switching browsers is much more doable.
+
+I have been exclusively using Vivaldi, a relatively lesser known Chrome-derived browser, for something like 4 years now.
+While I don't think Vivaldi is the best designed browser in every single feature, it definetely is the most well-made browser overall in my opinion.
+There are so many features in Vivaldi that no other browser even comes close to. To give just one example, the Mail, Calendar, and RSS feed client is something that no other browser even attempts to deliver.
+
+But with the way things are going, I think maybe it's time I move on from my proprietary, Chrome-derived browser and seriously consider something more open and interoperable.
+Therefore, this post is about my deep-dive into the Mozilla-universe. 
+
+First of all, I want to acknowledge that Mozilla is not exactly flourishing. The non-profit company heavily depends on revenue that Google pays them. Essentially most of their money comes from payments to make Google the default search engine in Firefox. It sure sucks to be living in monopoly land. The development of Firefox and Thunderbird (a popular email and calendar client) appears pretty sluggish to me. 
+And then they also seem to be making what I would describe as a quite risky bet on AI - something their user-base doesn't seem to appreciate much.
+
+Either way, for my Mozilla experiment, I wanted to rebuild as much of my Vivaldi experience as possible. The results were as expected in some parts, but with some pleasant surprises in places I didn't expect.
+
+What I was using:
+- Vivaldi Desktop
+- Vivaldi Mobile
+- Thunderbird Mobile (no Vivaldi email client on mobile)
+
+What I am using now:
+- Zen browser (Firefox derivative, Desktop only)
+- Betterbird (Thunderbird derivative to replace my email+calendar client on desktop)
+- WebLibre (same underlying tech as Firefox, from the F-droid store, mobile only)
+- Thunderbird mobile
+
+So let's talk about each of these in slightly more detail now.
+
+Zen browser is a very opinionated derivative of Firefox with a ton of UI and functionality changes.
+While it's very popular among browser focused Reddit forum dwellers, I actually don't think it's nearly as powerful as Vivaldi.
+Fortunately for me though, the design of Zen is almost identical to how I was using Vivaldi anyway, meaning I actually didn't miss very many features. The lack of E-mail and calendar clients was the biggest drawback, but that was entirely expected.
+One place where Zen really innovated where Vivaldi has not yet is their Mods store. Basically, people can publish UI tweaks to the browser that other people can install, just like browser extensions. Vivaldi doesn't have a store like that, you're meant to dig through forum posts for code that you paste into a file that Vivaldi will check on boot. On Zen, it's all in a easily navigated webpage with a one-click install button. Great stuff.
+The one thing where I was disappointed is that Zen is not as easily themeable for me right now. I had to go into userChrome.css to set a background image for my browser, and the only way I can manually switch between light and dark mode UI is by going into settings. In Vivaldi installing themes is trivial, and you can set keybinds for switching between them. I can definitely live with this though, I only switch to Light mode when I am desperate anyway.
+
+I chose BetterBird as my email-client on desktop mostly because Thunderbird development is so sluggish. I have to say, the default layout of Thunderbird/Betterbird is horrendous, I much preferred the design of Vivaldi's built-in client. What is quite funny though, is that it can be tweaked to function almost identically as my former mail client, but the settings are hidden behind various menus and buttons in the UI. It reminded me a bit of how overwhelming Vivaldi must have felt to new users before the recent introduction of starter profiles that tone the complexity down a notch. I'm pretty happy with it now that I configured it to my taste. I guess I am a bit annoyed that I now have one extra program that is required to replicate my workflow. I might end up folding E-mail and Calendar completely into my Emacs configuration in the longer term.
+
+WebLibre is a fairly new project that I discovered on the F-droid app store that actually is not a Firefox derivative, but rather a browser built upon the same rendering engine as Firefox. It has the same problem as Vivaldi and Thunderbird in that it starts you out with a staggering amount of features, though that is also exactly the kind of project I am looking for. It's really quite impressive once I had configured it to my tastes. There are only a few things that were unexpected. The new tab page features quotes from famous people that currently can't be turned off, the new tab page is not themeable (I'd really only want to set a background image to be honest), and I was surprised by the way the quick switcher bar works. I would have preferred just a normal tab bar that you can open and close tabs on. Where this project really surprised me was how well extensions are integrated into the browser. For example, you can pin them to the toolbar, just like on desktop. It's really made me wonder why mobile browsers usually have a radically different UI compared to desktop counterparts despite the same principles working just fine on mobile too.
+
+So yeah, some little nitpicks here and there, but all stuff I can deal with.
+On the flipside, I now have access to browser extensions on mobile, which is pretty amazing actually.
+I can now use really powerful adblock like uBlockOrigin and the beloved DarkReader extensions, I can inject user scripts with ViolentMonkey and custom styles with Stylus. I'm really glad I found WebLibre as it was the first non Vivaldi mobile browser that actually felt interesting and sufficiently customizable to me.
+Another pleasant surprise was realizing that because all of these browsers are based on the same technology, you can mix and match them quite seamlessly via a Firefox Sync account that will send tabs and bookmarks between devices. It's really quite nice to have some interoperability where you do not have to feel like you're giving up something useful if you don't want to use the same browser on mobile as on desktop.
+
+All in all, I think this experiment was a success!
