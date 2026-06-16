@@ -36,11 +36,13 @@ And then they also seem to be making what I would describe as a quite risky bet 
 Either way, for my Mozilla experiment, I wanted to rebuild as much of my Vivaldi experience as possible. The results were as expected in some parts, but with some pleasant surprises in places I didn't expect.
 
 What I was using:
+
 - Vivaldi Desktop
 - Vivaldi Mobile
 - Thunderbird Mobile (no Vivaldi email client on mobile)
 
 What I am using now:
+
 - Zen browser (Firefox derivative, Desktop only)
 - Betterbird (Thunderbird derivative to replace my email+calendar client on desktop)
 - WebLibre (same underlying tech as Firefox, from the F-droid store, mobile only)
