@@ -30,8 +30,8 @@ There are so many features in Vivaldi that no other browser even comes close to.
 But with the way things are going, I think maybe it's time I move on from my proprietary, Chrome-derived browser and seriously consider something more open and interoperable.
 Therefore, this post is about my deep-dive into the Mozilla-universe. 
 
-First of all, I want to acknowledge that Mozilla is not exactly flourishing. The non-profit company heavily depends on revenue that Google pays them. Essentially most of their money comes from payments to make Google the default search engine in Firefox. It sure sucks to be living in monopoly land. The development of Firefox and Thunderbird (a popular email and calendar client) appears pretty sluggish to me. 
-And then they also seem to be making what I would describe as a quite risky bet on AI - something their user-base doesn't seem to appreciate much.
+First of all, I want to acknowledge that Mozilla is not exactly flourishing. The non-profit company heavily depends on revenue that Google pays them. Essentially, [most of their money comes from payments to make Google the default search engine in Firefox](https://en.wikipedia.org/wiki/Mozilla_Corporation). It sure sucks to be living in monopoly land. The development of Firefox and Thunderbird (a popular email and calendar client) appears pretty sluggish to me. 
+And then they also seem to be making what I would describe as a quite [risky bet on AI](https://blog.mozilla.org/en/mozilla/mozilla-open-source-ai-strategy/) - something their user-base doesn't seem to appreciate much.
 
 Either way, for my Mozilla experiment, I wanted to rebuild as much of my Vivaldi experience as possible. The results were as expected in some parts, but with some pleasant surprises in places I didn't expect.
 
@@ -43,9 +43,9 @@ What I was using:
 
 What I am using now:
 
-- Zen browser (Firefox derivative, Desktop only)
-- Betterbird (Thunderbird derivative to replace my email+calendar client on desktop)
-- WebLibre (same underlying tech as Firefox, from the F-droid store, mobile only)
+- [Zen browser](https://zen-browser.app/) (Firefox derivative, Desktop only)
+- [Betterbird](https://www.betterbird.eu/) (Thunderbird derivative to replace my email+calendar client on desktop)
+- [WebLibre](https://github.com/FaFre/WebLibre) (same underlying tech as Firefox, from the F-droid store, mobile only)
 - Thunderbird mobile
 
 So let's talk about each of these in slightly more detail now.
