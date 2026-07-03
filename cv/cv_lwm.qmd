@@ -1,29 +1,17 @@
 ---
-description: "Lukas Mayer's Curriculum Vitae - Education at the University of California (UCI), Irvine, University of Warwick (UoW), University of Stirling (UoS); Research Experience at the University of California, Irvine (UCI), University of Bath (UoB), and University of Stirling (UoS); Publications in scientific Journals; Awards and Honors for his outstanding achievements; Miscellaneous information about his participation in various other activities to further develop himself"
-format: 
-  pdf: 
-    documentclass: article
-    self-contained: false
-    geometry:
-      - top=10mm
-      - left=15mm
-      - right=15mm
-      - bottom=5mm
-      - heightrounded
-    fontfamily: libertine
-    colorlinks: true
-    fontsize: '16'
-    include-in-header: 
-      text: |
-        \usepackage{multicol}
-        \usepackage{tabularx}
-        \usepackage{lipsum}
-        \usepackage{graphicx}
-        \usepackage{hyperref}
-        \usepackage{libertine}
-        \pagestyle{empty}
-        \setlength{\multicolsep}{2pt plus 1.0pt minus 0.75pt}% 50% of original values
-        \setlength{\columnsep}{3em}
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 1in
+      y: 1in
+    page-numbering: "1"
+    toc: false
+    number-sections: false
+    mainfont: "DejaVu Sans"
+    fontsize: 11pt
+    pdf-standard: ua-1
+title-block-style: none
 ---
 
 {{< include cv_content.qmd >}}

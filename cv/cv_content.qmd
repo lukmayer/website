@@ -1,179 +1,375 @@
 
-<!-- TITLE -->
+<!-- Title and Contact -->
+```{=typst}
+#set document(title: "Curriculum Vitae")
+#set page(numbering: "1 of 1")
 
-\begin{huge}\begin{center}{\bf Lukas William Mayer}\end{center}\end{huge}
+#align(center)[
+  #text(2em, weight: "bold")[Curriculum Vitae] \
+  #text(1.5em, weight: "bold")[Lukas William Mayer] \
+  #link("mailto:willuk@vivaldi.net")[Email] ∙ 
+  #link("https://github.com/lukmayer")[GitHub] ∙ 
+  #link("https://orcid.org/my-orcid?orcid=0009-0000-6795-6013")[ORCiD] ∙ 
+  #link("https://lukmayer.github.io")[Website]
 
-<!-- CONTACT INFO -->
+]
 
-\begin{center}
-\href{mailto:willuk@vivaldi.net}{Willuk@vivaldi.net} ∙ \href{https://steyvers.socsci.uci.edu/madlab/}{Lab} ∙ \href{https://github.com/lukmayer}{Github} ∙ \href{https://lukmayer.github.io}{Website}
-\end{center}
+```
 
 # Education
 
-\hrule
+```{=typst}
 
-\begin{minipage}{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/uci.png}
-\end{minipage}
-\hfill 
-\begin{minipage}{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{Ph.D. Cognitive Sciences } & \textbf{\hfill 2028 (Expected)}  \\
-    \textit{University of California, Irvine} & \textit{\hfill Irvine, California, USA}  \\
-  \end{tabularx}
-\end{minipage}
+#set text(size: 11pt)
+#set text(hyphenate: false)
+#set par(justify: false)
 
-\textbf{Thesis:} Bayesian modelling of inversion problems in human-AI interaction (preliminary title)\
-\textbf{Advisor:} Professor Mark Steyvers\
-\textbf{Focus:} Computational modelling of human problem-solving abilities and alignment of AI systems with human cognition
 
-\vspace{0.2cm}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+  
+  // --- Ph.D. Entry ---
+  [
+  *Ph.D. Cognitive Sciences* \
+  _Thesis_: TBD \
+  _Advisor_: Professor Mark Steyvers \
+  ],
+  [
+  *University of\ California, Irvine* \
+  Irvine, California, USA \
+  2023 - 2028 (Expected) 
+  ],
+  
+  // --- M.Sc. Entry ---
+  [
+  *M.Sc. Behavioral and Data Science (Distinction)* \
+  _Thesis_: #text(size: 9pt)[Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice] \
+  _Advisor_: Professor Nick Chater \
+  ],
+  [
+  *University of Warwick* \
+  Coventry, England, UK \
+  2021 - 2022
+  ],
 
-\begin{minipage}[t]{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/warwick.png}
-\end{minipage}
-\hfill 
-\begin{minipage}[t]{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{M.Sc. Behavioral and Data Science (Distinction)} & \textbf{\hfill 2022}  \\
-    \textit{University of Warwick} & \textit{\hfill Coventry, England, UK}  \\
-  \end{tabularx}
-\end{minipage}
+  // --- B.Sc. Entry ---
+  [
+  *B.Sc. with Honors Psychology (First-Class)* \
+  _Thesis_: #text(size: 9pt)[Cooperation does not improve selective and/or sustained attention] \
+  _Advisors_: Dr. John Michael and Dr. Ross Goutcher \
+  ],
+  [
+  *University of Stirling* \
+  Stirling, Scotland, UK \
+  2017 - 2021
+  ]
+)
 
-\textbf{Thesis:} Cognition-Inspired Heuristics Improve Machine-Learning Predictions in Multi-Attribute Multi-Alternative Choice\
-\textbf{Advisor:} Professor Nick Chater\
-\textbf{Awards:} \textbf{Best Overall Score}: Behavioral and Data Science (equivalent to \textbf{Summa Cum Laude})\
-\textbf{Focus:} Unifying models from computational cognitive science and machine learning
+```
 
-\vspace{0.2cm}
 
-\begin{minipage}{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
-\end{minipage}
-\hfill 
-\begin{minipage}{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{B.Sc. with Honors Psychology (First-Class)} & \textbf{\hfill 2021}  \\
-    \textit{University of Stirling} & \textit{\hfill Stirling, Scotland, UK}  \\
-  \end{tabularx}
-\end{minipage}
 
-\textbf{Thesis:} Cooperation does not improve selective and/or sustained attention\
-\textbf{Advisors:} Dr. John Michael and Dr. Ross Goutcher\
-\textbf{Awards:} \textbf{Peter McEwan Prize} for the Best Single Honours Psychology Student (equivalent to \textbf{Summa Cum Laude})\
-\phantom{} \hspace{1.2cm} \textbf{Alan Baddeley Prize} for the Best Psychology Dissertation\
-\textbf{Focus:} Measuring cognitive abilities in online games
+# Research Interests
+
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
+```
+
+I am broadly interested in investigating how people use AI tools through a Cognitive Science lens, placing my work at the intersection of Computational Cognitive Science and Human-Computer Interaction.
+In recent projects, I have been leveraging Bayesian cognitive models to understand how people weigh up the attributes of these novel systems, and learn to navigate their trade-offs. By committing to formal, mechanistic models of human behavior, my research aims to advance human-centric AI in a manner that both improves our theoretical understanding of cognition, while also offering practical avenues to address real-world problems.
+
+```{=typst}
+#text(size: 9pt)[*Keywords*: _Bayesian Cognitive Modelling, Human-AI Collaboration, Hybrid Intelligence, Human-centered AI, Decision-making_]
+```
+
+# Publications
+<!-- Can divide into Peer-reviewed, in-press and under review -->
+<!-- Pre-prints Arxiv? -->
+
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
+```
+
+
+## Peer-Reviewed
+
+- **Mayer, L. W.**, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., & Steyvers, M. (2026). Human–AI collaboration: trade-offs between performance and preferences. Cognitive Research: Principles and Implications, 11(1), 18.
+
+- Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W.** & Smyth, P. (2025). What large language models know and what people think they know. Nature Machine Intelligence, 7(2), 221-231.
+
+- Bocheva, D., Hinds, J., Brown, O., & **Mayer, L. W.** (2025). Examining membership across multiple online communities in the “manosphere”. New Media & Society, 14614448251388648.
+
+- **Mayer, L. W.**, Bocheva, D., Hinds, J., Brown, O., Piwek, L., & Ellis, D. A. (2025). Optimeet: A computational tool to enhance participant attendance in group research. Behavior Research Methods, 57(10), 289.
+
+## Pre-prints
+
+- Steyvers, M., & **Mayer, L. W.** (2025). When not to help: planning for lasting human-AI collaboration. arXiv preprint arXiv:2508.01837.
+
+# Presentations & Posters
+<!-- Listed by year -->
+
+
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
+```
+
+- **Mayer, L. W.** (2026). *Please Don't Turn Me Off: Optimizing AI Advice Timing for Human-AI Collaboration*.  59th Annual Meeting of the Society for Mathematical Psychology (MathPsych), Montreal, Quebec, Canada.
+
+- **Mayer, L. W.** (2026). *When to shut up: Using deliberately annoying AI assistance to enhance human-AI collaboration*. Edwards Bayesian Research Conference, California State University Fullerton, Fullerton, CA, USA.
+
+- **Mayer, L. W.** (2025). *Walking the line: Balancing AI advice and user frustration for robust human-AI complementarity*. NSF AI Institute for Societal Decision Making, Carnegie Mellon University, Pittsburgh, PA, USA.
+
+- Steyvers, M., & **Mayer, L. W.** (2025). A Cognitive Framework for Timely AI Communication. In Proceedings of the Annual Meeting of the Cognitive Science Society (Vol. 47).
+
+- Karny, S., **Mayer, L.W.**, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M. (2024). Learning with AI Assistance: A Path to Better Task Performance or Dependence? Proceedings of the ACM Collective Intelligence Conference.
+
+
 
 # Research Experience
 
-\hrule
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
+```
 
-\begin{minipage}{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/bath.png}
-\end{minipage}
-\hfill 
-\begin{minipage}{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{Research Assistant: Center for Research and Evidence on Security Threats } & \textbf{\hfill 2022 - 2023}  \\
-    \textit{University of Bath, School of Management} & \textit{\hfill Bath, England, UK}  \\
-  \end{tabularx}
-\end{minipage}
 
-Conducted large-scale mixed methods study concerned with the prediction of online group communications which translate into real-world actions\
-Developed own project investigating algorithms for complex research appointment scheduling\
-**Principal Investigator**: Professor Adam Joinson
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  // --- Honda Research Institute ---
+  [
+  *Academic Collaborator* -- _Honda Research Institute_ \
+  _Principal Investigator_: Professor Mark Steyvers \
+  #text(size: 9pt)[_Key Activities_: Dissemination of web-based research experiments investigating human preferences for collaborative AI agent behaviors.]
+  ],
+  [
+  *Honda Research Institute USA* \
+  Ann Arbor, MI, USA \
+  2023 - 2025
+  ],
+  
+  // --- Research Assistant (University of Bath) ---
+  [
+  *Research Assistant* -- _Center for Research and Evidence on Security Threats_ \
+  _Principal Investigator_: Professor Adam Joinson \
+  #text(size: 9pt)[_Key Activities_: Conducted large-scale mixed methods study on predicting online group communications translating to real-world actions; developed algorithms for complex research appointment scheduling.]
+  ],
+  [
+  *University of Bath* \
+  Bath, England, UK \
+  2022 - 2023
+  ],
+  
+  // --- Research Assistant (University of Stirling, Millen) ---
+  [
+  *Research Assistant and Summer Bursary Student* -- _Center for Cognition in Complex Environments_ \
+  _Principal Investigator_: Dr. Ailsa E. Millen \
+  #text(size: 9pt)[_Key Activities_: Execution and data analysis of experiments concerning face matching and concealed identity recognition.]
+  ],
+  [
+  *University of Stirling* \
+  Stirling, Scotland, UK \
+  2019 - 2021
+  ],
+  
+  // --- Research Assistant (University of Stirling, Murray) ---
+  [
+  *Research Placement Student* -- _Center for Cognition in Complex Environments_ \
+  _Principal Investigator_: Dr. Jamie Murray \
+  #text(size: 9pt)[_Key Activities_: Automated video analysis for discrimination learning in lumpfish.]
+  ],
+  [
+  *University of Stirling* \
+  Stirling, Scotland, UK \
+  2021
+  ]
+)
+```
 
-\vspace{0.2cm}
 
-\begin{minipage}{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
-\end{minipage}
-\hfill 
-\begin{minipage}{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{Research Assistant: Centre for Cognition in Complex Environments} & \textbf{\hfill 2019 - 2021}  \\
-    \textit{University of Stirling, Department of Psychology} & \textit{\hfill Stirling, Scotland, UK}  \\
-  \end{tabularx}
-\end{minipage}
+# Awards & Honors
 
-Execution and data analysis of experiments concerning face matching and concealed identity recognition\
-**Principal Investigator**: Dr. Ailsa E. Millen
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
+```
 
-\vspace{0.2cm}
+- Center for Theoretical Behavioral Sciences **Summer Fellowship** (2026) - **10.000$**
+- Center for Theoretical Behavioral Sciences 2026 **Conference Support Award** - **1.500$**
+- Center for Theoretical Behavioral Sciences 2025 **Conference Support Award** - **1.500$**
+- **Best Overall Score** in Behavioral and Data Science (2022)
+- **Peter McEwan Prize** for the Best Single Honors Psychology Student (2021)
+- **Alan Baddeley Prize** for the Best Psychology Dissertation (2021)
+- **My Stirling Award GOLD** (2021) in recognition of an exceptional depth and breadth of extracurricular activities
+- Honorable Mention for **Best Placement Student** (2021)
 
-\begin{minipage}{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/stirling.png}
-\end{minipage}
-\hfill 
-\begin{minipage}{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{Research Assistant: Centre for Cognition in Complex Environments} & \textbf{\hfill 2021}  \\
-    \textit{University of Stirling, Department of Psychology} & \textit{\hfill Stirling, Scotland, UK}  \\
-  \end{tabularx}
-\end{minipage}
 
-Automated video analysis for discrimination learning in lumpfish\
-**Principal Investigator**: Dr. Jamie Murray
 
-# Publications {#publications}
+# Teaching Experience
+<!-- Courses taught, TA positions. -->
 
-\hrule
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
 
-Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., **Mayer, L. W.**, & Smyth, P. (2025).
-What large language models know and what people think they know.
-*Nature Machine Intelligence*.
-<https://doi.org/10.1038/s42256-024-00976-7>
+- *Peer-to-Peer Tutor in Research Methods* (2019)
+  - Led seminar lectures on the fundamentals of statistical analysis to groups of approximately twenty 2#super[nd] year undergraduates
+  - Instructed students how to navigate statistical software and troubleshoot exercises
+```
 
-Karny, S., **Mayer, L. W.**, Ayoub, J., Song, M., Su, H., Tian, D., Moradi-Pari, E., & Steyvers, M.
-(2024).
-Learning with AI Assistance: A Path to Better Task Performance or Dependence?
-*Proceedings of the ACM Collective Intelligence Conference, 10–17*.
-<https://doi.org/10.1145/3643562.3672610>
 
-**Mayer, L. W.**, Bocheva, D., Hinds, J., Brown, O., Piwek, L., Ellis, D.
-(under Review) Waste not want not: Computational methods to maximise attendance in group research.
-*Behavior Research Methods*.
 
-# Miscellaneous
 
-\hrule
 
-\begin{minipage}{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/uva.png}
-  \phantom{}
-\end{minipage}
-\hfill 
-\begin{minipage}{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{Digital Methods Initiative Winter School - The use and misuse of Open Source Intelligence} & \textbf{\hfill 2023}  \\
-    \textit{University of Amsterdam, Amsterdam, North Holland, The Netherlands} & \phantom{}  \\
-  \end{tabularx}
-\end{minipage}
+# Professional Service
+<!-- Papers I have helped review? Mention Journals, also membership in orgs like SJDM, MathPsych, CogSci Society? -->
 
-\vspace{0.2cm}
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
+```
+## Peer-Review
 
-\begin{minipage}{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/tubingen.jpg}
-  \phantom{}
-\end{minipage}
-\hfill 
-\begin{minipage}{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{International Interdisciplinary Computational Cognitive Science Summer School} & \textbf{\hfill 2023}  \\
-    \textit{University of Tübingen, Tübingen, Baden-Württemberg, Germany} & \phantom{}  \\
-  \end{tabularx}
-\end{minipage}
+- Nature Communications (1)
+- Psychological Review (1)
+- Judgment and Decision Making (1)
 
-\vspace{0.2cm}
+## Organizations
 
-\begin{minipage}{0.05\textwidth}
-  \includegraphics[trim=0 11mm 0 0,width=\textwidth]{images/neuromatch.png}
-\end{minipage}
-\hfill 
-\begin{minipage}{0.95\textwidth}
-  \begin{tabularx}{\textwidth}{p{12cm} X}
-    \textbf{NeuroMatch Academy Summer School: Deep Learning} & \textbf{\hfill 2022}  \\
-    \textit{NeuroMatch Academy, Los Angeles, California, USA} & \phantom{}  \\
-  \end{tabularx}
-\end{minipage}
+- Cognitive Science Society
+- Society for Judgment and Decision Making
+- Society for Mathematical Psychology
+
+
+
+
+# Professional Development
+<!-- Summer schools -->
+
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
+```
+
+- **Digital Methods Initiative Winter School: The use and misuse of Open Source Intelligence** (2023), University of Amsterdam, Amsterdam, North Holland, The Netherlands
+- **International Interdisciplinary Computational Cognitive Science Summer School** (2023), University of Tübingen, Tübingen, Baden-Württemberg, Germany
+- **NeuroMatch Academy Summer School: Deep Learning** (2022), NeuroMatch Academy, Los Angeles, California, USA
+
+
+
+
+
+
+# Skills
+<!-- Languages, programming languages, software -->
+<!-- 
+English (fluent), German (native), French (intermediate), Dutch (beginner) 
+Julia, Turing, Godot, Firebase, Quarto, LaTeX, Emacs, Typst, R, Python
+-->
+
+```{=typst}
+#grid(
+  columns: (2.2fr, 1fr),
+  row-gutter: 1.2em,
+  column-gutter: 2em,
+  align: left, 
+  
+  grid.hline(),
+  [#v(2pt)],[#v(2pt)],
+)
+
+#let TeX = {
+  set text(font: "New Computer Modern",)
+  let t = "T"
+  let e = text(baseline: 0.22em, "E")
+  let x = "X"
+  box(t + h(-0.14em) + e + h(-0.14em) + x)
+}
+
+#let LaTeX = {
+  set text(font: "New Computer Modern")
+  let l = "L"
+  let a = text(baseline: -0.35em, size: 0.66em, "A")
+  box(l + h(-0.32em) + a + h(-0.13em) + TeX)
+}
+
+- *Programming Languages*: Julia, Turing.jl, GDscript, R, Python
+- *Software*: Quarto (Dashboards, Websites), Godot (Game-engine), Firebase (NoSQL Database), RevealJS (Presentations), #LaTeX (Markup), Typst (Markup), Org-mode (Emacs), Git (Version-control)
+- *Languages*: German (Native), English (Proficient), French (Intermediate), Dutch (Beginner)
+
+```
+
+
+
+# References
+
+Available upon request.

@@ -1,41 +1,30 @@
 ---
-format: 
-  pdf: 
-    documentclass: article
-    self-contained: false
-    geometry:
-      - top=10mm
-      - left=15mm
-      - right=15mm
-      - bottom=5mm
-      - heightrounded
-    fontfamily: libertine
-    colorlinks: true
-    linkcolor: linkblue
-    urlcolor: linkblue
-    citecolor: linkblue
-    fontsize: '16'
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 1in
+      y: 1in
+    page-numbering: "1"
+    toc: false
+    number-sections: false
+    mainfont: "DejaVu Sans"
+    fontsize: 11pt
+    pdf-standard: ua-1
     include-in-header: 
       text: |
-        \usepackage{multicol}
-        \usepackage{tabularx}
-        \usepackage{lipsum}
-        \usepackage{graphicx}
-        \usepackage{hyperref}
-        \usepackage{libertine}
-        \usepackage{xcolor}
-        \usepackage{sectsty}
-        \pagestyle{empty}
-        \setlength{\multicolsep}{2pt plus 1.0pt minus 0.75pt}
-        \setlength{\columnsep}{3em}
-        % Dark mode colors
-        \definecolor{bgcolor}{RGB}{60,60,60}
-        \definecolor{textcolor}{RGB}{209,213,219}
-        \definecolor{headingcolor}{RGB}{229,231,235}
-        \definecolor{linkblue}{RGB}{96,165,250}
-        \pagecolor{bgcolor}
-        \color{textcolor}
-        \allsectionsfont{\color{headingcolor}}
+        #let bgcolor = rgb(60, 60, 60)
+        #let textcolor = rgb(209, 213, 219)
+        #let headingcolor = rgb(229, 231, 235)
+        #let linkblue = rgb(96, 165, 250)
+
+        #set page(fill: bgcolor)
+        #set text(fill: textcolor)
+        #show heading: set text(fill: headingcolor)
+        #show link: set text(fill: linkblue)
+title-block-style: none
 ---
 
 {{< include cv_content.qmd >}}
+
+
