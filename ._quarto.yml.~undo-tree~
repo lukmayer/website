@@ -1,0 +1,6 @@
+(undo-tree-save-format-version . 1)
+"d0b4d6e63c8fd09f089bcd6fa0eaa762ec83d5d7"
+[nil nil nil nil (27208 20062 121057 246000) 0 nil]
+([nil nil (("Research" . 1132) (undo-tree-id0 . -8) 1140 (t 27183 18818 746329 117000)) nil (27208 20062 121056 108000) 0 nil])
+([nil current ((1132 . 1140)) nil (27208 20062 121037 146000) 0 nil])
+nil

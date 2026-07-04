@@ -1,5 +1,5 @@
 ---
-description: "Lukas Mayer's research in computational cognitive science, Human-AI collaboration. Related topics include causal reasoning, inversion problems, AI alignment, data-science, software development"
+description: "Lukas Mayer's research in computational cognitive science, Human-AI collaboration."
 
 listing:
   id: publications
@@ -128,8 +128,7 @@ format:
 </style>
 
 
-# Publications
-
+# Projects
 
 
 ## Published
@@ -168,47 +167,47 @@ format:
 :::
 <!-- end text-center -->
 
-## Posters and Talks
+<!-- ## Posters and Talks -->
 
 
-::::: {.callout-important collapse="true" icon="false"}
-# ***"A Cognitive Framework for Strategic AI Communication"***
-**Mayer, L. W.**, Steyvers, M. *CogSci 2025*
+<!-- ::::: {.callout-important collapse="true" icon="false"} -->
+<!-- # ***"A Cognitive Framework for Strategic AI Communication"*** -->
+<!-- **Mayer, L. W.**, Steyvers, M. *CogSci 2025* -->
 
-::: text-center
-<iframe src="assets/cogsci25_poster.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1" style="width: 90%; height: 1000px; border: none;"></iframe>
-:::
+<!-- ::: text-center -->
+<!-- <iframe src="assets/cogsci25_poster.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1" style="width: 90%; height: 1000px; border: none;"></iframe> -->
+<!-- ::: -->
 
-:::::
-
-
-\
+<!-- ::::: -->
 
 
-## In Progress
+<!-- \ -->
 
 
-::::: {.callout-important collapse="true" icon="false"}
-# ***"Human-AI Collaboration: Trade-offs Between Performance and Preferences"*** 
-**Mayer, L. W.**, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (under Review) *Cognitive Research: Principles and Implications*
+<!-- ## In Progress -->
 
-::: text-center
-![](assets/collab_ai.png)
-:::
 
-\
+<!-- ::::: {.callout-important collapse="true" icon="false"} -->
+<!-- # ***"Human-AI Collaboration: Trade-offs Between Performance and Preferences"***  -->
+<!-- **Mayer, L. W.**, Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., Steyvers, M. (under Review) *Cognitive Research: Principles and Implications* -->
 
-**How can we make AI collaborate well with people?** Narrowly optimizing the performance of AI agents may be convenient, but can cause frustration when people are then asked to work with this agent.
-In this paper, we show that people prefer AI agents that are considerate of their preferences, even when this comes at the cost of performance.
-We also find that certain human-centric design choices boost people's liking of the agent, without harming the performance of the human-AI team.
-Our results strongly suggest that leveraging both subjective and objective metrics is crucial when designing AI agents for human collaboration.
+<!-- ::: text-center -->
+<!-- ![](assets/collab_ai.png) -->
+<!-- ::: -->
 
-::: text-center
-[OSF repository](https://osf.io/ybweq/?view_only=cb4d4c7ac0b848b79b6ae8c7b09278cc)
-:::
-:::::
+<!-- \ -->
 
-\
+<!-- **How can we make AI collaborate well with people?** Narrowly optimizing the performance of AI agents may be convenient, but can cause frustration when people are then asked to work with this agent. -->
+<!-- In this paper, we show that people prefer AI agents that are considerate of their preferences, even when this comes at the cost of performance. -->
+<!-- We also find that certain human-centric design choices boost people's liking of the agent, without harming the performance of the human-AI team. -->
+<!-- Our results strongly suggest that leveraging both subjective and objective metrics is crucial when designing AI agents for human collaboration. -->
+
+<!-- ::: text-center -->
+<!-- [OSF repository](https://osf.io/ybweq/?view_only=cb4d4c7ac0b848b79b6ae8c7b09278cc) -->
+<!-- ::: -->
+<!-- ::::: -->
+
+<!-- \ -->
 
 
 

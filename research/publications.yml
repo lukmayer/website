@@ -1,3 +1,16 @@
+- title: "Human–AI collaboration: trade-offs between performance and preferences"
+  journal: "Cognitive Research: Principles and Implications"
+  authors: "Mayer, L. W., Karny, S., Ayoub, J., Song, M., Tian, D., Moradi-Pari, E., & Steyvers, M."
+  date: "2026-02-27"
+  image: "assets/collab_ai.png"
+  osf: "https://osf.io/ybweq/?view_only=cb4d4c7ac0b848b79b6ae8c7b09278cc"
+  paper: "https://link.springer.com/article/10.1186/s41235-026-00713-1"
+  paragraph-header: "How can we make AI collaborate well with people?"
+  descriptive-paragraph: "Narrowly optimizing the performance of AI agents may be convenient, but can cause frustration when people are then asked to work with this agent.
+In this paper, we show that people prefer AI agents that are considerate of their preferences, even when this comes at the cost of performance.
+We also find that certain human-centric design choices boost people's liking of the agent, without harming the performance of the human-AI team.
+Our results strongly suggest that leveraging both subjective and objective metrics is crucial when designing AI agents for human collaboration."
+
 - title: "What large language models know and what people think they know (2025)"
   journal: "Nature Machine Intelligence"
   authors: "Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., Mayer, L. W., & Smyth, P."
