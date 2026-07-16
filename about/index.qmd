@@ -61,7 +61,8 @@ locationData = [
   { year: 2022, location: "Royal Leamington Spa", country: "England", lat: 52.2851, lon: -1.5364 },
   { year: 2023, location: "Bath", country: "England", lat: 51.3751, lon: -2.3618 },
   { year: 2024, location: "Irvine", country: "USA", lat: 33.6846, lon: -117.8265 },
-  { year: 2025, location: "Irvine", country: "USA", lat: 33.6846, lon: -117.8265 }
+  { year: 2025, location: "Irvine", country: "USA", lat: 33.6846, lon: -117.8265 },
+  { year: 2026, location: "Irvine", country: "USA", lat: 33.6846, lon: -117.8265 }
 ]
 
 // Load world map data
@@ -123,8 +124,8 @@ getTimelineThemeColors = () => {
 // Theme-adaptive year selector with buttons
 viewof selectedYear = {
   const MIN_YEAR = 1998;
-  const MAX_YEAR = 2025;
-  const DEFAULT_YEAR = 2025;
+  const MAX_YEAR = 2026;
+  const DEFAULT_YEAR = 2026;
 
   const colors = getTimelineThemeColors();
 
@@ -798,7 +799,7 @@ countriesVisited = [
   "Germany", "France", "USA", "Spain", "Italy", "Austria", 
   "Switzerland", "Netherlands", "Belgium", "San Marino", 
   "Vatican", "Malta", "Monaco", "United Kingdom", "Hungary",
-  "Japan", "Taiwan"
+  "Japan", "Taiwan", "Canada"
 ]
 
 // Load world map data with a unique variable name
