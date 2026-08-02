@@ -13,6 +13,13 @@ format:
 
 ---
 
+::: callout-important
+## Disclaimer
+
+This method is not as reliable as I initially thought - you will get Captcha'd eventually.
+
+:::
+
 
 Instagram is one of those platforms that's really hard to avoid if you want to stay in touch with a group or a small business. At the same time, Instagram is quite aggressive in it's use of dark patterns. For example, you can only sometimes view public profiles without logging in, and are usually limited to viewing one or two posts before being compelled to log in.
 

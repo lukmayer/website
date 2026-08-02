@@ -1,0 +1,34 @@
+---
+title: "Resourceful Computing"
+description: "Incentivizing preservation"
+author: "Luke"
+image: "images/minecraft_head.jpg"
+date: "2026-08-01"
+categories:
+ - random
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+---
+
+
+One common finding in psychology that I have noticed in my own behavior as well is that when you make resource-consumption visible, it becomes much easier to change your behavior towards being less wasteful. Ever since I added a CPU and RAM usage indicator to my OS system bar, I have become very concerned about how much RAM different things use or whether my laptop fans are spinning more than what I am currently doing should reasonably justify. I noticed this as well with screen brightness. Most system bars don't really have a setting to show current screen brightness level. When I started using waybar as my system bar, I noticed it's an option. So I added the module. After a few weeks of seeing this information, I noticed that I developed a new habit: "Brightness at or below 20% = good". I decided to lean into it, changing the CSS so that if brightness was above 20% the indicator would turn orange and eventually red, depending on how egregious the absolute level was. No-one will be surprised to read then, that my laptop's battery started lasting much longer than before, since I had incentivized myself to keep my screen at the minimally viable brightness.
+
+Could you imagine how much electricity and data could be saved if all software was designed to be resource-conscious, both from a technical and UI perspective?
+
+There are a few different internet phenomena I have noticed over the years that make self-imposed resource constraints a core part of their identity.
+One common one a lot of people like is the idea of making websites as light as possible. The more extreme end of this is the [1kb club](https://1kb.club/), which is a list of websites whose only significance is that they provide their homepage using less than 1kb of data. This is not easy to achieve, and so all sites on these lists have an aggressively minimalistic aesthetic to them. It makes me wonder a bit about an alternative envisioning of the modern internet, maybe somewhat akin to how Richard Stallman likes to cast it, where maybe JavaScript basically doesn't exist. It's certainly a more eco-friendly alternative vision of the internet that would likely prioritize simple browsers and native clients over web-apps. Instead, we have an internet where the browser (or more specifically, it's web-rendering engine) is an enormously complex everything program that more-or-less necessitates a mega corporation to develop and maintain (today: Webkit (Apple), Blink (Google) and Gecko (Mozilla), though Servo (Linux Foundation) and LibWeb (Ladybird Browser Initiative) are in development).
+If you're curious about assessing the footprint of your website, you can use sites like [https://www.debugbear.com/test/website-speed](https://www.debugbear.com/test/website-speed).
+Unfortunately, my home page currently weighs a bit over 1Mb, placing me 3 orders of magnitude away from 1kb club stardom.
+
+Another very niche manifestation of aggressively managing some resource is "[suckless software](https://suckless.org/philosophy/)", which is well-known for trying to achieve fully-functional programs that meet fairly arbitrary constraints like limiting themselves to 1000 lines of code. This pursuit leads to some weird outcomes, like making certain features available as "patches" that the user needs to manually recompile the program with to make available. It's fair to say that it takes a very special (read: Gentoo user) type of user to live this life. A slightly less dogmatic and more common version of this can be seen with many developers preferring plain-text interfaces over complex GUI software. I am technically part of this camp, having figured out how to do most of my computing via a web of terminal programs that interface to Emacs. Another, arguably slightly more common such workflow is one based around extensive use of the terminal, such is common with Neovim users. Thinking even more broadly, we commonly see this logic in the "This meeting could have been an e-mail" phenomenon that most people will have some familiarity with. Here, instead of compute or memory, the concern is the wasteful use of people's time. Some food for thought. The well-known book "Algorithms to live by" also discusses the psychology of "[computational kindness](https://kb.srht.site/notes/computational-kindness.html)", with what I took away from it basically boiling down to communicating in a way that is considerate of the other person's cognitive resources. 
+
+Moving back to computing, I will finish this post with one recent example of tinkering with my resource-use habits. I recently replaced my phone with a Google Pixel 10A. One thing that is nice with this device is that it will receive software support until 2033. That is a long time. Naturally, I would like to use this phone as long as possible, and so I spent some time thinking about how I can optimize battery health. Looking at my operating system's battery usage statistics, I noticed that the main driver of electricity usage was simple network connectivity. I'm not exactly a heavy phone-user, and have access to Wi-Fi probably close to 95% of the time in my daily life. So I asked myself, somewhat controversially, whether I could make it a habit to have my phone in Airplane mode unless otherwise needed. To help me, I downloaded an app from the F-droid store called Automation, and set it up to push a notification reminding me to turn Airplane mode back on as soon as Airplane mode is turned off. 
+
+::: {.aside}
+I similarly have an app from F-droid called Auto Off Bluetooth, that simply automatically toggles Bluetooth off if it isn't being used. 
+:::
+
+
+When I explain to people that I use my phone in Airplane mode by default and struggle to use 1GB of mobile data over the course of a month, the reaction is always one of disbelief. I admit, it's a slightly spicy habit to have that can be inconvenient. It really puts the onus on you to choose your level of distraction. If I am on the move (so without Wi-Fi), I technically have to consider the joint probability that someone will try to call me, and that that call could be important enough to answer, so that I can deliberately turn off Airplane mode. Not a trade-off that most people will find acceptable, but one that works fine with my life as a lowly PhD student. 
