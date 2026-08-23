@@ -1,0 +1,73 @@
+---
+title: "My favorite free & open-source apps from F-droid"
+description: "Alternative app stores are awesome"
+author: "Luke"
+image: images/fdroid.png
+date: "2026-08-22"
+categories:
+ - phone
+
+format:
+  html:
+    include-after-body: ../../_includes/utterances.html
+
+---
+
+
+One joy of using an Android-derived operating system is the ability to have multiple different app stores installed (though it is becoming increasingly difficult to do).
+In my case, I have Google Play Store and the F-droid store on my Pixel 10A, which runs GrapheneOS.
+While the Play Store is standard and houses all commercial apps, the F-droid store is specifically for free and open-source apps.
+Over the years, I have found myself checking more and more whether the F-droid store has an app that does the thing I need before going to the Play Store, at least partially because commercial apps are often full of premium features, ads, or other nagging, whereas most f-droid apps do not even attempt to remind you that you could donate money to support the developer. After all, these apps are usually someone's personal/hobby project, not something they want to make a living from.
+Other times, the app will be available both on the Play Store and on F-droid, where the Play Store version will cost some money, while the F-droid version is free of charge.
+So in today's post I'll simply document what apps from F-droid I have installed that have really grown on me.
+
+## [Rethink DNS](https://f-droid.org/packages/com.celzero.bravedns/) (Ad-block)
+
+Rethink DNS is an "Android Firewall", which in this case means a DNS resolver that can be set up as a VPN connection and customized.
+That sounds abstract and complex, but my use for it is much more akin to a system-wide ad-blocker.
+Essentially, by setting up this app as the VPN connection on your phone, you allow it to monitor network trafficking. This in turn enables you to use the app to block whatever traffic you want by downloading/configuring block lists. This is awesome for blocking ads and trackers! I use quite aggressive filters, and so sometimes an a website may break. Luckily, the app lets you have a persistent notification which you can use to temporarily disable the firewall. In other words, when my ad-block breaks something, it only takes a tap and a page reload to fix it. This app has become essential for me since I still use a few apps from the Google Play store that will push ads unless you pay. 
+
+
+## [Kvaesitso](https://f-droid.org/en/packages/de.mm20.launcher2.release/) (Launcher)
+
+On Android-like operating systems, you can choose a "Launcher" app of your liking, which basically controls the look and feel of your phone.
+I've written multiple times before that I like a pretty minimalistic setup, where the home screen is comprised of only my calendar and todo-list widget, with everything else stowed away somewhere.
+
+The Kvaesitso launcher is hands-down my favorite launcher app. Besides being completely free, it has an amazing, extremely well designed search field that does way more than just searching the apps you have installed. If you type 3+3 it will show you the result, if you type "30 min" it will show a button to start a timer, if you type 30 lb it will show you what that is in other units, like kilogram, if you type 30 USD it will show you the currency conversion for other common currencies like euros, etc. The power of this search alone saves you a lot of web-searches you'd otherwise have to do.
+
+You can even set up a search engine of your choosing so that if you type a query that's not obviously an app it will search the web instead. Where this becomes very powerful is if you set the search engine to be one that supports bangs, so that you can go straight to the results of another website. So for example, if I type `!!yt cat videos`, Kvaesitso will jump straight to my browser, open youtube.com and search for cat videos there. Once you are used to using bangs like this, it is really hard to go back. 
+
+## [Heliboard](https://f-droid.org/en/packages/helium314.keyboard/) (Keyboard)
+
+Heliboard is just a nice, well-designed keyboard that is highly customizable. You can set a custom voice-to-text service, it has a lot of handy settings for common or otherwise useful gestures, and it has a toolbar that you can pin buttons to. So for example, on my toolbar, I have buttons for selecting text, moving between words or characters, copy and paste, and voice to text. I find that using these buttons is often faster than having to do one of these drag and drop gestures, for example to move the text cursor one character to the left. 
+
+## [Davx5](https://f-droid.org/en/packages/at.bitfire.davdroid/), [Syncthing-Fork](https://f-droid.org/en/packages/com.github.catfriend1.syncthingfork/) (File utilities)
+
+These two apps are of the type where they cost money on the Play Store but are freely available on F-droid.
+Davx5 is simply a way to sync a web calendar to your phone. For example, if you wanted to use your Google Calendar on an arbitrary calendar apps that is not from Google or maybe doesn't support Google sign-in, then Davx5 will simply act as the interface. You connect your web calendar to it, and it basically makes sure that your phone can 'see' the calendar locally. Of course, this is nice because now you can use any calendar provider you like with any calendar app you want, so long as they support the CalDAV standard, which is very common.
+
+Syncthing is a service for peer-to-peer file-sharing. This basically just means that you can synchronise files between devices without needing a server. When you use something like Google Drive or any other Cloud-based backup service, your files get sent to the server of the Cloud provider, and your devices then access the files by contacting the server. With Syncthing, you simply clone the file to each device, and send updates over the internet if one of the clones changes, so that all clones are always identical. This is extremely useful! Because of Syncthing, my phone basically has most of the files on my computer, so if something where to happen to my laptop, I'd actually not lose any work. That being said, I still use a paid cloud-service (Proton-drive) just to be extra secure. 
+
+
+## [Orgzly](https://f-droid.org/en/packages/com.orgzlyrevived/) (A must for Emacs users)
+
+I use the Emacs text editor for almost everything in my computing life. On my laptop, it's my terminal, my calendar, my to-do list, my code editor, my email-client, my feed-reader, and the main way I interface with music and video. I concede that this is a pretty opinionated way to use a computer, perhaps even slightly radical, but I enjoy it. Of course, if you have all of these things in Emacs, you will likely need some way to access this stuff on your phone too. While CalDAV will be helpful for the calendar (I have a web-calendar that Emacs pulls from and writes to), but for interacting with my to-do list, which is comprised of Org documents, you'll need something that understands Org. That is why I use Orgzly. I specifically use it to capture thoughts on the to-do list widget, which will write to a file called inbox.org that Syncthing will push to my laptop, and to edit my workout tracker while at the gym. Orgzly will interpret Schedule tags, so if it's reading an Org file that has such a timestamp, it can push a reminder on your phone. That is to say, it works wonderfully as a to-do app that speaks Org. 
+
+
+## [WebLibre](https://f-droid.org/en/packages/eu.weblibre.gecko/) (browser)
+
+Weblibre is a relatively new browser that uses Mozilla's web rendering engine. What I like most about it is that it is highly customizable, unlike all Firefox-derived Android browsers that I have tried. It supports extensions and overall is very well designed. Again, it's still a new project, so you might run into some bugs using it. 
+
+## Other worthy mentions
+
+- [Thunderbird](https://f-droid.org/en/packages/net.thunderbird.android/) is a great multi-account email-client developed by Mozilla.
+
+- [Automation](https://f-droid.org/en/packages/com.jens.automation2/) is a handy, open-source app similar to the more well-known app Tasker. It let's you automate certain actions on your phone. For example, I use it to push a notification reminding me to turn Airplane mode on as soon as I turn it off. Some features require root access. 
+
+- [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) is a neat front-end for the F-droid store. It's basically an app on the F-droid store that provides a better interface for the F-droid store (my opinion)
+
+- [Librera FD](https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/) is simply an e-book reader. It's highly customizable and so can be configured to most people's tastes.
+
+## What I really miss on F-droid
+
+You'd think the F-droid store would have great calendar apps. Unfortunately, none currently meet my standards. All I need from a calendar app is a widget that makes it easy to see my schedule graphically. I dislike agenda-view, which is the one thing every calendar app seems to provide a widget for. Literally all I want is week-view as a widget. I still use Business Calendar 2 from Google Play because of this. If I had unlimited time, I'd make my own calendar app...
