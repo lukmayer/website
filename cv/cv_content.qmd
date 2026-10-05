@@ -112,6 +112,10 @@ In recent projects, I have been leveraging Bayesian cognitive models to understa
 )
 ```
 
+## In preparation
+
+- **Mayer, L. W.** & Steyvers, M. (In preparation). Modeling advice fatigue: When people disable AI assistance
+
 
 ## Peer-Reviewed
 
@@ -242,9 +246,11 @@ In recent projects, I have been leveraging Bayesian cognitive models to understa
 )
 ```
 
-- Center for Theoretical Behavioral Sciences **Summer Fellowship** (2026) - **10.000$**
-- Center for Theoretical Behavioral Sciences 2026 **Conference Support Award** - **1.500$**
-- Center for Theoretical Behavioral Sciences 2025 **Conference Support Award** - **1.500$**
+- Psychonomic Society 2026 Best Article for Cognitive Research:
+Principles and Implications - **$1.000**
+- Center for Theoretical Behavioral Sciences **Summer Fellowship** (2026) - **$10.000**
+- Center for Theoretical Behavioral Sciences 2026 **Conference Support Award** - **$1.500**
+- Center for Theoretical Behavioral Sciences 2025 **Conference Support Award** - **$1.500**
 - **Best Overall Score** in Behavioral and Data Science (2022)
 - **Peter McEwan Prize** for the Best Single Honors Psychology Student (2021)
 - **Alan Baddeley Prize** for the Best Psychology Dissertation (2021)
@@ -273,9 +279,6 @@ In recent projects, I have been leveraging Bayesian cognitive models to understa
 ```
 
 
-
-
-
 # Professional Service
 <!-- Papers I have helped review? Mention Journals, also membership in orgs like SJDM, MathPsych, CogSci Society? -->
 
@@ -293,7 +296,7 @@ In recent projects, I have been leveraging Bayesian cognitive models to understa
 ## Peer-Review
 
 - Nature Communications (1)
-- Psychological Review (1)
+- Psychological Review (2)
 - Judgment and Decision Making (1)
 
 ## Organizations
@@ -306,7 +309,6 @@ In recent projects, I have been leveraging Bayesian cognitive models to understa
 
 
 # Professional Development
-<!-- Summer schools -->
 
 ```{=typst}
 #grid(
@@ -320,21 +322,23 @@ In recent projects, I have been leveraging Bayesian cognitive models to understa
 )
 ```
 
+- **Mentoring Excellence Certificate** (2026), University of California, Irvine, Irvine, CA, USA
 - **Digital Methods Initiative Winter School: The use and misuse of Open Source Intelligence** (2023), University of Amsterdam, Amsterdam, North Holland, The Netherlands
 - **International Interdisciplinary Computational Cognitive Science Summer School** (2023), University of Tübingen, Tübingen, Baden-Württemberg, Germany
 - **NeuroMatch Academy Summer School: Deep Learning** (2022), NeuroMatch Academy, Los Angeles, California, USA
 
 
+# Extracurricular Activities
 
-
+- Faculty Officer: Faculty of Natural Sciences (2020-2021)
+- Secretary: Powerlifting (2019-2021)
+- Faculty Officer: Department of Psychology (2019-2020)
+- Module representative: Brain and Behavior (2018), Research Methods (2018), Clinical and Health Psychology (2019), Developmental Psychology (2019), Individual Differences (2019), Psychology Research Project (2019)
+- Team Captain: Powerlifting (2017-2019)
 
 
 # Skills
-<!-- Languages, programming languages, software -->
-<!-- 
-English (fluent), German (native), French (intermediate), Dutch (beginner) 
-Julia, Turing, Godot, Firebase, Quarto, LaTeX, Emacs, Typst, R, Python
--->
+
 
 ```{=typst}
 #grid(

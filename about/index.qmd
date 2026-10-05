@@ -776,11 +776,9 @@ If you know a good free resource, [be sure to let me know](mailto:willuk@vivaldi
 :::
 
 ::: {.callout-important collapse="false" icon="false"}
-### 4. Gaming
+### 4. Cycling & Cafés
 
-I was quite the avid gamer as a teen, spending countless hours on the likes of Team Fortress 2, Minecraft and Guild Wars 2.
-While I'm much more casual these days, I've been picking up Guild Wars again ever since getting a Steam Deck!
-I also really enjoy going to board game cafés and completing escape rooms with friends.
+Since buying a 20 year old bike of Facebook Marketplace, I have been really enjoying exploring Irvine by bike, especially for cycling to coffee shops I can work at!
 :::
 
 
@@ -799,7 +797,7 @@ countriesVisited = [
   "Germany", "France", "USA", "Spain", "Italy", "Austria", 
   "Switzerland", "Netherlands", "Belgium", "San Marino", 
   "Vatican", "Malta", "Monaco", "United Kingdom", "Hungary",
-  "Japan", "Taiwan", "Canada"
+  "Japan", "Taiwan", "Canada", "Denmark", "Sweden", "Norway"
 ]
 
 // Load world map data with a unique variable name
