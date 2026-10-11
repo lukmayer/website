@@ -246,9 +246,9 @@ In recent projects, I have been leveraging Bayesian cognitive models to understa
 )
 ```
 
-- Psychonomic Society 2026 Best Article for Cognitive Research:
+- Psychonomic Society 2026 **Best Article** for Cognitive Research:
 Principles and Implications - **$1.000**
-- Center for Theoretical Behavioral Sciences **Summer Fellowship** (2026) - **$10.000**
+- Center for Theoretical Behavioral Sciences Luce Family **Summer Fellowship** (2026) - **$10.000**
 - Center for Theoretical Behavioral Sciences 2026 **Conference Support Award** - **$1.500**
 - Center for Theoretical Behavioral Sciences 2025 **Conference Support Award** - **$1.500**
 - **Best Overall Score** in Behavioral and Data Science (2022)
