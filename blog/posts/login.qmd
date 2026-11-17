@@ -4,7 +4,6 @@ description: "Personalized/Gated content on static websites"
 author: "Luke"
 date: "08/15/2024"
 categories:
-  - webdev
   - quarto
 image: "images/login.png"
 format:

@@ -4,9 +4,7 @@ description: "Random.jl + Distributions.jl + CairoMakie.jl = Flowers?"
 author: "Luke"
 date: "2024-12-26"
 categories:
-  - art
-  - julia
-  - code
+  - random
 image: "images/371907020.png"
 format:
   html:

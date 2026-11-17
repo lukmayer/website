@@ -5,7 +5,7 @@ author: "Luke"
 date: "2025-05-03"
 image: images/puzzle.jpg
 categories:
- - extensions
+ - browsers
 
 format:
   html:

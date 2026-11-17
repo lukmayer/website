@@ -6,7 +6,6 @@ date: "2025-06-15"
 image: "images/light_and_dark.png"
 categories:
  - quarto
- - webdev
 
 format:
   html:

@@ -4,8 +4,7 @@ description: "To google or not to google, that is the question."
 author: "Luke"
 date: "08/10/2024"
 categories:
-  - software
-  - search engines
+  - browsers
 image: "images/dots.jpg"
 format:
   html:

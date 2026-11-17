@@ -16,6 +16,14 @@
 
 ```
 
+<!-- 
+TODO: Where to put:
+
+- Mentorship excellence certificate
+- CogSci Colloquium (Invited talk) 
+
+-->
+
 # Education
 
 ```{=typst}

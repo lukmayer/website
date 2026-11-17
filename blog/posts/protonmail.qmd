@@ -5,7 +5,7 @@ author: "Luke"
 image: "images/proton_mail.png"
 date: "2025-10-01"
 categories:
- - vivaldi
+ - browsers
 
 format:
   html:

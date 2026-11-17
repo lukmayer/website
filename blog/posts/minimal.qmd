@@ -4,7 +4,6 @@ description: "Some simple tricks for cutting down"
 author: "Luke"
 date: "2024-08-25"
 categories:
-  - software
   - phone
 image: "images/phone.jpg"
 format:

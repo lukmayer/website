@@ -4,8 +4,7 @@ description: "Fixing small annoyances with mods"
 author: "Luke"
 date: "10/18/2024"
 categories:
-  - software
-  - vivaldi
+  - browsers
 image: "images/vivaldi_logo.png"
 format:
   html:

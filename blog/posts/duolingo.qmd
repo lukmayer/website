@@ -4,8 +4,7 @@ description: "My review after 5+ years of daily use"
 author: "Luke"
 date: "2024-09-21"
 categories:
-  - software
-  - duolingo
+  - phone
 image: "images/duo.png"
 format:
   html:

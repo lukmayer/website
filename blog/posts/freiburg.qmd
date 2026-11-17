@@ -4,7 +4,7 @@ description: "My first shot at a travel blog post"
 author: "Luke"
 date: "2024-12-31"
 categories:
-  - travel
+  - random
 image: "images/schlossberg_aussicht.jpg"
 format:
   html:

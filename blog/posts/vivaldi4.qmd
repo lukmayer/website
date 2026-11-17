@@ -4,8 +4,7 @@ description: "My favorite features in the Vivaldi browser"
 author: "Luke"
 date: "01/05/2025"
 categories:
-  - software
-  - vivaldi
+  - browsers
 image: "images/vivaldi_logo.png"
 format:
   html:

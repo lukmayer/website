@@ -4,8 +4,7 @@ description: "Kagi has a lot to offer for power-users."
 author: "Luke"
 date: "2025-03-30"
 categories:
-  - search engines
-  - software
+  - browsers
 image: "images/kagi.png"
 format:
   html:

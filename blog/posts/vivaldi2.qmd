@@ -4,8 +4,7 @@ description: "A discussion of odd design choices and my feature wishlist"
 author: "Luke"
 date: "09/22/2024"
 categories:
-  - software
-  - vivaldi
+  - browsers
 image: "images/vivaldi_logo.png"
 format:
   html:

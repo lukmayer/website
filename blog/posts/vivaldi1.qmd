@@ -4,8 +4,7 @@ description: "My take on how to make a piece of maximalist software easy on the 
 author: "Luke"
 date: "08/02/2024"
 categories:
-  - software
-  - vivaldi
+  - browsers
 image: "images/vivaldi_logo.png"
 format:
   html:

@@ -4,8 +4,8 @@ description: "Turn your life into a video-game? It's less questionable than you 
 author: "Luke"
 date: "2024-08-12"
 categories:
-  - software
-  - habitica
+ - phone
+
 image: "images/habitica.png"
 format:
   html:

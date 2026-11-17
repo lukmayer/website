@@ -5,7 +5,7 @@ author: "Luke"
 date: "2025-05-11"
 image: images/reading.jpg
 categories:
- - rss
+ - browsers
 
 format:
   html:

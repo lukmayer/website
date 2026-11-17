@@ -4,10 +4,8 @@ description: "I'm more annoying now."
 author: "Luke"
 date: "2025-02-22"
 categories:
-  - software
-  - linux
+  - browsers
   - phone
-  - search engines
 image: "images/debian.png"
 
 format:

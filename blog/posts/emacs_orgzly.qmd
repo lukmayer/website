@@ -6,6 +6,7 @@ image: "images/emacs.png"
 date: "2026-01-11"
 categories:
  - emacs
+ - phone
 
 format:
   html:

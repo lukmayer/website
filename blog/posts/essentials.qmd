@@ -4,8 +4,8 @@ description: "Some free tools I enjoy that you might too"
 author: "Luke"
 date: "2024-12-28"
 categories:
-  - extensions
-  - rss
+ - browsers
+
 image: "images/puzzle.jpg" 
 format:
   html:

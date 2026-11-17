@@ -5,7 +5,7 @@ author: "Luke"
 date: "2025-05-18"
 image: images/big_tech.png
 categories:
- - software
+ - browsers
 
 format:
   html:

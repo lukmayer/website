@@ -5,8 +5,7 @@ author: "Luke"
 date: "2025-02-08"
 categories:
   - quarto
-  - software
-  - code
+
 image: "images/quarto.png" 
 format:
   html:
