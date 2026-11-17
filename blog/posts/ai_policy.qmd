@@ -83,7 +83,7 @@ Of course, I understand that when an ambitious grad student or an over-worked pr
 
 [^5]: Given the scarcity of jobs, I believe academia is not a career you choose as much as it is a career that chooses you. If that is right, then maybe it's still a bit short-sighted to chase additional publications by any means neccessary *if* they come at the cost of your skill-development.
 
-So does the reality of working in academia align with the values of a university? In my opinion, not really. For one, it seems to me that, by and large, the emphasis is on quantity than it is on quality, going against the idea of striving for excellence. Of course, it's been like this before AI tools were popular, though their availability likely exacerbates these problems. 
+So does the reality of working in academia align with the values of a university? In my opinion, not really. For one, it seems to me that, by and large, the emphasis is on quantity more than it is on quality, going against the idea of striving for excellence. Of course, it's been like this before AI tools were popular, though their availability likely exacerbates these problems. 
 
 In sum, AI tools can be beneficial to academia in principle, but they easily become problematic when they are used as crutches to keep up in a rat race. What would it take to ensure that AI reliably augments thought in line with university values?
 
@@ -107,6 +107,7 @@ Increasingly, researchers are realizing that AI does not necessarily have to be 
 [^11]: For an impression, check out this [website](https://www.microsoft.com/en-us/research/project/tools-for-thought/).
 
 What does it mean for AI to augment people? Some of the uses that appear genuinely beneficial include:
+
 - Rubber ducking
 - Finding sources
 - Finding errors
