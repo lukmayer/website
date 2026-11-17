@@ -11,6 +11,7 @@ format:
     include-after-body: ../../_includes/utterances.html
 ---
 
+
 I've noticed that with software there sometimes exists a bit of an ironic relationship where the product with the most features somehow is also able to be the most minimal.
 Emacs is one such example, as it's a text editor that can be configured to perform tasks you'd never think a text editor would be able to - and it does this with almost no UI whatsoever.
 It's fair to say I'm a big fan of reducing visual clutter on my devices.
